@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalAndroidThingBase">
+		<defName>DroneWatchdog</defName>
+		<label>Watchdog unit</label>
+		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and have thus can be found in a vast number of different contexts. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as riot police.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
+		<statBases>
+			<MarketValue>700</MarketValue>
+			<MoveSpeed>9.0</MoveSpeed>
+			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.0</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>26</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1.0</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>26</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>40</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>MechQuadrupedal</body>
+			<predator>true</predator>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHealthScale>1.2</baseHealthScale>
+			<nameOnTameChance>1</nameOnTameChance>
+			<leatherDef>Tainted_Skin</leatherDef>
+			<trainability>Advanced</trainability>
+			<nuzzleMtbHours>36</nuzzleMtbHours>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.0</minAge>
+					<soundWounded>Pawn_Warg_Wounded</soundWounded>
+					<soundDeath>Pawn_Warg_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Plasteel>30</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalAndroidKindBaseDog">
+		<defName>DroneWatchdog</defName>
+		<label>Watchdog unit</label>
+		<race>DroneWatchdog</race>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.7</ecoSystemWeight>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneWatchdog/DroneWatchdog</texPath>
+					<drawSize>2</drawSize>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneWatchdog/DroneWatchdog</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+</Defs>

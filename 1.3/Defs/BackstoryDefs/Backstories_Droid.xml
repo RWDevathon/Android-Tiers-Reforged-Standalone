@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.BackstoryDef>
+		<defName>AndroidBackstory</defName>
+		<title>Mechanical unit</title>
+		<titleShort>Unit</titleShort>
+		<baseDescription>{PAWN_nameDef} first awakened on this RimWorld as a fresh intelligence.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_NewbootAndroids</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef>
+        <defName>MechanicalArchotechYouth</defName>
+        <title>Archotech</title>
+        <titleShort>Archotech</titleShort>
+        <baseDescription>It is not known whether archotechs truly have childhoods, or if they even have something as simplistic and basic as a date of creation. How, then, could anyone claim to know anything about the youth of such a being?</baseDescription>
+        <slot>Childhood</slot>
+        <spawnCategories>
+			<li>ATR_ArchotechAndroids</li>
+		</spawnCategories></AlienRace.BackstoryDef>
+        
+	<AlienRace.BackstoryDef>
+		<defName>MechanicalArchotech</defName>
+		<title>Archotech</title>
+		<titleShort>Archotech</titleShort>
+		<baseDescription>Enshrouded in mystery, archotechs remain one of the least understood phenomena. Even the most advanced glitterworlds fail to grasp even the most basic attributes of archotech civilization. What, then, could possibly be said about any individual of such a civilization?</baseDescription>
+		<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_ArchotechAndroids</li>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
+
+</Defs>

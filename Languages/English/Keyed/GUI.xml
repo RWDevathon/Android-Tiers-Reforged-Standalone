@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Needs -->
+	
+	<ATR_EnergyNeed>Energy</ATR_EnergyNeed>
+	<ATR_EnergyNeedDesc>Energy is the amount of power an android has in its internal battery. If it is at zero, an android will slowly shutdown. If charge is not restored, hardware will critically malfunction, and the unit will cease functioning.</ATR_EnergyNeedDesc>
+	
+</LanguageData>

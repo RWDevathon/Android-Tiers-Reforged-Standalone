@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="AnimalAndroidThingBase">
+        <defName>DroneNutritionUnit</defName>
+        <label>Nutrition unit</label>
+        <description>A lumbering drone unit specialized in the optimization of generating nutrition from organic matter for human consumption. Unlike other mechanical drones, this unit is quite rare amongst android societies given its intended purpose. With an almost disturbingly long shelf-life and extremely high nutritive content, acquisition of units like this have led to population booms on many worlds - and curiously enough by extension, many wars.</description>
+        <statBases>
+            <MoveSpeed>2.00</MoveSpeed>
+            <MarketValue>600</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Milkable">
+                <milkDef>ATR_NutrientSolution</milkDef>
+                <milkIntervalDays>1</milkIntervalDays>
+                <milkAmount>25</milkAmount>
+                <milkFemaleOnly>false</milkFemaleOnly>
+            </li>
+        </comps>
+        <tools>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.65</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <race>
+            <body>MechQuadrupedal</body>
+            <packAnimal>true</packAnimal>
+            <baseBodySize>1.25</baseBodySize>
+            <baseHealthScale>1</baseHealthScale>
+            <baseHungerRate>1.5</baseHungerRate>
+            <nameOnTameChance>1</nameOnTameChance>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.0</minAge>
+                    <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+                    <soundDeath>Pawn_Muffalo_Death</soundDeath>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+		<butcherProducts>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</butcherProducts>
+    </ThingDef>
+ 
+    <PawnKindDef ParentName="AnimalAndroidKindBaseDog">
+        <defName>DroneNutritionUnit</defName>
+        <label>Nutrition unit</label>
+        <race>DroneNutritionUnit</race>
+        <canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+        <defaultFactionType>PlayerColony</defaultFactionType>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawns/Animals/DroneNutritionUnit/DroneNutritionUnit</texPath>
+                    <drawSize>2.75</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.6, 0.6)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawns/Animals/DroneNutritionUnit/DroneNutritionUnit</texPath>
+                    <drawSize>2.75</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+</Defs>

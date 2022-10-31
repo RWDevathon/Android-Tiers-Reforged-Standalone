@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>ATR_MechanicalOptimization</defName>
+        <label>Mechanical optimization</label>
+		<tab>ATR_MechResearch</tab>
+        <description>Standardization alone will not solve everything - further progress will require a revolution of efficiency and precision. New standards for optimization, accuracy, and capability will need to be developed. Once achieved, humanity's more wild ideas fall within reach.</description>
+        <baseCost>4000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+            <li>AdvancedFabrication</li>
+        </prerequisites>
+		<researchViewX>5</researchViewX>
+		<researchViewY>2</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_T3Androids</defName>
+		<label>T3 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier three androids are marked by their scale and sheer capabilities. Dwarfing humans at an average height of 7-9 feet - necessary to contain the vast requisite resources for operation - and intimidating in both strength and acuity, these units are clear evolutions of human design.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_MechanicalOptimization</li>
+            <li>ATR_T2Androids</li>
+        </prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>3</researchViewY>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_SurrogateOptimization</defName>
+        <label>Optimized surrogate protocols</label>
+        <tab>ATR_MechResearch</tab>
+        <description>With a great deal of advancement in both fabrication capabilities and protocol optimization, it may very well be possible to develop a method for organics to both become and utilize surrogates. This is a revolutionary capability, but one fraught with moral and ethical concerns. Is this a line that shouldn't be crossed?</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalOptimization</li>
+            <li>ATR_RemoteControlProtocols</li>
+        </prerequisites>
+        <researchViewX>6</researchViewX>
+        <researchViewY>0</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_CommunicationOptimization</defName>
+        <label>Optimized communication</label>
+        <tab>ATR_MechResearch</tab>
+        <description>In order to extend the power of the communication network and prepare for a centralized host system, optimization to communication relays and the systems that control them must be developed.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_StandardizedCommunications</li>
+            <li>ATR_MechanicalOptimization</li>
+        </prerequisites>
+        <researchViewX>6</researchViewX>
+        <researchViewY>1</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_MilitaryBiomimetics</defName>
+		<label>Military biomimetics</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Iterating upon utility biomimetics, this research delves into military applications. Significantly more complicated than copying mere domesticated farm animals, militarization can lead to miniature swarm drones, mechanical hounds, or more experimental adaptations.</description>
+		<baseCost>1400</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_UtilityBiomimetics</li>
+            <li>ATR_MechanicalOptimization</li>
+        </prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_ServerOptimization</defName>
+        <label>Server optimization</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Optimizing servers for space and utility is expensive, but promises to bring revolutionary expansion to the colony's insight generation. Combining storage and generation, these servers could make older models obsolete.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalOptimization</li>
+        </prerequisites>
+        <researchViewX>7</researchViewX>
+        <researchViewY>0</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_T4Androids</defName>
+		<label>T4 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier four androids are marked by their possession of an archotech AI persona core. The possession of such a thing greatly reduces the need for space and therefore size and weight. While its capabilities do not inherently exceed that of a tier three, its persona core does undeniably confer benefits.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites><li>ATR_T3Androids</li></prerequisites>
+		<researchViewX>7</researchViewX>
+		<researchViewY>3</researchViewY>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_CoreAssistants</defName>
+        <label>Core assistance</label>
+        <tab>ATR_MechResearch</tab>
+        <description>With the acquisition of properly fabrication and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. These parts will function significantly better than factory standard equivalents while remaining within reasonable cost estimates.</description>
+        <baseCost>1600</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalOptimization</li>
+        </prerequisites>
+		<researchViewX>8</researchViewX>
+		<researchViewY>0</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_RepairOptimization</defName>
+        <label>Repair Optimization</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Optimization to repair stimulants should allow for significantly increased recovery time and operation success chance in mechanical units. The quality of these stimulants is comparable to that of glitterworlds' stimulants - technology in this field has only come so far, even for them.</description>
+        <baseCost>1400</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalOptimization</li>
+        </prerequisites>
+        <researchViewX>9</researchViewX>
+        <researchViewY>0</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_SkyMindCore</defName>
+        <label>SkyMind</label>
+        <tab>ATR_MechResearch</tab>
+        <description>The pinnacle of mechanical and consciousness research, a theoretical supercomputer core capable of permanently storing, saving, replicating, and allowing the full use of consciousnesses is within reach. It is incredibly expensive, but it offers a glimpse of immortality. Coaxing so many AI personas to play babysitter and host will be difficult.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>ATR_CommunicationOptimization</li>
+            <li>ShipComputerCore</li>
+        </prerequisites>
+        <researchViewX>9</researchViewX>
+        <researchViewY>1</researchViewY>
+		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    </ResearchProjectDef>
+
+</Defs>

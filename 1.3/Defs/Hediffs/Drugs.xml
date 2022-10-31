@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MechAntifreeze</defName>
+		<label>Mechanite antifreeze</label>
+		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<graphicData>
+			<texPath>Things/Drugs/Antifreeze</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<WorkToMake>550</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
+					<hediffDef_Organic>Toxicated</hediffDef_Organic>
+					<hediffDef_Mechanical>MechAntifreeze</hediffDef_Mechanical>
+					<severity>1</severity>
+				</li>   
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Chemfuel>5</Chemfuel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>802</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>Toxicated</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Toxicated</label>
+		<description>Toxic synthetic compounds within the bloodstream, causing severe health defects.</description>
+		<makesSickThought>true</makesSickThought>
+		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.02</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.02</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<painOffset>0.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Major</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>Systemic</label>
+				<painOffset>0.35</painOffset>
+				<vomitMtbDays>0.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!--HediffMechanical-->
+
+	<HediffDef>
+		<defName>MechAntifreeze</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanite antifreeze</label>
+		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+					<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+					<ComfyTemperatureMax>20</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Significant</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+					<ComfyTemperatureMax>30</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>Peak</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+					<ComfyTemperatureMax>40</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MechSwarm</defName>
+		<label>Mechanite swarm</label>
+		<description>A small pill containing a veritable legion of mechanites. These mechanites greatly enhance the hosts ability to control the chassis, for two days, as natural mechanite production can not sustain the surge.</description>
+		<graphicData>
+			<texPath>Things/Drugs/MechSwarm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<WorkToMake>1550</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
+					<hediffDef_Organic>Toxicated</hediffDef_Organic>
+					<hediffDef_Mechanical>MechaniteSurge</hediffDef_Mechanical>
+					<severity>1</severity>
+				</li>  
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Neutroamine>1</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>803</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>MechaniteSurge</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanite surge</label>
+		<description>An extra boost of echanites flowing through coolant tubing. The overpopulation of mechanites can't be sustained by the mechanite storage, and will return to normal levels before long.\n\nIn the mean time however, overall efficiency will be improved.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<statOffsets>
+					<CarryingCapacity>10</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<statOffsets>
+					<CarryingCapacity>30</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>Significant</label>
+				<statOffsets>
+					<CarryingCapacity>50</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>Peak</label>
+				<statOffsets>
+					<CarryingCapacity>70</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Fractal Pill and effects -->
+
+	<ThingDef ParentName="DrugBase">
+		<defName>FractalPill</defName>
+		<label>Fractal pill</label>
+		<description>Like all things related to archotechs, it is impossible to know what exactly this is. The only remnants of those warped by fractal power, these small pill-like objects can imbue a new host with that same fractal power. Rumor has it that archotechs whisper in the ears of those warped by it, offering a glimpse of true power. \n\nIn organics, this leads to warping of the mind and flesh - some believe it is enlightenment, others nightmares incarnate. It violently expunges diseases and mutating the very essence of its host. The vast majority of the time this will eventually lead to becoming a horrific monster, but madmen rant about the possibility for "the chosen" to "ascend to blessed fragmentation" instead.\n\nIn mechanicals, fractal warping has a much more tame effect. It integrates with the chassis and provides numerous beneficial effects ranging from enhanced cognition to ridiculous temperature tolerance. It does, however, occasionally warp internal storage and force reboots to defragment memory.</description>
+		<graphicData>
+			<texPath>Things/Drugs/FractalP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+        <useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+			<Mass>0.4</Mass>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Flammability>0</Flammability>
+		</statBases>
+		<techLevel>Ultra</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
+					<hediffDef_Organic>FractalPillOrganic</hediffDef_Organic>
+					<hediffDef_Mechanical>FractalPillMechanical</hediffDef_Mechanical>
+					<severity>0.25</severity>
+				</li> 	
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>804</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>FractalPillOrganic</defName>
+		<hediffClass>ATReforged.Hediff_Fractal</hediffClass>
+		<label>Fractal Warping</label>
+		<description>Fractal warping of the body. As flesh toughens and takes on metallic qualities and the mind rots and yet also grows, a uniquely enlightening and agonizing perspective takes hold. This is the archotech's work, but for what inscrutable purpose was this warping manifested?</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0</severityPerDay>
+			</li>
+            <li Class="HediffCompProperties_HealPermanentWounds" />
+		</comps>
+		<defaultLabelColor>(255, 130, 0)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>0.5</maxSeverity>
+		<isBad>true</isBad>
+		<stages>	
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<label>Transcendant</label>
+				<painOffset>0.05</painOffset>
+				<vomitMtbDays>16</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>8</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>12</GlobalLearningFactor>
+					<WorkSpeedGlobal>3</WorkSpeedGlobal>
+					<MentalBreakThreshold>-0.50</MentalBreakThreshold>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.05</minSeverity>
+				<label>Blessed</label>
+				<painOffset>0.1</painOffset>
+				<vomitMtbDays>8</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>6</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>4</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>8</GlobalLearningFactor>
+					<WorkSpeedGlobal>1</WorkSpeedGlobal>
+					<MentalBreakThreshold>-0.30</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.15</minSeverity>
+				<label>Gifted</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>4</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>2</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>4</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>2</GlobalLearningFactor>
+					<WorkSpeedGlobal>0.50</WorkSpeedGlobal>
+					<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Balanced</label>
+				<painOffset>0.05</painOffset>
+				<vomitMtbDays>2</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>4</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+					<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+					<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.35</minSeverity>
+				<label>Tainted</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>4</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>.75</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>4</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>1</MoveSpeed>
+					<WorkSpeedGlobal>1.00</WorkSpeedGlobal>
+					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.45</minSeverity>
+				<label>Vile</label>
+				<painOffset>0.3</painOffset>
+				<vomitMtbDays>8</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>1.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>4</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>2</MoveSpeed>
+					<WorkSpeedGlobal>3.00</WorkSpeedGlobal>
+					<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Corrupted</label>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- HediffMechanical -->
+
+	<HediffDef>
+		<defName>FractalPillMechanical</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Fractal Integration</label>
+		<description>Fractal integration into the whole chassis. Substantially improves all aspects of existence at the cost of the need to defragment memory occasionally. The emotional burden of being blessed with knowledge also takes its toll.</description>
+		<defaultLabelColor>(0.9,0.9,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0</severityPerDay>
+			</li>
+            <li Class="HediffCompProperties_HealPermanentWounds" />
+		</comps>
+		<stages>
+			<li>
+				<label>Little effect</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Awakened</label>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>0.25</GlobalLearningFactor>
+					<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+					<MentalBreakThreshold>0.04</MentalBreakThreshold>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Illuminated</label>
+				<hungerRateFactorOffset>1.25</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.55</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.55</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>0.5</GlobalLearningFactor>
+					<WorkSpeedGlobal>0.55</WorkSpeedGlobal>
+					<MentalBreakThreshold>0.08</MentalBreakThreshold>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>Enlightened</label>
+				<hungerRateFactorOffset>2.5</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>1.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>1.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.8</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>WanderConfused</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<statOffsets>
+					<GlobalLearningFactor>1.4</GlobalLearningFactor>
+					<MentalBreakThreshold>0.12</MentalBreakThreshold>
+					<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
+					<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Transcendant</label>
+				<hungerRateFactorOffset>4</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>3.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>3.5</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>3</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>WanderConfused</mentalState>
+						<mtbDays>20</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<statOffsets>
+					<GlobalLearningFactor>4</GlobalLearningFactor>
+					<MentalBreakThreshold>0.16</MentalBreakThreshold>
+					<WorkSpeedGlobal>3.2</WorkSpeedGlobal>
+					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<!--Regen Pill-->
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>RegenerativePill</defName>
+		<label>Regenerative pill</label>
+		<description>A rare case of a mechanical-designed pill (mostly) safe for organic consumption, regenerative pills use specially programmed mechanites that traverse the host's body seeking to repair and fortify damaged parts for faster recovery. \n\nOrganics will find the experience quite unpleasant, but do still fully benefit from the pill's effects.</description>
+		<graphicData>
+			<texPath>Things/Drugs/RegenerativePill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<WorkToMake>2500</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
+					<hediffDef_Organic>RegenOrganic</hediffDef_Organic>
+					<hediffDef_Mechanical>RegenMechanical</hediffDef_Mechanical>
+					<severity>1</severity>
+				</li>      
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Chemfuel>10</Chemfuel>
+			<Neutroamine>15</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>805</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>RegenOrganic</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Organic regeneration</label>
+		<description>Specialized mechanites are repairing and fortifying damaged parts of the body.</description>
+		<makesSickThought>true</makesSickThought>
+		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<painOffset>0.05</painOffset>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>Significant</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>Peak</label>
+				<painOffset>0.3</painOffset>
+				<vomitMtbDays>1</vomitMtbDays>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>RegenOrganic_Thought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RegenOrganic</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<description>The strangeness has faded. I'm alright.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>Regeneration (Minor)</label>
+				<description>I have a creeping sensation that something doesn't feel right, but I am in control.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+			<li>
+				<label>Regeneration (Moderate)</label>
+				<description>I feel extremely uncomfortable and strange. My body is sending my all sorts of warning signs.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>     
+			<li>
+				<label>Regeneration (Significant)</label>
+				<description>My whole body feels really wrong and weird - like my flesh is crawling.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<li>
+				<label>Regeneration (Peak)</label>
+				<description>My body squirms, twists, burns, and twitches without my control! It feels like my body has a mind of its own!</description>
+				<baseMoodEffect>-16</baseMoodEffect>
+			</li>   
+		</stages>
+	</ThoughtDef>
+
+	<!--HediffMechanical-->
+
+	<HediffDef>
+		<defName>RegenMechanical</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanical regeneration</label>
+		<description>Specially designed mechanites are repairing and fortifying damaged regions of the chassis.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<stages>
+			<li>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

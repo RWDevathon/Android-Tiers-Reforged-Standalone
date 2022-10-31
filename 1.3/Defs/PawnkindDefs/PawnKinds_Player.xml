@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>T5Colonist</defName>
+		<label>T5 Android Colonist</label>
+		<race>Tier5Android</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>ATR_ArchotechAndroids</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+		<techHediffsMoney>
+			<min>2000</min>
+			<max>10000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>secret</li>
+		</techHediffsTags>
+		<maxGenerationAge>400000</maxGenerationAge>
+		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<techHediffsChance>0.1</techHediffsChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+	</PawnKindDef>
+
+    <PawnKindDef Name="BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
+        <label>Android colonist</label>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>ATR_NewbootAndroids</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<maxGenerationAge>1</maxGenerationAge>
+		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+    </PawnKindDef>
+
+	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+		<defName>T4Colonist</defName>
+		<label>T4 Android Colonist</label>
+		<race>Tier4Android</race>
+	</PawnKindDef>
+
+
+	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+		<defName>T3Colonist</defName>
+		<label>T3 Android Colonist</label>
+		<race>Tier3Android</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+		<defName>T2Colonist</defName>
+		<label>T2 Android Colonist</label>
+		<race>Tier2Android</race>
+	</PawnKindDef>
+
+
+	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+		<defName>T1Colonist</defName>
+		<label>T1 Android Colonist</label>
+		<race>Tier1Android</race>
+	</PawnKindDef>
+
+	<!--Androids With Real Backstories-->
+
+    <PawnKindDef Name="BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
+        <label>Android colonist</label>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>ATR_GeneralAndroids</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>20</minGenerationAge>
+		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <initialResistanceRange>13~21</initialResistanceRange>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+    </PawnKindDef>
+
+	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+		<defName>T4Refugee</defName>
+		<label>T4 Android Colonist</label>
+		<race>Tier4Android</race>
+	</PawnKindDef>
+
+
+	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+		<defName>T3Refugee</defName>
+		<label>T3 Android Colonist</label>
+		<race>Tier3Android</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+		<defName>T2Refugee</defName>
+		<label>T2 Android Colonist</label>
+		<race>Tier2Android</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+		<defName>T1Refugee</defName>
+		<label>T1 Android Colonist</label>
+		<race>Tier1Android</race>
+	</PawnKindDef>
+
+</Defs>

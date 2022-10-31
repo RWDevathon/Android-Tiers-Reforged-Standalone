@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<RecipeDef>
+		<defName>Make_ChemfuelFromChemCapsule</defName>
+		<label>make chemfuel from chemical capsules</label>
+		<description>Make a batch of chemfuel by refining the raw resources within chemical capsules.</description>
+		<jobString>Refining chemfuel from capsules.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChemCapsule</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChemCapsule</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Chemfuel>15</Chemfuel>
+		</products>
+        <recipeUsers>
+            <li>BiofuelRefinery</li>
+            <li>DrugLab</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>Make_NeutroamineFromChemCapsule</defName>
+		<label>make neutroamine from chemical capsules</label>
+		<description>Make a batch of neutroamine by refining the raw resources within chemical capsules.</description>
+		<jobString>Refining neutroamine from capsules.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>2000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChemCapsule</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChemCapsule</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Neutroamine>5</Neutroamine>
+		</products>
+	    <recipeUsers>
+            <li>BiofuelRefinery</li>
+            <li>DrugLab</li>
+        </recipeUsers>
+	</RecipeDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ChemCapsule</defName>
+        <label>Chemical Capsule</label>
+        <description>A small, dense capsule full of synthetic precursor chemicals ready for processing into neutroamine or chemfuel.</description>
+        <graphicData>
+            <texPath>Things/Items/AnimalProducts/ChemCapsule</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <color>(80,80,125)</color>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <MarketValue>10</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>1.2</Flammability>
+            <DeteriorationRate>2.0</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+  
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>ATR_NutrientSolution</defName>
+        <label>nutrient solution</label>
+        <description>A thick, nutrient rich solution that vaguely tastes like milk and has an incredibly long shelf-life.</description>
+        <graphicData>
+            <texPath>Things/Items/AnimalProducts/NutrientSolution</texPath>
+        </graphicData>
+        <stackLimit>150</stackLimit>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+        <MarketValue>8</MarketValue>
+        <Mass>0.02</Mass>
+        <MaxHitPoints>60</MaxHitPoints>
+        <Flammability>0.1</Flammability>
+        <Nutrition>0.15</Nutrition>
+        <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>60</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <ingestible>
+            <preferability>RawTasty</preferability>
+            <foodType>AnimalProduct, Fluid</foodType>
+        </ingestible>
+        <thingCategories>
+            <li>AnimalProductRaw</li>
+        </thingCategories>
+    </ThingDef>
+
+</Defs>

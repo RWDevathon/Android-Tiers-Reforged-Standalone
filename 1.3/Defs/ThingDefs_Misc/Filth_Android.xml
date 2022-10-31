@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseFilth">
+		<defName>CoolantAndroidTier</defName>
+		<label>coolant</label>
+		<statBases>
+            <Cleanliness>-5</Cleanliness>
+            <Beauty>-10</Beauty>
+		</statBases>
+		<filth>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>80</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+		</filth>
+		<graphicData>
+			<texPath>Things/Filth/Spatter</texPath>
+			<color>(114, 170, 230, 150)</color>
+		</graphicData>
+	</ThingDef>
+</Defs>

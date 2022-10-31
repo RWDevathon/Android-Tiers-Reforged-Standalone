@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Base Spacer -->
+  
+    <HediffDef Name="AddedBodyPartSpacerBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.25</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef Name="BodyPartSpacerBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/Items/BodyParts/OrganWhite</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <statBases>
+            <WorkToMake>26000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ATR_AdvancedMechParts</researchPrerequisite>
+            <recipeUsers>
+                <li>MechPartWorkbench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    </ThingDef>
+
+	<RecipeDef Name="SurgeryMechanicalSpacer" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+		<jobString>Implanting advanced component.</jobString>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+		<workAmount>2600</workAmount>
+        <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		<anesthetize>false</anesthetize>
+	</RecipeDef>
+
+    <!-- Advanced Arm -->
+  
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedArm</defName>
+        <label>Advanced arm</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this arm a significant advantage over standard issue parts.</description>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>15</power>
+                        <cooldownTime>1.65</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ATR_AdvancedArm</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedArm</defName>
+        <label>Advanced arm</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this arm a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>50</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedArm</defName>
+		<label>Install advanced arm</label>
+		<description>Installs an advanced arm.</description>
+		<jobString>Installing advanced arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+            <thingDefs>
+				<li>ATR_AdvancedArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedArm</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Leg -->
+
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedLeg</defName>
+        <label>Advanced leg</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</description>
+        <spawnThingOnRemoved>ATR_AdvancedLeg</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedLeg</defName>
+        <label>Advanced leg</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>50</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>6</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedLeg</defName>
+		<label>Install advanced leg</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this eye a significant advantage over standard issue parts.</description>
+		<jobString>Installing high power leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedLeg</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Visual Sensor -->
+
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedVisualSensor</defName>
+        <label>Advanced visual sensor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this visual sensor a significant advantage over standard issue parts.</description>
+        <spawnThingOnRemoved>ATR_AdvancedVisualSensor</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedVisualSensor</defName>
+        <label>Advanced visual sensor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this visual sensor a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+        </statBases>
+    </ThingDef>
+	
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedVisualSensor</defName>
+		<label>Install advanced visual sensor</label>
+		<description>Installs an advanced visual sensor.</description>
+		<jobString>Installing advanced visual sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedVisualSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+            <thingDefs>
+				<li>ATR_AdvancedVisualSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalVisualSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedVisualSensor</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Audio Sensor -->
+  
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedAudioSensor</defName>
+        <label>Advanced audio sensor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this audio sensor a significant advantage over standard issue parts.</description>
+        <spawnThingOnRemoved>ATR_AdvancedAudioSensor</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedAudioSensor</defName>
+        <label>Advanced audio sensor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this audio sensor a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedAudioSensor</defName>
+		<label>Install advanced audio sensor</label>
+		<description>Installs an advanced audio sensor.</description>
+		<jobString>Installing advanced hearing sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedAudioSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedAudioSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalAudioSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedAudioSensor</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Heatsink -->
+ 
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedHeatsink</defName>
+        <label>Advanced heatsink</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this heatsink a significant advantage over standard issue parts.</description>
+        <spawnThingOnRemoved>ATR_AdvancedHeatsink</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ComfyTemperatureMax>10</ComfyTemperatureMax>
+                    <ComfyTemperatureMin>-6</ComfyTemperatureMin>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedHeatsink</defName>
+        <label>Advanced heatsink</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this heatsink a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>3</Mass>
+        </statBases>
+    </ThingDef>
+	
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedHeatsink</defName>
+		<label>Install advanced heatsink</label>
+		<description>Installs an advanced heatsink.</description>
+		<jobString>Installing advanced heatsink.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedHeatsink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedHeatsink</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalHeatsink</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedHeatsink</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Coolant Pump -->
+ 
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedCoolantPump</defName>
+        <label>Advanced coolant pump</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this coolant pump a significant advantage over standard issue parts.</description>
+        <stages>
+			<li>
+		        <statOffsets>
+                    <ComfyTemperatureMax>6</ComfyTemperatureMax>
+		            <ComfyTemperatureMin>-6</ComfyTemperatureMin>
+		        </statOffsets>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_AdvancedCoolantPump</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedCoolantPump</defName>
+        <label>Advanced coolant pump</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this coolant pump a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>3</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedCoolantPump</defName>
+		<label>Install advanced coolant pump</label>
+		<description>Installs an advanced coolant pump.</description>
+		<jobString>Installing advanced coolant pump.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedCoolantPump</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedCoolantPump</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>InternalCorePump</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedCoolantPump</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Battery -->
+ 
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedBattery</defName>
+        <label>Advanced battery pack</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this battery a significant advantage over standard issue parts.</description>
+        <stages>
+			<li>
+                <hungerRateFactor>0.8</hungerRateFactor>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_AdvancedBattery</spawnThingOnRemoved>
+    </HediffDef>
+ 
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedBattery</defName>
+        <label>Advanced battery pack</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this battery a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedBattery</defName>
+		<label>Install advanced battery pack</label>
+		<description>Installs an advanced battery pack.</description>
+		<jobString>Installing advanced battery pack.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedBattery</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedBattery</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>InternalBattery</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedBattery</addsHediff>
+	</RecipeDef>
+ 
+    <!-- Advanced Mechanite Storage -->
+
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedMechaniteStorage</defName>
+        <label>Advanced mechanite storage</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this mechanite storage a significant advantage over standard issue parts. Higher quality mechanites means injuries will be repaired quicker.</description>
+		<stages>
+			<li>
+                <statOffsets>
+                    <InjuryHealingFactor>2</InjuryHealingFactor>
+                </statOffsets>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_AdvancedMechaniteStorage</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedMechaniteStorage</defName>
+        <label>Advanced mechanite storage</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this mechanite storage a significant advantage over standard issue parts. Higher quality mechanites means injuries will be repaired quicker.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>3</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>Install_AdvancedMechaniteStorage</defName>
+		<label>Install advanced mechanite storage</label>
+		<description>Installs an advanced mechanite storage.</description>
+		<jobString>Installing advanced mechanite storage.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedMechaniteStorage</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedMechaniteStorage</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechaniteStorage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedMechaniteStorage</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Reactor -->
+ 
+    <HediffDef ParentName="AddedBodyPartSpacerBase">
+        <defName>ATR_AdvancedReactor</defName>
+        <label>Advanced bio-reactor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</description>
+		<stages>
+			<li>
+                <hungerRateFactor>0.8</hungerRateFactor>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_AdvancedReactor</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartSpacerBase">
+        <defName>ATR_AdvancedReactor</defName>
+        <label>Advanced bio-reactor</label>
+        <description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <statBases>
+            <Mass>4</Mass>
+        </statBases>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalSpacer">
+		<defName>InstallATR_AdvancedReactor</defName>
+		<label>install advanced bio-reactor</label>
+		<description>Installs an advanced bio-reactor.</description>
+		<jobString>Installing advanced bio-reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_AdvancedReactor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_AdvancedReactor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>InternalGenerator</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AdvancedReactor</addsHediff>
+	</RecipeDef>
+
+</Defs>

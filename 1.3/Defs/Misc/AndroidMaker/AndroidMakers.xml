@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="GeneratorBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <graphicData>
+            <texPath>Things/Alpha</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+	  
+    <ThingDef ParentName="GeneratorBase">
+        <defName>T1AndroidGenerator</defName>
+        <label>T1 Android</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>T1Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>T2AndroidGenerator</defName>
+        <label>T2 Android</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>T2Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>T3AndroidGenerator</defName>
+        <label>T3 Android</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>T3Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>T4AndroidGenerator</defName>
+        <label>T4 Android</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>T4Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>WatchdogGenerator</defName>
+        <label>Watchdog Unit</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>DroneWatchdog</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>TORTGenerator</defName>
+        <label>TORT Unit</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>DroneTORT</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>ChemUnitGenerator</defName>
+        <label>Chemical processing unit</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>DroneChemUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>MineralUnitGenerator</defName>
+        <label>Phytomining Unit</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>DroneMineralUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="GeneratorBase">
+        <defName>NutritionUnitGenerator</defName>
+        <label>Nutrition Unit</label>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>DroneNutritionUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+	
+    <ThingDef ParentName="GeneratorBase">
+        <defName>MicroScytherGeneratorAI</defName>
+        <label>MicroScyther</label>
+        <comps>
+            <li>
+                <compClass>ATReforged.CompAndroidSpawnerLightSwarm</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+    <defName>FeelingsTowardOrganicsATReforged</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ATReforged.ThoughtWorker_FeelingsTowardOrganics</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Loves Organics</label>
+        <baseOpinionOffset>30</baseOpinionOffset>
+      </li>
+      <li>
+        <label>Respects Organics</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+      <li>
+        <label>Disrespects Organics</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+      <li>
+        <label>Hates Organics</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

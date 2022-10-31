@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoFlickering -->
+	<ATR_FlickEnable>PowerOn via SkyCloud</ATR_FlickEnable>
+	<ATR_FlickDisable>PowerOff via SkyCloud</ATR_FlickDisable>
+	<ATPP_AutoDoorOpenMoteText>Opening via SkyCloud</ATPP_AutoDoorOpenMoteText>
+	<ATPP_AutoDoorCloseMoteText>Closing via SkyCloud</ATPP_AutoDoorCloseMoteText>
+
+</LanguageData>

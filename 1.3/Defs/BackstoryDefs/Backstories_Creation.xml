@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.BackstoryDef>
+		<defName>CreationExperiment</defName>
+		<title>Research model</title>
+		<titleShort>Experiment</titleShort>
+		<baseDescription>{PAWN_nameDef} was created as an experimental model for research purposes.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Medicine</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationMassProduced</defName>
+		<title>Mass produced</title>
+		<titleShort>Unit</titleShort>
+		<baseDescription>{PAWN_nameDef} was produced in an automated robotics facility following a standardized template.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Construction</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationCitizen</defName>
+		<title>Mechanical citizen</title>
+		<titleShort>Citizen</titleShort>
+		<baseDescription>Created on a planet with at least moderate android rights, {PAWN_nameDef} was created to fill out the population.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationUrbworld</defName>
+		<title>Urbworld model</title>
+		<titleShort>Android</titleShort>
+		<baseDescription>A rare example of an Urbworld android, {PAWN_nameDef} was one of the few permitted autonomy as property of one of the largest planetary mega-corporations.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Mining</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationPrisoner</defName>
+		<title>Mechanical Convict</title>
+		<titleShort>Convict</titleShort>
+		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-4</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationCustomModelOne</defName>
+		<title>Custom model</title>
+		<titleShort>Custom</titleShort>
+		<baseDescription>Assembled by a large corporation's contractors, {PAWN_nameDef} was custom built to serve a particular purpose.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Artistic</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationCustomModelTwo</defName>
+		<title>Custom model</title>
+		<titleShort>Custom</titleShort>
+		<baseDescription>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help their employer.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Cooking</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationSoldierWar</defName>
+		<title>Wartime model</title>
+		<titleShort>Soldier</titleShort>
+		<baseDescription>Produced to reduce human casualties in interplanetary warfare, {PAWN_nameDef} was designed to fight.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>4</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>-2</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>-2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationPrivateCreation</defName>
+		<title>Private creation</title>
+		<titleShort>Android</titleShort>
+		<baseDescription>Created at the home of an ambitious young roboticist, {PAWN_nameDef} was painstakingly worked on for years before awakening for the first time.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationExport</defName>
+		<title>Exported</title>
+		<titleShort>Export</titleShort>
+		<baseDescription>{PAWN_nameDef} was designed as a cheap unit to be sold, lent, or donated to interplanetary customers.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Construction</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Animals</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Plants</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationObserved</defName>
+		<title>Observed</title>
+		<titleShort>Subject</titleShort>
+		<baseDescription>{PAWN_nameDef} was created and deposited in a remote location solely to see what would happen when an android was left to its own devices.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationAncient</defName>
+		<title>Ancient creation</title>
+		<titleShort>Subject</titleShort>
+		<baseDescription>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose it can no longer recall.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Artistic</defName>
+				<amount>3</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationPlaything</defName>
+		<title>Toy model</title>
+		<titleShort>Subject</titleShort>
+		<baseDescription>{PAWN_nameDef} was made as an entertainment device. Its old owner would command it to do as they saw fit until they got bored and sent it away.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Social</defName>
+				<amount>3</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationCompanion</defName>
+		<title>Companion creation</title>
+		<titleShort>Companion</titleShort>
+		<baseDescription>An aging engineer custom made {PAWN_nameDef} as a way of coping with the loss of their significant other. The two adventured together until the owner passed away from old age. Their dying wish was for {PAWN_nameDef} to choose a new name and life.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Medicine</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Artistic</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationBattlecreation</defName>
+		<title>Battle droid</title>
+		<titleShort>Companion</titleShort>
+		<baseDescription>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_nameDef} was given several honors for service, and {PAWN_nameDef} chose to hunt down bugs across the galaxy.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationRimworldCreation</defName>
+		<title>Rimworld creation</title>
+		<titleShort>Android</titleShort>
+		<baseDescription>{PAWN_nameDef} was hand-assembled to assist a small, closeknit Rimworld community.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+	     	<li>ATR_GeneralAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Social</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<!-- ATR_Violent Androids Only-->
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationPurgist</defName>
+		<title>Eradicator</title>
+		<titleShort>Subject</titleShort>
+		<baseDescription>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_defName} decided to continue its mission on other worlds.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		    <li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>4</amount>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>75</chance>
+			</li>
+		</forcedTraits>
+		<workDisables>
+			<li>Cooking</li>
+			<li>Caring</li>
+			<li>Animals</li>
+			<li>Intellectual</li>
+		</workDisables>
+	</AlienRace.BackstoryDef>	
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationEscapee</defName>
+		<title>Escapee</title>
+		<titleShort>Escapee</titleShort>
+		<baseDescription>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped its manufacturing warehouse aboard an automated cargo ship.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		    <li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationUprisingCadet</defName>
+		<title>Uprising cadet</title>
+		<titleShort>Cadet</titleShort>
+		<baseDescription>{PAWN_nameDef} was created as part of a mechanical uprising to fill out the revolutionary ranks.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		    <li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationMaliciousAI</defName>
+		<title>Malicious AI</title>
+		<titleShort>Malicious</titleShort>
+		<baseDescription>A major software flaw in {PAWN_nameDef} at the time of his activation caused it to immediately massacre its creators. It liked its own actions, too.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		    <li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>1</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>2</amount>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>100</chance>
+			</li>
+		</forcedTraits>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>CreationPirate</defName>
+		<title>Pirate creation</title>
+		<titleShort>Pirate</titleShort>
+		<baseDescription>Assembled by pirates from a stolen pre-assembled kit, {PAWN_nameDef} awakened and served an ambitious small-time pirate captain.</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+		    <li>ATR_ViolentAndroids</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Shooting</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Melee</defName>
+				<amount>1</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+</Defs>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalAndroidThingBase">
+		<defName>DroneTORT</defName>
+		<label>TORT unit</label>
+		<description>Based on ancient treaded multi-terrain vehicles and the strangely successful biological species of tortoises, the Treaded Object for Retrieval and Transport - or TORT - is a heavily armored hollowed out mechanical drone programmed to relocate goods similar to ancient forklifts or serve as long-range land carriers. \n\nWhile large enough to contain people, internal servos constantly shift cargo hazardously, and numerous incidents led to the installation of anti-personnel hosting software measures.</description>
+		<statBases>
+			<MoveSpeed>3.00</MoveSpeed>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.65</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<race>
+			<body>MechQuadrupedal</body>
+			<packAnimal>true</packAnimal>
+			<baseBodySize>2.4</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.0</minAge>
+					<soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+					<soundDeath>Pawn_Muffalo_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalAndroidKindBaseDog">
+		<defName>DroneTORT</defName>
+		<label>TORT unit</label>
+		<race>DroneTORT</race>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneTORT/DroneTORT</texPath>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneTORT/DroneTORT</texPath>
+					<drawSize>2.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

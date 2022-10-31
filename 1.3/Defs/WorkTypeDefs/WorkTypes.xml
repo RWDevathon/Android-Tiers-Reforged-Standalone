@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkTypeDef>
+    <defName>Mechanic</defName>
+    <labelShort>mechanic</labelShort>
+    <pawnLabel>Mechanic</pawnLabel>
+    <gerundLabel>repairing</gerundLabel>
+    <description>Repair injured mechanical units, handle operations, and rescue disabled units. Mechanics will care for both colonists and prisoners.</description>
+    <verb>Repair</verb>
+    <naturalPriority>1250</naturalPriority>
+    <relevantSkills>
+      <li>Crafting</li>
+    </relevantSkills>
+    <workTags>
+      <li>Crafting</li>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+</Defs>

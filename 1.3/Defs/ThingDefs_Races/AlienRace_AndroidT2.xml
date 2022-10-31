@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BaseMechanicalPawn">
+		<defName>Tier2Android</defName>
+		<label>T2 Android</label>
+		<description>The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>
+		<alienRace>
+			<graphicPaths>
+				<li>
+					<body>Things/Pawns/Humanlikes/Tier2/body/</body>
+					<head>Things/Pawns/Humanlikes/Tier2/head/</head>
+				</li>
+			</graphicPaths>
+		</alienRace>
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<MoveSpeed>4.50</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>40</ComfyTemperatureMax>
+			<WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+			<MentalBreakThreshold>0.08</MentalBreakThreshold>
+			<GlobalLearningFactor>0.9</GlobalLearningFactor>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<Mass>62.5</Mass>
+		</statBases>
+		<tools>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>ATR_AndroidBody</body>
+			<baseHealthScale>0.8</baseHealthScale>
+			<baseHungerRate>1.4</baseHungerRate>
+			<baseBodySize>0.8</baseBodySize>
+		</race>
+		<butcherProducts>
+            <Steel>20</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</butcherProducts>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

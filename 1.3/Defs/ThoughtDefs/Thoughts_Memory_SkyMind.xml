@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>ATR_ConnectedSkyMindAttacked</defName>
+        <durationDays>20</durationDays>
+        <stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>SkyMind hacked</label>
+                <description>A SkyMind network I connected to was breached! I don't feel safe.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_AttackedViaSkyMind</defName>
+        <durationDays>20</durationDays>
+        <stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>1.1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>Directly hacked</label>
+                <description>I was mentally assaulted through a breach in a SkyMind network I connected to! I feel violated - how could I have trusted it to be safe?</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_TrolledViaSkyMind</defName>
+        <durationDays>20</durationDays>
+        <stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>Trolled</label>
+                <description>Hackers went far out of their way to breach the SkyMind network just to hurt and insult me! Who has the audacity to do such a thing - and why couldn't we stop it?</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_SurrogatePuppetThought</defName>
+        <durationDays>8</durationDays>
+        <stackLimit>5</stackLimit>
+        <nullifyingTraits>
+            <li>Psychopath</li>
+            <li>Bloodlust</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>Murderous puppeteering</label>
+                <description>An intelligent being has been transformed by the colony into a puppet. They may look the same, but now there is no intelligence. We killed them and turned their body into a soulless husk.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+</Defs>

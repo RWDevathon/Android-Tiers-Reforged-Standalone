@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="ATR_ChargingStationBase" ParentName="BuildingBase" Abstract="True">
+        <altitudeLayer>Building</altitudeLayer>
+        <thingClass>ATReforged.Building_ChargingStation</thingClass>
+        <passability>Impassable</passability>
+        <pathCost>70</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.40</fillPercent>
+        <tickerType>Rare</tickerType>
+        <rotatable>false</rotatable>
+        <comps>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>250</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
+            <li Class="ATReforged.CompProperties_ChargingStation"/>
+            <li Class="CompProperties_Flickable"/>
+        </comps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+        <canOverlapZones>false</canOverlapZones>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_ChargingStationBase">
+        <defName>ATR_ChargingStation</defName>
+        <label>Android charging station</label>
+        <description>A station built to charge 8 adjacent androids simultaneously.</description>
+        <graphicData>
+            <texPath>Things/Buildings/ChargingStation</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <shadowData>
+                <volume>(0.4, 0.1, 0.4)</volume>
+                <offset>(0,0,-0.1)</offset>
+            </shadowData>
+        </graphicData>
+        <uiIconPath>Things/Buildings/ChargingStation</uiIconPath>
+        <altitudeLayer>Building</altitudeLayer>
+        <blockWind>false</blockWind>
+        <fillPercent>0.5</fillPercent>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <statBases>
+            <Mass>10</Mass>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToBuild>2200</WorkToBuild>
+            <Flammability>0.5</Flammability>
+            <Beauty>-1</Beauty>
+        </statBases>
+        <size>(1,1)</size>
+        <selectable>true</selectable>
+        <drawPlaceWorkersWhileSelected>false</drawPlaceWorkersWhileSelected>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <building>
+            <allowAutoroof>false</allowAutoroof>
+        </building>
+        <costList>
+            <Steel>250</Steel>
+            <Silver>150</Silver>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <hasInteractionCell>false</hasInteractionCell>
+        <designationHotKey>Misc7</designationHotKey>
+        <researchPrerequisites>
+            <li>ATR_MassCharging</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    </ThingDef>
+  
+    <!-- SkyMind Towers -->
+    <ThingDef Name="SkyMindTowerBase" ParentName="BuildingBase" Abstract="True">
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <damageData>
+                <edgeTop>Damage/Edge</edgeTop>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <canOverlapZones>false</canOverlapZones>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>0.40</fillPercent>
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>5000</WorkToBuild>
+            <Mass>40</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>-10</Beauty>
+        </statBases>
+        <rotatable>false</rotatable>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+        <designationHotKey>Misc4</designationHotKey>
+        <comps>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Flickable"/>
+        </comps>
+    </ThingDef>
+  
+  
+    <ThingDef ParentName="SkyMindTowerBase">
+        <defName>ATR_SkyMindRelay</defName>
+        <label>SkyMind Relay Tower</label>
+        <description>This tower acts as a relay for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for three nodes.</description>
+        <graphicData>
+            <texPath>Things/Buildings/RelayTower</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,12)</drawSize>
+        </graphicData>
+        <size>(2,2)</size>
+        <costList>
+            <Steel>180</Steel>
+            <Silver>100</Silver>
+            <Gold>25</Gold>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <basePowerConsumption>750</basePowerConsumption>
+            </li>
+            <li Class="ATReforged.CompProperties_SkyMindTower">
+                <SkyMindSlotsProvided>3</SkyMindSlotsProvided>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>ATR_StandardizedCommunications</li>
+        </researchPrerequisites>
+    </ThingDef>
+  
+  
+    <ThingDef ParentName="SkyMindTowerBase">
+        <defName>ATR_SkyMindNetwork</defName>
+        <label>SkyMind Network Tower</label>
+        <thingClass>Building</thingClass>
+        <description>This tower acts as a powerful network host for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for fifteen nodes.</description>
+        <graphicData>
+            <texPath>Things/Buildings/NetworkTower</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,15)</drawSize>
+        </graphicData>
+        <size>(3,3)</size>
+        <costList>
+            <Steel>650</Steel>
+            <Silver>450</Silver>
+            <Gold>45</Gold>
+            <ComponentIndustrial>12</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <basePowerConsumption>1800</basePowerConsumption>
+            </li>
+            <li Class="ATReforged.CompProperties_SkyMindTower">
+                <SkyMindSlotsProvided>15</SkyMindSlotsProvided>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>ATR_CommunicationOptimization</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!-- Charging Pods -->
+
+    <ThingDef Name="ChargingPodBase" ParentName="BedWithQualityBase" Abstract="True">
+        <graphicData>
+            <texPath>Things/Buildings/ChargingPod/ChargingPod</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1,2)</drawSize>
+        </graphicData>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <uiIconPath>Things/Buildings/ChargingPod/ChargingPod_south</uiIconPath>
+        <castEdgeShadows>True</castEdgeShadows>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>2800</WorkToBuild>
+            <Mass>45</Mass>
+            <Flammability>0.4</Flammability>
+            <MechanicalSurgerySuccessChanceFactor>1.05</MechanicalSurgerySuccessChanceFactor>
+            <MechanicalTendQualityOffset>0.1</MechanicalTendQualityOffset>
+            <BedRestEffectiveness>1.1</BedRestEffectiveness>
+            <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+            <Comfort>0.5</Comfort>
+        </statBases>
+	    <comps>
+            <li Class="CompProperties_Flickable"/>
+        </comps>
+        <tickerType>Rare</tickerType>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <thingClass>ATReforged.Building_ChargingBed</thingClass>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <canOverlapZones>false</canOverlapZones>
+        <passability>PassThroughOnly</passability>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <size>(1,2)</size>
+        <building>
+            <bed_showSleeperBody>True</bed_showSleeperBody>
+            <bed_healPerDay>10</bed_healPerDay>
+            <bed_defaultMedical>false</bed_defaultMedical>
+            <bed_maxBodySize>3</bed_maxBodySize>
+            <buildingTags>
+                <li>Bed</li>
+            </buildingTags>
+        </building>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>60</pathCost>
+        <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <designationHotKey>Misc5</designationHotKey>
+	    <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <researchPrerequisites>
+            <li>Electricity</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <techLevel>Industrial</techLevel>
+        <uiIconScale>0.90</uiIconScale>
+    </ThingDef>
+  
+  
+    <ThingDef ParentName="ChargingPodBase">
+	    <defName>ChargingPod</defName>
+        <label>Charging pod</label>
+        <description>A simple charging pod that can charge mechanical units. It is not designed for comfort.</description>
+	    <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <building>
+            <bed_showSleeperBody>True</bed_showSleeperBody>
+            <bed_healPerDay>10</bed_healPerDay>
+            <bed_maxBodySize>3</bed_maxBodySize>
+        </building>
+	    <comps>
+	        <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>80</basePowerConsumption>
+	        </li>
+	        <li Class="CompProperties_AffectedByFacilities">
+			    <linkableFacilities>
+				    <li>MechanicCabinet</li>
+			    </linkableFacilities>
+		    </li>
+	        <li Class="ATReforged.CompProperties_AndroidPod">
+                <chargingRate>1</chargingRate>
+		    </li>
+        </comps>
+    </ThingDef>
+  
+    <ThingDef ParentName="ChargingPodBase">
+	    <defName>ChargingPodMech</defName>
+        <label>Mech pod</label>
+        <description>An extremely large charging pod capable of storing the bulk of a war mech that can not fit in anything smaller.</description>
+        <graphicData>
+            <drawSize>(3,6)</drawSize>
+        </graphicData>
+        <size>(3,6)</size>
+        <costList>
+            <Steel>250</Steel>
+            <Silver>150</Silver>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+	    <comps>
+	        <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>420</basePowerConsumption>
+	        </li>
+	        <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>MechanicCabinet</li>
+                </linkableFacilities>
+		    </li>
+            <li Class="ATReforged.CompProperties_AndroidPod">
+				<chargingRate>1</chargingRate>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- AutoDoor -->
+	<ATR_AutoDoorOpen>Open</ATR_AutoDoorOpen>
+	<ATR_AutoDoorOpenDescription>Open remotely via a SkyCloud core.</ATR_AutoDoorOpenDescription>
+	<ATR_AutoDoorClose>Close</ATR_AutoDoorClose>
+	<ATR_AutoDoorCloseDescription>Close remotely via a SkyCloud server.</ATR_AutoDoorCloseDescription>
+	
+	<!-- Computer -->
+	<ATR_SkillMode>Skill Mode</ATR_SkillMode>
+	<ATR_SkillModeDesc>This server is assigned to skill point generation. Click to switch to security.</ATR_SkillModeDesc>
+	
+	<ATR_SecurityMode>Security Mode</ATR_SecurityMode>
+	<ATR_SecurityModeDesc>This server is assigned to security point generation. Click to switch to hacking.</ATR_SecurityModeDesc>
+	
+	<ATR_HackingMode>Hacking Mode</ATR_HackingMode>
+	<ATR_HackingModeDesc>This server is assigned to hacking point generation. Click to switch to skill.</ATR_HackingModeDesc>
+	
+	<ATR_SwitchToSkillMode>Switch to Skill Mode</ATR_SwitchToSkillMode>
+	<ATR_SwitchToSkillModeDesc>Click to switch to skill point generation, this server is not active right now</ATR_SwitchToSkillModeDesc>
+
+	<!-- Battery -->
+	<ATR_UseBattery>Use Battery</ATR_UseBattery>
+	<ATR_UseBatteryDesc>If enabled, the pawn will rely on battery charging instead of organic decomposition for energy.</ATR_UseBatteryDesc>
+	
+	<!-- SkyMind -->
+	<ATR_ConnectSkyMind>Connect to SkyMind</ATR_ConnectSkyMind>
+	<ATR_ConnectSkyMindDesc>Connect this colonist to the SkyMind network to allow mind operations or surrogate controls.</ATR_ConnectSkyMindDesc>
+	
+	<!-- Core -->
+	<ATR_CloudPawnInfo>Infos</ATR_CloudPawnInfo>
+	<ATR_CloudPawnInfoDesc>Get information about SkyMind intelligences.</ATR_CloudPawnInfoDesc>
+	
+	<ATR_RemoveCloudPawn>Remove</ATR_RemoveCloudPawn>
+	<ATR_RemoveCloudPawnDesc>Remove a SkyMind intelligence</ATR_RemoveCloudPawnDesc>
+	<ATR_RemoveCloudPawnConfirm>Flushing {0} from the SkyMind network will permanently destroy the intelligence. This is considered murder.</ATR_RemoveCloudPawnConfirm>
+	
+	<ATR_ReplicateCloudPawn>Replicate</ATR_ReplicateCloudPawn>
+	<ATR_ReplicateCloudPawnDesc>Replicate a SkyMind intelligence.</ATR_ReplicateCloudPawnDesc>
+	
+	<ATR_Skills>Skills</ATR_Skills>
+	<ATR_SkillsDesc>Open skill workshop, allowing exchange of server skill points for experience and passions.</ATR_SkillsDesc>
+	
+	<ATR_ControlSurrogate>Connect</ATR_ControlSurrogate>
+	<ATR_ControlSurrogateDesc>Take control of the selected hostless surrogate.</ATR_ControlSurrogateDesc>
+	
+	<ATR_ControlCaravanSurrogate>Recover</ATR_ControlCaravanSurrogate>
+	<ATR_ControlCaravanSurrogateDesc>Recover a hostless surrogate in a caravan.</ATR_ControlCaravanSurrogateDesc>
+	
+	<!-- Link -->
+	
+	<ATR_AbsorbExperience>Mind absorption</ATR_AbsorbExperience>
+	<ATR_AbsorbExperienceDesc>Absorb the experience of a prisoner's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceConfirm>This operation extracts useful insights in skills and hacking at the cost of the prisoner's life. This is considered murder.</ATR_AbsorbExperienceConfirm>
+	
+	<ATR_DownloadCloudPawn>Download</ATR_DownloadCloudPawn>
+	<ATR_DownloadCloudPawnDesc>Download a SkyMind intelligence into this pawn.</ATR_DownloadCloudPawnDesc>
+	<ATR_DownloadCloudPawnConfirm>This operation fully transfers a SkyMind intelligence into this pawn. The intelligence will not persist in the network.</ATR_DownloadCloudPawnConfirm>
+	
+	<ATR_DisconnectSurrogate>Disconnect</ATR_DisconnectSurrogate>
+	<ATR_DisconnectSurrogateDesc>Disconnect all surrogate links.</ATR_DisconnectSurrogateDesc>
+	
+	<ATR_ToggleControlMode>Toggle Controls</ATR_ToggleControlMode>
+	<ATR_ToggleControlModeDesc>Toggle surrogate control mode, allowing for surrogate controls but disabling SkyMind operations.</ATR_ToggleControlModeDesc>
+	
+	<ATR_Permute>Permute</ATR_Permute>
+	<ATR_PermuteDesc>Permute the consciousness of the currently selected colonist with another colonist.</ATR_PermuteDesc>
+	<ATR_PermuteConfirm>This operation will swap the intelligences of {0} and {1}.</ATR_PermuteConfirm>
+	
+	<ATR_Duplicate>Duplicate</ATR_Duplicate>
+	<ATR_DuplicateDesc>Duplicate the consciousness of the currently selected colonist into an organic surrogate.</ATR_DuplicateDesc>
+	<ATR_DuplicateConfirm>This operation will transfer a copy of {0} into the target {1}'s body. This is an autonomous intelligence. The SkyMind receiver will burn out once the operation is complete.</ATR_DuplicateConfirm>
+	
+	<ATR_Upload>Upload</ATR_Upload>
+	<ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>
+	<ATR_UploadConfirm>This operation transfers this intelligence into the SkyMind network, leaving the body behind.</ATR_UploadConfirm>
+	
+		
+
+</LanguageData>

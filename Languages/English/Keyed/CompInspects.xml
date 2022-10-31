@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Computer -->
+	<ATR_SkillServersSynthesis>Skill Points available: {0} / {1}</ATR_SkillServersSynthesis>
+	<ATR_SkillProducedPoints>Skill Points producing: {0}</ATR_SkillProducedPoints>
+	<ATR_SkillSlotsAdded>Skill Storage added: {0}</ATR_SkillSlotsAdded>
+	
+	<ATR_SecurityServersSynthesis>Security Points available: {0} / {1}</ATR_SecurityServersSynthesis>
+	<ATR_SecurityProducedPoints>Security Points producing: {0}</ATR_SecurityProducedPoints>
+	<ATR_SecuritySlotsAdded>Security Storage added: {0}</ATR_SecuritySlotsAdded>
+	
+	<ATR_HackingServersSynthesis>Hacking Points available: {0} / {1}</ATR_HackingServersSynthesis>
+	<ATR_HackingProducedPoints>Hacking Points producing: {0}</ATR_HackingProducedPoints>
+	<ATR_HackingSlotsAdded>Hacking Storage added: {0}</ATR_HackingSlotsAdded>
+	
+	<!-- Heat -->
+	<ATR_CompHotSensitiveCriticalText>Heat threshold surpassed: damage imminent!</ATR_CompHotSensitiveCriticalText>
+	<ATR_CompHotSensitiveDangerText>Approaching heat threshold: preventative action advised!</ATR_CompHotSensitiveDangerText>
+	<ATR_CompHotSensitiveWarningText>Ideal heat threshold surpassed: caution advised.</ATR_CompHotSensitiveWarningText>
+	<ATR_CompHotSensitiveSafeText>Within safe operating threshold: operations normal.</ATR_CompHotSensitiveSafeText>
+
+	<!-- SkyMind -->
+	<ATR_HackedWithTimer>Software recompilation complete in {0}.</ATR_HackedWithTimer>
+	<ATR_CryptoLocked>Cryptolocked, access denied.</ATR_CryptoLocked>
+	<ATR_SkyMindDetected>Connected to SkyMind</ATR_SkyMindDetected>
+	
+	<!-- Core -->
+	<ATR_CloudIntelligenceSummary>SkyMind intelligences: {0} / {1}</ATR_CloudIntelligenceSummary>
+	<ATR_AssistingIntelligenceSummary>Idle intelligences: {0}</ATR_AssistingIntelligenceSummary>
+	
+	<!-- Link -->
+	<ATR_SkyMindOperationInProgress>Time until operation is complete: {0}</ATR_SkyMindOperationInProgress>
+	<ATR_SurrogateConnected>Connected to: {0}</ATR_SurrogateConnected>
+	
+	<!-- Tower -->
+	<ATR_SkyMindNetworkSummary>Connected users: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>

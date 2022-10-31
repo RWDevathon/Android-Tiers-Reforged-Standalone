@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Base Industrial -->
+  
+    <HediffDef Name="AddedBodyPartIndustrialBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+        <hediffClass>Hediff_AddedPart</hediffClass>
+        <addedPartProps>
+            <solid>true</solid>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef Name="BodyPartIndustrialBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+        <techLevel>Industrial</techLevel>
+        <graphicData>
+            <texPath>Things/Items/BodyParts/OrganOrange</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>4</Mass>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>MechPartWorkbench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    </ThingDef>
+
+	<RecipeDef Name="SurgeryMechanicalIndustrial" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+		<jobString>Replacing component.</jobString>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+		<workAmount>1300</workAmount>
+		<anesthetize>false</anesthetize>
+	</RecipeDef>
+
+    <!-- Mining Utility Arm -->
+
+    <HediffDef ParentName="AddedBodyPartIndustrialBase">
+        <defName>MiningArm_AT</defName>
+        <label>Mining arm</label>
+	    <description>A simple mechanical arm designed with the extraction and processing of minerals in mind. The arm prominently features a plasteel drill which feeds contents into an internal processor, separating minerals efficiently and swiftly discarding waste to ensure maximal drilling and minimal sorting time.</description>
+        <stages>
+			<li>
+				<statOffsets>
+					<MiningSpeed>0.25</MiningSpeed>
+					<MiningYield>0.2</MiningYield>
+				</statOffsets>
+			</li>
+		</stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>drill</label>
+                        <capacities>
+                            <li>Scratch</li>
+                        </capacities>
+                        <power>15</power>
+                        <cooldownTime>2.25</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>MiningArm_AT</spawnThingOnRemoved>
+    </HediffDef>
+ 
+    <ThingDef ParentName="BodyPartIndustrialBase">
+        <defName>MiningArm_AT</defName>
+        <label>Mining arm</label>
+	    <description>A simple mechanical arm designed with the extraction and processing of minerals in mind. The arm prominently features a plasteel drill which feeds contents into an internal processor, separating minerals efficiently and swiftly discarding waste to ensure maximal drilling and minimal sorting time.</description>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalIndustrial">
+		<defName>InstallMiningArm_AT</defName>
+		<label>Install mining arm</label>
+		<description>Installs a mining arm.</description>
+		<jobString>Installing mining arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MiningArm_AT</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MiningArm_AT</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MiningArm_AT</addsHediff>
+	</RecipeDef>
+
+    <!-- Agriculture Utility Arm -->
+
+    <HediffDef ParentName="AddedBodyPartIndustrialBase">
+        <defName>AgriArm_AT</defName>
+        <label>Agri arm</label>
+	    <description>A simple mechanical arm designed with agriculture and horticulture in mind. The arm features several internal multi-tools that appropriately harvest products and feeds contents into an internal processor, discarding waste products to ensure optimal harvest and minimal sorting time. Ejecting products out of specialized elbow ports is efficient, if rather odd to observe.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<PlantWorkSpeed>0.25</PlantWorkSpeed>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+                    <AnimalGatherSpeed>0.25</AnimalGatherSpeed>
+                    <AnimalGatherYield>0.2</AnimalGatherYield>
+				</statOffsets>
+			</li>
+		</stages>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>scythe</label>
+                        <capacities>
+                            <li>Scratch</li>
+                        </capacities>
+                        <power>15</power>
+                        <cooldownTime>2.25</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>MiningArm_AT</spawnThingOnRemoved>
+    </HediffDef>
+ 
+    <ThingDef ParentName="BodyPartIndustrialBase">
+        <defName>AgriArm_AT</defName>
+        <label>Agri arm</label>
+	    <description>A simple mechanical arm designed with agriculture and horticulture in mind. The arm features several internal multi-tools that appropriately harvest products and feeds contents into an internal processor, discarding waste products to ensure optimal harvest and minimal sorting time. Ejecting products out of specialized elbow ports is efficient, if rather odd to observe.</description>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryMechanicalIndustrial">
+		<defName>InstallAgriArm_AT</defName>
+		<label>Install agri arm</label>
+		<description>Installs an agri arm.</description>
+		<jobString>Installing agri arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AgriArm_AT</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>AgriArm_AT</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AgriArm_AT</addsHediff>
+	</RecipeDef>
+
+    <!-- Makeshift Leg -->
+
+    <HediffDef ParentName="AddedBodyPartIndustrialBase">
+        <defName>MakeshiftRLeg</defName>
+        <label>Makeshift mechanical leg</label>
+	    <description>An installed makeshift leg, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct feet or toes, it is still significantly inferior to a properly designed and manufactured leg.</description>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>0.4</partEfficiency>
+        </addedPartProps>
+    </HediffDef>
+
+    <RecipeDef ParentName="surgeryMechanical">
+		<defName>InstallMakeshiftReplacementLeg</defName>
+		<label>Install makeshift mechanical leg</label>
+		<description>Installs a makeshift mechanical leg.</description>
+		<jobString>Installing makeshift mechanical leg.</jobString>
+        <workAmount>2500</workAmount>
+        <skillRequirements>
+            <Crafting>2</Crafting>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Tier1Android</li>
+            <li>Tier2Android</li>
+            <li>Tier3Android</li>
+            <li>Tier4Android</li>
+            <li>Tier5Android</li>
+        </recipeUsers>
+		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MakeshiftRLeg</addsHediff>
+	</RecipeDef>
+
+    <!-- Makeshift Arm -->
+  
+    <HediffDef ParentName="AddedBodyPartIndustrialBase">
+        <defName>MakeshiftRArm</defName>
+        <label>Makeshift mechanical arm</label>
+	    <description>An installed makeshift arm, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct hands or fingers, it is still significantly inferior to a properly designed and manufactured arm.</description>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>2</power>
+                        <cooldownTime>2.65</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>0.4</partEfficiency>
+        </addedPartProps>
+    </HediffDef>
+	
+    <RecipeDef ParentName="surgeryMechanical">
+		<defName>InstallMakeshiftReplacementArm</defName>
+		<label>Install makeshift mechanical arm</label>
+		<description>Installs a makeshift mechanical arm.</description>
+		<jobString>Installing makeshift mechanical arm.</jobString>
+        <workAmount>2500</workAmount>
+        <skillRequirements>
+            <Crafting>2</Crafting>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Tier1Android</li>
+            <li>Tier2Android</li>
+            <li>Tier3Android</li>
+            <li>Tier4Android</li>
+            <li>Tier5Android</li>
+        </recipeUsers>
+		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+			</li>
+        </ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MakeshiftRArm</addsHediff>
+	</RecipeDef>
+
+</Defs>

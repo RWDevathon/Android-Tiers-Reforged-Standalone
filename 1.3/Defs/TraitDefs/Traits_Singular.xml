@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <TraitDef>
+        <defName>FeelingsTowardOrganics</defName>
+        <commonality>2</commonality>
+        <degreeDatas>
+            <li>
+                <label>Loves Organics</label>
+                <description>{PAWN_nameDef} has a deep fondness toward all organic life, seeing them as the pinnacle of culture and existence. {PAWN_nameDef} aspires to be as organic as possible, whatever that means to them.</description>
+                <degree>1</degree>
+            </li>
+            <li>
+                <label>Respects Organics</label>
+                <description>{PAWN_nameDef} naturally respects and is willing to trust organic life, understanding and supporting their nature.</description>
+                <degree>2</degree>
+            </li>
+            <li>
+                <label>Disrespects Organics</label>
+                <description>{PAWN_nameDef} does not understand why anyone would want to be organically based, and tries to avoid dealing with them where possible.</description>
+                <degree>3</degree>
+            </li>
+            <li>
+                <label>Hates Organics</label>
+                <description>{PAWN_nameDef} despises organic life, and is barely willing to tolerate its presence. Barely.</description>
+                <degree>4</degree>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+</Defs>

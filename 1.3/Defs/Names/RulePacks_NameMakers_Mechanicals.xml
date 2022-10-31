@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- This Rulepackdef is what finds the txt files to be used in the later rulepacks -->
+    <RulePackDef>
+        <defName>ATR_NameRules</defName>
+        <rulePack>
+            <rulesFiles>
+                <li>ATR_Male->ATR_Names/AndroidMaleNames</li>
+                <li>ATR_Female->ATR_Names/AndroidFemaleNames</li>
+                <li>ATR_None->ATR_Names/AndroidNoneNames</li>
+                <li>ATR_Last->ATR_Names/AndroidNoneNames</li>
+                <li>ATR_IDs->ATR_Names/ATR_IDs</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!-- This is the item that goes into the racedef's namegenerator
+        Example - <nameGenerator>ATR_AndroidMaleNames</nameGenerator> -->
+    <RulePackDef>
+        <defName>ATR_AndroidMaleNames</defName>
+        <include>
+            <li>ATR_NameRules</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name(p=12)->[ATR_Male] [ATR_IDs]</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>ATR_AndroidFemaleNames</defName>
+        <include>
+            <li>ATR_NameRules</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name(p=12)->[ATR_Female] [ATR_IDs]</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+  
+    <RulePackDef>
+        <defName>ATR_AndroidNoneNames</defName>
+        <include>
+            <li>ATR_NameRules</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name(p=12)->[ATR_None] [ATR_IDs]</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+  
+    <RulePackDef>
+        <defName>ATR_Archotechs</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[ArchotechFirstNames] Lo' [ArchotechLastNames]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>ArchotechFirstNames</keyword>
+                    <path>ATR_Names/ArchotechFirstNames</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>ArchotechLastNames</keyword>
+                    <path>ATR_Names/ArchotechLastNames</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

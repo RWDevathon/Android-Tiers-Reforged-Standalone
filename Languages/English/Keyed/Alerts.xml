@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATPP_AlertServerHeatCritical>Computer Heat Critical</ATPP_AlertServerHeatCritical>
+	<ATPP_AlertServerHeatCriticalDesc>At least one computer is in danger of combusting due to surpassing its maximum safety heat threshold! Action is required to retain network integrity!</ATPP_AlertServerHeatCriticalDesc>
+	
+	<ATR_AlertLowSecurity>Network At Risk</ATR_AlertLowSecurity>
+	<ATR_AlertLowSecurityDesc>The number of available security points is exceedingly unlikely to successfully defend against attempted hacks! Caution is advised to avoid suffering damage.</ATR_AlertLowSecurityDesc>
+
+	<ATR_NeedMechanic>Need mechanic</ATR_NeedMechanic>
+	<ATR_NeedMechanicDesc>These mechanical units need repairs, but you have no healthy colonists assigned as mechanics.\n\n{0}\nAssign a healthy colonist to the Mechanic work type. While most damage will naturally be mitigated over time, mechanics will significantly increase recovery speed and reduce the chance of side-effects.</ATR_NeedMechanicDesc>
+  
+</LanguageData>

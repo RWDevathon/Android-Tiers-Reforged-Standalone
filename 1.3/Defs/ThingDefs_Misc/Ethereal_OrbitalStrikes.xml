@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="OrbitalStrikeBaseMech" ParentName="EtherealThingBase">
+    <thingClass>OrbitalStrike</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <seeThroughFog>true</seeThroughFog>
+    <comps>
+      <li Class="CompProperties_AffectsSky">
+        <skyColors>
+          <sky>(190, 190, 190)</sky>
+          <shadow>(225, 220, 185)</shadow>
+          <overlay>(255, 255, 255)</overlay>
+          <saturation>1.3</saturation>
+        </skyColors>
+      </li>
+      <li Class="CompProperties_CameraShaker">
+        <mag>0.01</mag>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="OrbitalStrikeBaseMech">
+    <defName>MechFallBeam</defName>
+    <label>MechFall</label>
+    <thingClass>ATReforged.MechFall</thingClass>
+    <comps>
+      <li Class="CompProperties_OrbitalBeam">
+        <width>0.25</width>
+        <color>(255, 50, 50, 150)</color>
+        <sound>MortarRound_Ambient</sound>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseWeapon">
+    <defName>OrbitalTargeterMechFall</defName>
+    <label>orbital mech-fall targeter</label>
+    <description>An ancient targetting unit for an M-Series war mech. There's no good way of knowing which particular series mech is going to fall where this thing points, but the device indicates that there is indeed a fully active mech awaiting the command.</description>
+	<thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Sellable</tradeability>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>ATReforged.Verb_MechFall</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3</warmupTime>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <range>85</range>
+        <burstShotCount>1</burstShotCount>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+  </ThingDef>
+</Defs>

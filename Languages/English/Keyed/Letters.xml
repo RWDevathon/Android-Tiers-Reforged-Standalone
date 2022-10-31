@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<ATR_ReprogramSuccess>Drone Reprogrammed</ATR_ReprogramSuccess>
+	<ATR_ReprogramSuccessDesc>{0} has been reprogrammed. After rebooting, it will recognize the colony as its controller.</ATR_ReprogramSuccessDesc>
+	<ATR_ReprogramFailed>Reprogramming Failed</ATR_ReprogramFailed>
+	<ATR_ReprogramFailedDesc>Reprogramming operation on {0} failed. It will reboot, but it will not recognize commands. It may have suffered memory damage in the process.</ATR_ReprogramFailedDesc>
+	
+	<ATR_FractalCorruption>Fractal Abomination</ATR_FractalCorruption>
+	<ATR_FractalCorruptionDesc>{0} has been fully corrupted by fractal warping. They are no more than an abomination! The echoes of tortured screams will be heard for many miles, and perhaps as many years.</ATR_FractalCorruptionDesc>
+	
+	<ATR_ServerMeltdown>Server Meltdown</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>A server has partially exploded due to excessive heat!</ATR_ServerMeltdownDesc>
+	
+	
+	<!-- Hacking Incidents -->
+		<!-- Generic Messages -->
+	<ATR_IncidentGenericAttackDesc>A hostile hacking attempt evaluated to have a strength of {0} successfully breached the colony's SkyMind security system, infecting {1} networked devices before safeguards kicked in.</ATR_IncidentGenericAttackDesc>
+	<ATR_IncidentGenericDefense>Hack attempt defeated</ATR_IncidentGenericDefense>
+	<ATR_IncidentGenericDefenseDesc>A hostile hacking attempt evaluated to have a strength of {0} failed to breach the colony's SkyMind security system. System functionality is normal and security servers are attempting to stay ahead of incursions.</ATR_IncidentGenericDefenseDesc>
+	<ATR_IncidentGenericAllyIntercept>Hack intercepted!</ATR_IncidentGenericAllyIntercept>
+	<ATR_IncidentGenericAllyInterceptDesc>White-hat hackers from your ally {0} contact you informing of an attempted hack from a hostile individual on your SkyMind network. They were not only able to stop the attack (evaluated to have a strength of {1} points) that would have breached your security, they were able to identify several security vulnerabilities that can be easily patched, resulting in your security system gaining {2} points!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		<!-- Gridscreen Virus -->
+			<!-- Grid-virus defeated -->
+	<ATR_IncidentGridVirusDefeated>Grid Virus defeated</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>Grid-sleeper</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>Affected devices have crashed, and will require time to restore default functionality.</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- Grid-locker attack -->
+	<ATR_IncidentGridlockerAttack>Grid-locker</ATR_IncidentGridlockerAttack>
+	<ATR_IncidentGridlockerAttackDesc>Affected devices have had their functionality encrypted by the hacker! It is now up to the hacker to restore functionality - this will require cutting a deal.</ATR_IncidentGridlockerAttackDesc>
+	
+	<ATR_CryptolockerNeedRansom>Grid-locker Ransom</ATR_CryptolockerNeedRansom>
+	<ATR_CryptolockerNeedRansomDesc>A grid-locked device spits out a message on loop. The hacker will send decryption codes and relinquish control of the {0} devices they hacked in exchange for {1} silver. </ATR_CryptolockerNeedRansomDesc>
+	
+			<!-- Grid-breaker attack -->
+	<ATR_IncidentGridbreakerAttack>Grid-breaker</ATR_IncidentGridbreakerAttack>
+	<ATR_IncidentGridbreakerAttackDesc>Affected devices have had their hardware malfunction due to unsafe software procedures. It will take some time to restore default functionality after repairs.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- Ally Grid Virus Intervention -->
+	<ATR_IncidentGridVirusAllyIntercept>Grid Virus intercepted!</ATR_IncidentGridVirusAllyIntercept>
+	
+		<!-- DDOS Attack -->
+	<ATR_IncidentDDOSDefeated>Grid Virus defeated</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was unable to effectively damage individual units, however.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was able to successfully upload enough trash information that units will be forced to recompile much of their insights.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAllyIntercept>DDOS intercepted!</ATR_IncidentDDOSAllyIntercept>
+	
+		<!-- Troll Attack -->
+	<ATR_IncidentTrollDefeated>Troll Attack defeated</ATR_IncidentTrollDefeated>
+	
+	<ATR_IncidentTrollAttack>Troll</ATR_IncidentTrollAttack>
+	<ATR_IncidentTrollAttackDesc>The affected pawn, {0}, has lost a total of {1} skill points spread across their passionate and high level skills! {0} is also extremely upset about the horrific things the hackers were able to upload into their mind and the failure of the security systems to protect them.</ATR_IncidentTrollAttackDesc>
+	
+	<ATR_IncidentTrollAllyIntercept>Troll attack intercepted!</ATR_IncidentTrollAllyIntercept>
+	
+		<!-- Diplohack -->
+	<ATR_IncidentDiplohackDefeated>Diplohack defeated</ATR_IncidentDiplohackDefeated>
+	
+	<ATR_IncidentDiplohackAttack>Diplohack</ATR_IncidentDiplohackAttack>
+	<ATR_IncidentDiplohackAttackDesc>Unknown hackers were able to decypher key lines of communication with {0}, and delivered a message to them credibly identifying you as the source. The message contained faulty information which led a caravan from {0} into an ambush. They made their displeasure with your "carelessness and weak security" in a strongly worded - and presumably real - diplomatic response. They promised to spread word of this incident to other factions as well.</ATR_IncidentDiplohackAttackDesc>
+	
+	<ATR_IncidentDiplohackAllyIntercept>Diplohack intercepted!</ATR_IncidentDiplohackAllyIntercept>
+	
+		<!-- Provoker Hack -->
+	<ATR_IncidentProvokerhackDefeated>Provoker Hack defeated</ATR_IncidentProvokerhackDefeated>
+	
+	<ATR_IncidentProvokerhackAttack>Provoker Hack</ATR_IncidentProvokerhackAttack>
+	<ATR_IncidentProvokerhackAttackDesc>Unknown hackers were able to breach the SkyMind security and install a simple signal emitter program. The signal drew the attention of a hostile force before it could be deactivated!</ATR_IncidentProvokerhackAttackDesc>
+	
+	<ATR_IncidentProvokerhackAllyIntercept>Provoker Hack intercepted!</ATR_IncidentProvokerhackAllyIntercept>
+	
+		<!-- Counterhack -->
+	<ATR_IncidentCounterhackDefeated>Counterhack defeated</ATR_IncidentCounterhackDefeated>
+	
+	<ATR_IncidentCounterhackAttack>Counterhack</ATR_IncidentCounterhackAttack>
+	<ATR_IncidentCounterhackAttackDesc>Unknown hackers have breached the SkyMind network and seized as much information as they could, preferring intelligence collected on other targets and then skill insights. It's estimated they've stolen up to {0} points overall before they lost access.</ATR_IncidentCounterhackAttackDesc>
+	
+	<ATR_IncidentCounterhackAllyIntercept>Counterhack intercepted!</ATR_IncidentCounterhackAllyIntercept>
+	
+</LanguageData>

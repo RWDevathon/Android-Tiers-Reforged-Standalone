@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>A looped automated message slowly trawls through a prepared message indicating a lack of interest in communication at this time.</AndroidFactionGreetingHostileI>
+	<AndroidFactionGreetingHostileII>{0} connects and launches into a long diatribe against your factions' many flaws. {0} demands tribute if there is to be reconciliation.</AndroidFactionGreetingHostileII>
+	<AndroidFactionGreetingHostileIII>A long, static-filled silence is all that greets you.</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>The deep mechanical voice of {0} greets {NEGOTIATOR_labelShort}, prepared to hear and consider any proposals objectively and fairly.</AndroidFactionGreetingWaryI>
+	<AndroidFactionGreetingWaryII>An automated response indicates {0} is occupied and that the system will automatically forward {NEGOTIATOR_labelShort}'s business when appropriate.</AndroidFactionGreetingWaryII>
+	<AndroidFactionGreetingWaryIII>{0} opens communications to {NEGOTIATOR_labelShort}, proclaiming it did so cautiously and with a degree of wariness. {0} asks for business to proceed swiftly.</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0} greets {NEGOTIATOR_labelShort} with high praise, asking what can be done for the mutual benefit and advancement of the common cause.</AndroidFactionGreetingWarmI>
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} is met with a kindly worded automated message. It indicates that any request will be given high priority in internal considerations.</AndroidFactionGreetingWarmII>
+	<AndroidFactionGreetingWarmIII>{0} instantly connects and greets {NEGOTIATOR_labelShort}. {0} indicates eagerness to hear out any proposals and readily offers potential aid.</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>

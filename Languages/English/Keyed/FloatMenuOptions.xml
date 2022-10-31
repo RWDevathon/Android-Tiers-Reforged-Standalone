@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableCloudPawns>Available Sources:</ATR_ViableCloudPawns>
+	<ATR_ViableTargetPawns>Available Targets:</ATR_ViableTargetPawns>
+	<ATR_NoAvailableTarget>No available targets for operation. Check SkyMind and desired target status.</ATR_NoAvailableTarget>
+
+	<!-- Charging -->
+	<ATR_ForceCharge>Force battery charging</ATR_ForceCharge>
+	<ATR_NoAvailableChargingSpots>Cannot use, charging spots are reserved.</ATR_NoAvailableChargingSpots>
+	<ATR_NeedToAllowCharge>{0} does not have charging capabilities enabled.</ATR_NeedToAllowCharge>
+	<ATR_MassiveNotAllowed>Massive mechanical units can not use this.</ATR_MassiveNotAllowed>
+	<ATR_MassiveRequired>Only massive mechanical units can use this.</ATR_MassiveRequired>
+	
+</LanguageData>

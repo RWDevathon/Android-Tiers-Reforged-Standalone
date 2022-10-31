@@ -1,0 +1,188 @@
+﻿using System;
+using Verse;
+using Verse.AI;
+using RimWorld;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Text;
+using Verse.AI.Group;
+using System.Linq;
+using HarmonyLib;
+using System.Reflection;
+using Verse.Sound;
+
+namespace ATReforged
+{
+    public class CompSkyMind : ThingComp
+    {
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref integrityBreach, "ATPP_integrityBreach", -1);
+            Scribe_Values.Look(ref connected, "ATPP_connected", false);
+        }
+
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+
+            Utils.GCATPP.PopVirusedThing(parent);
+            Utils.GCATPP.DisconnectFromSkyMind(parent);
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            if (connected)
+            {
+                if (!Utils.GCATPP.AttemptSkyMindConnection(parent))
+                {
+                    connected = false;
+                }
+            }
+        }
+
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            // Infected or enemy devices don't get buttons to interact with the SkyMind. 
+            if (integrityBreach != -1 || parent.Faction != Faction.OfPlayer)
+                yield break;
+
+            // If this unit can't use the SkyMind, then it doesn't get any buttons to interact with it.
+            if (parent is Pawn pawn)
+            {
+                if (!Utils.PawnCanUseSkyMind(pawn))
+                {
+                    yield break;
+                }
+            }
+
+            // If there is no SkyMind capacity, then it doesn't get any buttons to interact with it.
+            if(Utils.GCATPP.GetSkyMindNetworkSlots() <= 0)
+            {
+                yield break;
+            }
+
+            yield return new Command_Toggle
+            { // Connect/Disconnect to SkyMind
+                icon = Tex.ConnectSkyMindIcon,
+                defaultLabel = "ATR_ConnectSkyMind".Translate(),
+                defaultDesc = "ATR_ConnectSkyMindDesc".Translate(),
+                isActive = () => connected,
+                toggleAction = delegate ()
+                {
+                    if (!connected)
+                    { // Attempt to connect to SkyMind
+                        if (!Utils.GCATPP.AttemptSkyMindConnection(parent))
+                        { // If trying to connect but it is unable to, inform the player. 
+                            if (Utils.GCATPP.GetSkyMindNetworkSlots() == 0)
+                                Messages.Message("ATR_SkyMindConnectionFailedNoNetwork".Translate(), parent, MessageTypeDefOf.NegativeEvent);
+                            else
+                                Messages.Message("ATR_SkyMindConnectionFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
+                            return;
+                        }
+                    }
+                    else
+                    { // Disconnect from SkyMind
+                        Utils.GCATPP.DisconnectFromSkyMind(parent);
+                    }
+                }
+            };
+        }
+
+        public override void ReceiveCompSignal(string signal)
+        {
+            base.ReceiveCompSignal(signal);
+
+            switch (signal)
+            {
+                case "SkyMindNetworkUserConnected":
+                    connected = true;
+                    break;
+                case "SkyMindNetworkUserDisconnected":
+                    connected = false;
+                    break;
+            }
+        }
+
+        // Controller for the state of viruses in the parent. -1 = clean, 1 = sleeper, 2 = cryptolocker, 3 = breaker. Ticker handled by the GC to avoid calculating when clean.
+        public int Breached
+        {
+            get
+            {
+                return integrityBreach;
+            }
+
+            set
+            {
+                int status = integrityBreach;
+                integrityBreach = value;
+                if(integrityBreach == -1 && status != -1)
+                { // Device is no longer breached. Release restrictions and remove from the virus list.
+                    if (parent is Pawn pawn)
+                    { // Release hacked pawns. Surrogates are downed. All pawns undergo a full system reboot.
+                        Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
+                        hediff.Severity = 1f;
+                        pawn.health.AddHediff(hediff, null, null);
+                        if (Utils.IsSurrogate(pawn))
+                        {
+                            pawn.health.AddHediff(HediffDefOf.ATR_NoController);
+                        }
+                    }
+                    else
+                    { // Handle buildings that lost power.
+                        CompFlickable cf = parent.TryGetComp<CompFlickable>();
+                        if (cf != null)
+                        {
+                            cf.SwitchIsOn = true;
+                            parent.SetFaction(Faction.OfPlayer);
+                        }
+                    }
+                    Utils.GCATPP.PopVirusedThing(parent);
+                }
+                else
+                {
+                    if (parent is Building)
+                    { // Breached building. Hacking effect is that it gets turned off and is applied to a neutral faction until released.
+                        CompFlickable cf = parent.TryGetComp<CompFlickable>();
+                        if (cf != null)
+                        {
+                            cf.SwitchIsOn = false;
+                            parent.SetFaction(null);
+                        }
+                    }
+                }
+            }
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder ret = new StringBuilder();
+
+            if (parent.Map == null)
+                return base.CompInspectStringExtra();
+
+            // Add a special line for devices hacked into a shut-down state.
+            if ((integrityBreach == 1 || integrityBreach == 3) && Utils.GCATPP.GetAllVirusedDevices().ContainsKey(parent))
+            {
+                ret.AppendLine("ATR_HackedWithTimer".Translate((Utils.GCATPP.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+            }
+
+            // Add a special line for cryptolocked devices.
+            if (integrityBreach == 2)
+            {
+                ret.AppendLine("ATR_CryptoLocked".Translate());
+            }
+
+            if (connected)
+            {
+                ret.AppendLine("ATR_SkyMindDetected".Translate());
+            }
+
+            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+        }
+
+        private int integrityBreach = -1; // -1 : Not integrityBreach. 1: Sleeper Virus. 2: Cryptolocked. 3: Breaker Virus.
+        public bool connected;
+    }
+}

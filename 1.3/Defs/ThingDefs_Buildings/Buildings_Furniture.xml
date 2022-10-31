@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BedWithQualityBase">
+		<defName>MechanicBed</defName>
+		<label>Mechanic bed</label>
+		<description>A hospital bed analogue for mechanics to handle operations on mechanical units. Units can charge while using this bed, and a number of built-in features grant mechanics advantages in completing operations.</description>
+		<graphicData>
+			<texPath>Things/Buildings/MechanicBed/MechanicBed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.35,2.1)</drawSize>
+		</graphicData>
+		<thingClass>ATReforged.Building_ChargingBed</thingClass>
+		<tickerType>Rare</tickerType>
+		<designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>MechanicCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="ATReforged.CompProperties_AndroidPod">
+				<chargingRate>1.2</chargingRate>
+			</li>
+			<li Class="CompProperties_Power">
+        		<compClass>CompPowerTrader</compClass>
+        		<shortCircuitInRain>true</shortCircuitInRain>
+        		<basePowerConsumption>80</basePowerConsumption>
+			</li>
+		</comps>
+		<castEdgeShadows>True</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>3200</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.4</Flammability>
+			<BedRestEffectiveness>1.06</BedRestEffectiveness>
+			<Comfort>0.70</Comfort>
+			<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
+			<MechanicalTendQualityOffset>0.20</MechanicalTendQualityOffset>
+			<MechanicalSurgerySuccessChanceFactor>1.3</MechanicalSurgerySuccessChanceFactor>
+			<SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,2)</size>
+		<costList>
+			<Plasteel>40</Plasteel>
+			<Steel>80</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>15</bed_healPerDay>
+			<bed_defaultMedical>true</bed_defaultMedical>
+            <bed_maxBodySize>3</bed_maxBodySize>
+            <buildingTags>
+                <li>Bed</li>
+            </buildingTags>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.17</staticSunShadowHeight>
+		<researchPrerequisites>
+			<li>ATR_MechanicalStandardization</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<techLevel>Spacer</techLevel>
+		<uiIconScale>1</uiIconScale>
+	</ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>MechanicCabinet</defName>
+        <label>Mechanic cabinet</label>
+        <description>A small cabinet that can be used in conjunction with mechanical-compatible beds. It contains a number of useful tools for further enhancing mechanic operations.</description>
+        <surfaceType>Item</surfaceType>
+        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <texPath>Things/Buildings/MechanicCabinet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.1,1.1)</drawSize>
+            <shadowData>
+                <volume>(0.3, 0.6, 0.3)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <WorkToBuild>1800</WorkToBuild>
+            <Mass>8</Mass>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <pathCost>60</pathCost>
+        <size>(1,1)</size>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Steel>30</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <researchPrerequisites>
+        <li>ATR_MechanicalStandardization</li>
+        </researchPrerequisites>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                <MechanicalSurgerySuccessChanceFactor>0.08</MechanicalSurgerySuccessChanceFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+            </li>
+        </comps>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <castEdgeShadows>false</castEdgeShadows>
+    </ThingDef>
+
+</Defs>

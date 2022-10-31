@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <BodyPartDef>
+        <defName>InternalCorePump</defName>
+        <label>Coolant Pump</label>
+        <hitPoints>20</hitPoints>
+        <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>5</bleedRate>
+        <tags>
+            <li>BloodPumpingSource</li>
+        </tags>
+        <canSuggestAmputation>false</canSuggestAmputation>
+    </BodyPartDef>
+
+    <BodyPartDef>
+        <defName>MechanicalHeatsink</defName>
+        <label>Left Heatsink</label>
+        <hitPoints>20</hitPoints>
+        <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>1</bleedRate>
+        <tags>
+            <li>BreathingSource</li>
+        </tags>
+        <canSuggestAmputation>false</canSuggestAmputation>
+    </BodyPartDef>
+
+    <BodyPartDef>
+        <defName>InternalBattery</defName>
+        <label>Battery</label>
+        <hitPoints>20</hitPoints>
+        <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>1</bleedRate>
+        <canSuggestAmputation>false</canSuggestAmputation>
+    </BodyPartDef>
+
+    <BodyPartDef>
+        <defName>MechaniteStorage</defName>
+        <label>Mechanite Storage</label>
+        <hitPoints>20</hitPoints>
+        <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>4</bleedRate>
+        <tags>
+            <li>BloodFiltrationSource</li>
+        </tags>
+        <canSuggestAmputation>false</canSuggestAmputation>
+    </BodyPartDef>
+
+    <BodyPartDef>
+        <defName>InternalGenerator</defName>
+        <label>Generator</label>
+        <hitPoints>25</hitPoints>
+        <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>1</bleedRate>
+        <tags>
+            <li>MetabolismSource</li>
+            <li>EatingSource</li>
+        </tags>
+        <canSuggestAmputation>false</canSuggestAmputation>
+    </BodyPartDef>
+  
+</Defs>

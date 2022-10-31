@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--Civil androids-->
+  
+  <RulePackDef>
+  <defName>NamerFactionCollectiveAndroid</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->The [connecting_verb] [political_union_collective]</li>
+		
+		<li>political_union_collective->collective</li>
+		<li>political_union_collective->federation</li>
+		<li>political_union_collective->coalation</li>
+		<li>political_union_collective->amalgamation</li>
+		<li>political_union_collective->cooperative</li>
+		<li>political_union_collective->union</li>
+		<li>political_union_collective->confederation</li>
+		<li>political_union_collective->confederacy</li>
+		<li>political_union_collective->alliance</li>
+		<li>political_union_collective->syndicate</li>
+		
+		<li>connecting_verb->unified</li>
+		<li>connecting_verb->grand</li>
+		<li>connecting_verb->mechanical</li>
+		<li>connecting_verb->android</li>
+		<li>connecting_verb->united</li>
+		<li>connecting_verb->connected</li>
+			</rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerSettlementCollectiveAndroid</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[place_name]</li>
+		<li>r_name->[adjective] [place_name]</li>
+		<li>r_name->[place_type] of [place_name]</li>
+		
+		<li>place_name->edoset</li>
+		<li>place_name->keley</li>
+		<li>place_name->vinmouth</li>
+		<li>place_name->irieshire</li>
+		<li>place_name->olkvale</li>
+		<li>place_name->andridge</li>
+		<li>place_name->exalos</li>
+		<li>place_name->cerulle</li>
+		<li>place_name->sonus</li>
+		<li>place_name->volance</li>
+		<li>place_name->orion</li>
+		<li>place_name->cerulis</li>
+		
+		<li>adjective->new</li>
+		<li>adjective->nova</li>
+		<li>adjective->neo</li>
+		<li>adjective->major</li>
+		
+		<li>place_type->city</li>
+		<li>place_type->town</li>
+		<li>place_type->townlet</li>
+		<li>place_type->cosmopolis</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--Raider androids-->
+  
+    <RulePackDef>
+  <defName>NamerFactionRaiderAndroid</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->The [connecting_verb] [political_raider_androids]</li>
+		
+		<li>political_raider_androids->enclave</li>
+		<li>political_raider_androids->march</li>
+		<li>political_raider_androids->uprising</li>
+		<li>political_raider_androids->militia</li>
+		
+		<li>connecting_verb->unending</li>
+		<li>connecting_verb->mechanical</li>
+		<li>connecting_verb->unrelenting</li>
+		<li>connecting_verb->land of the</li>
+
+			</rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>
