@@ -76,7 +76,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>Head</def>
+                            <def>MechanicalHead</def>
                             <coverage>0.80</coverage>
                             <groups>
                                 <li>UpperHead</li>

@@ -24,6 +24,7 @@
 				<maxDamageForSocialfight>20</maxDamageForSocialfight>
 				<immuneToAge>false</immuneToAge>
 				<alienPartGenerator>
+					<headBodyPartDef>MechanicalHead</headBodyPartDef>
 					<alienbodytypes>
 						<li>Male</li>
 					</alienbodytypes>

@@ -21,6 +21,7 @@
 				<maxDamageForSocialfight>120</maxDamageForSocialfight>
 				<immuneToAge>true</immuneToAge>
 				<alienPartGenerator>
+					<headBodyPartDef>MechanicalHead</headBodyPartDef>
 					<colorChannels>
 						<li>
 							<name>skin</name>
