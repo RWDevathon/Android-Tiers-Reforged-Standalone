@@ -25,7 +25,9 @@
         </li>
     </modDependencies>
     <packageId>Killathon.AndroidTiersReforged</packageId>
-	<incompatibleWith>Atlas.AndroidTiers</incompatibleWith>
+	<incompatibleWith>
+        <li>Atlas.AndroidTiers</li>
+    </incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li>
         <li>erdelf.HumanoidAlienRaces</li>
@@ -37,6 +39,6 @@ Reworked for maximal flexibility and dynamic controls in settings and compatibil
 Redesigned with balance, fairness, and enjoyability in mind.
 Reforged because I wanted it done.
 
-Version <color=#FFD800>0.0.1</color> with more to come.
+Version <color=#FFD800>0.0.2</color> with more to come.
     ]]></description>
 </ModMetaData>

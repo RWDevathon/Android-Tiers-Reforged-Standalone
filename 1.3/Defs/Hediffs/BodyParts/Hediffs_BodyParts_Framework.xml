@@ -444,7 +444,7 @@
                     <Insulation_Heat>100</Insulation_Heat>
                     <Insulation_Cold>50</Insulation_Cold>
                     <IncomingDamageFactor>0.9</IncomingDamageFactor>
-                    <SuppressionPower>1.5</SuppressionPower>
+                    <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</SuppressionPower>
                     <ArrestSuccessChance>0.5</ArrestSuccessChance>
                 </statOffsets>
             </li>
