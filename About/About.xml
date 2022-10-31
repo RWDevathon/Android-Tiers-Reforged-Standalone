@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Android Tiers Reforged</name>
     <author>Killathon</author>
@@ -25,6 +25,7 @@
         </li>
     </modDependencies>
     <packageId>Killathon.AndroidTiersReforged</packageId>
+	<incompatibleWith>Atlas.AndroidTiers</incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li>
         <li>erdelf.HumanoidAlienRaces</li>
