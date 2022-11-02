@@ -207,7 +207,6 @@
     <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_StartRitual_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
-    <Compile Include="Harmony\HediffMaker_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_ConvertIdeoAttempt_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
     <Compile Include="Harmony\KidnapUtility_Patch.cs" />
