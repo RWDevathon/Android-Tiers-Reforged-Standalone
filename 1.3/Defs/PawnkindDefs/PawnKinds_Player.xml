@@ -45,27 +45,27 @@
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>T4Colonist</defName>
-		<label>T4 Android Colonist</label>
+		<label>T4 Newboot Colonist</label>
 		<race>Tier4Android</race>
 	</PawnKindDef>
 
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>T3Colonist</defName>
-		<label>T3 Android Colonist</label>
+		<label>T3 Newboot Colonist</label>
 		<race>Tier3Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>T2Colonist</defName>
-		<label>T2 Android Colonist</label>
+		<label>T2 Newboot Colonist</label>
 		<race>Tier2Android</race>
 	</PawnKindDef>
 
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>T1Colonist</defName>
-		<label>T1 Android Colonist</label>
+		<label>T1 Newboot Colonist</label>
 		<race>Tier1Android</race>
 	</PawnKindDef>
 
