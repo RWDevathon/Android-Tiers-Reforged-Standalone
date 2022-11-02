@@ -791,6 +791,16 @@ namespace ATReforged
             if (kill)
             {
                 Duplicate(GetBlank(), copy, false, false);
+
+                // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
+                if (IsConsideredMechanicalAndroid(copy))
+                {
+                    Hediff autoCore = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
+                    if (autoCore != null)
+                    {
+                        copy.health.RemoveHediff(autoCore);
+                    }
+                }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
             else
