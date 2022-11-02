@@ -81,7 +81,7 @@ namespace ATReforged
 
         public static bool IsConsideredMassive(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMassive.Contains(pawn.def.defName);
+            return pawn.BodySize > 4.0f;
         }
 
         public static bool HasSpecialStatus(Pawn pawn)

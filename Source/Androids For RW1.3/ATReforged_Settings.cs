@@ -23,18 +23,9 @@ namespace ATReforged
 
             // Settings for android commonality
         public static bool androidsAppearNaturally = true; // Androids can be random pawns
-        /*
-        public static bool societiesPossessAndroids = true; // Android slaves in other factions
-        public static bool societiesIntegrateAndroids = true; // Android citizens in other factions
-        */
         public static bool androidSocietiesExist = true; // Android Factions allowed
         public static bool androidRaidersExist = true; // Android "Pirate" faction exists
-        // public static bool androidSupremacistsExist = false; // Android "Rough Outlander" faction exists
         public static bool androidUnionistsExist = true; // Android "Civil Outlander" faction exists
-        /*
-        public static bool androidRevolutionaryWarAllowed = false; // Android revolutionary events will occur if true
-        public static bool androidRevolutionaryWarVictory = false; // Android revolution has succeeded and humans are enslaved
-        */
 
             // Settings for Permissions
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
@@ -49,7 +40,6 @@ namespace ATReforged
         public static HashSet<string> isConsideredMechanicalAndroid = new HashSet<string> { "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android" };
         public static HashSet<string> isConsideredMechanicalDrone = new HashSet<string> { "Tier1Android", "M7Mech", "M8Mech" };
         public static HashSet<string> isConsideredMechanical = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog" };
-        public static HashSet<string> isConsideredMassive = new HashSet<string> { "M7Mech", "M8Mech" };
         public static HashSet<string> hasSpecialStatus = new HashSet<string> { };
         
             // Settings for what needs mechanical androids have
@@ -178,9 +168,6 @@ namespace ATReforged
             listingStandard.maxOneColumn = true;
             listingStandard.Begin(viewRect);
 
-            //float initialY = listingStandard.GetRect(0).y;
-            //float maxWidth = listingStandard.ColumnWidth;
-
             // Add switch for which tab you are on here
             switch (activeTab)
             {
@@ -227,22 +214,10 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_AndroidsAppearNaturally".Translate(), ref androidsAppearNaturally, tooltip: "ATR_PlayerOnlyNote".Translate(), onChange: onChange);
                     if (androidsAppearNaturally)
                     {
-                        /*
-                        listingStandard.CheckboxLabeled("ATR_SocietiesPossessAndroids".Translate(), ref societiesPossessAndroids, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        if (societiesPossessAndroids)
-                        {
-                            listingStandard.CheckboxLabeled("ATR_AndroidRevolutionaryWarAllowed".Translate(), ref androidRevolutionaryWarAllowed, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                            listingStandard.CheckboxLabeled("ATR_AndroidRevolutionaryWarVictory".Translate(), ref androidRevolutionaryWarVictory, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        }
-                        listingStandard.CheckboxLabeled("ATR_SocietiesIntegrateAndroids".Translate(), ref societiesIntegrateAndroids, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        listingStandard.Gap();
-                        listingStandard.Label("ATR_AndroidFactionSettings".Translate());
-                        */
                         listingStandard.CheckboxLabeled("ATR_AndroidSocietiesExist".Translate(), ref androidSocietiesExist, onChange: onChange);
                         if (androidSocietiesExist)
                         {
                             listingStandard.CheckboxLabeled("ATR_AndroidRaidersExist".Translate(), ref androidRaidersExist, tooltip: "ATR_AndroidRaidersDesc".Translate(), onChange: onChange);
-                            // listingStandard.CheckboxLabeled("ATR_AndroidSupremacistsExist".Translate(), ref androidSupremacistsExist, tooltip: "ATR_AndroidSupremacistsDesc".Translate(), onChange: onChange);
                             listingStandard.CheckboxLabeled("ATR_AndroidUnionistsExist".Translate(), ref androidUnionistsExist, tooltip: "ATR_AndroidUnionistsDesc".Translate(), onChange: onChange);
                         }
                     }
@@ -316,15 +291,8 @@ namespace ATReforged
 
             // Android Commonality Settings
             androidsAppearNaturally = true;
-            /*
-            societiesPossessAndroids = true;
-            androidRevolutionaryWarAllowed = false;
-            androidRevolutionaryWarVictory = false;
-            societiesIntegrateAndroids = false;
-            */
             androidSocietiesExist = true;
             androidRaidersExist = true;
-            //androidSupremacistsExist = false;
             androidUnionistsExist = true;
 
             // Permissions
@@ -333,11 +301,10 @@ namespace ATReforged
             blacklistedMechanicalTraits = new HashSet<string> { "NightOwl", "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
 
             // Consideration Settings
-            isConsideredMechanicalAnimal = new HashSet<string> { "DroneMineralUnit", "DroneNutritionUnit", "DroneChemUnit", "DroneWatchdog", "DroneTORT" };
             isConsideredMechanicalAndroid = new HashSet<string> { "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android" };
             isConsideredMechanicalDrone = new HashSet<string> { "Tier1Android", "M7Mech", "M8Mech" };
-            isConsideredMechanical = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog" };
-            isConsideredMassive = new HashSet<string> { "M7Mech", "M8Mech" };
+            isConsideredMechanicalAnimal = new HashSet<string> { "DroneMineralUnit", "DroneNutritionUnit", "DroneChemUnit", "DroneWatchdog", "DroneTORT", "MicroScyther" };
+            isConsideredMechanical = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog", "MicroScyther" };
             hasSpecialStatus = new HashSet<string> { };
 
             // Needs Settings
@@ -428,18 +395,9 @@ namespace ATReforged
 
             // Commonality
             Scribe_Values.Look(ref androidsAppearNaturally, "ATR_androidsAppearNaturally", true);
-            /*
-            Scribe_Values.Look(ref societiesPossessAndroids, "ATR_societiesPossessAndroids", true);
-            Scribe_Values.Look(ref societiesIntegrateAndroids, "ATR_societiesIntegrateAndroids", true);
-            */
             Scribe_Values.Look(ref androidSocietiesExist, "ATR_androidSocietiesExist", true);
             Scribe_Values.Look(ref androidRaidersExist, "ATR_androidRaidersExist", true);
-            // Scribe_Values.Look(ref androidSupremacistsExist, "ATR_androidSupremacistsExist", false);
             Scribe_Values.Look(ref androidUnionistsExist, "ATR_androidUnionistsExist", true);
-            /*
-            Scribe_Values.Look(ref androidRevolutionaryWarAllowed, "ATR_androidRevolutionaryWarAllowed", false);
-            Scribe_Values.Look(ref androidRevolutionaryWarVictory, "ATR_androidRevolutionaryWarVictory", false);
-            */
 
             // Permissions
             Scribe_Collections.Look(ref thingsAllowedAsRepairStims, "ATR_thingsAllowedAsRepairStims", LookMode.Value);
@@ -451,7 +409,6 @@ namespace ATReforged
             Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Value);
             Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Value);
             Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Value);
-            Scribe_Collections.Look(ref isConsideredMassive, "ATR_isConsideredMassive", LookMode.Value);
             Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Value);
 
             // Needs
