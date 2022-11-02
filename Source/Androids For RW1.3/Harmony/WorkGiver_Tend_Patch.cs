@@ -11,7 +11,6 @@ using RimWorld.BaseGen;
 namespace ATReforged
 {
     internal class WorkGiver_Tend_Patch
-
     {
         // Patch the medical tend WorkGiver to not give doctoring jobs on mechanicals. WorkGiver_MechTend handles mechanical tending.
         [HarmonyPatch(typeof(WorkGiver_Tend), "HasJobOnThing")]

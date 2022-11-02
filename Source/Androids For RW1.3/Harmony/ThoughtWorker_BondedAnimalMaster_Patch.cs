@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_BondedAnimalMaster_Patch
-
     {
         // Mechanical drones do not care about not being the master of a bonded animal. They shouldn't bond to animals in the first place.
         [HarmonyPatch(typeof(ThoughtWorker_BondedAnimalMaster), "CurrentStateInternal")]

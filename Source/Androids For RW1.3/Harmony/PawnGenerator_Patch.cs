@@ -13,6 +13,7 @@ namespace ATReforged
     internal class PawnGenerator_Patch
 
     {
+        // Patch pawn generation for mechanical units so they have appropriate gender, name, features, and various related mechanics at generation.
         [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn")]
         [HarmonyPatch(new Type[] { typeof(PawnGenerationRequest)}, new ArgumentType[] { ArgumentType.Normal })]
         public class GeneratePawn_Patch
@@ -54,7 +55,7 @@ namespace ATReforged
                     Utils.removeMindBlacklistedTrait(__result);
                     Utils.ReconfigureDrone(__result);
 
-                    // By default, all generated mechanical androids get an autonomous cores. Cases where that is not desired can remove it there.
+                    // By default, all generated mechanical androids get an autonomous core. Cases where that is not desired can remove it there.
                     if (Utils.IsConsideredMechanicalAndroid(__result))
                         __result.health.AddHediff(HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                 }

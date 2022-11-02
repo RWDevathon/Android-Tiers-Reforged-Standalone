@@ -107,7 +107,7 @@ namespace ATReforged
         public static int minGroupSizeForSurrogates = 5;
         public static float minSurrogatePercentagePerLegalGroup = 0.2f;
         public static float maxSurrogatePercentagePerLegalGroup = 0.7f;
-
+        
             // Settings for Cloud
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;

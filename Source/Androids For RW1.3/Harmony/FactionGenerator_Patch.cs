@@ -20,14 +20,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Dictionary<FactionDef, int> factionCounts)
             {
-                try
-                {
-                      Utils.GCATPP.CheckDeleteAndroidFactions();
-                }
-                catch(Exception e)
-                {
-                    Log.Message("[ATPP] FactionGenerator.GenerateFactionsIntoWorld : " + e.Message + " - " + e.StackTrace);
-                }
+                Utils.GCATPP.CheckDeleteAndroidFactions();
             }
         }
     }

@@ -11,6 +11,7 @@ namespace ATReforged
     internal class PawnGroupMakerUtility_Patch
 
     {
+        // Handle generation of groups of pawns so that foreign factions may use surrogates. These surrogates replace selected pawns of the group.
         [HarmonyPatch(typeof(PawnGroupMakerUtility), "GeneratePawns")]
         public class GeneratePawns_Patch
         {

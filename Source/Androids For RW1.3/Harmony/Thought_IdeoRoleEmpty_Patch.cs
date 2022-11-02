@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class Thought_IdeoRoleEmpty_Patch
-
     {
         // Mechanical drones do not care about missing roles in an ideology.
         [HarmonyPatch(typeof(Thought_IdeoRoleEmpty), "CurrentStateInternal")]

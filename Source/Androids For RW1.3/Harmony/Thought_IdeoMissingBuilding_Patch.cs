@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class Thought_IdeoMissingBuilding_Patch
-
     {
         // Mechanical drones do not have ideological qualms about missing buildings.
         [HarmonyPatch(typeof(Thought_IdeoMissingBuilding), "CurrentStateInternal")]

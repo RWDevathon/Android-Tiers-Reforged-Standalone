@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_SharedBed_Patch
-
     {
         // Mechanical drones don't care about sharing a bed. Others do mind sharing a bed with drones, but not with surrogates controlled by their lovers.
         [HarmonyPatch(typeof(ThoughtWorker_SharedBed), "CurrentStateInternal")]

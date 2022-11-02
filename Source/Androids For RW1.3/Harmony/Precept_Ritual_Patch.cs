@@ -30,7 +30,7 @@ namespace ATReforged
                 }
                 catch (Exception e)
                 {
-                    Log.Message("[ATPP] Precept_Ritual.AddObligation : " + e.Message + " - " + e.StackTrace);
+                    Log.Message("[ATR] Precept_Ritual.AddObligation : " + e.Message + " - " + e.StackTrace);
                     return true;
                 }
             }

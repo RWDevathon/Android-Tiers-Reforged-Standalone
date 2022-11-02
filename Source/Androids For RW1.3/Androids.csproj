@@ -204,12 +204,13 @@
     <Compile Include="Extensions\StringBuilderExtensions.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\Alert_ColonistNeedsRescuing_Patch.cs" />
+    <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_StartRitual_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
+    <Compile Include="Harmony\HediffMaker_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_ConvertIdeoAttempt_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
     <Compile Include="Harmony\KidnapUtility_Patch.cs" />
-    <Compile Include="Harmony\Game_Patch.cs" />
     <Compile Include="Harmony\PawnBioAndNameGenerator_Patch.cs" />
     <Compile Include="Harmony\InteractionUtility_Patch.cs" />
     <Compile Include="Harmony\Pawn_Patch.cs" />
@@ -224,8 +225,6 @@
     <Compile Include="Harmony\ThoughtWorker_Precept_Social_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_WearingColor_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_MasochistWearingBodyStrap_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_MasochistWearingCollar_Patch.cs" />
     <Compile Include="Harmony\Thought_IdeoRoleEmpty_Patch.cs" />
     <Compile Include="Harmony\Thought_IdeoDisrespectedBuilding_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_LookChangeDesired_Patch.cs" />
@@ -234,7 +233,6 @@
     <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_Patch.cs" />
-    <Compile Include="Harmony\ToilEffects_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Warper.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />
@@ -278,9 +276,8 @@
     <Compile Include="Harmony\FactionGenerator_Patch.cs" />
     <Compile Include="Harmony\FreeColonists_Patch.cs" />
     <Compile Include="Harmony\HealthAIUtility_Patch.cs" />
-    <Compile Include="Harmony\HediffMaker_Patch.cs" />
+    <Compile Include="Harmony\HediffSet_Patch.cs" />
     <Compile Include="Harmony\HediffUtility_Patch.cs" />
-    <Compile Include="Harmony\IncidentWorker_WandererJoin_Patch.cs" />
     <Compile Include="Harmony\IncidentWorker_DiseaseAnimal_Patch.cs" />
     <Compile Include="Harmony\IncidentWorker_DiseaseHuman_Patch.cs" />
     <Compile Include="Harmony\InspirationWorker_Patch.cs" />
@@ -289,7 +286,6 @@
     <Compile Include="Harmony\JobGiver_SocialFighting_Patch.cs" />
     <Compile Include="Harmony\KidnapAIUtility_Patch.cs" />
     <Compile Include="Harmony\MedicalCareUtility_Patch.cs" />
-    <Compile Include="Harmony\MemoryThoughtHandler_Patch.cs" />
     <Compile Include="Harmony\Need_Patch.cs" />
     <Compile Include="Harmony\PawnDiedOrDownedThoughtsUtility_Patch.cs" />
     <Compile Include="Harmony\PawnGenerator_Patch.cs" />
@@ -297,7 +293,6 @@
     <Compile Include="Harmony\Pawn_HealthTracker_Patch.cs" />
     <Compile Include="Harmony\Pawn_NeedsTracker_Patch.cs" />
     <Compile Include="Harmony\RestUtility_Patch.cs" />
-    <Compile Include="Harmony\SickPawnVisitUtility_Patch.cs" />
     <Compile Include="Harmony\StunHandler_Patch.cs" />
     <Compile Include="Harmony\TendUtility_Patch.cs" />
     <Compile Include="Harmony\ThinkNode_ConditionalNeedPercentageAbove_Patch.cs" />
@@ -305,8 +300,6 @@
     <Compile Include="Harmony\ThoughtWorker_ApparelDamaged_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Dark_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_Greedy_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_NeedJoy_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
@@ -322,7 +315,6 @@
     <Compile Include="Recipes\Recipe_RemoveMechanicalPart.cs" />
     <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
     <Compile Include="WorkGivers\JobGiver_Exterminator.cs" />
-    <Compile Include="Patches\HarmonyPatches.cs" />
     <Compile Include="MechFallStuff\MechFallClass.cs" />
     <Compile Include="MechFallStuff\MechFallMote.cs" />
     <Compile Include="ModExtensionATweaks.cs" />

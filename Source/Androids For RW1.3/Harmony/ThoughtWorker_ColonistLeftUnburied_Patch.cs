@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_ColonistLeftUnburied_Patch
-
     {
         // Mechanical drones do not care about unburied colonists.
         [HarmonyPatch(typeof(ThoughtWorker_ColonistLeftUnburied), "CurrentStateInternal")]
@@ -19,7 +18,6 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn p, ref ThoughtState __result)
             {
-                //Already disabled => no more processing required
                 if (!__result.Active)
                     return;
 

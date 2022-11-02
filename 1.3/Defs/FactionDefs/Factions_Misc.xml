@@ -56,49 +56,57 @@
 		</apparelStuffFilter>
 	</FactionDef>
 	
-	<FactionDef>
+	<FactionDef ParentName="FactionBase">
 		<defName>MechanicalMarauders</defName>
 		<label>Mechanical Marauders</label>
-		<description>Outcasted or exiled - or fleeing slavery - from human society, many mechanical units end up .</description>
-		<pawnsPlural>Androids</pawnsPlural>
-			<fixedLeaderKinds>
-				<li>ATR_RaiderSoldierT4</li>
-			</fixedLeaderKinds>
-		<settlementGenerationWeight>0.3</settlementGenerationWeight>
-		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<description>Outcasted or exiled - or fleeing slavery - from human society, many mechanical units end up joining into groups of maligned bandits. United by a love of pillaging and taking out aggression on those who would seek to produce rather than destroy, these marauders elect to terrorize others rather than engage one another.\n\nDiplomacy is not an option with these androids. Violence is the only language they share with outsiders.</description>
+		<pawnSingular>marauder</pawnSingular>
+		<pawnsPlural>marauders</pawnsPlural>
+        <fixedLeaderKinds>
+            <li>ATR_RaiderSoldierT4</li>
+        </fixedLeaderKinds>
+		<settlementGenerationWeight>0.2</settlementGenerationWeight>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <listOrderPriority>10</listOrderPriority>
+        <maxCountAtGameStart>1</maxCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<permanentEnemy>true</permanentEnemy>
-		<leaderTitle>overlord</leaderTitle>
 		<factionIconPath>UI/Icons/Sites/AndroidBase</factionIconPath>
+		<factionNameMaker>NamerFactionRaiderAndroid</factionNameMaker>
+		<settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
 		<colorSpectrum>
 			<li>(0.95, 0.9, 0.92)</li>
 			<li>(0.9, 0.9, 0.9)</li>
 			<li>(0.92, 0.92, 0.96)</li>
 		</colorSpectrum>
-		<factionNameMaker>NamerFactionRaiderAndroid</factionNameMaker>
-		<settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+		<leaderTitle>marauder lord</leaderTitle>
 		<techLevel>Spacer</techLevel>
+        <allowedCultures><li>Kriminul</li></allowedCultures>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+        </requiredMemes>
+        <structureMemeWeights>
+            <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+        </structureMemeWeights>
 		<backstoryFilters>
 		  <li>
 			<categories>
-			  <li>Offworld</li>
+			  <li>ATR_ViolentAndroids</li>
 			</categories>
 		  </li>
 		</backstoryFilters>
-		<geneticVariance>1</geneticVariance>
-		<allowedArrivalTemperatureRange>
-			<min>-70</min>
-			<max>55</max>
-		</allowedArrivalTemperatureRange>
+		<geneticVariance>0.8</geneticVariance>
+		<allowedArrivalTemperatureRange>-70~60</allowedArrivalTemperatureRange>
+        <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
 				<li>(0,35)</li>
-				<li>(80, 50)</li>
+				<li>(70, 50)</li>
 				<li>(700, 100)</li>
-				<li>(1200, 150)</li>
+				<li>(1300, 150)</li>
 				<li>(100000, 10000)</li>
 			</points>
 		</maxPawnCostPerTotalPointsCurve>
@@ -116,7 +124,8 @@
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
-				<commonality>20</commonality>
+				<commonality>10</commonality>
+                <maxTotalPoints>1000</maxTotalPoints>
 				<options>
 					<ATR_RaiderSlaveT1>4</ATR_RaiderSlaveT1>
 				</options>
@@ -134,46 +143,44 @@
 			</li>
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
-		<raidLootValueFromPointsCurve>
-		  <points>
-			<li>(35,     8)</li>
-			<li>(100,   60)</li>
-			<li>(1000, 250)</li>
-			<li>(2000, 400)</li>
-			<li>(4000, 500)</li>
-		  </points>
-		</raidLootValueFromPointsCurve>
 	</FactionDef>
 
 	<FactionDef ParentName="FactionBase">
 		<defName>AndroidUnion</defName>
 		<label>Civil Androids</label>
-		<description>The androids that make up this faction have either crashed here or were made here, they wish to live peaceful lives without conflict and generally see humanity as a friend rather than a danger. Their colonies tend to be high tech in comparison to the rest of the Rimworld, not uncommonly seen utilising advanced charge weaponry when defending them from raiders. \n\nThis faction usually trades high-tech goods along with the basic bulk supplies.</description>
+		<description>RimWorlds, with their severe lack of regulations, make fine places for societies of androids to take root. These androids have chosen to form a union of semi-independent cities for mutual defense and prosperity. They are generally amenable to trade and cooperation, and wish for nothing more than to live in peace. \n\nThis faction usually trades high-tech goods along with the basic bulk supplies.</description>
 		<colorSpectrum>
 			<li>(0.65, 0.60, 0.70)</li>
 			<li>(0.95, 0.90, 1)</li>
 		</colorSpectrum>
 		<pawnSingular>android</pawnSingular>
 		<pawnsPlural>androids</pawnsPlural>
+		<settlementGenerationWeight>0.4</settlementGenerationWeight>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<listOrderPriority>35</listOrderPriority>
-		<settlementGenerationWeight>0.5</settlementGenerationWeight>
-		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
-		<leaderTitle>grand leader</leaderTitle>
+		<leaderTitle>coalition leader</leaderTitle>
 		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
 		<factionNameMaker>NamerFactionCollectiveAndroid</factionNameMaker>
 		<settlementNameMaker>NamerSettlementCollectiveAndroid</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
+        <allowedCultures><li>Rustican</li></allowedCultures>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+        </disallowedMemes>
 		<backstoryFilters>
 		  <li>
 			<categories>
-			  <li>Offworld</li>
+			  <li>ATR_GeneralAndroids</li>
 			</categories>
 		  </li>
 		</backstoryFilters>
 		<geneticVariance>0.8</geneticVariance>
+        <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
 		<caravanTraderKinds>
 			<li>Caravan_AndroidCollective_BulkGoods</li>
 			<li>Caravan_AndroidCollective_CombatSupplier</li>
@@ -205,9 +212,9 @@
 				<kindDef>Combat</kindDef>
 				<options>
 					<AndroidT1CollectiveColonist>2</AndroidT1CollectiveColonist>
-					<AndroidT1CollectiveSoldier>8</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>6</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>4</AndroidT3CollectiveSoldier>
+					<AndroidT1CollectiveSoldier>6</AndroidT1CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>8</AndroidT2CollectiveSoldier>
+					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
 					<AndroidT4CollectiveSoldier>2</AndroidT4CollectiveSoldier>
 					<AndroidT4CollectiveLeader>4.5</AndroidT4CollectiveLeader>
 				</options>
@@ -217,7 +224,9 @@
 				<options>
 					<AndroidT1CollectiveColonist>20</AndroidT1CollectiveColonist>
 					<AndroidT1CollectiveSoldier>10</AndroidT1CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>20</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveColonist>10</AndroidT3CollectiveColonist>
+					<AndroidT4CollectiveLeader>4.5</AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
@@ -226,11 +235,7 @@
 					<AndroidT2CollectiveTrader>1</AndroidT2CollectiveTrader>
 				</traders>
 				<carriers>
-					<Muffalo>6</Muffalo>
-					<DroneTORT>5</DroneTORT>
-					<Dromedary>4</Dromedary>
-					<Alpaca>2</Alpaca>
-					<Elephant>1</Elephant>
+					<DroneTORT>6</DroneTORT>
 				</carriers>
 				<guards>
 					<AndroidT1CollectiveColonist>5</AndroidT1CollectiveColonist>
@@ -243,14 +248,32 @@
 				<kindDef>Settlement</kindDef>
 				<options>
 					<AndroidT1CollectiveColonist>1</AndroidT1CollectiveColonist>
-					<AndroidT1CollectiveSoldier>2</AndroidT1CollectiveSoldier>
-					<AndroidT4CollectiveSoldier>5</AndroidT4CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>4</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>8</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveLeader>6</AndroidT4CollectiveLeader>
+					<AndroidT1CollectiveSoldier>4</AndroidT1CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>6</AndroidT2CollectiveSoldier>
+					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
+					<AndroidT4CollectiveSoldier>4</AndroidT4CollectiveSoldier>
+					<AndroidT4CollectiveLeader>4</AndroidT4CollectiveLeader>
 				</options>
 			</li>
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 	</FactionDef>
+
+
+    <ThingSetMakerDef>
+        <defName>AndroidRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                        <li>ATR_RepairStimSimple</li>
+                        <li>ATR_RepairStimIntermediate</li>
+                        <li>MealSurvivalPack</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
 </Defs>

@@ -13,42 +13,45 @@ namespace ATReforged
 {
     internal class MedicalCareUtility_Patch
     {
+        // Patch for mechanical units to have Repair Stims replace medicines graphically for the medical care selector.
         [HarmonyPatch(typeof(MedicalCareUtility), "MedicalCareSelectButton")]
         public class MedicalCareSelectButton_Patch
         {
             [HarmonyPrefix]
             public static bool Listener(Rect rect, Pawn pawn)
             {
-                try
+                // Mechanicals get repair stim graphics.
+                if (Utils.IsConsideredMechanical(pawn))
                 {
-                    if (Utils.IsConsideredMechanical(pawn))
-                    {
-                        Func<Pawn, MedicalCareCategory> getPayload = new Func<Pawn, MedicalCareCategory>(MedicalCareSelectButton_GetMedicalCare);
-                        Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<MedicalCareCategory>>> menuGenerator = new Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<MedicalCareCategory>>>(MedicalCareSelectButton_GenerateMenu);
-                        Texture2D buttonIcon;
-                        int index = (int)pawn.playerSettings.medCare;
-                        if (index == 0)
-                            buttonIcon = Tex.NoCare;
-                        else if (index == 1)
-                            buttonIcon = Tex.NoMed;
-                        else if (index == 2)
-                            buttonIcon = Tex.RepairStimSimple;
-                        else if (index == 3)
-                            buttonIcon = Tex.RepairStimIntermediate;
-                        else
-                            buttonIcon = Tex.RepairStimAdvanced;
+                    Func<Pawn, MedicalCareCategory> getPayload = new Func<Pawn, MedicalCareCategory>(MedicalCareSelectButton_GetMedicalCare);
+                    Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<MedicalCareCategory>>> menuGenerator = new Func<Pawn, IEnumerable<Widgets.DropdownMenuElement<MedicalCareCategory>>>(MedicalCareSelectButton_GenerateMenu);
+                    Texture2D buttonIcon;
 
-                        Widgets.Dropdown(rect, pawn, getPayload, menuGenerator, null, buttonIcon, null, null, null, true);
-                        return false;
-                    }
-                    else
+                    switch ((int)pawn.playerSettings.medCare)
                     {
-                        return true;
+                        case 0:
+                            buttonIcon = Tex.NoCare;
+                            break;
+                        case 1:
+                            buttonIcon = Tex.NoMed;
+                            break;
+                        case 2:
+                            buttonIcon = Tex.RepairStimSimple;
+                            break;
+                        case 3:
+                            buttonIcon = Tex.RepairStimIntermediate;
+                            break;
+                        default:
+                            buttonIcon = Tex.RepairStimAdvanced;
+                            break;
                     }
+
+                    Widgets.Dropdown(rect, pawn, getPayload, menuGenerator, null, buttonIcon, null, null, null, true);
+                    return false;
                 }
-                catch(Exception e)
+                // Organics get standard graphic generation.
+                else
                 {
-                    Log.Message("[ATPP] MedicalCareUtility.MedicalCareSelectButton : " + e.Message + " - " + e.StackTrace);
                     return true;
                 }
             }

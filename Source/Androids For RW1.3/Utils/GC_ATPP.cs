@@ -761,19 +761,6 @@ namespace ATReforged
         {
             return cloudPawns;
         }
-
-        public void reset()
-        {
-            chargingStations.Clear();
-            networkedDevices.Clear();
-            heatSensitiveDevices.Clear();
-            skillServers.Clear();
-            securityServers.Clear();
-            hackingServers.Clear();
-            virusedDevices.Clear();
-            networkLinkedPawns.Clear();
-            cloudPawns.Clear();
-        }
         
         private void initNull()
         { 

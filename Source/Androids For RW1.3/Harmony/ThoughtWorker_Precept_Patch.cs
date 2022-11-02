@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_Precept_Patch
-
     {
         // Mechanical drones don't have precepts.
         [HarmonyPatch(typeof(ThoughtWorker_Precept), "CurrentStateInternal")]

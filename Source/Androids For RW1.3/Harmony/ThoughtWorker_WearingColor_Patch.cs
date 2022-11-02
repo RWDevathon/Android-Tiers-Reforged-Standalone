@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_WearingColor_Patch
-
     {
         // Mechanical drones don't care about colors.
         [HarmonyPatch(typeof(ThoughtWorker_WearingColor), "CurrentStateInternal")]

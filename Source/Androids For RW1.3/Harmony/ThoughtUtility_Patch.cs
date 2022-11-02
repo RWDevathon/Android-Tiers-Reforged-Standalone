@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtUtility_Patch
-
     {
         // Other pawns don't care about executed drones or surrogates.
         [HarmonyPatch(typeof(ThoughtUtility), "GiveThoughtsForPawnExecuted")]

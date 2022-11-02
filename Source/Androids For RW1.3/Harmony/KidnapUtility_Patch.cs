@@ -10,12 +10,11 @@ using System;
 namespace ATReforged
 {
     internal class KidnapUtility_Patch
-
     {
+        // Ensure kidnapped pawns are disconnected from the SkyMind. This will handle surrogates, mind operations, and capacities.
         [HarmonyPatch(typeof(KidnapUtility), "IsKidnapped")]
         public class KidnappedPawnsDisconnectFromSkyMind_Patch
         {
-            // Ensure kidnapped pawns are disconnected from the SkyMind. This will handle surrogates, mind operations, and capacities.
             [HarmonyPostfix]
             public static void Listener(Pawn pawn)
             {

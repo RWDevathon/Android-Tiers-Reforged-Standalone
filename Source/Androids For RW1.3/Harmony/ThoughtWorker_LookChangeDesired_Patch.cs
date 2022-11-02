@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_LookChangeDesired_Patch
-
     {
         // Mechanical drones don't care about their appearance.
         [HarmonyPatch(typeof(ThoughtWorker_LookChangeDesired), "CurrentStateInternal")]

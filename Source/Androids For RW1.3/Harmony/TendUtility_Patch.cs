@@ -25,35 +25,28 @@ namespace ATReforged
                 if (!Utils.IsConsideredMechanical(patient))
                     return true;
 
-                try
+                // Essentially vanilla TendQuality but using mechanical tend quality rather than medicinal.
+                float tendQuality;
+                if (doctor != null)
                 {
-                    float tendQuality;
-                    if (doctor != null)
-                    {
-                        tendQuality = doctor.GetStatValue(StatDefOf.MechanicalTendQuality, true);
-                    }
-                    else
-                    {
-                        tendQuality = 0.75f;
-                    }
-                    tendQuality *= medicinePotency;
-                    Building_Bed building_Bed = patient?.CurrentBed();
-                    if (building_Bed != null)
-                    {
-                        tendQuality += building_Bed.GetStatValue(StatDefOf.MechanicalTendQualityOffset, true);
-                    }
-                    if (doctor == patient && doctor != null)
-                    {
-                        tendQuality *= 0.7f;
-                    }
-                    __result = Mathf.Clamp(tendQuality, 0f, medicineQualityMax);
-                    return false;
+                    tendQuality = doctor.GetStatValue(StatDefOf.MechanicalTendQuality, true);
                 }
-                catch(Exception e)
+                else
                 {
-                    Log.Message("[ATR] TendUtility.CalculateBaseTendQuality " + e.Message + " " + e.StackTrace);
-                    return true;
+                    tendQuality = 0.75f;
                 }
+                tendQuality *= medicinePotency;
+                Building_Bed building_Bed = patient?.CurrentBed();
+                if (building_Bed != null)
+                {
+                    tendQuality += building_Bed.GetStatValue(StatDefOf.MechanicalTendQualityOffset, true);
+                }
+                if (doctor == patient && doctor != null)
+                {
+                    tendQuality *= 0.7f;
+                }
+                __result = Mathf.Clamp(tendQuality, 0f, medicineQualityMax);
+                return false;
             }
         }
     }

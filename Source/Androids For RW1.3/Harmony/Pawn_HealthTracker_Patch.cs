@@ -14,32 +14,24 @@ namespace ATReforged
         // Ensure the hediff to be added is not forbidden on the given pawn (for mechanicals) before doing standard AddHediff checks - it would be wasted/junk calculations.
         [HarmonyPatch(typeof(Pawn_HealthTracker), "AddHediff")]
         [HarmonyPatch(new Type[] { typeof(Hediff), typeof(BodyPartRecord), typeof(DamageInfo?), typeof(DamageWorker.DamageResult) })]
-        public class AddHediff_PatchPrefix
+        public class AddHediff_Patch
         { 
             [HarmonyPrefix]
             public static bool Listener(ref Pawn ___pawn, ref Hediff hediff, BodyPartRecord part)
             {
-                try
+                // No reason to continue if the hediff is null.
+                if (___pawn == null || hediff == null)
                 {
-                    // No reason to continue if the hediff is null.
-                    if (hediff == null)
-                    {
-                        return false;
-                    }
-
-                    // If this is a mechanical pawn and this particular hediff is forbidden for mechanicals to have, then simply return.
-                    if (Utils.IsConsideredMechanical(___pawn) && ATReforged_Settings.blacklistedMechanicalHediffs.Contains(hediff.def.defName))
-                    {
-                        return false;
-                    }
-
-                    return true;
+                    return false;
                 }
-                catch(Exception ex)
+
+                // If this is a mechanical pawn and this particular hediff is forbidden for mechanicals to have, then abort trying to add it.
+                if (Utils.IsConsideredMechanical(___pawn) && ATReforged_Settings.blacklistedMechanicalHediffs.Contains(hediff.def.defName))
                 {
-                    Log.Message("[ATPP] Pawn_HealthTracker.AddHediff " + ex.Message + " " + ex.StackTrace);
-                    return true;
+                    return false;
                 }
+
+                return true;
             }
         }
 
@@ -91,27 +83,20 @@ namespace ATReforged
             }
         }
 
+        // Some notifications about player pawns dying should be suppressed, like surrogates.
         [HarmonyPatch(typeof(Pawn_HealthTracker), "NotifyPlayerOfKilled")]
         public class NotifyPlayerOfKilled_Patch
         {
             [HarmonyPrefix]
             public static bool Listener(ref DamageInfo? dinfo, ref Hediff hediff, ref Caravan caravan, Pawn ___pawn)
             {
-                try
+                // If the pawn is a surrogate and wasn't just turned into one, then abort.
+                if (Utils.IsSurrogate(___pawn) && hediff != null && hediff.def != HediffDefOf.ATR_SkyMindReceiver)
                 {
-                    // If the pawn is a surrogate and wasn't just turned into one, then abort.
-                    if (Utils.IsSurrogate(___pawn) && hediff != null && hediff.def != HediffDefOf.ATR_SkyMindReceiver)
-                    {
-                        return false;
-                    }
+                    return false;
+                }
 
-                    return true;
-                }
-                catch (Exception e)
-                {
-                    Log.Message("[ATR] Pawn_HealthTracker.NotifyPlayerOfKilled: " + e.Message + " - " + e.StackTrace);
-                    return true;
-                }
+                return true;
             }
         }
     }

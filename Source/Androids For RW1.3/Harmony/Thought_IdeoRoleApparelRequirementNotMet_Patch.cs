@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class Thought_IdeoRoleApparelRequirementNotMet_Patch
-
     {
         // Mechanical drones do not have ideological apparel requirement concerns.
         [HarmonyPatch(typeof(Thought_IdeoRoleApparelRequirementNotMet), "CurrentStateInternal")]

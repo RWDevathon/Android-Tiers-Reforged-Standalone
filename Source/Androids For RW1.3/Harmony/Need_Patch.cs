@@ -32,6 +32,7 @@ namespace ATReforged
             }
         }
 
+        // Ensure the tooltip for hunger displays a tooltip about energy for mechanicals.
         [HarmonyPatch(typeof(Need_Food), "GetTipString")]
         public class GetTipString_Patch
         {
