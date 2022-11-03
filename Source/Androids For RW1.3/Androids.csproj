@@ -198,10 +198,8 @@
     <Compile Include="DefsOf\SoundDefOfAT.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
     <Compile Include="Enum\ServerType.cs" />
-    <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
-    <Compile Include="Extensions\StringBuilderExtensions.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\Alert_ColonistNeedsRescuing_Patch.cs" />
     <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
@@ -264,8 +262,6 @@
     <Compile Include="Designators\Designator_AndroidToControl.cs" />
     <Compile Include="Dialogs\Dialog_Msg.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
-    <Compile Include="Enum\AndroidPaintColor.cs" />
-    <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\Apparel_Patch.cs" />
     <Compile Include="Harmony\Building_TurretGun_Patch.cs" />
@@ -302,8 +298,8 @@
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
-    <Compile Include="ImportantPawnComp\DownedT5AndroidComp.cs" />
-    <Compile Include="GenStep_DownedRefugee.cs" />
+    <Compile Include="T5Arrival\DownedT5AndroidComp.cs" />
+    <Compile Include="T5Arrival\GenStep_DownedRefugee.cs" />
     <Compile Include="Hediffs\HediffGiver_Android.cs" />
     <Compile Include="DefsOf\HediffDefOf.cs" />
     <Compile Include="IngestionOutcomeDoer_GiveTwoHediffs.cs" />
@@ -318,7 +314,6 @@
     <Compile Include="MechFallStuff\MechFallMote.cs" />
     <Compile Include="ModExtensionATweaks.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
-    <Compile Include="PawnRelationWorker_Creation.cs" />
     <Compile Include="PostInitTweaks.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
     <Compile Include="Recipes\Recipe_InstallImplantAndroid.cs" />
@@ -337,7 +332,6 @@
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="Utils\FilteredGetters.cs" />
     <Compile Include="Utils\GC_ATPP.cs" />
-    <Compile Include="Utils\ReflectionUtility.cs" />
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="MechFallStuff\Verb_MechFall.cs" />
@@ -346,7 +340,7 @@
     <Compile Include="WorkGivers\WorkGiver_TendSelfMech.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendOtherUrgentMech.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendOtherMech.cs" />
-    <Compile Include="WorldObjectDef_DownedT5Android.cs" />
+    <Compile Include="T5Arrival\WorldObjectDef_DownedT5Android.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\About\About.xml">
