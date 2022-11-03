@@ -58,13 +58,14 @@ namespace ATReforged
             }
 
             // If there is no SkyMind capacity, then it doesn't get any buttons to interact with it.
-            if(Utils.GCATPP.GetSkyMindNetworkSlots() <= 0)
+            if (Utils.GCATPP.GetSkyMindNetworkSlots() <= 0)
             {
                 yield break;
             }
 
+            // Connect/Disconnect to SkyMind
             yield return new Command_Toggle
-            { // Connect/Disconnect to SkyMind
+            { 
                 icon = Tex.ConnectSkyMindIcon,
                 defaultLabel = "ATR_ConnectSkyMind".Translate(),
                 defaultDesc = "ATR_ConnectSkyMindDesc".Translate(),
