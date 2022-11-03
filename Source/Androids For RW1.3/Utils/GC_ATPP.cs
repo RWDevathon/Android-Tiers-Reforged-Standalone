@@ -61,6 +61,13 @@ namespace ATReforged
                                     compClass = typeof(CompSkyMindLink)
                                 };
                                 thingDef.comps.Add(cp);
+                                var checker = 0;
+                                foreach (var comp in thingDef.comps)
+                                {
+                                    if (comp.compClass == typeof(CompSkyMind))
+                                        checker++;
+                                }
+                                Log.Warning("[ATR DEBUG] thingDef " + thingDef.defName + " has " + checker + " CompSkyMinds.");
                             }
                             
                             // Mechanical pawns do not need rest or get butchered. Patch the defs at run-time because settings may change.
@@ -235,10 +242,10 @@ namespace ATReforged
             Scribe_Values.Look(ref SkyMindNetworkCapacity, "ATR_SkyMindNetworkCapacity", 0);
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
 
-            List<Thing> thingKeyCopy = virusedDevices.Keys.FastToList();
-            List<int> thingValueCopy = virusedDevices.Values.FastToList();
-            List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.FastToList();
-            List<int> pawnValueCopy = networkLinkedPawns.Values.FastToList();
+            List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
+            List<int> thingValueCopy = virusedDevices.Values.ToList();
+            List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.ToList();
+            List<int> pawnValueCopy = networkLinkedPawns.Values.ToList();
 
             Scribe_Collections.Look(ref skillServers, "ATR_skillServers", LookMode.Reference);
             Scribe_Collections.Look(ref securityServers, "ATR_securityServers", LookMode.Reference);
@@ -457,6 +464,12 @@ namespace ATReforged
             // Removing a tower may result in being over the SkyMind network limit. Randomly disconnect some until under the limit if necessary.
             while (SkyMindNetworkCapacity < networkedDevices.Count())
             {
+                if (SkyMindNetworkCapacity < 0)
+                {
+                    Log.Error("[ATR Crash-check] Attempted to reduce the number of networkedDevices below 0 in a while loop - this could crashed the game! Report events/logs to dev immediately.");
+                    networkedDevices.Clear();
+                    break;
+                }
                 Thing device = networkedDevices.RandomElement();
                 DisconnectFromSkyMind(device);
             }
@@ -482,7 +495,7 @@ namespace ATReforged
             // Removing a core may result in being over the cloud pawn limit. Randomly murder stored intelligences until under the limit if necessary.
             while (SkyMindCloudCapacity < cloudPawns.Count())
             {
-                // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections. TODO: Ensure this is the case.
+                // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections.
                 cloudPawns.RandomElement().Kill(null);
             }
         }

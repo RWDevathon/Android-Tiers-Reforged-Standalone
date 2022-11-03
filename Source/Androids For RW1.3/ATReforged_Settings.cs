@@ -353,7 +353,7 @@ namespace ATReforged
 
         private void RebuildCache(ref HashSet<ThingDef> cache, PawnListKind listType)
         {
-            IEnumerable<ThingDef> validPawns = FilteredGetters.getValidPawns();
+            IEnumerable<ThingDef> validPawns = FilteredGetters.GetValidPawns();
 
             //Log.Message($"(list type: {listType}) valid weapons ({validSidearms.Count()}):{String.Join(", ", validSidearms.Select(w => w.defName))}");
 

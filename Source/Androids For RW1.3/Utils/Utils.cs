@@ -208,7 +208,6 @@ namespace ATReforged
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
             BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
-            // blankMechanical.gender = Gender.None; TODO: Verify fixedGender isn't creating problems.
             blankMechanical.story.traits.allTraits.Clear();
             blankMechanical.skills.Notify_SkillDisablesChanged();
             blankMechanical.skills.skills.ForEach(delegate (SkillRecord record)
@@ -246,7 +245,7 @@ namespace ATReforged
         public static HashSet<string> ReservedMSeriesPawns = new HashSet<string> { "M7Mech", "M8Mech" };
         public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android"};
 
-        public static HashSet<string> ReservedFactionCanUseSurrogates = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" }; //TODO: Add ATR_Supremacists
+        public static HashSet<string> ReservedFactionCanUseSurrogates = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
 
         public static Pawn ReservedBlank = null; // To be applied to surrogates, new androids, etc. Generated when first needed, then stored for later.

@@ -13,7 +13,8 @@ namespace ATReforged
     internal class FilteredGetters
     {
         public static IEnumerable<ThingDef> pregenedValidPawns;
-        public static IEnumerable<ThingDef> getValidPawns()
+
+        public static IEnumerable<ThingDef> GetValidPawns()
         {
             if (pregenedValidPawns == null)
                 pregenedValidPawns = AllPawnDefs();
@@ -23,7 +24,7 @@ namespace ATReforged
         // Searches through all ThingDefs to identify all Pawns, even from other mods.
         public static IEnumerable<ThingDef> AllPawnDefs()
         { 
-            return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn");
+            return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn" && thingDef.race.intelligence != Intelligence.ToolUser);
         }
 
         // Return the pawn type based on the settings.
