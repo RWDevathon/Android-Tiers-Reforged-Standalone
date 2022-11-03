@@ -281,7 +281,7 @@ namespace ATReforged
             ret.AppendLine("ATR_CloudIntelligenceSummary".Translate(Utils.GCATPP.GetCloudPawns().Count(), Utils.GCATPP.GetSkyMindCloudCapacity()));
             ret.AppendLine("ATR_AssistingIntelligenceSummary".Translate(Utils.GCATPP.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count()));
 
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
     }
 }

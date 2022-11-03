@@ -53,7 +53,7 @@ namespace ATReforged
 
             ret.AppendLine("ATR_SkyMindNetworkSummary".Translate(Utils.GCATPP.GetSkyMindDevices().Count, Utils.GCATPP.GetSkyMindNetworkSlots()));
 
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
 

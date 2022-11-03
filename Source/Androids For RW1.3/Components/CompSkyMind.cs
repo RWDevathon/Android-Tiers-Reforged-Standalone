@@ -180,7 +180,7 @@ namespace ATReforged
                 ret.AppendLine("ATR_SkyMindDetected".Translate());
             }
 
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         private int integrityBreach = -1; // -1 : Not integrityBreach. 1: Sleeper Virus. 2: Cryptolocked. 3: Breaker Virus.

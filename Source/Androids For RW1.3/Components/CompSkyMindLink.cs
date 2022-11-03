@@ -419,7 +419,7 @@ namespace ATReforged
             {
                 ret.AppendLine("ATR_SurrogateConnected".Translate(string.Join(", ", surrogatePawns)));
             }
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         public override void ReceiveCompSignal(string signal)
@@ -525,7 +525,7 @@ namespace ATReforged
             }
 
             // Disconnect each surrogate from the SkyMind (and this pawn by extension).
-            foreach (Pawn surrogate in surrogatePawns.FastToList())
+            foreach (Pawn surrogate in surrogatePawns.ToList())
             {
                 Utils.GCATPP.DisconnectFromSkyMind(surrogate);
             }

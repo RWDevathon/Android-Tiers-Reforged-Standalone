@@ -76,7 +76,7 @@ namespace ATReforged
                         candidatesForReplacement.Remove(p);
                     }
 
-                    List<Pawn> candidateList = candidatesForReplacement.FastToList();
+                    List<Pawn> candidateList = candidatesForReplacement.ToList();
 
                     // Generate all surrogate pawns individually and copy everything from the candidate
                     foreach (Pawn chosenCandidate in candidateList)
@@ -135,7 +135,7 @@ namespace ATReforged
                         // Give all equipment from the original candidate to the surrogate
                         if (chosenCandidate.equipment != null && surrogate.equipment != null)
                         {
-                            foreach (ThingWithComps equipment in chosenCandidate.equipment.AllEquipmentListForReading.FastToList())
+                            foreach (ThingWithComps equipment in chosenCandidate.equipment.AllEquipmentListForReading.ToList())
                             {
                                 try
                                 {
@@ -154,7 +154,7 @@ namespace ATReforged
                         {
                             try
                             {
-                                foreach (Apparel apparel in chosenCandidate.apparel.WornApparel.FastToList())
+                                foreach (Apparel apparel in chosenCandidate.apparel.WornApparel.ToList())
                                 {
 
                                     // Check to see if this apparel can be worn by the surrogate

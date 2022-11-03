@@ -146,7 +146,7 @@ namespace ATReforged
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
             }
-            return ret.TrimEnd().ToString();
+            return ret.ToString();
         }
 
         public override void PostDeSpawn(Map map)

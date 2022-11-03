@@ -60,7 +60,7 @@ namespace ATReforged
                .AppendLine("ATR_SkillSlotsAdded".Translate(Props.pointStorage))
                .AppendLine("ATR_SecuritySlotsAdded".Translate(Props.pointStorage))
                .AppendLine("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
-            return ret.TrimEnd().ToString();
+            return ret.ToString();
         }
 
         public override void PostDeSpawn(Map map)

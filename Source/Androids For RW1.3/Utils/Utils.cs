@@ -489,7 +489,7 @@ namespace ATReforged
                             continue;
 
                         // For each of the world pawns relations, if it relates to the source, add it to the destination.
-                        foreach (DirectPawnRelation pawnRelation in worldPawn.relations.DirectRelations.FastToList())
+                        foreach (DirectPawnRelation pawnRelation in worldPawn.relations.DirectRelations.ToList())
                         {
                             if (pawnRelation.otherPawn != null && pawnRelation.otherPawn == source)
                             {
@@ -499,7 +499,7 @@ namespace ATReforged
                     }
 
                     // Duplicate all of the source's relations.
-                    foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.FastToList())
+                    foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.ToList())
                     {
                         destRelations.AddDirectRelation(pawnRelation.def, pawnRelation.otherPawn);
                     }
@@ -850,7 +850,7 @@ namespace ATReforged
             if (IsConsideredMechanicalDrone(pawn))
             {
                 // Drones don't have traits.
-                foreach (Trait trait in pawn.story.traits.allTraits.FastToList())
+                foreach (Trait trait in pawn.story.traits.allTraits.ToList())
                 {
                     pawn.story.traits.RemoveTrait(trait);
                 }
