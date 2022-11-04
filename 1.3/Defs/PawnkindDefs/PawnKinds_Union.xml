@@ -7,11 +7,11 @@
 		<combatPower>60</combatPower>
 		<isFighter>false</isFighter>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -61,11 +61,11 @@
 		<combatPower>40</combatPower>
 		<isFighter>false</isFighter>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -88,7 +88,7 @@
 			<max>1200</max>
 		</apparelMoney>
 		<apparelTags>
-		      <li>IndustrialBasic</li>
+            <li>IndustrialBasic</li>
 			<li>IndustrialMilitaryBasic</li>
 			<li>IndustrialMilitaryAdvanced</li>
 			<li>BeltDefensePop</li>
@@ -116,11 +116,11 @@
 		<combatPower>40</combatPower>
 		<isFighter>false</isFighter>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -168,11 +168,11 @@
 		<label>T1 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<race>Tier1Android</race>
 		<combatPower>60</combatPower>
@@ -222,11 +222,11 @@
 		<label>T2 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<baseRecruitDifficulty>0.70</baseRecruitDifficulty>
 		<race>Tier2Android</race>
@@ -276,11 +276,11 @@
 		<label>T3 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<baseRecruitDifficulty>0.80</baseRecruitDifficulty>
 		<race>Tier3Android</race>
@@ -331,11 +331,11 @@
 		<label>T4 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 		<race>Tier4Android</race>
@@ -386,11 +386,11 @@
 		<label>Android leader</label>
 		<labelPlural>Android leaders</labelPlural>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_GeneralAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<baseRecruitDifficulty>0.99</baseRecruitDifficulty>
 		<race>Tier4Android</race>
