@@ -100,6 +100,7 @@
 				<isFlesh>false</isFlesh>
 			</compatibility>
 		</alienRace>
+        <uiIconPath>Things/Pawns/Humanlikes/Tier5/head/None_Average_Normal_south</uiIconPath>
 		<statBases>
 			<MarketValue>8000</MarketValue>
 			<MoveSpeed>10</MoveSpeed>

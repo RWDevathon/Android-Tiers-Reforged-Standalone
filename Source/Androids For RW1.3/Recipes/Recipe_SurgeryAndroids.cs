@@ -50,7 +50,7 @@ namespace ATReforged
             }
 
             // Max chance of success is either the calculated surgery chance or the settings-prescribed max limit (default 1).
-            chanceSucceed = Mathf.Min(chanceSucceed, ATReforged_Settings.maxChanceSurgerySuccess);
+            chanceSucceed = Mathf.Min(chanceSucceed, ATReforged_Settings.maxChanceMechanicOperationSuccess);
 
             // Check if the surgery is successful.
             if (ATReforged_Settings.showMechanicalSurgerySuccessChance)
@@ -67,7 +67,7 @@ namespace ATReforged
                     }
                     Messages.Message("MessageMedicalOperationFailureFatalAndroid".Translate(surgeon.LabelShort, patient.LabelShort, recipe.label), patient, MessageTypeDefOf.NegativeHealthEvent);
                 }
-                else if (Rand.Chance(ATReforged_Settings.chanceFailedSurgeryMinor))
+                else if (Rand.Chance(ATReforged_Settings.chanceFailedOperationMinor))
                 { // Patient suffered minor injuries.
                     Messages.Message("MessageMedicalOperationFailureMinorAndroid".Translate(surgeon.LabelShort, patient.LabelShort), patient, MessageTypeDefOf.NegativeHealthEvent);
                     HealthUtility.GiveInjuriesOperationFailureMinor(patient, part);

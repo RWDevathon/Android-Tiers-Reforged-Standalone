@@ -51,7 +51,7 @@ namespace ATReforged
             // If this unit can't use the SkyMind, then it doesn't get any buttons to interact with it.
             if (parent is Pawn pawn)
             {
-                if (!Utils.PawnCanUseSkyMind(pawn))
+                if (!Utils.HasCloudCapableImplant(pawn))
                 {
                     yield break;
                 }

@@ -12,6 +12,7 @@
 				</li>
 			</graphicPaths>
 		</alienRace>
+        <uiIconPath>Things/Pawns/Humanlikes/Tier4/head/None_Average_Normal_south</uiIconPath>
 		<statBases>
 			<MarketValue>6000</MarketValue>
 			<MoveSpeed>7.20</MoveSpeed>

@@ -60,15 +60,7 @@
 				</li>
 			</graphicPaths>
 		</alienRace>
-		<statBases>
-			<MarketValue>18000</MarketValue>
-			<MoveSpeed>4.80</MoveSpeed>
-			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
-			<ComfyTemperatureMax>200</ComfyTemperatureMax>
-			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-			<Mass>450</Mass>
-		</statBases>
+        <uiIconPath>Things/Pawns/Humanlikes/M7Mech/body/Naked_None_south</uiIconPath>
 		<tools>
 			<li>
 				<label>right fist</label>

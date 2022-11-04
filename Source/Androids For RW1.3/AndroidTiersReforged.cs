@@ -14,13 +14,12 @@ namespace ATReforged
 {
     public class ATReforged : Mod
     {
-        public ATReforged_Settings settings;
+        public static ATReforged_Settings settings;
+        public static ATReforged ModSingleton { get; private set; }
 
         public ATReforged(ModContentPack content) : base(content)
         {
-            settings = GetSettings<ATReforged_Settings>();
-            settings.StartupChecks();
-
+            ModSingleton = this;
             new Harmony("ATReforged").PatchAll(Assembly.GetExecutingAssembly());
         }
         
@@ -35,6 +34,16 @@ namespace ATReforged
         {
             settings.DoSettingsWindowContents(inRect);
             base.DoSettingsWindowContents(inRect);
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    public static class ATReforged_PostInit
+    {
+        static ATReforged_PostInit()
+        {
+            ATReforged.settings = ATReforged.ModSingleton.GetSettings<ATReforged_Settings>();
+            ATReforged.settings.StartupChecks();
         }
     }
 }

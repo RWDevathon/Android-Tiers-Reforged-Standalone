@@ -11,7 +11,7 @@ namespace ATReforged
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             // Skip pawns that can't connect to the SkyMind.
-            if (!Utils.PawnCanUseSkyMind(p))
+            if (!Utils.HasCloudCapableImplant(p))
                 return false;
 
             // Skip pawns that can be but aren't connected to the SkyMind

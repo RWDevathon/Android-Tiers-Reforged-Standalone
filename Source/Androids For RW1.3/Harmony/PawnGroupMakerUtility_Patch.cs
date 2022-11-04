@@ -32,7 +32,7 @@ namespace ATReforged
                     }
 
                     // Skip factions not allowed to use surrogates or groups that are too small
-                    if (!ATReforged_Settings.androidsAppearNaturally || parms.faction == null || !ATReforged_Settings.otherFactionsAllowedSurrogates || !Utils.FactionCanUseSkyMind(parms.faction.def) || nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
+                    if (parms.faction == null || !ATReforged_Settings.otherFactionsAllowedSurrogates || !Utils.FactionCanUseSkyMind(parms.faction.def) || nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
                     {
                         return;
                     }

@@ -268,7 +268,6 @@
     <Compile Include="Harmony\Caravan_Patch.cs" />
     <Compile Include="Harmony\Corpse_Patch.cs" />
     <Compile Include="Harmony\FlickUtility_Patch.cs" />
-    <Compile Include="Harmony\FactionGenerator_Patch.cs" />
     <Compile Include="Harmony\FreeColonists_Patch.cs" />
     <Compile Include="Harmony\HealthAIUtility_Patch.cs" />
     <Compile Include="Harmony\HediffSet_Patch.cs" />

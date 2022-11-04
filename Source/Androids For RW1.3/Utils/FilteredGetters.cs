@@ -17,30 +17,20 @@ namespace ATReforged
         public static IEnumerable<ThingDef> GetValidPawns()
         {
             if (pregenedValidPawns == null)
-                pregenedValidPawns = AllPawnDefs();
+                pregenedValidPawns = AllValidPawnDefs();
             return pregenedValidPawns;
         }
 
         // Searches through all ThingDefs to identify all Pawns, even from other mods.
-        public static IEnumerable<ThingDef> AllPawnDefs()
+        public static IEnumerable<ThingDef> AllValidPawnDefs()
         { 
-            return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn" && thingDef.race.intelligence != Intelligence.ToolUser);
+            return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn" && thingDef.race.intelligence != Intelligence.ToolUser && !thingDef.race.IsMechanoid);
         }
 
-        // Return the pawn type based on the settings.
-        public static IEnumerable<ThingDef> FilterByPawnKind(IEnumerable<ThingDef> options, PawnListKind pawnType)
+        // Return an enumerable of pawns based on the given intelligence.
+        public static IEnumerable<ThingDef> FilterByIntelligence(IEnumerable<ThingDef> options, Intelligence intelligence)
         {
-            switch (pawnType)
-            {
-                case PawnListKind.Android:
-                    return options.Where(t => ATReforged_Settings.isConsideredMechanicalAndroid.Contains(t.defName));
-                case PawnListKind.Drone:
-                    return options.Where(t => ATReforged_Settings.isConsideredMechanicalDrone.Contains(t.defName));
-                case PawnListKind.Animal:
-                    return options.Where(t => ATReforged_Settings.isConsideredMechanicalAnimal.Contains(t.defName));
-                default:
-                    throw new InvalidOperationException("Attempted to filter by a nonexistant mechanical pawn type.");
-            }
+            return options.Where(thingDef => thingDef.race.intelligence == intelligence);
         }
     }
 }

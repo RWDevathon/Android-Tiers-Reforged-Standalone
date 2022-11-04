@@ -78,7 +78,7 @@ namespace ATReforged
                                 butcherFlesh.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, false);
                                 thingDef.race.needsRest = false;
                             }
-
+                            
                             // Drones do not have learning factors.
                             if (Utils.IsConsideredMechanicalDrone(thingDef))
                             {
@@ -218,7 +218,6 @@ namespace ATReforged
             base.StartedNewGame();
 
             initNull();
-            CheckDeleteAndroidFactions();
         }
 
         public override void LoadedGame()
@@ -226,7 +225,6 @@ namespace ATReforged
             base.LoadedGame();
 
             RemoveBlacklistedAndroidsHediffs();
-            CheckDeleteAndroidFactions();
         }
 
         public override void ExposeData()
@@ -552,37 +550,6 @@ namespace ATReforged
         public IEnumerable<Thing> GetHeatSensitiveDevices(Map map = null)
         {
             return heatSensitiveDevices.Where(device => map != null ? device.Map == map : device != null);
-        }
-
-        // Destroy all android factions/bases if they are disabled in settings.
-        public void CheckDeleteAndroidFactions()
-        {
-            // If the Raider faction is blacklisted, destroy all bases relating to them.
-            if (!ATReforged_Settings.androidRaidersExist)
-            {
-                Log.Message("[ATR] Android Raider faction blacklisted. Removing bases and faction.");
-                Find.WorldObjects.SettlementBases.RemoveAll(settlement => settlement.Faction.def == FactionDefOf.MechanicalMarauders);
-
-                foreach (Faction faction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.def == FactionDefOf.MechanicalMarauders))
-                {
-                    faction.defeated = true;
-                    faction.def.hidden = true;
-                }
-            }
-
-            // If the Union faction is blacklisted, destroy all bases relating to them.
-            if (!ATReforged_Settings.androidUnionistsExist)
-            {
-                Log.Message("[ATR] Android Union faction blacklisted. Removing bases and faction.");
-                Find.WorldObjects.SettlementBases.RemoveAll(settlement => settlement.Faction.def == FactionDefOf.AndroidUnion);
-
-                foreach (Faction faction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.def == FactionDefOf.AndroidUnion))
-                {
-                    faction.defeated = true;
-                    faction.def.hidden = true;
-                }
-
-            }
         }
 
         // Add a server to the appropriate list based on serverMode
