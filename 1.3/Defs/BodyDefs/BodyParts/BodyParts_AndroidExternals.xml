@@ -152,6 +152,18 @@
     </BodyPartDef>
 
     <BodyPartDef>
+        <defName>MechanicalWaist</defName>
+        <label>utility slot</label>
+        <hitPoints>20</hitPoints>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+        <frostbiteVulnerability>0.00</frostbiteVulnerability>
+        <skinCovered>false</skinCovered>
+        <bleedRate>0</bleedRate>
+        <solid>true</solid>
+        <conceptual>true</conceptual>
+    </BodyPartDef>
+
+    <BodyPartDef>
         <defName>MechanicalLeg</defName>
         <label>leg</label>
         <hitPoints>30</hitPoints>
