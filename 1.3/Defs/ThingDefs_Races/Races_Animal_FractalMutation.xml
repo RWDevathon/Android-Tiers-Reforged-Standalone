@@ -127,7 +127,7 @@
 		<label>Mutant</label>
 		<race>Abomination</race>
 		<combatPower>230</combatPower>
-		<defaultFactionType>Abomination</defaultFactionType>
+		<defaultFactionType>AncientsHostile</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>9999</ecoSystemWeight>

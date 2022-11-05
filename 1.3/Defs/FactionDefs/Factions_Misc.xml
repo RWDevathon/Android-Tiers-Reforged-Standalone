@@ -1,31 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<FactionDef>
-		<defName>Abomination</defName>
-		<label>Fractal Mutant</label>
-		<description>The warped and horrific results of fully fledged fractal warping, abominations are relentless killers and nightmarish beings. Capable of and willing to chase any creature that crosses its path, their echoing screams of damnation are common fodder for even glitterworld horror media. \n\nTo those who know no fear, or to researchers of the archotechs, these beings are of great interest. Born of and yielding so-called fractal pills, abominations are drawn to archotech devices - often congregating around especially powerful artifacts. For this reason, morally corrupt archeologists have been known to forceably create abominations in order to follow them to archotech ruins, often only to be murdered by it upon arrival.</description>
-		<pawnsPlural>Fractal Mutants</pawnsPlural>
-		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<fixedName>Mutant</fixedName>
-		<humanlikeFaction>false</humanlikeFaction>
-		<hidden>true</hidden>
-		<permanentEnemy>true</permanentEnemy>
-		<autoFlee>false</autoFlee>
-		<techLevel>Neolithic</techLevel>
-		<canUseAvoidGrid>false</canUseAvoidGrid>
-		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
-		<raidLootValueFromPointsCurve>
-		  <points>
-			<li>(35,     8)</li>
-			<li>(100,   60)</li>
-			<li>(1000, 250)</li>
-			<li>(2000, 400)</li>
-			<li>(4000, 500)</li>
-		  </points>
-		</raidLootValueFromPointsCurve>
-	</FactionDef>
-
 	<FactionDef ParentName="PlayerFactionBase">
 		<defName>PlayerColonyAndroid</defName>
 		<label>New Android Arrivals</label>
