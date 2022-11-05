@@ -1,14 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
 using Verse;
-using Verse.AI;
-using System.Reflection;
 using UnityEngine;
-using System.Text;
-using Verse.Sound;
 
 namespace ATReforged
 {

@@ -195,7 +195,6 @@
     <Compile Include="DefsOf\MentalStateDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />
     <Compile Include="DefsOf\WorkTypeDefOf.cs" />
-    <Compile Include="DefsOf\SoundDefOfAT.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
     <Compile Include="Enum\ServerType.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />

@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
 using UnityEngine;
 using HarmonyLib;
-using Verse.AI.Group;
-using System.Reflection;
-using Verse.Sound;
 using Verse.AI;
-using System.Runtime;
-using static System.Collections.Specialized.BitVector32;
 using RimWorld.Planet;
-using System.Security.Cryptography;
-using AlienRace;
 
 namespace ATReforged
 {

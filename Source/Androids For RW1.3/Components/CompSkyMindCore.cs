@@ -1,13 +1,8 @@
-﻿using System;
-using Verse;
+﻿using Verse;
 using RimWorld;
 using System.Linq;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Text;
-using System.Text.RegularExpressions;
-using Verse.Sound;
-using RimWorld.Planet;
 
 namespace ATReforged
 {
