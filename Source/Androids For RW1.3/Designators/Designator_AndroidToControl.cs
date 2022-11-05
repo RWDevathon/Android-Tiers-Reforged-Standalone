@@ -73,9 +73,9 @@ namespace ATReforged
         {
             base.FinalizeDesignationSucceeded();
 
-            if (!Utils.GCATPP.AttemptSkyMindConnection((Pawn)target))
+            if (!Utils.gameComp.AttemptSkyMindConnection((Pawn)target))
             { // If trying to connect but it is unable to, inform the player. 
-                if (Utils.GCATPP.GetSkyMindNetworkSlots() == 0)
+                if (Utils.gameComp.GetSkyMindNetworkSlots() == 0)
                     Messages.Message("ATR_SkyMindConnectionFailedNoNetwork".Translate(), target, MessageTypeDefOf.NegativeEvent);
                 else
                     Messages.Message("ATR_SkyMindConnectionFailed".Translate(), target, MessageTypeDefOf.NegativeEvent);
@@ -83,7 +83,7 @@ namespace ATReforged
             }
 
             controller.TryGetComp<CompSkyMindLink>().ConnectSurrogate((Pawn)target);
-            if (Utils.GCATPP.GetSkyMindNetworkSlots() <= Utils.GCATPP.networkedDevices.Count())
+            if (Utils.gameComp.GetSkyMindNetworkSlots() <= Utils.gameComp.networkedDevices.Count())
                 Find.DesignatorManager.Deselect();
         }
 

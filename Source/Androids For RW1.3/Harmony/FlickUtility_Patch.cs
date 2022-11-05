@@ -21,7 +21,7 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool UpdateFlickDesignation_Prefix(Thing t)
             {
-                if (t.TryGetComp<CompSkyMind>() != null && t.TryGetComp<CompSkyMind>().connected && Utils.GCATPP.GetSkyMindCloudCapacity() > 0)
+                if (t.TryGetComp<CompSkyMind>() != null && t.TryGetComp<CompSkyMind>().connected && Utils.gameComp.GetSkyMindCloudCapacity() > 0)
                 {
                     CompFlickable compFlick = t.TryGetComp<CompFlickable>();
                     if (compFlick != null)

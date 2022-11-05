@@ -15,12 +15,12 @@ using System.Security.Cryptography;
 
 namespace ATReforged
 {
-    public class GC_ATPP : GameComponent
+    public class ATR_GameComponent : GameComponent
     {
 
-        public GC_ATPP(Game game)
+        public ATR_GameComponent(Game game)
         {
-            Utils.GCATPP = this;
+            Utils.gameComp = this;
             initNull();
             
             try
@@ -185,7 +185,7 @@ namespace ATReforged
             }
             catch (Exception e)
             {
-                Log.Error("[ATPP] GC_ATPP.CTOR(Init)  Fatal Error : " + e.Message + " - " + e.StackTrace);
+                Log.Error("[ATR] Initialization failed! Patching critical defs failed, game may not function past this point. Fatal Error : " + e.Message + " - " + e.StackTrace);
             }
         }
 
@@ -572,7 +572,7 @@ namespace ATReforged
                     hackingPointCapacity += capacity;
                     break;
                 default:
-                    Log.Error("[ATR] GC_ATPP.AddServer was given an invalid serverType. No servers added.");
+                    Log.Message("[ATR] Attempted to add a server of an invalid mode. No server was added. The building responsible should have a Gizmo to fix the issue.");
                     return;
             }
         }

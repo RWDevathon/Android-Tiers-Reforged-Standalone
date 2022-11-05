@@ -31,7 +31,7 @@ namespace ATReforged
             }
 
             // The server lists need to know how much storage and point generation exists for each server mode. This adds it to all three types. It won't double-add if it was already contained.
-            Utils.GCATPP.AddServer(building, Props.pointStorage);
+            Utils.gameComp.AddServer(building, Props.pointStorage);
 
             if (respawningAfterLoad)
             {
@@ -42,18 +42,18 @@ namespace ATReforged
         public override void CompTickLong()
         {
             base.CompTickLong();
-            Utils.GCATPP.ChangeServerPoints(Props.passivePointGeneration, ServerType.SkillServer);
-            Utils.GCATPP.ChangeServerPoints(Props.passivePointGeneration, ServerType.SecurityServer);
-            Utils.GCATPP.ChangeServerPoints(Props.passivePointGeneration, ServerType.HackingServer);
+            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.SkillServer);
+            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.SecurityServer);
+            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.HackingServer);
         }
 
         public override string CompInspectStringExtra()
         {
             StringBuilder ret = new StringBuilder();
 
-            ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.GCATPP.GetSkillPoints(), Utils.GCATPP.GetSkillPointCapacity()))
-               .AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.GCATPP.GetSecurityPoints(), Utils.GCATPP.GetSecurityPointCapacity()))
-               .AppendLine("ATR_HackingServersSynthesis".Translate(Utils.GCATPP.GetHackingPoints(), Utils.GCATPP.GetHackingPointCapacity()))
+            ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
+               .AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
+               .AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
                .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
@@ -69,7 +69,7 @@ namespace ATReforged
             StopSustainer();
 
             // The server lists need to know how much storage exists for each server mode. This removes it from all three types.
-            Utils.GCATPP.RemoveServer(building, Props.pointStorage);
+            Utils.gameComp.RemoveServer(building, Props.pointStorage);
         }
 
 

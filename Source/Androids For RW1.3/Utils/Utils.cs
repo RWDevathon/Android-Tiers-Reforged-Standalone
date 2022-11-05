@@ -158,7 +158,7 @@ namespace ATReforged
                 }
 
                 // Witnesses (connected to SkyMind but not targetted directly) get a minor mood debuff
-                foreach (Pawn pawn in GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !victims.Contains(pawn)).Cast<Pawn>())
+                foreach (Pawn pawn in gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !victims.Contains(pawn)).Cast<Pawn>())
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? SkyMindAttackVictimDef);
                 }
@@ -185,7 +185,7 @@ namespace ATReforged
                 if (csm == null)
                     continue;
                 csm.Breached = -1;
-                GCATPP.PopVirusedThing(virusedThing);
+                gameComp.PopVirusedThing(virusedThing);
             }
         }
 
@@ -256,7 +256,7 @@ namespace ATReforged
 
         public static List<string> BlacklistedHediffsForAndroids = new List<string> { "Anxiety" };
 
-        public static GC_ATPP GCATPP;
+        public static ATR_GameComponent gameComp;
 
         public static int GetPowerUsageByPawn(Pawn pawn)
         {
@@ -649,7 +649,7 @@ namespace ATReforged
         public static bool IsValidMindTransferTarget(Pawn pawn)
         {
             // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !GCATPP.HasSkyMindConnection(pawn) || pawn.TryGetComp<CompSkyMind>().Breached != -1 || pawn.TryGetComp<CompSkyMindLink>().Linked > -1)
+            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.TryGetComp<CompSkyMind>().Breached != -1 || pawn.TryGetComp<CompSkyMindLink>().Linked > -1)
             {
                 return false;
             }
@@ -661,7 +661,7 @@ namespace ATReforged
             }
 
             // If the pawn has a cloud capable implant or is in the SkyMind network already, then it is valid.
-            return HasCloudCapableImplant(pawn) || GCATPP.GetCloudPawns().Contains(pawn);
+            return HasCloudCapableImplant(pawn) || gameComp.GetCloudPawns().Contains(pawn);
         }
 
         // Returns a list of all surrogates without hosts in caravans. Return null if there are none.

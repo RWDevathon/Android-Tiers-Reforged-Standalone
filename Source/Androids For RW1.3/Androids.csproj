@@ -213,7 +213,6 @@
     <Compile Include="Harmony\Pawn_Patch.cs" />
     <Compile Include="Harmony\Precept_Ritual_Patch.cs" />
     <Compile Include="Harmony\Pawn_StyleTracker_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_BondedAnimalMaster_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_GroinOrChestUncovered_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_HasNoProsthetic_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_IdeoDiversity_Patch.cs" />
@@ -221,12 +220,6 @@
     <Compile Include="Harmony\ThoughtWorker_Precept_GroinUncovered_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_Social_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_WearingColor_Patch.cs" />
-    <Compile Include="Harmony\Thought_IdeoRoleEmpty_Patch.cs" />
-    <Compile Include="Harmony\Thought_IdeoDisrespectedBuilding_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_LookChangeDesired_Patch.cs" />
-    <Compile Include="Harmony\Thought_IdeoRoleApparelRequirementNotMet_Patch.cs" />
-    <Compile Include="Harmony\Thought_IdeoMissingBuilding_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_Patch.cs" />
@@ -291,8 +284,6 @@
     <Compile Include="Harmony\TendUtility_Patch.cs" />
     <Compile Include="Harmony\ThinkNode_ConditionalNeedPercentageAbove_Patch.cs" />
     <Compile Include="Harmony\ThoughtUtility_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_ApparelDamaged_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Dark_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
@@ -330,7 +321,7 @@
     <Compile Include="Utils\DownedT5Utility.cs" />
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="Utils\FilteredGetters.cs" />
-    <Compile Include="Utils\GC_ATPP.cs" />
+    <Compile Include="Components\ATR_GameComponent.cs" />
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="MechFallStuff\Verb_MechFall.cs" />

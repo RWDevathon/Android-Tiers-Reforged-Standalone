@@ -115,7 +115,7 @@ namespace ATReforged
                         // If resulting surrogate is not a pawn that is not a valid surrogate type, abandon and use the original candidate pawn.
                         if (!Utils.ValidSurrogatePawnKindDefs.Contains(surrogate.kindDef))
                         {
-                            Log.Warning("Attempted to generate a surrogate of an illegal PawnKindDef. Aborting surrogate replacement attempt and using candidate pawn instead.");
+                            Log.Warning("[ATR] Attempted to generate a surrogate of an illegal PawnKindDef. Aborting surrogate replacement attempt and using candidate pawn instead.");
                             surrogate.Destroy();
                             ret.Add(chosenCandidate);
                             continue;
@@ -144,7 +144,7 @@ namespace ATReforged
                                 }
                                 catch (Exception er)
                                 {
-                                    Log.Warning("[ATPP] Failed to transfer equipment to new surrogate in PawnGroupMakerUtility " + er.Message + " " + er.StackTrace);
+                                    Log.Warning("[ATR] Failed to transfer equipment to new surrogate in PawnGroupMakerUtility " + er.Message + " " + er.StackTrace);
                                 }
                             }
                         }

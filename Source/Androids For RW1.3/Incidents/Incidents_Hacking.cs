@@ -61,14 +61,14 @@ namespace ATReforged
 
         public bool CanFireGridVirus()
         {
-            return Utils.GCATPP.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || Utils.IsSurrogate(pawn)).Count() > 0;
+            return Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || Utils.IsSurrogate(pawn)).Count() > 0;
         }
 
         public bool TryExecuteGridVirus(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points;
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentGridVirusDefeated", "ATR_IncidentGridVirusAllyIntercept"))
                 return true; // Function handles everything if it returns true.
@@ -85,8 +85,8 @@ namespace ATReforged
 
 
             HashSet<Thing> cryptolockedThings = new HashSet<Thing>();
-            HashSet<Thing> potentialVictims = new HashSet<Thing>(Utils.GCATPP.GetSkyMindDevices());
-            foreach (Thing thing in Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)))
+            HashSet<Thing> potentialVictims = new HashSet<Thing>(Utils.gameComp.GetSkyMindDevices());
+            foreach (Thing thing in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)))
             {
                 potentialVictims.Add(thing);
             }
@@ -123,7 +123,7 @@ namespace ATReforged
 
             foreach (Thing victim in victims)
             {
-                Utils.GCATPP.DisconnectFromSkyMind(victim);
+                Utils.gameComp.DisconnectFromSkyMind(victim);
                 victim.TryGetComp<CompSkyMind>().Breached = attackType;
 
                 if (victim is Pawn pawnVictim)
@@ -141,13 +141,13 @@ namespace ATReforged
                 // Grid-sleeper and Grid-breaker time to repair
                 if (attackType != 2)
                 { // Set to randomly be somewhere in the range 1/2 day to 2 full days.
-                    Utils.GCATPP.PushVirusedThing(victim, Find.TickManager.TicksGame + Rand.RangeInclusive(30000, 120000));
+                    Utils.gameComp.PushVirusedThing(victim, Find.TickManager.TicksGame + Rand.RangeInclusive(30000, 120000));
                 }
 
                 // Grid-locker Encryption fee increases per victim.
                 if (attackType == 2)
                 {
-                    Utils.GCATPP.PushVirusedThing(victim, -1);
+                    Utils.gameComp.PushVirusedThing(victim, -1);
                     cryptolockedThings.Add(victim);
                     fee += (int)(victim.def.BaseMarketValue * ATReforged_Settings.percentageOfValueUsedForRansoms);
                 }
@@ -189,26 +189,26 @@ namespace ATReforged
 
         public bool CanFireDDOS()
         {
-            return Utils.GCATPP.GetSkyMindDevices().Any();
+            return Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteDDOS(IncidentParms parms)
         {
             // Generate an attack strength that is 1.0 - 4.0 times normal attack strength. DDOS attacks are very dangerous to security points.
             float attackStrength = GenerateAttackStrength((int)parms.points, 1, 4);
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentDDOSDefeated", "ATR_IncidentDDOSAllyIntercept"))
                 return true; // Function handles everything if it returns true.
 
             // Enemy attack succeeds
-            int targetPawnCount = Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn).Count();
+            int targetPawnCount = Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Count();
 
             // Remaining points goes to damaging Skill/Hacking, half each.
             int leftOverPoints = (int)(attackStrength - defenseStrength);
-            Utils.GCATPP.ChangeServerPoints(-leftOverPoints / 2, ServerType.SkillServer);
-            Utils.GCATPP.ChangeServerPoints(-leftOverPoints / 2, ServerType.HackingServer);
+            Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ServerType.SkillServer);
+            Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ServerType.HackingServer);
 
             // Initialize hack letter. Message starts with generic and then will append an additional string.
             letter = LetterDefOf.ThreatSmall;
@@ -222,12 +222,12 @@ namespace ATReforged
                 HashSet<Pawn> victims = new HashSet<Pawn>();
 
                 // All pawns get the recovery hediff. Everyone is a victim of DDOS attacks.
-                foreach (Pawn user in Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn).Cast<Pawn>())
+                foreach (Pawn user in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Cast<Pawn>())
                 {
                     user.health.AddHediff(HediffDefOf.RecoveringFromDDOS, user.health.hediffSet.GetBrain());
                     victims.Add(user);
                 }
-                foreach (Pawn surrogate in Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)).Cast<Pawn>())
+                foreach (Pawn surrogate in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)).Cast<Pawn>())
                 {
                     surrogate.health.AddHediff(HediffDefOf.RecoveringFromDDOS, surrogate.health.hediffSet.GetBrain());
                     victims.Add(surrogate);
@@ -248,14 +248,14 @@ namespace ATReforged
 
         public bool CanFireTroll()
         {
-            return Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).Any();
+            return Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).Any();
         }
 
         public bool TryExecuteTroll(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points;
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -265,7 +265,7 @@ namespace ATReforged
             // Enemy attack succeeds
 
             // Select victim. Troll attacks target a singular (non-surrogate) individual.
-            Pawn victim = (Pawn) Utils.GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).RandomElement();
+            Pawn victim = (Pawn) Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).RandomElement();
             int remainingAttackStrength = (int)(attackStrength - defenseStrength);
             int totalSkillPointsLost = 0;
 
@@ -304,14 +304,14 @@ namespace ATReforged
                     break;
                 }
             }
-            return Utils.GCATPP.GetSkyMindDevices().Any() && hasComms;
+            return Utils.gameComp.GetSkyMindDevices().Any() && hasComms;
         }
 
         public bool TryExecuteDiplohack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points;
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -341,14 +341,14 @@ namespace ATReforged
 
         public bool CanFireProvokerhack()
         {
-            return Utils.GCATPP.GetSkyMindDevices().Any();
+            return Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteProvokerhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points;
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentProvokerhackDefeated", "ATR_IncidentProvokerhackAllyIntercept"))
@@ -376,14 +376,14 @@ namespace ATReforged
 
         public bool CanFireCounterhack()
         {
-            return Utils.GCATPP.GetSkyMindDevices().Any();
+            return Utils.gameComp.GetSkyMindDevices().Any();
         }
 
         public bool TryExecuteCounterhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
             float attackStrength = GenerateAttackStrength((int)parms.points, 1, 4);
-            float defenseStrength = Utils.GCATPP.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 0.25f, "ATR_IncidentCounterhackDefeated", "ATR_IncidentCounterhackAllyIntercept"))
@@ -392,10 +392,10 @@ namespace ATReforged
             // Enemy attack succeeds
 
             // Counterhacks destroy hacking points first, then skill points.
-            float remainingAttackStrengthAfterHacking = parms.points - Utils.GCATPP.GetHackingPoints();
-            Utils.GCATPP.ChangeServerPoints(-Utils.GCATPP.GetHackingPoints(), ServerType.HackingServer);
+            float remainingAttackStrengthAfterHacking = parms.points - Utils.gameComp.GetHackingPoints();
+            Utils.gameComp.ChangeServerPoints(-Utils.gameComp.GetHackingPoints(), ServerType.HackingServer);
             if (remainingAttackStrengthAfterHacking > 0)
-                Utils.GCATPP.ChangeServerPoints(-(int)remainingAttackStrengthAfterHacking, ServerType.SkillServer);
+                Utils.gameComp.ChangeServerPoints(-(int)remainingAttackStrengthAfterHacking, ServerType.SkillServer);
 
             // Create hack letter.
             letter = LetterDefOf.ThreatSmall;
@@ -478,7 +478,7 @@ namespace ATReforged
             }
 
             // Points are subtracted from the security servers. 
-            Utils.GCATPP.ChangeServerPoints((int)(-attackStrength * damageModifier), ServerType.SecurityServer);
+            Utils.gameComp.ChangeServerPoints((int)(-attackStrength * damageModifier), ServerType.SecurityServer);
             return defenseSuccessful;
         }
 
@@ -492,7 +492,7 @@ namespace ATReforged
                 {
                     // Add 25% of the attack strength to the security points. Overflows are accounted for automatically.
                     int gainedStrength = (int)(attackStrength * ATReforged_Settings.pointsGainedOnInterceptPercentage);
-                    Utils.GCATPP.ChangeServerPoints(gainedStrength, ServerType.SecurityServer);
+                    Utils.gameComp.ChangeServerPoints(gainedStrength, ServerType.SecurityServer);
 
                     // Generate the message and terminate the function.
                     LetterDef letter = LetterDefOf.PositiveEvent;

@@ -23,7 +23,7 @@ namespace ATReforged
 
                 Pawn otherPawn = LovePartnerRelationUtility.ExistingMostLikedLovePartnerRel(p, false).otherPawn;
 
-                if (Utils.IsConsideredMechanical(p) || Utils.IsConsideredMechanical(otherPawn) || Utils.GCATPP.GetCloudPawns().Contains(p) || Utils.GCATPP.GetCloudPawns().Contains(otherPawn))
+                if (Utils.IsConsideredMechanical(p) || Utils.IsConsideredMechanical(otherPawn) || Utils.gameComp.GetCloudPawns().Contains(p) || Utils.gameComp.GetCloudPawns().Contains(otherPawn))
                     __result = false;
             }
         }

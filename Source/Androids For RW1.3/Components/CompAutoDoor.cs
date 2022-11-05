@@ -18,7 +18,7 @@ namespace ATReforged
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             // Do not show button to manually open/close door if the door isn't connected to the SkyMind or there is no SkyMind Cloud.
-            if (!Utils.GCATPP.HasSkyMindConnection(parent) || Utils.GCATPP.GetSkyMindCloudCapacity() == 0)
+            if (!Utils.gameComp.HasSkyMindConnection(parent) || Utils.gameComp.GetSkyMindCloudCapacity() == 0)
             {
                 yield break;
             }
@@ -42,7 +42,7 @@ namespace ATReforged
                             Traverse.Create(doorRef).Field("holdOpenInt").SetValue(false);
 
                         Traverse.Create(doorRef).Method("DoorTryClose", new object[0]).GetValue();
-                        MoteMaker.ThrowText(doorRef.TrueCenter() + new Vector3(0.5f, 0f, 0.5f), doorRef.Map, "ATPP_AutoDoorCloseMoteText".Translate(), Color.white, -1f);
+                        MoteMaker.ThrowText(doorRef.TrueCenter() + new Vector3(0.5f, 0f, 0.5f), doorRef.Map, "ATR_AutoDoorCloseMoteText".Translate(), Color.white, -1f);
                     }
                 };
             }

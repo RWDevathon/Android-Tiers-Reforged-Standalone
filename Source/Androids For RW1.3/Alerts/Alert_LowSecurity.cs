@@ -17,10 +17,10 @@ namespace ATReforged
 
         public override AlertReport GetReport()
         {
-            if (!ATReforged_Settings.enemyHacksOccur || !Utils.GCATPP.GetSkyMindDevices().Any())
+            if (!ATReforged_Settings.enemyHacksOccur || !Utils.gameComp.GetSkyMindDevices().Any())
                 return false;
 
-            int securityPoints = Utils.GCATPP.GetSecurityPoints();
+            int securityPoints = Utils.gameComp.GetSecurityPoints();
 
             // At peak wealth (1,000,000), the ratio is less than 250 wealth : 1 raid point. If the player does not meet this very gross underestimate that doesn't account for pawns, difficulty, or context, they are at severe risk.
             int simpleEstimatedWealthRaidPoints = (int)(Find.CurrentMap.PlayerWealthForStoryteller / 250);

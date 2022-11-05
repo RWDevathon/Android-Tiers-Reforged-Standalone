@@ -19,12 +19,12 @@ namespace ATReforged
             public static void Listener(Pawn pawn)
             {
                 // This will handle the whole process. It will do nothing if it wasn't connected to the SkyMind already.
-                Utils.GCATPP.DisconnectFromSkyMind(pawn);
+                Utils.gameComp.DisconnectFromSkyMind(pawn);
 
                 // If this unit was providing SkyMind capacity, we need to remove it so they don't provide capacity while kidnapped.
                 if (pawn.TryGetComp<CompSkyMindCore>() != null)
                 {
-                    Utils.GCATPP.RemoveCore(pawn.TryGetComp<CompSkyMindCore>());
+                    Utils.gameComp.RemoveCore(pawn.TryGetComp<CompSkyMindCore>());
                 }
             }
         }

@@ -75,7 +75,7 @@ namespace ATReforged
                     return;
 
                 // Dead pawns always try to disconnect from the network. This only actually affects player pawns, as they are the only things actually in the network.
-                Utils.GCATPP.DisconnectFromSkyMind(___pawn);
+                Utils.gameComp.DisconnectFromSkyMind(___pawn);
 
                 // Non-player surrogates must disconnect directly.
                 if (Utils.IsSurrogate(___pawn) && ___pawn.Faction != Faction.OfPlayer)

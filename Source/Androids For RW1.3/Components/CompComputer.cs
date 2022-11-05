@@ -46,13 +46,13 @@ namespace ATReforged
         {
             if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
             {
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
                 StopSustainer();
             }
 
             if (signal == "PowerTurnedOn")
             {
-                Utils.GCATPP.AddServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
                 StartSustainer();
             }
         }
@@ -113,7 +113,7 @@ namespace ATReforged
                         action = delegate ()
                         {
                             serverMode = ServerType.SkillServer;
-                            Utils.GCATPP.AddServer(building, serverMode, Props.pointStorage);
+                            Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
                         }
                     };
                     break;
@@ -128,21 +128,21 @@ namespace ATReforged
 
             if (serverMode == ServerType.SkillServer)
             {
-                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.GCATPP.GetSkillPoints(), Utils.GCATPP.GetSkillPointCapacity()))
+                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
                    .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.SecurityServer)
             {
-                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.GCATPP.GetSecurityPoints(), Utils.GCATPP.GetSecurityPointCapacity()))
+                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
                    .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.HackingServer)
             {
-                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.GCATPP.GetHackingPoints(), Utils.GCATPP.GetHackingPointCapacity()))
+                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
             }
@@ -156,7 +156,7 @@ namespace ATReforged
 
             // Only servers with types get removed from the lists
             if (serverMode != ServerType.None && !building.IsBrokenDown() && parent.TryGetComp<CompPowerTrader>().PowerOn)
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
         }
 
         private void StartSustainer()
@@ -181,8 +181,8 @@ namespace ATReforged
         {
             try
             {
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
-                Utils.GCATPP.AddServer(building, newMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.AddServer(building, newMode, Props.pointStorage);
                 serverMode = newMode;
             }
             catch (Exception ex)

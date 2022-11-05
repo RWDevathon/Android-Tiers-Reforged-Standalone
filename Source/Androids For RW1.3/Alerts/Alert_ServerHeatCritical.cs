@@ -10,8 +10,8 @@ namespace ATReforged
     {
         public Alert_HeatCritical()
         {
-            defaultLabel = "ATPP_AlertServerHeatCritical".Translate();
-            defaultExplanation = "ATPP_AlertServerHeatCriticalDesc".Translate();
+            defaultLabel = "ATR_AlertServerHeatCritical".Translate();
+            defaultExplanation = "ATR_AlertServerHeatCriticalDesc".Translate();
             defaultPriority = AlertPriority.Critical;
         }
 
@@ -19,7 +19,7 @@ namespace ATReforged
         {
             List<Thing> build = new List<Thing>();
 
-            foreach (Thing thing in Utils.GCATPP.GetHeatSensitiveDevices(Find.CurrentMap).Where(thing => thing.TryGetComp<CompHeatSensitive>().HeatLevel == 3))
+            foreach (Thing thing in Utils.gameComp.GetHeatSensitiveDevices(Find.CurrentMap).Where(thing => thing.TryGetComp<CompHeatSensitive>().HeatLevel == 3))
             {
                 build.Add(thing);
             }

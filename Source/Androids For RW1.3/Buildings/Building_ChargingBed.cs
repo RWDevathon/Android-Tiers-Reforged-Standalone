@@ -71,7 +71,7 @@ namespace ATReforged
                         if (GetCurOccupantAt(chargingSpot) == null && !myPawn.Map.pawnDestinationReservationManager.IsReserved(chargingSpot))
                         {
                             myPawn.ownership.ClaimBedIfNonMedical(this);
-                            Job job = new Job(JobDefOf.ATPP_GoReloadBattery, new LocalTargetInfo(this));
+                            Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this));
                             myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                             return;
                         }
