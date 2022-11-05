@@ -20,7 +20,7 @@
         </comps>
         <rotatable>false</rotatable>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <staticSunShadowHeight>0.2</staticSunShadowHeight>
         <constructEffect>ConstructMetal</constructEffect>
         <designationHotKey>Misc4</designationHotKey>

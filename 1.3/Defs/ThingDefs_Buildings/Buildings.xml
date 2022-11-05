@@ -21,7 +21,7 @@
             <li Class="CompProperties_Flickable"/>
         </comps>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <constructEffect>ConstructMetal</constructEffect>
         <canOverlapZones>false</canOverlapZones>
     </ThingDef>
@@ -104,7 +104,7 @@
         </statBases>
         <rotatable>false</rotatable>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <constructEffect>ConstructMetal</constructEffect>
         <designationHotKey>Misc4</designationHotKey>
         <comps>
@@ -230,7 +230,7 @@
         <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
         <staticSunShadowHeight>0.17</staticSunShadowHeight>
         <designationHotKey>Misc5</designationHotKey>
-	    <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+	    <designationCategory>AndroidTiersDesignation</designationCategory>
         <researchPrerequisites>
             <li>Electricity</li>
         </researchPrerequisites>
