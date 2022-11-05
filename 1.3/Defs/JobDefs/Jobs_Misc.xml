@@ -2,7 +2,7 @@
 <Defs>
 
     <JobDef>
-		<defName>ATPP_GoReloadBattery</defName>
+		<defName>RechargeBattery</defName>
 		<driverClass>ATReforged.JobDriver_GoReloadBattery</driverClass>
 		<reportString>Recharging battery.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
