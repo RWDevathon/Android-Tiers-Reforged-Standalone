@@ -19,10 +19,6 @@
 	
 	<ATR_SwitchToSkillMode>Switch to Skill Mode</ATR_SwitchToSkillMode>
 	<ATR_SwitchToSkillModeDesc>Click to switch to skill point generation, this server is not active right now</ATR_SwitchToSkillModeDesc>
-
-	<!-- Battery -->
-	<ATR_UseBattery>Use Battery</ATR_UseBattery>
-	<ATR_UseBatteryDesc>If enabled, the pawn will rely on battery charging instead of organic decomposition for energy.</ATR_UseBatteryDesc>
 	
 	<!-- SkyMind -->
 	<ATR_ConnectSkyMind>Connect to SkyMind</ATR_ConnectSkyMind>

@@ -234,7 +234,6 @@
     <Compile Include="Buildings\Building_ChargingStation.cs" />
     <Compile Include="ChoiceLetter\ChoiceLetter_RansomDemand.cs" />
     <Compile Include="Components\CompAndroidPod.cs" />
-    <Compile Include="Components\CompPawnBattery.cs" />
     <Compile Include="Components\CompAutoDoor.cs" />
     <Compile Include="Components\CompSkyMindTower.cs" />
     <Compile Include="Components\CompComputer.cs" />

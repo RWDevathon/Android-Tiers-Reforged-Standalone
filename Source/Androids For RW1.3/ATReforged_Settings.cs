@@ -44,7 +44,6 @@ namespace ATReforged
 
         // POWER SETTINGS
         public static int wattsConsumedPerBodySize;
-        public static bool useBatteryByDefault;
         public static bool mechanicalsHaveDifferentBioprocessingEfficiency;
         public static float mechanicalBioprocessingEfficiency;
         public static float batteryPercentagePerRareTick;
@@ -243,7 +242,6 @@ namespace ATReforged
                 }
                 case OptionsTab.Power:
                 {
-                    listingStandard.CheckboxLabeled("ATR_useBatteryByDefault".Translate(), ref useBatteryByDefault, onChange: onChange);
                     string wattsConsumedBuffer = wattsConsumedPerBodySize.ToString();
                     listingStandard.TextFieldNumericLabeled("ATR_wattsConsumedPerBodySize".Translate(), ref wattsConsumedPerBodySize, ref wattsConsumedBuffer, 0, 2000);
                     listingStandard.SliderLabeled("ATR_batteryPercentagePerRareTick".Translate(), ref batteryPercentagePerRareTick, 0.01f, 1f, displayMult: 100, onChange: onChange);
@@ -323,7 +321,6 @@ namespace ATReforged
 
             // POWER SETTINGS
             wattsConsumedPerBodySize = 500;
-            useBatteryByDefault = false;
             mechanicalsHaveDifferentBioprocessingEfficiency = true;
             mechanicalBioprocessingEfficiency = 0.5f;
             batteryPercentagePerRareTick = 0.07f;
@@ -449,7 +446,6 @@ namespace ATReforged
             /* === POWER === */
 
             Scribe_Values.Look(ref wattsConsumedPerBodySize, "ATR_wattsConsumedPerBodySize", 500);
-            Scribe_Values.Look(ref useBatteryByDefault, "ATR_useBatteryByDefault", false);
             Scribe_Values.Look(ref mechanicalsHaveDifferentBioprocessingEfficiency, "ATR_mechanicalsHaveDifferentBioprocessingEfficiency", true);
             Scribe_Values.Look(ref mechanicalBioprocessingEfficiency, "ATR_mechanicalBioprocessingEfficiency", 0.5f);
             Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);

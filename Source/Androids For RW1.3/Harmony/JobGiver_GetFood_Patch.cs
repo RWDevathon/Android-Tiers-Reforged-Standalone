@@ -18,9 +18,8 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn pawn, ref Job __result)
             {
-                // If the pawn can't use charging, then there's nothing to override. If the pawn has no battery comp (abililty to charge given by hediff), then override automatically. 
-                // Otherwise, allow it to charge if the pawn is configured to use its battery.
-                if (Utils.CanUseBattery(pawn) && (pawn.TryGetComp<CompPawnBattery>() == null || pawn.TryGetComp<CompPawnBattery>().UseBattery))
+                // If the pawn can't use charging, then there's nothing to override. 
+                if (Utils.CanUseBattery(pawn))
                 {
                     // Don't override non-spawned or drafted pawns.
                     if (!pawn.Spawned || pawn.Drafted)

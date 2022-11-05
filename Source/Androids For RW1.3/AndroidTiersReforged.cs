@@ -112,17 +112,6 @@ namespace ATReforged
                             thingDef.statBases.Add(new StatModifier() { stat = RimWorld.StatDefOf.GlobalLearningFactor, value = 0 });
                         }
                     }
-
-                    // Ensure charge-capable units have the Battery Comp.
-                    if (Utils.CanUseBattery(thingDef))
-                    {
-                        thingDef.comps.Add(new CompProperties { compClass = typeof(CompPawnBattery) });
-                    }
-                    // Ensure non-mechanical units do not have the comp - they should never have one.
-                    else
-                    {
-                        thingDef.comps.RemoveAll(compProperties => compProperties.compClass == typeof(CompPawnBattery));
-                    }
                 }
                 // Handle SkyMind-connectable buildings.
                 else if (thingDef.comps != null && !thingDef.HasComp(typeof(CompSkyMindCore)))

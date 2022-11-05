@@ -58,7 +58,6 @@
 	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
 	
 	<!-- Power Settings -->
-	<ATR_useBatteryByDefault>New mechanical units default to using battery.</ATR_useBatteryByDefault>
 	<ATR_wattsConsumedPerBodySize>Power use per 1 body size when charging [default: 500]</ATR_wattsConsumedPerBodySize>
 	<ATR_batteryPercentagePerRareTick>Percentage of battery charged per Rare Tick (~4 seconds) [default: 7%]</ATR_batteryPercentagePerRareTick>
 	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Mechanical units handle nutrition differently than organics.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
