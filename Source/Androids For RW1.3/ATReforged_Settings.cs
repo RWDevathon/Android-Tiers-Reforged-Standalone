@@ -344,7 +344,7 @@ namespace ATReforged
             HashSet<ThingDef> matchingMechanicals = new HashSet<ThingDef>();
             HashSet<ThingDef> matchingSpecials = new HashSet<ThingDef>();
             HashSet<ThingDef> matchingChargers = new HashSet<ThingDef>();
-            foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.modExtensions?.Exists(modExtension => modExtension.GetType() == typeof(MechCorpseTweaker)) != null))
+            foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()))
             {
                 // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension
                 if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f)
@@ -364,7 +364,7 @@ namespace ATReforged
                 matchingMechanicals.Add(validHumanlike);
             }
             // Mechanical animals are animals that have the ModExtension
-            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.modExtensions?.Exists(modExtension => modExtension.GetType() == typeof(MechCorpseTweaker)) != null).ToHashSet();
+            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()).ToHashSet();
 
             // Mechanical animals of advanced intelligence may charge.
             foreach (ThingDef validAnimal in matchingAnimals)
