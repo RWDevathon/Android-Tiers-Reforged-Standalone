@@ -5,6 +5,8 @@
 	
 	<ATR_ReloadRequired>Reload Required.</ATR_ReloadRequired>
 	<ATR_ReloadRequiredDesc>Some changes will only take effect on reloading saves (Not the entire game).</ATR_ReloadRequiredDesc>
+
+    <ATR_ExpandMenu>Expand/Collapse</ATR_ExpandMenu>
 	
 	<!-- Mod Settings Page Keys -->
 	<ATR_SettingsTabTitle>Configurations</ATR_SettingsTabTitle>
