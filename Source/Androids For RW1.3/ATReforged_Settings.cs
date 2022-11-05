@@ -16,25 +16,10 @@ namespace ATReforged
     {
         // GENERAL SETTINGS
             // Settings for android gender
-        public static bool androidsHaveGenders = false;
-        public static bool androidsPickGenders = false;
-        public static Gender androidsFixedGender = Gender.None;
-        public static float androidsGenderRatio = 0.5f;
-
-            // Settings for android commonality
-        public static bool androidsAppearNaturally = true; // Androids can be random pawns
-        /*
-        public static bool societiesPossessAndroids = true; // Android slaves in other factions
-        public static bool societiesIntegrateAndroids = true; // Android citizens in other factions
-        */
-        public static bool androidSocietiesExist = true; // Android Factions allowed
-        public static bool androidRaidersExist = true; // Android "Pirate" faction exists
-        // public static bool androidSupremacistsExist = false; // Android "Rough Outlander" faction exists
-        public static bool androidUnionistsExist = true; // Android "Civil Outlander" faction exists
-        /*
-        public static bool androidRevolutionaryWarAllowed = false; // Android revolutionary events will occur if true
-        public static bool androidRevolutionaryWarVictory = false; // Android revolution has succeeded and humans are enslaved
-        */
+        public static bool androidsHaveGenders;
+        public static bool androidsPickGenders;
+        public static Gender androidsFixedGender;
+        public static float androidsGenderRatio;
 
             // Settings for Permissions
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
@@ -45,59 +30,44 @@ namespace ATReforged
         public static bool showMechanicalSurgerySuccessChance = true;
         
             // Settings for what is considered mechanical and massive
-        public static HashSet<string> isConsideredMechanicalAnimal = new HashSet<string> { "DroneMineralUnit", "DroneNutritionUnit", "DroneChemUnit", "DroneWatchdog", "DroneTORT", "MicroScyther" };
-        public static HashSet<string> isConsideredMechanicalAndroid = new HashSet<string> { "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android" };
-        public static HashSet<string> isConsideredMechanicalDrone = new HashSet<string> { "Tier1Android", "M7Mech", "M8Mech" };
-        public static HashSet<string> isConsideredMechanical = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog" };
-        public static HashSet<string> isConsideredMassive = new HashSet<string> { "M7Mech", "M8Mech" };
-        public static HashSet<string> hasSpecialStatus = new HashSet<string> { };
+        public static HashSet<ThingDef> isConsideredMechanicalAnimal;
+        public static HashSet<ThingDef> isConsideredMechanicalAndroid;
+        public static HashSet<ThingDef> isConsideredMechanicalDrone;
+        public static HashSet<ThingDef> isConsideredMechanical;
+        public static HashSet<ThingDef> hasSpecialStatus;
         
             // Settings for what needs mechanical androids have
-        public static bool androidsHaveJoyNeed = true;
-        public static bool androidsHaveBeautyNeed = true;
-        public static bool androidsHaveComfortNeed = false;
-        public static bool androidsHaveOutdoorsNeed = false;
+        public static bool androidsHaveJoyNeed;
+        public static bool androidsHaveBeautyNeed;
+        public static bool androidsHaveComfortNeed;
+        public static bool androidsHaveOutdoorsNeed;
 
         // POWER SETTINGS
-        public static int wattsConsumedPerBodySize = 500;
-        public static bool useBatteryByDefault = false;
-        public static bool mechanicalsHaveDifferentBioprocessingEfficiency = true;
-        public static float mechanicalBioprocessingEfficiency = 0.5f;
-        public static float batteryPercentagePerRareTick = 0.07f;
+        public static int wattsConsumedPerBodySize;
+        public static bool mechanicalsHaveDifferentBioprocessingEfficiency;
+        public static float mechanicalBioprocessingEfficiency;
+        public static float batteryPercentagePerRareTick;
 
-        public static HashSet<string> canUseBattery = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneTORT", "DroneWatchdog" };
+        public static HashSet<ThingDef> canUseBattery;
 
         // SECURITY SETTINGS
             // Settings for Enemy hacks
-        public static bool enemyHacksOccur = true;
-        public static float chanceAlliesInterceptHack = 0.05f;
-        public static float pointsGainedOnInterceptPercentage = 0.25f;
-        public static float enemyHackAttackStrengthModifier = 1.0f;
-        public static float percentageOfValueUsedForRansoms = 0.25f;
+        public static bool enemyHacksOccur;
+        public static float chanceAlliesInterceptHack;
+        public static float pointsGainedOnInterceptPercentage;
+        public static float enemyHackAttackStrengthModifier;
+        public static float percentageOfValueUsedForRansoms;
 
             // Settings for player hacks
         public static bool playerCanHack = true;
         public static float chanceEnemiesInterceptHack = 0.4f;
 
         // HEALTH SETTINGS
-            // Settings for Rust and maintenance
-        public static bool mechanicalsCanRust = true;
-        public static bool autoScheduleMechanicalMaintenance = true;
-        public static bool autoSchedulePrisonerMechanicalMaintenance = true;
-        public static int mechanicalRustMinDays = 35;
-        public static int mechanicalRustMaxDays = 90;
-        public static float randomMechanicalPaintOrRustChance = 0.15f;
-
-            // Settings for Rebooting
-        public static bool downedMechanicalsMustReboot = true;
-        public static bool mechanicalsRebootAfterLowPower = true;
-        public static float mechanicalRebootMinHours = 0.5f;
-        public static float mechanicalRebootMaxHours = 1.5f;
 
             // Settings for Surgeries
         public static bool medicinesAreInterchangeable = false;
-        public static float maxChanceSurgerySuccess = 1.0f;
-        public static float chanceFailedSurgeryMinor = 0.75f;
+        public static float maxChanceMechanicOperationSuccess = 1.0f;
+        public static float chanceFailedOperationMinor = 0.75f;
         public static float chancePartSavedOnFailure = 0.75f;
 
         // CONNECTIVITY SETTINGS
@@ -107,13 +77,12 @@ namespace ATReforged
         public static int minGroupSizeForSurrogates = 5;
         public static float minSurrogatePercentagePerLegalGroup = 0.2f;
         public static float maxSurrogatePercentagePerLegalGroup = 0.7f;
-
+        
             // Settings for Cloud
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;
         public static int timeToCompleteSkyMindOperations = 12;
         public static int nbMoodPerAssistingMinds = 1;
-        public static HashSet<string> pawnCanUseSkyMind = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M8Mech" };
         public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
 
             // Settings for Skill Points
@@ -122,8 +91,6 @@ namespace ATReforged
         public static float basePointsNeededForPassion = 1000f;
 
         // STATS SETTINGS
-            // Settings for Servers
-        public static bool disableServersAmbiance = false;
 
         // INTERNAL SETTINGS
             // Settings page
@@ -133,6 +100,16 @@ namespace ATReforged
 
         public void StartupChecks()
         {
+            if (isConsideredMechanicalAndroid == null)
+                isConsideredMechanicalAndroid = new HashSet<ThingDef>();
+            if (isConsideredMechanicalDrone == null)
+                isConsideredMechanicalDrone = new HashSet<ThingDef>();
+            if (isConsideredMechanicalAnimal == null)
+                isConsideredMechanicalAnimal = new HashSet<ThingDef>();
+            if (isConsideredMechanical == null)
+                isConsideredMechanical = new HashSet<ThingDef>();
+            if (hasSpecialStatus == null)
+                hasSpecialStatus = new HashSet<ThingDef>();
             if (ActivePreset == SettingsPreset.None)
             {
                 settingsEverOpened = false;
@@ -142,6 +119,18 @@ namespace ATReforged
 
         Vector2 scrollPosition = Vector2.zero;
         float cachedScrollHeight = 0;
+
+        bool cachedExpandFirst = true;
+        bool cachedExpandSecond = true;
+        bool cachedExpandThird = true;
+
+        void resetCachedExpand() 
+        { 
+            cachedExpandFirst = true; 
+            cachedExpandSecond = true; 
+            cachedExpandThird = true;
+        }
+
         internal void DoSettingsWindowContents(Rect inRect)
         {
             settingsEverOpened = true;
@@ -160,7 +149,7 @@ namespace ATReforged
             Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
-            prelist.EnumSelector("ATR_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null);
+            prelist.EnumSelector("ATR_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null, onChange: resetCachedExpand);
             prelist.GapLine();
 
             prelist.End();
@@ -178,10 +167,6 @@ namespace ATReforged
             listingStandard.maxOneColumn = true;
             listingStandard.Begin(viewRect);
 
-            //float initialY = listingStandard.GetRect(0).y;
-            //float maxWidth = listingStandard.ColumnWidth;
-
-            // Add switch for which tab you are on here
             switch (activeTab)
             {
                 case OptionsTab.General:
@@ -223,33 +208,31 @@ namespace ATReforged
                     }
                     listingStandard.GapLine();
 
-                    // COMMONALITY SETTINGS
-                    listingStandard.CheckboxLabeled("ATR_AndroidsAppearNaturally".Translate(), ref androidsAppearNaturally, tooltip: "ATR_PlayerOnlyNote".Translate(), onChange: onChange);
-                    if (androidsAppearNaturally)
-                    {
-                        /*
-                        listingStandard.CheckboxLabeled("ATR_SocietiesPossessAndroids".Translate(), ref societiesPossessAndroids, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        if (societiesPossessAndroids)
-                        {
-                            listingStandard.CheckboxLabeled("ATR_AndroidRevolutionaryWarAllowed".Translate(), ref androidRevolutionaryWarAllowed, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                            listingStandard.CheckboxLabeled("ATR_AndroidRevolutionaryWarVictory".Translate(), ref androidRevolutionaryWarVictory, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        }
-                        listingStandard.CheckboxLabeled("ATR_SocietiesIntegrateAndroids".Translate(), ref societiesIntegrateAndroids, tooltip: "ATR_AndroidRelatedNote".Translate(), onChange: onChange);
-                        listingStandard.Gap();
-                        listingStandard.Label("ATR_AndroidFactionSettings".Translate());
-                        */
-                        listingStandard.CheckboxLabeled("ATR_AndroidSocietiesExist".Translate(), ref androidSocietiesExist, onChange: onChange);
-                        if (androidSocietiesExist)
-                        {
-                            listingStandard.CheckboxLabeled("ATR_AndroidRaidersExist".Translate(), ref androidRaidersExist, tooltip: "ATR_AndroidRaidersDesc".Translate(), onChange: onChange);
-                            // listingStandard.CheckboxLabeled("ATR_AndroidSupremacistsExist".Translate(), ref androidSupremacistsExist, tooltip: "ATR_AndroidSupremacistsDesc".Translate(), onChange: onChange);
-                            listingStandard.CheckboxLabeled("ATR_AndroidUnionistsExist".Translate(), ref androidUnionistsExist, tooltip: "ATR_AndroidUnionistsDesc".Translate(), onChange: onChange);
-                        }
-                    }
-                    listingStandard.GapLine();
-
                     // CONSIDERATION SETTINGS
                     
+                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                            cachedExpandFirst = !cachedExpandFirst;
+                    }
+                    if (cachedExpandFirst)
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalAndroid, "ATR_SettingsConsideredAndroid".Translate(), "ATR_SettingsNotConsideredAndroid".Translate(), onChange);
+                    
+                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                        cachedExpandSecond = !cachedExpandSecond;
+                    }
+                    if (cachedExpandSecond)
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalDrone, "ATR_SettingsConsideredDrone".Translate(), "ATR_SettingsNotConsideredDrone".Translate(), onChange);
+                    
+                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                        cachedExpandThird = !cachedExpandThird;
+                    }
+                    if (cachedExpandThird)
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onChange);
+                    
+                    listingStandard.GapLine();
+
                     // NEEDS SETTINGS
                     listingStandard.CheckboxLabeled("ATR_AndroidsNeedJoy".Translate(), ref androidsHaveJoyNeed, tooltip: "ATR_AndroidOnlyNotice".Translate(), onChange: onChange);
                     listingStandard.CheckboxLabeled("ATR_AndroidsNeedBeauty".Translate(), ref androidsHaveBeautyNeed, tooltip: "ATR_AndroidOnlyNotice".Translate(), onChange: onChange);
@@ -259,7 +242,6 @@ namespace ATReforged
                 }
                 case OptionsTab.Power:
                 {
-                    listingStandard.CheckboxLabeled("ATR_useBatteryByDefault".Translate(), ref useBatteryByDefault, onChange: onChange);
                     string wattsConsumedBuffer = wattsConsumedPerBodySize.ToString();
                     listingStandard.TextFieldNumericLabeled("ATR_wattsConsumedPerBodySize".Translate(), ref wattsConsumedPerBodySize, ref wattsConsumedBuffer, 0, 2000);
                     listingStandard.SliderLabeled("ATR_batteryPercentagePerRareTick".Translate(), ref batteryPercentagePerRareTick, 0.01f, 1f, displayMult: 100, onChange: onChange);
@@ -269,20 +251,32 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_mechanicalsHaveDifferentBioprocessingEfficiency".Translate(), ref mechanicalsHaveDifferentBioprocessingEfficiency, onChange: onChange);
                     if (mechanicalsHaveDifferentBioprocessingEfficiency)
                         {
-                        listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref mechanicalBioprocessingEfficiency, 0.1f, 2.0f, displayMult: 100, onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref mechanicalBioprocessingEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                    }
+                    break;
+                }
+                case OptionsTab.Security:
+                {
+                    listingStandard.CheckboxLabeled("ATR_EnemyHacksOccur".Translate(), ref enemyHacksOccur, onChange: onChange);
+                    if (enemyHacksOccur)
+                    {
+                        listingStandard.SliderLabeled("ATR_EnemyHackAttackStrengthModifier".Translate(), ref enemyHackAttackStrengthModifier, 0.01f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_ChanceAlliesInterceptHack".Translate(), ref chanceAlliesInterceptHack, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_PointsGainedOnInterceptPercentage".Translate(), ref pointsGainedOnInterceptPercentage, 0.00f, 3f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_PercentageOfValueUsedForRansoms".Translate(), ref percentageOfValueUsedForRansoms, 0.01f, 2f, displayMult: 100, valueSuffix:"%", onChange: onChange);
                     }
                     break;
                 }
                 case OptionsTab.Connectivity:
-                    {
-                        string skillPointConversionRateBuffer = skillPointConversionRate.ToString();
-                        string passionSoftCapBuffer = passionSoftCap.ToString();
-                        string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
-                        listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
-                        listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
-                        listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
-                        break;
-                    }
+                {
+                    string skillPointConversionRateBuffer = skillPointConversionRate.ToString();
+                    string passionSoftCapBuffer = passionSoftCap.ToString();
+                    string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
+                    listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
+                    listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
+                    listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
+                    break;
+                }
                 default:
                 {
                     break;
@@ -314,31 +308,10 @@ namespace ATReforged
             androidsFixedGender = 0;
             androidsGenderRatio = 0.5f;
 
-            // Android Commonality Settings
-            androidsAppearNaturally = true;
-            /*
-            societiesPossessAndroids = true;
-            androidRevolutionaryWarAllowed = false;
-            androidRevolutionaryWarVictory = false;
-            societiesIntegrateAndroids = false;
-            */
-            androidSocietiesExist = true;
-            androidRaidersExist = true;
-            //androidSupremacistsExist = false;
-            androidUnionistsExist = true;
-
             // Permissions
             thingsAllowedAsRepairStims = new HashSet<string> { };
             blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
             blacklistedMechanicalTraits = new HashSet<string> { "NightOwl", "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
-
-            // Consideration Settings
-            isConsideredMechanicalAnimal = new HashSet<string> { "DroneMineralUnit", "DroneNutritionUnit", "DroneChemUnit", "DroneWatchdog", "DroneTORT" };
-            isConsideredMechanicalAndroid = new HashSet<string> { "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android" };
-            isConsideredMechanicalDrone = new HashSet<string> { "Tier1Android", "M7Mech", "M8Mech" };
-            isConsideredMechanical = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android", "M7Mech", "M8Mech", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog" };
-            isConsideredMassive = new HashSet<string> { "M7Mech", "M8Mech" };
-            hasSpecialStatus = new HashSet<string> { };
 
             // Needs Settings
             androidsHaveJoyNeed = true;
@@ -348,17 +321,24 @@ namespace ATReforged
 
             // POWER SETTINGS
             wattsConsumedPerBodySize = 500;
-            useBatteryByDefault = false;
             mechanicalsHaveDifferentBioprocessingEfficiency = true;
             mechanicalBioprocessingEfficiency = 0.5f;
             batteryPercentagePerRareTick = 0.07f;
 
+            // SECURITY SETTINGS
+            enemyHacksOccur = true;
+            chanceAlliesInterceptHack = 0.05f;
+            pointsGainedOnInterceptPercentage = 0.25f;
+            enemyHackAttackStrengthModifier = 1.0f;
+            percentageOfValueUsedForRansoms = 0.25f;
 
             // CONNECTIVITY SETTINGS
             skillPointConversionRate = 10;
             passionSoftCap = 8;
             basePointsNeededForPassion = 1000f;
-    }
+
+            RebuildCaches();
+        }
 
         public void ApplyPreset(SettingsPreset preset)
         {
@@ -379,36 +359,55 @@ namespace ATReforged
                     throw new InvalidOperationException("Attempted to apply a nonexistent preset.");
             }
 
-            //RebuildCache(ref LimitModeSingle_Match_Cache, PawnListKind.Android);
-            //RebuildCache(ref LimitModeSingleMelee_Match_Cache, PawnListKind.Drone);
-            //RebuildCache(ref LimitModeSingleRanged_Match_Cache, PawnListKind.Animal);
         }
-
-        private void RebuildCache(ref HashSet<ThingDef> cache, PawnListKind listType)
+        
+        // Caches for ThingDefs must be rebuilt manually. Configuration uses the MechCorpseTweaker by default and will capture all pawn thing defs with that modExtension.
+        private void RebuildCaches()
         {
-            IEnumerable<ThingDef> validPawns = FilteredGetters.getValidPawns();
+            IEnumerable<ThingDef> validPawns = FilteredGetters.GetValidPawns();
 
-            //Log.Message($"(list type: {listType}) valid weapons ({validSidearms.Count()}):{String.Join(", ", validSidearms.Select(w => w.defName))}");
-
-            IEnumerable<ThingDef> matchingPawns = FilteredGetters.FilterByPawnKind(validPawns, listType);
-
-            //Log.Message($"candidate weapons ({matchingSidearms.Count()}):{String.Join(", ", matchingSidearms.Select(w => w.defName))}");
-
-            switch (listType)
+            HashSet<ThingDef> matchingAndroids = new HashSet<ThingDef>();
+            HashSet<ThingDef> matchingDrones = new HashSet<ThingDef>();
+            HashSet<ThingDef> matchingMechanicals = new HashSet<ThingDef>();
+            HashSet<ThingDef> matchingSpecials = new HashSet<ThingDef>();
+            HashSet<ThingDef> matchingChargers = new HashSet<ThingDef>();
+            foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()))
             {
-                case PawnListKind.Android:
-                    break;
-                case PawnListKind.Drone:
-                    break;
-                case PawnListKind.Animal:
-                    break;
-                default:
-                    throw new ArgumentException();
+                // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension
+                if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f)
+                {
+                    matchingAndroids.Add(validHumanlike);
+                    // Particularly high global learning factor implies this unit is not a normal android but is a higher power.
+                    if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 4f)
+                        matchingSpecials.Add(validHumanlike);
+                }
+                // Mechanical Drones are humanlikes with global learning factor < 0.5 that have the ModExtension
+                else
+                {
+                    matchingDrones.Add(validHumanlike);
+                }
+                // All mechanical humanlikes may charge inherently.
+                matchingChargers.Add(validHumanlike);
+                matchingMechanicals.Add(validHumanlike);
+            }
+            // Mechanical animals are animals that have the ModExtension
+            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()).ToHashSet();
+
+            // Mechanical animals of advanced intelligence may charge.
+            foreach (ThingDef validAnimal in matchingAnimals)
+            {
+                matchingMechanicals.Add(validAnimal);
+                // Advanced mechanical animals may charge.
+                if (validAnimal.race.trainability == TrainabilityDefOf.Advanced)
+                    matchingChargers.Add(validAnimal);
             }
 
-            //Log.Message($"(result weapons ({matchingSidearms.Count()}):{String.Join(", ", matchingSidearms.Select(w => w.defName))}");
-
-            cache = matchingPawns.ToHashSet();
+            isConsideredMechanicalAndroid = matchingAndroids;
+            isConsideredMechanicalDrone = matchingDrones;
+            isConsideredMechanicalAnimal = matchingAnimals;
+            isConsideredMechanical = matchingMechanicals;
+            hasSpecialStatus = matchingSpecials;
+            canUseBattery = matchingChargers;
         }
 
         public override void ExposeData()
@@ -419,27 +418,12 @@ namespace ATReforged
             Scribe_Values.Look(ref ActivePreset, "ATR_ActivePreset", SettingsPreset.None, true);
 
             /* === GENERAL === */
-
+            
             // Gender
             Scribe_Values.Look(ref androidsHaveGenders, "ATR_androidsHaveGenders", false);
             Scribe_Values.Look(ref androidsPickGenders, "ATR_androidsPickGenders", false);
             Scribe_Values.Look(ref androidsFixedGender, "ATR_androidsFixedGender", Gender.None);
             Scribe_Values.Look(ref androidsGenderRatio, "ATR_androidsGenderRatio", 0.5f);
-
-            // Commonality
-            Scribe_Values.Look(ref androidsAppearNaturally, "ATR_androidsAppearNaturally", true);
-            /*
-            Scribe_Values.Look(ref societiesPossessAndroids, "ATR_societiesPossessAndroids", true);
-            Scribe_Values.Look(ref societiesIntegrateAndroids, "ATR_societiesIntegrateAndroids", true);
-            */
-            Scribe_Values.Look(ref androidSocietiesExist, "ATR_androidSocietiesExist", true);
-            Scribe_Values.Look(ref androidRaidersExist, "ATR_androidRaidersExist", true);
-            // Scribe_Values.Look(ref androidSupremacistsExist, "ATR_androidSupremacistsExist", false);
-            Scribe_Values.Look(ref androidUnionistsExist, "ATR_androidUnionistsExist", true);
-            /*
-            Scribe_Values.Look(ref androidRevolutionaryWarAllowed, "ATR_androidRevolutionaryWarAllowed", false);
-            Scribe_Values.Look(ref androidRevolutionaryWarVictory, "ATR_androidRevolutionaryWarVictory", false);
-            */
 
             // Permissions
             Scribe_Collections.Look(ref thingsAllowedAsRepairStims, "ATR_thingsAllowedAsRepairStims", LookMode.Value);
@@ -447,12 +431,11 @@ namespace ATReforged
             Scribe_Collections.Look(ref blacklistedMechanicalTraits, "ATR_blacklistedMechanicalTraits", LookMode.Value);
 
             // Considerations
-            Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Value);
-            Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Value);
-            Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Value);
-            Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Value);
-            Scribe_Collections.Look(ref isConsideredMassive, "ATR_isConsideredMassive", LookMode.Value);
-            Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Value);
+            Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Def);
+            Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Def);
+            Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Def);
+            Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Def);
+            Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Def);
 
             // Needs
             Scribe_Values.Look(ref androidsHaveJoyNeed, "ATR_androidsHaveJoyNeed", true);
@@ -463,10 +446,19 @@ namespace ATReforged
             /* === POWER === */
 
             Scribe_Values.Look(ref wattsConsumedPerBodySize, "ATR_wattsConsumedPerBodySize", 500);
-            Scribe_Values.Look(ref useBatteryByDefault, "ATR_useBatteryByDefault", false);
             Scribe_Values.Look(ref mechanicalsHaveDifferentBioprocessingEfficiency, "ATR_mechanicalsHaveDifferentBioprocessingEfficiency", true);
             Scribe_Values.Look(ref mechanicalBioprocessingEfficiency, "ATR_mechanicalBioprocessingEfficiency", 0.5f);
             Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);
+
+            Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
+
+            /* === SECURITY === */
+
+            Scribe_Values.Look(ref enemyHacksOccur, "ATR_enemyHacksOccur", true);
+            Scribe_Values.Look(ref chanceAlliesInterceptHack, "ATR_chanceAlliesInterceptHack", 0.05f);
+            Scribe_Values.Look(ref pointsGainedOnInterceptPercentage, "ATR_pointsGainedOnInterceptPercentage", 0.25f);
+            Scribe_Values.Look(ref enemyHackAttackStrengthModifier, "ATR_enemyHackAttackStrengthModifier", 1.0f);
+            Scribe_Values.Look(ref percentageOfValueUsedForRansoms, "ATR_percentageOfValueUsedForRansoms", 0.25f);
 
             /* === CONNECTIVITY === */
 

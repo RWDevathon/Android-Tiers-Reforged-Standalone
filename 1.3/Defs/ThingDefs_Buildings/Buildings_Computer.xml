@@ -20,7 +20,7 @@
         </comps>
         <rotatable>false</rotatable>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <staticSunShadowHeight>0.2</staticSunShadowHeight>
         <constructEffect>ConstructMetal</constructEffect>
         <designationHotKey>Misc4</designationHotKey>
@@ -28,7 +28,7 @@
 
     <!-- SkyMind Core -->
     <ThingDef ParentName="ServerBase">
-        <defName>ATPP_SkyMindCore</defName>
+        <defName>SkyMindCore</defName>
         <label>SkyMind Core</label>
         <description>A network of persona intelligences collectively forming a single supercomputer capable of processing, storing, and manipulating vast quantities of information - that which ultimately defines a consciousness. This device is capable of providing digital immortality, consciousness operations, and remote controls to properly outfitted organic and mechanical individuals alike. Its existence is proof of strength, willpower, and wealth. \n\nShould it lose power or critically overheat, its contents will be irrevocably lost. The ability to overcome death is not risk-free.</description>
         <statBases>
@@ -71,7 +71,6 @@
                 <cloudPawnCapacityProvided>20</cloudPawnCapacityProvided>
             </li>
             <li Class="ATReforged.CompProperties_Computer">
-                <ambiance>ATPP_SkyCloudCore_Ambience</ambiance>
                 <serverMode>SecurityServer</serverMode>
                 <passivePointGeneration>160</passivePointGeneration>
                 <percentageWorkBoost>100</percentageWorkBoost>
@@ -126,7 +125,6 @@
                 <glowColor>(46,204,113,0)</glowColor>
             </li>
             <li Class="ATReforged.CompProperties_Computer">
-                <ambiance>ATPP_Computer_Ambience_I100Server</ambiance>
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>0</passivePointGeneration>
                 <percentageWorkBoost>10</percentageWorkBoost>
@@ -191,7 +189,6 @@
                 <heatPerSecond>8</heatPerSecond>
             </li>
             <li Class="ATReforged.CompProperties_Computer">
-                <ambiance>ATPP_Computer_Ambience_I300Server</ambiance>
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>20</passivePointGeneration>
                 <percentageWorkBoost>0</percentageWorkBoost>
@@ -253,7 +250,6 @@
                 <heatPerSecond>16</heatPerSecond>
             </li>
             <li Class="ATReforged.CompProperties_Computer">
-                <ambiance>ATPP_Computer_Ambience_I500Server</ambiance>
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>100</passivePointGeneration>
                 <percentageWorkBoost>40</percentageWorkBoost>
@@ -313,7 +309,6 @@
                 <glowColor>(250, 250, 250)</glowColor>
             </li>
             <li Class="ATReforged.CompProperties_SuperComputer">
-                <ambiance>ATPP_SkyCloudCore_Ambience</ambiance>
                 <passivePointGeneration>1000</passivePointGeneration>
                 <percentageWorkBoost>2000</percentageWorkBoost>
                 <pointStorage>100000</pointStorage>

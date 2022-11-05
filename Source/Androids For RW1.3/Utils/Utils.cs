@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
 using UnityEngine;
 using HarmonyLib;
-using Verse.AI.Group;
-using System.Reflection;
-using Verse.Sound;
 using Verse.AI;
-using System.Runtime;
-using static System.Collections.Specialized.BitVector32;
 using RimWorld.Planet;
-using System.Security.Cryptography;
-using AlienRace;
 
 namespace ATReforged
 {
@@ -24,7 +16,7 @@ namespace ATReforged
         public static Gender GenerateGender(PawnKindDef pawnKind)
         { // Return a Gender for a new pawn, based on settings and on the pawn being spawned.
             // Only mechanical androids have proper genders. Mechanical drones and animals never have gender.
-            if (!ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawnKind.race.defName))
+            if (!ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawnKind.race))
                 return Gender.None;
 
             // If androids are not allowed to have genders by setting, then set to none.
@@ -45,53 +37,53 @@ namespace ATReforged
 
         public static bool IsConsideredMechanical(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def.defName);
+            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def);
         }
 
         public static bool IsConsideredMechanical(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef.defName);
+            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef);
         }
 
         public static bool IsConsideredMechanicalAnimal(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def.defName);
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def);
         }
 
         public static bool IsConsideredMechanicalAndroid(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def.defName);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def);
         }
 
         public static bool IsConsideredMechanicalAndroid(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef.defName);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef);
         }
 
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def.defName) || pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_IsolatedCore);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_IsolatedCore);
         }
 
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef.defName);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef);
         }
 
         public static bool IsConsideredMassive(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMassive.Contains(pawn.def.defName);
+            return pawn.BodySize > 4.0f;
         }
 
         public static bool HasSpecialStatus(Pawn pawn)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def.defName) || ReservedSpecialPawns.Contains(pawn.def.defName);
+            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def) || ReservedSpecialPawns.Contains(pawn.def.defName);
         }
 
         public static bool HasSpecialStatus(ThingDef thingDef)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef.defName) || ReservedSpecialPawns.Contains(thingDef.defName);
+            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef) || ReservedSpecialPawns.Contains(thingDef.defName);
         }
 
         public static bool IsSolarFlarePresent()
@@ -103,12 +95,12 @@ namespace ATReforged
         /* === POWER UTILITIES === */
         public static bool CanUseBattery(Pawn pawn) // TODO: Add hediff check for organics to be able to charge
         {
-            return ATReforged_Settings.canUseBattery.Contains(pawn.def.ToString());
+            return ATReforged_Settings.canUseBattery.Contains(pawn.def);
         }
 
         public static bool CanUseBattery(ThingDef thingDef)
         {
-            return ATReforged_Settings.canUseBattery.Contains(thingDef.ToString());
+            return ATReforged_Settings.canUseBattery.Contains(thingDef);
         }
 
         /* === HEALTH UTILITIES === */
@@ -121,16 +113,10 @@ namespace ATReforged
 
         /* === CONNECTIVITY UTILITIES === */
 
-        // Returns true if the pawn can use the cloud inherently (settings) or has an implant that allows them to connect.
-        public static bool PawnCanUseSkyMind(Pawn pawn)
-        { 
-            return ATReforged_Settings.pawnCanUseSkyMind.Contains(pawn.def.defName) || HasCloudCapableImplant(pawn);
-        }
-
         // There are four hediffs that grant SkyMind connectivity. If any are present, this pawn has a cloud capable implant. If settings allow the pawn's race to use it innately, return true as well.
         public static bool HasCloudCapableImplant(Pawn pawn)
         { 
-            return ATReforged_Settings.pawnCanUseSkyMind.Contains(pawn.def.defName) || pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_AutonomousCore || testHediff.def == HediffDefOf.ATR_ReceiverCore || testHediff.def == HediffDefOf.ATR_SkyMindReceiver || testHediff.def == HediffDefOf.ATR_SkyMindTransceiver);
+            return pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_AutonomousCore || testHediff.def == HediffDefOf.ATR_ReceiverCore || testHediff.def == HediffDefOf.ATR_SkyMindReceiver || testHediff.def == HediffDefOf.ATR_SkyMindTransceiver);
         }
 
         public static bool IsSurrogate(Pawn pawn)
@@ -164,7 +150,7 @@ namespace ATReforged
                 }
 
                 // Witnesses (connected to SkyMind but not targetted directly) get a minor mood debuff
-                foreach (Pawn pawn in GCATPP.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !victims.Contains(pawn)).Cast<Pawn>())
+                foreach (Pawn pawn in gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !victims.Contains(pawn)).Cast<Pawn>())
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? SkyMindAttackVictimDef);
                 }
@@ -191,7 +177,7 @@ namespace ATReforged
                 if (csm == null)
                     continue;
                 csm.Breached = -1;
-                GCATPP.PopVirusedThing(virusedThing);
+                gameComp.PopVirusedThing(virusedThing);
             }
         }
 
@@ -208,7 +194,6 @@ namespace ATReforged
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
             BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
-            // blankMechanical.gender = Gender.None; TODO: Verify fixedGender isn't creating problems.
             blankMechanical.story.traits.allTraits.Clear();
             blankMechanical.skills.Notify_SkillDisablesChanged();
             blankMechanical.skills.skills.ForEach(delegate (SkillRecord record)
@@ -241,12 +226,9 @@ namespace ATReforged
         }
         
         // RESERVED UTILITIES, INTERNAL USE ONLY
-        public static HashSet<string> ReservedAllPawns = new HashSet<string> { "Tier1Android", "Tier2Android", "Tier3Android", "Tier4Android", "M7Mech", "M8Mech", "Tier5Android", "DroneMineralUnit", "DroneChemUnit", "DroneNutritionUnit", "DroneTORT", "DroneWatchdog" };
-        public static HashSet<string> ReservedAndroids = new HashSet<string> { "Tier2Android", "Tier3Android", "Tier4Android", "Tier5Android" };
-        public static HashSet<string> ReservedMSeriesPawns = new HashSet<string> { "M7Mech", "M8Mech" };
-        public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android"};
+        public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android" };
 
-        public static HashSet<string> ReservedFactionCanUseSurrogates = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" }; //TODO: Add ATR_Supremacists
+        public static HashSet<string> ReservedFactionCanUseSurrogates = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
 
         public static Pawn ReservedBlank = null; // To be applied to surrogates, new androids, etc. Generated when first needed, then stored for later.
@@ -264,24 +246,9 @@ namespace ATReforged
         public static FleckDef ATR_HalfChargeFleck;
         public static FleckDef ATR_EmptyChargeFleck;
 
-        public static Color androidCustomColorKhaki = new Color(0.29411f, 0.356862f, 0.16470f);
-        public static Color androidCustomColorGreen = new Color(0.19f, 0.75f, 0.43f);
-        public static Color androidCustomColorWhite = new Color(1.0f, 1.0f, 1.0f);
-        public static Color androidCustomColorBlack = new Color(0.15f, 0.15f, 0.15f);
-        public static Color androidCustomColorGray = new Color(0.50f, 0.50f, 0.50f);
-        public static Color androidCustomColorBlue = new Color(0.25f, 0.44f, 0.69f);
-        public static Color androidCustomColorRed = new Color(0.69f, 0.26f, 0.29f);
-        public static Color androidCustomColorOrange = new Color(1.0f, 0.64705f, 0.0f);
-        public static Color androidCustomColorYellow = new Color(0.8392f, 0.8274f, 0.1254f);
-        public static Color androidCustomColorPurple = new Color(0.43f, 0.30f, 0.55f);
-        public static Color androidCustomColorPink = new Color(0.90f, 0.60f, 0.83f);
-        public static Color androidCustomColorCyan = new Color(0.33f, 0.69f, 0.83f);
-
-        public static Color androidCustomColorRust = new Color(0.5607f, 0.2941f, 0.1764f);
-
         public static List<string> BlacklistedHediffsForAndroids = new List<string> { "Anxiety" };
 
-        public static GC_ATPP GCATPP;
+        public static ATR_GameComponent gameComp;
 
         public static int GetPowerUsageByPawn(Pawn pawn)
         {
@@ -489,7 +456,7 @@ namespace ATReforged
                             continue;
 
                         // For each of the world pawns relations, if it relates to the source, add it to the destination.
-                        foreach (DirectPawnRelation pawnRelation in worldPawn.relations.DirectRelations.FastToList())
+                        foreach (DirectPawnRelation pawnRelation in worldPawn.relations.DirectRelations.ToList())
                         {
                             if (pawnRelation.otherPawn != null && pawnRelation.otherPawn == source)
                             {
@@ -499,7 +466,7 @@ namespace ATReforged
                     }
 
                     // Duplicate all of the source's relations.
-                    foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.FastToList())
+                    foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.ToList())
                     {
                         destRelations.AddDirectRelation(pawnRelation.def, pawnRelation.otherPawn);
                     }
@@ -674,7 +641,7 @@ namespace ATReforged
         public static bool IsValidMindTransferTarget(Pawn pawn)
         {
             // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !GCATPP.HasSkyMindConnection(pawn) || pawn.TryGetComp<CompSkyMind>().Breached != -1 || pawn.TryGetComp<CompSkyMindLink>().Linked > -1)
+            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.TryGetComp<CompSkyMind>().Breached != -1 || pawn.TryGetComp<CompSkyMindLink>().Linked > -1)
             {
                 return false;
             }
@@ -686,7 +653,7 @@ namespace ATReforged
             }
 
             // If the pawn has a cloud capable implant or is in the SkyMind network already, then it is valid.
-            return HasCloudCapableImplant(pawn) || GCATPP.GetCloudPawns().Contains(pawn);
+            return HasCloudCapableImplant(pawn);
         }
 
         // Returns a list of all surrogates without hosts in caravans. Return null if there are none.
@@ -791,6 +758,16 @@ namespace ATReforged
             if (kill)
             {
                 Duplicate(GetBlank(), copy, false, false);
+
+                // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
+                if (IsConsideredMechanicalAndroid(copy))
+                {
+                    Hediff autoCore = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
+                    if (autoCore != null)
+                    {
+                        copy.health.RemoveHediff(autoCore);
+                    }
+                }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
             else
@@ -840,10 +817,13 @@ namespace ATReforged
             if (IsConsideredMechanicalDrone(pawn))
             {
                 // Drones don't have traits.
-                foreach (Trait trait in pawn.story.traits.allTraits.FastToList())
+                foreach (Trait trait in pawn.story.traits.allTraits.ToList())
                 {
                     pawn.story.traits.RemoveTrait(trait);
                 }
+
+                // Drones don't have ideos.
+                pawn.ideo = null;
 
                 // Drones have a set skill of 8 in all skills. Massive drones get 14 in all skills.
                 int skillLevel = IsConsideredMassive(pawn) ? 14 : 8;

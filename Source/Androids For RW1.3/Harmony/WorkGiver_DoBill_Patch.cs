@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class WorkGiver_DoBill_Patch
-
     {
         // Listen for doctors/mechanics doing a work bill, and make sure they select an appropriate medicine for their task.
         [HarmonyPatch(typeof(WorkGiver_DoBill), "AddEveryMedicineToRelevantThings")]
@@ -38,7 +37,7 @@ namespace ATReforged
                 }
                 catch(Exception e)
                 {
-                    Log.Message("[ATPP] WorkGiver_DoBill.AddEveryMedicineToRelevantThings " + e.Message + " " + e.StackTrace);
+                    Log.Message("[ATR] WorkGiver_DoBill.AddEveryMedicineToRelevantThings " + e.Message + " " + e.StackTrace);
                 }
             }
         }

@@ -20,19 +20,19 @@ namespace ATReforged
         {
             base.PostDeSpawn(map);
 
-            Utils.GCATPP.PopChargingStation((Building)parent);
+            Utils.gameComp.PopChargingStation((Building)parent);
         }
 
         public override void ReceiveCompSignal(string signal)
         {
             if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
             {
-                Utils.GCATPP.PopChargingStation((Building)parent);
+                Utils.gameComp.PopChargingStation((Building)parent);
             }
 
             if (signal == "PowerTurnedOn")
             {
-                Utils.GCATPP.PushChargingStation((Building)parent);
+                Utils.gameComp.PushChargingStation((Building)parent);
             }
         }
 
@@ -78,7 +78,7 @@ namespace ATReforged
             {
                 foreach (Thing thing in adjPos.GetThingList(parent.Map).ToList())
                 {
-                    if (thing is Pawn pawn && Utils.CanUseBattery(pawn) && pawn.CurJobDef == JobDefOf.ATPP_GoReloadBattery)
+                    if (thing is Pawn pawn && Utils.CanUseBattery(pawn) && pawn.CurJobDef == JobDefOf.RechargeBattery)
                     {
                         pawn.needs.food.CurLevelPercentage += powerExchanged;
                         powerConsumed += Utils.GetPowerUsageByPawn(pawn);

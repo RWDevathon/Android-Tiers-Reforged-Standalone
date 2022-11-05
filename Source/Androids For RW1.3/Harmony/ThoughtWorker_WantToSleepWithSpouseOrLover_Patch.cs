@@ -18,20 +18,13 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn p, ref ThoughtState __result)
             {
-                try
-                {
-                    if (!__result.Active)
-                        return;
+                if (!__result.Active)
+                    return;
 
-                    Pawn otherPawn = LovePartnerRelationUtility.ExistingMostLikedLovePartnerRel(p, false).otherPawn;
+                Pawn otherPawn = LovePartnerRelationUtility.ExistingMostLikedLovePartnerRel(p, false).otherPawn;
 
-                    if (Utils.IsConsideredMechanical(p) || Utils.IsConsideredMechanical(otherPawn) || Utils.GCATPP.GetCloudPawns().Contains(p) || Utils.GCATPP.GetCloudPawns().Contains(otherPawn))
-                        __result = false;
-                }
-                catch(Exception e)
-                {
-                    Log.Message("[ATTP] ThoughtWorker_WantToSleepWithSpouseOrLover.CurrentStateInternal " + e.Message + " " + e.StackTrace);
-                }
+                if (Utils.IsConsideredMechanical(p) || Utils.IsConsideredMechanical(otherPawn) || Utils.gameComp.GetCloudPawns().Contains(p) || Utils.gameComp.GetCloudPawns().Contains(otherPawn))
+                    __result = false;
             }
         }
     }

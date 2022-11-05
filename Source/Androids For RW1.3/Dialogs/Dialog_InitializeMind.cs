@@ -1,16 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 using RimWorld;
 using System.Collections.Generic;
-using System.Text;
-using Verse.AI.Group;
 using System.Linq;
-using HarmonyLib;
-using System.Reflection;
-using Verse.Sound;
-using RimWorld.Planet;
-using System.Text.RegularExpressions;
 
 namespace ATReforged
 {
@@ -42,13 +34,13 @@ namespace ATReforged
         public Dialog_InitializeMind(Pawn newIntelligence) : base("ATR_InitializeMindDesc".Translate(), "ATR_SkyMindInitialization".Translate(), null, "ATR_AutomaticInitialization".Translate(), null, "ATR_InitializeMindTitle".Translate(), false)
         {
             // If there is any intelligence in the SkyMind, then the new intelligence may copy it. It does not matter if the pawn is in a mind operation or is a controller - this is an immediate and sync-safe operation.
-            if (Utils.GCATPP.GetCloudPawns().Count() > 0)
+            if (Utils.gameComp.GetCloudPawns().Count() > 0)
             {
                 buttonAAction = delegate ()
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.GCATPP.GetCloudPawns())
+                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns())
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {

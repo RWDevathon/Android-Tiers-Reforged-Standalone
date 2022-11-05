@@ -26,6 +26,7 @@
 			<baseBodySize>2.4</baseBodySize>
 			<baseHealthScale>1.5</baseHealthScale>
 			<nameOnTameChance>1</nameOnTameChance>
+			<trainability>Advanced</trainability>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>

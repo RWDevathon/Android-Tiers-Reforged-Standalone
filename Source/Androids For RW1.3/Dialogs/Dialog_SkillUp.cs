@@ -111,7 +111,7 @@ namespace ATReforged
             float maxWidth = listingStandard.ColumnWidth;
 
             SkillRecord skillRecord;
-            int availableSkillPoints = Utils.GCATPP.GetSkillPoints();
+            int availableSkillPoints = Utils.gameComp.GetSkillPoints();
 
             // Controls for buying skill points
             for (int i = 0; i != skillDefList.Count; i++)
@@ -135,7 +135,7 @@ namespace ATReforged
                     if (availableSkillPoints >= 100)
                     { // Use vanilla stat learning to maximize compatibility. Remove skill points on complete.
                         skillRecord.Learn(100 * ATReforged_Settings.skillPointConversionRate);
-                        Utils.GCATPP.ChangeServerPoints(-100, ServerType.SkillServer);
+                        Utils.gameComp.ChangeServerPoints(-100, ServerType.SkillServer);
                         availableSkillPoints -= 100;
                     }
                     else
@@ -181,7 +181,7 @@ namespace ATReforged
                     { // Increase passion tier and take away points used.
                         skillDefPassionList[i]++;
                         skillRecord.passion = (Passion)skillDefPassionList[i];
-                        Utils.GCATPP.ChangeServerPoints(-pointsToIncreasePassion, ServerType.SkillServer);
+                        Utils.gameComp.ChangeServerPoints(-pointsToIncreasePassion, ServerType.SkillServer);
                         availableSkillPoints -= pointsToIncreasePassion;
                     }
                     else

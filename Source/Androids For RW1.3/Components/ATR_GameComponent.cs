@@ -1,225 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
-using Verse.AI.Group;
 using Verse.AI;
 using UnityEngine;
 using RimWorld.Planet;
-using HarmonyLib;
-using System.Reflection;
-using Verse.Sound;
-using System.Security.Cryptography;
 
 namespace ATReforged
 {
-    public class GC_ATPP : GameComponent
+    public class ATR_GameComponent : GameComponent
     {
 
-        public GC_ATPP(Game game)
+        public ATR_GameComponent(Game game)
         {
-            Utils.GCATPP = this;
+            Utils.gameComp = this;
             initNull();
-            
-            try
-            {
-                Utils.SkyMindAttackWitnessDef = DefDatabase<ThoughtDef>.GetNamed("ATR_ConnectedSkyMindAttacked");
-                Utils.SkyMindAttackVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_AttackedViaSkyMind");
-                Utils.SkyMindTrollVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_TrolledViaSkyMind");
-
-                Utils.ATR_FullChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_FullChargeFleck");
-                Utils.ATR_HalfChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_HalfChargeFleck");
-                Utils.ATR_EmptyChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_EmptyChargeFleck");
-
-                RecipeDef androidDisassembly = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseMechanoid");
-                RecipeDef androidSmashing = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseMechanoid");
-                androidDisassembly.fixedIngredientFilter.SetDisallowAll();
-                RecipeDef butcherFlesh = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh");
-
-                // RunTime patching
-                foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
-                {
-                    try
-                    {
-                        // Check race to see if the thingDef is for a Pawn.
-                        if (thingDef != null && thingDef.race != null)
-                        {
-                            // Humanlike non-drone pawns get SkyMind comps.
-                            if (thingDef.race.intelligence == Intelligence.Humanlike && !Utils.IsConsideredMechanicalDrone(thingDef) && !Utils.HasSpecialStatus(thingDef))
-                            {
-                                CompProperties cp;
-                                cp = new CompProperties
-                                {
-                                    compClass = typeof(CompSkyMind)
-                                };
-                                thingDef.comps.Add(cp);
-
-                                cp = new CompProperties
-                                {
-                                    compClass = typeof(CompSkyMindLink)
-                                };
-                                thingDef.comps.Add(cp);
-                            }
-                            
-                            // Mechanical pawns do not need rest or get butchered. Patch the defs at run-time because settings may change.
-                            if (Utils.IsConsideredMechanical(thingDef))
-                            {
-                                androidDisassembly.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
-                                androidSmashing.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
-                                butcherFlesh.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, false);
-                                thingDef.race.needsRest = false;
-                            }
-
-                            // Drones do not have learning factors.
-                            if (Utils.IsConsideredMechanicalDrone(thingDef))
-                            {
-                                StatModifier learningModifier = thingDef.statBases.Find(modifier => modifier.stat.defName == "GlobalLearningFactor");
-                                if (learningModifier != null)
-                                {
-                                    learningModifier.value = 0;
-                                }
-                                else
-                                {
-                                    thingDef.statBases.Add(new StatModifier() { stat = RimWorld.StatDefOf.GlobalLearningFactor, value = 0 });
-                                }
-                            }
-
-                            // Ensure charge-capable units have the Battery Comp.
-                            if (Utils.CanUseBattery(thingDef))
-                            {
-                                thingDef.comps.Add(new CompProperties { compClass = typeof(CompPawnBattery) });
-                            }
-                            // Ensure non-mechanical units do not have the comp - they may have one if the game is reloaded after switching their status.
-                            else
-                            {
-                                thingDef.comps.RemoveAll(compProperties => compProperties.compClass == typeof(CompPawnBattery));
-                            }
-                        }
-                        else
-                        {
-                            if (thingDef.IsDoor && thingDef.HasComp(typeof(CompPowerTrader)))
-                            {
-                                CompProperties cp = new CompProperties
-                                {
-                                    compClass = typeof(CompAutoDoor)
-                                };
-                                thingDef.comps.Add(cp);
-
-                                //SkyMind
-                                cp = new CompProperties
-                                {
-                                    compClass = typeof(CompSkyMind)
-                                };
-                                thingDef.comps.Add(cp);
-                            }
-                            // Add the CompSkyMind to all powered and flickable structures that aren't SkyMind Cores (no need for one).
-                            else if (thingDef.comps != null && !thingDef.HasComp(typeof(CompSkyMindCore)))
-                            {
-                                bool found = false;
-                                bool flickable = false;
-
-                                foreach (CompProperties compProp in thingDef.comps)
-                                {
-                                    if (compProp.compClass == null)
-                                        continue;
-
-                                    if (compProp.compClass == typeof(CompFlickable))
-                                        flickable = true;
-                                    else if (compProp.compClass == typeof(CompPowerTrader) || (compProp.compClass == typeof(CompPowerPlant) || compProp.compClass.IsSubclassOf(typeof(CompPowerPlant))))
-                                    {
-                                        found = true;
-                                    }
-                                }
-
-                                if (found && flickable)
-                                {
-                                    CompProperties cp = new CompProperties
-                                    {
-                                        compClass = typeof(CompSkyMind)
-                                    };
-                                    thingDef.comps.Add(cp);
-                                }
-                            }
-                            else if (thingDef.IsCorpse)
-                            {
-                                Log.Warning("[ATR DEBUG] Located thingDef " + thingDef.defName + " as a corpse! It's category is " + thingDef.category.ToString());
-                            }
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        Log.Message("[ATR] Runtime.Patching.Comps " + e.Message + " " + e.StackTrace);
-                    }
-                }
-
-                try
-                {
-                    // Go through all PawnKindDefs to locate if anything has "SurrogateSoldier" as a BackstoryFiltersOverride. These are our valid surrogates so add it to a list.
-                    foreach (PawnKindDef entry in DefDatabase<PawnKindDef>.AllDefsListForReading)
-                    {
-                        if (entry.backstoryFiltersOverride != null)
-                        {
-                            foreach (BackstoryCategoryFilter backstoryFilter in entry.backstoryFiltersOverride)
-                            {
-                                if (backstoryFilter.categories != null && backstoryFilter.categories.Contains("SurrogateSoldier"))
-                                {
-                                    Utils.ValidSurrogatePawnKindDefs.Add(entry);
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning("[ATR] Failed to generate valid Surrogates,  " + ex.Message + " " + ex.StackTrace);
-                }
-            }
-            catch (Exception e)
-            {
-                Log.Error("[ATPP] GC_ATPP.CTOR(Init)  Fatal Error : " + e.Message + " - " + e.StackTrace);
-            }
-        }
-
-
-
-        private void RemoveBlacklistedAndroidsHediffs()
-        {
-            bool BlacklistedHediff(Hediff hediff)
-            {
-                return Utils.BlacklistedHediffsForAndroids.Contains(hediff.def.defName);
-            }
-
-            foreach(var map in Find.Maps)
-            {
-                foreach(var pawn in map.mapPawns.AllPawns)
-                {
-                    if (Utils.IsConsideredMechanical(pawn) && pawn.health != null && pawn.health.hediffSet != null)
-                    {
-                        foreach (Hediff hediff in pawn.health.hediffSet.hediffs.Where(hediff => BlacklistedHediff(hediff)))
-                        {
-                            pawn.health.RemoveHediff(hediff);
-                        }
-                    }
-                }
-            }
         }
 
         public override void StartedNewGame()
         {
             base.StartedNewGame();
-
+            
             initNull();
-            CheckDeleteAndroidFactions();
         }
 
         public override void LoadedGame()
         {
             base.LoadedGame();
-
-            RemoveBlacklistedAndroidsHediffs();
-            CheckDeleteAndroidFactions();
         }
 
         public override void ExposeData()
@@ -235,10 +43,10 @@ namespace ATReforged
             Scribe_Values.Look(ref SkyMindNetworkCapacity, "ATR_SkyMindNetworkCapacity", 0);
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
 
-            List<Thing> thingKeyCopy = virusedDevices.Keys.FastToList();
-            List<int> thingValueCopy = virusedDevices.Values.FastToList();
-            List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.FastToList();
-            List<int> pawnValueCopy = networkLinkedPawns.Values.FastToList();
+            List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
+            List<int> thingValueCopy = virusedDevices.Values.ToList();
+            List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.ToList();
+            List<int> pawnValueCopy = networkLinkedPawns.Values.ToList();
 
             Scribe_Collections.Look(ref skillServers, "ATR_skillServers", LookMode.Reference);
             Scribe_Collections.Look(ref securityServers, "ATR_securityServers", LookMode.Reference);
@@ -249,7 +57,6 @@ namespace ATReforged
             Scribe_Collections.Look(ref heatSensitiveDevices, "ATR_heatSensitiveDevices", LookMode.Reference);
             Scribe_Collections.Look(ref virusedDevices, "ATR_virusedDevices", LookMode.Reference, LookMode.Value, ref thingKeyCopy, ref thingValueCopy);
             Scribe_Collections.Look(ref networkLinkedPawns, "ATR_networkLinkedPawns", LookMode.Reference, LookMode.Value, ref pawnKeyCopy, ref pawnValueCopy);
-
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -457,6 +264,12 @@ namespace ATReforged
             // Removing a tower may result in being over the SkyMind network limit. Randomly disconnect some until under the limit if necessary.
             while (SkyMindNetworkCapacity < networkedDevices.Count())
             {
+                if (SkyMindNetworkCapacity < 0)
+                {
+                    Log.Error("[ATR Crash-check] Attempted to reduce the number of networkedDevices below 0 in a while loop - this could crashed the game! Report events/logs to dev immediately.");
+                    networkedDevices.Clear();
+                    break;
+                }
                 Thing device = networkedDevices.RandomElement();
                 DisconnectFromSkyMind(device);
             }
@@ -482,7 +295,7 @@ namespace ATReforged
             // Removing a core may result in being over the cloud pawn limit. Randomly murder stored intelligences until under the limit if necessary.
             while (SkyMindCloudCapacity < cloudPawns.Count())
             {
-                // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections. TODO: Ensure this is the case.
+                // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections.
                 cloudPawns.RandomElement().Kill(null);
             }
         }
@@ -541,37 +354,6 @@ namespace ATReforged
             return heatSensitiveDevices.Where(device => map != null ? device.Map == map : device != null);
         }
 
-        // Destroy all android factions/bases if they are disabled in settings.
-        public void CheckDeleteAndroidFactions()
-        {
-            // If the Raider faction is blacklisted, destroy all bases relating to them.
-            if (!ATReforged_Settings.androidRaidersExist)
-            {
-                Log.Message("[ATR] Android Raider faction blacklisted. Removing bases and faction.");
-                Find.WorldObjects.SettlementBases.RemoveAll(settlement => settlement.Faction.def == FactionDefOf.MechanicalMarauders);
-
-                foreach (Faction faction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.def == FactionDefOf.MechanicalMarauders))
-                {
-                    faction.defeated = true;
-                    faction.def.hidden = true;
-                }
-            }
-
-            // If the Union faction is blacklisted, destroy all bases relating to them.
-            if (!ATReforged_Settings.androidUnionistsExist)
-            {
-                Log.Message("[ATR] Android Union faction blacklisted. Removing bases and faction.");
-                Find.WorldObjects.SettlementBases.RemoveAll(settlement => settlement.Faction.def == FactionDefOf.AndroidUnion);
-
-                foreach (Faction faction in Find.FactionManager.GetFactions(minTechLevel: TechLevel.Industrial).Where(faction => faction.def == FactionDefOf.AndroidUnion))
-                {
-                    faction.defeated = true;
-                    faction.def.hidden = true;
-                }
-
-            }
-        }
-
         // Add a server to the appropriate list based on serverMode
         public void AddServer(Building building, ServerType serverMode, int capacity)
         { 
@@ -592,7 +374,7 @@ namespace ATReforged
                     hackingPointCapacity += capacity;
                     break;
                 default:
-                    Log.Error("[ATR] GC_ATPP.AddServer was given an invalid serverType. No servers added.");
+                    Log.Message("[ATR] Attempted to add a server of an invalid mode. No server was added. The building responsible should have a Gizmo to fix the issue.");
                     return;
             }
         }
@@ -760,19 +542,6 @@ namespace ATReforged
         public HashSet<Pawn> GetCloudPawns()
         {
             return cloudPawns;
-        }
-
-        public void reset()
-        {
-            chargingStations.Clear();
-            networkedDevices.Clear();
-            heatSensitiveDevices.Clear();
-            skillServers.Clear();
-            securityServers.Clear();
-            hackingServers.Clear();
-            virusedDevices.Clear();
-            networkLinkedPawns.Clear();
-            cloudPawns.Clear();
         }
         
         private void initNull()

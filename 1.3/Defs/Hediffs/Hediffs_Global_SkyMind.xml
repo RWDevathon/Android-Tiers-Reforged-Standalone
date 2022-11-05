@@ -44,13 +44,5 @@
             </li>
         </stages>
     </HediffDef>
-  
-  <HediffDef ParentName="ATR_SkyMindHediffBase">
-        <defName>ATPP_RemotelyControlled</defName>
-        <label>Remotely controlled</label>
-        <description>This unit is being remotely controlled as a surrogate.</description>
-        <labelNoun>Remotetely controlled</labelNoun>
-        <defaultLabelColor>(0.0, 0.7, 0.15)</defaultLabelColor>
-  </HediffDef>
 
 </Defs>

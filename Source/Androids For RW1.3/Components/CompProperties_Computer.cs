@@ -9,7 +9,6 @@ namespace ATReforged
             compClass = typeof(CompComputer);
         }
 
-        public string ambiance;
         public ServerType serverMode;
         public int passivePointGeneration = 0;
         public int percentageWorkBoost = 0;

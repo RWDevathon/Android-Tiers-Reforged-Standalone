@@ -51,7 +51,7 @@
     <!-- Mining Utility Arm -->
 
     <HediffDef ParentName="AddedBodyPartIndustrialBase">
-        <defName>MiningArm_AT</defName>
+        <defName>ATR_MiningArm</defName>
         <label>Mining arm</label>
 	    <description>A simple mechanical arm designed with the extraction and processing of minerals in mind. The arm prominently features a plasteel drill which feeds contents into an internal processor, separating minerals efficiently and swiftly discarding waste to ensure maximal drilling and minimal sorting time.</description>
         <stages>
@@ -76,11 +76,11 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>MiningArm_AT</spawnThingOnRemoved>
+        <spawnThingOnRemoved>ATR_MiningArm</spawnThingOnRemoved>
     </HediffDef>
  
     <ThingDef ParentName="BodyPartIndustrialBase">
-        <defName>MiningArm_AT</defName>
+        <defName>ATR_MiningArm</defName>
         <label>Mining arm</label>
 	    <description>A simple mechanical arm designed with the extraction and processing of minerals in mind. The arm prominently features a plasteel drill which feeds contents into an internal processor, separating minerals efficiently and swiftly discarding waste to ensure maximal drilling and minimal sorting time.</description>
         <costList>
@@ -91,7 +91,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryMechanicalIndustrial">
-		<defName>InstallMiningArm_AT</defName>
+		<defName>InstallMiningArm</defName>
 		<label>Install mining arm</label>
 		<description>Installs a mining arm.</description>
 		<jobString>Installing mining arm.</jobString>
@@ -99,7 +99,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MiningArm_AT</li>
+						<li>ATR_MiningArm</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -107,19 +107,19 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>MiningArm_AT</li>
+				<li>ATR_MiningArm</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>MechanicalArm</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>MiningArm_AT</addsHediff>
+		<addsHediff>ATR_MiningArm</addsHediff>
 	</RecipeDef>
 
     <!-- Agriculture Utility Arm -->
 
     <HediffDef ParentName="AddedBodyPartIndustrialBase">
-        <defName>AgriArm_AT</defName>
+        <defName>ATR_AgriArm</defName>
         <label>Agri arm</label>
 	    <description>A simple mechanical arm designed with agriculture and horticulture in mind. The arm features several internal multi-tools that appropriately harvest products and feeds contents into an internal processor, discarding waste products to ensure optimal harvest and minimal sorting time. Ejecting products out of specialized elbow ports is efficient, if rather odd to observe.</description>
 		<stages>
@@ -146,11 +146,11 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>MiningArm_AT</spawnThingOnRemoved>
+        <spawnThingOnRemoved>ATR_AgriArm</spawnThingOnRemoved>
     </HediffDef>
  
     <ThingDef ParentName="BodyPartIndustrialBase">
-        <defName>AgriArm_AT</defName>
+        <defName>ATR_AgriArm</defName>
         <label>Agri arm</label>
 	    <description>A simple mechanical arm designed with agriculture and horticulture in mind. The arm features several internal multi-tools that appropriately harvest products and feeds contents into an internal processor, discarding waste products to ensure optimal harvest and minimal sorting time. Ejecting products out of specialized elbow ports is efficient, if rather odd to observe.</description>
         <costList>
@@ -161,7 +161,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryMechanicalIndustrial">
-		<defName>InstallAgriArm_AT</defName>
+		<defName>InstallAgriArm</defName>
 		<label>Install agri arm</label>
 		<description>Installs an agri arm.</description>
 		<jobString>Installing agri arm.</jobString>
@@ -169,7 +169,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>AgriArm_AT</li>
+						<li>ATR_AgriArm</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -177,19 +177,19 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>AgriArm_AT</li>
+				<li>ATR_AgriArm</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>MechanicalArm</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>AgriArm_AT</addsHediff>
+		<addsHediff>ATR_AgriArm</addsHediff>
 	</RecipeDef>
 
     <!-- Makeshift Leg -->
 
     <HediffDef ParentName="AddedBodyPartIndustrialBase">
-        <defName>MakeshiftRLeg</defName>
+        <defName>ATR_MakeshiftMechLeg</defName>
         <label>Makeshift mechanical leg</label>
 	    <description>An installed makeshift leg, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct feet or toes, it is still significantly inferior to a properly designed and manufactured leg.</description>
         <addedPartProps>
@@ -242,13 +242,13 @@
 		<appliedOnFixedBodyParts>
 			<li>MechanicalLeg</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>MakeshiftRLeg</addsHediff>
+		<addsHediff>ATR_MakeshiftMechLeg</addsHediff>
 	</RecipeDef>
 
     <!-- Makeshift Arm -->
   
     <HediffDef ParentName="AddedBodyPartIndustrialBase">
-        <defName>MakeshiftRArm</defName>
+        <defName>ATR_MakeshiftMechArm</defName>
         <label>Makeshift mechanical arm</label>
 	    <description>An installed makeshift arm, with only minimal functionality. While it functions admirably given its ad-hoc nature and its lack of distinct hands or fingers, it is still significantly inferior to a properly designed and manufactured arm.</description>
 	    <comps>
@@ -315,7 +315,7 @@
 		<appliedOnFixedBodyParts>
 			<li>MechanicalArm</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>MakeshiftRArm</addsHediff>
+		<addsHediff>ATR_MakeshiftMechArm</addsHediff>
 	</RecipeDef>
 
 </Defs>

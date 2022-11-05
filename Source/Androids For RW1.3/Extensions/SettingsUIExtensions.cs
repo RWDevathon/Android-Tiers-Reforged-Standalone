@@ -2,14 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
 
 namespace ATReforged
 {
+    /*
+     *  Settings Extensions and Pawn Selectors courtesy of Simple Sidearms by PeteTimesSix. Without his work, this would have been exceedingly difficult to build!
+     */
     static class SettingsUIExtensions
     {
         public const float IconSize = 32f;
@@ -20,14 +21,13 @@ namespace ATReforged
 
         public static void PawnSelector(this Listing_Standard instance, IEnumerable<ThingDef> pawnOptions, HashSet<ThingDef> selectedPawns, string selectedLabel, string unselectedLabel, Action onChange = null)
         {
-            var unselectedPawns = pawnOptions.Where(w => !selectedPawns.Contains(w));
-
+            IEnumerable<ThingDef> unselectedPawns = pawnOptions.Where(w => !ATReforged_Settings.isConsideredMechanical.Contains(w));
             TextAnchor anchorSave = Text.Anchor;
             Color colorSave = GUI.color;
             GUI.color = Color.white;
 
-            var width = instance.ColumnWidth;
-            var fullRect = instance.GetRect(0);
+            float width = instance.ColumnWidth;
+            Rect fullRect = instance.GetRect(0);
             Rect leftRect = fullRect.LeftHalf();
             Rect rightRect = fullRect.RightHalf();
 
@@ -54,10 +54,10 @@ namespace ATReforged
 
             instance.GetRect((Mathf.Max(leftRows, rightRows) * (IconSize + IconGap)) - IconGap);
 
-            var orderedUnselectedPawns = unselectedPawns.ToList().OrderBy(w => w.label).ToList();
-            var orderedSelectedPawns = selectedPawns.ToList().OrderBy(w => w.label).ToList();
+            List<ThingDef> orderedUnselectedPawns = unselectedPawns.ToList().OrderBy(w => w.label).ToList();
+            List<ThingDef> orderedSelectedPawns = selectedPawns.ToList().OrderBy(w => w.label).ToList();
 
-            for (int i = 0; i < orderedSelectedPawns.Count(); i++)
+            for (int i = 0; i < orderedSelectedPawns.Count; i++)
             {
                 int collum = (i % iconsPerLeftRow);
                 int row = (i / iconsPerLeftRow);
@@ -65,10 +65,12 @@ namespace ATReforged
                 if (interacted)
                 {
                     selectedPawns.Remove(orderedSelectedPawns[i]);
+                    ATReforged_Settings.isConsideredMechanical.Remove(orderedSelectedPawns[i]);
+                    ATReforged_Settings.canUseBattery.Remove(orderedSelectedPawns[i]);
                     onChange?.Invoke();
                 }
             }
-
+                
             for (int i = 0; i < orderedUnselectedPawns.Count; i++)
             {
                 int collum = (i % iconsPerRightRow);
@@ -77,70 +79,63 @@ namespace ATReforged
                 if (interacted)
                 {
                     selectedPawns.Add(orderedUnselectedPawns[i]);
+                    ATReforged_Settings.isConsideredMechanical.Add(orderedUnselectedPawns[i]);
+                    AddChargeCapable(orderedUnselectedPawns[i]);
                     onChange?.Invoke();
                 }
             }
         }
-        public static bool DrawIconForPawn(ThingDef pawnDef, Rect contentRect, Vector2 iconOffset, bool isBackground = false)
+
+        public static void AddChargeCapable(ThingDef pawn)
+        {
+            if (pawn.race.intelligence > Intelligence.Animal || pawn.race.trainability != TrainabilityDefOf.None)
+            {
+                ATReforged_Settings.canUseBattery.Add(pawn);
+            }
+        }
+
+        public static bool DrawIconForPawn(ThingDef pawnDef, Rect contentRect, Vector2 iconOffset)
         {
             if (pawnDef == null)
             {
                 Log.Warning("Tried to draw an icon for a null pawn!");
                 var iconRect = new Rect(contentRect.x + iconOffset.x, contentRect.y + iconOffset.y, IconSize, IconSize);
                 GUI.color = Color.white;
-                GUI.DrawTexture(iconRect, Tex.SkillWorkshopHeader);
-                if (!isBackground)
-                    return Widgets.ButtonInvisible(iconRect, true);
-                else
-                    return false;
-            } 
+                GUI.DrawTexture(iconRect, Tex.HackingIcon);
+                return Widgets.ButtonInvisible(iconRect, true);
+            }
             else
             {
-                Graphic g = pawnDef.graphic;
-                Color color = pawnDef.graphic.Color;
-                Color colorTwo = pawnDef.graphic.ColorTwo;
-                Graphic g2 = pawnDef.graphicData.Graphic.GetColoredVersion(g.Shader, color, colorTwo);
-
                 var iconRect = new Rect(contentRect.x + iconOffset.x, contentRect.y + iconOffset.y, IconSize, IconSize);
 
-                if (!isBackground)
-                {
-                    string label = pawnDef.label;
+                string label = pawnDef.label;
 
-                    TooltipHandler.TipRegion(iconRect, label);
-                    MouseoverSounds.DoRegion(iconRect, SoundDefOf.Mouseover_Command);
-                    if (Mouse.IsOver(iconRect))
-                    {
-                        GUI.color = iconMouseOverColor;
-                        GUI.DrawTexture(iconRect, Tex.DrawPocket);
-                    }
-                    else
-                    {
-                        GUI.color = iconBaseColor;
-                        GUI.DrawTexture(iconRect, Tex.DrawPocket);
-                        GUI.DrawTextureWithTexCoords(iconRect, Tex.DrawPocket, new Rect(0, 0, 1, 1));
-                    }
-                }
-
-                Texture resolvedIcon;
-                if (!pawnDef.uiIconPath.NullOrEmpty())
+                TooltipHandler.TipRegion(iconRect, label);
+                MouseoverSounds.DoRegion(iconRect, SoundDefOf.Mouseover_Command);
+                if (Mouse.IsOver(iconRect))
                 {
-                    resolvedIcon = pawnDef.uiIcon;
+                    GUI.color = iconMouseOverColor;
+                    GUI.DrawTexture(iconRect, Tex.DrawPocket);
                 }
                 else
                 {
-                    resolvedIcon = g2.MatSingle.mainTexture;
+                    GUI.color = iconBaseColor;
+                    GUI.DrawTexture(iconRect, Tex.DrawPocket);
+                    GUI.DrawTextureWithTexCoords(iconRect, Tex.DrawPocket, new Rect(0, 0, 1, 1));
                 }
-                GUI.color = color;
+                
+                Texture resolvedIcon = pawnDef.uiIcon;
+                if (resolvedIcon == null || resolvedIcon == BaseContent.BadTex)
+                {
+                    resolvedIcon = Tex.HackingIcon;
+                }
+                GUI.color = pawnDef.uiIconColor;
                 GUI.DrawTexture(iconRect, resolvedIcon);
                 GUI.color = Color.white;
 
-                if (!isBackground)
+                if (Widgets.ButtonInvisible(iconRect, true))
                 {
-                    if (Widgets.ButtonInvisible(iconRect, true))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
                 return false;
             }

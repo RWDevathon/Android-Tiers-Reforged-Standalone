@@ -65,7 +65,7 @@ namespace ATReforged
             else
             {
                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate () {
-                    Job job = new Job(JobDefOf.ATPP_GoReloadBattery, new LocalTargetInfo(this.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
+                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
                     pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 });
             }
@@ -108,7 +108,7 @@ namespace ATReforged
                          if (reloadPlacePos == IntVec3.Invalid)
                              break;
 
-                         Job job = new Job(JobDefOf.ATPP_GoReloadBattery, new LocalTargetInfo(reloadPlacePos), new LocalTargetInfo(this));
+                         Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(reloadPlacePos), new LocalTargetInfo(this));
                          pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                      }
                  });

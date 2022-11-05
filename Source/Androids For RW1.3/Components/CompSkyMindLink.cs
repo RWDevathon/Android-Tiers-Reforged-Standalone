@@ -1,18 +1,10 @@
 ﻿using System;
 using Verse;
-using Verse.AI;
 using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
-using Verse.AI.Group;
 using System.Linq;
-using HarmonyLib;
-using System.Reflection;
-using Verse.Sound;
-using RimWorld.Planet;
-using System.Text.RegularExpressions;
-using RimWorld.BaseGen;
 
 namespace ATReforged
 {
@@ -112,7 +104,7 @@ namespace ATReforged
             // Prisoners may have their mind absorbed for server points. No other operations are legal on them.
             if (ThisPawn.IsPrisonerOfColony)
             {
-                if (Linked == -1 && (Utils.GCATPP.GetSkillPointCapacity() > 0 || Utils.GCATPP.GetHackingPointCapacity() > 0))
+                if (Linked == -1 && (Utils.gameComp.GetSkillPointCapacity() > 0 || Utils.gameComp.GetHackingPointCapacity() > 0))
                 {
                     Texture2D tex = Tex.MindAbsorption;
                     yield return new Command_Action
@@ -138,7 +130,7 @@ namespace ATReforged
             if (Utils.IsSurrogate(ThisPawn))
             {
                 //Organic surrogates may receive downloads from the SkyMind network.
-                if (!Utils.IsConsideredMechanical(ThisPawn) && Utils.GCATPP.GetCloudPawns().Count > 0)
+                if (!Utils.IsConsideredMechanical(ThisPawn) && Utils.gameComp.GetCloudPawns().Count > 0)
                 yield return new Command_Action
                 {
                     icon = Tex.DownloadFromSkyCloud,
@@ -148,7 +140,7 @@ namespace ATReforged
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.GCATPP.GetCloudPawns())
+                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns())
                         {
                             // Skip intelligences that are busy with other mind operations or that are busy controlling surrogates.
                             if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) != null || pawn.TryGetComp<CompSkyMindLink>().HasSurrogate())
@@ -179,7 +171,7 @@ namespace ATReforged
                     defaultDesc = "ATR_DisconnectSurrogateDesc".Translate(),
                     action = delegate ()
                     {
-                        Utils.GCATPP.DisconnectFromSkyMind(ThisPawn);
+                        Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                     }
                 };
 
@@ -264,7 +256,7 @@ namespace ATReforged
                             {
                                 opts.Add(new FloatMenuOption(surrogate.LabelShortCap, delegate ()
                                 {
-                                    if (!Utils.GCATPP.AttemptSkyMindConnection(surrogate))
+                                    if (!Utils.gameComp.AttemptSkyMindConnection(surrogate))
                                         return;
                                     ConnectSurrogate(surrogate);
                                 }));
@@ -353,7 +345,7 @@ namespace ATReforged
             };
 
             // Uploading requires space in the SkyMind network for the intelligence.
-            if (Utils.GCATPP.GetSkyMindCloudCapacity() > Utils.GCATPP.GetCloudPawns().Count)
+            if (Utils.gameComp.GetSkyMindCloudCapacity() > Utils.gameComp.GetCloudPawns().Count)
             {
                 yield return new Command_Action
                 {
@@ -373,7 +365,7 @@ namespace ATReforged
             yield break;
         }
 
-        // Controller for the state of viruses in the parent. -1 = clean, 1 = sleeper, 2 = cryptolocker, 3 = breaker. Ticker handled by the GC to avoid calculating when clean.
+        // Controller for the mental operation state of the parent. -2 = surrogate, -1 = No Op, > -1 is some sort of operation. GameComponent handles checks for linked pawns.
         public int Linked
         {
             get
@@ -394,7 +386,7 @@ namespace ATReforged
                     hediff.Severity = 1f;
                     ThisPawn.health.AddHediff(hediff, null, null);
 
-                    Utils.GCATPP.PopNetworkLinkedPawn(ThisPawn);
+                    Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
                 }
                 else if (networkOperationInProgress > -1)
                 { // Operation has begun. Stand by until completion or aborted.
@@ -411,15 +403,15 @@ namespace ATReforged
                 return base.CompInspectStringExtra();
 
             // A SkyMind operation is in progress. State how long players must wait before the operation will be complete.
-            if (networkOperationInProgress > -1 && Utils.GCATPP.GetAllLinkedPawns().ContainsKey(ThisPawn))
+            if (networkOperationInProgress > -1 && Utils.gameComp.GetAllLinkedPawns().ContainsKey(ThisPawn))
             {
-                ret.AppendLine("ATR_SkyMindOperationInProgress".Translate((Utils.GCATPP.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.AppendLine("ATR_SkyMindOperationInProgress".Translate((Utils.gameComp.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
             else if (networkOperationInProgress == -2)
             {
                 ret.AppendLine("ATR_SurrogateConnected".Translate(string.Join(", ", surrogatePawns)));
             }
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         public override void ReceiveCompSignal(string signal)
@@ -525,9 +517,9 @@ namespace ATReforged
             }
 
             // Disconnect each surrogate from the SkyMind (and this pawn by extension).
-            foreach (Pawn surrogate in surrogatePawns.FastToList())
+            foreach (Pawn surrogate in surrogatePawns.ToList())
             {
-                Utils.GCATPP.DisconnectFromSkyMind(surrogate);
+                Utils.gameComp.DisconnectFromSkyMind(surrogate);
             }
             // Forget about all surrogates.
             surrogatePawns.Clear();
@@ -564,7 +556,7 @@ namespace ATReforged
         public void HandleInitialization()
         {
             ThisPawn.health.AddHediff(HediffDefOf.ATR_MindOperation);
-            Utils.GCATPP.PushNetworkLinkedPawn(ThisPawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
+            Utils.gameComp.PushNetworkLinkedPawn(ThisPawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
             if (recipientPawn != null)
             {
                 recipientPawn.health.AddHediff(HediffDefOf.ATR_MindOperation);
@@ -593,7 +585,7 @@ namespace ATReforged
             // Absorption failure kills the source pawn - they were going to die on success any way.
             else if (Linked == 3)
             {
-                Utils.GCATPP.DisconnectFromSkyMind(ThisPawn);
+                Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                 ThisPawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, ThisPawn.health.hediffSet.GetBrain()));
                 // If they're somehow not dead from that, make them dead for real.
                 if (!ThisPawn.Dead)
@@ -604,7 +596,7 @@ namespace ATReforged
             }
             // Nothing happens on other failures (Download and Replication) as the current pawn has no functioning physical intelligence and clouds keep back ups.
 
-            Utils.GCATPP.PopNetworkLinkedPawn(ThisPawn);
+            Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
             Linked = -1;
         }
 
@@ -643,7 +635,7 @@ namespace ATReforged
                 else if (status == 4)
                 {
                     Utils.Duplicate(recipientPawn, ThisPawn, false, false);
-                    Utils.GCATPP.PopCloudPawn(recipientPawn);
+                    Utils.gameComp.PopCloudPawn(recipientPawn);
                     recipientPawn.Destroy();
                     target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
                     if (target != null)
@@ -664,8 +656,8 @@ namespace ATReforged
                     sum += (int)(Math.Pow(skillRecord.levelInt, 1.5) * 10);
                 }
 
-                Utils.GCATPP.ChangeServerPoints(sum/2, ServerType.HackingServer);
-                Utils.GCATPP.ChangeServerPoints(sum/2, ServerType.SkillServer);
+                Utils.gameComp.ChangeServerPoints(sum/2, ServerType.HackingServer);
+                Utils.gameComp.ChangeServerPoints(sum/2, ServerType.SkillServer);
                 ThisPawn.Kill(null);
             }
 
@@ -673,7 +665,7 @@ namespace ATReforged
             if (status == 5)
             {
                 // Add the pawn to storage and suspend any tick-checks it performs.
-                Utils.GCATPP.PushCloudPawn(ThisPawn);
+                Utils.gameComp.PushCloudPawn(ThisPawn);
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
 
                 // Remove all traits that pawns aren't allowed to have upon uploading.
@@ -688,7 +680,7 @@ namespace ATReforged
                 }
 
                 // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
-                Utils.GCATPP.DisconnectFromSkyMind(ThisPawn);
+                Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                 ThisPawn.DeSpawn();
             }
 
@@ -718,7 +710,7 @@ namespace ATReforged
 
                 // Duplicate the intelligence of this pawn into the clone (not murder) and add them to the SkyMind network.
                 Utils.Duplicate(ThisPawn, clone, false, false);
-                Utils.GCATPP.PushCloudPawn(clone);
+                Utils.gameComp.PushCloudPawn(clone);
             }
 
             Find.LetterStack.ReceiveLetter("ATR_OperationCompleted".Translate(), "ATR_OperationCompletedDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.PositiveEvent, ThisPawn);
@@ -728,10 +720,10 @@ namespace ATReforged
         // Check if there is an operation in progress. If there is (Linked != -1) and it is the operation source (LinkedPawn != -2), then we need to check if it's been interrupted and respond appropriately. 
         public void CheckInterruptedUpload()
         {
-            if (Linked != -1 && Utils.GCATPP.GetLinkedPawn(ThisPawn) != -2)
+            if (Linked != -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
             {
                 // Check to see if the current pawn is no longer connected to the SkyMind network (or is dead).
-                if (ThisPawn.Dead || (!ThisPawn.TryGetComp<CompSkyMind>().connected && !Utils.GCATPP.GetCloudPawns().Contains(ThisPawn)))
+                if (ThisPawn.Dead || (!ThisPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
                 {
                     HandleInterrupt();
                     return;
@@ -740,7 +732,7 @@ namespace ATReforged
                 // Check to see if the operation involves a recipient pawn and ensure their status is similarly acceptable if there is one.
                 if (recipientPawn != null)
                 {
-                    if (recipientPawn.Dead || (!recipientPawn.TryGetComp<CompSkyMind>().connected && !Utils.GCATPP.GetCloudPawns().Contains(ThisPawn)))
+                    if (recipientPawn.Dead || (!recipientPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
                     {
                         HandleInterrupt();
                         return;
@@ -748,7 +740,7 @@ namespace ATReforged
                 }
 
                 // Check to see if there is a functional SkyMind Core if one is required for an operation to continue. One is required for uploading, downloading, or replicating.
-                if (Linked >= 4 && Utils.GCATPP.GetSkyMindCloudCapacity() == 0)
+                if (Linked >= 4 && Utils.gameComp.GetSkyMindCloudCapacity() == 0)
                 {
                     HandleInterrupt();
                     return;
@@ -758,9 +750,17 @@ namespace ATReforged
 
         // Operation tracker. -2 = player surrogate operation, -1 = No operation, 1 = permutation, 2 = duplication, 3 = absorption, 4 = download, 5 = upload, 6 = replication
         private int networkOperationInProgress = -1;
+
+        // Tracker for the recipient pawn of a mind operation that requires two linked units.
         private Pawn recipientPawn = null;
+
+        // Tracker for all surrogate pawns. If a pawn is a surrogate, it will have exactly one link - to its host. If it is a controller, it has links to all surrogates.
         private HashSet<Pawn> surrogatePawns = new HashSet<Pawn>();
+
+        // Tracker for if this pawn is in control mode (allowing control of surrogates).
         private bool controlMode = false;
+
+        // Tracker for whether this pawn is not a player surrogate. Foreign surrogates do not have links to their controllers and are very limited in what they can do.
         public bool isForeign = false;
     }
 }

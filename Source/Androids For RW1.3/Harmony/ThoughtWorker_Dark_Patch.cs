@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_Dark_Patch
-
     {
         // Mechanical units aren't bothered by darkness.
         [HarmonyPatch(typeof(ThoughtWorker_Dark), "CurrentStateInternal")]
@@ -19,7 +18,6 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn p, ref ThoughtState __result)
             {
-                //Already disabled => no more processing required
                 if (!__result.Active)
                     return;
 

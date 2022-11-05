@@ -21,9 +21,6 @@
     
     <ThingDef Name="BodyPartCoreBase" ParentName="ATRMechBodyPartBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
-		<techHediffsTags>
-			<li>ATPP_Custom</li>
-		</techHediffsTags>
 		<statBases>
 			<WorkToMake>4000</WorkToMake>
 			<Mass>1</Mass>

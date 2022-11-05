@@ -1,15 +1,7 @@
-﻿using System;
-using Verse;
-using Verse.AI;
+﻿using Verse;
 using RimWorld;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Text;
-using Verse.AI.Group;
-using System.Linq;
-using HarmonyLib;
-using System.Reflection;
-using Verse.Sound;
 
 namespace ATReforged
 {
@@ -18,16 +10,16 @@ namespace ATReforged
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref integrityBreach, "ATPP_integrityBreach", -1);
-            Scribe_Values.Look(ref connected, "ATPP_connected", false);
+            Scribe_Values.Look(ref integrityBreach, "ATR_integrityBreach", -1);
+            Scribe_Values.Look(ref connected, "ATR_connected", false);
         }
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
             base.PostDestroy(mode, previousMap);
 
-            Utils.GCATPP.PopVirusedThing(parent);
-            Utils.GCATPP.DisconnectFromSkyMind(parent);
+            Utils.gameComp.PopVirusedThing(parent);
+            Utils.gameComp.DisconnectFromSkyMind(parent);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -35,7 +27,7 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
             if (connected)
             {
-                if (!Utils.GCATPP.AttemptSkyMindConnection(parent))
+                if (!Utils.gameComp.AttemptSkyMindConnection(parent))
                 {
                     connected = false;
                 }
@@ -51,20 +43,21 @@ namespace ATReforged
             // If this unit can't use the SkyMind, then it doesn't get any buttons to interact with it.
             if (parent is Pawn pawn)
             {
-                if (!Utils.PawnCanUseSkyMind(pawn))
+                if (!Utils.HasCloudCapableImplant(pawn))
                 {
                     yield break;
                 }
             }
 
             // If there is no SkyMind capacity, then it doesn't get any buttons to interact with it.
-            if(Utils.GCATPP.GetSkyMindNetworkSlots() <= 0)
+            if (Utils.gameComp.GetSkyMindNetworkSlots() <= 0)
             {
                 yield break;
             }
 
+            // Connect/Disconnect to SkyMind
             yield return new Command_Toggle
-            { // Connect/Disconnect to SkyMind
+            { 
                 icon = Tex.ConnectSkyMindIcon,
                 defaultLabel = "ATR_ConnectSkyMind".Translate(),
                 defaultDesc = "ATR_ConnectSkyMindDesc".Translate(),
@@ -73,9 +66,9 @@ namespace ATReforged
                 {
                     if (!connected)
                     { // Attempt to connect to SkyMind
-                        if (!Utils.GCATPP.AttemptSkyMindConnection(parent))
+                        if (!Utils.gameComp.AttemptSkyMindConnection(parent))
                         { // If trying to connect but it is unable to, inform the player. 
-                            if (Utils.GCATPP.GetSkyMindNetworkSlots() == 0)
+                            if (Utils.gameComp.GetSkyMindNetworkSlots() == 0)
                                 Messages.Message("ATR_SkyMindConnectionFailedNoNetwork".Translate(), parent, MessageTypeDefOf.NegativeEvent);
                             else
                                 Messages.Message("ATR_SkyMindConnectionFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
@@ -84,7 +77,7 @@ namespace ATReforged
                     }
                     else
                     { // Disconnect from SkyMind
-                        Utils.GCATPP.DisconnectFromSkyMind(parent);
+                        Utils.gameComp.DisconnectFromSkyMind(parent);
                     }
                 }
             };
@@ -138,7 +131,7 @@ namespace ATReforged
                             parent.SetFaction(Faction.OfPlayer);
                         }
                     }
-                    Utils.GCATPP.PopVirusedThing(parent);
+                    Utils.gameComp.PopVirusedThing(parent);
                 }
                 else
                 {
@@ -163,9 +156,9 @@ namespace ATReforged
                 return base.CompInspectStringExtra();
 
             // Add a special line for devices hacked into a shut-down state.
-            if ((integrityBreach == 1 || integrityBreach == 3) && Utils.GCATPP.GetAllVirusedDevices().ContainsKey(parent))
+            if ((integrityBreach == 1 || integrityBreach == 3) && Utils.gameComp.GetAllVirusedDevices().ContainsKey(parent))
             {
-                ret.AppendLine("ATR_HackedWithTimer".Translate((Utils.GCATPP.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.AppendLine("ATR_HackedWithTimer".Translate((Utils.gameComp.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
 
             // Add a special line for cryptolocked devices.
@@ -179,7 +172,7 @@ namespace ATReforged
                 ret.AppendLine("ATR_SkyMindDetected".Translate());
             }
 
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         private int integrityBreach = -1; // -1 : Not integrityBreach. 1: Sleeper Virus. 2: Cryptolocked. 3: Breaker Virus.

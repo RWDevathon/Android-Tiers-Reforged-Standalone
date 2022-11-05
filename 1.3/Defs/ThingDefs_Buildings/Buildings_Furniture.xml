@@ -13,7 +13,7 @@
 		</graphicData>
 		<thingClass>ATReforged.Building_ChargingBed</thingClass>
 		<tickerType>Rare</tickerType>
-		<designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+		<designationCategory>AndroidTiersDesignation</designationCategory>
 		<comps>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
@@ -74,7 +74,7 @@
         <label>Mechanic cabinet</label>
         <description>A small cabinet that can be used in conjunction with mechanical-compatible beds. It contains a number of useful tools for further enhancing mechanic operations.</description>
         <surfaceType>Item</surfaceType>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <rotatable>false</rotatable>
         <graphicData>
             <texPath>Things/Buildings/MechanicCabinet</texPath>

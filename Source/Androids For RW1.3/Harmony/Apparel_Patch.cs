@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class Apparel_Patch
-
     {
         // Dead mechanicals don't taint their clothes.
         [HarmonyPatch(typeof(Apparel), "Notify_PawnKilled")]

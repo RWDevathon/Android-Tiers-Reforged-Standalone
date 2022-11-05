@@ -10,9 +10,8 @@ using System;
 namespace ATReforged
 {
     internal class ThoughtWorker_AgeReversalDemanded_Patch
-
     {
-        // Mechanical units and surrogates do not demand age reversal.
+        // Mechanical units do not demand age reversal.
         [HarmonyPatch(typeof(ThoughtWorker_AgeReversalDemanded), "ShouldHaveThought")]
         public class CurrentStateInternal_Patch
         {
@@ -22,7 +21,7 @@ namespace ATReforged
                 if (!__result.Active)
                     return;
 
-                if (Utils.IsConsideredMechanical(p) || Utils.IsSurrogate(p))
+                if (Utils.IsConsideredMechanical(p))
                 {
                     __result = ThoughtState.Inactive;
                 }

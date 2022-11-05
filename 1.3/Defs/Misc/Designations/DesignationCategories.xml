@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <DesignationCategoryDef>
-        <defName>ATPP_DesignationAndroidTiers</defName>
+        <defName>AndroidTiersDesignation</defName>
         <label>Android Tiers</label>
         <description>Android Tiers related stuff</description>
         <order>499</order>

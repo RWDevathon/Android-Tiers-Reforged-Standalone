@@ -1,14 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
 using Verse;
-using Verse.AI;
-using System.Reflection;
 using UnityEngine;
-using System.Text;
-using Verse.Sound;
 
 namespace ATReforged
 {
@@ -21,7 +14,7 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool UpdateFlickDesignation_Prefix(Thing t)
             {
-                if (t.TryGetComp<CompSkyMind>() != null && t.TryGetComp<CompSkyMind>().connected && Utils.GCATPP.GetSkyMindCloudCapacity() > 0)
+                if (t.TryGetComp<CompSkyMind>() != null && t.TryGetComp<CompSkyMind>().connected && Utils.gameComp.GetSkyMindCloudCapacity() > 0)
                 {
                     CompFlickable compFlick = t.TryGetComp<CompFlickable>();
                     if (compFlick != null)

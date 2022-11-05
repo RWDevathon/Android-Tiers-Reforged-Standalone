@@ -7,16 +7,14 @@ namespace ATReforged
 {
     internal class Pawn_StyleTracker_Patch
     {
-        /*
-         * Prevent androids && surrogates from wanting to change their look
-         */
+        // Drones don't care about style.
         [HarmonyPatch(typeof(Pawn_StyleTracker), "RequestLookChange")]
         public class RequestLookChange_Patch
         {
             [HarmonyPrefix]
             public static bool Listener(Pawn ___pawn)
             {
-                if (Utils.IsConsideredMechanical(___pawn) || Utils.IsSurrogate(___pawn))
+                if (Utils.IsConsideredMechanicalDrone(___pawn))
                 {
                     return false;
                 }

@@ -11,6 +11,7 @@ namespace ATReforged
     internal class PawnGroupMakerUtility_Patch
 
     {
+        // Handle generation of groups of pawns so that foreign factions may use surrogates. These surrogates replace selected pawns of the group.
         [HarmonyPatch(typeof(PawnGroupMakerUtility), "GeneratePawns")]
         public class GeneratePawns_Patch
         {
@@ -31,7 +32,7 @@ namespace ATReforged
                     }
 
                     // Skip factions not allowed to use surrogates or groups that are too small
-                    if (!ATReforged_Settings.androidsAppearNaturally || parms.faction == null || !ATReforged_Settings.otherFactionsAllowedSurrogates || !Utils.FactionCanUseSkyMind(parms.faction.def) || nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
+                    if (parms.faction == null || !ATReforged_Settings.otherFactionsAllowedSurrogates || !Utils.FactionCanUseSkyMind(parms.faction.def) || nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
                     {
                         return;
                     }
@@ -75,7 +76,7 @@ namespace ATReforged
                         candidatesForReplacement.Remove(p);
                     }
 
-                    List<Pawn> candidateList = candidatesForReplacement.FastToList();
+                    List<Pawn> candidateList = candidatesForReplacement.ToList();
 
                     // Generate all surrogate pawns individually and copy everything from the candidate
                     foreach (Pawn chosenCandidate in candidateList)
@@ -114,7 +115,7 @@ namespace ATReforged
                         // If resulting surrogate is not a pawn that is not a valid surrogate type, abandon and use the original candidate pawn.
                         if (!Utils.ValidSurrogatePawnKindDefs.Contains(surrogate.kindDef))
                         {
-                            Log.Warning("Attempted to generate a surrogate of an illegal PawnKindDef. Aborting surrogate replacement attempt and using candidate pawn instead.");
+                            Log.Warning("[ATR] Attempted to generate a surrogate of an illegal PawnKindDef. Aborting surrogate replacement attempt and using candidate pawn instead.");
                             surrogate.Destroy();
                             ret.Add(chosenCandidate);
                             continue;
@@ -134,7 +135,7 @@ namespace ATReforged
                         // Give all equipment from the original candidate to the surrogate
                         if (chosenCandidate.equipment != null && surrogate.equipment != null)
                         {
-                            foreach (ThingWithComps equipment in chosenCandidate.equipment.AllEquipmentListForReading.FastToList())
+                            foreach (ThingWithComps equipment in chosenCandidate.equipment.AllEquipmentListForReading.ToList())
                             {
                                 try
                                 {
@@ -143,7 +144,7 @@ namespace ATReforged
                                 }
                                 catch (Exception er)
                                 {
-                                    Log.Warning("[ATPP] Failed to transfer equipment to new surrogate in PawnGroupMakerUtility " + er.Message + " " + er.StackTrace);
+                                    Log.Warning("[ATR] Failed to transfer equipment to new surrogate in PawnGroupMakerUtility " + er.Message + " " + er.StackTrace);
                                 }
                             }
                         }
@@ -153,7 +154,7 @@ namespace ATReforged
                         {
                             try
                             {
-                                foreach (Apparel apparel in chosenCandidate.apparel.WornApparel.FastToList())
+                                foreach (Apparel apparel in chosenCandidate.apparel.WornApparel.ToList())
                                 {
 
                                     // Check to see if this apparel can be worn by the surrogate

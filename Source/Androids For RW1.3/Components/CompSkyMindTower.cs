@@ -18,7 +18,15 @@ namespace ATReforged
         public override void PostDeSpawn(Map map)
         { 
             base.PostDeSpawn(map);
-            Utils.GCATPP.RemoveTower(this);
+            CompPowerTrader cpt = parent.TryGetComp<CompPowerTrader>();
+            if (cpt == null)
+            { // If there is no power supply to this server, then despawning is the only time it can turn off and drop capacity.
+                Utils.gameComp.RemoveTower(this);
+            }
+            else if (cpt.PowerOn)
+            { // If it does have a power supply, then make sure the power is on before reducing capacity, as offline towers provide no capacity in the first place.
+                Utils.gameComp.RemoveTower(this);
+            }
         }
 
         public override void ReceiveCompSignal(string signal)
@@ -28,10 +36,10 @@ namespace ATReforged
             switch (signal)
             {
                 case "PowerTurnedOn":
-                    Utils.GCATPP.AddTower(this);
+                    Utils.gameComp.AddTower(this);
                     break;
                 case "PowerTurnedOff":
-                    Utils.GCATPP.RemoveTower(this);
+                    Utils.gameComp.RemoveTower(this);
                     break;
             }
         }
@@ -43,9 +51,9 @@ namespace ATReforged
             if (parent.Map == null)
                 return base.CompInspectStringExtra();
 
-            ret.AppendLine("ATR_SkyMindNetworkSummary".Translate(Utils.GCATPP.GetSkyMindDevices().Count, Utils.GCATPP.GetSkyMindNetworkSlots()));
+            ret.AppendLine("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
 
-            return ret.TrimEnd().Append(base.CompInspectStringExtra()).ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
 
@@ -53,14 +61,14 @@ namespace ATReforged
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
-            CompPowerTrader cpt = parent.TryGetComp<CompPowerTrader>();
-            if (cpt == null)
-            { // If there is no power supply to this server, it can't be turned off normally. Just add it in and handle removing it separately.
-                Utils.GCATPP.AddTower(this);
-            }
-            else if (cpt.PowerOn)
-            { // If it does have a power supply, make sure it's on before adding it into the list.
-                Utils.GCATPP.AddTower(this);
+            // No need to handle anything upon loading a save - capacity is saved in the GameComponent and we should avoid adding extra capacity.
+            if (respawningAfterLoad)
+                return;
+
+            // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
+            if (parent.TryGetComp<CompPowerTrader>() == null)
+            { 
+                Utils.gameComp.AddTower(this);
             }
         }
     }

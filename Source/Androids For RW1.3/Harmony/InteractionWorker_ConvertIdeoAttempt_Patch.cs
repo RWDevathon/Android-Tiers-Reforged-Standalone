@@ -11,7 +11,7 @@ namespace ATReforged
 {
     internal class InteractionWorker_ConvertIdeoAttempt_Patch
     {
-        // Mechanical Drones are not valid targets for mechanical conversion.
+        // Mechanical Drones are not valid targets for ideological conversion.
         [HarmonyPatch(typeof(InteractionWorker_ConvertIdeoAttempt), "Interacted")]
         public class InteractionWorker_ConvertIdeoAttempt_Interactede_Patch
         {

@@ -44,7 +44,7 @@
         <Cleanliness>-2</Cleanliness>
         </statBases>
         <size>(1,2)</size>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <passability>PassThroughOnly</passability>
         <pathCost>100</pathCost>
         <hasInteractionCell>True</hasInteractionCell>
@@ -112,7 +112,7 @@
             <Cleanliness>-2</Cleanliness>
         </statBases>
         <size>(3,1)</size>
-        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
         <passability>PassThroughOnly</passability>
         <pathCost>100</pathCost>
         <hasInteractionCell>True</hasInteractionCell>

@@ -14,7 +14,7 @@ namespace ATReforged
         {
             if (!Utils.IsConsideredMechanical(pawn))
             {
-                Hediff hediff = HediffMaker.MakeHediff(hediffDef_Organic, pawn, null);
+                Hediff hediff = HediffMaker.MakeHediff(hediffDef_Organic, pawn);
                 float num;
                 if (severity > 0f)
                 {
@@ -29,7 +29,7 @@ namespace ATReforged
             }
             else
             {
-                Hediff hediff = HediffMaker.MakeHediff(hediffDef_Mechanical, pawn, null);
+                Hediff hediff = HediffMaker.MakeHediff(hediffDef_Mechanical, pawn);
                 float num;
                 if (severity > 0f)
                 {

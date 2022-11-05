@@ -16,6 +16,9 @@
                     <def>Framework</def>
                     <coverage>0.2</coverage>
                     <depth>Outside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
                 </li>
                 <li>
                     <def>InternalCorePump</def>
@@ -47,6 +50,9 @@
                     <def>MechanicalNeck</def>
                     <coverage>0.10</coverage>
                     <height>Top</height>
+                    <groups>
+                        <li>Neck</li>
+                    </groups>
                     <parts>
                         <li>
                             <def>Head</def>

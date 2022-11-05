@@ -3,7 +3,7 @@
  
     <ThingDef ParentName="AnimalAndroidThingBase">
         <defName>DroneMineralUnit</defName>
-        <label>Phytomining unit</label>
+        <label>Mineral unit</label>
         <description>These drones are ubiquitous in android societies on life-bearing worlds thanks to their specialized machinery capable of extracting minerals from organic material in order to refine and forge into steel. Their ravenous consumption of said organic matter has led to planet-wide bans on many worlds - and to many worlds being turned near lifeless by roaming android "pastoralists" who take "herds" of these creatures from planet to planet.</description>
         <statBases>
             <MoveSpeed>2.00</MoveSpeed>
@@ -62,7 +62,7 @@
   
     <PawnKindDef ParentName="AnimalAndroidKindBaseDog">
         <defName>DroneMineralUnit</defName>
-        <label>Phytomining unit</label>
+        <label>Mineral unit</label>
         <race>DroneMineralUnit</race>
         <canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.5</ecoSystemWeight>

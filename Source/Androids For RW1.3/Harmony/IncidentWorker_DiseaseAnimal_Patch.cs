@@ -10,7 +10,6 @@ using System;
 namespace ATReforged
 {
     internal class IncidentWorker_DiseaseAnimal_Patch
-
     {
         // Remove all mechanical animals from the candidate list for animal diseases.
         [HarmonyPatch(typeof(IncidentWorker_DiseaseAnimal), "PotentialVictimCandidates")]

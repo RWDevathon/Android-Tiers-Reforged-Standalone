@@ -220,11 +220,6 @@
 				<amount>4</amount>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>BRArm</li>
-			<li>ATR_DamagedCore</li>
-			<li>ATR_DecayedFrame</li>
-		</forcedHediffs>
 		<workDisables>
 			<li>Social</li>
 			<li>Intellectual</li>
@@ -380,7 +375,7 @@
 			</li>
 		</skillGains>
 		<forcedHediffs>
-			<li>MiningArm</li>
+			<li>ATR_MiningArm</li>
 		</forcedHediffs>
 	</AlienRace.BackstoryDef>
 
@@ -854,9 +849,7 @@
 			</li>
 		</skillGains>
 		<forcedHediffs>
-			<li>MakeshiftRArm</li>
-			<li>ATR_DamagedCore</li>
-			<li>ATR_DecayedFrame</li>
+			<li>ATR_MakeshiftMechArm</li>
 		</forcedHediffs>
 		<workDisables>
 			<li>Firefighting</li>
@@ -1088,9 +1081,6 @@
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>BRArm</li>
-		</forcedHediffs>
 		<forcedTraits>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
@@ -1128,9 +1118,6 @@
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>HydraulicArm</li>
-		</forcedHediffs>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
@@ -1695,9 +1682,6 @@
 		<workDisables>
 			<li>Intellectual</li>
 		</workDisables>
-		<forcedHediffs>
-			<li>ATR_DamagedCore</li>
-		</forcedHediffs>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
@@ -1726,8 +1710,5 @@
 			<li>ManualSkilled</li>
 			<li>Intellectual</li>
 		</workDisables>
-		<forcedHediffs>
-			<li>ATR_DamagedCore</li>
-		</forcedHediffs>
 	</AlienRace.BackstoryDef>
 </Defs>

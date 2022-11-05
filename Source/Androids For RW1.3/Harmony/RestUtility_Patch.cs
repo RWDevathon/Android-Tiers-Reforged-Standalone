@@ -11,12 +11,11 @@ using UnityEngine;
 namespace ATReforged
 {
     internal class RestUtility_Patch
-
     {
+        // Ensure mechanical pods are not occupied by non-charge-capable pawns and that mechanicals don't take non-charging beds.
         [HarmonyPatch(typeof(RestUtility), "IsValidBedFor")]
         public class IsValidBedFor_Patch
         {
-            // Ensure the mechanical "beds" are not occupied by non-charge-capable pawns and that mechanicals don't take non-charging beds.
             [HarmonyPostfix]
             public static void Listener(ref bool __result, Thing bedThing, Pawn sleeper, Pawn traveler, bool checkSocialProperness, bool allowMedBedEvenIfSetToNoCare, bool ignoreOtherReservations, GuestStatus? guestStatus = null)
             {

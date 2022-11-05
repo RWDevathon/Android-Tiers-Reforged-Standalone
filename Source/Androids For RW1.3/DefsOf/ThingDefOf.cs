@@ -26,6 +26,18 @@ namespace ATReforged
 
         public static ThingDef M8Mech;
 
+        public static ThingDef DroneChemUnit;
+
+        public static ThingDef MicroScyther;
+
+        public static ThingDef DroneMineralUnit;
+
+        public static ThingDef DroneNutritionUnit;
+
+        public static ThingDef DroneTORT;
+
+        public static ThingDef DroneWatchdog;
+
         public static ThingDef MechFallBeam;
 
         public static ThingDef HospitalBed;

@@ -10,16 +10,15 @@ using System;
 namespace ATReforged
 {
     internal class HediffUtility_Patch
-
     {
+        // Mechanical units get a large number of bonus "implanted" parts when checked for number so transhumanists love being mechanical.
         [HarmonyPatch(typeof(HediffUtility), "CountAddedAndImplantedParts")]
         public class CountAddedParts_Patch
         {
             [HarmonyPostfix]
             public static void Listener(HediffSet hs, ref int __result)
             {
-                //Si transhumaniste et a un corp d'androide on simule +10 addedParts
-                if (hs.pawn.story != null && hs.pawn.story.traits.HasTrait(TraitDefOf.Transhumanist) && Utils.IsConsideredMechanical(hs.pawn))
+                if (Utils.IsConsideredMechanical(hs.pawn))
                 {
                     __result += 20;
                 }

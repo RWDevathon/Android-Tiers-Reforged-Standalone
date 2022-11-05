@@ -9,7 +9,6 @@ namespace ATReforged
             compClass = typeof(CompSuperComputer);
         }
 
-        public string ambiance;
         public int passivePointGeneration = 0;
         public int percentageWorkBoost = 0;
         public int pointStorage = 0;

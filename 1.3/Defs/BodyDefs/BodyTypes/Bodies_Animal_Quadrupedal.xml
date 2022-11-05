@@ -16,10 +16,16 @@
                     <def>Framework</def>
                     <coverage>0.3</coverage>
                     <depth>Outside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
                 </li>
                 <li>
                     <def>CounterWeightTail</def>
                     <coverage>0.07</coverage>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
                 </li>
                 <li>
                     <def>InternalGenerator</def>
@@ -75,6 +81,9 @@
                     <def>MechanicalNeck</def>
                     <coverage>0.10</coverage>
                     <height>Top</height>
+                    <groups>
+                        <li>Neck</li>
+                    </groups>
                     <parts>
                         <li>
                             <def>Head</def>

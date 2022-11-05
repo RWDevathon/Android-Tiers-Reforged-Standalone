@@ -5,6 +5,8 @@
 	
 	<ATR_ReloadRequired>Reload Required.</ATR_ReloadRequired>
 	<ATR_ReloadRequiredDesc>Some changes will only take effect on reloading saves (Not the entire game).</ATR_ReloadRequiredDesc>
+
+    <ATR_ExpandMenu>Expand/Collapse</ATR_ExpandMenu>
 	
 	<!-- Mod Settings Page Keys -->
 	<ATR_SettingsTabTitle>Configurations</ATR_SettingsTabTitle>
@@ -30,22 +32,11 @@
 		<!-- Commonality Settings -->
 	<ATR_PlayerOnlyNote>If disabled, androids will only exist when built by the player</ATR_PlayerOnlyNote>
 	<ATR_AndroidsAppearNaturally>Androids can appear as parts of factions or events</ATR_AndroidsAppearNaturally>
-	<!--
-	<ATR_SocietiesPossessAndroids>Factions have androids as slaves</ATR_SocietiesPossessAndroids>
-	<ATR_AndroidRelatedNote>This enables related events and pawns</ATR_AndroidRelatedNote>
-	<ATR_AndroidRevolutionaryWarAllowed>Enslaved androids may rise up against their organic masters</ATR_AndroidRevolutionaryWarAllowed>
-	<ATR_AndroidRevolutionaryWarVictory>Androids have "liberated" the planet from organic tyranny</ATR_AndroidRevolutionaryWarVictory>
-	<ATR_SocietiesIntegrateAndroids>Factions have free android members</ATR_SocietiesIntegrateAndroids>
-	-->
 	
 	<ATR_AndroidFactionSettings>What role do android factions play? Only affects NEW games</ATR_AndroidFactionSettings>
 	<ATR_AndroidSocietiesExist>Androids have their own factions</ATR_AndroidSocietiesExist>
 	<ATR_AndroidRaidersExist>Androids have formed their own pirate collective</ATR_AndroidRaidersExist>
 	<ATR_AndroidRaidersDesc>Acts like vanilla's Pirate faction</ATR_AndroidRaidersDesc>
-	<!--
-	<ATR_AndroidSupremacistsExist>Androids have created a xenophobic purity faction</ATR_AndroidSupremacistsExist>
-	<ATR_AndroidSupremacistsDesc>Acts like vanilla's Empire faction</ATR_AndroidSupremacistsDesc>
-	-->
 	<ATR_AndroidUnionistsExist>Androids dedicated to collective survival have unified</ATR_AndroidUnionistsExist>
 	<ATR_AndroidUnionistsDesc>Acts like vanilla's Outlander faction</ATR_AndroidUnionistsDesc>
 	
@@ -58,26 +49,26 @@
 	
 	<ATR_SettingsPresetDefault>Default</ATR_SettingsPresetDefault>
 	<ATR_SettingsPresetCustom>Custom</ATR_SettingsPresetCustom>
-	<!--
-	<ATR_SettingsPresetDigitalWarfare>Digital Warfare</ATR_SettingsPresetDigitalWarfare>
-	<ATR_SettingsPresetNoConnections>No Connections</ATR_SettingsPresetNoConnections>
-	<ATR_SettingsPresetMetalSuperiority>Metal Superiority</ATR_SettingsPresetMetalSuperiority>
-	<ATR_SettingsPresetFleshSuperiority>Flesh Superiority</ATR_SettingsPresetFleshSuperiority>
-	-->
 	
 	<ATR_SettingsConsideredAndroid>Androids</ATR_SettingsConsideredAndroid>
 	<ATR_SettingsNotConsideredAndroid>Not Androids</ATR_SettingsNotConsideredAndroid>
 	<ATR_SettingsConsideredDrone>Drones</ATR_SettingsConsideredDrone>
 	<ATR_SettingsNotConsideredDrone>Not Drones</ATR_SettingsNotConsideredDrone>
-	<ATR_SettingsConsideredAnimal>Animals</ATR_SettingsConsideredAnimal>
-	<ATR_SettingsNotConsideredAnimals>Not Animals</ATR_SettingsNotConsideredAnimals>
+	<ATR_SettingsConsideredAnimal>Mechanical Animals</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
 	
 	<!-- Power Settings -->
-	<ATR_useBatteryByDefault>New mechanical units default to using battery.</ATR_useBatteryByDefault>
 	<ATR_wattsConsumedPerBodySize>Power use per 1 body size when charging [default: 500]</ATR_wattsConsumedPerBodySize>
 	<ATR_batteryPercentagePerRareTick>Percentage of battery charged per Rare Tick (~4 seconds) [default: 7%]</ATR_batteryPercentagePerRareTick>
 	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Mechanical units handle nutrition differently than organics.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
 	<ATR_mechanicalBioprocessingEfficiency>Nutrition efficiency [default: 50%]</ATR_mechanicalBioprocessingEfficiency>
+	
+	<!-- Security Settings -->
+	<ATR_EnemyHacksOccur>Hostile hacking is enabled.</ATR_EnemyHacksOccur>
+	<ATR_ChanceAlliesInterceptHack>Chance to intercept hacks against you per allied faction</ATR_ChanceAlliesInterceptHack>
+	<ATR_PointsGainedOnInterceptPercentage>Points gained when allies intercept as percentage of attack</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_EnemyHackAttackStrengthModifier>Enemy hack strength modifier</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_PercentageOfValueUsedForRansoms>Percentage of item value demanded in ransom attack</ATR_PercentageOfValueUsedForRansoms>
 	
 	<!-- Connectivity Settings -->
 	<ATR_skillPointConversionRate>Amount of base XP generated per skill point [default: 10]</ATR_skillPointConversionRate>

@@ -2,8 +2,6 @@
 using System.Text;
 using Verse;
 using RimWorld;
-using UnityEngine;
-using Verse.Sound;
 using System.Collections.Generic;
 
 namespace ATReforged
@@ -31,12 +29,7 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
 
-            if (respawningAfterLoad)
-            {
-                if (parent.TryGetComp<CompPowerTrader>().PowerOn)
-                    StartSustainer();
-            }
-            else
+            if (!respawningAfterLoad)
             {
                 serverMode = Props.serverMode;
             }
@@ -46,14 +39,12 @@ namespace ATReforged
         {
             if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
             {
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
-                StopSustainer();
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
             }
 
             if (signal == "PowerTurnedOn")
             {
-                Utils.GCATPP.AddServer(building, serverMode, Props.pointStorage);
-                StartSustainer();
+                Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
             }
         }
 
@@ -113,7 +104,7 @@ namespace ATReforged
                         action = delegate ()
                         {
                             serverMode = ServerType.SkillServer;
-                            Utils.GCATPP.AddServer(building, serverMode, Props.pointStorage);
+                            Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
                         }
                     };
                     break;
@@ -128,61 +119,42 @@ namespace ATReforged
 
             if (serverMode == ServerType.SkillServer)
             {
-                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.GCATPP.GetSkillPoints(), Utils.GCATPP.GetSkillPointCapacity()))
+                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
                    .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.SecurityServer)
             {
-                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.GCATPP.GetSecurityPoints(), Utils.GCATPP.GetSecurityPointCapacity()))
+                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
                    .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.HackingServer)
             {
-                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.GCATPP.GetHackingPoints(), Utils.GCATPP.GetHackingPointCapacity()))
+                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
                    .AppendLine("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
             }
-            return ret.TrimEnd().ToString();
+            return ret.ToString();
         }
 
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
-            StopSustainer();
 
             // Only servers with types get removed from the lists
             if (serverMode != ServerType.None && !building.IsBrokenDown() && parent.TryGetComp<CompPowerTrader>().PowerOn)
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
-        }
-
-        private void StartSustainer()
-        {
-            if (sustainer == null && Props.ambiance != "None" && !ATReforged_Settings.disableServersAmbiance)
-            {
-                SoundInfo info = SoundInfo.InMap(parent, MaintenanceType.None);
-                sustainer = SoundDef.Named(Props.ambiance).TrySpawnSustainer(info);
-            }
-        }
-
-        private void StopSustainer()
-        {
-            if (sustainer != null && Props.ambiance != "None")
-            {
-                sustainer.End();
-                sustainer = null;
-            }
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
         }
 
         public void ChangeServerMode(ServerType newMode)
         {
             try
             {
-                Utils.GCATPP.RemoveServer(building, serverMode, Props.pointStorage);
-                Utils.GCATPP.AddServer(building, newMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.AddServer(building, newMode, Props.pointStorage);
                 serverMode = newMode;
             }
             catch (Exception ex)
@@ -191,7 +163,6 @@ namespace ATReforged
             }
         }
 
-        private Sustainer sustainer;
         private Building building;
         private ServerType serverMode = ServerType.SkillServer;
     }

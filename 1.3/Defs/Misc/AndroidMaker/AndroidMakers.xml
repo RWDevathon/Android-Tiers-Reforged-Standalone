@@ -81,7 +81,7 @@
 
     <ThingDef ParentName="GeneratorBase">
         <defName>MineralUnitGenerator</defName>
-        <label>Phytomining Unit</label>
+        <label>Mineral Unit</label>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
                 <pawnKind>DroneMineralUnit</pawnKind>

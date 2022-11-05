@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Text;
 using Verse;
 using RimWorld;
 using UnityEngine;
-using Verse.Sound;
 
 namespace ATReforged
 {
@@ -65,7 +63,7 @@ namespace ATReforged
 
             //Enregistrement dans la liste  dispositifs senseible a la temperature
             if (parent != null)
-                Utils.GCATPP.PushHeatSensitiveDevice((Building)parent);
+                Utils.gameComp.PushHeatSensitiveDevice((Building)parent);
         }
 
         // Checker for heat on normal Ticks. 250x reduced impact to check heat damage.
@@ -169,7 +167,7 @@ namespace ATReforged
 
         public override void PostDeSpawn(Map map)
         {
-            Utils.GCATPP.PopHeatSensitiveDevice((Building)parent);
+            Utils.gameComp.PopHeatSensitiveDevice((Building)parent);
         }
 
         public override string CompInspectStringExtra()

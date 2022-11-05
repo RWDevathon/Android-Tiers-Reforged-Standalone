@@ -11,16 +11,16 @@ namespace ATReforged
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             // Skip pawns that can't connect to the SkyMind.
-            if (!Utils.PawnCanUseSkyMind(p))
+            if (!Utils.HasCloudCapableImplant(p))
                 return false;
 
             // Skip pawns that can be but aren't connected to the SkyMind
-            if (!Utils.GCATPP.HasSkyMindConnection(p))
+            if (!Utils.gameComp.HasSkyMindConnection(p))
             {
                 return false;
             }
 
-            int num = Utils.GCATPP.GetCloudPawns().Where(pawn => !pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_MindOperation) && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count();
+            int num = Utils.gameComp.GetCloudPawns().Where(pawn => !pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_MindOperation) && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count();
             if (num >= 15)
             {
                 return ThoughtState.ActiveAtStage(2);

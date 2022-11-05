@@ -10,11 +10,10 @@ using System;
 namespace ATReforged
 {
     internal class JobGiver_GetJoy_Patch
-
     {
         // Mechanical Drones do not have joy needs.
         [HarmonyPatch(typeof(JobGiver_GetJoy), "TryGiveJob")]
-        public class GetPriority_Patch
+        public class TryGiveJob_Patch
         {
             [HarmonyPostfix]
             public static void Listener(Pawn pawn, ref Job __result)

@@ -29,34 +29,6 @@
     </SoundDef>
 
     <SoundDef>
-      <defName>AtlasMutant_Angry</defName>
-      <context>MapOnly</context>
-      <eventNames />
-      <subSounds>
-        <li>
-          <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mutant/AtlasMutant_Angry</clipFolderPath>
-            </li>
-          </grains>
-          <volumeRange>
-            <min>15</min>
-            <max>25</max>
-          </volumeRange>
-          <pitchRange>
-            <min>0.85</min>
-            <max>1.00</max>
-          </pitchRange>
-          <distRange>
-            <min>0</min>
-            <max>90</max>
-          </distRange>
-          <sustainLoop>False</sustainLoop>
-        </li>
-      </subSounds>
-    </SoundDef>
-
-    <SoundDef>
       <defName>AtlasMutant_Death</defName>
       <context>MapOnly</context>
       <eventNames />
@@ -64,7 +36,7 @@
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mutant/AtlasMutant_Angry</clipFolderPath>
+              <clipFolderPath>Mutant/AtlasMutant_Death</clipFolderPath>
             </li>
           </grains>
           <volumeRange>

@@ -31,6 +31,84 @@
 					<aliencrowntypes>
 						<li>Average_Normal</li>
 					</aliencrowntypes>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li> <!--Khaki-->
+										<weight>10</weight>
+										<min>RGBA(74, 90, 41, 255)</min>
+										<max>RGBA(74, 90, 41, 255)</max>
+									</li>
+									<li> <!--Green-->
+										<weight>4</weight>
+										<min>RGBA(112, 158, 97, 255)</min>
+										<max>RGBA(112, 158, 97, 255)</max>
+									</li>
+									<li> <!--White-->
+										<weight>50</weight>
+										<min>RGBA(255, 255, 255, 255)</min>
+										<max>RGBA(255, 255, 255, 255)</max>
+									</li>
+									<li> <!--Black-->
+										<weight>10</weight>
+										<min>RGBA(45, 45, 45, 255)</min>
+										<max>RGBA(45, 45, 45, 255)</max>
+									</li>
+									<li> <!--Gray-->
+										<weight>30</weight>
+										<min>RGBA(127, 127, 127, 255)</min>
+										<max>RGBA(127, 127, 127, 255)</max>
+									</li>
+									<li> <!--Blue-->
+										<weight>10</weight>
+										<min>RGBA(67, 87, 159, 255)</min>
+										<max>RGBA(67, 87, 159, 255)</max>
+									</li>
+									<li> <!--Crimson-->
+										<weight>4</weight>
+										<min>RGBA(134, 23, 22, 255)</min>
+										<max>RGBA(134, 23, 22, 255)</max>
+									</li>
+									<li> <!--Orange-->
+										<weight>10</weight>
+										<min>RGBA(227, 131, 12, 255)</min>
+										<max>RGBA(227, 131, 12, 255)</max>
+									</li>
+									<li> <!--Yellow-->
+										<weight>4</weight>
+										<min>RGBA(207, 227, 12, 255)</min>
+										<max>RGBA(207, 227, 12, 255)</max>
+									</li>
+									<li> <!--Purple-->
+										<weight>4</weight>
+										<min>RGBA(148, 108, 169, 255)</min>
+										<max>RGBA(148, 108, 169, 255)</max>
+									</li>
+									<li> <!--Pink-->
+										<weight>4</weight>
+										<min>RGBA(179, 130, 155, 255)</min>
+										<max>RGBA(179, 130, 155, 255)</max>
+									</li>
+									<li> <!--Cyan-->
+										<weight>4</weight>
+										<min>RGBA(38, 164, 163, 255)</min>
+										<max>RGBA(38, 164, 163, 255)</max>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<min>RGBA(255, 255, 255, 255)</min>
+										<max>RGBA(255, 255, 255, 255)</max>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
 				</alienPartGenerator>
             </generalSettings>
 			<styleSettings>
@@ -147,6 +225,16 @@
 				<cannotReceiveThoughtsAtAll>true</cannotReceiveThoughtsAtAll>
 			</thoughtSettings>
         </alienRace>
+		<statBases>
+			<MarketValue>18000</MarketValue>
+			<MoveSpeed>5.20</MoveSpeed>
+			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
+			<ComfyTemperatureMax>200</ComfyTemperatureMax>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<GlobalLearningFactor>0.4</GlobalLearningFactor>
+			<Mass>450</Mass>
+		</statBases>
         <race>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
@@ -157,6 +245,7 @@
 			<baseBodySize>5</baseBodySize>
 			<ageGenerationCurve>
 				<points>
+                    <li>(0,0)</li>
 					<li>(100,0)</li>
 					<li>(200,2)</li>
 					<li>(800,4)</li>

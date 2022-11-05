@@ -11,7 +11,7 @@ namespace ATReforged
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(JobDefOf));
         }
-        public static JobDef ATPP_GoReloadBattery;
+        public static JobDef RechargeBattery;
 
         public static JobDef ResurrectMechanical;
 
