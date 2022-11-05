@@ -31,12 +31,7 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
 
-            if (respawningAfterLoad)
-            {
-                if (parent.TryGetComp<CompPowerTrader>().PowerOn)
-                    StartSustainer();
-            }
-            else
+            if (!respawningAfterLoad)
             {
                 serverMode = Props.serverMode;
             }
@@ -47,13 +42,11 @@ namespace ATReforged
             if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
             {
                 Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
-                StopSustainer();
             }
 
             if (signal == "PowerTurnedOn")
             {
                 Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
-                StartSustainer();
             }
         }
 
@@ -152,29 +145,10 @@ namespace ATReforged
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
-            StopSustainer();
 
             // Only servers with types get removed from the lists
             if (serverMode != ServerType.None && !building.IsBrokenDown() && parent.TryGetComp<CompPowerTrader>().PowerOn)
                 Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
-        }
-
-        private void StartSustainer()
-        {
-            if (sustainer == null && Props.ambiance != "None" && !ATReforged_Settings.disableServersAmbiance)
-            {
-                SoundInfo info = SoundInfo.InMap(parent, MaintenanceType.None);
-                sustainer = SoundDef.Named(Props.ambiance).TrySpawnSustainer(info);
-            }
-        }
-
-        private void StopSustainer()
-        {
-            if (sustainer != null && Props.ambiance != "None")
-            {
-                sustainer.End();
-                sustainer = null;
-            }
         }
 
         public void ChangeServerMode(ServerType newMode)
@@ -191,7 +165,6 @@ namespace ATReforged
             }
         }
 
-        private Sustainer sustainer;
         private Building building;
         private ServerType serverMode = ServerType.SkillServer;
     }

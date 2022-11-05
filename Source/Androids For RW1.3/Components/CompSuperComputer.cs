@@ -25,18 +25,8 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
 
-            if (Props.ambiance != "None")
-            {
-                ambiance = SoundDef.Named(Props.ambiance);
-            }
-
             // The server lists need to know how much storage and point generation exists for each server mode. This adds it to all three types. It won't double-add if it was already contained.
             Utils.gameComp.AddServer(building, Props.pointStorage);
-
-            if (respawningAfterLoad)
-            {
-                StartSustainer();
-            }
         }
 
         public override void CompTickLong()
@@ -66,33 +56,11 @@ namespace ATReforged
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
-            StopSustainer();
 
             // The server lists need to know how much storage exists for each server mode. This removes it from all three types.
             Utils.gameComp.RemoveServer(building, Props.pointStorage);
         }
 
-
-        private void StartSustainer()
-        {
-            if (sustainer == null && Props.ambiance != "None" && !ATReforged_Settings.disableServersAmbiance)
-            {
-                SoundInfo info = SoundInfo.InMap(parent, MaintenanceType.None);
-                sustainer = ambiance.TrySpawnSustainer(info);
-            }
-        }
-
-        private void StopSustainer()
-        {
-            if (sustainer != null && Props.ambiance != "None")
-            {
-                sustainer.End();
-                sustainer = null;
-            }
-        }
-
-        private Sustainer sustainer;
-        private SoundDef ambiance;
         private Building building = null;
     }
 }

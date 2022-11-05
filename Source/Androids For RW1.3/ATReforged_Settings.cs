@@ -92,8 +92,6 @@ namespace ATReforged
         public static float basePointsNeededForPassion = 1000f;
 
         // STATS SETTINGS
-            // Settings for Servers
-        public static bool disableServersAmbiance = false;
 
         // INTERNAL SETTINGS
             // Settings page
