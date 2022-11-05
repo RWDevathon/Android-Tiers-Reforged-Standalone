@@ -55,7 +55,7 @@ namespace ATReforged
                     Utils.removeMindBlacklistedTrait(__result);
                     Utils.ReconfigureDrone(__result);
 
-                    // By default, all generated mechanical androids get an autonomous core. Cases where that is not desired can remove it there.
+                    // By default, all generated mechanical androids that reach this point get an autonomous core. Cases where that is not desired can remove it there.
                     if (Utils.IsConsideredMechanicalAndroid(__result))
                         __result.health.AddHediff(HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                 }

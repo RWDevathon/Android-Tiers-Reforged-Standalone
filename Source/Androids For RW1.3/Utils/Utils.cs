@@ -653,7 +653,7 @@ namespace ATReforged
             }
 
             // If the pawn has a cloud capable implant or is in the SkyMind network already, then it is valid.
-            return HasCloudCapableImplant(pawn) || gameComp.GetCloudPawns().Contains(pawn);
+            return HasCloudCapableImplant(pawn);
         }
 
         // Returns a list of all surrogates without hosts in caravans. Return null if there are none.

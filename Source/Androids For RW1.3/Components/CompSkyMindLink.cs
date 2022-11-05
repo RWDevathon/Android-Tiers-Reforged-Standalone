@@ -365,7 +365,7 @@ namespace ATReforged
             yield break;
         }
 
-        // Controller for the state of viruses in the parent. -1 = clean, 1 = sleeper, 2 = cryptolocker, 3 = breaker. Ticker handled by the GC to avoid calculating when clean.
+        // Controller for the mental operation state of the parent. -2 = surrogate, -1 = No Op, > -1 is some sort of operation. GameComponent handles checks for linked pawns.
         public int Linked
         {
             get
@@ -750,9 +750,17 @@ namespace ATReforged
 
         // Operation tracker. -2 = player surrogate operation, -1 = No operation, 1 = permutation, 2 = duplication, 3 = absorption, 4 = download, 5 = upload, 6 = replication
         private int networkOperationInProgress = -1;
+
+        // Tracker for the recipient pawn of a mind operation that requires two linked units.
         private Pawn recipientPawn = null;
+
+        // Tracker for all surrogate pawns. If a pawn is a surrogate, it will have exactly one link - to its host. If it is a controller, it has links to all surrogates.
         private HashSet<Pawn> surrogatePawns = new HashSet<Pawn>();
+
+        // Tracker for if this pawn is in control mode (allowing control of surrogates).
         private bool controlMode = false;
+
+        // Tracker for whether this pawn is not a player surrogate. Foreign surrogates do not have links to their controllers and are very limited in what they can do.
         public bool isForeign = false;
     }
 }
