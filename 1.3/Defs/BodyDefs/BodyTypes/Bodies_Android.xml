@@ -16,6 +16,9 @@
                     <def>Framework</def>
                     <coverage>0.2</coverage>
                     <depth>Outside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
                 </li>
                 <li>
                     <def>InternalGenerator</def>
@@ -307,6 +310,14 @@
                             </parts>
                         </li>
                     </parts>
+                </li>
+                <li>
+                    <def>Waist</def>
+                    <coverage>0</coverage>
+                    <height>Bottom</height>
+                    <groups>
+                        <li>Waist</li>
+                    </groups>
                 </li>
                 <li>
                     <def>MechanicalLeg</def>
