@@ -752,8 +752,10 @@
 				<painOffset>0.05</painOffset>
 				<statOffsets>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 
 			<li>
@@ -762,8 +764,10 @@
 				<painOffset>0.1</painOffset>
 				<statOffsets>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 
 			<li>
@@ -773,8 +777,10 @@
 				<vomitMtbDays>1.5</vomitMtbDays>
 				<statOffsets>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 
 			<li>
@@ -784,8 +790,10 @@
 				<vomitMtbDays>1</vomitMtbDays>
 				<statOffsets>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 		</stages>
 	</HediffDef>
@@ -839,8 +847,10 @@
 			<li>
 				<statOffsets>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 		</stages>
 		<comps>

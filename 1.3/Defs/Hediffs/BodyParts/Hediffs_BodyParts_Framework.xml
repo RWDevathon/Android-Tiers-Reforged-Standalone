@@ -113,8 +113,10 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
 			</li>
 		</stages>
         <spawnThingOnRemoved>CompositePlating</spawnThingOnRemoved>
@@ -393,8 +395,10 @@
                     <MeleeDodgeChance>-10</MeleeDodgeChance>
                     <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
                     <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
-                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
                 </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>SuppressorFrame</spawnThingOnRemoved>
@@ -443,10 +447,12 @@
                     <ArmorRating_Heat>1.5</ArmorRating_Heat>
                     <Insulation_Heat>100</Insulation_Heat>
                     <Insulation_Cold>50</Insulation_Cold>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
                     <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</SuppressionPower>
                     <ArrestSuccessChance>0.5</ArrestSuccessChance>
                 </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>GuardianFrame</spawnThingOnRemoved>

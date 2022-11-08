@@ -20,7 +20,8 @@
         <slot>Childhood</slot>
         <spawnCategories>
 			<li>ATR_ArchotechAndroids</li>
-		</spawnCategories></AlienRace.BackstoryDef>
+		</spawnCategories>
+    </AlienRace.BackstoryDef>
         
 	<AlienRace.BackstoryDef>
 		<defName>MechanicalArchotech</defName>
