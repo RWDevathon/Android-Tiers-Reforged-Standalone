@@ -41,8 +41,8 @@ namespace ATReforged
 
         // POWER SETTINGS
         public static int wattsConsumedPerBodySize;
-        public static bool mechanicalsHaveDifferentBioprocessingEfficiency;
-        public static float mechanicalBioprocessingEfficiency;
+        public static bool chargeCapableMeansDifferentBioEfficiency;
+        public static float chargeCapableBioEfficiency;
         public static float batteryPercentagePerRareTick;
 
         public static HashSet<ThingDef> canUseBattery;
@@ -246,10 +246,10 @@ namespace ATReforged
 
                     listingStandard.GapLine();
 
-                    listingStandard.CheckboxLabeled("ATR_mechanicalsHaveDifferentBioprocessingEfficiency".Translate(), ref mechanicalsHaveDifferentBioprocessingEfficiency, onChange: onChange);
-                    if (mechanicalsHaveDifferentBioprocessingEfficiency)
+                    listingStandard.CheckboxLabeled("ATR_chargeCapableMeansDifferentBioEfficiency".Translate(), ref chargeCapableMeansDifferentBioEfficiency, onChange: onChange);
+                    if (chargeCapableMeansDifferentBioEfficiency)
                         {
-                        listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref mechanicalBioprocessingEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_chargeCapableBioEfficiency".Translate(), ref chargeCapableBioEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
                 }
@@ -336,8 +336,8 @@ namespace ATReforged
 
             // POWER SETTINGS
             wattsConsumedPerBodySize = 500;
-            mechanicalsHaveDifferentBioprocessingEfficiency = true;
-            mechanicalBioprocessingEfficiency = 0.5f;
+            chargeCapableMeansDifferentBioEfficiency = true;
+            chargeCapableBioEfficiency = 0.5f;
             batteryPercentagePerRareTick = 0.07f;
 
             // SECURITY SETTINGS
@@ -472,8 +472,8 @@ namespace ATReforged
             /* === POWER === */
 
             Scribe_Values.Look(ref wattsConsumedPerBodySize, "ATR_wattsConsumedPerBodySize", 500);
-            Scribe_Values.Look(ref mechanicalsHaveDifferentBioprocessingEfficiency, "ATR_mechanicalsHaveDifferentBioprocessingEfficiency", true);
-            Scribe_Values.Look(ref mechanicalBioprocessingEfficiency, "ATR_mechanicalBioprocessingEfficiency", 0.5f);
+            Scribe_Values.Look(ref chargeCapableMeansDifferentBioEfficiency, "ATR_chargeCapableMeansDifferentBioEfficiency", true);
+            Scribe_Values.Look(ref chargeCapableBioEfficiency, "ATR_chargeCapableBioEfficiency", 0.5f);
             Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);
 
             Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
