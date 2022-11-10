@@ -40,7 +40,7 @@ namespace ATReforged
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
-            if(!Medical && !AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this)
+            if(Medical || (!AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this))
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }
