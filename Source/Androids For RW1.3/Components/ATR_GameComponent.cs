@@ -313,7 +313,9 @@ namespace ATReforged
             while (SkyMindCloudCapacity < cloudPawns.Count())
             {
                 // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections.
-                cloudPawns.RandomElement().Kill(null);
+                Pawn victim = cloudPawns.RandomElement();
+                cloudPawns.Remove(victim);
+                victim.Kill(null);
             }
         }
 

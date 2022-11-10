@@ -26,7 +26,7 @@ namespace ATReforged
             base.PostDeSpawn(map);
 
             // Check to see if the core actually should disappear or not. Buildings always will, but despawned, living Pawns still qualify as cores.
-            if (parent is Building || ((Pawn)parent).Dead)
+            if ((parent is Building && parent.TryGetComp<CompPowerTrader>().PowerOn) || ((Pawn)parent).Dead)
             {
                 Utils.gameComp.RemoveCore(this);
             }
