@@ -1,9 +1,8 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 
 namespace ATReforged
 {
-        [DefOf]
+    [DefOf]
         public static class TraitDefOf
         {
             static TraitDefOf()

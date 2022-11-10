@@ -1,14 +1,9 @@
-﻿using Mono.Unix.Native;
-using RimWorld;
-using RimWorld.QuestGen;
+﻿using RimWorld;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using static ATReforged.ListingExtensions;
-using static System.Collections.Specialized.BitVector32;
 
 namespace ATReforged
 {
@@ -524,7 +519,7 @@ namespace ATReforged
                 Find.LetterStack.ReceiveLetter("ATR_RelationshipRetaliation".Translate(), "ATR_RelationshipRetaliationDesc".Translate(goodwillImpact), LetterDefOf.NegativeEvent);
             }
         }
-
+        
         // Generate and return the success chance of an operation.
         protected float OperationSuccessChance(float baseSuccessChance, float baseCost, float costModifier)
         {

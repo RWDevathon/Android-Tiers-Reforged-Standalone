@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace ATReforged

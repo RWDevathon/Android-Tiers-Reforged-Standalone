@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ATReforged
+﻿namespace ATReforged
 {
     public static class Enums
     { // If it's a button, it should have an enumeration!

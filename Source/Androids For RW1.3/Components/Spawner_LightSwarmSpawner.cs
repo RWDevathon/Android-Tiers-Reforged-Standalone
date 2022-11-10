@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Verse;
+﻿using Verse;
 using RimWorld;
-using Verse.AI;
 
 namespace ATReforged
 {
