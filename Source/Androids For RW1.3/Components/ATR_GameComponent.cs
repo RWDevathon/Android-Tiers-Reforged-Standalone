@@ -53,7 +53,7 @@ namespace ATReforged
             Scribe_Collections.Look(ref securityServers, "ATR_securityServers", LookMode.Reference);
             Scribe_Collections.Look(ref hackingServers, "ATR_hackingServers", LookMode.Reference);
             Scribe_Collections.Look(ref networkedDevices, "ATR_networkedDevices", LookMode.Reference);
-            Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Reference);
+            Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Deep);
             Scribe_Collections.Look(ref chargingStations, "ATR_chargingStations", LookMode.Reference);
             Scribe_Collections.Look(ref heatSensitiveDevices, "ATR_heatSensitiveDevices", LookMode.Reference);
             Scribe_Collections.Look(ref virusedDevices, "ATR_virusedDevices", LookMode.Reference, LookMode.Value, ref thingKeyCopy, ref thingValueCopy);
