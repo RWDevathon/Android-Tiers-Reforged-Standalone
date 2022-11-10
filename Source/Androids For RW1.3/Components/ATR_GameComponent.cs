@@ -44,6 +44,8 @@ namespace ATReforged
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
             Scribe_Values.Look(ref hackCostTimePenalty, "ATR_hackCostTimePenalty", 0);
 
+            Scribe_Deep.Look(ref blankPawn, "ATR_blankPawn");
+
             List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
             List<int> thingValueCopy = virusedDevices.Values.ToList();
             List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.ToList();
@@ -594,6 +596,9 @@ namespace ATReforged
         private int hackingPoints = 0;
         private int SkyMindNetworkCapacity = 0;
         private int SkyMindCloudCapacity = 0;
+
+        // Simple container for the pawn that represents blanks so it can be generated once and then saved for the whole game. It should never be changed.
+        public Pawn blankPawn = null;
 
         // Simple tracker for the extra cost penalty for initiating player hacks after having done one recently.
         public int hackCostTimePenalty = 0;

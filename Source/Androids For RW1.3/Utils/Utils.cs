@@ -184,13 +184,13 @@ namespace ATReforged
         // Get a cached Blank pawn (to avoid having to create a new pawn whenever a surrogate is made, disconnects, downed, etc.)
         public static Pawn GetBlank()
         {
-            if (ReservedBlank != null)
+            if (gameComp.blankPawn != null)
             {
-                return ReservedBlank;
+                return gameComp.blankPawn;
             }
             
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(RimWorld.PawnKindDefOf.Colonist, null, PawnGenerationContext.PlayerStarter, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
             BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
@@ -221,8 +221,8 @@ namespace ATReforged
             if (blankMechanical.outfits == null)
                 blankMechanical.outfits = new Pawn_OutfitTracker(blankMechanical);
             blankMechanical.Name = new NameTriple("Unit 404", "Blank", "Error");
-            ReservedBlank = blankMechanical;
-            return ReservedBlank;
+            gameComp.blankPawn = blankMechanical;
+            return gameComp.blankPawn;
         }
         
         // RESERVED UTILITIES, INTERNAL USE ONLY
@@ -230,8 +230,6 @@ namespace ATReforged
 
         public static HashSet<string> ReservedFactionCanUseSurrogates = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
-
-        public static Pawn ReservedBlank = null; // To be applied to surrogates, new androids, etc. Generated when first needed, then stored for later.
 
         // Utilities not available for direct player editing but not reserved by this mod
         public static List<PawnKindDef> ValidSurrogatePawnKindDefs = new List<PawnKindDef>();
@@ -739,18 +737,22 @@ namespace ATReforged
                 }
             }
 
-            // Copy all hediffs from the pawn to the copy.
+            // Copy all hediffs from the pawn to the copy. Remove the hediff from the host to ensure it isn't saved across both pawns.
             copy.health.RemoveAllHediffs();
             foreach (Hediff hediff in pawn.health.hediffSet.hediffs.ToList())
             {
                 try
                 {
-                    hediff.pawn = copy;
-                    copy.health.AddHediff(hediff, hediff.Part);
+                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart)
+                    {
+                        hediff.pawn = copy;
+                        copy.health.AddHediff(hediff, hediff.Part);
+                        pawn.health.RemoveHediff(hediff);
+                    }
                 }
-                catch(Exception)
+                catch(Exception ex)
                 {
-
+                    Log.Error("[ATR] Utils.SpawnCopy.TransferHediffs " + ex.Message + " " + ex.StackTrace);
                 }
             }
 
