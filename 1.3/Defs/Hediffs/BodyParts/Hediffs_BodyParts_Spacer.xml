@@ -3,7 +3,7 @@
 
     <!-- Base Spacer -->
   
-    <HediffDef Name="AddedBodyPartSpacerBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+    <HediffDef Name="AddedBodyPartSpacerBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.25</partEfficiency>
@@ -11,7 +11,7 @@
         </addedPartProps>
     </HediffDef>
 
-    <ThingDef Name="BodyPartSpacerBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+    <ThingDef Name="BodyPartSpacerBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Spacer</techLevel>
         <graphicData>
             <texPath>Things/Items/BodyParts/OrganWhite</texPath>
@@ -40,7 +40,7 @@
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
 
-	<RecipeDef Name="SurgeryMechanicalSpacer" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="SurgeryMechanicalSpacer" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Implanting advanced component.</jobString>
         <skillRequirements>
             <Crafting>8</Crafting>

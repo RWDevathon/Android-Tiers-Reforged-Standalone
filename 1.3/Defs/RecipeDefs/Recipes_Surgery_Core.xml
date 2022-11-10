@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Base Class for all mechanical surgeries that applies to appropriate mechanicals -->
-    <RecipeDef Name="surgeryMechanical" Abstract="True">
+    <RecipeDef Name="ATR_surgeryMechanical" Abstract="True">
         <effectWorking>Repair</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
@@ -19,7 +19,7 @@
     </RecipeDef>
  
 	<!-- Surgery to shutdown any incapacitated mechanical unit -->
-    <RecipeDef ParentName="surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ShutdownMechanical</defName>
 		<label>Shut down central core</label>
 		<description>Shuts down a mechanical unit by disconnecting core hardware. This does not permanently destroy the unit's memory.</description>
@@ -33,7 +33,7 @@
 	</RecipeDef>
 	
 	<!-- Surgery to remove body parts from mechanical units -->
-	<RecipeDef ParentName="surgeryMechanical">
+	<RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>RemoveBodyPartAndroid</defName>
 		<label>Remove part</label>
 		<description>Removes body part.</description>
@@ -74,7 +74,7 @@
 	</RecipeDef>
 
 	<!-- Surgery to restore body parts in mechanical units -->
-	<RecipeDef ParentName="surgeryMechanical">
+	<RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>RestoreBodyPartAndroid</defName>
 		<label>Restore part</label>
 		<description>Restores a particular body part.</description>
@@ -102,7 +102,7 @@
 	</RecipeDef>
 
 	<!-- Surgery to reprogram drones to serve the colony -->
-    <RecipeDef ParentName="surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ReprogramDrone</defName>
 		<label>reprogram drone</label>
 		<description>A straightforward but delicate operation, reprogramming drones to suit the colony's purposes is an excellent way to strengthen capabilities. However, the previous owners may have installed safeguards against such operations, so there is a high risk of death should it fail.</description>

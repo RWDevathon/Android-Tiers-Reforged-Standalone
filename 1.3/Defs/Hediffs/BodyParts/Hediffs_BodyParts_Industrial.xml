@@ -3,14 +3,14 @@
 
     <!-- Base Industrial -->
   
-    <HediffDef Name="AddedBodyPartIndustrialBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+    <HediffDef Name="AddedBodyPartIndustrialBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
         <hediffClass>Hediff_AddedPart</hediffClass>
         <addedPartProps>
             <solid>true</solid>
         </addedPartProps>
     </HediffDef>
 
-    <ThingDef Name="BodyPartIndustrialBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+    <ThingDef Name="BodyPartIndustrialBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Industrial</techLevel>
         <graphicData>
             <texPath>Things/Items/BodyParts/OrganOrange</texPath>
@@ -39,7 +39,7 @@
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
 
-	<RecipeDef Name="SurgeryMechanicalIndustrial" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="SurgeryMechanicalIndustrial" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Replacing component.</jobString>
         <skillRequirements>
             <Crafting>4</Crafting>
@@ -198,7 +198,7 @@
         </addedPartProps>
     </HediffDef>
 
-    <RecipeDef ParentName="surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>InstallMakeshiftReplacementLeg</defName>
 		<label>Install makeshift mechanical leg</label>
 		<description>Installs a makeshift mechanical leg.</description>
@@ -271,7 +271,7 @@
         </addedPartProps>
     </HediffDef>
 	
-    <RecipeDef ParentName="surgeryMechanical">
+    <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>InstallMakeshiftReplacementArm</defName>
 		<label>Install makeshift mechanical arm</label>
 		<description>Installs a makeshift mechanical arm.</description>

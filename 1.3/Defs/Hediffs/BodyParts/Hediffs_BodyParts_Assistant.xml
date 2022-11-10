@@ -3,12 +3,12 @@
 
   	<!-- Base Core Assistant -->
   
-	<HediffDef Name="AddedBodyPartCoreAssistantBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+	<HediffDef Name="AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
 		<defaultLabelColor>(0.7, 0.6, 0.7)</defaultLabelColor>
 		<keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
 	</HediffDef>
 
-	<ThingDef Name="BodyPartCoreAssistantBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+	<ThingDef Name="BodyPartCoreAssistantBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Items/BodyParts/OrganPurple</texPath>
@@ -42,7 +42,7 @@
 		<thingSetMakerTags><li>RewardSpecial</li></thingSetMakerTags>
 	</ThingDef>
 
-	<RecipeDef Name="SurgeryCoreAssistant" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="SurgeryCoreAssistant" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Installing core assistant.</jobString>
     	<skillRequirements>
 			<Crafting>12</Crafting>
@@ -786,7 +786,7 @@
   	</HediffDef>
 
   	<!-- Note: This thing does not derive from the base class! This is to avoid it being manufacturable. -->
-  	<ThingDef ParentName="ATRMechBodyPartBase">
+  	<ThingDef ParentName="ATR_MechBodyPartBase">
 		<defName>ATR_SapientAssistant</defName>
 		<label>Archotech sapient assistant</label>
 		<description>This curious device is completely inert when not installed. When it is installed, an infantile intelligence is created that interacts with the core intelligence. This assistant is fully sapient, and will grow wiser and more harmonious with the core intelligence over time. As the sub-intelligence is housed within an archotech chip, its intelligence will likely one day exceed its host's. Curiously, this does not seem to bother the captured intelligence. Perhaps it prefers being away from the world. Perhaps it's not truly constrained here at all. Indeed, if uninstalled, the intelligence simply vanishes. Where does it go?</description>
