@@ -192,7 +192,9 @@
     <Compile Include="Components\CompProperties_SuperComputer.cs" />
     <Compile Include="Components\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
+    <Compile Include="DefsOf\IncidentDefOf.cs" />
     <Compile Include="DefsOf\MentalStateDefOf.cs" />
+    <Compile Include="DefsOf\QuestScriptDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />
     <Compile Include="DefsOf\WorkTypeDefOf.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
@@ -251,7 +253,7 @@
     <Compile Include="DefsOf\ThingDefOf.cs" />
     <Compile Include="DefsOf\TraitDefOf.cs" />
     <Compile Include="Designators\Designator_AndroidToControl.cs" />
-    <Compile Include="Dialogs\Dialog_Msg.cs" />
+    <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\Apparel_Patch.cs" />

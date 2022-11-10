@@ -30,6 +30,10 @@ namespace ATReforged
         public static readonly Texture2D SkyMindUpload = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindUploadIcon");
         public static readonly Texture2D DownloadFromSkyCloud = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindDownloadIcon");
         public static readonly Texture2D MindAbsorption = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/MindAbsorptionIcon");
+        public static readonly Texture2D ControlModeIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ControlModeIcon");
+        public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
+        public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");
+        public static readonly Texture2D HackingWindowIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/HackingWindowIcon");
 
         // Dialogs
         public static readonly Texture2D SkillWorkshopHeader = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/SkillWorkshopHeader");
@@ -55,12 +59,6 @@ namespace ATReforged
         public static readonly Texture2D processReplicate = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/CoreDuplicateIcon");
         public static readonly Texture2D processSkillUp = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/CoreSkillWorkshopIcon");
 
-        // Gizmos
-        public static readonly Texture2D ControlModeIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ControlModeIcon");
-        public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
-        public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");
-        public static readonly Texture2D HackingWindowIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/HackingWindowIcon");
-
         // Surrogates
         public static readonly Texture2D ConnectIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ConnectIcon");
         public static readonly Texture2D RecoveryIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/RecoveryIcon");
@@ -69,6 +67,7 @@ namespace ATReforged
         // Avatars
         public static readonly Material MindOperation = MaterialPool.MatFrom("UI/Avatars/MindOperation", ShaderDatabase.MetaOverlay);
         public static readonly Material RemotelyControlledNode = MaterialPool.MatFrom("UI/Avatars/SkyMindNode", ShaderDatabase.MetaOverlay);
+        public static readonly Material AvailableSurrogateIcon = MaterialPool.MatFrom("UI/Icons/Gizmos/ControlModeIcon", ShaderDatabase.MetaOverlay);
 
         // Heat
         public static readonly Material WarningHeat =  MaterialPool.MatFrom("UI/Icons/Temperature/WarningHeat", ShaderDatabase.MetaOverlay);

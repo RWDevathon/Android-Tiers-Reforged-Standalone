@@ -14,7 +14,7 @@ namespace ATReforged
         List<SkillDef> skillDefList;
         List<int> skillDefPointList;
         List<int> skillDefPassionList;
-
+        
         int curSumPassions = 0;
 
         public static Vector2 scrollPosition = Vector2.zero;
@@ -56,7 +56,7 @@ namespace ATReforged
                         curSumPassions += (int)skillRecord.passion;
                     }
                     else
-                    { // If it's outside this range, treat the non-vanilla passion as a minor passion. There's no real other safe method.
+                    { // If it's outside this range, treat the non-vanilla passion as a minor passion.
                         curSumPassions += 1;
                     }
                     skillDefPassionList.Add((int)skillRecord.passion);
@@ -85,7 +85,7 @@ namespace ATReforged
             mainRect.height -= 210;
 
             // Display header content image and pawn information.
-            Widgets.ButtonImage(new Rect(0, 0, inRect.width - 20, 80), Tex.SkillWorkshopHeader, Color.white, Color.white);
+            Widgets.ButtonImage(new Rect(0, 0, inRect.width - 20, 80), Tex.SkillWorkshopHeader, Color.white, Color.white, false);
             Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
@@ -139,7 +139,7 @@ namespace ATReforged
                         availableSkillPoints -= 100;
                     }
                     else
-                        Messages.Message("ATR_InsufficientSkillPoints".Translate("100"), MessageTypeDefOf.NeutralEvent);
+                        Messages.Message("ATR_InsufficientPoints".Translate("100"), MessageTypeDefOf.NeutralEvent);
                 }
 
                 // Section for passions, starting with getting the correct texture and then displaying the purchase button.
@@ -161,7 +161,6 @@ namespace ATReforged
                         break;
                     default: // Display a no passion and move on as we have no texture for non-vanilla passions available.
                         subsection.ButtonImage(Tex.NoPassion, 24, 24);
-                        Log.Warning("[ATR] A non-vanilla passion was detected for pawn " + pawn.Name + " for the skill " + skillDefTranslationList[i] + ". This is not supported and the individual passion will not be changable to avoid unintentional conflicts.");
                         break;
                 }
 
@@ -186,12 +185,11 @@ namespace ATReforged
                     }
                     else
                     { // Can't afford to increase, send a message to the player.
-                        Messages.Message("ATR_InsufficientSkillPoints".Translate(pointsToIncreasePassion), MessageTypeDefOf.NeutralEvent);
+                        Messages.Message("ATR_InsufficientPoints".Translate(pointsToIncreasePassion), MessageTypeDefOf.NeutralEvent);
                     }
                 }
                 listingStandard.EndHiddenSection(subsection, subsectionHeight);
                 listingStandard.GapLine();
-                
             }
             cachedScrollHeight = listingStandard.CurHeight;
             listingStandard.End();

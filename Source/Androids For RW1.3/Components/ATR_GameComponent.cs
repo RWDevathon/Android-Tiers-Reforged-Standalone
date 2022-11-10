@@ -42,6 +42,7 @@ namespace ATReforged
             Scribe_Values.Look(ref hackingPoints, "ATR_hackingPoints", 0);
             Scribe_Values.Look(ref SkyMindNetworkCapacity, "ATR_SkyMindNetworkCapacity", 0);
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
+            Scribe_Values.Look(ref hackCostTimePenalty, "ATR_hackCostTimePenalty", 0);
 
             List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
             List<int> thingValueCopy = virusedDevices.Values.ToList();
@@ -76,6 +77,28 @@ namespace ATReforged
                 CheckVirusedThings();
                 CheckNetworkLinkedPawns();
                 CheckServers();
+            }
+            else if (CGT % 6000 == 0)
+            {
+                CheckHackTimePenalty();
+            }
+        }
+
+        // Check the hack timer penalty and reduce it if it is non-zero.
+        public void CheckHackTimePenalty()
+        {
+            if (hackCostTimePenalty > 0)
+            {
+                // The penalty decays by 1% every 6000 ticks. If it is small enough, simply set the penalty to 0.
+                float decayedPenalty = hackCostTimePenalty * 0.99f;
+                if (decayedPenalty <= 10)
+                {
+                    hackCostTimePenalty = 0;
+                }
+                else
+                {
+                    hackCostTimePenalty = (int)decayedPenalty;
+                }
             }
         }
 
@@ -264,12 +287,6 @@ namespace ATReforged
             // Removing a tower may result in being over the SkyMind network limit. Randomly disconnect some until under the limit if necessary.
             while (SkyMindNetworkCapacity < networkedDevices.Count())
             {
-                if (SkyMindNetworkCapacity < 0)
-                {
-                    Log.Error("[ATR Crash-check] Attempted to reduce the number of networkedDevices below 0 in a while loop - this could crashed the game! Report events/logs to dev immediately.");
-                    networkedDevices.Clear();
-                    break;
-                }
                 Thing device = networkedDevices.RandomElement();
                 DisconnectFromSkyMind(device);
             }
@@ -412,7 +429,7 @@ namespace ATReforged
                     hackingPointCapacity -= capacity;
                     break;
                 default: // Illegal server type results in no changes as it doesn't know what to change.
-                    Log.Error("[ATR] GC_ATTP.RemoveServer was given an invalid serverType. No servers removed.");
+                    Log.Error("[ATR] ATR_GC.RemoveServer was given an invalid serverType. No servers removed.");
                     return;
             }
         }
@@ -575,6 +592,9 @@ namespace ATReforged
         private int hackingPoints = 0;
         private int SkyMindNetworkCapacity = 0;
         private int SkyMindCloudCapacity = 0;
+
+        // Simple tracker for the extra cost penalty for initiating player hacks after having done one recently.
+        public int hackCostTimePenalty = 0;
 
         // Networked devices are things that are connected to the SkyMind network, including free pawns, surrogates, and buildings.
         public HashSet<Thing> networkedDevices = new HashSet<Thing>();

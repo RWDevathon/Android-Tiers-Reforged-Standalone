@@ -85,5 +85,9 @@
 	<ATR_IncidentCounterhackAttackDesc>Unknown hackers have breached the SkyMind network and seized as much information as they could, preferring intelligence collected on other targets and then skill insights. It's estimated they've stolen up to {0} points overall before they lost access.</ATR_IncidentCounterhackAttackDesc>
 	
 	<ATR_IncidentCounterhackAllyIntercept>Counterhack intercepted!</ATR_IncidentCounterhackAllyIntercept>
+
+        <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>Relations Damaged</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliationDesc>The attempted operation was intercepted and defeated by target defense measures. The faction suspects you of committing the attempt, but lacks hard evidence tying you to the crime. The actual impact on relations, {0}, seems to have occurred because the individual who intercepted it decided to take it upon themselves to accuse you in front of anyone willing to listen. An unfortunate diplomatic incident.</ATR_RelationshipRetaliationDesc>
 	
 </LanguageData>

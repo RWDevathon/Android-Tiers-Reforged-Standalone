@@ -158,18 +158,16 @@ namespace ATReforged
             // Add a special line for devices hacked into a shut-down state.
             if ((integrityBreach == 1 || integrityBreach == 3) && Utils.gameComp.GetAllVirusedDevices().ContainsKey(parent))
             {
-                ret.AppendLine("ATR_HackedWithTimer".Translate((Utils.gameComp.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.Append("ATR_HackedWithTimer".Translate((Utils.gameComp.GetVirusedDevice(parent) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
-
             // Add a special line for cryptolocked devices.
-            if (integrityBreach == 2)
+            else if (integrityBreach == 2)
             {
-                ret.AppendLine("ATR_CryptoLocked".Translate());
+                ret.Append("ATR_CryptoLocked".Translate());
             }
-
-            if (connected)
+            else if (connected)
             {
-                ret.AppendLine("ATR_SkyMindDetected".Translate());
+                ret.Append("ATR_SkyMindDetected".Translate());
             }
 
             return ret.Append(base.CompInspectStringExtra()).ToString();

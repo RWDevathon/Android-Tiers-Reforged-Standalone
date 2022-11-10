@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <SitePartDef>
-    <defName>DownedT5Android</defName>
-    <label>Strange Crashsite</label>
-		<description>The location that seems to be beckoning across time and space. What object could possibly land and make this happen?</description>
-    <siteTexture>UI/Icons/Sites/StrangeCrash</siteTexture>
-    <expandingIconTexture>UI/Icons/Sites/StrangeCrash</expandingIconTexture>
-	<forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
-  </SitePartDef>
+    <SitePartDef>
+        <defName>DownedT5Android</defName>
+        <label>Strange Crashsite</label>
+        <description>The location that seems to be beckoning across time and space. What object could possibly land and make this happen?</description>
+        <siteTexture>UI/Icons/Sites/StrangeCrash</siteTexture>
+        <expandingIconTexture>UI/Icons/Sites/StrangeCrash</expandingIconTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+    </SitePartDef>
 
     <GenStepDef>
-    <defName>DownedT5Android</defName>
-    <linkWithSite>DownedT5Android</linkWithSite>
-    <order>1599</order>
-    <genStep Class="ATReforged.GenStep_DownedT5Android">
-      <count>1</count>
-      <nearMapCenter>true</nearMapCenter>
-    </genStep>
-  </GenStepDef>
+        <defName>DownedT5Android</defName>
+        <linkWithSite>DownedT5Android</linkWithSite>
+        <order>1599</order>
+        <genStep Class="ATReforged.GenStep_DownedT5Android">
+            <count>1</count>
+            <nearMapCenter>true</nearMapCenter>
+        </genStep>
+    </GenStepDef>
   
-  <GenStepDef>
-    <defName>TurretsT5</defName>
-    <linkWithSite>DownedT5Android</linkWithSite>
-    <order>470</order>
-    <genStep Class="GenStep_Turrets">
-      <widthRange><min>4</min><max>6</max></widthRange>
-      <guardsCountRange><min>6</min><max>12</max></guardsCountRange>
-    </genStep>
-  </GenStepDef>
+    <GenStepDef>
+        <defName>TurretsT5</defName>
+        <linkWithSite>DownedT5Android</linkWithSite>
+        <order>470</order>
+        <genStep Class="GenStep_Turrets">
+            <widthRange><min>4</min><max>6</max></widthRange>
+            <guardsCountRange><min>6</min><max>12</max></guardsCountRange>
+        </genStep>
+    </GenStepDef>
 
-  <GenStepDef>
-    <defName>TurretsPowerT5</defName>
-    <linkWithSite>DownedT5Android</linkWithSite>
-    <order>471</order>
-    <genStep Class="GenStep_Power" />
-  </GenStepDef>
+    <GenStepDef>
+        <defName>TurretsPowerT5</defName>
+        <linkWithSite>DownedT5Android</linkWithSite>
+        <order>471</order>
+        <genStep Class="GenStep_Power" />
+    </GenStepDef>
   
 	<IncidentDef>
 		<defName>StrangeCrash</defName>
@@ -44,7 +44,7 @@
             <li>World</li>
         </targetTags>
 		<workerClass>ATReforged.IncidentWorker_DownedT5Android</workerClass>
-		<letterLabel>Omenous meteorite</letterLabel>
+		<letterLabel>Ominous meteorite</letterLabel>
 		<letterText>With a screetching roar, a fiery ball of metal hurtles through the sky. The very air seems to quake. It did not seem to come from space. Eventually, it lands beyond the horizon - and yet somehow its exact landing spot is known to you. What could possibly be beckoning you there, and for what purpose?</letterText>
 		<letterDef>NeutralEvent</letterDef>
 		<baseChance>0.3</baseChance>

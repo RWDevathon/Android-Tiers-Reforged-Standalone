@@ -25,7 +25,7 @@ namespace ATReforged
             // At peak wealth (1,000,000), the ratio is less than 250 wealth : 1 raid point. If the player does not meet this very gross underestimate that doesn't account for pawns, difficulty, or context, they are at severe risk.
             int simpleEstimatedWealthRaidPoints = (int)(Find.CurrentMap.PlayerWealthForStoryteller / 250);
 
-            if (securityPoints < simpleEstimatedWealthRaidPoints)
+            if (securityPoints < simpleEstimatedWealthRaidPoints * ATReforged_Settings.enemyHackAttackStrengthModifier)
             {
                 return true;
             }

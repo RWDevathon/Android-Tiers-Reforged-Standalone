@@ -16,6 +16,10 @@
 	
 	<ATR_HackingMode>Hacking Mode</ATR_HackingMode>
 	<ATR_HackingModeDesc>This server is assigned to hacking point generation. Click to switch to skill.</ATR_HackingModeDesc>
+
+    <ATR_HackingWindow>Attempt Hack</ATR_HackingWindow>
+    <ATR_HackingWindowDesc>Open the hacking interface, allowing for the usage of hacking points to engage in nefarious activity.</ATR_HackingWindowDesc>
+
 	
 	<ATR_SwitchToSkillMode>Switch to Skill Mode</ATR_SwitchToSkillMode>
 	<ATR_SwitchToSkillModeDesc>Click to switch to skill point generation, this server is not active right now</ATR_SwitchToSkillModeDesc>

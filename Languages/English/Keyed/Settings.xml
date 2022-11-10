@@ -3,8 +3,10 @@
 	<!-- Miscellaneous Keys -->
 	<ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
 	
-	<ATR_ReloadRequired>Reload Required.</ATR_ReloadRequired>
-	<ATR_ReloadRequiredDesc>Some changes will only take effect on reloading saves (Not the entire game).</ATR_ReloadRequiredDesc>
+	<ATR_RestartRequired>Restart Required.</ATR_RestartRequired>
+	<ATR_RestartRequiredSectionDesc>Any changes to settings in this section require restarting the game.</ATR_RestartRequiredSectionDesc>
+	<ATR_RestartRequiredPostDesc>Some changed settings require restarting the game for safety.</ATR_RestartRequiredPostDesc>
+
 
     <ATR_ExpandMenu>Expand/Collapse</ATR_ExpandMenu>
 	
@@ -64,14 +66,29 @@
 	<ATR_mechanicalBioprocessingEfficiency>Nutrition efficiency [default: 50%]</ATR_mechanicalBioprocessingEfficiency>
 	
 	<!-- Security Settings -->
+        <!-- Hostile Hacking -->
 	<ATR_EnemyHacksOccur>Hostile hacking is enabled.</ATR_EnemyHacksOccur>
 	<ATR_ChanceAlliesInterceptHack>Chance to intercept hacks against you per allied faction</ATR_ChanceAlliesInterceptHack>
+	<ATR_ChanceAlliesInterceptHackDesc>Percent chance that allied factions will save you from a successful enemy hack, preventing damage and actually giving you security points. This is PER ALLY.</ATR_ChanceAlliesInterceptHackDesc>
 	<ATR_PointsGainedOnInterceptPercentage>Points gained when allies intercept as percentage of attack</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_PointsGainedOnInterceptPercentageDesc>When an ally intercepts an attack against you, they donate security points to you. This controls what percentage of the raid points they give you.</ATR_PointsGainedOnInterceptPercentageDesc>
 	<ATR_EnemyHackAttackStrengthModifier>Enemy hack strength modifier</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_EnemyHackAttackStrengthModifierDesc>Multiplicative modifier on how many hacking points enemy hacking incidents will have. Less than 100% reduces intensity, greater than 100% raises intensity.</ATR_EnemyHackAttackStrengthModifierDesc>
 	<ATR_PercentageOfValueUsedForRansoms>Percentage of item value demanded in ransom attack</ATR_PercentageOfValueUsedForRansoms>
 	
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>Player hacking is enabled.</ATR_PlayerCanHack>
+    <ATR_RetaliationChanceOnFailure>Chance the target faction will retaliate on a failed hack</ATR_RetaliationChanceOnFailure>
+    <ATR_MinHackSuccessChance>Minimum chance of a successful hack</ATR_MinHackSuccessChance>
+    <ATR_MaxHackSuccessChance>Maximum chance of a successful hack</ATR_MaxHackSuccessChance>
+    
 	<!-- Connectivity Settings -->
+        <!-- Skills -->
 	<ATR_skillPointConversionRate>Amount of base XP generated per skill point [default: 10]</ATR_skillPointConversionRate>
 	<ATR_passionSoftCap>Passion soft-cap before cost increases per passion [default: 8]</ATR_passionSoftCap>
 	<ATR_basePointsNeededForPassion>Base skill points needed per passion [default: 1000]</ATR_basePointsNeededForPassion>
+
+    <ATR_UploadingKills>Uploading to SkyMind turns the initiator's body into a blank.</ATR_UploadingKills>
+    <ATR_UploadingPermakills>Uploading to SkyMind leaves the initiator's body completely useless and dead.</ATR_UploadingPermakills>
+    <ATR_SkyMindOperationTimeRequired>Time required (in hours) to complete SkyMind operations [default: 12]</ATR_SkyMindOperationTimeRequired>
 </LanguageData>

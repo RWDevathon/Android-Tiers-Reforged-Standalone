@@ -7,18 +7,46 @@
 	<ATR_ResurrectionFailedInvalidPawn>The target, {0}, was not reactivated as it is not a valid target for resurrection in this manner. Targets must be mechanical (AT Reforged settings) and must have an intact core.</ATR_ResurrectionFailedInvalidPawn>
 	<ATR_ResurrectionFailedDroneOnly>The drone resurrection kit may only be used on drones or animals, and {0} is considered a fully autonomous mechanical unit!</ATR_ResurrectionFailedDroneOnly>
 	
+    <ATR_InsufficientPoints>At least {0} points are required for this operation.</ATR_InsufficientPoints>
+
 	<!-- Skill Upgrades -->
 	<ATR_PawnBeingModified>Skills and passions for: </ATR_PawnBeingModified>
 	<ATR_CurrentXP> XP required for next level: </ATR_CurrentXP>
 	<ATR_TodaysXP> XP today: </ATR_TodaysXP>
-	
-	<ATR_InsufficientSkillPoints>{0} skill points are required for this operation.</ATR_InsufficientSkillPoints>
+
 	<ATR_AddSkillPoints>Inject points into {0}</ATR_AddSkillPoints>
 	<ATR_AvailableSkillPoints>Available points : {0}</ATR_AvailableSkillPoints>
 	<ATR_AvailableSkillPointsDesc>Note: Insight injection is subject to an individual's learning capabilities as well as daily comprehension limits. Passion injection is subject to individual learning capability as well as pre-existing passions. Overstimulation is inefficient.</ATR_AvailableSkillPointsDesc>
 	
-	<!-- Initialize Mind Dialog/Keys -->
-	<ATR_InitializeMindTitle>Mechanical Unit needs initialization</ATR_InitializeMindTitle>
+    <!-- Hacking Interface -->
+    <ATR_HackInterfaceTitle>Awaiting cyberwarfare directive.</ATR_HackInterfaceTitle>
+    <ATR_ConfirmHack>Authorize target operation?</ATR_ConfirmHack>
+    <ATR_ConfirmhackDesc>All hacks have inherent risks. Failure could mean diplomatic damage, an automatic countermeasure activation, or some form of retaliation.</ATR_ConfirmhackDesc>
+
+    <ATR_HackOpCost>Cost: {0}</ATR_HackOpCost>
+    <ATR_SuccessChance>Estimated success chance: {0}%</ATR_SuccessChance>
+
+    <ATR_AvailableHackingPoints>Available points: {0}. Time penalty: {1}.</ATR_AvailableHackingPoints>
+    <ATR_AvailableHackingPointsDesc>Note: The cost of initiating hacks is a function of base operation cost multiplied by time since the last hack (penalty for frequent usage).\nDedicating more points increases success likelihood.</ATR_AvailableHackingPointsDesc>
+
+        <!-- Guidance Hack -->
+    <ATR_GuidanceHack>Force a redirect of a faction's guidance system</ATR_GuidanceHack>
+    <ATR_GuidanceHackDesc>Attempt a hack of a faction's guidance system in an attempt to redirect something to this map. There is no guarantee what the contents of what will be sent. It could be supplies, a trade ship, a prisoner - or an enemy garrison transfer.</ATR_GuidanceHackDesc>
+
+        <!-- Propaganda Hack -->
+    <ATR_PropagandaHack>Deploy a targetted positive-propaganda campaign</ATR_PropagandaHack>
+    <ATR_PropagandaHackDesc>Attempt a dedicated and specifically targetted campaign to influence key members of a target faction in favor of the colony. Due to the opaque nature of political influence, the exact outcome is unknown.</ATR_PropagandaHackDesc>
+
+        <!-- Espionage Hack -->
+    <ATR_EspionageHack>Initiate an espionage campaign to acquire a quest</ATR_EspionageHack>
+    <ATR_EspionageHackDesc>Attempt to use acquired intelligence insight to identify a promising quest from the background intelligence from a faction. It is guaranteed to produce insight into some form of a stash, but not from a particular faction or group.</ATR_EspionageHackDesc>
+	
+        <!-- Disruptor Hack -->
+    <ATR_DisruptorHack>Launch a map-wide DDOS attack on local hostile units</ATR_DisruptorHack>
+    <ATR_DisruptorHackDesc>Attempt a localized DDOS attack on SkyMind-capable pawns of a particular faction that are present on this map.</ATR_DisruptorHackDesc>
+    
+    <!-- Initialize Mind Dialog/Keys -->
+	<ATR_InitializeMindTitle>Mechanical unit needs initialization</ATR_InitializeMindTitle>
 	<ATR_InitializeMindDesc>The newly connected core interface is ready to contain an intelligence, but has not yet initialized one. An intelligence may be imported from the SkyMind if any exist or it may be permitted to form a personality on its own.</ATR_InitializeMindDesc>
 	
 	<ATR_SkyMindInitialization>Initialize from SkyMind</ATR_SkyMindInitialization>

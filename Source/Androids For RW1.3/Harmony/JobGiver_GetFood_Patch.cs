@@ -19,7 +19,7 @@ namespace ATReforged
             public static void Listener(Pawn pawn, ref Job __result)
             {
                 // If the pawn can't use charging, then there's nothing to override. 
-                if (Utils.CanUseBattery(pawn))
+                if (pawn != null && Utils.CanUseBattery(pawn))
                 {
                     // Don't override non-spawned or drafted pawns.
                     if (!pawn.Spawned || pawn.Drafted)

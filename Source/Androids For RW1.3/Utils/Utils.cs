@@ -646,8 +646,8 @@ namespace ATReforged
                 return false;
             }
 
-            // Pawns afflicted with dementia or memory corruption are not permissible targets for mind operations.
-            if (pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_MemoryCorruption || hediff.def == RimWorld.HediffDefOf.Dementia).Any())
+            // Pawns afflicted with dementia, memory corruption, or who are already subjects of mind operations are not permissible targets for mind operations.
+            if (pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_MemoryCorruption || hediff.def == RimWorld.HediffDefOf.Dementia || hediff.def == HediffDefOf.ATR_MindOperation).Any())
             {
                 return false;
             }

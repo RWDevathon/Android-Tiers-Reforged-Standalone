@@ -11,12 +11,20 @@
 	<ATR_RemoveCloudPawnSuccess>The neural network of {0} has been removed.</ATR_RemoveCloudPawnSuccess>
 	
 	<ATR_ReplicateCloudPawnFailed>Could not initiate replication. Insufficient SkyMind space available for allocation.</ATR_ReplicateCloudPawnFailed>
-	
+
+    <!-- Player hacking -->
+    <ATR_HackOperationFailed>The operation failed to breach the target faction's security system. No reprecussions are anticipated.</ATR_HackOperationFailed>
+	<ATR_DisruptorHackSuccess>Disruption successful. Hostile units have been impaired.</ATR_DisruptorHackSuccess>
+
+    <ATR_NoArrival>Nothing was sent to the mixed up coordinates before the faction reset their guidance system. They got lucky, this time.</ATR_NoArrival>
+    
 	<!-- Link -->
 	<ATR_SurrogateConnected>{0} is now connected to {1}</ATR_SurrogateConnected>
 	<ATR_OperationInitiated>SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.</ATR_OperationInitiated>
 	<ATR_OperationCompleted>SkyMind operation complete</ATR_OperationCompleted>
 	<ATR_OperationCompletedDesc>The SkyMind network has successfully carried out the operation as requested by {0}.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>SkyMind operation failed!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>{0} suffered a catastrophic memory corruption due to the collapse of the SkyMind link during a mind operation. The operation failed and severe damage to memory has occurred.</ATR_OperationFailureDesc>
 
 	<MessageMedicalOperationFailureMinorAndroid>{0} committed a minor error while operating and aborted the procedure on {1}.</MessageMedicalOperationFailureMinorAndroid>
 	<MessageMedicalOperationFailureCatastrophicAndroid>{0} has failed catastrophically while attempting an operation on {1}.</MessageMedicalOperationFailureCatastrophicAndroid>

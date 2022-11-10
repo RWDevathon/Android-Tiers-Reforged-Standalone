@@ -51,7 +51,7 @@ namespace ATReforged
             if (parent.Map == null)
                 return base.CompInspectStringExtra();
 
-            ret.AppendLine("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
+            ret.Append("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }

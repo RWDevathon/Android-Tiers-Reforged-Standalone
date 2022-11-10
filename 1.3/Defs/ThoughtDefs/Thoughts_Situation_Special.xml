@@ -25,57 +25,57 @@
 	    <validWhileDespawned>true</validWhileDespawned>
     </ThoughtDef>
   
-  <ThoughtDef>
-    <defName>ATR_SapientAssistant</defName>
-		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>ATR_MentalAssistant</hediff>
-	  <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>Newborn Sapient Assistant</label>
-        <description>My core is safely holding a nascent intelligence. It has much to learn, and yet will surely one day surpass me. I must be strong for it.</description>
-        <baseMoodEffect>5</baseMoodEffect>
-      </li>
-      <li>
-        <label>Childlike Sapient Assistant</label>
-        <description>My core is safely holding a childlike intelligence. It is very eager to learn, and is already helping me to see the world in new ways.</description>
-        <baseMoodEffect>10</baseMoodEffect>
-      </li>
-      <li>
-        <label>Young Sapient Assistant</label>
-        <description>My core is safely holding a young intelligence. It has learned much from the gentle lessons I offered it, and is eager to help me learn more about the world.</description>
-        <baseMoodEffect>15</baseMoodEffect>
-      </li>
-      <li>
-        <label>Adult Sapient Assistant</label>
-        <description>My core is safely holding an adult intelligence. We have learned much together, and are steadfast allies as we face the world together.</description>
-        <baseMoodEffect>20</baseMoodEffect>
-      </li>
-      <li>
-        <label>Wise Sapient Assistant</label>
-        <description>My core is safely holding a sapient intelligence. Within the safety of my core, the intelligence has had a vast amount of time to philosophize and theorize. Our conversations are enlightening.</description>
-        <baseMoodEffect>25</baseMoodEffect>
-      </li>
-      <li>
-        <label>Unified Sapient Assistant</label>
-        <description>The sapient intelligence in my sub-core and I are fully in agreement in all things. We are one. We are strong.</description>
-        <baseMoodEffect>30</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-  
-  <ThoughtDef>
-    <defName>ATR_MentalAssistant</defName>
-		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>ATR_MentalAssistant</hediff>
-		<validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>Mental Assistant</label>
-        <description>This mental assistant chip helps remove terrible stressors and helps me to be mentally resilient. Nothing can break me.</description>
-        <baseMoodEffect>20</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
+    <ThoughtDef>
+        <defName>ATR_SapientAssistant</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>ATR_MentalAssistant</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+        <li>
+            <label>Newborn Sapient Assistant</label>
+            <description>My core is safely holding a nascent intelligence. It has much to learn, and yet will surely one day surpass me. I must be strong for it.</description>
+            <baseMoodEffect>5</baseMoodEffect>
+        </li>
+        <li>
+            <label>Childlike Sapient Assistant</label>
+            <description>My core is safely holding a childlike intelligence. It is very eager to learn, and is already helping me to see the world in new ways.</description>
+            <baseMoodEffect>10</baseMoodEffect>
+        </li>
+        <li>
+            <label>Young Sapient Assistant</label>
+            <description>My core is safely holding a young intelligence. It has learned much from the gentle lessons I offered it, and is eager to help me learn more about the world.</description>
+            <baseMoodEffect>15</baseMoodEffect>
+        </li>
+        <li>
+            <label>Adult Sapient Assistant</label>
+            <description>My core is safely holding an adult intelligence. We have learned much together, and are steadfast allies as we face the world together.</description>
+            <baseMoodEffect>20</baseMoodEffect>
+        </li>
+        <li>
+            <label>Wise Sapient Assistant</label>
+            <description>My core is safely holding a sapient intelligence. Within the safety of my core, the intelligence has had a vast amount of time to philosophize and theorize. Our conversations are enlightening.</description>
+            <baseMoodEffect>25</baseMoodEffect>
+        </li>
+        <li>
+            <label>Unified Sapient Assistant</label>
+            <description>The sapient intelligence in my sub-core and I are fully in agreement in all things. We are one. We are strong.</description>
+            <baseMoodEffect>30</baseMoodEffect>
+        </li>
+        </stages>
+    </ThoughtDef>
+    
+    <ThoughtDef>
+        <defName>ATR_MentalAssistant</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>ATR_MentalAssistant</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+        <li>
+            <label>Mental Assistant</label>
+            <description>This mental assistant chip helps remove terrible stressors and helps me to be mentally resilient. Nothing can break me.</description>
+            <baseMoodEffect>20</baseMoodEffect>
+        </li>
+        </stages>
+    </ThoughtDef>
   
  </Defs>

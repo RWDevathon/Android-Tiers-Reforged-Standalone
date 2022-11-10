@@ -60,7 +60,9 @@ namespace ATReforged
 
             // Settings for player hacks
         public static bool playerCanHack = true;
-        public static float chanceEnemiesInterceptHack = 0.4f;
+        public static float retaliationChanceOnFailure = 0.4f;
+        public static float minHackSuccessChance = 0.05f;
+        public static float maxHackSuccessChance = 0.95f;
 
         // HEALTH SETTINGS
 
@@ -82,7 +84,6 @@ namespace ATReforged
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;
         public static int timeToCompleteSkyMindOperations = 12;
-        public static int nbMoodPerAssistingMinds = 1;
         public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
 
             // Settings for Skill Points
@@ -209,7 +210,7 @@ namespace ATReforged
                     listingStandard.GapLine();
 
                     // CONSIDERATION SETTINGS
-                    
+                    listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                             cachedExpandFirst = !cachedExpandFirst;
@@ -260,10 +261,20 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_EnemyHacksOccur".Translate(), ref enemyHacksOccur, onChange: onChange);
                     if (enemyHacksOccur)
                     {
-                        listingStandard.SliderLabeled("ATR_EnemyHackAttackStrengthModifier".Translate(), ref enemyHackAttackStrengthModifier, 0.01f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
-                        listingStandard.SliderLabeled("ATR_ChanceAlliesInterceptHack".Translate(), ref chanceAlliesInterceptHack, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
-                        listingStandard.SliderLabeled("ATR_PointsGainedOnInterceptPercentage".Translate(), ref pointsGainedOnInterceptPercentage, 0.00f, 3f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_EnemyHackAttackStrengthModifier".Translate(), ref enemyHackAttackStrengthModifier, 0.01f, 5f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_EnemyHackAttackStrengthModifierDesc".Translate(), onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_ChanceAlliesInterceptHack".Translate(), ref chanceAlliesInterceptHack, 0.01f, 1f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_ChanceAlliesInterceptHackDesc".Translate(), onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_PointsGainedOnInterceptPercentage".Translate(), ref pointsGainedOnInterceptPercentage, 0.00f, 3f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_PointsGainedOnInterceptPercentageDesc".Translate(), onChange: onChange);
                         listingStandard.SliderLabeled("ATR_PercentageOfValueUsedForRansoms".Translate(), ref percentageOfValueUsedForRansoms, 0.01f, 2f, displayMult: 100, valueSuffix:"%", onChange: onChange);
+                    }
+
+
+
+                    listingStandard.CheckboxLabeled("ATR_PlayerCanHack".Translate(), ref playerCanHack, onChange: onChange);
+                    if (playerCanHack)
+                    {
+                        listingStandard.SliderLabeled("ATR_RetaliationChanceOnFailure".Translate(), ref retaliationChanceOnFailure, 0.0f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_MinHackSuccessChance".Translate(), ref minHackSuccessChance, 0.0f, maxHackSuccessChance, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_MaxHackSuccessChance".Translate(), ref maxHackSuccessChance, minHackSuccessChance, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
                 }
@@ -275,6 +286,13 @@ namespace ATReforged
                     listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
                     listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
+                    listingStandard.GapLine();
+
+
+                    listingStandard.CheckboxLabeled("ATR_UploadingKills".Translate(), ref uploadingToSkyMindKills, onChange: onChange);
+                    listingStandard.CheckboxLabeled("ATR_UploadingPermakills".Translate(), ref uploadingToSkyMindPermaKills, onChange: onChange);
+                    string SkyMindOperationTimeBuffer = timeToCompleteSkyMindOperations.ToString();
+                    listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 50);
                     break;
                 }
                 default:
@@ -332,10 +350,21 @@ namespace ATReforged
             enemyHackAttackStrengthModifier = 1.0f;
             percentageOfValueUsedForRansoms = 0.25f;
 
+            playerCanHack = true;
+            retaliationChanceOnFailure = 0.4f;
+            minHackSuccessChance = 0.05f;
+            maxHackSuccessChance = 0.95f;
+
             // CONNECTIVITY SETTINGS
+            // Skills
             skillPointConversionRate = 10;
             passionSoftCap = 8;
             basePointsNeededForPassion = 1000f;
+
+            // Cloud
+            uploadingToSkyMindKills = true;
+            uploadingToSkyMindPermaKills = true;
+            timeToCompleteSkyMindOperations = 12;
 
             RebuildCaches();
         }
@@ -454,11 +483,18 @@ namespace ATReforged
 
             /* === SECURITY === */
 
+            // Hostile Hacks
             Scribe_Values.Look(ref enemyHacksOccur, "ATR_enemyHacksOccur", true);
             Scribe_Values.Look(ref chanceAlliesInterceptHack, "ATR_chanceAlliesInterceptHack", 0.05f);
             Scribe_Values.Look(ref pointsGainedOnInterceptPercentage, "ATR_pointsGainedOnInterceptPercentage", 0.25f);
             Scribe_Values.Look(ref enemyHackAttackStrengthModifier, "ATR_enemyHackAttackStrengthModifier", 1.0f);
             Scribe_Values.Look(ref percentageOfValueUsedForRansoms, "ATR_percentageOfValueUsedForRansoms", 0.25f);
+
+            // Player Hacks
+            Scribe_Values.Look(ref playerCanHack, "ATR_playerCanHack", true);
+            Scribe_Values.Look(ref retaliationChanceOnFailure, "ATR_retaliationChanceOnFailure", 0.4f);
+            Scribe_Values.Look(ref minHackSuccessChance, "ATR_minHackSuccessChance", 0.05f);
+            Scribe_Values.Look(ref maxHackSuccessChance, "ATR_maxHackSuccessChance", 0.95f);
 
             /* === CONNECTIVITY === */
 
@@ -466,6 +502,11 @@ namespace ATReforged
             Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 10);
             Scribe_Values.Look(ref passionSoftCap, "ATR_passionSoftCap", 8);
             Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 1000f);
+
+            // Cloud
+            Scribe_Values.Look(ref uploadingToSkyMindKills, "ATR_uploadingToSkyMindKills", true);
+            Scribe_Values.Look(ref uploadingToSkyMindPermaKills, "ATR_uploadingToSkyMindPermaKills", true);
+            Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 12);
         }
     }
 
