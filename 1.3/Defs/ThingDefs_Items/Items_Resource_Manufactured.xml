@@ -1,135 +1,135 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-   <ThingDef ParentName="ResourceBase">
-      <defName>ATR_PartPack</defName>
-      <label>Mechanical Part Pack</label>
-      <description>This pack of half-assembled parts is designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
-      <graphicData>
-         <texPath>Things/Items/Manufactured/PartPack</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <soundInteract>Standard_Drop</soundInteract>
-      <soundDrop>Standard_Drop</soundDrop>
-      <statBases>
-         <MaxHitPoints>60</MaxHitPoints>
-         <MarketValue>30</MarketValue>
-         <Mass>0.45</Mass>
-         <Flammability>0</Flammability>
-      </statBases>
-      <thingCategories>
-         <li>Manufactured</li>
-      </thingCategories>
-      <tradeability>All</tradeability>
-      <techLevel>Industrial</techLevel>
-      <tradeTags>
-         <li>ExoticMisc</li>
-      </tradeTags>
-      <thingSetMakerTags>
-         <li>RewardSpecial</li>
-      </thingSetMakerTags>
-   </ThingDef>
+    <ThingDef ParentName="ResourceBase">
+        <defName>ATR_PartPack</defName>
+        <label>Mechanical Part Pack</label>
+        <description>This pack of half-assembled parts is designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/PartPack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>25</stackLimit>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>30</MarketValue>
+            <Mass>0.45</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeability>All</tradeability>
+        <techLevel>Industrial</techLevel>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
+    </ThingDef>
   
-   <RecipeDef>
-      <defName>ATR_PartPack</defName>
-      <label>Make a mechanical part pack</label>
-      <description>Create a pack of half-assembled parts designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
-      <jobString>Making part pack</jobString>  
-      <allowMixingIngredients>false</allowMixingIngredients>
-      <ingredients>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>Steel</li>
-               </thingDefs>
-            </filter>
-            <count>20</count>
-         </li>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>Plasteel</li>
-               </thingDefs>
-            </filter>
-            <count>10</count>
-         </li>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>ComponentIndustrial</li>
-               </thingDefs>
-            </filter>
-            <count>4</count>
-         </li>
-      </ingredients>
-      <products>
-         <ATR_PartPack>1</ATR_PartPack>
-      </products>
-      <workAmount>2150</workAmount>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smelt</effectWorking>
-      <soundWorking>Recipe_Smelt</soundWorking>
-	   <recipeUsers>
-		   <li>TableMachining</li>
-		   <li>MechPartWorkbench</li>
-      </recipeUsers>
-	</RecipeDef>
+    <RecipeDef>
+        <defName>ATR_PartPack</defName>
+        <label>Make a mechanical part pack</label>
+        <description>Create a pack of half-assembled parts designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
+        <jobString>Making part pack</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_PartPack>1</ATR_PartPack>
+        </products>
+        <workAmount>2150</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <recipeUsers>
+            <li>TableMachining</li>
+            <li>MechPartWorkbench</li>
+        </recipeUsers>
+        </RecipeDef>
 
-   <RecipeDef>
-      <defName>AIPersonaCore</defName>
-      <label>Make an AI persona core</label>
-      <description>Create a complexe AI core capable of sentience.</description>
-      <jobString>Making AI Core</jobString>  
-      <allowMixingIngredients>false</allowMixingIngredients>
-      <ingredients>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>Plasteel</li>
-               </thingDefs>
-            </filter>
-            <count>120</count>
-         </li>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>Uranium</li>
-               </thingDefs>
-            </filter>
-            <count>8</count>
-         </li>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>Gold</li>
-               </thingDefs>
-            </filter>
-            <count>10</count>
-         </li>
-         <li>
-            <filter>
-               <thingDefs>
-                  <li>ComponentSpacer</li>
-               </thingDefs>
-            </filter>
-            <count>10</count>
-         </li>
-      </ingredients>
-      <products>
-         <AIPersonaCore>1</AIPersonaCore>
-      </products>
-      <workAmount>8650</workAmount>
-	  <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-    <effectWorking>Smelt</effectWorking>
-    <soundWorking>Recipe_Smelt</soundWorking>
-	 <recipeUsers>
-		<li>TableMachining</li>
-		<li>MechPartWorkbench</li>
-      </recipeUsers>
-	</RecipeDef>
+    <RecipeDef>
+        <defName>ATR_MakeAIPersonaCore</defName>
+        <label>Make an AI persona core</label>
+        <description>Create a complexe AI core capable of sentience.</description>
+        <jobString>Making AI Core</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <AIPersonaCore>1</AIPersonaCore>
+        </products>
+        <workAmount>8650</workAmount>
+        <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+    </RecipeDef>
 
     <!-- Repair Stim Base -->
 

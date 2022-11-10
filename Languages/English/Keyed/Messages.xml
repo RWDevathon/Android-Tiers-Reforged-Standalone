@@ -17,9 +17,9 @@
 	<ATR_DisruptorHackSuccess>Disruption successful. Hostile units have been impaired.</ATR_DisruptorHackSuccess>
 
     <ATR_NoArrival>Nothing was sent to the mixed up coordinates before the faction reset their guidance system. They got lucky, this time.</ATR_NoArrival>
-    
+
 	<!-- Link -->
-	<ATR_SurrogateConnected>{0} is now connected to {1}</ATR_SurrogateConnected>
+	<ATR_SurrogateControlled>{0} connected to a new surrogate</ATR_SurrogateControlled>
 	<ATR_OperationInitiated>SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.</ATR_OperationInitiated>
 	<ATR_OperationCompleted>SkyMind operation complete</ATR_OperationCompleted>
 	<ATR_OperationCompletedDesc>The SkyMind network has successfully carried out the operation as requested by {0}.</ATR_OperationCompletedDesc>

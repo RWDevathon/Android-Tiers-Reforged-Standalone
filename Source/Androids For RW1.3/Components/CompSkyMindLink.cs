@@ -435,7 +435,7 @@ namespace ATReforged
             }
             else if (networkOperationInProgress == -2)
             {
-                ret.Append("ATR_SurrogateConnected".Translate(string.Join(", ", surrogatePawns)));
+                ret.Append("ATR_SurrogateConnected".Translate(surrogatePawns.Count));
             }
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }
@@ -475,7 +475,7 @@ namespace ATReforged
                 surrogatePawns.Add(surrogate);
                 surrogate.TryGetComp<CompSkyMindLink>().surrogatePawns.Add(ThisPawn);
                 FleckMaker.ThrowDustPuffThick(surrogate.Position.ToVector3Shifted(), surrogate.Map, 4.0f, Color.blue);
-                Messages.Message("ATR_SurrogateConnected".Translate(ThisPawn.LabelShortCap, surrogate.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
+                Messages.Message("ATR_SurrogateControlled".Translate(ThisPawn.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
                 Linked = -2;
                 surrogate.TryGetComp<CompSkyMindLink>().Linked = -2;
             }
@@ -549,6 +549,7 @@ namespace ATReforged
             }
             // Forget about all surrogates.
             surrogatePawns.Clear();
+            Linked = -1;
         }
 
         // Applies some form of corruption to the provided pawn. For organics, this is dementia. For mechanicals, this is a slowly fading memory corruption.
