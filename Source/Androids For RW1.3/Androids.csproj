@@ -220,7 +220,6 @@
     <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_Precept_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Warper.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />

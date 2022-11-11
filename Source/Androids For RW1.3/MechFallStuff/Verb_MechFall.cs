@@ -6,18 +6,18 @@ namespace ATReforged
     {
         protected override bool TryCastShot()
         {
-            if (this.currentTarget.HasThing && this.currentTarget.Thing.Map != this.caster.Map)
+            if (currentTarget.HasThing && currentTarget.Thing.Map != caster.Map)
             {
                 return false;
             }
-            MechFall mechfall = (MechFall)GenSpawn.Spawn(ThingDefOf.MechFallBeam, this.currentTarget.Cell, this.caster.Map);
-            mechfall.duration = 450;
-            mechfall.instigator = this.caster;
-            mechfall.weaponDef = ((base.EquipmentSource == null) ? null : base.EquipmentSource.def);
+            MechFall mechfall = (MechFall)GenSpawn.Spawn(ThingDefOf.MechFallBeam, currentTarget.Cell, caster.Map);
+            mechfall.duration = DurationTicks;
+            mechfall.instigator = caster;
+            mechfall.weaponDef = EquipmentSource?.def;
             mechfall.StartStrike();
-            if (base.EquipmentSource != null && !base.EquipmentSource.Destroyed)
+            if (EquipmentSource != null && !EquipmentSource.Destroyed)
             {
-                base.EquipmentSource.Destroy(DestroyMode.Vanish);
+                EquipmentSource.Destroy(DestroyMode.Vanish);
             }
             return true;
         }
