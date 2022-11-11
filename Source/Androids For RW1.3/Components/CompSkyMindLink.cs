@@ -41,6 +41,8 @@ namespace ATReforged
                 avatar = Tex.MindOperation;
             else if (HasSurrogate() || isForeign)
                 avatar = Tex.RemotelyControlledNode;
+            else if (Find.DesignatorManager.SelectedDesignator is Designator_AndroidToControl && Utils.IsSurrogate(ThisPawn) && !HasSurrogate())
+                avatar = Tex.AvailableSurrogateIcon;
 
             if (avatar != null)
             {
@@ -114,10 +116,10 @@ namespace ATReforged
                         defaultDesc = "ATR_AbsorbExperienceDesc".Translate(),
                         action = delegate ()
                         {
-                            Find.WindowStack.Add(new Dialog_Msg("ATR_AbsorbExperience".Translate(), "ATR_AbsorbExperienceConfirm".Translate(parent.LabelShortCap) + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_AbsorbExperienceConfirm".Translate(parent.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_AbsorbExperience".Translate(), buttonAAction: delegate
                             {
                                 Linked = 3;
-                            }, false));
+                            }));
                         }
                     };
                 }
@@ -148,7 +150,7 @@ namespace ATReforged
 
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                             {
-                                Find.WindowStack.Add(new Dialog_Msg("ATR_DownloadCloudPawn".Translate(), "ATR_DownloadCloudPawnConfirm".Translate() + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                                Find.WindowStack.Add(new Dialog_MessageBox("ATR_DownloadCloudPawnConfirm".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_DownloadCloudPawn".Translate(), buttonAAction: delegate
                                 {
                                     recipientPawn = pawn;
                                     Linked = 4;
@@ -300,18 +302,18 @@ namespace ATReforged
                     {
                         opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
                         {
-                            Find.WindowStack.Add(new Dialog_Msg("ATR_Permute".Translate(), "ATR_PermuteConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_PermuteConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Permute".Translate(), buttonAAction: delegate
                             {
                                 recipientPawn = colonist;
                                 Linked = 1;
-                            }, false));
+                            }));
                         }));
                     }
                     opts.SortBy((x) => x.Label);
 
                     if (opts.Count == 0)
                         opts.Add(new FloatMenuOption("ATR_NoAvailableTarget".Translate(), null));
-                    Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableTargetPawns".Translate()));
+                    Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableTargets".Translate()));
                 }
             };
 
@@ -329,18 +331,18 @@ namespace ATReforged
                     {
                         opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
                         {
-                            Find.WindowStack.Add(new Dialog_Msg("ATR_Duplicate".Translate(), "ATR_DuplicateConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_DuplicateConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Duplicate".Translate(), buttonAAction: delegate
                             {
                                 recipientPawn = colonist;
                                 Linked = 2;
-                            }, false));
+                            }));
                         }));
                     }
                     opts.SortBy((x) => x.Label);
 
                     if (opts.Count == 0)
                         opts.Add(new FloatMenuOption("ATR_NoAvailableTarget".Translate(), null));
-                    Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableTargetPawns".Translate()));
+                    Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableTargets".Translate()));
                 }
             };
 
@@ -354,7 +356,7 @@ namespace ATReforged
                     defaultDesc = "ATR_UploadDesc".Translate(),
                     action = delegate ()
                     {
-                        Find.WindowStack.Add(new Dialog_Msg("ATR_Upload".Translate(), "ATR_UploadConfirm".Translate() + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                        Find.WindowStack.Add(new Dialog_MessageBox("ATR_UploadConfirm".Translate() + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Upload".Translate(), buttonAAction: delegate
                         {
                             Linked = 5;
                         }));
@@ -377,9 +379,32 @@ namespace ATReforged
             {
                 int status = networkOperationInProgress;
                 networkOperationInProgress = value;
+                // Pawn's operation has ended. Close out appropriate function based on the networkOperation that had been chosen (contained in status).
                 if (networkOperationInProgress == -1 && status > -1)
-                { // Pawn's operation has ended. Close out appropriate function based on the networkOperation that had been chosen (contained in status).
-                    HandleSuccess(status);
+                { 
+                    // If the status is resetting because of a failure, notify that a failure occurred. HandleInterrupt takes care of actual negative events.
+                    if (ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MemoryCorruption) != null)
+                    {
+                        Find.LetterStack.ReceiveLetter("ATR_OperationFailure".Translate(), "ATR_OperationFailureDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.NegativeEvent, ThisPawn);
+                    }
+                    else
+                    {
+                        HandleSuccess(status);
+                    }
+
+                    // Pawns no longer have the mind operation hediff.
+                    Hediff target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
+                    if (target != null)
+                        ThisPawn.health.RemoveHediff(target);
+
+                    // Recipients lose any MindOperation hediffs as well and also reboot.
+                    if (recipientPawn != null)
+                    {
+                        target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
+                        if (target != null)
+                            recipientPawn.health.RemoveHediff(target);
+                        recipientPawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
+                    }
 
                     // All pawns undergo a system reboot upon successful completion of an operation.
                     Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_ShortReboot, ThisPawn, null);
@@ -388,8 +413,9 @@ namespace ATReforged
 
                     Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
                 }
+                // Operation has begun. Stand by until completion or aborted.
                 else if (networkOperationInProgress > -1)
-                { // Operation has begun. Stand by until completion or aborted.
+                { 
                     HandleInitialization();
                 }
             }
@@ -405,11 +431,11 @@ namespace ATReforged
             // A SkyMind operation is in progress. State how long players must wait before the operation will be complete.
             if (networkOperationInProgress > -1 && Utils.gameComp.GetAllLinkedPawns().ContainsKey(ThisPawn))
             {
-                ret.AppendLine("ATR_SkyMindOperationInProgress".Translate((Utils.gameComp.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                ret.Append("ATR_SkyMindOperationInProgress".Translate((Utils.gameComp.GetLinkedPawn(ThisPawn) - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
             }
             else if (networkOperationInProgress == -2)
             {
-                ret.AppendLine("ATR_SurrogateConnected".Translate(string.Join(", ", surrogatePawns)));
+                ret.Append("ATR_SurrogateConnected".Translate(surrogatePawns.Count));
             }
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }
@@ -449,7 +475,7 @@ namespace ATReforged
                 surrogatePawns.Add(surrogate);
                 surrogate.TryGetComp<CompSkyMindLink>().surrogatePawns.Add(ThisPawn);
                 FleckMaker.ThrowDustPuffThick(surrogate.Position.ToVector3Shifted(), surrogate.Map, 4.0f, Color.blue);
-                Messages.Message("ATR_SurrogateConnected".Translate(ThisPawn.LabelShortCap, surrogate.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
+                Messages.Message("ATR_SurrogateControlled".Translate(ThisPawn.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
                 Linked = -2;
                 surrogate.TryGetComp<CompSkyMindLink>().Linked = -2;
             }
@@ -523,6 +549,7 @@ namespace ATReforged
             }
             // Forget about all surrogates.
             surrogatePawns.Clear();
+            Linked = -1;
         }
 
         // Applies some form of corruption to the provided pawn. For organics, this is dementia. For mechanicals, this is a slowly fading memory corruption.
@@ -603,21 +630,14 @@ namespace ATReforged
         // Apply the correct effects upon successfully completing the SkyMind operation based on the status (parameter as Linked is changed to -1 just beforehand).
         public void HandleSuccess(int status)
         {
-            Hediff target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
-            if (target != null)
-                ThisPawn.health.RemoveHediff(target);
-
+            Hediff target;
             // If there is a recipient pawn, it was a permutation, duplication, or download. Handle appropriately.
             if (recipientPawn != null)
             {
-                target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
-                if (target != null)
-                    recipientPawn.health.RemoveHediff(target);
                 // Permutation, swap the pawn's minds.
                 if (status == 1)
                 {
                     Utils.PermutePawn(ThisPawn, recipientPawn);
-                    recipientPawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
                 }
                 // Duplication, insert a copy of the current pawn into the recipient.
                 else if (status == 2)

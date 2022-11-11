@@ -21,12 +21,20 @@ namespace ATReforged
             base.PostSpawnSetup(respawningAfterLoad);
         }
 
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+
+            // Pawns that provide core capacity lose it when they die. TODO: Kidnapped pawns, exiled pawns, and more may be able to abuse this.
+            Utils.gameComp.RemoveCore(this);
+        }
+
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
 
-            // Check to see if the core actually should disappear or not. Buildings always will, but despawned, living Pawns still qualify as cores.
-            if (parent is Building || ((Pawn)parent).Dead)
+            // Buildings that provide core capacity lose it when they despawn if they are online.
+            if (parent is Building && parent.TryGetComp<CompPowerTrader>().PowerOn)
             {
                 Utils.gameComp.RemoveCore(this);
             }
@@ -83,7 +91,7 @@ namespace ATReforged
                         if (opts.Count == 0)
                             return;
 
-                        Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableCloudPawns".Translate()));
+                        Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableSources".Translate()));
                     }
                 }
             };
@@ -102,7 +110,7 @@ namespace ATReforged
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                         {
-                            Find.WindowStack.Add(new Dialog_Msg("ATR_RemoveCloudPawn".Translate(), "ATR_RemoveCloudPawnConfirm".Translate(pawn.LabelShortCap), delegate
+                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_RemoveCloudPawnConfirm".Translate(pawn.LabelShortCap), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_RemoveCloudPawn".Translate(), buttonAAction: delegate
                             {
                                 Utils.gameComp.PopCloudPawn(pawn);
                                 pawn.Kill(null);
@@ -116,7 +124,7 @@ namespace ATReforged
                         if (opts.Count == 0)
                             return;
 
-                        Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableCloudPawns".Translate()));
+                        Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableSources".Translate()));
                     }
                 }
             };
@@ -141,7 +149,7 @@ namespace ATReforged
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
-                                Find.WindowStack.Add(new Dialog_Msg("ATR_ReplicateCloudPawn".Translate(), "ATR_ReplicateCloudPawnDesc".Translate() + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), delegate
+                                Find.WindowStack.Add(new Dialog_MessageBox("ATR_ReplicateCloudPawnDesc".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_ReplicateCloudPawn".Translate(), buttonAAction: delegate
                                 {
                                     pawn.TryGetComp<CompSkyMindLink>().Linked = 6;
                                     Utils.gameComp.PushNetworkLinkedPawn(pawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
@@ -151,7 +159,7 @@ namespace ATReforged
 
                             if (opts.Count == 0)
                                 return;
-                            Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableCloudPawns".Translate()));
+                            Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableSources".Translate()));
                         }
                     }
                 }
@@ -178,7 +186,7 @@ namespace ATReforged
                     if (cloudPawnOpts.Count == 0)
                         return;
 
-                    Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableCloudPawns".Translate()));
+                    Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableSources".Translate()));
                 }
             };
 
@@ -217,7 +225,7 @@ namespace ATReforged
                     if (cloudPawnOpts.Count == 0)
                         return;
 
-                    Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableCloudPawns".Translate()));
+                    Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableSources".Translate()));
                 }
             };
 
@@ -253,7 +261,7 @@ namespace ATReforged
                                 if (targetOpts.Count == 0)
                                     return;
 
-                                Find.WindowStack.Add(new FloatMenu(targetOpts, "ATR_ViableTargetPawns".Translate()));
+                                Find.WindowStack.Add(new FloatMenu(targetOpts, "ATR_ViableTargets".Translate()));
                             }));
                         }
                         cloudPawnOpts.SortBy((x) => x.Label);
@@ -261,7 +269,7 @@ namespace ATReforged
                         if (cloudPawnOpts.Count == 0)
                             return;
 
-                        Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableCloudPawns".Translate()));
+                        Find.WindowStack.Add(new FloatMenu(cloudPawnOpts, "ATR_ViableSources".Translate()));
                     }
                 };
             }

@@ -3,7 +3,7 @@
     <!-- ABSTRACT BASE CLASSES -->
 
     <!-- Base Added Part Hediff -->
-    <HediffDef Name="ATRMechAddedBodyPartBase" ParentName="ImplantHediffBase" Abstract="True">
+    <HediffDef Name="ATR_MechAddedBodyPartBase" ParentName="ImplantHediffBase" Abstract="True">
         <hediffClass>Hediff_AddedPart</hediffClass>
         <addedPartProps>
             <solid>true</solid>
@@ -13,14 +13,14 @@
     </HediffDef>
 
     <!-- Base Body Part Thing -->
-    <ThingDef Name="ATRMechBodyPartBase" ParentName="BodyPartBase" Abstract="True">
+    <ThingDef Name="ATR_MechBodyPartBase" ParentName="BodyPartBase" Abstract="True">
         <thingCategories>
             <li>BodyPartsMechanical</li>
         </thingCategories>
     </ThingDef>
 
     <!-- Base Implant Installation Surgery Recipe -->
-    <RecipeDef Name="MechanicalSurgeryInstallImplantBase" ParentName="surgeryMechanical" Abstract="True">
+    <RecipeDef Name="ATR_MechanicalSurgeryInstallImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallImplantAndroid</workerClass>
         <workAmount>2500</workAmount>
         <skillRequirements>
@@ -44,12 +44,12 @@
     </RecipeDef>
 
     <!-- Base Added Part Installation Surgery Recipe -->
-    <RecipeDef Name="MechanicalSurgeryInstallBodyPartBase" ParentName="MechanicalSurgeryInstallImplantBase" Abstract="True">
+    <RecipeDef Name="ATR_MechanicalSurgeryInstallBodyPartBase" ParentName="ATR_MechanicalSurgeryInstallImplantBase" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallAndroidPart</workerClass>
     </RecipeDef>
 	
     <!-- Base Remove Implant Surgery Recipe-->
-	<RecipeDef Name="MechanicalSurgeryRemoveImplantBase" ParentName="surgeryMechanical" Abstract="True">
+	<RecipeDef Name="ATR_MechanicalSurgeryRemoveImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
 		<workerClass>Recipe_RemoveImplant</workerClass>
 		<workAmount>2000</workAmount>
         <isViolation>true</isViolation>

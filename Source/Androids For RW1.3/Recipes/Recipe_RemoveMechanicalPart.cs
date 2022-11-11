@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using RimWorld;
@@ -85,14 +84,24 @@ namespace ATReforged
                 // There are special considerations for removing the core (brain) itself. Removing an autonomous core is murder. Removing any core applies the "Isolated Core" hediff and removes the SkyMind comp.
                 if (removingInterface)
                 {
-                    // If a receiver core was removed, then it's not murder, but they still need to be turned into a blank. Removing an autonomous core is murder.
-                    Utils.Duplicate(Utils.GetBlank(), pawn, isAutonomousIntelligence);
-                    pawn.guest?.SetGuestStatus(Faction.OfPlayer);
-                    if (pawn.playerSettings != null)
-                        pawn.playerSettings.medCare = MedicalCareCategory.Best;
+                    // Removing an interface always disconnects a pawn from the SkyMind network. This needs to disconnect surrogates, controllers, and those currently in mind operations.
+                    // This will ensure all appropriate comps and interactions are taken care of before continuing
+                    Utils.gameComp.DisconnectFromSkyMind(pawn);
 
-                    // Clean up and apply the appropriate hediff.
+                    // Surrogates are already handled via disconnecting from the SkyMind or are already blank. Autonomous intelligences must be murdered and made blank.
+                    if (isAutonomousIntelligence)
+                    {
+                        Utils.Duplicate(Utils.GetBlank(), pawn, true);
+                        pawn.guest?.SetGuestStatus(Faction.OfPlayer);
+                        if (pawn.playerSettings != null)
+                            pawn.playerSettings.medCare = MedicalCareCategory.Best;
+                    }
+
+                    // Clean up and apply the appropriate hediff. Apply Isolated core before no host is applied to ensure the pawn doesn't become capable of moving for a tick.
                     pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
+                    Hediff targetHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+                    if (targetHediff != null)
+                        pawn.health.RemoveHediff(targetHediff);
                 }
             }
         }

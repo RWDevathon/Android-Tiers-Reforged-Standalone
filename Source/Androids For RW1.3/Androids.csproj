@@ -192,7 +192,9 @@
     <Compile Include="Components\CompProperties_SuperComputer.cs" />
     <Compile Include="Components\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
+    <Compile Include="DefsOf\IncidentDefOf.cs" />
     <Compile Include="DefsOf\MentalStateDefOf.cs" />
+    <Compile Include="DefsOf\QuestScriptDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />
     <Compile Include="DefsOf\WorkTypeDefOf.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
@@ -200,11 +202,8 @@
     <Compile Include="Extensions\ListingExtensions.cs" />
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
-    <Compile Include="Harmony\Alert_ColonistNeedsRescuing_Patch.cs" />
     <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
-    <Compile Include="Harmony\CompAbilityEffect_StartRitual_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
-    <Compile Include="Harmony\InteractionWorker_ConvertIdeoAttempt_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
     <Compile Include="Harmony\KidnapUtility_Patch.cs" />
     <Compile Include="Harmony\PawnBioAndNameGenerator_Patch.cs" />
@@ -221,7 +220,6 @@
     <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
-    <Compile Include="Harmony\ThoughtWorker_Precept_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Warper.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />
@@ -251,7 +249,7 @@
     <Compile Include="DefsOf\ThingDefOf.cs" />
     <Compile Include="DefsOf\TraitDefOf.cs" />
     <Compile Include="Designators\Designator_AndroidToControl.cs" />
-    <Compile Include="Dialogs\Dialog_Msg.cs" />
+    <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\Apparel_Patch.cs" />
@@ -259,17 +257,13 @@
     <Compile Include="Harmony\Caravan_Patch.cs" />
     <Compile Include="Harmony\Corpse_Patch.cs" />
     <Compile Include="Harmony\FlickUtility_Patch.cs" />
-    <Compile Include="Harmony\FreeColonists_Patch.cs" />
+    <Compile Include="Harmony\Thing_Patch.cs" />
     <Compile Include="Harmony\HealthAIUtility_Patch.cs" />
     <Compile Include="Harmony\HediffSet_Patch.cs" />
     <Compile Include="Harmony\HediffUtility_Patch.cs" />
     <Compile Include="Harmony\IncidentWorker_DiseaseAnimal_Patch.cs" />
     <Compile Include="Harmony\IncidentWorker_DiseaseHuman_Patch.cs" />
-    <Compile Include="Harmony\InspirationWorker_Patch.cs" />
     <Compile Include="Harmony\JobGiver_GetFood_Patch.cs" />
-    <Compile Include="Harmony\JobGiver_GetJoy_Patch.cs" />
-    <Compile Include="Harmony\JobGiver_SocialFighting_Patch.cs" />
-    <Compile Include="Harmony\KidnapAIUtility_Patch.cs" />
     <Compile Include="Harmony\MedicalCareUtility_Patch.cs" />
     <Compile Include="Harmony\Need_Patch.cs" />
     <Compile Include="Harmony\PawnDiedOrDownedThoughtsUtility_Patch.cs" />
@@ -300,7 +294,7 @@
     <Compile Include="WorkGivers\JobGiver_Exterminator.cs" />
     <Compile Include="MechFallStuff\MechFallClass.cs" />
     <Compile Include="MechFallStuff\MechFallMote.cs" />
-    <Compile Include="ModExtensionATweaks.cs" />
+    <Compile Include="Extensions\ModExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="PostInitTweaks.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />

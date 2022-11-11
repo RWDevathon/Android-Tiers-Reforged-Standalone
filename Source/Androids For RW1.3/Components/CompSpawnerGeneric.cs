@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Verse;
+﻿using Verse;
 using RimWorld;
-using System.Linq;
 
 namespace ATReforged
 {
@@ -26,7 +22,7 @@ namespace ATReforged
         // Generate and spawn the created pawn.
         public void SpawnPawn()
         { 
-            PawnGenerationRequest request = new PawnGenerationRequest(Spawnprops.pawnKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, fixedGender : Utils.GenerateGender(Spawnprops.pawnKind));
+            PawnGenerationRequest request = new PawnGenerationRequest(Spawnprops.pawnKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, forceNoIdeo: true, fixedGender : Utils.GenerateGender(Spawnprops.pawnKind));
             Pawn pawn = PawnGenerator.GeneratePawn(request);
 
             // If the pawn is an android, it is spawned dormant without an installed intelligence. Animals are spawned pre-initialized.

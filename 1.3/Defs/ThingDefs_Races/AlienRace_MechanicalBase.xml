@@ -24,7 +24,7 @@
 				<maxDamageForSocialfight>20</maxDamageForSocialfight>
 				<immuneToAge>false</immuneToAge>
 				<alienPartGenerator>
-					<headBodyPartDef>MechanicalHead</headBodyPartDef>
+					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
 					<alienbodytypes>
 						<li>Male</li>
 					</alienbodytypes>
@@ -200,8 +200,7 @@
 			</hediffGiverSets>
 		</race>
 		<modExtensions>
-			<li Class="ATReforged.MechCorpseTweaker">
-				<tweakCorpseRot>true</tweakCorpseRot>
+			<li Class="ATReforged.ATR_MechTweaker">
 			</li>
 		</modExtensions>
     </AlienRace.ThingDef_AlienRace>

@@ -52,8 +52,7 @@
             <li>RestoreBodyPartAndroid</li>
 		</recipes>
 		<modExtensions>
-			<li Class="ATReforged.MechCorpseTweaker">
-				<tweakCorpseRot>true</tweakCorpseRot>
+			<li Class="ATReforged.ATR_MechTweaker">
 			</li>
 		</modExtensions>
 	</ThingDef>

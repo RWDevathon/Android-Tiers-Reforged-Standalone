@@ -2,7 +2,7 @@
 <Defs>
 
     <BodyPartDef>
-        <defName>InternalCorePump</defName>
+        <defName>ATR_InternalCorePump</defName>
         <label>Coolant Pump</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
@@ -15,7 +15,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>MechanicalHeatsink</defName>
+        <defName>ATR_MechanicalHeatsink</defName>
         <label>Left Heatsink</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
@@ -28,7 +28,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>InternalBattery</defName>
+        <defName>ATR_InternalBattery</defName>
         <label>Battery</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
@@ -38,7 +38,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>MechaniteStorage</defName>
+        <defName>ATR_MechaniteStorage</defName>
         <label>Mechanite Storage</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
@@ -51,7 +51,7 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>InternalGenerator</defName>
+        <defName>ATR_InternalGenerator</defName>
         <label>Generator</label>
         <hitPoints>25</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>

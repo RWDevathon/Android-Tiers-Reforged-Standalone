@@ -3,7 +3,7 @@
 
     <!-- Base Spacer -->
   
-    <HediffDef Name="AddedBodyPartSpacerBase" ParentName="ATRMechAddedBodyPartBase" Abstract="True">
+    <HediffDef Name="AddedBodyPartSpacerBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.25</partEfficiency>
@@ -11,7 +11,7 @@
         </addedPartProps>
     </HediffDef>
 
-    <ThingDef Name="BodyPartSpacerBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+    <ThingDef Name="BodyPartSpacerBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Spacer</techLevel>
         <graphicData>
             <texPath>Things/Items/BodyParts/OrganWhite</texPath>
@@ -40,7 +40,7 @@
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
 
-	<RecipeDef Name="SurgeryMechanicalSpacer" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="SurgeryMechanicalSpacer" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Implanting advanced component.</jobString>
         <skillRequirements>
             <Crafting>8</Crafting>
@@ -109,7 +109,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalArm</li>
+			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedArm</addsHediff>
 	</RecipeDef>
@@ -159,7 +159,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalLeg</li>
+			<li>ATR_MechanicalLeg</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedLeg</addsHediff>
 	</RecipeDef>
@@ -209,7 +209,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalVisualSensor</li>
+			<li>ATR_MechanicalVisualSensor</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedVisualSensor</addsHediff>
 	</RecipeDef>
@@ -259,7 +259,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalAudioSensor</li>
+			<li>ATR_MechanicalAudioSensor</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedAudioSensor</addsHediff>
 	</RecipeDef>
@@ -317,7 +317,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalHeatsink</li>
+			<li>ATR_MechanicalHeatsink</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedHeatsink</addsHediff>
 	</RecipeDef>
@@ -375,7 +375,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalCorePump</li>
+			<li>ATR_InternalCorePump</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedCoolantPump</addsHediff>
 	</RecipeDef>
@@ -430,7 +430,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalBattery</li>
+			<li>ATR_InternalBattery</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedBattery</addsHediff>
 	</RecipeDef>
@@ -487,7 +487,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechaniteStorage</li>
+			<li>ATR_MechaniteStorage</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedMechaniteStorage</addsHediff>
 	</RecipeDef>
@@ -542,7 +542,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalGenerator</li>
+			<li>ATR_InternalGenerator</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AdvancedReactor</addsHediff>
 	</RecipeDef>

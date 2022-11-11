@@ -1,5 +1,4 @@
-﻿using System;
-using Verse;
+﻿using Verse;
 using RimWorld;
 
 namespace ATReforged

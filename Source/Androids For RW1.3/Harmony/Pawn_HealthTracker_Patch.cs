@@ -1,11 +1,8 @@
 ﻿using Verse;
-using Verse.AI;
-using Verse.AI.Group;
 using HarmonyLib;
 using RimWorld;
 using System;
 using RimWorld.Planet;
-using System.Linq;
 
 namespace ATReforged
 {

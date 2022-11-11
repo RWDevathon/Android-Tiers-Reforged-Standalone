@@ -2,13 +2,7 @@
 using System.Reflection;
 using Verse;
 using UnityEngine;
-using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Runtime;
-
-
-using AlienRace;
 using RimWorld;
 
 namespace ATReforged
@@ -60,7 +54,7 @@ namespace ATReforged
             RecipeDef androidSmashing = DefDatabase<RecipeDef>.GetNamed("SmashCorpseMechanoid");
             RecipeDef butcherFlesh = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh");
 
-            // Must dynamically patch as many ThingDefs as needed that possess certain qualifications.
+            // Must dynamically modify some ThingDefs based on certain qualifications.
             foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
             {
                 // Check race to see if the thingDef is for a Pawn.
@@ -81,16 +75,9 @@ namespace ATReforged
                             compClass = typeof(CompSkyMindLink)
                         };
                         thingDef.comps.Add(cp);
-                        var checker = 0;
-                        foreach (var comp in thingDef.comps)
-                        {
-                            if (comp.compClass == typeof(CompSkyMind))
-                                checker++;
-                        }
-                        Log.Warning("[ATR DEBUG] thingDef " + thingDef.defName + " has " + checker + " CompSkyMinds.");
                     }
 
-                    // Mechanical pawns do not need rest or get butchered like organics do. Patch the defs at run-time because settings may change.
+                    // Mechanical pawns do not need rest or get butchered like organics do.
                     if (Utils.IsConsideredMechanical(thingDef))
                     {
                         androidDisassembly.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);

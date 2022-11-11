@@ -31,7 +31,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>MechBipedal</body>
+			<body>ATR_MechBipedal</body>
 			<baseBodySize>0.3</baseBodySize>
 			<baseHealthScale>0.5</baseHealthScale>
 			<foodType>OmnivoreRoughAnimal</foodType>

@@ -2,9 +2,9 @@
 <LanguageData>
 
 	<!-- General -->
-	<ATR_ViableCloudPawns>Available Sources:</ATR_ViableCloudPawns>
-	<ATR_ViableTargetPawns>Available Targets:</ATR_ViableTargetPawns>
-	<ATR_NoAvailableTarget>No available targets for operation. Check SkyMind and desired target status.</ATR_NoAvailableTarget>
+	<ATR_ViableSources>Available Sources:</ATR_ViableSources>
+	<ATR_ViableTargets>Available Targets:</ATR_ViableTargets>
+	<ATR_NoAvailableTarget>No available targets for operation.</ATR_NoAvailableTarget>
 
 	<!-- Charging -->
 	<ATR_ForceCharge>Force battery charging</ATR_ForceCharge>

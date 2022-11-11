@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
 namespace ATReforged
 {
+    /*
+     *  Settings Extensions and Pawn Selectors courtesy of Simple Sidearms by PeteTimesSix. Without his work, this would have been exceedingly difficult to build!
+     */
     public static class ListingExtensions
     {
         private static readonly Color SelectedButtonColor = new Color(.65f, 1f, .65f);

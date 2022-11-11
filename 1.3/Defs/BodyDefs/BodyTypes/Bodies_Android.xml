@@ -5,7 +5,7 @@
         <defName>ATR_AndroidBody</defName>
         <label>Android</label>
         <corePart>
-            <def>MechanicalThorax</def>
+            <def>ATR_MechanicalThorax</def>
             <height>Middle</height>
             <depth>Outside</depth>
             <groups>
@@ -13,7 +13,7 @@
             </groups>
             <parts>
                 <li>
-                    <def>Framework</def>
+                    <def>ATR_Framework</def>
                     <coverage>0.2</coverage>
                     <depth>Outside</depth>
                     <groups>
@@ -21,7 +21,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>InternalGenerator</def>
+                    <def>ATR_InternalGenerator</def>
                     <coverage>0.025</coverage>
                     <depth>Inside</depth>
                     <groups>
@@ -29,7 +29,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>InternalCorePump</def>
+                    <def>ATR_InternalCorePump</def>
                     <coverage>0.020</coverage>
                     <depth>Inside</depth>
                     <groups>
@@ -37,7 +37,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>MechanicalHeatsink</def>
+                    <def>ATR_MechanicalHeatsink</def>
                     <customLabel>left heatsink</customLabel>
                     <coverage>0.025</coverage>
                     <depth>Inside</depth>
@@ -46,7 +46,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>MechanicalHeatsink</def>
+                    <def>ATR_MechanicalHeatsink</def>
                     <customLabel>right heatsink</customLabel>
                     <coverage>0.025</coverage>
                     <depth>Inside</depth>
@@ -55,7 +55,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>InternalBattery</def>
+                    <def>ATR_InternalBattery</def>
                     <coverage>0.017</coverage>
                     <depth>Inside</depth>
                     <groups>
@@ -63,7 +63,7 @@
                     </groups>
                     </li>
                 <li>
-                    <def>MechaniteStorage</def>
+                    <def>ATR_MechaniteStorage</def>
                     <coverage>0.017</coverage>
                     <depth>Inside</depth>
                     <groups>
@@ -71,7 +71,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>MechanicalNeck</def>
+                    <def>ATR_MechanicalNeck</def>
                     <coverage>0.05</coverage>
                     <height>Top</height>
                     <groups>
@@ -79,7 +79,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>MechanicalHead</def>
+                            <def>ATR_MechanicalHead</def>
                             <coverage>0.80</coverage>
                             <groups>
                                 <li>UpperHead</li>
@@ -88,7 +88,7 @@
                             </groups>
                             <parts>
                                 <li>
-                                    <def>ArtificialBrain</def>
+                                    <def>ATR_ArtificialBrain</def>
                                     <coverage>0.07</coverage>
                                     <depth>Inside</depth>
                                     <groups>
@@ -97,7 +97,7 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>CoreAssistant</def>
+                                    <def>ATR_CoreAssistant</def>
                                     <coverage>0.03</coverage>
                                     <depth>Inside</depth>
                                     <groups>
@@ -106,14 +106,14 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>VoiceSynthesizer</def>
+                                    <def>ATR_VoiceSynthesizer</def>
                                     <coverage>0.14</coverage>
                                     <groups>
                                         <li>FullHead</li>
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>MechanicalVisualSensor</def>
+                                    <def>ATR_MechanicalVisualSensor</def>
                                     <customLabel>left visual sensor</customLabel>
                                     <coverage>0.13</coverage>
                                     <groups>
@@ -122,7 +122,7 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>MechanicalVisualSensor</def>
+                                    <def>ATR_MechanicalVisualSensor</def>
                                     <customLabel>right visual sensor</customLabel>
                                     <coverage>0.13</coverage>
                                     <groups>
@@ -131,7 +131,7 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>MechanicalAudioSensor</def>
+                                    <def>ATR_MechanicalAudioSensor</def>
                                     <customLabel>left audio sensor</customLabel>
                                     <coverage>0.10</coverage>
                                     <groups>
@@ -140,7 +140,7 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>MechanicalAudioSensor</def>
+                                    <def>ATR_MechanicalAudioSensor</def>
                                     <customLabel>right audio sensor</customLabel>
                                     <coverage>0.10</coverage>
                                     <groups>
@@ -149,7 +149,7 @@
                                     </groups>
                                 </li>
                                 <li>
-                                    <def>SmellSensor</def>
+                                    <def>ATR_SmellSensor</def>
                                     <coverage>0.10</coverage>
                                     <groups>
                                         <li>FullHead</li>
@@ -160,7 +160,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>MechanicalShoulder</def>
+                    <def>ATR_MechanicalShoulder</def>
                     <customLabel>left shoulder</customLabel>
                     <coverage>0.12</coverage>
                     <groups>
@@ -168,7 +168,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>MechanicalArm</def>
+                            <def>ATR_MechanicalArm</def>
                             <customLabel>left arm</customLabel>
                             <coverage>0.85</coverage>
                             <groups>
@@ -176,7 +176,7 @@
                             </groups>
                             <parts>
                                 <li>
-                                    <def>MechanicalHand</def>
+                                    <def>ATR_MechanicalHand</def>
                                     <customLabel>left hand</customLabel>
                                     <coverage>0.2</coverage>
                                     <height>Bottom</height>
@@ -185,7 +185,7 @@
                                     </groups>
                                     <parts>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>left pinky</customLabel>
                                             <coverage>0.06</coverage>
                                             <groups>
@@ -194,7 +194,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>left ring finger</customLabel>
                                             <coverage>0.07</coverage>
                                             <groups>
@@ -203,7 +203,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>left middle finger</customLabel>
                                             <coverage>0.08</coverage>
                                             <groups>
@@ -212,7 +212,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>left index finger</customLabel>
                                             <coverage>0.07</coverage>
                                             <groups>
@@ -221,7 +221,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>left thumb</customLabel>
                                             <coverage>0.08</coverage>
                                             <groups>
@@ -236,7 +236,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>MechanicalShoulder</def>
+                    <def>ATR_MechanicalShoulder</def>
                     <customLabel>right shoulder</customLabel>
                     <coverage>0.12</coverage>
                     <groups>
@@ -244,7 +244,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>MechanicalArm</def>
+                            <def>ATR_MechanicalArm</def>
                             <customLabel>right arm</customLabel>
                             <coverage>0.85</coverage>
                             <groups>
@@ -252,7 +252,7 @@
                             </groups>
                             <parts>
                                 <li>
-                                    <def>MechanicalHand</def>
+                                    <def>ATR_MechanicalHand</def>
                                     <customLabel>right hand</customLabel>
                                     <coverage>0.2</coverage>
                                     <height>Bottom</height>
@@ -261,7 +261,7 @@
                                     </groups>
                                     <parts>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>right pinky</customLabel>
                                             <coverage>0.15</coverage>
                                             <groups>
@@ -270,7 +270,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>right ring finger</customLabel>
                                             <coverage>0.15</coverage>
                                             <groups>
@@ -279,7 +279,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>right middle finger</customLabel>
                                             <coverage>0.15</coverage>
                                             <groups>
@@ -288,7 +288,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>right index finger</customLabel>
                                             <coverage>0.15</coverage>
                                             <groups>
@@ -297,7 +297,7 @@
                                             </groups>
                                         </li>
                                         <li>
-                                            <def>MechanicalFinger</def>
+                                            <def>ATR_MechanicalFinger</def>
                                             <customLabel>right thumb</customLabel>
                                             <coverage>0.15</coverage>
                                             <groups>
@@ -312,7 +312,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>MechanicalWaist</def>
+                    <def>ATR_MechanicalWaist</def>
                     <coverage>0</coverage>
                     <height>Bottom</height>
                     <groups>
@@ -320,7 +320,7 @@
                     </groups>
                 </li>
                 <li>
-                    <def>MechanicalLeg</def>
+                    <def>ATR_MechanicalLeg</def>
                     <customLabel>left leg</customLabel>
                     <coverage>0.12</coverage>
                     <height>Bottom</height>
@@ -329,7 +329,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>MechanicalFoot</def>
+                            <def>ATR_MechanicalFoot</def>
                             <customLabel>left foot</customLabel>
                             <coverage>0.2</coverage>
                             <groups>
@@ -339,7 +339,7 @@
                     </parts>
                 </li>
                 <li>
-                    <def>MechanicalLeg</def>
+                    <def>ATR_MechanicalLeg</def>
                     <customLabel>right leg</customLabel>
                     <coverage>0.12</coverage>
                     <height>Bottom</height>
@@ -348,7 +348,7 @@
                     </groups>
                     <parts>
                         <li>
-                            <def>MechanicalFoot</def>
+                            <def>ATR_MechanicalFoot</def>
                             <customLabel>right foot</customLabel>
                             <coverage>0.1</coverage>
                             <groups>

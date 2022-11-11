@@ -101,12 +101,12 @@
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
         <researchPrerequisites>
-        <li>ATR_MechanicalStandardization</li>
+            <li>ATR_MechanicalStandardization</li>
         </researchPrerequisites>
         <comps>
             <li Class="CompProperties_Facility">
                 <statOffsets>
-                <MechanicalSurgerySuccessChanceFactor>0.08</MechanicalSurgerySuccessChanceFactor>
+                    <MechanicalSurgerySuccessChanceFactor>0.08</MechanicalSurgerySuccessChanceFactor>
                 </statOffsets>
                 <maxSimultaneous>1</maxSimultaneous>
                 <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>

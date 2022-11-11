@@ -59,7 +59,7 @@
 			<makesFootprints>false</makesFootprints>
 			<hasGenders>false</hasGenders>
 			<lifeExpectancy>1</lifeExpectancy>
-			<body>MechAirborne</body>
+			<body>ATR_MechAirborne</body>
 			<baseHealthScale>0.4</baseHealthScale>
 			<leatherDef>Tainted_Skin</leatherDef>
 			<needsRest>false</needsRest>
@@ -100,8 +100,7 @@
 			<Steel>3</Steel>
 		</butcherProducts>
         <modExtensions>
-            <li Class="ATReforged.MechCorpseTweaker">
-                <tweakCorpseRot>true</tweakCorpseRot>
+            <li Class="ATReforged.ATR_MechTweaker">
             </li>
         </modExtensions>
     </ThingDef>

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using RimWorld;
-using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -40,7 +36,7 @@ namespace ATReforged
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
-            if(!Medical && !AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this)
+            if(Medical || (!AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this))
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }

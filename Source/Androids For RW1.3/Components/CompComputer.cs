@@ -93,6 +93,21 @@ namespace ATReforged
                             ChangeServerMode(ServerType.SkillServer);
                         }
                     };
+
+                    // Servers in hacking mode allow access to the hacking menu for deploying a hack.
+                    if (ATReforged_Settings.playerCanHack)
+                    {
+                        yield return new Command_Action
+                        {
+                            icon = Tex.HackingWindowIcon,
+                            defaultLabel = "ATR_HackingWindow".Translate(),
+                            defaultDesc = "ATR_HackingWindowDesc".Translate(),
+                            action = delegate ()
+                            {
+                                Find.WindowStack.Add(new Dialog_HackingWindow());
+                            }
+                        };
+                    }
                     break;
                 default:
                     Log.Warning("[ATR] Server has illegal type. Button will link to skill seeking to resolve the issue.");
@@ -110,7 +125,7 @@ namespace ATReforged
                     break;
             }
         }
-
+        
         public override string CompInspectStringExtra()
         {
             StringBuilder ret = new StringBuilder();
@@ -121,23 +136,23 @@ namespace ATReforged
             {
                 ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
                    .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
-                   .AppendLine("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
+                   .Append("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.SecurityServer)
             {
                 ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
                    .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
-                   .AppendLine("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
+                   .Append("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
             }
 
             if (serverMode == ServerType.HackingServer)
             {
                 ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
-                   .AppendLine("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
+                   .Append("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
             }
-            return ret.ToString();
+            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         public override void PostDeSpawn(Map map)

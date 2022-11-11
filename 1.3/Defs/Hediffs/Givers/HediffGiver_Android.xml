@@ -17,7 +17,7 @@
             <li Class="HediffGiver_RandomAgeCurved">
                 <hediff>ATR_DecayedFrame</hediff>
                 <partsToAffect>
-                    <li>Framework</li>
+                    <li>ATR_Framework</li>
                 </partsToAffect>
                 <ageFractionMtbDaysCurve>
                     <points>
@@ -31,7 +31,7 @@
             <li Class="HediffGiver_RandomAgeCurved">
                 <hediff>ATR_DamagedCore</hediff>
                 <partsToAffect>
-                    <li>ArtificialBrain</li>
+                    <li>ATR_ArtificialBrain</li>
                 </partsToAffect>
                 <ageFractionMtbDaysCurve>
                     <points>
@@ -45,7 +45,7 @@
             <li Class="HediffGiver_RandomAgeCurved">
                 <hediff>ATR_FailingCoolantValves</hediff>
                 <partsToAffect>
-                    <li>MechanicalThorax</li>
+                    <li>ATR_MechanicalThorax</li>
                 </partsToAffect>
                 <ageFractionMtbDaysCurve>
                     <points>
@@ -59,7 +59,7 @@
 	        <li Class="HediffGiver_RandomAgeCurved">
                 <hediff>ATR_RogueMechanites</hediff>
                 <partsToAffect>
-                    <li>MechaniteStorage</li>
+                    <li>ATR_MechaniteStorage</li>
                 </partsToAffect>
                 <allowOnLodgers>false</allowOnLodgers>
                 <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>

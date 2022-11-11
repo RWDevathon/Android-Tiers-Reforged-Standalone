@@ -3,12 +3,9 @@ using Verse;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using Verse.AI;
 using System.Linq;
 
 using static ATReforged.Enums;
-using System.Runtime;
-using AlienRace;
 
 namespace ATReforged
 {
@@ -44,8 +41,8 @@ namespace ATReforged
 
         // POWER SETTINGS
         public static int wattsConsumedPerBodySize;
-        public static bool mechanicalsHaveDifferentBioprocessingEfficiency;
-        public static float mechanicalBioprocessingEfficiency;
+        public static bool chargeCapableMeansDifferentBioEfficiency;
+        public static float chargeCapableBioEfficiency;
         public static float batteryPercentagePerRareTick;
 
         public static HashSet<ThingDef> canUseBattery;
@@ -60,7 +57,9 @@ namespace ATReforged
 
             // Settings for player hacks
         public static bool playerCanHack = true;
-        public static float chanceEnemiesInterceptHack = 0.4f;
+        public static float retaliationChanceOnFailure = 0.4f;
+        public static float minHackSuccessChance = 0.05f;
+        public static float maxHackSuccessChance = 0.95f;
 
         // HEALTH SETTINGS
 
@@ -82,7 +81,6 @@ namespace ATReforged
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;
         public static int timeToCompleteSkyMindOperations = 12;
-        public static int nbMoodPerAssistingMinds = 1;
         public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
 
             // Settings for Skill Points
@@ -209,7 +207,7 @@ namespace ATReforged
                     listingStandard.GapLine();
 
                     // CONSIDERATION SETTINGS
-                    
+                    listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                             cachedExpandFirst = !cachedExpandFirst;
@@ -248,10 +246,10 @@ namespace ATReforged
 
                     listingStandard.GapLine();
 
-                    listingStandard.CheckboxLabeled("ATR_mechanicalsHaveDifferentBioprocessingEfficiency".Translate(), ref mechanicalsHaveDifferentBioprocessingEfficiency, onChange: onChange);
-                    if (mechanicalsHaveDifferentBioprocessingEfficiency)
+                    listingStandard.CheckboxLabeled("ATR_chargeCapableMeansDifferentBioEfficiency".Translate(), ref chargeCapableMeansDifferentBioEfficiency, onChange: onChange);
+                    if (chargeCapableMeansDifferentBioEfficiency)
                         {
-                        listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref mechanicalBioprocessingEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_chargeCapableBioEfficiency".Translate(), ref chargeCapableBioEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
                 }
@@ -260,10 +258,20 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_EnemyHacksOccur".Translate(), ref enemyHacksOccur, onChange: onChange);
                     if (enemyHacksOccur)
                     {
-                        listingStandard.SliderLabeled("ATR_EnemyHackAttackStrengthModifier".Translate(), ref enemyHackAttackStrengthModifier, 0.01f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
-                        listingStandard.SliderLabeled("ATR_ChanceAlliesInterceptHack".Translate(), ref chanceAlliesInterceptHack, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
-                        listingStandard.SliderLabeled("ATR_PointsGainedOnInterceptPercentage".Translate(), ref pointsGainedOnInterceptPercentage, 0.00f, 3f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_EnemyHackAttackStrengthModifier".Translate(), ref enemyHackAttackStrengthModifier, 0.01f, 5f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_EnemyHackAttackStrengthModifierDesc".Translate(), onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_ChanceAlliesInterceptHack".Translate(), ref chanceAlliesInterceptHack, 0.01f, 1f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_ChanceAlliesInterceptHackDesc".Translate(), onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_PointsGainedOnInterceptPercentage".Translate(), ref pointsGainedOnInterceptPercentage, 0.00f, 3f, displayMult: 100, valueSuffix: "%", tooltip: "ATR_PointsGainedOnInterceptPercentageDesc".Translate(), onChange: onChange);
                         listingStandard.SliderLabeled("ATR_PercentageOfValueUsedForRansoms".Translate(), ref percentageOfValueUsedForRansoms, 0.01f, 2f, displayMult: 100, valueSuffix:"%", onChange: onChange);
+                    }
+
+
+
+                    listingStandard.CheckboxLabeled("ATR_PlayerCanHack".Translate(), ref playerCanHack, onChange: onChange);
+                    if (playerCanHack)
+                    {
+                        listingStandard.SliderLabeled("ATR_RetaliationChanceOnFailure".Translate(), ref retaliationChanceOnFailure, 0.0f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_MinHackSuccessChance".Translate(), ref minHackSuccessChance, 0.0f, maxHackSuccessChance, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_MaxHackSuccessChance".Translate(), ref maxHackSuccessChance, minHackSuccessChance, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
                 }
@@ -275,6 +283,13 @@ namespace ATReforged
                     listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
                     listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
+                    listingStandard.GapLine();
+
+
+                    listingStandard.CheckboxLabeled("ATR_UploadingKills".Translate(), ref uploadingToSkyMindKills, onChange: onChange);
+                    listingStandard.CheckboxLabeled("ATR_UploadingPermakills".Translate(), ref uploadingToSkyMindPermaKills, onChange: onChange);
+                    string SkyMindOperationTimeBuffer = timeToCompleteSkyMindOperations.ToString();
+                    listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 50);
                     break;
                 }
                 default:
@@ -321,8 +336,8 @@ namespace ATReforged
 
             // POWER SETTINGS
             wattsConsumedPerBodySize = 500;
-            mechanicalsHaveDifferentBioprocessingEfficiency = true;
-            mechanicalBioprocessingEfficiency = 0.5f;
+            chargeCapableMeansDifferentBioEfficiency = true;
+            chargeCapableBioEfficiency = 0.5f;
             batteryPercentagePerRareTick = 0.07f;
 
             // SECURITY SETTINGS
@@ -332,10 +347,21 @@ namespace ATReforged
             enemyHackAttackStrengthModifier = 1.0f;
             percentageOfValueUsedForRansoms = 0.25f;
 
+            playerCanHack = true;
+            retaliationChanceOnFailure = 0.4f;
+            minHackSuccessChance = 0.05f;
+            maxHackSuccessChance = 0.95f;
+
             // CONNECTIVITY SETTINGS
+            // Skills
             skillPointConversionRate = 10;
             passionSoftCap = 8;
             basePointsNeededForPassion = 1000f;
+
+            // Cloud
+            uploadingToSkyMindKills = true;
+            uploadingToSkyMindPermaKills = true;
+            timeToCompleteSkyMindOperations = 12;
 
             RebuildCaches();
         }
@@ -361,7 +387,7 @@ namespace ATReforged
 
         }
         
-        // Caches for ThingDefs must be rebuilt manually. Configuration uses the MechCorpseTweaker by default and will capture all pawn thing defs with that modExtension.
+        // Caches for ThingDefs must be rebuilt manually. Configuration uses the ATR_MechTweaker by default and will capture all pawn thing defs with that modExtension.
         private void RebuildCaches()
         {
             IEnumerable<ThingDef> validPawns = FilteredGetters.GetValidPawns();
@@ -371,7 +397,7 @@ namespace ATReforged
             HashSet<ThingDef> matchingMechanicals = new HashSet<ThingDef>();
             HashSet<ThingDef> matchingSpecials = new HashSet<ThingDef>();
             HashSet<ThingDef> matchingChargers = new HashSet<ThingDef>();
-            foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()))
+            foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()))
             {
                 // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension
                 if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f)
@@ -391,7 +417,7 @@ namespace ATReforged
                 matchingMechanicals.Add(validHumanlike);
             }
             // Mechanical animals are animals that have the ModExtension
-            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<MechCorpseTweaker>()).ToHashSet();
+            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()).ToHashSet();
 
             // Mechanical animals of advanced intelligence may charge.
             foreach (ThingDef validAnimal in matchingAnimals)
@@ -446,19 +472,26 @@ namespace ATReforged
             /* === POWER === */
 
             Scribe_Values.Look(ref wattsConsumedPerBodySize, "ATR_wattsConsumedPerBodySize", 500);
-            Scribe_Values.Look(ref mechanicalsHaveDifferentBioprocessingEfficiency, "ATR_mechanicalsHaveDifferentBioprocessingEfficiency", true);
-            Scribe_Values.Look(ref mechanicalBioprocessingEfficiency, "ATR_mechanicalBioprocessingEfficiency", 0.5f);
+            Scribe_Values.Look(ref chargeCapableMeansDifferentBioEfficiency, "ATR_chargeCapableMeansDifferentBioEfficiency", true);
+            Scribe_Values.Look(ref chargeCapableBioEfficiency, "ATR_chargeCapableBioEfficiency", 0.5f);
             Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);
 
             Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
 
             /* === SECURITY === */
 
+            // Hostile Hacks
             Scribe_Values.Look(ref enemyHacksOccur, "ATR_enemyHacksOccur", true);
             Scribe_Values.Look(ref chanceAlliesInterceptHack, "ATR_chanceAlliesInterceptHack", 0.05f);
             Scribe_Values.Look(ref pointsGainedOnInterceptPercentage, "ATR_pointsGainedOnInterceptPercentage", 0.25f);
             Scribe_Values.Look(ref enemyHackAttackStrengthModifier, "ATR_enemyHackAttackStrengthModifier", 1.0f);
             Scribe_Values.Look(ref percentageOfValueUsedForRansoms, "ATR_percentageOfValueUsedForRansoms", 0.25f);
+
+            // Player Hacks
+            Scribe_Values.Look(ref playerCanHack, "ATR_playerCanHack", true);
+            Scribe_Values.Look(ref retaliationChanceOnFailure, "ATR_retaliationChanceOnFailure", 0.4f);
+            Scribe_Values.Look(ref minHackSuccessChance, "ATR_minHackSuccessChance", 0.05f);
+            Scribe_Values.Look(ref maxHackSuccessChance, "ATR_maxHackSuccessChance", 0.95f);
 
             /* === CONNECTIVITY === */
 
@@ -466,6 +499,11 @@ namespace ATReforged
             Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 10);
             Scribe_Values.Look(ref passionSoftCap, "ATR_passionSoftCap", 8);
             Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 1000f);
+
+            // Cloud
+            Scribe_Values.Look(ref uploadingToSkyMindKills, "ATR_uploadingToSkyMindKills", true);
+            Scribe_Values.Look(ref uploadingToSkyMindPermaKills, "ATR_uploadingToSkyMindPermaKills", true);
+            Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 12);
         }
     }
 

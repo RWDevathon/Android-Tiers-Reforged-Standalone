@@ -14,17 +14,22 @@ namespace ATReforged
             }
         }
 
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+
+            // Dead pawns that were acting as towers can no longer do so. Buildings do not call this function.
+            Utils.gameComp.RemoveTower(this);
+        }
+        
         // After despawning remove the tower.
         public override void PostDeSpawn(Map map)
         { 
             base.PostDeSpawn(map);
+            // If the tower has a power supply, then it will remove the tower capacity IF it was not offline to avoid double-reducing the tower capacity. This will not affect pawns so they can go caravanning.
             CompPowerTrader cpt = parent.TryGetComp<CompPowerTrader>();
-            if (cpt == null)
-            { // If there is no power supply to this server, then despawning is the only time it can turn off and drop capacity.
-                Utils.gameComp.RemoveTower(this);
-            }
-            else if (cpt.PowerOn)
-            { // If it does have a power supply, then make sure the power is on before reducing capacity, as offline towers provide no capacity in the first place.
+            if (cpt.PowerOn)
+            { 
                 Utils.gameComp.RemoveTower(this);
             }
         }
@@ -51,7 +56,7 @@ namespace ATReforged
             if (parent.Map == null)
                 return base.CompInspectStringExtra();
 
-            ret.AppendLine("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
+            ret.Append("ATR_SkyMindNetworkSummary".Translate(Utils.gameComp.GetSkyMindDevices().Count, Utils.gameComp.GetSkyMindNetworkSlots()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }

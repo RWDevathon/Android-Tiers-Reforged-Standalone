@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
@@ -15,14 +14,14 @@ namespace ATReforged
         public ATR_GameComponent(Game game)
         {
             Utils.gameComp = this;
-            initNull();
+            AllocateIfNull();
         }
 
         public override void StartedNewGame()
         {
             base.StartedNewGame();
             
-            initNull();
+            AllocateIfNull();
         }
 
         public override void LoadedGame()
@@ -42,6 +41,9 @@ namespace ATReforged
             Scribe_Values.Look(ref hackingPoints, "ATR_hackingPoints", 0);
             Scribe_Values.Look(ref SkyMindNetworkCapacity, "ATR_SkyMindNetworkCapacity", 0);
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
+            Scribe_Values.Look(ref hackCostTimePenalty, "ATR_hackCostTimePenalty", 0);
+
+            Scribe_Deep.Look(ref blankPawn, "ATR_blankPawn");
 
             List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
             List<int> thingValueCopy = virusedDevices.Values.ToList();
@@ -52,7 +54,7 @@ namespace ATReforged
             Scribe_Collections.Look(ref securityServers, "ATR_securityServers", LookMode.Reference);
             Scribe_Collections.Look(ref hackingServers, "ATR_hackingServers", LookMode.Reference);
             Scribe_Collections.Look(ref networkedDevices, "ATR_networkedDevices", LookMode.Reference);
-            Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Reference);
+            Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Deep);
             Scribe_Collections.Look(ref chargingStations, "ATR_chargingStations", LookMode.Reference);
             Scribe_Collections.Look(ref heatSensitiveDevices, "ATR_heatSensitiveDevices", LookMode.Reference);
             Scribe_Collections.Look(ref virusedDevices, "ATR_virusedDevices", LookMode.Reference, LookMode.Value, ref thingKeyCopy, ref thingValueCopy);
@@ -60,7 +62,7 @@ namespace ATReforged
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                initNull();
+                AllocateIfNull();
             }
         }
 
@@ -76,6 +78,28 @@ namespace ATReforged
                 CheckVirusedThings();
                 CheckNetworkLinkedPawns();
                 CheckServers();
+            }
+            else if (CGT % 6000 == 0)
+            {
+                CheckHackTimePenalty();
+            }
+        }
+
+        // Check the hack timer penalty and reduce it if it is non-zero.
+        public void CheckHackTimePenalty()
+        {
+            if (hackCostTimePenalty > 0)
+            {
+                // The penalty decays by 1% every 6000 ticks. If it is small enough, simply set the penalty to 0.
+                float decayedPenalty = hackCostTimePenalty * 0.99f;
+                if (decayedPenalty <= 10)
+                {
+                    hackCostTimePenalty = 0;
+                }
+                else
+                {
+                    hackCostTimePenalty = (int)decayedPenalty;
+                }
             }
         }
 
@@ -264,12 +288,6 @@ namespace ATReforged
             // Removing a tower may result in being over the SkyMind network limit. Randomly disconnect some until under the limit if necessary.
             while (SkyMindNetworkCapacity < networkedDevices.Count())
             {
-                if (SkyMindNetworkCapacity < 0)
-                {
-                    Log.Error("[ATR Crash-check] Attempted to reduce the number of networkedDevices below 0 in a while loop - this could crashed the game! Report events/logs to dev immediately.");
-                    networkedDevices.Clear();
-                    break;
-                }
                 Thing device = networkedDevices.RandomElement();
                 DisconnectFromSkyMind(device);
             }
@@ -296,7 +314,9 @@ namespace ATReforged
             while (SkyMindCloudCapacity < cloudPawns.Count())
             {
                 // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections.
-                cloudPawns.RandomElement().Kill(null);
+                Pawn victim = cloudPawns.RandomElement();
+                cloudPawns.Remove(victim);
+                victim.Kill(null);
             }
         }
 
@@ -412,7 +432,7 @@ namespace ATReforged
                     hackingPointCapacity -= capacity;
                     break;
                 default: // Illegal server type results in no changes as it doesn't know what to change.
-                    Log.Error("[ATR] GC_ATTP.RemoveServer was given an invalid serverType. No servers removed.");
+                    Log.Error("[ATR] ATR_GC.RemoveServer was given an invalid serverType. No servers removed.");
                     return;
             }
         }
@@ -544,7 +564,7 @@ namespace ATReforged
             return cloudPawns;
         }
         
-        private void initNull()
+        private void AllocateIfNull()
         { 
             if (chargingStations == null)
                 chargingStations = new HashSet<Building>();
@@ -576,6 +596,12 @@ namespace ATReforged
         private int SkyMindNetworkCapacity = 0;
         private int SkyMindCloudCapacity = 0;
 
+        // Simple container for the pawn that represents blanks so it can be generated once and then saved for the whole game. It should never be changed.
+        public Pawn blankPawn = null;
+
+        // Simple tracker for the extra cost penalty for initiating player hacks after having done one recently.
+        public int hackCostTimePenalty = 0;
+
         // Networked devices are things that are connected to the SkyMind network, including free pawns, surrogates, and buildings.
         public HashSet<Thing> networkedDevices = new HashSet<Thing>();
 
@@ -587,7 +613,7 @@ namespace ATReforged
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();
 
-        // Charging Stations are buildings that have CompReloadStation. We store them so that they can be checked for pawn's needing energy in a much easier and cheaper search.
+        // Charging Stations are buildings that have CompReloadStation. We store them so that they can be checked for the closest one to a pawn that needs energy.
         private HashSet<Building> chargingStations = new HashSet<Building>();
 
         // Dictionary mapping maps to heat sensitive devices in them for the purpose of checking their heat levels for alerts.

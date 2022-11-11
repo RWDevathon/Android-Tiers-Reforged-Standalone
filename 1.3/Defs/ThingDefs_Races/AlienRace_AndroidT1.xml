@@ -76,7 +76,7 @@
 		<race>
 			<body>ATR_AndroidBody</body>
 			<baseHealthScale>0.8</baseHealthScale>
-			<baseHungerRate>2</baseHungerRate>
+			<baseHungerRate>1.5</baseHungerRate>
 			<baseBodySize>0.5</baseBodySize>
 		</race>
 		<butcherProducts>

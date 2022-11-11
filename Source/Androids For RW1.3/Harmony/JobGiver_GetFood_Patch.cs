@@ -1,11 +1,7 @@
 ﻿using Verse;
 using Verse.AI;
-using Verse.AI.Group;
 using HarmonyLib;
 using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using System;
 
 namespace ATReforged
 {
@@ -19,7 +15,7 @@ namespace ATReforged
             public static void Listener(Pawn pawn, ref Job __result)
             {
                 // If the pawn can't use charging, then there's nothing to override. 
-                if (Utils.CanUseBattery(pawn))
+                if (pawn != null && Utils.CanUseBattery(pawn))
                 {
                     // Don't override non-spawned or drafted pawns.
                     if (!pawn.Spawned || pawn.Drafted)

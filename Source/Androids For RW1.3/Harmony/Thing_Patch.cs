@@ -1,12 +1,5 @@
 ﻿using Verse;
-using Verse.AI;
-using Verse.AI.Group;
 using HarmonyLib;
-using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using UnityEngine;
 
 namespace ATReforged
 {
@@ -19,9 +12,9 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn ingester, float nutritionWanted, ref float __result)
             {
-                if (ATReforged_Settings.mechanicalsHaveDifferentBioprocessingEfficiency && (Utils.IsConsideredMechanicalAndroid(ingester) || Utils.IsConsideredMechanicalDrone(ingester)))
+                if (ATReforged_Settings.chargeCapableMeansDifferentBioEfficiency && Utils.CanUseBattery(ingester))
                 {
-                    __result *= ATReforged_Settings.mechanicalBioprocessingEfficiency;
+                    __result *= ATReforged_Settings.chargeCapableBioEfficiency;
                 }
             }
         }

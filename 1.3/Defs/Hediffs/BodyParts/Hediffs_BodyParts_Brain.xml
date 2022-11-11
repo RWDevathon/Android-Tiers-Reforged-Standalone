@@ -3,14 +3,14 @@
 
     <!-- Base Brain Implant Hediff -->
 
-	<HediffDef Name="ImplantCoreBase" ParentName="ImplantHediffBase" Abstract="True">
+	<HediffDef Name="ATR_ImplantCoreBase" ParentName="ImplantHediffBase" Abstract="True">
 		<defaultLabelColor>(0.7, 0.6, 0.7)</defaultLabelColor>
 		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
 	</HediffDef>
 
     <!-- Base Brain Added Part Hediff -->
 
-	<HediffDef Name="AddedBodyPartCoreBase" ParentName="ImplantCoreBase" Abstract="True">
+	<HediffDef Name="ATR_AddedBodyPartCoreBase" ParentName="ATR_ImplantCoreBase" Abstract="True">
         <hediffClass>Hediff_AddedPart</hediffClass>
         <addedPartProps>
             <solid>true</solid>
@@ -19,7 +19,7 @@
     
     <!-- Base Brain Implant ThingDef -->
     
-    <ThingDef Name="BodyPartCoreBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+    <ThingDef Name="ATR_BodyPartCoreBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<WorkToMake>4000</WorkToMake>
@@ -42,7 +42,7 @@
 
     <!-- Base Brain Implant Surgery RecipeDef -->
 
-	<RecipeDef Name="SurgeryCoreMechanical" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="ATR_SurgeryCoreMechanical" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallAndroidInterface</workerClass>
 		<jobString>Installing core interface.</jobString>
     	<skillRequirements>
@@ -53,7 +53,7 @@
 		<anesthetize>false</anesthetize>
 	</RecipeDef>
 
-    <RecipeDef Name="SurgeryCoreOrganic" ParentName="SurgeryInstallImplantBase" Abstract="True">
+    <RecipeDef Name="ATR_SurgeryCoreOrganic" ParentName="SurgeryInstallImplantBase" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallOrganicSkyMindInterface</workerClass>
         <jobString>Installing neural interface.</jobString>
         <skillRequirements>
@@ -92,13 +92,13 @@
 
     <!-- Autonomous Core -->
 
-    <HediffDef ParentName="AddedBodyPartCoreBase">
+    <HediffDef ParentName="ATR_AddedBodyPartCoreBase">
         <defName>ATR_AutonomousCore</defName>
         <label>Autonomous core</label>
         <description>This core is fully interfaced with an autonomous intelligence. Everything that makes up the intelligence is stored safely within this core, from which it is able to exert control over the rest of the chassis.</description>
     </HediffDef>
 
-    <RecipeDef ParentName="SurgeryCoreMechanical">
+    <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
         <defName>Install_AutonomousCore</defName>
 		<label>Install autonomous core</label>
 		<description>Installs and connects an autonomous core. Upon completion, the core will be able to store an intelligence - either copied from the SkyMind network or freshly generated.</description>
@@ -108,13 +108,13 @@
 
     <!-- SkyMind Receiver Core -->
 
-    <HediffDef ParentName="AddedBodyPartCoreBase">
+    <HediffDef ParentName="ATR_AddedBodyPartCoreBase">
         <defName>ATR_ReceiverCore</defName>
         <label>Receiver core</label>
         <description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</description>
     </HediffDef>
 
-    <RecipeDef ParentName="SurgeryCoreMechanical">
+    <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
         <defName>Install_ReceiverCore</defName>
         <label>Install receiver core</label>
         <description>Installs and connects a receiver core. Upon completion, the core will be able to host remote controllers and act as a surrogate. It will have no intelligence or functionality on its own, however.</description>
@@ -125,13 +125,13 @@
 
     <!-- SkyMind Receiver -->
 
-    <HediffDef ParentName="ImplantCoreBase">
+    <HediffDef ParentName="ATR_ImplantCoreBase">
         <defName>ATR_SkyMindReceiver</defName>
         <label>SkyMind Receiver</label>
         <description>This device is installed directly into the brain, and completely overrides the subject's neural network, converting them into a blank husk to be controlled by an external force. Due to the complexity of the device and the inherent difficulty of controlling organic matter, this device has a tendency to combust violently upon destruction. \n\nMany forces have used this to their advantage to destroy surrogates rather than let them fall into enemy hands.</description>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartCoreBase">
+    <ThingDef ParentName="ATR_BodyPartCoreBase">
         <defName>ATR_SkyMindReceiver</defName>
         <graphicData>
             <texPath>Things/Items/BodyParts/ReceiverChip</texPath>
@@ -148,7 +148,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryCoreOrganic">
+    <RecipeDef ParentName="ATR_SurgeryCoreOrganic">
         <defName>Install_SkyMindReceiver</defName>
         <label>Install SkyMind receiver</label>
         <description>Installs and initializes a receiver in the subjects brain. Whatever intelligence may be stored in the brain will die, and the subject will become a surrogate.</description>
@@ -174,13 +174,13 @@
 
     <!-- SkyMind Transceiver -->
 
-    <HediffDef ParentName="ImplantCoreBase">
+    <HediffDef ParentName="ATR_ImplantCoreBase">
         <defName>ATR_SkyMindTransceiver</defName>
         <label>SkyMind Transceiver</label>
         <description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. This implant is safe to add or remove without issue.</description>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartCoreBase">
+    <ThingDef ParentName="ATR_BodyPartCoreBase">
         <defName>ATR_SkyMindTransceiver</defName>
         <graphicData>
             <texPath>Things/Items/BodyParts/TransceiverChip</texPath>
@@ -197,7 +197,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryCoreOrganic">
+    <RecipeDef ParentName="ATR_SurgeryCoreOrganic">
         <defName>Install_SkyMindTransceiver</defName>
         <label>Install SkyMind transceiver</label>
         <description>Installs and initializes a transceiver in the subjects brain. The pawn will be able to access the SkyMind network freely.</description>

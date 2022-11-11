@@ -74,7 +74,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>MechQuadrupedal</body>
+			<body>ATR_MechQuadrupedal</body>
 			<predator>true</predator>
 			<baseBodySize>1.0</baseBodySize>
 			<baseHealthScale>1.2</baseHealthScale>

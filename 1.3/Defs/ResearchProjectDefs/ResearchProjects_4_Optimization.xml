@@ -14,7 +14,10 @@
         </prerequisites>
 		<researchViewX>5</researchViewX>
 		<researchViewY>2</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -48,7 +51,10 @@
         </prerequisites>
         <researchViewX>6</researchViewX>
         <researchViewY>0</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
   
     <ResearchProjectDef>
@@ -64,7 +70,10 @@
         </prerequisites>
         <researchViewX>6</researchViewX>
         <researchViewY>1</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -94,7 +103,10 @@
         </prerequisites>
         <researchViewX>7</researchViewX>
         <researchViewY>0</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -124,7 +136,10 @@
         </prerequisites>
 		<researchViewX>8</researchViewX>
 		<researchViewY>0</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
   
     <ResearchProjectDef>
@@ -139,7 +154,10 @@
         </prerequisites>
         <researchViewX>9</researchViewX>
         <researchViewY>0</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
   
     <ResearchProjectDef>
@@ -155,7 +173,10 @@
         </prerequisites>
         <researchViewX>9</researchViewX>
         <researchViewY>1</researchViewY>
-		<requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
 
 </Defs>

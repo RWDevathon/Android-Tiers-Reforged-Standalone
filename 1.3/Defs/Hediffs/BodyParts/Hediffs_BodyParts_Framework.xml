@@ -3,7 +3,7 @@
 
     <!-- Base Framework -->
 
-    <ThingDef Name="BodyPartFrameworkBase" ParentName="ATRMechBodyPartBase" Abstract="True">
+    <ThingDef Name="BodyPartFrameworkBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Industrial</techLevel>
         <graphicData>
             <texPath>Things/Items/BodyParts/FrameworkPart</texPath>
@@ -36,20 +36,20 @@
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
 
-	<RecipeDef Name="SurgeryFramework" ParentName="MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="SurgeryFramework" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Replacing framework.</jobString>
         <skillRequirements>
             <Crafting>8</Crafting>
         </skillRequirements>
 		<appliedOnFixedBodyParts>
-			<li>Framework</li>
+			<li>ATR_Framework</li>
 		</appliedOnFixedBodyParts>
 		<anesthetize>false</anesthetize>
 	</RecipeDef>
  
     <!-- Plasteel Plating -->
 
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>PlatingPlasteel</defName>
         <label>Plasteel Frame</label>
 		<description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
@@ -104,7 +104,7 @@
     </RecipeDef>
  
     <!-- Composite Plating -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>CompositePlating</defName>
         <label>Composite Frame</label>
 	    <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
@@ -113,8 +113,10 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
 			</li>
 		</stages>
         <spawnThingOnRemoved>CompositePlating</spawnThingOnRemoved>
@@ -160,7 +162,7 @@
     </RecipeDef>
 
     <!-- Hydraulic -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
 	    <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
@@ -210,7 +212,7 @@
 	</RecipeDef>
 
     <!-- Refined -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
@@ -270,7 +272,7 @@
 	</RecipeDef>
 
     <!-- Sanitary -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to microscopic biological entities. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
@@ -328,7 +330,7 @@
 	</RecipeDef>
 
     <!-- Mobility -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
@@ -383,7 +385,7 @@
 	</RecipeDef>
 
     <!-- Suppressor -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
@@ -393,8 +395,10 @@
                     <MeleeDodgeChance>-10</MeleeDodgeChance>
                     <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
                     <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
-                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
                 </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>SuppressorFrame</spawnThingOnRemoved>
@@ -433,7 +437,7 @@
 	</RecipeDef>
 
     <!-- Guardian -->
-    <HediffDef ParentName="ATRMechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
         <defName>GuardianFrame</defName>
         <label>Guardian Frame</label>
         <description>A chassis framework designed to withstand extreme temperature variance and exude intimidation. This framework was designed with dealing with fire - be it natural, accidental, or delivered by molotov - and all the threats that come with it. The insulatory measures also preserves the unit in extreme cold.</description>
@@ -443,10 +447,12 @@
                     <ArmorRating_Heat>1.5</ArmorRating_Heat>
                     <Insulation_Heat>100</Insulation_Heat>
                     <Insulation_Cold>50</Insulation_Cold>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
                     <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.5</SuppressionPower>
                     <ArrestSuccessChance>0.5</ArrestSuccessChance>
                 </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>GuardianFrame</spawnThingOnRemoved>

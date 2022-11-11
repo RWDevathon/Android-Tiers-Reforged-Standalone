@@ -1,11 +1,7 @@
 ﻿using Verse;
 using RimWorld;
-using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml;
-using static Mono.Security.X509.X520;
-using Verse.Noise;
 
 namespace ATReforged
 {
@@ -67,7 +63,7 @@ namespace ATReforged
         public bool TryExecuteGridVirus(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points;
+            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
             float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentGridVirusDefeated", "ATR_IncidentGridVirusAllyIntercept"))
@@ -254,7 +250,7 @@ namespace ATReforged
         public bool TryExecuteTroll(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points;
+            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
             float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
 
@@ -298,7 +294,7 @@ namespace ATReforged
             bool hasComms = false;
             foreach (Map activeMap in Find.Maps)
             {
-                if (activeMap.listerBuildings.allBuildingsColonist.Where(building => building.def.IsCommsConsole).Any())
+                if (activeMap.listerBuildings.allBuildingsColonist.Any(building => building.def.IsCommsConsole))
                 {
                     hasComms = true;
                     break;
@@ -310,7 +306,7 @@ namespace ATReforged
         public bool TryExecuteDiplohack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points;
+            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
             float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
 
@@ -347,7 +343,7 @@ namespace ATReforged
         public bool TryExecuteProvokerhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = parms.points;
+            float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
             float defenseStrength = Utils.gameComp.GetSecurityPoints();
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -358,10 +354,11 @@ namespace ATReforged
 
             // Try to generate a raid with normal raid points.
             FiringIncident incident = new FiringIncident();
-            incident.def = IncidentDefOf.RaidEnemy;
+            incident.def = RimWorld.IncidentDefOf.RaidEnemy;
             incident.parms = parms;
+            // Incident was unable to fire.
             if (!Find.Storyteller.TryFire(incident))
-            { // Incident was unable to fire.
+            { 
                 Log.Warning("[ATR] Attempted to fire a raid incident when it was unable to. Attempting to execute a DDOS attack instead.");
                 return TryExecuteDDOS(parms);
             }
@@ -458,7 +455,7 @@ namespace ATReforged
 
         private float GenerateAttackStrength(int baseStrength, float lowerBoundModifier, float upperBoundModifier)
         { // Generates the attack strength as the baseStrength times a random percentage value between the lower and upper bound modifiers. IE. 100, 1, 4 == 100 * (100% ~ 400%).
-            return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier);
+            return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier) * ATReforged_Settings.enemyHackAttackStrengthModifier;
         }
 
         private bool HandleDefenseSuccessful(float defenseStrength, float attackStrength, float damageModifier, string interceptTitle = "ATR_IncidentGenericAllyIntercept", string label = null, string text = null)
