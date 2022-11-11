@@ -100,8 +100,7 @@
 			<Steel>3</Steel>
 		</butcherProducts>
         <modExtensions>
-            <li Class="ATReforged.MechCorpseTweaker">
-                <tweakCorpseRot>true</tweakCorpseRot>
+            <li Class="ATReforged.ATR_MechTweaker">
             </li>
         </modExtensions>
     </ThingDef>

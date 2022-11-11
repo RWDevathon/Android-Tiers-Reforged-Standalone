@@ -295,7 +295,7 @@
     <Compile Include="WorkGivers\JobGiver_Exterminator.cs" />
     <Compile Include="MechFallStuff\MechFallClass.cs" />
     <Compile Include="MechFallStuff\MechFallMote.cs" />
-    <Compile Include="ModExtensionATweaks.cs" />
+    <Compile Include="Extensions\ModExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="PostInitTweaks.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />

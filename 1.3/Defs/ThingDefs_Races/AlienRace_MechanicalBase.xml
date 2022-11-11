@@ -200,8 +200,7 @@
 			</hediffGiverSets>
 		</race>
 		<modExtensions>
-			<li Class="ATReforged.MechCorpseTweaker">
-				<tweakCorpseRot>true</tweakCorpseRot>
+			<li Class="ATReforged.ATR_MechTweaker">
 			</li>
 		</modExtensions>
     </AlienRace.ThingDef_AlienRace>

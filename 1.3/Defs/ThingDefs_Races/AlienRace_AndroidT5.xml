@@ -229,11 +229,11 @@
 		<butcherProducts>
 			<Plasteel>140</Plasteel>
 			<ComponentIndustrial>40</ComponentIndustrial>
+            <ComponentSpacer>20</ComponentSpacer>
 			<AIPersonaCore>2</AIPersonaCore>
 		</butcherProducts>
 		<modExtensions>
-			<li Class="ATReforged.MechCorpseTweaker">
-				<tweakCorpseRot>true</tweakCorpseRot>
+			<li Class="ATReforged.ATR_MechTweaker">
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>

@@ -14,14 +14,14 @@ namespace ATReforged
         public ATR_GameComponent(Game game)
         {
             Utils.gameComp = this;
-            initNull();
+            AllocateIfNull();
         }
 
         public override void StartedNewGame()
         {
             base.StartedNewGame();
             
-            initNull();
+            AllocateIfNull();
         }
 
         public override void LoadedGame()
@@ -62,7 +62,7 @@ namespace ATReforged
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                initNull();
+                AllocateIfNull();
             }
         }
 
@@ -564,7 +564,7 @@ namespace ATReforged
             return cloudPawns;
         }
         
-        private void initNull()
+        private void AllocateIfNull()
         { 
             if (chargingStations == null)
                 chargingStations = new HashSet<Building>();
@@ -613,7 +613,7 @@ namespace ATReforged
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();
 
-        // Charging Stations are buildings that have CompReloadStation. We store them so that they can be checked for pawn's needing energy in a much easier and cheaper search.
+        // Charging Stations are buildings that have CompReloadStation. We store them so that they can be checked for the closest one to a pawn that needs energy.
         private HashSet<Building> chargingStations = new HashSet<Building>();
 
         // Dictionary mapping maps to heat sensitive devices in them for the purpose of checking their heat levels for alerts.
