@@ -52,7 +52,7 @@
 		<surgerySuccessChanceFactor>0.75</surgerySuccessChanceFactor>
 		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
 		<appliedOnFixedBodyParts>
-			<li>CoreAssistant</li>
+			<li>ATR_CoreAssistant</li>
 		</appliedOnFixedBodyParts>
 		<anesthetize>false</anesthetize>
 	</RecipeDef>

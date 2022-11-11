@@ -59,7 +59,7 @@
 			<makesFootprints>false</makesFootprints>
 			<hasGenders>false</hasGenders>
 			<lifeExpectancy>1</lifeExpectancy>
-			<body>MechAirborne</body>
+			<body>ATR_MechAirborne</body>
 			<baseHealthScale>0.4</baseHealthScale>
 			<leatherDef>Tainted_Skin</leatherDef>
 			<needsRest>false</needsRest>

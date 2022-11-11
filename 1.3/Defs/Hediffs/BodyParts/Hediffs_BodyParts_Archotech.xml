@@ -106,7 +106,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalArm</li>
+			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechArm</addsHediff>
 	</RecipeDef>
@@ -151,7 +151,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalLeg</li>
+			<li>ATR_MechanicalLeg</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechLeg</addsHediff>
 	</RecipeDef>
@@ -196,7 +196,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalVisualSensor</li>
+			<li>ATR_MechanicalVisualSensor</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechVisualSensor</addsHediff>
 	</RecipeDef>
@@ -241,7 +241,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalAudioSensor</li>
+			<li>ATR_MechanicalAudioSensor</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechAudioSensor</addsHediff>
 	</RecipeDef>
@@ -294,7 +294,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalHeatsink</li>
+			<li>ATR_MechanicalHeatsink</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechHeatsink</addsHediff>
 	</RecipeDef>
@@ -347,7 +347,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalCorePump</li>
+			<li>ATR_InternalCorePump</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechCoolantPump</addsHediff>
 	</RecipeDef>
@@ -397,7 +397,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalBattery</li>
+			<li>ATR_InternalBattery</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechBattery</addsHediff>
 	</RecipeDef>
@@ -449,7 +449,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechaniteStorage</li>
+			<li>ATR_MechaniteStorage</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechMechaniteStorage</addsHediff>
 	</RecipeDef>
@@ -499,7 +499,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>InternalGenerator</li>
+			<li>ATR_InternalGenerator</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_CybertechReactor</addsHediff>
 	</RecipeDef>

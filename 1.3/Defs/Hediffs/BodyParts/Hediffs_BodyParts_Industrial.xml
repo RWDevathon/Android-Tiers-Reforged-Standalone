@@ -111,7 +111,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalArm</li>
+			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_MiningArm</addsHediff>
 	</RecipeDef>
@@ -181,7 +181,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalArm</li>
+			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AgriArm</addsHediff>
 	</RecipeDef>
@@ -240,7 +240,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalLeg</li>
+			<li>ATR_MechanicalLeg</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_MakeshiftMechLeg</addsHediff>
 	</RecipeDef>
@@ -313,7 +313,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>MechanicalArm</li>
+			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_MakeshiftMechArm</addsHediff>
 	</RecipeDef>

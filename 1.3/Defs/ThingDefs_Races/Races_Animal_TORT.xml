@@ -21,7 +21,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>MechQuadrupedal</body>
+			<body>ATR_MechQuadrupedal</body>
 			<packAnimal>true</packAnimal>
 			<baseBodySize>2.4</baseBodySize>
 			<baseHealthScale>1.5</baseHealthScale>

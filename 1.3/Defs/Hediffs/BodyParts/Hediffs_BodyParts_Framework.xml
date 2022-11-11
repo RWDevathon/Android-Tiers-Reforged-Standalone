@@ -42,7 +42,7 @@
             <Crafting>8</Crafting>
         </skillRequirements>
 		<appliedOnFixedBodyParts>
-			<li>Framework</li>
+			<li>ATR_Framework</li>
 		</appliedOnFixedBodyParts>
 		<anesthetize>false</anesthetize>
 	</RecipeDef>
