@@ -5,7 +5,6 @@
   
 	<HediffDef Name="AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
 		<defaultLabelColor>(0.7, 0.6, 0.7)</defaultLabelColor>
-		<keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
 	</HediffDef>
 
 	<ThingDef Name="BodyPartCoreAssistantBase" ParentName="ATR_MechBodyPartBase" Abstract="True">

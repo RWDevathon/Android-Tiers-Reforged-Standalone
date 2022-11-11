@@ -3,6 +3,10 @@
 
     <!-- Base Framework -->
 
+    <HediffDef Name="ATR_AddedBodyPartFrameworkBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
+        <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    </HediffDef>
+
     <ThingDef Name="BodyPartFrameworkBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Industrial</techLevel>
         <graphicData>
@@ -49,7 +53,7 @@
  
     <!-- Plasteel Plating -->
 
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>PlatingPlasteel</defName>
         <label>Plasteel Frame</label>
 		<description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
@@ -104,7 +108,7 @@
     </RecipeDef>
  
     <!-- Composite Plating -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>CompositePlating</defName>
         <label>Composite Frame</label>
 	    <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
@@ -162,7 +166,7 @@
     </RecipeDef>
 
     <!-- Hydraulic -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
 	    <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
@@ -212,7 +216,7 @@
 	</RecipeDef>
 
     <!-- Refined -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
@@ -272,7 +276,7 @@
 	</RecipeDef>
 
     <!-- Sanitary -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to microscopic biological entities. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
@@ -330,7 +334,7 @@
 	</RecipeDef>
 
     <!-- Mobility -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
@@ -385,7 +389,7 @@
 	</RecipeDef>
 
     <!-- Suppressor -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
@@ -437,7 +441,7 @@
 	</RecipeDef>
 
     <!-- Guardian -->
-    <HediffDef ParentName="ATR_MechAddedBodyPartBase">
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>GuardianFrame</defName>
         <label>Guardian Frame</label>
         <description>A chassis framework designed to withstand extreme temperature variance and exude intimidation. This framework was designed with dealing with fire - be it natural, accidental, or delivered by molotov - and all the threats that come with it. The insulatory measures also preserves the unit in extreme cold.</description>

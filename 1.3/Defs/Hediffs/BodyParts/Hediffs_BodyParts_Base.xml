@@ -9,7 +9,6 @@
             <solid>true</solid>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
-        <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     </HediffDef>
 
     <!-- Base Body Part Thing -->

@@ -111,7 +111,7 @@ namespace ATReforged
         { 
             if (part == null)
                 return;
-            foreach (Hediff hediff in pawn.health.hediffSet.hediffs.Where(hediff => hediff.Part == part && !hediff.def.keepOnBodyPartRestoration))
+            foreach (Hediff hediff in pawn.health.hediffSet.hediffs.Where(hediff => hediff.Part == part && !hediff.def.keepOnBodyPartRestoration).ToList())
             {
                 pawn.health.RemoveHediff(hediff);
             }
