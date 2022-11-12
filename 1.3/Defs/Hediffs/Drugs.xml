@@ -160,6 +160,7 @@
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-4</severityPerDay>
@@ -267,6 +268,7 @@
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.5</severityPerDay>
@@ -735,6 +737,7 @@
 		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-2</severityPerDay>
@@ -843,6 +846,7 @@
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
 		<stages>
 			<li>
 				<statOffsets>

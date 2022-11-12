@@ -20,6 +20,7 @@
         <initialSeverity>1</initialSeverity>
         <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-24</severityPerDay>
@@ -86,6 +87,7 @@
         <initialSeverity>1</initialSeverity>
         <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-1</severityPerDay>
@@ -150,6 +152,7 @@
         <description>This unit is recovering from exposure to a DDOS attack. Recompiling and separating junk data from true data is a strenous and distracting activity as little data can be fully trusted until it is complete.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>1</initialSeverity>
+        <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.25</severityPerDay>
@@ -175,6 +178,7 @@
         <label>Memory corruption</label>
         <description>This unit suffered a critical memory corruption. The memories are lost, but the damaged storage itself may eventually be recoverable. It will be a long and arduous road, however.</description>
         <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.01</severityPerDay>
@@ -290,6 +294,7 @@
         <initialSeverity>1</initialSeverity>
         <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
         <scenarioCanAdd>false</scenarioCanAdd>
+        <isBad>false</isBad>
 	    <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.5</severityPerDay>

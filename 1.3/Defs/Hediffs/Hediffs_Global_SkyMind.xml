@@ -4,6 +4,7 @@
         <hediffClass>HediffWithComps</hediffClass>
         <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
         <initialSeverity>0.5</initialSeverity>
+        <isBad>false</isBad>
     </HediffDef>
   
     <HediffDef ParentName="ATR_SkyMindHediffBase">
