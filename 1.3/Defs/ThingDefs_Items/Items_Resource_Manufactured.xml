@@ -44,7 +44,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>20</count>
+                <count>40</count>
             </li>
             <li>
                 <filter>
@@ -52,7 +52,7 @@
                         <li>Plasteel</li>
                     </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -60,11 +60,11 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>4</count>
+                <count>6</count>
             </li>
         </ingredients>
         <products>
-            <ATR_PartPack>1</ATR_PartPack>
+            <ATR_PartPack>4</ATR_PartPack>
         </products>
         <workAmount>2150</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -157,6 +157,7 @@
                 <li>TableMachining</li>
             </recipeUsers>
             <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <bulkRecipeCount>4</bulkRecipeCount>
         </recipeMaker>
     </ThingDef>
 
@@ -179,7 +180,7 @@
             <WorkToMake>1000</WorkToMake>
         </statBases>
         <costList>
-            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <recipeMaker>
             <skillRequirements>
@@ -209,8 +210,8 @@
             <WorkToMake>3500</WorkToMake>
         </statBases>
         <costList>
-            <Plasteel>5</Plasteel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <recipeMaker>
             <researchPrerequisite>ATR_MechanicalStandardization</researchPrerequisite>
@@ -239,9 +240,9 @@
             <WorkToMake>6500</WorkToMake>
         </statBases>
         <costList>
-            <Gold>5</Gold>
-            <ComponentIndustrial>2</ComponentIndustrial>
-            <ComponentSpacer>1</ComponentSpacer>
+            <Gold>2</Gold>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
         </costList>
         <recipeMaker>
             <researchPrerequisite>ATR_RepairOptimization</researchPrerequisite>
