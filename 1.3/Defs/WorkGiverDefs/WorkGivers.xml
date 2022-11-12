@@ -127,26 +127,4 @@
         </requiredCapacities>
     </WorkGiverDef>
     
-    <!-- ============= Miscellaneous ============= -->
-
-    <!-- TODO: Ensure the patch operation succeeded in adding bills to the MachiningTable WorkGiver.
-    <WorkGiverDef>
-        <defName>DoBillsRobotics</defName>
-        <label>do mechanical crafting bills</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Smithing</workType>
-        <priorityInType>75</priorityInType>
-        <fixedBillGiverDefs>
-            <li>MechManufactoryPod</li>
-            <li>MechPartWorkbench</li>
-            <li>MechPartWorkbench</li>
-        </fixedBillGiverDefs>
-        <verb>work</verb>
-        <gerund>working at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>
-    -->
 </Defs>
