@@ -36,7 +36,7 @@
 		<recipeMaker>
 			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
 			<recipeUsers>
-				<li>MechPartWorkbench</li>
+				<li>ATR_MechPartWorkbench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
@@ -246,7 +246,7 @@
 		<recipeMaker>
 			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
 			<recipeUsers>
-				<li>MechPartWorkbench</li>
+				<li>ATR_MechPartWorkbench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
@@ -714,7 +714,7 @@
 		<recipeMaker>
 			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
 			<recipeUsers>
-				<li>MechPartWorkbench</li>
+				<li>ATR_MechPartWorkbench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>

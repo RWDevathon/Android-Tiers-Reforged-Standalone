@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     
-	<AlienRace.ThingDef_AlienRace ParentName="BaseMSeriesPawn">
+	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
 		<defName>M7Mech</defName>
 		<label>M7 Mechanised infantry</label>
 		<description>A form of mechanized infantry, produced during an ancient time on this rimworld. These units are very strong, powerful war machines but are subsequently slow and have limited battery to them.</description>

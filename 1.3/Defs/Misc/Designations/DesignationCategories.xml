@@ -3,7 +3,7 @@
     <DesignationCategoryDef>
         <defName>AndroidTiersDesignation</defName>
         <label>Android Tiers</label>
-        <description>Android Tiers related stuff</description>
+        <description>Android Tiers Buildings</description>
         <order>499</order>
         <specialDesignatorClasses>
             <li>Designator_Cancel</li>

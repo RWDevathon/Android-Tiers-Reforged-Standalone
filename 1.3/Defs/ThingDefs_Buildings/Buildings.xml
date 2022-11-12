@@ -181,7 +181,7 @@
 
     <!-- Charging Pods -->
 
-    <ThingDef Name="ChargingPodBase" ParentName="BedWithQualityBase" Abstract="True">
+    <ThingDef Name="ATR_ChargingPodBase" ParentName="BedWithQualityBase" Abstract="True">
         <graphicData>
             <texPath>Things/Buildings/ChargingPod/ChargingPod</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -240,8 +240,8 @@
     </ThingDef>
   
   
-    <ThingDef ParentName="ChargingPodBase">
-	    <defName>ChargingPod</defName>
+    <ThingDef ParentName="ATR_ChargingPodBase">
+	    <defName>ATR_ChargingPod</defName>
         <label>Charging pod</label>
         <description>A simple charging pod that can charge mechanical units. It is not designed for comfort.</description>
 	    <costList>
@@ -261,7 +261,7 @@
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
 			    <linkableFacilities>
-				    <li>MechanicCabinet</li>
+				    <li>ATR_MechanicCabinet</li>
 			    </linkableFacilities>
 		    </li>
 	        <li Class="ATReforged.CompProperties_AndroidPod">
@@ -270,10 +270,10 @@
         </comps>
     </ThingDef>
   
-    <ThingDef ParentName="ChargingPodBase">
-	    <defName>ChargingPodMech</defName>
+    <ThingDef ParentName="ATR_ChargingPodBase">
+	    <defName>ATR_ChargingPodMech</defName>
         <label>Mech pod</label>
-        <description>An extremely large charging pod capable of storing the bulk of a war mech that can not fit in anything smaller.</description>
+        <description>An extremely large charging pod capable of storing the bulk of a war mech that can not fit in any smaller pod.</description>
         <graphicData>
             <drawSize>(3,6)</drawSize>
         </graphicData>
@@ -291,7 +291,7 @@
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
-                    <li>MechanicCabinet</li>
+                    <li>ATR_MechanicCabinet</li>
                 </linkableFacilities>
 		    </li>
             <li Class="ATReforged.CompProperties_AndroidPod">

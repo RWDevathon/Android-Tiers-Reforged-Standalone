@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef Name="ServerBase" ParentName="BuildingBase" Abstract="True">
+    <ThingDef Name="ATR_ServerBase" ParentName="BuildingBase" Abstract="True">
         <thingClass>Building</thingClass>	
         <canOverlapZones>false</canOverlapZones>
         <altitudeLayer>Building</altitudeLayer>
@@ -27,7 +27,7 @@
     </ThingDef>
 
     <!-- SkyMind Core -->
-    <ThingDef ParentName="ServerBase">
+    <ThingDef ParentName="ATR_ServerBase">
         <defName>SkyMindCore</defName>
         <label>SkyMind Core</label>
         <description>A network of persona intelligences collectively forming a single supercomputer capable of processing, storing, and manipulating vast quantities of information - that which ultimately defines a consciousness. This device is capable of providing digital immortality, consciousness operations, and remote controls to properly outfitted organic and mechanical individuals alike. Its existence is proof of strength, willpower, and wealth. \n\nShould it lose power or critically overheat, its contents will be irrevocably lost. The ability to overcome death is not risk-free.</description>
@@ -91,7 +91,7 @@
     </ThingDef>
     
     <!-- Networked Database -->
-    <ThingDef ParentName="ServerBase">
+    <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedDatabase</defName>
         <label>Networked Database</label>
         <description>A basic server for data tabulation, storage, and calculations. It is incapable of generating insights, but greatly enhances the workflow of those who wish to spend less time doing math and more time analyzing. It generates a small amount of heat, and may be damaged if the heat exceeds its safety threshold.</description>
@@ -150,7 +150,7 @@
     </ThingDef>
     
     <!-- Networked Analyst -->
-    <ThingDef ParentName="ServerBase">
+    <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedAnalyst</defName>
         <label>Networked Analyst</label>
         <description>A basic server for analyzing data and generating insights into the chosen task focus using rudimentary machine learning algorithms. Due to its small size and number of calculations, it relies on data servers for storage and generates significant heat. It may be damaged if the heat exceeds its safety threshold.</description>
@@ -210,7 +210,7 @@
     </ThingDef>
     
     <!-- Networked Intelligence -->
-    <ThingDef ParentName="ServerBase">
+    <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedIntelligence</defName>
         <label>Networked Intelligence</label>
         <description>An advanced server for data analysis, tabulation, storage, and insight generation in a chosen task focus using an autonomous AI persona. While it theoretically makes other servers obsolete, the space efficiency and use cases come at a high cost of power and heat generation. It is very susceptible to overheating and may become damaged if it overheats.</description>

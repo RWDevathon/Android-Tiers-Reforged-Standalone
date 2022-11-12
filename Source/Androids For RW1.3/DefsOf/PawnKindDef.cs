@@ -13,7 +13,7 @@ namespace ATReforged
 
         public static PawnKindDef T5Colonist;
 
-        public static PawnKindDef AbominationAtlas;
+        public static PawnKindDef ATR_FractalAbomination;
 
         public static PawnKindDef M7MechPawn;
 

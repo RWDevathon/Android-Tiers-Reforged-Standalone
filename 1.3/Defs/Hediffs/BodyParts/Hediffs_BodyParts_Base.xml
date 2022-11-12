@@ -14,7 +14,7 @@
     <!-- Base Body Part Thing -->
     <ThingDef Name="ATR_MechBodyPartBase" ParentName="BodyPartBase" Abstract="True">
         <thingCategories>
-            <li>BodyPartsMechanical</li>
+            <li>ATR_BodyPartsMechanical</li>
         </thingCategories>
     </ThingDef>
 

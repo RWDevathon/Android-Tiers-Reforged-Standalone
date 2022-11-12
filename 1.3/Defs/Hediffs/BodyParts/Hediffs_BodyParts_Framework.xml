@@ -34,7 +34,7 @@
             </skillRequirements>
             <researchPrerequisite>ATR_MechanicalFrameworks</researchPrerequisite>
             <recipeUsers>
-                <li>MechPartWorkbench</li>
+                <li>ATR_MechPartWorkbench</li>
             </recipeUsers>
         </recipeMaker>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>

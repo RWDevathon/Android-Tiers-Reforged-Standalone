@@ -35,7 +35,7 @@
 				<Crafting>8</Crafting>
 			</skillRequirements>
 			<recipeUsers>
-				<li>MechPartWorkbench</li>
+				<li>ATR_MechPartWorkbench</li>
 			</recipeUsers>
 		</recipeMaker>
 	</ThingDef>

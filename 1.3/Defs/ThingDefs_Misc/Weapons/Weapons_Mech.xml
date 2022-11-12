@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Base Mech Gun -->
-	<ThingDef Name="BaseMechGun" ParentName="BaseGun" Abstract="True">
+	<ThingDef Name="ATR_BaseMechGun" ParentName="BaseGun" Abstract="True">
         <techLevel>Ultra</techLevel>
         <relicChance>0</relicChance>
         <tradeability>None</tradeability>
@@ -23,7 +23,7 @@
   
     <!-- Rotary Autocannon -->
 	<ThingDef ParentName="BaseBullet">
-        <defName>AutocannonShell</defName>
+        <defName>ATR_AutocannonShell</defName>
         <label>Autocannon shell</label>
         <graphicData>
             <texPath>Things/Projectile/ShellHighExplosive</texPath>
@@ -38,8 +38,8 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseMechGun">
-        <defName>RotaryAutocannon</defName>
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_RotaryAutocannon</defName>
         <label>Rotary Autocannon</label>
         <description>This massive weapon, larger than entire humans, is designed to bring even the largest opponents down under a barrage of direct-fire artillery shells. Rotating barrels integrated with a high efficiency autoloading magazine ensure steady rate of lethal fire. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
         <graphicData>
@@ -60,7 +60,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>AutocannonShell</defaultProjectile>
+                <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
                 <warmupTime>1.5</warmupTime>
                 <range>30.9</range>
                 <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
@@ -100,7 +100,7 @@
 
     <!-- Rotary Shrapnelcannon -->
 	<ThingDef ParentName="BaseBullet">
-        <defName>ShrapnelcannonChunk</defName>
+        <defName>ATR_ShrapnelcannonChunk</defName>
         <label>Shrapnel chunk</label>
         <graphicData>
             <texPath>Things/Projectile/Bullet_big</texPath>
@@ -115,8 +115,8 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseMechGun">
-        <defName>RotaryShrapnelcannon</defName>
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_RotaryShrapnelcannon</defName>
         <label>Rotary Shrapnelcannon</label>
         <description>This massive weapon, larger than entire humans, is designed to shred densely packed targets with a barrage of shrapnel the size of a bench. Rotating barrels integrated with a high efficiency autoloading magazine ensure steady rate of lethal fire. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
         <graphicData>
@@ -137,7 +137,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>ShrapnelcannonChunk</defaultProjectile>
+                <defaultProjectile>ATR_ShrapnelcannonChunk</defaultProjectile>
                 <warmupTime>1</warmupTime>
                 <range>22.9</range>
                 <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
@@ -176,8 +176,8 @@
     </ThingDef>
   
     <!-- Headhunter Cannon -->
-    <ThingDef ParentName="BaseMechGun">
-        <defName>HeadhunterCannon</defName>
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_HeadhunterCannon</defName>
         <label>Headhunter Cannon</label>
         <description>This massive weapon, the size of a full-grown human, is designed to fire long-range direct-fire artillery shells with pinpoint accuracy to take out key targets before they can retaliate. With a great deal of internal auto-correcting components, this weapon is a tank-buster by nature. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
         <graphicData>
@@ -198,7 +198,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>AutocannonShell</defaultProjectile>
+                <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
                 <warmupTime>1</warmupTime>
                 <range>44.9</range>
                 <soundCast>40MMCannon</soundCast>
@@ -236,7 +236,7 @@
 
     <!-- Mech Poleaxe -->
   	<ThingDef ParentName="BaseWeapon">
-		<defName>MechPoleaxe</defName>
+		<defName>ATR_MechPoleaxe</defName>
 		<label>Mech Poleaxe</label>
         <description>This massive weapon, the size of a full-grown human, serves the exact same purpose its smaller cousins serve: to close with the enemy and hack them apart. Of course, this tool is better at it than its ancestors - it is made of fine glitterworld grade materials and honed to perfection... and is large enough to splatter people rather than need to stab or cut. \n\nWeapons like this, usable only be massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
         <techLevel>Ultra</techLevel>

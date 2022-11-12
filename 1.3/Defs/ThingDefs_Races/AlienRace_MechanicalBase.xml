@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- Mechanical Android Base-->
-	<AlienRace.ThingDef_AlienRace Name="BaseMechanicalPawn" ParentName="BasePawn" Abstract="True">
+	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMechanicalPawn" ParentName="BasePawn" Abstract="True">
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<statBases>
 			<Mass>70</Mass>
@@ -206,17 +206,17 @@
     </AlienRace.ThingDef_AlienRace>
 
     <!-- M-Series Base -->
-	<AlienRace.ThingDef_AlienRace Name="BaseMSeriesPawn" ParentName="BaseMechanicalPawn" Abstract="True">
+	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMSeriesPawn" ParentName="ATR_BaseMechanicalPawn" Abstract="True">
         <alienRace>
 			<raceRestriction>
 				<apparelList>
 				</apparelList>
 				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
 				<weaponList>
-					<li>RotaryAutocannon</li>
-					<li>RotaryShrapnelcannon</li>
-					<li>HeadhunterCannon</li>
-					<li>MechPoleaxe</li>
+					<li>ATR_RotaryAutocannon</li>
+					<li>ATR_RotaryShrapnelcannon</li>
+					<li>ATR_HeadhunterCannon</li>
+					<li>ATR_MechPoleaxe</li>
 				</weaponList>
 				<onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
 			</raceRestriction>

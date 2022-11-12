@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThingCategoryDef>
-        <defName>BodyPartsMechanical</defName>
+        <defName>ATR_BodyPartsMechanical</defName>
         <label>Mechanical</label>
         <parent>BodyParts</parent>
     </ThingCategoryDef>

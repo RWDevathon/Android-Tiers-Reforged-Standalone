@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<AlienRace.ThingDef_AlienRace ParentName="BaseMSeriesPawn">
+	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
 		<defName>M8Mech</defName>
 		<label>M8 Mechanised infantry</label>
 		<description>A prototype M7 mechanized infantry, equipped with a limited SkyCore unit and SkyMind tower. These units are very strong, powerful war machines and allow digital consciousness to move on battlefields but are subsequently slow and have limited internal storage capacity to them.</description>

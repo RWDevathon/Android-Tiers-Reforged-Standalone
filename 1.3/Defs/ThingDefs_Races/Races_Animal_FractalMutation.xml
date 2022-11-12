@@ -2,8 +2,8 @@
 <Defs>
 	<!-- ====== Abomination ===== -->
 	<ThingDef ParentName="BasePawn">
-		<defName>Abomination</defName>
-		<label>Fractal Mutant</label>
+		<defName>ATR_FractalAbomination</defName>
+		<label>Fractal Abomination</label>
 		<description>The warped and horrific results of fully fledged fractal warping, abominations are relentless killers and nightmarish beings. Capable of and willing to chase any creature that crosses its path, their echoing screams of damnation are common fodder for even glitterworld horror media. \n\nTo those who know no fear, or to researchers of the archotechs, these beings are of great interest. Born of and yielding so-called fractal pills, abominations are drawn to archotech devices - often congregating around especially powerful artifacts. For this reason, morally corrupt archeologists have been known to forceably create abominations in order to follow them to archotech ruins, often only to be murdered by it upon arrival.</description>
 		<statBases>
 			<Mass>80</Mass>
@@ -123,9 +123,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>AbominationAtlas</defName>
-		<label>Mutant</label>
-		<race>Abomination</race>
+		<defName>ATR_FractalAbomination</defName>
+		<label>Fractal abomination</label>
+		<race>ATR_FractalAbomination</race>
 		<combatPower>230</combatPower>
 		<defaultFactionType>AncientsHostile</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>

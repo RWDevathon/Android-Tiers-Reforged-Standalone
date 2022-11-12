@@ -234,7 +234,7 @@
 				</totalPriceRange>
 			</li>
 			<li Class="StockGenerator_Category">
-				<categoryDef>BodyPartsMechanical</categoryDef>
+				<categoryDef>ATR_BodyPartsMechanical</categoryDef>
 				<thingDefCountRange>
 					<min>4</min>
 					<max>6</max>

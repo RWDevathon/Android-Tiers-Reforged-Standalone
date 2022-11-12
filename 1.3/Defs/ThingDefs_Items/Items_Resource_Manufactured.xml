@@ -73,7 +73,7 @@
         <soundWorking>Recipe_Smelt</soundWorking>
         <recipeUsers>
             <li>TableMachining</li>
-            <li>MechPartWorkbench</li>
+            <li>ATR_MechPartWorkbench</li>
         </recipeUsers>
         </RecipeDef>
 
@@ -153,7 +153,7 @@
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <recipeUsers>
-                <li>MechPartWorkbench</li>
+                <li>ATR_MechPartWorkbench</li>
                 <li>TableMachining</li>
             </recipeUsers>
             <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
@@ -255,7 +255,7 @@
 
     <!-- Resurrector Kits -->
 
-    <ThingDef Name="ApplicableKitBase" ParentName="ResourceBase" Abstract="True">
+    <ThingDef Name="ATR_ApplicableKitBase" ParentName="ResourceBase" Abstract="True">
 	    <thingClass>ThingWithComps</thingClass>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <useHitPoints>true</useHitPoints>
@@ -303,7 +303,7 @@
     </ThingDef>
 
     <!-- Android Resurrection Kit -->
-    <ThingDef ParentName="ApplicableKitBase">
+    <ThingDef ParentName="ATR_ApplicableKitBase">
         <defName>ATR_AndroidResurrectorKit</defName>
         <label>Android Resurrector Kit</label>
         <description>A specialized suite of tools capable of bringing disabled mechanical units back to life. The tools are sufficiently advanced to bring any such unit back to nominal functionality. Revived units must fully reboot in order to begin operating again.</description>
@@ -371,12 +371,12 @@
         <soundWorking>Recipe_Smelt</soundWorking>
 	    <recipeUsers>
             <li>TableMachining</li>
-            <li>MechPartWorkbench</li>
+            <li>ATR_MechPartWorkbench</li>
         </recipeUsers>
 	</RecipeDef>
 
     <!-- Drone Resurrector Kit -->
-    <ThingDef ParentName="ApplicableKitBase">
+    <ThingDef ParentName="ATR_ApplicableKitBase">
         <defName>ATR_DroneResurrectorKit</defName>
         <label>Drone Resurrector Kit</label>
         <description>A specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
@@ -448,7 +448,7 @@
         <soundWorking>Recipe_Smelt</soundWorking>
 	    <recipeUsers>
             <li>TableMachining</li>
-            <li>MechPartWorkbench</li>
+            <li>ATR_MechPartWorkbench</li>
         </recipeUsers>
 	</RecipeDef>
 

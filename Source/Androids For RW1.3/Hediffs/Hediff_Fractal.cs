@@ -72,20 +72,20 @@ namespace ATReforged
             }
         }
 
-        public static void DoMutation(Pawn premutant)
+        public static void DoMutation(Pawn pawn)
         {
             string label = "ATR_FractalCorruption".Translate();
-            label = label.AdjustedFor(premutant);
-            string text = "ATR_FractalCorruptionDesc".Translate(premutant.Name.ToStringShort);
-            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.NegativeEvent, premutant);
+            label = label.AdjustedFor(pawn);
+            string text = "ATR_FractalCorruptionDesc".Translate(pawn.Name.ToStringShort);
+            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.NegativeEvent, pawn);
 
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.AbominationAtlas, Faction.OfAncientsHostile, PawnGenerationContext.NonPlayer, fixedGender: Gender.None);
-            Pawn pawn = PawnGenerator.GeneratePawn(request);
-            FilthMaker.TryMakeFilth(premutant.Position, premutant.Map, RimWorld.ThingDefOf.Filth_AmnioticFluid, premutant.LabelIndefinite(), 10);
-            FilthMaker.TryMakeFilth(premutant.Position, premutant.Map, RimWorld.ThingDefOf.Filth_Blood, premutant.LabelIndefinite(), 10);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_FractalAbomination, Faction.OfAncientsHostile, PawnGenerationContext.NonPlayer, fixedGender: Gender.None);
+            Pawn abomination = PawnGenerator.GeneratePawn(request);
+            FilthMaker.TryMakeFilth(pawn.Position, pawn.Map, RimWorld.ThingDefOf.Filth_AmnioticFluid, pawn.LabelIndefinite(), 10);
+            FilthMaker.TryMakeFilth(pawn.Position, pawn.Map, RimWorld.ThingDefOf.Filth_Blood, pawn.LabelIndefinite(), 10);
 
-            GenSpawn.Spawn(pawn, premutant.Position, premutant.Map);
-            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
+            GenSpawn.Spawn(abomination, pawn.Position, pawn.Map);
+            abomination.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
         }
 
         bool isTerminal;

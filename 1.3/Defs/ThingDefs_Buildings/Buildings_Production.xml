@@ -2,24 +2,24 @@
 <Defs>
 
 
-  <ThingDef ParentName="UnfinishedBase">
-    <defName>UnfinishedAndroid</defName>
-    <label>unfinished android</label>
-    <graphicData>
-      <texPath>Things/Items/UnfinishedAndroid</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>(1,2.5)</drawSize>
-    </graphicData>
-    <stuffCategories Inherit="false" />
-  </ThingDef>
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>UnfinishedAndroid</defName>
+        <label>unfinished android</label>
+        <graphicData>
+            <texPath>Things/Items/UnfinishedAndroid</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,2.5)</drawSize>
+        </graphicData>
+        <stuffCategories Inherit="false" />
+    </ThingDef>
   
     <ThingDef ParentName="BenchBase">
-        <defName>MechManufactoryPod</defName>
+        <defName>ATR_MechanicalAssemblyPod</defName>
         <label>Robotics production casket</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A casket that creates androids and android parts when given materials and a moderate level of human involvement.</description>
         <graphicData>
-            <texPath>Things/Buildings/MechManufactoryPod/MechManufactoryPod</texPath>
+            <texPath>Things/Buildings/AssemblyPod/AssemblyPod</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>(1,2)</drawSize>
         <damageData>
@@ -83,7 +83,7 @@
     </ThingDef>
   
     <ThingDef ParentName="BenchBase">
-        <defName>MechPartWorkbench</defName>
+        <defName>ATR_MechPartWorkbench</defName>
         <label>Mechanical parts workbench</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A workbench that holds all equipment needed to make a variety of android replacement parts.</description>
@@ -212,7 +212,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -278,7 +278,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -344,7 +344,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -418,7 +418,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 	
@@ -476,7 +476,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -526,7 +526,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
 	</RecipeDef>
 
@@ -577,7 +577,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -627,7 +627,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
     </RecipeDef>
 
@@ -677,7 +677,7 @@
         <soundWorking>Recipe_Machining</soundWorking>
         <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
         <recipeUsers>
-            <li>MechManufactoryPod</li>
+            <li>ATR_MechanicalAssemblyPod</li>
         </recipeUsers>
 	</RecipeDef>
 	

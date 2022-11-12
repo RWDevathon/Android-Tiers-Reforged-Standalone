@@ -42,7 +42,7 @@
                 <productCount>1</productCount>
                 <workSkill>Crafting</workSkill>
                 <recipeUsers>
-                    <li>MechManufactoryPod</li>
+                    <li>ATR_MechanicalAssemblyPod</li>
                 </recipeUsers>
             </recipeMaker>
             <costList>

@@ -36,7 +36,7 @@
             </skillRequirements>
             <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
             <recipeUsers>
-                <li>MechPartWorkbench</li>
+                <li>ATR_MechPartWorkbench</li>
             </recipeUsers>
         </recipeMaker>
         <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>

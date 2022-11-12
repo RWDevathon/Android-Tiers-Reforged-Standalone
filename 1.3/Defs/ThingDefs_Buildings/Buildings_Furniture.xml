@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BedWithQualityBase">
-		<defName>MechanicBed</defName>
+		<defName>ATR_MechanicBed</defName>
 		<label>Mechanic bed</label>
 		<description>A hospital bed analogue for mechanics to handle operations on mechanical units. Units can charge while using this bed, and a number of built-in features grant mechanics advantages in completing operations.</description>
 		<graphicData>
@@ -17,7 +17,7 @@
 		<comps>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
-					<li>MechanicCabinet</li>
+					<li>ATR_MechanicCabinet</li>
 				</linkableFacilities>
 			</li>
 			<li Class="ATReforged.CompProperties_AndroidPod">
@@ -70,7 +70,7 @@
 	</ThingDef>
 
     <ThingDef ParentName="FurnitureWithQualityBase">
-        <defName>MechanicCabinet</defName>
+        <defName>ATR_MechanicCabinet</defName>
         <label>Mechanic cabinet</label>
         <description>A small cabinet that can be used in conjunction with mechanical-compatible beds. It contains a number of useful tools for further enhancing mechanic operations.</description>
         <surfaceType>Item</surfaceType>

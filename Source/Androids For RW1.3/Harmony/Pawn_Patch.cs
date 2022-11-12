@@ -25,7 +25,7 @@ namespace ATReforged
                     }
                     return false;
                 }
-                else if (__instance.kindDef == PawnKindDefOf.AbominationAtlas)
+                else if (__instance.kindDef == PawnKindDefOf.ATR_FractalAbomination)
                 {
                     // Save details and destroy before doing the explosion to avoid the damage hitting the pawn, killing them again.
                     if (!__instance.Destroyed)

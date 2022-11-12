@@ -35,7 +35,7 @@
 			</skillRequirements>
 			<researchPrerequisite>ATR_CoreAssistants</researchPrerequisite>
 			<recipeUsers>
-				<li>MechPartWorkbench</li>
+				<li>ATR_MechPartWorkbench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<thingSetMakerTags><li>RewardSpecial</li></thingSetMakerTags>

@@ -49,7 +49,7 @@ namespace ATReforged
                     }
                 }
 
-                if (___pawn.kindDef == PawnKindDefOf.MicroScyther || ___pawn.kindDef == PawnKindDefOf.AbominationAtlas)
+                if (___pawn.kindDef == PawnKindDefOf.MicroScyther || ___pawn.kindDef == PawnKindDefOf.ATR_FractalAbomination)
                 {
                     ___pawn.Kill(dinfo, hediff);
                     return false;
