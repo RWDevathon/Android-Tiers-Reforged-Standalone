@@ -108,8 +108,8 @@
                 <statOffsets>
                     <MechanicalSurgerySuccessChanceFactor>0.08</MechanicalSurgerySuccessChanceFactor>
                 </statOffsets>
-                <maxSimultaneous>1</maxSimultaneous>
-                <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+                <maxSimultaneous>2</maxSimultaneous>
+                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
             </li>
         </comps>
         <staticSunShadowHeight>0</staticSunShadowHeight>

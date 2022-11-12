@@ -63,7 +63,7 @@ namespace ATReforged
                     for (int spotIndex = 0; spotIndex < TotalSleepingSlots; spotIndex++)
                     {
                         chargingSpot = GetSleepingSlotPos(spotIndex);
-                        // If this particular spot is unoccupied and no one has reserved it, then it is open and can be claimed!
+                        // If this particular spot is unoccupied and no one has reserved it, then it is open and can be claimed.
                         if (GetCurOccupantAt(chargingSpot) == null && !myPawn.Map.pawnDestinationReservationManager.IsReserved(chargingSpot))
                         {
                             myPawn.ownership.ClaimBedIfNonMedical(this);
