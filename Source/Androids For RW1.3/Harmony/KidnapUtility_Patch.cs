@@ -11,10 +11,13 @@ namespace ATReforged
         public class KidnappedPawnsDisconnectFromSkyMind_Patch
         {
             [HarmonyPostfix]
-            public static void Listener(Pawn pawn)
+            public static void Listener(Pawn pawn, ref bool __result)
             {
-                // This will handle the whole process. It will do nothing if it wasn't connected to the SkyMind already.
-                Utils.gameComp.DisconnectFromSkyMind(pawn);
+                if (__result)
+                {
+                    // This will handle the whole process. It will do nothing if it wasn't connected to the SkyMind already.
+                    Utils.gameComp.DisconnectFromSkyMind(pawn);
+                }
             }
         }
     }
