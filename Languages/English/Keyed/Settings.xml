@@ -78,12 +78,14 @@
 	
         <!-- Player Hacking -->
     <ATR_PlayerCanHack>Player hacking is enabled.</ATR_PlayerCanHack>
+    <ATR_receiveFullHackingAlert>Alert for hacking points exceeding 90% of capacity.</ATR_receiveFullHackingAlert>
     <ATR_RetaliationChanceOnFailure>Chance the target faction will retaliate on a failed hack</ATR_RetaliationChanceOnFailure>
     <ATR_MinHackSuccessChance>Minimum chance of a successful hack</ATR_MinHackSuccessChance>
     <ATR_MaxHackSuccessChance>Maximum chance of a successful hack</ATR_MaxHackSuccessChance>
     
 	<!-- Connectivity Settings -->
         <!-- Skills -->
+    <ATR_receiveFullSkillAlert>Alert for skill points exceeding 90% of capacity.</ATR_receiveFullSkillAlert>
 	<ATR_skillPointConversionRate>Amount of base XP generated per skill point [default: 10]</ATR_skillPointConversionRate>
 	<ATR_passionSoftCap>Passion soft-cap before cost increases per passion [default: 8]</ATR_passionSoftCap>
 	<ATR_basePointsNeededForPassion>Base skill points needed per passion [default: 1000]</ATR_basePointsNeededForPassion>

@@ -179,6 +179,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alerts\Alert_FullHackingServers.cs" />
+    <Compile Include="Alerts\Alert_FullSkillServers.cs" />
     <Compile Include="Alerts\Alert_NeedMechanic.cs" />
     <Compile Include="Alerts\Alert_ServerHeatCritical.cs" />
     <Compile Include="Alerts\Alert_LowSecurity.cs" />

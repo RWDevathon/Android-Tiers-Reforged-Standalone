@@ -57,6 +57,7 @@ namespace ATReforged
 
             // Settings for player hacks
         public static bool playerCanHack = true;
+        public static bool receiveHackingAlert = true;
         public static float retaliationChanceOnFailure = 0.4f;
         public static float minHackSuccessChance = 0.05f;
         public static float maxHackSuccessChance = 0.95f;
@@ -84,6 +85,7 @@ namespace ATReforged
         public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
 
             // Settings for Skill Points
+        public static bool receiveSkillAlert = true;
         public static int skillPointConversionRate = 10;
         public static int passionSoftCap = 8;
         public static float basePointsNeededForPassion = 1000f;
@@ -269,6 +271,7 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_PlayerCanHack".Translate(), ref playerCanHack, onChange: onChange);
                     if (playerCanHack)
                     {
+                        listingStandard.CheckboxLabeled("ATR_receiveFullHackingAlert".Translate(), ref receiveHackingAlert, onChange: onChange);
                         listingStandard.SliderLabeled("ATR_RetaliationChanceOnFailure".Translate(), ref retaliationChanceOnFailure, 0.0f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                         listingStandard.SliderLabeled("ATR_MinHackSuccessChance".Translate(), ref minHackSuccessChance, 0.0f, maxHackSuccessChance, displayMult: 100, valueSuffix: "%", onChange: onChange);
                         listingStandard.SliderLabeled("ATR_MaxHackSuccessChance".Translate(), ref maxHackSuccessChance, minHackSuccessChance, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
@@ -280,6 +283,7 @@ namespace ATReforged
                     string skillPointConversionRateBuffer = skillPointConversionRate.ToString();
                     string passionSoftCapBuffer = passionSoftCap.ToString();
                     string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
+                    listingStandard.CheckboxLabeled("ATR_receiveFullSkillAlert".Translate(), ref receiveSkillAlert, onChange: onChange);
                     listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
                     listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
@@ -348,6 +352,7 @@ namespace ATReforged
             percentageOfValueUsedForRansoms = 0.25f;
 
             playerCanHack = true;
+            receiveHackingAlert = true;
             retaliationChanceOnFailure = 0.4f;
             minHackSuccessChance = 0.05f;
             maxHackSuccessChance = 0.95f;
@@ -359,6 +364,7 @@ namespace ATReforged
             basePointsNeededForPassion = 1000f;
 
             // Cloud
+            receiveSkillAlert = true;
             uploadingToSkyMindKills = true;
             uploadingToSkyMindPermaKills = true;
             timeToCompleteSkyMindOperations = 12;
@@ -489,6 +495,7 @@ namespace ATReforged
 
             // Player Hacks
             Scribe_Values.Look(ref playerCanHack, "ATR_playerCanHack", true);
+            Scribe_Values.Look(ref receiveHackingAlert, "ATR_receiveHackingAlert", true);
             Scribe_Values.Look(ref retaliationChanceOnFailure, "ATR_retaliationChanceOnFailure", 0.4f);
             Scribe_Values.Look(ref minHackSuccessChance, "ATR_minHackSuccessChance", 0.05f);
             Scribe_Values.Look(ref maxHackSuccessChance, "ATR_maxHackSuccessChance", 0.95f);
@@ -496,6 +503,7 @@ namespace ATReforged
             /* === CONNECTIVITY === */
 
             // Skills
+            Scribe_Values.Look(ref receiveSkillAlert, "ATR_receiveSkillAlert", true);
             Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 10);
             Scribe_Values.Look(ref passionSoftCap, "ATR_passionSoftCap", 8);
             Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 1000f);

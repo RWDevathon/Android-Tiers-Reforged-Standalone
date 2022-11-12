@@ -3,7 +3,13 @@
 	<ATR_AlertServerHeatCritical>Computer Heat Critical</ATR_AlertServerHeatCritical>
 	<ATR_AlertServerHeatCriticalDesc>At least one computer is in danger of combusting due to surpassing its maximum safety heat threshold! Action is required to retain network integrity!</ATR_AlertServerHeatCriticalDesc>
 	
-	<ATR_AlertLowSecurity>Network At Risk</ATR_AlertLowSecurity>
+	<ATR_AlertFullSkillServers>Full Skill Servers</ATR_AlertFullSkillServers>
+    <ATR_AlertFullSkillServersDesc>There is no more capacity for skill points. Consider using them, or expanding capacity.</ATR_AlertFullSkillServersDesc>
+    
+	<ATR_AlertFullHackingServers>Full Hacking Servers</ATR_AlertFullHackingServers>
+    <ATR_AlertFullHackingServersDesc>There is no more capacity for hacking points and there is no current time penalty. Consider using them, or expanding capacity.</ATR_AlertFullHackingServersDesc>
+    
+    <ATR_AlertLowSecurity>Network At Risk</ATR_AlertLowSecurity>
 	<ATR_AlertLowSecurityDesc>The number of available security points is exceedingly unlikely to successfully defend against attempted hacks! Caution is advised to avoid suffering damage.</ATR_AlertLowSecurityDesc>
 
 	<ATR_NeedMechanic>Need mechanic</ATR_NeedMechanic>

@@ -756,7 +756,7 @@ namespace ATReforged
                 }
             }
 
-            // If we are "killing" the android, that means the body is now a blank. Properly duplicate those features.
+            // If we are "killing" the pawn, that means the body is now a blank. Properly duplicate those features.
             if (kill)
             {
                 Duplicate(GetBlank(), copy, false, false);

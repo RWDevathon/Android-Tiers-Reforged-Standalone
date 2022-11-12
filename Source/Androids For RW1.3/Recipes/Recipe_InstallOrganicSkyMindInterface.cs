@@ -27,7 +27,7 @@ namespace ATReforged
             if (pawn.Dead || !pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_SkyMindReceiver || hediff.def == HediffDefOf.ATR_SkyMindTransceiver).Any())
                 return;
 
-            // There are special considerations for adding these implants. Receiver chips kill the current mind. Transceivers allow SkyMind connections and do nothing else in particular.
+            // There are special considerations for adding these implants. Receiver chips kill the current mind.
             if (recipe.addsHediff == HediffDefOf.ATR_SkyMindReceiver)
             {
                 Utils.Duplicate(Utils.GetBlank(), pawn);
