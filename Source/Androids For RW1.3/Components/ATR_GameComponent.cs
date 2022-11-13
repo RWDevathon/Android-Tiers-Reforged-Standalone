@@ -329,22 +329,31 @@ namespace ATReforged
         // Add a charging station to the set. No errors are thrown if it was in the set already.
         public void PushChargingStation(Building build)
         {
+            Log.Message("[ATR DEBUG] charging station added.");
             chargingStations.Add(build);
         }
 
         // Remove a charging station from the set. No errors are thrown if it wasn't in the set.
         public void PopChargingStation(Building build)
         {
+            Log.Message("[ATR DEBUG] charging station " + build + " has been removed.");
             chargingStations.Remove(build);
         }
 
         // Returns the closest available Charging Station on the pawn's map.
         public Building GetClosestFreeChargingStation(Map map, Pawn pawn)
         {
+            // There are no charging stations available for null maps, or for null pawns.
+            if (map == null || pawn == null)
+            {
+                return null;
+            }
+
+            Log.Warning("[ATR DEBUG] There are " + chargingStations.Count + " charging stations recorded.");
             // Acquire all charging stations on the pawn's map in order from closest to furthest, and iterate through them to find the first free one.
             foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
             {
-                if (station == null || station.Destroyed || station.IsBrokenDown() || !station.TryGetComp<CompPowerTrader>().PowerOn || !station.Position.InAllowedArea(pawn))
+                if (station == null || station.Destroyed || station.IsBrokenDown() || (bool)!station.TryGetComp<CompPowerTrader>()?.PowerOn || !station.Position.InAllowedArea(pawn))
                     continue;
 
                 // Try to get a free spot at this station. If there is a free spot and the pawn can reserve it, then return this station.
