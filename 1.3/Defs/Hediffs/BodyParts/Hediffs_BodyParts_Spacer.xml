@@ -333,6 +333,7 @@
 		        <statOffsets>
                     <ComfyTemperatureMax>6</ComfyTemperatureMax>
 		            <ComfyTemperatureMin>-6</ComfyTemperatureMin>
+                    <InjuryHealingFactor>0.5</InjuryHealingFactor>
 		        </statOffsets>
 			</li>
 		</stages>

@@ -2,7 +2,7 @@
 <Defs>
 	<AlienRace.PawnBioDef>
 		<defName>AtlasTheCreator</defName>
-		<childhoodDef>MechanicalArchotechYouth</childhoodDef>
+		<childhoodDef>ATR_MechanicalArchotechChildhood</childhoodDef>
 		<adulthoodDef>AndroidCreator</adulthoodDef>
 		<gender>Male</gender>
 		<name>

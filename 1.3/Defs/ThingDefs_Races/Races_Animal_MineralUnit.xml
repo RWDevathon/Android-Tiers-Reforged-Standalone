@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
  
-    <ThingDef ParentName="AnimalAndroidThingBase">
+    <ThingDef ParentName="ATR_MechanicalAnimalThingBase">
         <defName>DroneMineralUnit</defName>
         <label>Mineral unit</label>
         <description>These drones are ubiquitous in android societies on life-bearing worlds thanks to their specialized machinery capable of extracting minerals from organic material in order to refine and forge into steel. Their ravenous consumption of said organic matter has led to planet-wide bans on many worlds - and to many worlds being turned near lifeless by roaming android "pastoralists" who take "herds" of these creatures from planet to planet.</description>
@@ -32,7 +32,7 @@
             <packAnimal>true</packAnimal>
             <baseBodySize>1</baseBodySize>
             <baseHealthScale>1</baseHealthScale>
-            <baseHungerRate>4</baseHungerRate>
+            <baseHungerRate>3</baseHungerRate>
             <foodType>OmnivoreRoughAnimal</foodType>
             <nameOnTameChance>1</nameOnTameChance>
             <lifeStageAges>
@@ -60,10 +60,11 @@
 		</butcherProducts>
     </ThingDef>
   
-    <PawnKindDef ParentName="AnimalAndroidKindBaseDog">
+    <PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
         <defName>DroneMineralUnit</defName>
         <label>Mineral unit</label>
         <race>DroneMineralUnit</race>
+        <combatPower>20</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.5</ecoSystemWeight>
 	    <defaultFactionType>PlayerColony</defaultFactionType>

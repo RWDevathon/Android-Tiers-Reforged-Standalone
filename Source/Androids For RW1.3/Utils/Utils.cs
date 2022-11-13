@@ -447,6 +447,7 @@ namespace ATReforged
                 if (!isTethered)
                 {
                     Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
+                    /* TODO: Janky interactions seem to be happening with World Pawns. Ensure removing this resolves that before deleting.
                     // Duplicate all world pawn relations.
                     foreach (Pawn worldPawn in Find.WorldPawns.AllPawnsAlive)
                     {
@@ -462,6 +463,7 @@ namespace ATReforged
                             }
                         }
                     }
+                    */
 
                     // Duplicate all of the source's relations.
                     foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.ToList())

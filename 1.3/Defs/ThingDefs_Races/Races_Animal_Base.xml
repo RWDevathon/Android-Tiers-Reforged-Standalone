@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="AnimalAndroidThingBase" ParentName="AnimalThingBase" Abstract="True">
+	<ThingDef Name="ATR_MechanicalAnimalThingBase" ParentName="AnimalThingBase" Abstract="True">
 		<statBases>
 			<Flammability>0</Flammability>
             <ToxicSensitivity>0</ToxicSensitivity>
@@ -44,12 +44,20 @@
             </ageGenerationCurve>
 		</race>
 		<tradeTags>
-			<li>BadassAnimal</li>
+			<li>AnimalExotic</li>
 		</tradeTags>
 		<recipes>
 			<li>RemoveBodyPartAndroid</li>
 			<li>ShutdownMechanical</li>
             <li>RestoreBodyPartAndroid</li>
+            <li>InstallPlasteelPlating</li>
+            <li>InstallCompositePlating</li>
+            <li>InstallMobilityFrame</li>
+            <li>InstallMakeshiftReplacementArm</li>
+            <li>InstallMakeshiftReplacementLeg</li>
+            <li>Install_AdvancedLeg</li>
+            <li>Install_AdvancedVisualSensor</li>
+            <li>InstallMakeshiftReplacementArm</li>
 		</recipes>
 		<modExtensions>
 			<li Class="ATReforged.ATR_MechTweaker">
@@ -57,11 +65,7 @@
 		</modExtensions>
 	</ThingDef>
 
-	<PawnKindDef Name="AnimalAndroidKindBase" Abstract="True">
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="AnimalAndroidKindBase" Name="AnimalAndroidKindBaseDog" Abstract="True">
-		<combatPower>80</combatPower>
+	<PawnKindDef Name="ATR_MechanicalAnimalKindBase" ParentName="AnimalKindBase" Abstract="True">
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.8</ecoSystemWeight>
 	</PawnKindDef>

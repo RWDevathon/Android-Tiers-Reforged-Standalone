@@ -59,7 +59,7 @@ namespace ATReforged
             {
                 PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, newborn: true, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0, fixedGender: Utils.GenerateGender(newIntelligence.kindDef));
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
-                BackstoryDatabase.TryGetWithIdentifier("AndroidBackstory", out newPawn.story.childhood);
+                BackstoryDatabase.TryGetWithIdentifier("ATR_NewbootChildhood", out newPawn.story.childhood);
                 Utils.Duplicate(newPawn, newIntelligence, false, false);
             };
             closeOnCancel = false;

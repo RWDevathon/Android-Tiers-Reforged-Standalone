@@ -14,7 +14,7 @@
   	<success>Always</success>
 		<operations>
 			<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[defName="TableMachining"]/recipes</xpath>
+			<xpath>Defs/ThingDef[defName="TableMachining"]/recipes</xpath>
 				<value>
 					<li>ATR_DisassembleAndroid</li>
 				</value>
