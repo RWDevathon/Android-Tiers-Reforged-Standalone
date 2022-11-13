@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+		  <li>MedPod</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="MedPodBedBase"]/comps/li[@Class="MedPod.CompProperties_TreatmentRestrictions"]/usageBlockingHediffs</xpath>
+			<value>
+				<li>ATR_MindOperation</li>
+				<li>ATR_NoController</li>
+			</value>
+		</match>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="MedPodBedBase"]/comps/li[@Class="MedPod.CompProperties_TreatmentRestrictions"]/disallowedRaces</xpath>
+			<value>
+				<li>Tier1Android</li>
+				<li>Tier2Android</li>
+				<li>Tier3Android</li>
+				<li>Tier4Android</li>
+				<li>Tier5Android</li>
+				<li>M7Mech</li>
+				<li>M8Mech</li>
+				<li>DroneChemUnit</li>
+				<li>Abomination</li>
+				<li>MicroScyther</li>
+				<li>DroneMineralUnit</li>
+				<li>DroneNutritionUnit</li>
+				<li>DroneTORT</li>
+				<li>DroneWatchdog</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
