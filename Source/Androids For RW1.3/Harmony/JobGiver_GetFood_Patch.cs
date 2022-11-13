@@ -3,6 +3,8 @@ using Verse;
 using Verse.AI;
 using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
+using RimWorld.QuestGen;
 
 namespace ATReforged
 {
@@ -17,13 +19,13 @@ namespace ATReforged
             {
                 try
                 {
-                    // If the pawn can't use charging, then there's nothing to override. 
-                    if (pawn != null && Utils.CanUseBattery(pawn))
+                    // If the pawn can't use charging or isn't on a map, then there's nothing to override. 
+                    if (pawn != null && pawn.Map != null && Utils.CanUseBattery(pawn))
                     {
                         // Don't override non-spawned or drafted pawns.
                         if (!pawn.Spawned || pawn.Drafted)
                             return;
-
+                        
                         // Attempt to locate a viable charging bed for the pawn. This can suit comfort, rest, and room needs whereas the charging station can not.
                         Building_Bed bed = Utils.GetAvailableChargingBed(pawn);
                         if (bed != null)
@@ -43,7 +45,7 @@ namespace ATReforged
                 }
                 catch (Exception ex)
                 {
-                    Log.Message("[ATR] ATReforged.JobGiver_GetFood_Patch Encountered error while attempting to check pawn" + pawn + " for charging. Default vanilla behavior will proceed." + ex.Message + " " + ex.StackTrace);
+                    Log.Warning("[ATR] ATReforged.JobGiver_GetFood_Patch Encountered an error while attempting to check pawn" + pawn + " for charging. Default vanilla behavior will proceed." + ex.Message + " " + ex.StackTrace);
                 }
             }
         }

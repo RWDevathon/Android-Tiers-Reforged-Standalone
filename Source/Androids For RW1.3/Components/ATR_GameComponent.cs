@@ -348,9 +348,16 @@ namespace ATReforged
             }
 
             // Acquire all charging stations on the pawn's map in order from closest to furthest, and iterate through them to find the first free one.
-            foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
+            foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)).ToList())
             {
-                if (station == null || station.Destroyed || station.IsBrokenDown() || (bool)!station.TryGetComp<CompPowerTrader>()?.PowerOn || !station.Position.InAllowedArea(pawn))
+                // If any of these are true, then the building is in an illegal state and shouldn't be in the list in the first place, so have it removed.
+                if (station.Destroyed || station.IsBrokenDown() || (bool)!station.TryGetComp<CompPowerTrader>()?.PowerOn)
+                {
+                    PopChargingStation(station);
+                    continue;
+                }
+                // If the station isn't in an allowed area, then it isn't illegal but can not be used here.
+                else if (!station.Position.InAllowedArea(pawn))
                     continue;
 
                 // Try to get a free spot at this station. If there is a free spot and the pawn can reserve it, then return this station.
