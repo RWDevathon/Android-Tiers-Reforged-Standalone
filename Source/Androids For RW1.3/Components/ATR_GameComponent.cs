@@ -329,14 +329,12 @@ namespace ATReforged
         // Add a charging station to the set. No errors are thrown if it was in the set already.
         public void PushChargingStation(Building build)
         {
-            Log.Message("[ATR DEBUG] charging station added.");
             chargingStations.Add(build);
         }
 
         // Remove a charging station from the set. No errors are thrown if it wasn't in the set.
         public void PopChargingStation(Building build)
         {
-            Log.Message("[ATR DEBUG] charging station " + build + " has been removed.");
             chargingStations.Remove(build);
         }
 
@@ -349,7 +347,6 @@ namespace ATReforged
                 return null;
             }
 
-            Log.Warning("[ATR DEBUG] Pawn " + pawn + " is requesting charging. There are " + chargingStations.Count + " charging stations recorded.");
             // Acquire all charging stations on the pawn's map in order from closest to furthest, and iterate through them to find the first free one.
             foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
             {
