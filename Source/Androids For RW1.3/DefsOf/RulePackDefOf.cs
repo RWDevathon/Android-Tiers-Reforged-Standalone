@@ -16,5 +16,7 @@ namespace ATReforged
         public static RulePackDef ATR_AndroidFemaleNames;
 
         public static RulePackDef ATR_AndroidNoneNames;
+
+        public static RulePackDef ATR_DroneNoneNames;
     }
 }

@@ -20,19 +20,22 @@ namespace ATReforged
                 // Mechanical androids may be Male, Female, or None based on settings. Handle name generation appropriately based on those settings.
                 if (Utils.IsConsideredMechanicalAndroid(pawn))
                 {
+                    // Some special pawns should ignore unique name generation.
                     if (Utils.HasSpecialStatus(pawn))
                         return;
 
                     switch (pawn.gender)
                     {
+                        // Androids that are male or female will try to use their xml name maker. Vanilla will handle the name scheme in this case.
                         case Gender.Male:
-                            __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidMaleNames, pawn.story, RulePackDefOf.ATR_AndroidMaleNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
-                            break;
                         case Gender.Female:
-                            __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidFemaleNames, pawn.story, RulePackDefOf.ATR_AndroidFemaleNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
                             break;
+                        // Vanilla does not allow for None genders to have their own name maker, so if a race has genders but the pawn does not (IE. not all pawns of the race are genderless), we provide our own.
                         default:
-                            __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidNoneNames, pawn.story, RulePackDefOf.ATR_AndroidNoneNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                            if (pawn.RaceProps.hasGenders)
+                            {
+                                __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidNoneNames, pawn.story, RulePackDefOf.ATR_AndroidNoneNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                            }
                             break;
                     }
                     return;
@@ -40,7 +43,7 @@ namespace ATReforged
                 // Mechanical drones never have gender. Generate a new name with the None name maker, ignoring xml tags.
                 else if (Utils.IsConsideredMechanicalDrone(pawn))
                 {
-                    __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidNoneNames, pawn.story, null, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                    __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_DroneNoneNames, pawn.story, null, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
                 }
             }
         }
