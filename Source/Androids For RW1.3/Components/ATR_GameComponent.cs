@@ -349,7 +349,7 @@ namespace ATReforged
                 return null;
             }
 
-            Log.Warning("[ATR DEBUG] There are " + chargingStations.Count + " charging stations recorded.");
+            Log.Warning("[ATR DEBUG] Pawn " + pawn + " is requesting charging. There are " + chargingStations.Count + " charging stations recorded.");
             // Acquire all charging stations on the pawn's map in order from closest to furthest, and iterate through them to find the first free one.
             foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
             {
