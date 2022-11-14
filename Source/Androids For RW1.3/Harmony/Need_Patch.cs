@@ -6,10 +6,6 @@ namespace ATReforged
 {
     internal class Need_Patch
     {
-        // Store the energy translation locally to avoid having to constantly translate it.
-        private static string energyTranslated = "ATR_EnergyNeed".Translate();
-        private static string energyDescTranslated = "ATR_EnergyNeedDesc".Translate();
-
         // Mechanicals don't have a food meter, they have an energy meter. Since we're hijacking hunger, change the labelled name for mechanicals.
         [HarmonyPatch(typeof(Need), "get_LabelCap")]
         public class get_LabelCap
@@ -21,7 +17,7 @@ namespace ATReforged
                 {
                     if (Utils.CanUseBattery(___pawn))
                     {
-                        __result = energyTranslated;
+                        __result = "ATR_EnergyNeed".Translate();
                     }
                 }
             }
@@ -40,7 +36,7 @@ namespace ATReforged
                     {
                         __result = string.Concat(new string[]
                             {
-                                __instance.LabelCap,
+                                "ATR_EnergyNeed".Translate(),
                                 ": ",
                                 __instance.CurLevelPercentage.ToStringPercent(),
                                 " (",
@@ -48,7 +44,7 @@ namespace ATReforged
                                 " / ",
                                 __instance.MaxLevel.ToString("0.##"),
                                 ")\n",
-                                energyDescTranslated
+                                "ATR_EnergyNeedDesc".Translate()
                             });
                     }
                 }

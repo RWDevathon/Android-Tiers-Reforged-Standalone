@@ -248,10 +248,10 @@ namespace ATReforged
 
                     listingStandard.GapLine();
 
-                    listingStandard.CheckboxLabeled("ATR_chargeCapableMeansDifferentBioEfficiency".Translate(), ref chargeCapableMeansDifferentBioEfficiency, onChange: onChange);
+                    listingStandard.CheckboxLabeled("ATR_mechanicalsHaveDifferentBioprocessingEfficiency".Translate(), ref chargeCapableMeansDifferentBioEfficiency, onChange: onChange);
                     if (chargeCapableMeansDifferentBioEfficiency)
                         {
-                        listingStandard.SliderLabeled("ATR_chargeCapableBioEfficiency".Translate(), ref chargeCapableBioEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref chargeCapableBioEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
                 }
