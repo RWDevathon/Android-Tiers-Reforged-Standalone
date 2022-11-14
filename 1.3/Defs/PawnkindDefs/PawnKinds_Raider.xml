@@ -14,11 +14,11 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>80</combatPower>
-	    <baseRecruitDifficulty>0.80</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.80</baseRecruitDifficulty>
 	<minGenerationAge>20</minGenerationAge>
 	<maxGenerationAge>50</maxGenerationAge>
-			<defaultFactionType>MechanicalMarauders</defaultFactionType>
-		<aiAvoidCover>true</aiAvoidCover>
+    <defaultFactionType>MechanicalMarauders</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
     <gearHealthRange>
       <min>0.5</min>
       <max>1.4</max>
@@ -68,10 +68,10 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>40</combatPower>
-	    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
 	<minGenerationAge>20</minGenerationAge>	
-			<defaultFactionType>MechanicalMarauders</defaultFactionType>
-		<aiAvoidCover>true</aiAvoidCover>
+    <defaultFactionType>MechanicalMarauders</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
     <gearHealthRange>
       <min>0.5</min>
       <max>1</max>
@@ -118,12 +118,12 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-	    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 	<race>Tier2Android</race>
     <combatPower>130</combatPower>
 	<minGenerationAge>20</minGenerationAge>
-			<defaultFactionType>MechanicalMarauders</defaultFactionType>
-		<aiAvoidCover>true</aiAvoidCover>
+    <defaultFactionType>MechanicalMarauders</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
     <gearHealthRange>
       <min>0.5</min>
       <max>1.4</max>
@@ -172,12 +172,12 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-	    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
 	<race>Tier3Android</race>
     <combatPower>180</combatPower>
 	<minGenerationAge>20</minGenerationAge>
-			<defaultFactionType>MechanicalMarauders</defaultFactionType>
-		<aiAvoidCover>true</aiAvoidCover>
+    <defaultFactionType>MechanicalMarauders</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
     <gearHealthRange>
       <min>0.5</min>
       <max>1.4</max>
@@ -231,8 +231,8 @@
 	<race>Tier4Android</race>
     <combatPower>220</combatPower>
 	<minGenerationAge>20</minGenerationAge>
-			<defaultFactionType>MechanicalMarauders</defaultFactionType>
-		<aiAvoidCover>true</aiAvoidCover>
+    <defaultFactionType>MechanicalMarauders</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
     <gearHealthRange>
       <min>0.8</min>
       <max>1.4</max>

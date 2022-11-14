@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
     <ThingDef Name="ATR_ChargingStationBase" ParentName="BuildingBase" Abstract="True">
         <altitudeLayer>Building</altitudeLayer>
         <thingClass>ATReforged.Building_ChargingStation</thingClass>
@@ -72,111 +73,6 @@
             <li>ATR_MassCharging</li>
         </researchPrerequisites>
         <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-    </ThingDef>
-  
-    <!-- SkyMind Towers -->
-    <ThingDef Name="SkyMindTowerBase" ParentName="BuildingBase" Abstract="True">
-        <thingClass>Building</thingClass>
-        <graphicData>
-            <damageData>
-                <edgeTop>Damage/Edge</edgeTop>
-                <cornerBL>Damage/Corner</cornerBL>
-                <cornerBR>Damage/Corner</cornerBR>
-            </damageData>
-        </graphicData>
-        <canOverlapZones>false</canOverlapZones>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <thingCategories>
-            <li>BuildingsMisc</li>
-        </thingCategories>
-        <altitudeLayer>BuildingOnTop</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
-        <blockWind>true</blockWind>
-        <castEdgeShadows>false</castEdgeShadows>
-        <fillPercent>0.40</fillPercent>
-        <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
-            <WorkToBuild>5000</WorkToBuild>
-            <Mass>40</Mass>
-            <Flammability>1.0</Flammability>
-            <Beauty>-10</Beauty>
-        </statBases>
-        <rotatable>false</rotatable>
-        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>AndroidTiersDesignation</designationCategory>
-        <constructEffect>ConstructMetal</constructEffect>
-        <designationHotKey>Misc4</designationHotKey>
-        <comps>
-            <li Class="CompProperties_Breakdownable"/>
-            <li Class="CompProperties_Flickable"/>
-        </comps>
-    </ThingDef>
-  
-  
-    <ThingDef ParentName="SkyMindTowerBase">
-        <defName>ATR_SkyMindRelay</defName>
-        <label>SkyMind Relay Tower</label>
-        <description>This tower acts as a relay for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for three nodes.</description>
-        <graphicData>
-            <texPath>Things/Buildings/RelayTower</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(2,12)</drawSize>
-        </graphicData>
-        <size>(2,2)</size>
-        <costList>
-            <Steel>180</Steel>
-            <Silver>100</Silver>
-            <Gold>25</Gold>
-            <ComponentIndustrial>4</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <shortCircuitInRain>false</shortCircuitInRain>
-                <basePowerConsumption>750</basePowerConsumption>
-            </li>
-            <li Class="ATReforged.CompProperties_SkyMindTower">
-                <SkyMindSlotsProvided>3</SkyMindSlotsProvided>
-            </li>
-        </comps>
-        <researchPrerequisites>
-            <li>ATR_StandardizedCommunications</li>
-        </researchPrerequisites>
-    </ThingDef>
-  
-  
-    <ThingDef ParentName="SkyMindTowerBase">
-        <defName>ATR_SkyMindNetwork</defName>
-        <label>SkyMind Network Tower</label>
-        <thingClass>Building</thingClass>
-        <description>This tower acts as a powerful network host for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for fifteen nodes.</description>
-        <graphicData>
-            <texPath>Things/Buildings/NetworkTower</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(3,15)</drawSize>
-        </graphicData>
-        <size>(3,3)</size>
-        <costList>
-            <Steel>650</Steel>
-            <Silver>450</Silver>
-            <Gold>45</Gold>
-            <ComponentIndustrial>12</ComponentIndustrial>
-            <ComponentSpacer>2</ComponentSpacer>
-        </costList>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <shortCircuitInRain>false</shortCircuitInRain>
-                <basePowerConsumption>1800</basePowerConsumption>
-            </li>
-            <li Class="ATReforged.CompProperties_SkyMindTower">
-                <SkyMindSlotsProvided>15</SkyMindSlotsProvided>
-            </li>
-        </comps>
-        <researchPrerequisites>
-            <li>ATR_CommunicationOptimization</li>
-        </researchPrerequisites>
     </ThingDef>
 
     <!-- Charging Pods -->
@@ -299,4 +195,5 @@
             </li>
         </comps>
     </ThingDef>
+    
 </Defs>

@@ -71,7 +71,7 @@
 
 	<!--Androids With Real Backstories-->
 
-    <PawnKindDef Name="BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
+    <PawnKindDef Name="ATR_BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
 		<backstoryFiltersOverride>
 		  <li>
@@ -90,26 +90,25 @@
         </apparelTags>
     </PawnKindDef>
 
-	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>T4Refugee</defName>
 		<label>T4 Android Colonist</label>
 		<race>Tier4Android</race>
 	</PawnKindDef>
 
-
-	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>T3Refugee</defName>
 		<label>T3 Android Colonist</label>
 		<race>Tier3Android</race>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>T2Refugee</defName>
 		<label>T2 Android Colonist</label>
 		<race>Tier2Android</race>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BaseMechPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>T1Refugee</defName>
 		<label>T1 Android Colonist</label>
 		<race>Tier1Android</race>
