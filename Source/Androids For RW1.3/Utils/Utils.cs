@@ -190,7 +190,7 @@ namespace ATReforged
             }
             
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
             BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
@@ -324,7 +324,7 @@ namespace ATReforged
             }
             else
                 surrogate.health.AddHediff(HediffDefOf.ATR_SkyMindReceiver, surrogate.health.hediffSet.GetBrain());
-            Duplicate(GetBlank(), surrogate, false);
+            Duplicate(GetBlank(), surrogate, false, false);
             return surrogate;
         }
 
@@ -447,23 +447,6 @@ namespace ATReforged
                 if (!isTethered)
                 {
                     Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
-                    /* TODO: Janky interactions seem to be happening with World Pawns. Ensure removing this resolves that before deleting.
-                    // Duplicate all world pawn relations.
-                    foreach (Pawn worldPawn in Find.WorldPawns.AllPawnsAlive)
-                    {
-                        if (worldPawn == null || worldPawn.relations == null || worldPawn.relations.DirectRelations == null)
-                            continue;
-
-                        // For each of the world pawns relations, if it relates to the source, add it to the destination.
-                        foreach (DirectPawnRelation pawnRelation in worldPawn.relations.DirectRelations.ToList())
-                        {
-                            if (pawnRelation.otherPawn != null && pawnRelation.otherPawn == source)
-                            {
-                                worldPawn.relations.AddDirectRelation(pawnRelation.def, dest);
-                            }
-                        }
-                    }
-                    */
 
                     // Duplicate all of the source's relations.
                     foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.ToList())

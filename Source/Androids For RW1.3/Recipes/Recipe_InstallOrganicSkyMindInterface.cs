@@ -13,7 +13,10 @@ namespace ATReforged
             BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
             if (targetBodyPart != null && !Utils.IsConsideredMechanical(pawn))
             {
-                yield return targetBodyPart;
+                // If the pawn has a receiver or transceiver already, then we can not install the other (or another one). The two implants are mutually exclusive.
+                Hediff blockingImplant = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver) ?? pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                if (blockingImplant != null)
+                    yield return targetBodyPart;
             }
             yield break;
         }
@@ -30,7 +33,7 @@ namespace ATReforged
             // There are special considerations for adding these implants. Receiver chips kill the current mind.
             if (recipe.addsHediff == HediffDefOf.ATR_SkyMindReceiver)
             {
-                Utils.Duplicate(Utils.GetBlank(), pawn);
+                Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
                 pawn.health.AddHediff(HediffDefOf.ATR_NoController);
             }
         }

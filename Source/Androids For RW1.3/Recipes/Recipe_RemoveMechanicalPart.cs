@@ -91,7 +91,7 @@ namespace ATReforged
                     // Surrogates are already handled via disconnecting from the SkyMind or are already blank. Autonomous intelligences must be murdered and made blank.
                     if (isAutonomousIntelligence)
                     {
-                        Utils.Duplicate(Utils.GetBlank(), pawn, true);
+                        Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
                         pawn.guest?.SetGuestStatus(Faction.OfPlayer);
                         if (pawn.playerSettings != null)
                             pawn.playerSettings.medCare = MedicalCareCategory.Best;

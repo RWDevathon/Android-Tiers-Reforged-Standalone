@@ -512,7 +512,7 @@ namespace ATReforged
             }
 
             // Apply the blank template to self.
-            Utils.Duplicate(Utils.GetBlank(), ThisPawn, false);
+            Utils.Duplicate(Utils.GetBlank(), ThisPawn, false, false);
 
             // Foreign surrogates do not have links to their controllers.
             if (!isForeign)
