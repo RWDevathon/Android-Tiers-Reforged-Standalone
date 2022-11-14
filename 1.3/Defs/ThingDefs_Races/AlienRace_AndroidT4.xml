@@ -80,9 +80,9 @@
 			<baseBodySize>1.1</baseBodySize>
 		</race>
 		<butcherProducts>
-			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>8</ComponentIndustrial>
-            <ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>80</Plasteel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>4</ComponentSpacer>
 			<AIPersonaCore>1</AIPersonaCore>
 		</butcherProducts>
 	</AlienRace.ThingDef_AlienRace>

@@ -180,7 +180,7 @@
             <WorkToMake>1000</WorkToMake>
         </statBases>
         <costList>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <ComponentIndustrial>1</ComponentIndustrial>
         </costList>
         <recipeMaker>
             <skillRequirements>
@@ -210,8 +210,8 @@
             <WorkToMake>3500</WorkToMake>
         </statBases>
         <costList>
-            <Plasteel>10</Plasteel>
-            <ComponentIndustrial>4</ComponentIndustrial>
+            <Plasteel>5</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <recipeMaker>
             <researchPrerequisite>ATR_MechanicalStandardization</researchPrerequisite>
@@ -240,9 +240,9 @@
             <WorkToMake>6500</WorkToMake>
         </statBases>
         <costList>
-            <Gold>2</Gold>
-            <ComponentIndustrial>4</ComponentIndustrial>
-            <ComponentSpacer>2</ComponentSpacer>
+            <Gold>1</Gold>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
         </costList>
         <recipeMaker>
             <researchPrerequisite>ATR_RepairOptimization</researchPrerequisite>

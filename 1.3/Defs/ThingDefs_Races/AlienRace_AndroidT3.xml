@@ -81,8 +81,9 @@
 		</race>
 		<butcherProducts>
 			<Plasteel>40</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-            <ComponentSpacer>1</ComponentSpacer>
+			<Uranium>10</Uranium>
+			<ComponentIndustrial>6</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
 		</butcherProducts>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

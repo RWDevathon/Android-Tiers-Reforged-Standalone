@@ -227,7 +227,7 @@
             <li>RestoreBodyPartAndroid</li>
         </recipes>
 		<butcherProducts>
-			<Plasteel>140</Plasteel>
+			<Plasteel>160</Plasteel>
 			<ComponentIndustrial>40</ComponentIndustrial>
             <ComponentSpacer>20</ComponentSpacer>
 			<AIPersonaCore>2</AIPersonaCore>

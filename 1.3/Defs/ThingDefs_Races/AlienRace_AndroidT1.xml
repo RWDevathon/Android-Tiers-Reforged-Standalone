@@ -80,8 +80,8 @@
 			<baseBodySize>0.5</baseBodySize>
 		</race>
 		<butcherProducts>
-            <Steel>10</Steel>
-			<Plasteel>10</Plasteel>
+            <Steel>30</Steel>
+			<Plasteel>15</Plasteel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
 	</AlienRace.ThingDef_AlienRace>
