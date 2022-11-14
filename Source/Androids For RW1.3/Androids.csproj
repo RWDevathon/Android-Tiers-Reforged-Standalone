@@ -206,6 +206,8 @@
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
+    <Compile Include="Harmony\ThingSetMaker_RefugeePod_Patch.cs" />
+    <Compile Include="Harmony\SickPawnVisitUtility_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
     <Compile Include="Harmony\KidnapUtility_Patch.cs" />
     <Compile Include="Harmony\PawnBioAndNameGenerator_Patch.cs" />
@@ -281,6 +283,7 @@
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
+    <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
     <Compile Include="T5Arrival\DownedT5AndroidComp.cs" />
     <Compile Include="T5Arrival\GenStep_DownedRefugee.cs" />
     <Compile Include="Hediffs\HediffGiver_Android.cs" />

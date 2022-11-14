@@ -220,4 +220,18 @@
 		</fixedIngredientFilter>
         <addsHediff>ATR_SkyMindTransceiver</addsHediff>
     </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <workerClass>ATReforged.Recipe_RemoveOrganicSkyMindInterface</workerClass>
+        <defName>ATR_RemoveSkyMindTransceiver</defName>
+        <label>remove transceiver</label>
+        <description>Remove the Skymind transceiver.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ATR_SkyMindTransceiver</ThingDef>
+            <HediffDef>ATR_SkyMindTransceiver</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Skymind transceiver.</jobString>
+        <removesHediff>ATR_SkyMindTransceiver</removesHediff>
+    </RecipeDef>
+
  </Defs>
