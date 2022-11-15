@@ -1,48 +1,39 @@
 ﻿using RimWorld;
+using Unity.Jobs;
 using Verse;
 using Verse.AI;
+using static UnityEngine.GraphicsBuffer;
 
 namespace ATReforged
 {
     // Job to attack anything and everything that isn't of the same def.
-    public class JobGiver_Exterminator : JobGiver_Manhunter
+    public class JobGiver_Exterminator : ThinkNode_JobGiver
     { 
         protected override Job TryGiveJob(Pawn sourcePawn)
         {
-            bool attackExists = sourcePawn.TryGetAttackVerb(null, false) == null;
-            Job result;
-            if (!attackExists)
+            if (sourcePawn.TryGetAttackVerb(null) == null)
             {
-                result = null;
+                return null;
             }
-            else
+
+            Pawn targetPawn = FindPawnTarget(sourcePawn);
+            if (targetPawn != null)
             {
-                Pawn targetPawn = FindPawnTarget(sourcePawn);
-                if (targetPawn != null)
+                return new Job(RimWorld.JobDefOf.AttackMelee, targetPawn)
                 {
-                    result = MeleeAttackJob(sourcePawn, targetPawn);
-                }
-                else
-                {
-                    result = null;
-                }
+                    maxNumMeleeAttacks = 1,
+                    expiryInterval = Rand.Range(420, 900),
+                    attackDoorIfTargetLost = true,
+                    canBashDoors = true,
+                    canBashFences = true
+                };
             }
-            return result;
-        }
-        
-        private Job MeleeAttackJob(Pawn pawn, Thing target)
-        {
-            return new Job(RimWorld.JobDefOf.AttackMelee, target)
-            {
-                maxNumMeleeAttacks = 999,
-                expiryInterval = 999999,
-                attackDoorIfTargetLost = true
-            };
+            return null;
         }
 
         private Pawn FindPawnTarget(Pawn pawn)
         {
-            return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachable, (Thing target) => target is Pawn targetPawn && targetPawn.def != pawn.def, canBashDoors: true, canBashFences: true);
+            return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachable, (Thing target) => target is Pawn targetPawn && targetPawn.def != pawn.def && targetPawn.Spawned && !targetPawn.Downed && !targetPawn.IsInvisible(), canBashDoors: true, canBashFences: true);
         }
     }
 }
