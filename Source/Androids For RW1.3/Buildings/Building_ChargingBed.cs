@@ -30,7 +30,7 @@ namespace ATReforged
             }
 
             // Check if the pawn is allowed to use its battery by settings.
-            if (!Utils.CanUseBattery(pawn))
+            if (!Utils.CanUseBattery(pawn) || pawn.needs.food == null)
             { 
                 return new FloatMenuOption("ATR_NeedToAllowCharge".Translate(), null);
             }

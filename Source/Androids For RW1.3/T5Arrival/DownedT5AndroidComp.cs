@@ -14,20 +14,20 @@ namespace ATReforged
         }
         protected override void RemovePawnOnWorldObjectRemoved()
         {
-            for (int i = this.pawn.Count - 1; i >= 0; i--)
+            for (int i = pawn.Count - 1; i >= 0; i--)
             {
-                if (!this.pawn[i].Dead)
+                if (!pawn[i].Dead)
                 {
-                    this.pawn[i].Kill(null, null);
+                    pawn[i].Kill(null);
                 }
             }
-            this.pawn.ClearAndDestroyContents(DestroyMode.Vanish);
+            pawn.ClearAndDestroyContents(DestroyMode.Vanish);
         }
         public override string CompInspectStringExtra()
         {
-            if (this.pawn.Any)
+            if (pawn.Any)
             {
-                return "Transcendant".Translate() + ": " + this.pawn[0].LabelShort;
+                return "Transcendant".Translate() + ": " + pawn[0].LabelShort;
             }
             return null;
         }

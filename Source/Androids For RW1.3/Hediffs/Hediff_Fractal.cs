@@ -36,7 +36,7 @@ namespace ATReforged
             else
             { 
                 if (Severity <= 0.1f)
-                { // True Transcendance threshold reached; TODO: replace fractal transcendance with secret sauce
+                { // True Transcendance threshold reached;
                     isTerminal = true;
                     Severity = 0.01f;
                     return;

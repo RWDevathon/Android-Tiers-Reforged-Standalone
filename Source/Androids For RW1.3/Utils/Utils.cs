@@ -93,9 +93,9 @@ namespace ATReforged
 
 
         /* === POWER UTILITIES === */
-        public static bool CanUseBattery(Pawn pawn) // TODO: Add hediff check for organics to be able to charge
+        public static bool CanUseBattery(Pawn pawn)
         {
-            return ATReforged_Settings.canUseBattery.Contains(pawn.def);
+            return ATReforged_Settings.canUseBattery.Contains(pawn.def) || pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_OrganicCharger) != null;
         }
 
         public static bool CanUseBattery(ThingDef thingDef)
@@ -237,8 +237,6 @@ namespace ATReforged
         public static ThoughtDef SkyMindAttackWitnessDef = new ThoughtDef();
         public static ThoughtDef SkyMindAttackVictimDef = new ThoughtDef();
         public static ThoughtDef SkyMindTrollVictimDef = new ThoughtDef();
-
-        // The other shit:
 
         public static FleckDef ATR_FullChargeFleck;
         public static FleckDef ATR_HalfChargeFleck;

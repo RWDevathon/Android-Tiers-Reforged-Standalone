@@ -16,6 +16,8 @@ namespace ATReforged
 
         public static HediffDef ATR_RemainingCharge;
 
+        public static HediffDef ATR_OrganicCharger;
+
         public static HediffDef RecoveringFromDDOS;
 
         public static HediffDef ATR_ShortReboot;

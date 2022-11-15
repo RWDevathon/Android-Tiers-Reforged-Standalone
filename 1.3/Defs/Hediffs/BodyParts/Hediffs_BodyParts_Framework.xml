@@ -7,7 +7,7 @@
         <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     </HediffDef>
 
-    <ThingDef Name="BodyPartFrameworkBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
+    <ThingDef Name="ATR_BodyPartFrameworkBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
         <techLevel>Industrial</techLevel>
         <graphicData>
             <texPath>Things/Items/BodyParts/FrameworkPart</texPath>
@@ -40,7 +40,7 @@
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     </ThingDef>
 
-	<RecipeDef Name="SurgeryFramework" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="ATR_SurgeryFramework" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Replacing framework.</jobString>
         <skillRequirements>
             <Crafting>8</Crafting>
@@ -68,7 +68,7 @@
         <spawnThingOnRemoved>PlasteelPlating</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>PlasteelPlating</defName>
         <label>Plasteel Frame</label>
         <description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
@@ -79,7 +79,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
         <defName>InstallPlasteelPlating</defName>
         <label>Install Plasteel Plating</label>
         <description>Replaces the chassis frame of this unit with a tempered plasteel-infused frame, enhancing combat survivability.</description>
@@ -126,7 +126,7 @@
         <spawnThingOnRemoved>CompositePlating</spawnThingOnRemoved>
     </HediffDef>
   
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>CompositePlating</defName>
         <label>Composite Frame</label>
         <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
@@ -137,7 +137,7 @@
         </costList>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
         <defName>InstallCompositePlating</defName>
         <label>Install Composite Frame</label>
         <description>Replaces the chassis frame of this unit with a mechanite-plasteel composite frame, greatly enhancing combat survivability.</description>
@@ -182,7 +182,7 @@
         <spawnThingOnRemoved>HydraulicFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
         <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
@@ -193,7 +193,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallHydraulicFrame</defName>
 		<label>Install Hydraulic Frame</label>
 		<description>Replaces the chassis frame of this unit with a hydraulic frame, greatly enhancing weight capacity and general labor efficiency.</description>
@@ -233,7 +233,7 @@
         <spawnThingOnRemoved>RefinedFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
@@ -243,7 +243,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallRefinedFrame</defName>
 		<label>Install Refined Frame</label>
 		<description>Replaces the chassis frame of this unit with a refined frame, accentuating sociability and imbuing a distinctly noble and striking look. Installing the frame is as much up to the components as to the artistic skills of its installer, as there is no way to standardize the beauty of the intricate design.</description>
@@ -294,7 +294,7 @@
         <spawnThingOnRemoved>SanitaryFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to any form of detritus. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
@@ -305,7 +305,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallSanitaryFrame</defName>
 		<label>Install Sanitary Frame</label>
 		<description>Replaces the chassis frame of this unit with a sanitary frame, ensuring it is completely free of filth and completely sanitized.</description>
@@ -350,7 +350,7 @@
         <spawnThingOnRemoved>MobilityFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
@@ -360,7 +360,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallMobilityFrame</defName>
 		<label>Install Mobility Frame</label>
 		<description>Replaces the chassis frame of this unit with a mobility frame, greatly enhancing its movement capabilities and agility.</description>
@@ -408,7 +408,7 @@
         <spawnThingOnRemoved>SuppressorFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
@@ -418,7 +418,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallSuppressorFrame</defName>
 		<label>Install Suppressor Frame</label>
 		<description>Replaces the chassis frame of this unit with a suppressor frame, greatly reducing the combat threat of this unit.</description>
@@ -462,7 +462,7 @@
         <spawnThingOnRemoved>GuardianFrame</spawnThingOnRemoved>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartFrameworkBase">
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>GuardianFrame</defName>
         <label>Guardian Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
@@ -472,7 +472,7 @@
         </costList>
     </ThingDef>
 	
-    <RecipeDef ParentName="SurgeryFramework">
+    <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>InstallGuardianFrame</defName>
 		<label>Install Guardian Frame</label>
 		<description>Replaces the chassis frame of this unit with a guardian frame, greatly enhancing environmental survivability and police capabilities.</description>

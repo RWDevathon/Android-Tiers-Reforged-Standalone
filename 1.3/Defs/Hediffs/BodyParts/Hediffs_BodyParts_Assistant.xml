@@ -3,11 +3,11 @@
 
   	<!-- Base Core Assistant -->
   
-	<HediffDef Name="AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
+	<HediffDef Name="ATR_AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
 		<defaultLabelColor>(0.7, 0.6, 0.7)</defaultLabelColor>
 	</HediffDef>
 
-	<ThingDef Name="BodyPartCoreAssistantBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
+	<ThingDef Name="ATR_BodyPartCoreAssistantBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Items/BodyParts/OrganPurple</texPath>
@@ -41,7 +41,7 @@
 		<thingSetMakerTags><li>RewardSpecial</li></thingSetMakerTags>
 	</ThingDef>
 
-	<RecipeDef Name="SurgeryCoreAssistant" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+	<RecipeDef Name="ATR_SurgeryCoreAssistant" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
 		<jobString>Installing core assistant.</jobString>
     	<skillRequirements>
 			<Crafting>12</Crafting>
@@ -58,7 +58,7 @@
 
   	<!-- Insight Assistant -->
 
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_InsightAssistant</defName>
     	<label>Insight assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core interest handles. It is also capable of independently generating new theories, assisting with research.</description>
@@ -73,7 +73,7 @@
     	<spawnThingOnRemoved>ATR_InsightAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_InsightAssistant</defName>
     	<label>Insight assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core interest handles. It is also capable of independently generating new theories, assisting with research.</description>
@@ -84,7 +84,7 @@
 		</costList>
   	</ThingDef>
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_InsightAssistant</defName>
 		<label>Install insight assistant</label>
 		<description>Installs an insight assistant into the sub-core assistant slot of a unit.</description>
@@ -109,7 +109,7 @@
 
   	<!-- General Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_GeneralAssistant</defName>
 		<label>General assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is deliberately unspecialized, instead possessing dedicated processes to a wide range of tasks. This results in vast speed increases in the rate at which any task where quality is a concern can be completed - it allows the core intelligence to focus on quality while it handles less intricate details.</description>
@@ -124,7 +124,7 @@
     	<spawnThingOnRemoved>ATR_GeneralAssistant</spawnThingOnRemoved>
   	</HediffDef>
 
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_GeneralAssistant</defName>
 		<label>General assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is deliberately unspecialized, instead possessing dedicated processes to a wide range of tasks. This results in vast speed increases in the rate at which any task where quality is a concern can be completed - it allows the core intelligence to focus on quality while it handles less intricate details.</description>
@@ -135,7 +135,7 @@
 		</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_GeneralAssistant</defName>
 		<label>Install general assistant</label>
 		<description>Installs a general assistant into the sub-core assistant slot of a unit.</description>
@@ -160,7 +160,7 @@
 
   	<!-- Combat Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.</description>
@@ -182,7 +182,7 @@
     	<spawnThingOnRemoved>ATR_CombatAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.</description>
@@ -193,7 +193,7 @@
 		</costList>
   	</ThingDef>
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_CombatAssistant</defName>
 		<label>Install combat assistant</label>
 		<description>Installs a combat assistant into the sub-core assistant slot of a unit.</description>
@@ -218,7 +218,7 @@
 
   	<!-- Mechanic Assistant -->
   
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MechanicAssistant</defName>
 		<label>Mechanic assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines. \n\nCuriously, this part lends itself well to tending injuries of an organic nature as well.</description>
@@ -235,7 +235,7 @@
     	<spawnThingOnRemoved>ATR_MechanicAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_MechanicAssistant</defName>
     	<label>Mechanic assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines. \n\nCuriously, this part lends itself well to tending injuries of an organic nature as well.</description>
@@ -246,7 +246,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_MechanicAssistant</defName>
 		<label>Install mechanic assistant</label>
 		<description>Installs a mechanic assistant into the sub-core assistant slot of a unit.</description>
@@ -271,7 +271,7 @@
 
   	<!-- Construction Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_ConstructionAssistant</defName>
     	<label>Construction assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for architecture and construction tasks. An in-depth archive of the exact characteristics of building materials, tools, practices, and styles ensures the unit has every piece of information it could possibly need when approaching a task. Automatic sub-routines for measuring, examining, and analyzing physical objects and spaces also permit quicker calculations on placement, force, and safety.</description>
@@ -288,7 +288,7 @@
     	<spawnThingOnRemoved>ATR_ConstructionAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_ConstructionAssistant</defName>
     	<label>Construction assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for architecture and construction tasks. An in-depth archive of the exact characteristics of building materials, tools, practices, and styles ensures the unit has every piece of information it could possibly need when approaching a task. Automatic sub-routines for measuring, examining, and analyzing physical objects and spaces also permit quicker calculations on placement, force, and safety.</description>
@@ -299,7 +299,7 @@
     	</costList>
   	</ThingDef>
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_ConstructionAssistant</defName>
 		<label>Install blueprint banks</label>
 		<description>Installs a construction assistant into the sub-core assistant slot of a unit.</description>
@@ -324,7 +324,7 @@
 
   	<!-- Excavation Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_ExcavationAssistant</defName>
 		<label>Excavation assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for optimizing mineral identification, categorization, and extraction. A comprehension archive of mineral and material properties permits much more precise and efficient mining operations, leading to significant yield increases and operational capacity. Autonomous sub-routines also optimize the processes of excavator technology like deep drills.</description>
@@ -340,7 +340,7 @@
     	<spawnThingOnRemoved>ATR_ExcavationAssistant</spawnThingOnRemoved>
   	</HediffDef>
   
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_ExcavationAssistant</defName>
     	<label>Excavation assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for optimizing mineral identification, categorization, and extraction. A comprehension archive of mineral and material properties permits much more precise and efficient mining operations, leading to significant yield increases and operational capacity. Autonomous sub-routines also optimize the processes of excavator technology like deep drills.</description>
@@ -351,7 +351,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_ExcavationAssistant</defName>
 		<label>Install excavator assistant</label>
 		<description>Installs an excavator assistant into the sub-core assistant slot of a unit.</description>
@@ -376,7 +376,7 @@
 
   	<!-- Victual Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_VictualAssistant</defName>
 		<label>Victual assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the processing and preparation of organic substances - namely, food and drugs. An array of autonomous sub-routines combined with a vast library of references on the nature, composition, and behavior of organic matter tailored with a focus on their proper usage ensures top-of-the-line quality substances with minimal waste.</description>
@@ -393,7 +393,7 @@
    		<spawnThingOnRemoved>ATR_VictualAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_VictualAssistant</defName>
 		<label>Victual assistant chip</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for the processing and preparation of organic substances - namely, food. An array of autonomous sub-routines combined with a vast library of references on the nature, composition, and behavior of organic matter tailored with a focus on their proper usage ensures top-of-the-line quality substances with minimal waste.</description>
@@ -404,7 +404,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_VictualAssistant</defName>
 		<label>Install victual assistant</label>
 		<description>Installs a victual assistant into the sub-core assistant slot of a unit.</description>
@@ -429,7 +429,7 @@
 
   	<!-- Cultivation Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_CultivationAssistant</defName>
 		<label>Cultivation assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for the cultivation of flora and fauna. With a massive archive of data with painstakingly accurate insights on every plant and animal known to exist on the planet, autonomous sub-routines allow the unit to identify key behaviors, stressors, and to some base extent allow "communication" with target species via specific behaviors and pheromones. \n\nCuriously, this occasionally makes the mechanical unit itself display almost parental affection for lesser intelligences.</description>
@@ -450,7 +450,7 @@
     	<spawnThingOnRemoved>ATR_CultivationAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_CultivationAssistant</defName>
 		<label>Cultivation assistant</label>
 	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for the cultivation of flora and fauna. With a massive archive of data with painstakingly accurate insights on every plant and animal known to exist on the planet, autonomous sub-routines allow the unit to identify key behaviors, stressors, and to some base extent allow "communication" with target species via specific behaviors and pheromones. \n\nCuriously, this occasionally makes the mechanical unit itself display almost parental affection for lesser intelligences.</description>
@@ -461,7 +461,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_CultivationAssistant</defName>
 		<label>Install cultivation assistant</label>
 		<description>Installs a cultivation assistant into the sub-core assistant slot of a unit.</description>
@@ -486,7 +486,7 @@
 
   	<!-- Medicine Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MedicineAssistant</defName>
 		<label>Medicine assistant</label>
 		<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for treatment of organic injuries and for organic surgeries. An array of sub-routines and procedures assists in identifying, categorizing, and analyzing organic issues and provides remedial suggestions. \n\nThis device also lends itself well to performing simple repairs on mechanical units.</description>
@@ -503,7 +503,7 @@
     	<spawnThingOnRemoved>ATR_MedicineAssistant</spawnThingOnRemoved>
   	</HediffDef>
  
-   	<ThingDef ParentName="BodyPartCoreAssistantBase">
+   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_MedicineAssistant</defName>
 		<label>Medicine assistant chip</label>
 		<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for treatment of organic injuries and for organic surgeries. An array of sub-routines and procedures assists in identifying, categorizing, and analyzing organic issues and provides remedial suggestions. \n\nThis device also lends itself well to performing simple repairs on mechanical units.</description>
@@ -514,7 +514,7 @@
 		</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_MedicineAssistant</defName>
 		<label>Install medicine assistant</label>
 		<description>Installs a medicine assistant into the sub-core assistant slot of a unit.</description>
@@ -539,7 +539,7 @@
 
   	<!-- Social Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_SocialAssistant</defName>
     	<label>Social assistant</label>
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for social situations. From reading individual body movements and expressions to referencing all known histories of targets, every day negotiations are optimized and analyzed for advancing the core intelligence's ability to handle social situations. Maximizing popularity, infamy, prestige - all are considered viable objectives.</description>
@@ -559,7 +559,7 @@
     	<spawnThingOnRemoved>ATR_SocialAssistant</spawnThingOnRemoved>
   	</HediffDef>
   
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_SocialAssistant</defName>
 		<label>Social assistant</label>
 		<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for social situations. From reading individual body movements and expressions to referencing all known histories of targets, every day negotiations are optimized and analyzed for advancing the core intelligence's ability to handle social situations. Maximizing popularity, infamy, prestige - all are considered viable objectives.</description>
@@ -570,7 +570,7 @@
 		</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_SocialAssistant</defName>
 		<label>Install social assistant</label>
 		<description>Installs a social assistant into the sub-core assistant slot of a unit.</description>
@@ -595,7 +595,7 @@
 
   	<!-- Mental Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MentalAssistant</defName>
 		<label>Mental assistant</label>
 		<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for imbuing the core intelligence with a much stronger mental resilience. A suite of individualized sub-routines remove many stressors and unpleasant issues from the intelligence's cognition, while training a greater capacity for overcoming difficult situations. Many mechanical units come to view this device as a trusted friend, and find their own immortal-like existence much more bearable with it safely within them.</description>
@@ -611,7 +611,7 @@
     	<spawnThingOnRemoved>ATR_MentalAssistant</spawnThingOnRemoved>
   	</HediffDef>
   
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_MentalAssistant</defName>
 		<label>Mental assistant</label>
 		<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for imbuing the core intelligence with a much stronger mental resilience. A suite of individualized sub-routines remove many stressors and unpleasant issues from the intelligence's cognition, while training a greater capacity for overcoming difficult situations. Many mechanical units come to view this device as a trusted friend, and find their own immortal-like existence much more bearable with it safely within them.</description>
@@ -622,7 +622,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_MentalAssistant</defName>
 		<label>Install mental assistant</label>
 		<description>Installs a mental assistant into the sub-core assistant slot of a unit.</description>
@@ -647,7 +647,7 @@
 
   	<!-- Pyschic Assistant -->
  
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
 		<label>Pyschic assistant</label>
 		<description>Installed assistant that assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</description>
@@ -662,7 +662,7 @@
     	<spawnThingOnRemoved>ATR_PsychicAssistant</spawnThingOnRemoved>
   	</HediffDef>
   
-  	<ThingDef ParentName="BodyPartCoreAssistantBase">
+  	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
 		<label>Mental assistant</label>
 		<description>This organic component assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</description>
@@ -673,7 +673,7 @@
     	</costList>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_PsychicAssistant</defName>
 		<label>Install pyschic assistant</label>
 		<description>Installs a psychic assistant into the sub-core assistant slot of a unit.</description>
@@ -698,7 +698,7 @@
 
   	<!-- Sapient Assistant -->
   
-  	<HediffDef ParentName="AddedBodyPartCoreAssistantBase">
+  	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_SapientAssistant</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Evolving AI</label>
@@ -809,7 +809,7 @@
     	</techHediffsTags>
   	</ThingDef> 
 
-  	<RecipeDef ParentName="SurgeryCoreAssistant">
+  	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_SapientAssistant</defName>
 		<label>Install sapient assistant</label>
 		<description>Installs a sapient assistant into the sub-core assistant slot of a unit. This archotech device seems to possess intelligence only when implanted in a mechanical unit. Where does it go when uninstalled?</description>
