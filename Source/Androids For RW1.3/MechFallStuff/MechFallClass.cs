@@ -56,6 +56,17 @@ namespace ATReforged
             Pawn pawn = PawnGenerator.GeneratePawn(request);
             FilthMaker.TryMakeFilth(Position, Map, RimWorld.ThingDefOf.Filth_RubbleBuilding, 30);
 
+            // There is a very small chance the unit will be permanently hostile and try to murder everything it can find.
+            if (Rand.Chance(0.05f))
+            {
+                pawn.SetFactionDirect(Faction.OfAncientsHostile);
+                pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
+
+                Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_RemainingCharge, pawn, null);
+                hediff.Severity = 1f;
+                pawn.health.AddHediff(hediff, null, null);
+            }
+
             GenSpawn.Spawn(pawn, Position, Map);
         }
     }
