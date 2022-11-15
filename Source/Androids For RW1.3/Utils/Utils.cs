@@ -346,8 +346,7 @@ namespace ATReforged
                     if (!isTethered)
                     {
                         // Ensure the target has a story.
-                        if (dest.story == null)
-                            dest.story = new Pawn_StoryTracker(dest);
+                        dest.story = new Pawn_StoryTracker(dest);
 
                         // Duplicate source backstory into destination.
                         if (source.story.adulthood != null)
@@ -385,6 +384,7 @@ namespace ATReforged
                 {
                     if (!isTethered)
                     {
+                        dest.ideo = new Pawn_IdeoTracker(dest);
                         dest.ideo.SetIdeo(source.Ideo);
                         dest.ideo.OffsetCertainty(source.ideo.Certainty - dest.ideo.Certainty);
                         dest.ideo.joinTick = source.ideo.joinTick;
@@ -395,16 +395,10 @@ namespace ATReforged
                     }
                 }
 
-                // If Royalty dlc is active, duplicate pawn titles into destination. Warning: This can only tether, the Empire does not recognize SkyMind or consciousness transfer.
-                if (ModsConfig.RoyaltyActive && isTethered)
-                {
-                    dest.royalty = source.royalty;
-                }
-
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {
-                    Pawn_SkillTracker newSkills = new Pawn_SkillTracker(source);
+                    Pawn_SkillTracker newSkills = new Pawn_SkillTracker(dest);
                     foreach (SkillDef skillDef in DefDatabase<SkillDef>.AllDefsListForReading)
                     {
                         SkillRecord newSkill = newSkills.GetSkill(skillDef);
@@ -551,9 +545,9 @@ namespace ATReforged
                 // Permute all major mind-related components to each other via a temp copy.
                 PawnGenerationRequest request = new PawnGenerationRequest(RimWorld.PawnKindDefOf.Colonist, null, PawnGenerationContext.PlayerStarter, forceGenerateNewPawn: true);
                 Pawn tempCopy = PawnGenerator.GeneratePawn(request);
-                Duplicate(firstPawn, tempCopy, false);
-                Duplicate(secondPawn, firstPawn, false);
-                Duplicate(tempCopy, secondPawn, false);
+                Duplicate(firstPawn, tempCopy, false, false);
+                Duplicate(secondPawn, firstPawn, false, false);
+                Duplicate(tempCopy, secondPawn, false, false);
 
                 
                 // Swap all log entries between the two pawns as appropriate.
@@ -744,7 +738,7 @@ namespace ATReforged
             // If we are "killing" the pawn, that means the body is now a blank. Properly duplicate those features.
             if (kill)
             {
-                Duplicate(GetBlank(), copy, false, false);
+                Duplicate(GetBlank(), copy, isTethered: false);
 
                 // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
                 if (IsConsideredMechanicalAndroid(copy))
@@ -754,6 +748,7 @@ namespace ATReforged
                     {
                         copy.health.RemoveHediff(autoCore);
                     }
+                    copy.health.AddHediff(HediffDefOf.ATR_IsolatedCore, copy.health.hediffSet.GetBrain());
                 }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.

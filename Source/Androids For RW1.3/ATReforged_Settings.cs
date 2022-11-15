@@ -126,7 +126,7 @@ namespace ATReforged
         bool cachedExpandSecond = true;
         bool cachedExpandThird = true;
 
-        void resetCachedExpand() 
+        void ResetCachedExpand() 
         { 
             cachedExpandFirst = true; 
             cachedExpandSecond = true; 
@@ -151,7 +151,7 @@ namespace ATReforged
             Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
-            prelist.EnumSelector("ATR_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null, onChange: resetCachedExpand);
+            prelist.EnumSelector("ATR_SettingsTabTitle".Translate(), ref activeTab, "ATR_SettingsTabOption_", valueTooltipPostfix: null, onChange: ResetCachedExpand);
             prelist.GapLine();
 
             prelist.End();
@@ -165,8 +165,10 @@ namespace ATReforged
                 Widgets.BeginScrollView(restOfRect, ref scrollPosition, viewRect);
             }
 
-            Listing_Standard listingStandard = new Listing_Standard();
-            listingStandard.maxOneColumn = true;
+            Listing_Standard listingStandard = new Listing_Standard
+            {
+                maxOneColumn = true
+            };
             listingStandard.Begin(viewRect);
 
             switch (activeTab)
