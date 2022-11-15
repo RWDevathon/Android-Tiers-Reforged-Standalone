@@ -110,6 +110,8 @@ namespace ATReforged
                 isConsideredMechanical = new HashSet<ThingDef>();
             if (hasSpecialStatus == null)
                 hasSpecialStatus = new HashSet<ThingDef>();
+            if (canUseBattery == null)
+                canUseBattery = new HashSet<ThingDef>();
             if (ActivePreset == SettingsPreset.None)
             {
                 settingsEverOpened = false;

@@ -83,6 +83,11 @@ namespace ATReforged
                         androidDisassembly.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
                         androidSmashing.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
                         butcherFlesh.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, false);
+                        IngestibleProperties ingestibleProps = thingDef.race?.corpseDef?.ingestible;
+                        if (ingestibleProps != null)
+                        {
+                            ingestibleProps.preferability = FoodPreferability.NeverForNutrition;
+                        }
                         thingDef.race.needsRest = false;
                     }
 

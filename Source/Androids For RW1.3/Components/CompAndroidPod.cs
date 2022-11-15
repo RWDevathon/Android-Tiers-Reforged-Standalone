@@ -34,6 +34,11 @@ namespace ATReforged
 
         public void HandlePowerExchange(int tickerType)
         {
+            if (!parent.TryGetComp<CompPowerTrader>().PowerOn)
+            {
+                return;
+            }
+
             float powerConsumed = parent.TryGetComp<CompPowerTrader>().Props.basePowerConsumption;
             float powerExchanged = ATReforged_Settings.batteryPercentagePerRareTick * Props.chargingRate;
 
@@ -52,7 +57,7 @@ namespace ATReforged
 
             foreach (Pawn pawn in ((Building_Bed)parent).CurOccupants)
             {
-                if (Utils.CanUseBattery(pawn))
+                if (Utils.CanUseBattery(pawn) && pawn.needs.food != null)
                 {
                     pawn.needs.food.CurLevelPercentage += powerExchanged;
                     powerConsumed += Utils.GetPowerUsageByPawn(pawn);

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -6,6 +7,18 @@ namespace ATReforged
 {
     public class Recipe_ReprogramDrone : Recipe_SurgeryAndroids
     {
+        // This recipe is specifically targetting the brain of a mechanical unit, so we only need to check if the brain is available (a slight optimization over checking fixed body parts).
+        public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
+        {
+
+            BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
+            if (targetBodyPart != null && Utils.IsConsideredMechanicalDrone(pawn))
+            {
+                yield return targetBodyPart;
+            }
+            yield break;
+        }
+
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
             if (billDoer != null)

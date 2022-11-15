@@ -11,9 +11,9 @@ namespace ATReforged
         public class PostIngested_Patch
         {
             [HarmonyPrefix]
-            private static bool Prefix(CompFoodPoisonable __instance, Pawn ingester)
+            public static bool Listener(CompFoodPoisonable __instance, Pawn ingester)
             {
-                return Utils.IsConsideredMechanical(ingester);
+                return !Utils.IsConsideredMechanical(ingester);
             }
         }
     }
