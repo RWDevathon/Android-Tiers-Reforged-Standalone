@@ -42,7 +42,7 @@ namespace ATReforged
 
         private Pawn FindPawnTarget(Pawn pawn)
         {
-            return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachable, (Thing target) => target is Pawn targetPawn && targetPawn.def != pawn.def, 0f, 300f, default, float.MaxValue, true);
+            return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedReachable, (Thing target) => target is Pawn targetPawn && targetPawn.def != pawn.def, canBashDoors: true, canBashFences: true);
         }
     }
 }
