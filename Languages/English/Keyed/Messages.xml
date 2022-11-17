@@ -18,6 +18,10 @@
 
     <ATR_NoArrival>Nothing was sent to the mixed up coordinates before the faction reset their guidance system. They got lucky, this time.</ATR_NoArrival>
 
+    <!-- Android Interfaces -->
+    <ATR_NewbootAndroidCreated>Android created. Install an interface via surgery to bring the unit online.</ATR_NewbootAndroidCreated>
+    <ATR_InterfaceRemoved>An android's interface was removed. All personality and control data has been destroyed. Install a new interface to bring it online.</ATR_InterfaceRemoved>
+
 	<!-- Link -->
 	<ATR_SurrogateControlled>{0} connected to a new surrogate</ATR_SurrogateControlled>
 	<ATR_OperationInitiated>SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.</ATR_OperationInitiated>

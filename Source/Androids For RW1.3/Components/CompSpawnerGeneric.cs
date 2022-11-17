@@ -33,6 +33,7 @@ namespace ATReforged
                 if (target != null)
                     pawn.health.RemoveHediff(target);
                 pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
+                Messages.Message("ATR_NewbootAndroidCreated".Translate(), MessageTypeDefOf.PositiveEvent);
             }
 
             GenSpawn.Spawn(pawn, parent.Position, parent.Map);

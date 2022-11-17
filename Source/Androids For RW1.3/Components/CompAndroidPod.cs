@@ -39,7 +39,7 @@ namespace ATReforged
                             return;
                         }
                     }
-                    // If this is reached, then something went wrong. The pawn will not claim the bed and will not start charging. Send a log message.
+                    // If this is reached, then something went wrong. The pawn will not claim the bed and will not start charging. Send a log warning.
                     Log.Warning("[ATR] Pawn " + pawn.Name + " was unable to claim a charging bed that was available! The order failed, and the pawn will not go to charge now.");
                 });
             }
@@ -67,7 +67,7 @@ namespace ATReforged
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
-            if (bed.Medical || (!bed.AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != bed))
+            if (!bed.AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != bed)
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }

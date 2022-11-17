@@ -328,25 +328,41 @@ namespace ATReforged
                     if (!isTethered)
                     {
                         // Ensure the target has a story.
-                        dest.story = new Pawn_StoryTracker(dest);
+                        Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest);
+
+                        // Copy the destination's physical attributes. They are not duplicated from the source.
+                        dest.Rotation = source.Rotation;
+                        newStory.bodyType = source.story.bodyType;
+                        Color hair = new Color
+                        {
+                            a = source.story.hairColor.a,
+                            r = source.story.hairColor.r,
+                            g = source.story.hairColor.g,
+                            b = source.story.hairColor.b
+                        };
+                        newStory.hairColor = hair;
+                        newStory.crownType = source.story.crownType;
+                        newStory.hairDef = source.story.hairDef;
 
                         // Duplicate source backstory into destination.
                         if (source.story.adulthood != null)
                         {
-                            BackstoryDatabase.TryGetWithIdentifier(source.story.adulthood.identifier, out dest.story.adulthood);
+                            BackstoryDatabase.TryGetWithIdentifier(newStory.adulthood.identifier, out dest.story.adulthood);
                         }
                         else
-                            dest.story.adulthood = null;
+                            newStory.adulthood = null;
 
-                        BackstoryDatabase.TryGetWithIdentifier(source.story.childhood.identifier, out dest.story.childhood);
+                        BackstoryDatabase.TryGetWithIdentifier(newStory.childhood.identifier, out dest.story.childhood);
 
                         // Duplicate source traits into destination.
-                        dest.story.traits = new TraitSet(dest);
+                        newStory.traits = new TraitSet(dest);
                         foreach (Trait trait in source.story.traits.allTraits)
                         {
                             Trait newTrait = new Trait(trait.def, trait.Degree, false);
-                            dest.story.traits.allTraits.Add(newTrait);
+                            newStory.traits.allTraits.Add(newTrait);
                         }
+
+                        dest.story = newStory;
                     }
                     // Tether destination and source traits and backstory together.
                     else

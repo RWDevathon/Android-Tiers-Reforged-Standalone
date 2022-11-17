@@ -95,6 +95,9 @@ namespace ATReforged
                         pawn.guest?.SetGuestStatus(Faction.OfPlayer);
                         if (pawn.playerSettings != null)
                             pawn.playerSettings.medCare = MedicalCareCategory.Best;
+
+                        // Send a message about the removed intelligence
+                        Messages.Message("ATR_InterfaceRemoved".Translate(), MessageTypeDefOf.NegativeEvent);
                     }
 
                     // Clean up and apply the appropriate hediff. Apply Isolated core before no host is applied to ensure the pawn doesn't become capable of moving for a tick.
