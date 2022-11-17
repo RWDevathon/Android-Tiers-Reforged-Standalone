@@ -15,9 +15,6 @@
 		<tickerType>Rare</tickerType>
 		<designationCategory>AndroidTiersDesignation</designationCategory>
 		<comps>
-            <li>
-                <compClass>ATReforged.CompAndroidPod</compClass>
-            </li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ATR_MechanicCabinet</li>

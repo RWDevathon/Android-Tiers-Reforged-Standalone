@@ -1,10 +1,12 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
+using Verse;
+using Verse.AI;
 
 namespace ATReforged
 {
     public class Building_ChargingBed : Building_Bed
     {
-        /*
         // If forcing a pawn to recharge is illegal for the given pawn, return why that is the case. If they can charge, return null.
         private FloatMenuOption CheckIfNotAllowed(Pawn pawn)
         { 
@@ -39,7 +41,11 @@ namespace ATReforged
         // Display the menu option for forcing to use the charging bed if it is legal.
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
         { 
-            base.GetFloatMenuOptions(myPawn);
+            foreach (FloatMenuOption option in base.GetFloatMenuOptions(myPawn))
+            {
+                yield return option;
+            }
+
             FloatMenuOption failureReason = CheckIfNotAllowed(myPawn);
             if (failureReason != null)
             {
@@ -68,6 +74,5 @@ namespace ATReforged
                 });
             }
         }
-        */
     }
 }

@@ -102,9 +102,6 @@
             <Comfort>0.5</Comfort>
         </statBases>
 	    <comps>
-            <li>
-                <compClass>ATReforged.CompAndroidPod</compClass>
-            </li>
             <li Class="CompProperties_Flickable"/>
         </comps>
         <tickerType>Rare</tickerType>
