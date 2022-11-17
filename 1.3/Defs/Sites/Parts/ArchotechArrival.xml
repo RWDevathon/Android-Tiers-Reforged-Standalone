@@ -3,8 +3,9 @@
 
     <SitePartDef>
         <defName>ATR_ArchotechArrival</defName>
-        <label>Enigmatic Crashsite</label>
+        <label>enigmatic crashsite</label>
         <description>The location that seems to be beckoning across time and space. What could possibly land and make this happen?</description>
+        <workerClass>ATReforged.SitePartWorker_ArchotechArrival</workerClass>
         <siteTexture>UI/Icons/Sites/StrangeCrash</siteTexture>
         <expandingIconTexture>UI/Icons/Sites/StrangeCrash</expandingIconTexture>
         <forceExitAndRemoveMapCountdownDurationDays>16</forceExitAndRemoveMapCountdownDurationDays>

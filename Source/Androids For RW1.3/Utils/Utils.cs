@@ -327,32 +327,31 @@ namespace ATReforged
                     // If not tethered, simply copy data over.
                     if (!isTethered)
                     {
-                        // Ensure the target has a story.
-                        Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest);
-
                         // Copy the destination's physical attributes. They are not duplicated from the source.
-                        dest.Rotation = source.Rotation;
-                        newStory.bodyType = source.story.bodyType;
+                        Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest)
+                        {
+                            bodyType = dest.story.bodyType
+                        };
                         Color hair = new Color
                         {
-                            a = source.story.hairColor.a,
-                            r = source.story.hairColor.r,
-                            g = source.story.hairColor.g,
-                            b = source.story.hairColor.b
+                            a = dest.story.hairColor.a,
+                            r = dest.story.hairColor.r,
+                            g = dest.story.hairColor.g,
+                            b = dest.story.hairColor.b
                         };
                         newStory.hairColor = hair;
-                        newStory.crownType = source.story.crownType;
-                        newStory.hairDef = source.story.hairDef;
+                        newStory.crownType = dest.story.crownType;
+                        newStory.hairDef = dest.story.hairDef;
 
                         // Duplicate source backstory into destination.
                         if (source.story.adulthood != null)
                         {
-                            BackstoryDatabase.TryGetWithIdentifier(newStory.adulthood.identifier, out dest.story.adulthood);
+                            BackstoryDatabase.TryGetWithIdentifier(source.story.adulthood.identifier, out dest.story.adulthood);
                         }
                         else
                             newStory.adulthood = null;
 
-                        BackstoryDatabase.TryGetWithIdentifier(newStory.childhood.identifier, out dest.story.childhood);
+                        BackstoryDatabase.TryGetWithIdentifier(source.story.childhood.identifier, out dest.story.childhood);
 
                         // Duplicate source traits into destination.
                         newStory.traits = new TraitSet(dest);

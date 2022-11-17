@@ -184,6 +184,7 @@
     <Compile Include="Alerts\Alert_NeedMechanic.cs" />
     <Compile Include="Alerts\Alert_ServerHeatCritical.cs" />
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
+    <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />

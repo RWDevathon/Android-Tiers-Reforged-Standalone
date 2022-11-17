@@ -23,7 +23,6 @@ namespace ATReforged
                 {
                     pawn = component.pawn.Take(component.pawn[0]);
                 }
-
             }
             Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
             hediff.Severity = 1f;
