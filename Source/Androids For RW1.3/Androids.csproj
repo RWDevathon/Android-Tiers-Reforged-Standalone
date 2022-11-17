@@ -250,7 +250,6 @@
     <Compile Include="Components\CompProperties_GenericSpawner.cs" />
     <Compile Include="Components\CompSpawnerGeneric.cs" />
     <Compile Include="DefsOf\FactionDefOf.cs" />
-    <Compile Include="DefsOf\SiteCoreDefOf.cs" />
     <Compile Include="DefsOf\JobDefOf.cs" />
     <Compile Include="DefsOf\StatDefOf.cs" />
     <Compile Include="DefsOf\ThingDefOf.cs" />
@@ -316,7 +315,6 @@
     <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
     <Compile Include="Toils\Toils_LayDownPower.cs" />
-    <Compile Include="Utils\DownedT5Utility.cs" />
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="Utils\FilteredGetters.cs" />
     <Compile Include="Components\ATR_GameComponent.cs" />
