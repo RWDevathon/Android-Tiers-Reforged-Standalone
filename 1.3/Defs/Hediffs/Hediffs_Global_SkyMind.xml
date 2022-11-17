@@ -13,8 +13,6 @@
         <description>This unit is currently undergoing a SkyMind operation. In order to maintain the connection and integrity, the consciousness is not currently in control of this body.</description>
         <labelNoun>SkyMind operation</labelNoun>
         <defaultLabelColor>(0.8, 0.0, 0.45)</defaultLabelColor>
-        <comps>
-        </comps>
         <stages>
             <li>
                 <capMods>

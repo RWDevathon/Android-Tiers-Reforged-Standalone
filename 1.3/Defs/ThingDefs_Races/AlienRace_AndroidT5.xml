@@ -174,7 +174,7 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>10000</lifeExpectancy>
-			<leatherDef>Tainted_Skin</leatherDef>
+			<leatherDef>Leather_Patch</leatherDef>
 			<nameGenerator>ATR_Archotechs</nameGenerator>
 			<body>ATR_AndroidBody</body>
             <hasGenders>false</hasGenders>

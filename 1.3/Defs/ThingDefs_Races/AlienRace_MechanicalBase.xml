@@ -151,7 +151,7 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>100</lifeExpectancy>
-			<leatherDef>Tainted_Skin</leatherDef>
+			<leatherDef>Leather_Patch</leatherDef>
 			<nameGenerator>ATR_AndroidMaleNames</nameGenerator>
             <nameGeneratorFemale>ATR_AndroidFemaleNames</nameGeneratorFemale>
 			<needsRest>false</needsRest>

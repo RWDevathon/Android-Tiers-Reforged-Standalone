@@ -29,7 +29,7 @@
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 			<!-- <needsRest>false</needsRest> All mechanical pawns don't need rest via C# Run-time patching -->
 			<useMeatFrom>Alpaca</useMeatFrom>
-			<leatherDef>Tainted_Skin</leatherDef>
+			<leatherDef>Leather_Patch</leatherDef>
             <lifeExpectancy>40</lifeExpectancy>
 			<hediffGiverSets>
 				<li>ATR_MechanicalStandard</li>

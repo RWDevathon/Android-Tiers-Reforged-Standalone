@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<!-- ====== Abomination ===== -->
 	<ThingDef ParentName="BasePawn">
 		<defName>ATR_FractalAbomination</defName>
@@ -96,7 +97,7 @@
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
 			<wildness>1</wildness>
 			<hasGenders>false</hasGenders>
-			<leatherDef>Tainted_Skin</leatherDef>
+			<leatherDef>Leather_Patch</leatherDef>
 			<foodType>None</foodType>
 			<lifeExpectancy>1000</lifeExpectancy>
 			<baseBodySize>2.4</baseBodySize>
@@ -158,31 +159,4 @@
 		<initialResistanceRange>13~21</initialResistanceRange>
 	</PawnKindDef>
 
-	<ThingDef ParentName="LeatherBase">
-		<defName>Tainted_Skin</defName>
-		<label>Tainted Skin</label>
-		<description>The twisted and contorted skin of a fractal mutant. Quite rare and sought after, mainly for research.</description>
-		<graphicData>
-			<color>(90,70,70)</color>
-		</graphicData>
-		<statBases>
-			<MarketValue>8</MarketValue>
-			<Beauty>-0.8</Beauty>
-			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-			<ArmorRating_Heat>1</ArmorRating_Heat>
-			<Insulation_Cold>1</Insulation_Cold>
-			<Insulation_Heat>1</Insulation_Heat>
-			<WorkToMake>2</WorkToMake>
-			<BedRestEffectiveness>0.6</BedRestEffectiveness>
-			<ImmunityGainSpeedFactor>0.5</ImmunityGainSpeedFactor>
-		</statBases>
-		<stuffProps>
-			<color>(90,70,70)</color>
-			<commonality>0</commonality>
-			<statFactors>
-				<MaxHitPoints>1.0</MaxHitPoints>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
 </Defs>

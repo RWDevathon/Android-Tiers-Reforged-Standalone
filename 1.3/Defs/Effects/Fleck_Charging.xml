@@ -4,9 +4,9 @@
     <!-- Battery Charging Fleck -->
 
     <FleckDef Name="ATR_FleckBase" ParentName= "FleckBase_Thrown" Abstract="True">
-        <fadeInTime>0.4</fadeInTime>
-        <solidTime>0.6</solidTime>
-        <fadeOutTime>0.6</fadeOutTime>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.8</solidTime>
+        <fadeOutTime>0.8</fadeOutTime>
         <altitudeLayer>MoteOverhead</altitudeLayer>
     </FleckDef>
     

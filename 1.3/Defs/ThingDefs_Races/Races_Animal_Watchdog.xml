@@ -79,7 +79,7 @@
 			<baseBodySize>1.0</baseBodySize>
 			<baseHealthScale>1.2</baseHealthScale>
 			<nameOnTameChance>1</nameOnTameChance>
-			<leatherDef>Tainted_Skin</leatherDef>
+			<leatherDef>Leather_Patch</leatherDef>
 			<trainability>Advanced</trainability>
 			<nuzzleMtbHours>36</nuzzleMtbHours>
 			<lifeStageAges>
