@@ -15,7 +15,7 @@ namespace ATReforged
             {
                 return false;
             }
-
+            pawn.Map.pawnDestinationReservationManager.Reserve(pawn, job, job.targetA.Cell);
             return true;
         }
 

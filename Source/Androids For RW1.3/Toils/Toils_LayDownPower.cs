@@ -59,9 +59,6 @@ namespace ATReforged
                     ThoughtUtility.RemovePositiveBedroomThoughts(actor);
                 }
 
-                // Set the device the actor is charging from to draw more power from the grid, according to the pawn's body size.
-                actor.CurJob.GetTarget(chargingBuilding).Thing.TryGetComp<CompPowerTrader>().powerOutputInt -= Utils.GetPowerUsageByPawn(actor);
-
                 // Mark the pawn as sleeping for targetting information for other factions.
                 actor.GetComp<CompCanBeDormant>()?.ToSleep();
             };
@@ -200,9 +197,6 @@ namespace ATReforged
                 {
                     ApplyBedThoughts(actor);
                 }
-
-                // Set the device the actor is charging from to stop drawing additional power from the grid, according to the pawn's body size.
-                actor.CurJob.GetTarget(chargingBuilding).Thing.TryGetComp<CompPowerTrader>().powerOutputInt += Utils.GetPowerUsageByPawn(actor);
             });
             return layDown;
         }

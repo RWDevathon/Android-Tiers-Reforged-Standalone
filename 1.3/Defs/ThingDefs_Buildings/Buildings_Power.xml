@@ -18,7 +18,7 @@
             <li Class="CompProperties_Breakdownable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>100</basePowerConsumption>
+                <basePowerConsumption>1000</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Flickable"/>
@@ -156,7 +156,7 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>10</basePowerConsumption>
+                <basePowerConsumption>200</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
 			    <linkableFacilities>
@@ -183,7 +183,7 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>80</basePowerConsumption>
+                <basePowerConsumption>500</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
