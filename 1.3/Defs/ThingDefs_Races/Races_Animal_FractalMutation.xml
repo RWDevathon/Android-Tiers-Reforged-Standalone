@@ -108,9 +108,9 @@
 				<li>
 					<def>MechanoidFullyFormed</def>
 					<minAge>0</minAge>
-					<soundWounded>AtlasMutant_Pain</soundWounded>
-					<soundDeath>AtlasMutant_Death</soundDeath>
-					<soundCall>AtlasMutant_Call</soundCall>
+					<soundWounded>ATR_FractalPain</soundWounded>
+					<soundDeath>ATR_FractalDeath</soundDeath>
+					<soundCall>ATR_FractalCall</soundCall>
 				</li>
 			</lifeStageAges>
 			<soundCallIntervalRange>

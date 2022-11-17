@@ -2,14 +2,14 @@
 <Defs>
 
     <SoundDef>
-      <defName>40MMCannon</defName>
+      <defName>ATR_AutocannonBlast</defName>
       <context>MapOnly</context>
       <eventNames />
       <subSounds>
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>40MMShot</clipFolderPath>
+              <clipFolderPath>Mechs/40MMShot</clipFolderPath>
             </li>
           </grains>
           <volumeRange>
@@ -30,14 +30,14 @@
 
 
     <SoundDef>
-      <defName>SharpThrower</defName>
+      <defName>ATR_ShrapnelBlast</defName>
       <context>MapOnly</context>
       <eventNames />
       <subSounds>
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>SThrowShot</clipFolderPath>
+              <clipFolderPath>Mechs/SThrowShot</clipFolderPath>
             </li>
           </grains>
           <volumeRange>
@@ -47,33 +47,6 @@
           <pitchRange>
             <min>0.85</min>
             <max>0.90</max>
-          </pitchRange>
-          <distRange>
-            <min>0</min>
-            <max>80</max>
-          </distRange>
-        </li>
-      </subSounds>
-    </SoundDef>
-	
-    <SoundDef>
-      <defName>GaussRifle</defName>
-      <context>MapOnly</context>
-      <eventNames />
-      <subSounds>
-        <li>
-          <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>GaussRifle</clipFolderPath>
-            </li>
-          </grains>
-          <volumeRange>
-            <min>90</min>
-            <max>110</max>
-          </volumeRange>
-          <pitchRange>
-            <min>0.80</min>
-            <max>0.95</max>
           </pitchRange>
           <distRange>
             <min>0</min>

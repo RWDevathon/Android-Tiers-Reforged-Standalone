@@ -65,7 +65,7 @@
                 <range>30.9</range>
                 <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
                 <burstShotCount>3</burstShotCount>
-                <soundCast>40MMCannon</soundCast>
+                <soundCast>ATR_AutocannonBlast</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>18</muzzleFlashScale>
             </li>
@@ -142,7 +142,7 @@
                 <range>22.9</range>
                 <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
                 <burstShotCount>6</burstShotCount>
-                <soundCast>SharpThrower</soundCast>
+                <soundCast>ATR_ShrapnelBlast</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>12</muzzleFlashScale>
             </li>
@@ -201,7 +201,7 @@
                 <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
                 <warmupTime>1</warmupTime>
                 <range>44.9</range>
-                <soundCast>40MMCannon</soundCast>
+                <soundCast>ATR_AutocannonBlast</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>20</muzzleFlashScale>
             </li>

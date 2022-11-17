@@ -2,14 +2,14 @@
 <Defs>
 
     <SoundDef>
-      <defName>AtlasMutant_Call</defName>
+      <defName>ATR_FractalCall</defName>
       <context>MapOnly</context>
       <eventNames />
       <subSounds>
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mutant/AtlasMutant_Call</clipFolderPath>
+              <clipFolderPath>Fractal/ATR_FractalCall</clipFolderPath>
             </li>
           </grains>
           <volumeRange>
@@ -29,14 +29,14 @@
     </SoundDef>
 
     <SoundDef>
-      <defName>AtlasMutant_Death</defName>
+      <defName>ATR_FractalDeath</defName>
       <context>MapOnly</context>
       <eventNames />
       <subSounds>
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mutant/AtlasMutant_Death</clipFolderPath>
+              <clipFolderPath>Fractal/ATR_FractalDeath</clipFolderPath>
             </li>
           </grains>
           <volumeRange>
@@ -56,14 +56,14 @@
     </SoundDef>
 
     <SoundDef>
-      <defName>AtlasMutant_Pain</defName>
+      <defName>ATR_FractalPain</defName>
       <context>MapOnly</context>
       <eventNames />
       <subSounds>
         <li>
           <grains>
             <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mutant/AtlasMutant_Pain</clipFolderPath>
+              <clipFolderPath>Fractal/ATR_FractalPain</clipFolderPath>
             </li>
           </grains>
           <volumeRange>
