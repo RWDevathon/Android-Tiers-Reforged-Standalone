@@ -1,71 +1,81 @@
 ﻿using Verse;
 using RimWorld;
+using System.Collections.Generic;
+using Verse.AI;
 
 namespace ATReforged
 {
     public class CompAndroidPod : ThingComp
     {
-        public CompProperties_AndroidPod Props
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            get
+            base.PostSpawnSetup(respawningAfterLoad);
+            bed = (Building_Bed)parent;
+        }
+
+        // Display the menu option for forcing to use the charging bed if it is legal.
+        public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn pawn)
+        {
+            FloatMenuOption failureReason = CheckIfNotAllowed(pawn);
+            if (failureReason != null)
             {
-                return (CompProperties_AndroidPod)props;
+                yield return failureReason;
             }
-
-        }
-
-        // Check contained pawns for power consumption and charging every 1 Tick.
-        public override void CompTick()
-        {
-            HandlePowerExchange(0);
-        }
-
-        // Check contained pawns for power consumption and charging every 250 Ticks.
-        public override void CompTickRare()
-        { 
-            HandlePowerExchange(1);
-        }
-
-        // Check contained pawns for power consumption and charging every 2000 Ticks.
-        public override void CompTickLong()
-        {
-            HandlePowerExchange(2);
-        }
-
-        public void HandlePowerExchange(int tickerType)
-        {
-            if (!parent.TryGetComp<CompPowerTrader>().PowerOn)
+            // Yield an option to force the pawn to charge from the charging bed.
+            else
             {
-                return;
-            }
-
-            float powerConsumed = parent.TryGetComp<CompPowerTrader>().Props.basePowerConsumption;
-            float powerExchanged = ATReforged_Settings.batteryPercentagePerRareTick * Props.chargingRate;
-
-            // Depending on the tickerType used for the building, charge the appropriate amount for the unit. Baseline is 250 tick.
-            switch (tickerType)
-            {
-                case 0: // CompTick - 1 Tick
-                    powerExchanged /= 250;
-                    break;
-                case 1: // CompTickRare - 250 Tick [Default, no change, included for consistency]
-                    break;
-                case 2: // CompTickLong - 2000 Tick
-                    powerExchanged *= 8;
-                    break;
-            }
-
-            foreach (Pawn pawn in ((Building_Bed)parent).CurOccupants)
-            {
-                if (Utils.CanUseBattery(pawn) && pawn.needs.food != null)
-                {
-                    pawn.needs.food.CurLevelPercentage += powerExchanged;
-                    powerConsumed += Utils.GetPowerUsageByPawn(pawn);
-                    // Throwing a fleck every tick is not desirable. Only throw the mote if the comp is using rare or long.
-                    if (tickerType != 0)
-                        Utils.ThrowChargingFleck(pawn);
-                }
+                yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate () {
+                    IntVec3 chargingSpot;
+                    // Locate a legal place for the pawn to claim.
+                    for (int spotIndex = 0; spotIndex < bed.TotalSleepingSlots; spotIndex++)
+                    {
+                        chargingSpot = bed.GetSleepingSlotPos(spotIndex);
+                        // If this particular spot is unoccupied and no one has reserved it, then it is open and can be claimed.
+                        if (bed.GetCurOccupantAt(chargingSpot) == null && !pawn.Map.pawnDestinationReservationManager.IsReserved(chargingSpot))
+                        {
+                            pawn.ownership.ClaimBedIfNonMedical(bed);
+                            Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(bed));
+                            pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                            return;
+                        }
+                    }
+                    // If this is reached, then something went wrong. The pawn will not claim the bed and will not start charging. Send a log message.
+                    Log.Warning("[ATR] Pawn " + pawn.Name + " was unable to claim a charging bed that was available! The order failed, and the pawn will not go to charge now.");
+                });
             }
         }
+        
+        // If forcing a pawn to recharge is illegal for the given pawn, return why that is the case. If they can charge, return null.
+        private FloatMenuOption CheckIfNotAllowed(Pawn pawn)
+        {
+            // Check if the pawn can reach the building safely.
+            if (!pawn.CanReach(bed, PathEndMode.InteractionCell, Danger.Some))
+            {
+                return new FloatMenuOption("CannotUseNoPath".Translate(), null);
+            }
+
+            // Check if the building itself has power.
+            if ((bool)!bed.TryGetComp<CompPowerTrader>()?.PowerOn)
+            {
+                return new FloatMenuOption("CannotUseNoPower".Translate(), null);
+            }
+
+            // Check if the pawn is allowed to use its battery by settings.
+            if (!Utils.CanUseBattery(pawn) || pawn.needs.food == null)
+            {
+                return new FloatMenuOption("ATR_NeedToAllowCharge".Translate(), null);
+            }
+
+            // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
+            if (bed.Medical || (!bed.AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != bed))
+            {
+                return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
+            }
+
+            // All checks passed, this pawn may be forced to charge. Return null.
+            return null;
+        }
+
+        Building_Bed bed;
     }
 }

@@ -3,7 +3,7 @@ using RimWorld;
 
 namespace ATReforged
 {
-    public class CompAndroidSpawnerLightSwarm : ThingComp
+    public class CompSpawnerMicroscyther : ThingComp
     {
 
         public override void CompTick()

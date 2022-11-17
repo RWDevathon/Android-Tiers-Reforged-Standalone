@@ -28,7 +28,7 @@ namespace ATReforged
             base.PostDeSpawn(map);
             // If the tower has a power supply, then it will remove the tower capacity IF it was not offline to avoid double-reducing the tower capacity. This will not affect pawns so they can go caravanning.
             CompPowerTrader cpt = parent.TryGetComp<CompPowerTrader>();
-            if (cpt.PowerOn)
+            if (cpt != null && cpt.PowerOn)
             { 
                 Utils.gameComp.RemoveTower(this);
             }

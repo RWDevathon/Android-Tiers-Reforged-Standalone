@@ -45,10 +45,6 @@ namespace ATReforged
             Utils.SkyMindAttackVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_AttackedViaSkyMind");
             Utils.SkyMindTrollVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_TrolledViaSkyMind");
 
-            Utils.ATR_FullChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_FullChargeFleck");
-            Utils.ATR_HalfChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_HalfChargeFleck");
-            Utils.ATR_EmptyChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_EmptyChargeFleck");
-
             // Acquire Defs for mechanical butchering so that mechanical (non-mechanoid) units are placed in the correct categories.
             RecipeDef androidDisassembly = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseMechanoid");
             RecipeDef androidSmashing = DefDatabase<RecipeDef>.GetNamed("SmashCorpseMechanoid");

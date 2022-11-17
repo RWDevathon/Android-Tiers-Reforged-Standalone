@@ -91,11 +91,10 @@ namespace ATReforged
             return Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare);
         }
 
-
         /* === POWER UTILITIES === */
         public static bool CanUseBattery(Pawn pawn)
         {
-            return ATReforged_Settings.canUseBattery.Contains(pawn.def) || pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_OrganicCharger) != null;
+            return ATReforged_Settings.canUseBattery.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.TryGetComp<HediffComp_ChargeCapable>() != null);
         }
 
         public static bool CanUseBattery(ThingDef thingDef)
@@ -238,10 +237,6 @@ namespace ATReforged
         public static ThoughtDef SkyMindAttackVictimDef = new ThoughtDef();
         public static ThoughtDef SkyMindTrollVictimDef = new ThoughtDef();
 
-        public static FleckDef ATR_FullChargeFleck;
-        public static FleckDef ATR_HalfChargeFleck;
-        public static FleckDef ATR_EmptyChargeFleck;
-
         public static List<string> BlacklistedHediffsForAndroids = new List<string> { "Anxiety" };
 
         public static ATR_GameComponent gameComp;
@@ -261,7 +256,7 @@ namespace ATReforged
             {
                 Building_Bed pawnBed = pawn.ownership.OwnedBed;
                 CompPowerTrader compPowerTrader = pawnBed.TryGetComp<CompPowerTrader>();
-                if (pawnBed is Building_ChargingBed && compPowerTrader != null)
+                if (pawnBed is Building_Bed && compPowerTrader != null)
                 {
                     if (!pawnBed.Destroyed && compPowerTrader.PowerOn && pawn.CanReserveAndReach(pawn.ownership.OwnedBed, PathEndMode.OnCell, Danger.Deadly) && pawn.ownership.OwnedBed.Position.InAllowedArea(pawn))
                     {
@@ -271,18 +266,17 @@ namespace ATReforged
             }
 
             // Locate a viable charge-capable, online, accessible bed for the pawn. Store the closest such bed - achieved by looking from closest bed to furthest bed.
-            foreach(Building building in map.listerBuildings.allBuildingsColonist.Where(target => target is Building_ChargingBed || target.TryGetComp<CompAndroidPod>() != null).OrderBy(b => b.Position.DistanceToSquared(pawn.Position)))
+            foreach(Building_Bed bed in map.listerBuildings.allBuildingsColonist.Where(target => target is Building_Bed && target.TryGetComp<CompPowerTrader>() != null).OrderBy(b => b.Position.DistanceToSquared(pawn.Position)).Cast<Building_Bed>())
             {
-                Building_Bed bed = (Building_Bed)building;
-                CompPowerTrader cpt = building.TryGetComp<CompPowerTrader>();
-                if (!building.Destroyed && cpt != null)
+                CompPowerTrader cpt = bed.TryGetComp<CompPowerTrader>();
+                if (!bed.Destroyed && cpt != null)
                 {
                     if (!bed.Medical
                     && (pawn.IsPrisoner == bed.ForPrisoners)
                     && !(bed.GetCurOccupant(0) != null || (bed.OwnersForReading.Count() != 0 && !bed.OwnersForReading.Contains(pawn)))
                     && cpt.PowerOn
-                    && building.Position.InAllowedArea(pawn)
-                    && pawn.CanReserveAndReach(building, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, false))
+                    && bed.Position.InAllowedArea(pawn)
+                    && pawn.CanReserveAndReach(bed, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, false))
                     {
                         // Located the closest available charging bed. Claim it if possible, then return it.
                         pawn.ownership.ClaimBedIfNonMedical(bed);
@@ -292,16 +286,6 @@ namespace ATReforged
             }
 
             return null;
-        }
-
-        public static void ThrowChargingFleck(Pawn curPawn)
-        {
-            if (!curPawn.Map.moteCounter.Saturated)
-            {
-                if (curPawn.needs.food.CurLevelPercentage >= 0.80f) { ThrowFleck(ATR_FullChargeFleck, curPawn); }
-                else if (curPawn.needs.food.CurLevelPercentage >= 0.40f) { ThrowFleck(ATR_HalfChargeFleck, curPawn); }
-                else { ThrowFleck(ATR_EmptyChargeFleck, curPawn); }
-            }
         }
 
         // Generate a surrogate and properly apply to it a blank personality and the appropriate receiver implant.

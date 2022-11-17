@@ -19,6 +19,16 @@ namespace ATReforged
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
+
+            // No need to handle anything upon loading a save - capacity is saved in the GameComponent and we should avoid adding extra capacity.
+            if (respawningAfterLoad)
+                return;
+
+            // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
+            if (parent.TryGetComp<CompPowerTrader>() == null)
+            {
+                Utils.gameComp.AddCore(this);
+            }
         }
 
         public override void Notify_KilledPawn(Pawn pawn)
