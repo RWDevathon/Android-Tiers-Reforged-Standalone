@@ -104,7 +104,7 @@
         <label>MicroScyther</label>
         <comps>
             <li>
-                <compClass>ATReforged.CompAndroidSpawnerLightSwarm</compClass>
+                <compClass>ATReforged.CompSpawnerMicroscyther</compClass>
             </li>
         </comps>
     </ThingDef>

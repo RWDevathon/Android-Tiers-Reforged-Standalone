@@ -15,13 +15,13 @@
 		<tickerType>Rare</tickerType>
 		<designationCategory>AndroidTiersDesignation</designationCategory>
 		<comps>
+            <li>
+                <compClass>ATReforged.CompAndroidPod</compClass>
+            </li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ATR_MechanicCabinet</li>
 				</linkableFacilities>
-			</li>
-			<li Class="ATReforged.CompProperties_AndroidPod">
-				<chargingRate>1.2</chargingRate>
 			</li>
 			<li Class="CompProperties_Power">
         		<compClass>CompPowerTrader</compClass>

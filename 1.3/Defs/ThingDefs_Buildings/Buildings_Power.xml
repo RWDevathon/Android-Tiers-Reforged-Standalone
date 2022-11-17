@@ -12,13 +12,15 @@
         <tickerType>Rare</tickerType>
         <rotatable>false</rotatable>
         <comps>
+            <li>
+                <compClass>ATReforged.CompChargingStation</compClass>
+            </li>
             <li Class="CompProperties_Breakdownable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>250</basePowerConsumption>
+                <basePowerConsumption>100</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
-            <li Class="ATReforged.CompProperties_ChargingStation"/>
             <li Class="CompProperties_Flickable"/>
         </comps>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
@@ -53,6 +55,7 @@
             <MaxHitPoints>120</MaxHitPoints>
             <WorkToBuild>2200</WorkToBuild>
             <Flammability>0.5</Flammability>
+            <BedRestEffectiveness>1</BedRestEffectiveness> <!-- This is normally only used for beds, but we use it here to be able to use xml to define charging rate -->
             <Beauty>-1</Beauty>
         </statBases>
         <size>(1,1)</size>
@@ -99,6 +102,9 @@
             <Comfort>0.5</Comfort>
         </statBases>
 	    <comps>
+            <li>
+                <compClass>ATReforged.CompAndroidPod</compClass>
+            </li>
             <li Class="CompProperties_Flickable"/>
         </comps>
         <tickerType>Rare</tickerType>
@@ -153,15 +159,12 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>80</basePowerConsumption>
+                <basePowerConsumption>10</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
 			    <linkableFacilities>
 				    <li>ATR_MechanicCabinet</li>
 			    </linkableFacilities>
-		    </li>
-	        <li Class="ATReforged.CompProperties_AndroidPod">
-                <chargingRate>1</chargingRate>
 		    </li>
         </comps>
     </ThingDef>
@@ -183,16 +186,13 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>420</basePowerConsumption>
+                <basePowerConsumption>80</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
                     <li>ATR_MechanicCabinet</li>
                 </linkableFacilities>
 		    </li>
-            <li Class="ATReforged.CompProperties_AndroidPod">
-				<chargingRate>1</chargingRate>
-            </li>
         </comps>
     </ThingDef>
     

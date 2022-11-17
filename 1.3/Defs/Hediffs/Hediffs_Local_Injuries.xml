@@ -6,7 +6,9 @@
         <labelNoun>an agonizing wound warped by fractal energy</labelNoun>
         <description>A wound being continually warped and twisted by fractal energy.</description>
 		<comps>
-			<li Class="ATReforged.HediffCompProperties_Warper"/>
+            <li>
+                <compClass>ATReforged.HediffComp_Warper</compClass>
+            </li>
             <li Class="HediffCompProperties_TendDuration">
                 <labelTendedWell>stabilized</labelTendedWell>
                 <labelTendedWellInner>stabilized</labelTendedWellInner>
