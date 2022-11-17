@@ -15,7 +15,7 @@ namespace ATReforged
             {
                 // If the pawn has a receiver or transceiver already, then we can not install the other (or another one). The two implants are mutually exclusive.
                 Hediff blockingImplant = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver) ?? pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
-                if (blockingImplant != null)
+                if (blockingImplant == null)
                     yield return targetBodyPart;
             }
             yield break;

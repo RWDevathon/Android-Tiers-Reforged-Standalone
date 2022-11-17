@@ -163,10 +163,10 @@ namespace ATReforged
                     return;
                 }
 
-                // If the charging location is unusable for some reason, then abort the job.
+                // If the charging location is unusable for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
                 if (bed != null)
                 {
-                    if (bed.Destroyed || bed.IsBrokenDown() || !(bool)bed.TryGetComp<CompPowerTrader>()?.PowerOn)
+                    if (!actor.Downed && (bed.Destroyed || bed.IsBrokenDown() || !(bool)bed.TryGetComp<CompPowerTrader>()?.PowerOn))
                     {
                         actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                         return;
@@ -175,7 +175,7 @@ namespace ATReforged
                 }
                 else if (station != null)
                 {
-                    if (station.Destroyed || station.IsBrokenDown() || !(bool)station.TryGetComp<CompPowerTrader>()?.PowerOn)
+                    if (!actor.Downed && (station.Destroyed || station.IsBrokenDown() || !(bool)station.TryGetComp<CompPowerTrader>()?.PowerOn))
                     {
                         actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                         return;
