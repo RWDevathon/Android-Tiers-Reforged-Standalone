@@ -15,7 +15,7 @@ namespace ATReforged
             return pregenedValidPawns;
         }
 
-        // Searches through all ThingDefs to identify all Pawns, even from other mods.
+        // Searches through all ThingDefs to identify all Pawns valid for this mod's needs, even from other mods.
         public static IEnumerable<ThingDef> AllValidPawnDefs()
         { 
             return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn" && thingDef.race.intelligence != Intelligence.ToolUser && !thingDef.race.IsMechanoid);

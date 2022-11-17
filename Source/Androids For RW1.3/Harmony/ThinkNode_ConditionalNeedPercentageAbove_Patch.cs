@@ -1,9 +1,6 @@
-﻿using Verse;
-using HarmonyLib;
-using RimWorld;
-
-namespace ATReforged
+﻿namespace ATReforged
 {
+    /*
     internal class ThinkNode_ConditionalNeedPercentageAbove_Patch
     {
         // Automatically satisfy all non-existant needs. TODO: Ensure satisfying non-existant needs in this way is proper and necessary.
@@ -22,4 +19,5 @@ namespace ATReforged
             }
         }
     }
+    */
 }

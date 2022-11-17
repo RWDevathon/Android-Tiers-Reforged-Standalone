@@ -1,7 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
 using RimWorld;
-using Verse.AI;
 
 namespace ATReforged
 {

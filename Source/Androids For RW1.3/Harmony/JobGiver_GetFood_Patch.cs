@@ -3,8 +3,7 @@ using Verse;
 using Verse.AI;
 using HarmonyLib;
 using RimWorld;
-using RimWorld.Planet;
-using RimWorld.QuestGen;
+using System.Linq;
 
 namespace ATReforged
 {
@@ -35,10 +34,17 @@ namespace ATReforged
                         }
 
                         // Attempt to locate a viable charging station. Set the result to this if one is found.
-                        Building chargingStation = Utils.gameComp.GetClosestFreeChargingStation(pawn.Map, pawn);
-                        if (chargingStation != null)
+                        foreach (Building station in pawn.Map.listerBuildings.allBuildingsColonist.Where(building => building.TryGetComp<CompChargingStation>() != null).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
                         {
-                            __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(chargingStation.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(chargingStation));
+                            if (!station.Destroyed && !station.IsBrokenDown() && (bool)station.TryGetComp<CompPowerTrader>()?.PowerOn && station.Position.InAllowedArea(pawn))
+                            {
+                                IntVec3 freePlace = station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn);
+                                if (freePlace != IntVec3.Invalid && pawn.CanReach(freePlace, PathEndMode.OnCell, Danger.Deadly))
+                                {
+                                    __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
+                                    return;
+                                }
+                            }
                         }
                     }
                     // If there is no viable charging bed or charging station, then the pawn is free to grab whatever food it was originally planning to consume.

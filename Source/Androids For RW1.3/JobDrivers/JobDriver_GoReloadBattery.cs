@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-using Verse;
 using Verse.AI;
 using RimWorld;
 
@@ -8,36 +7,31 @@ namespace ATReforged
 {
     public class JobDriver_GoReloadBattery : JobDriver
     {
+        public Building_Bed Bed => job.GetTarget(TargetIndex.A).Thing as Building_Bed;
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            if (pawn.Downed) { return false; }
-            pawn.Map.pawnDestinationReservationManager.Reserve(pawn, job, job.targetA.Cell);
+            if (Bed != null && !pawn.Reserve(Bed, job, Bed.SleepingSlotsCount, 0, null, errorOnFailed))
+            {
+                return false;
+            }
+
             return true;
         }
 
         [DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            if (TargetThingA is Building_Bed pod)
+            if (TargetThingA is Building_Bed)
             {
+                yield return Toils_Bed.ClaimBedIfNonMedical(TargetIndex.A);
                 yield return Toils_Bed.GotoBed(TargetIndex.A);
-                yield return Toils_LayDownPower.LayDown(TargetIndex.A, true, false, false, true);
+                yield return Toils_LayDownPower.LayDown(TargetIndex.A, true);
             }
             else
             {
-                Toil gotoCell = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
-                Toil nothing = new Toil();
-                yield return gotoCell;
-                Toil setSkin = new Toil
-                {
-                    initAction = delegate { pawn.Rotation = Rot4.South; }
-                };
-                yield return setSkin;
-                yield return nothing;
-                yield return Toils_General.Wait(250);
-                yield return Toils_Jump.JumpIf(nothing, () => pawn.needs.food.CurLevelPercentage < 0.95f
-                    && !job.targetB.ThingDestroyed && !((Building)job.targetB).IsBrokenDown()
-                    && ((Building)job.targetB).TryGetComp<CompPowerTrader>().PowerOn);
+                yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
+                yield return Toils_LayDownPower.LayDown(TargetIndex.B, false);
             }
         }
     }

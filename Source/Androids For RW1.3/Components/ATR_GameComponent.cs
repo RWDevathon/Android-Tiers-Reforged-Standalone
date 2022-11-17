@@ -55,7 +55,6 @@ namespace ATReforged
             Scribe_Collections.Look(ref hackingServers, "ATR_hackingServers", LookMode.Reference);
             Scribe_Collections.Look(ref networkedDevices, "ATR_networkedDevices", LookMode.Reference);
             Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Deep);
-            Scribe_Collections.Look(ref chargingStations, "ATR_chargingStations", LookMode.Reference);
             Scribe_Collections.Look(ref heatSensitiveDevices, "ATR_heatSensitiveDevices", LookMode.Reference);
             Scribe_Collections.Look(ref virusedDevices, "ATR_virusedDevices", LookMode.Reference, LookMode.Value, ref thingKeyCopy, ref thingValueCopy);
             Scribe_Collections.Look(ref networkLinkedPawns, "ATR_networkLinkedPawns", LookMode.Reference, LookMode.Value, ref pawnKeyCopy, ref pawnValueCopy);
@@ -326,49 +325,6 @@ namespace ATReforged
             return SkyMindCloudCapacity;
         }
 
-        // Add a charging station to the set. No errors are thrown if it was in the set already.
-        public void PushChargingStation(Building build)
-        {
-            chargingStations.Add(build);
-        }
-
-        // Remove a charging station from the set. No errors are thrown if it wasn't in the set.
-        public void PopChargingStation(Building build)
-        {
-            chargingStations.Remove(build);
-        }
-
-        // Returns the closest available Charging Station on the pawn's map.
-        public Building GetClosestFreeChargingStation(Map map, Pawn pawn)
-        {
-            // There are no charging stations available for null maps, or for null pawns.
-            if (map == null || pawn == null)
-            {
-                return null;
-            }
-
-            // Acquire all charging stations on the pawn's map in order from closest to furthest, and iterate through them to find the first free one.
-            foreach (Building station in chargingStations.Where(building => building.Map == map).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)).ToList())
-            {
-                // If any of these are true, then the building is in an illegal state and shouldn't be in the list in the first place, so have it removed.
-                if (station.Destroyed || station.IsBrokenDown() || (bool)!station.TryGetComp<CompPowerTrader>()?.PowerOn)
-                {
-                    PopChargingStation(station);
-                    continue;
-                }
-                // If the station isn't in an allowed area, then it isn't illegal but can not be used here.
-                else if (!station.Position.InAllowedArea(pawn))
-                    continue;
-
-                // Try to get a free spot at this station. If there is a free spot and the pawn can reserve it, then return this station.
-                IntVec3 freePlace = station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn);
-                if (freePlace != IntVec3.Invalid && pawn.CanReach(freePlace, PathEndMode.OnCell, Danger.Deadly))
-                    return station;
-            }
-            
-            return null;
-        }
-
         // Add a heat sensitive device into the proper set. No errors are thrown if it was already in the set.
         public void PushHeatSensitiveDevice(Building build)
         {
@@ -579,8 +535,6 @@ namespace ATReforged
         
         private void AllocateIfNull()
         { 
-            if (chargingStations == null)
-                chargingStations = new HashSet<Building>();
             if (networkedDevices == null)
                 networkedDevices = new HashSet<Thing>();
             if (heatSensitiveDevices == null)
@@ -625,9 +579,6 @@ namespace ATReforged
         private HashSet<Building> skillServers = new HashSet<Building>();
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();
-
-        // Charging Stations are buildings that have CompReloadStation. We store them so that they can be checked for the closest one to a pawn that needs energy.
-        private HashSet<Building> chargingStations = new HashSet<Building>();
 
         // Dictionary mapping maps to heat sensitive devices in them for the purpose of checking their heat levels for alerts.
         private HashSet<Thing> heatSensitiveDevices = new HashSet<Thing>();

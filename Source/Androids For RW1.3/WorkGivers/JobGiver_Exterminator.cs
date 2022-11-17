@@ -1,8 +1,6 @@
 ﻿using RimWorld;
-using Unity.Jobs;
 using Verse;
 using Verse.AI;
-using static UnityEngine.GraphicsBuffer;
 
 namespace ATReforged
 {

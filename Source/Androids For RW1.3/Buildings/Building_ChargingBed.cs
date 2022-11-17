@@ -1,19 +1,10 @@
-﻿using System.Collections.Generic;
-using RimWorld;
-using Verse;
-using Verse.AI;
+﻿using RimWorld;
 
 namespace ATReforged
 {
     public class Building_ChargingBed : Building_Bed
     {
-
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-
-        }
-
+        /*
         // If forcing a pawn to recharge is illegal for the given pawn, return why that is the case. If they can charge, return null.
         private FloatMenuOption CheckIfNotAllowed(Pawn pawn)
         { 
@@ -77,6 +68,6 @@ namespace ATReforged
                 });
             }
         }
-
+        */
     }
 }
