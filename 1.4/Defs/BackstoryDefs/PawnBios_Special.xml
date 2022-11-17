@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.PawnBioDef>
+		<defName>AtlasTheCreator</defName>
+		<childhoodDef>ATR_MechanicalArchotechChildhood</childhoodDef>
+		<adulthoodDef>AndroidCreator</adulthoodDef>
+		<gender>Male</gender>
+		<name>
+			<first>Atlas</first>
+			<last>001</last>
+			<nick>Atlas</nick>
+		</name>
+		<factionLeader>false</factionLeader>
+		<validRaces>
+			<li>Tier5Android</li>
+		</validRaces>
+		<forcedHediffs>
+			<li>ATR_InsightAssistant</li>
+		</forcedHediffs>
+	</AlienRace.PawnBioDef>
+
+	<AlienRace.BackstoryDef>
+		<defName>AndroidCreator</defName>
+		<title>Enigmatic Creator</title>
+		<titleShort>Creator</titleShort>
+		<baseDescription>{PAWN_nameDef} is an ancient being from long ago. While still an archotech, this being seems strangely familiar to the many humans it meets. Perhaps, at one point, it helped shape humanity in some way?</baseDescription>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>AndroidSpecial</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Artistic</defName>
+				<amount>2</amount>
+			</li>
+			<li>
+				<defName>Crafting</defName>
+				<amount>6</amount>
+			</li>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>8</amount>
+			</li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
+</Defs>

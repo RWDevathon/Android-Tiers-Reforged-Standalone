@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffGiverSetDef>
+        <defName>ATR_MechanicalStandard</defName>
+	    <hediffGivers>
+			<li Class="HediffGiver_Bleeding">
+				<hediff>ATR_CoolantLoss</hediff>
+			</li>
+			<li Class="HediffGiver_Hypothermia">
+				<hediff>Hypothermia</hediff>
+			</li>
+			<li Class="HediffGiver_Heat">
+				<hediff>Heatstroke</hediff>
+			</li>
+            <!--Age-->
+
+            <li Class="HediffGiver_RandomAgeCurved">
+                <hediff>ATR_DecayedFrame</hediff>
+                <partsToAffect>
+                    <li>ATR_Framework</li>
+                </partsToAffect>
+                <ageFractionMtbDaysCurve>
+                    <points>
+                        <li>(0.3, 9999999)</li>
+                        <li>(0.8, 2400)</li>
+                        <li>(1.2, 180)</li>
+                    </points>
+                </ageFractionMtbDaysCurve>
+            </li>
+	 
+            <li Class="HediffGiver_RandomAgeCurved">
+                <hediff>ATR_DamagedCore</hediff>
+                <partsToAffect>
+                    <li>ATR_ArtificialBrain</li>
+                </partsToAffect>
+                <ageFractionMtbDaysCurve>
+                    <points>
+                        <li>(0.3, 9999999)</li>
+                        <li>(0.8, 2400)</li>
+                        <li>(1.2, 180)</li>
+                    </points>
+                </ageFractionMtbDaysCurve>
+            </li>
+
+            <li Class="HediffGiver_RandomAgeCurved">
+                <hediff>ATR_FailingCoolantValves</hediff>
+                <partsToAffect>
+                    <li>ATR_MechanicalThorax</li>
+                </partsToAffect>
+                <ageFractionMtbDaysCurve>
+                    <points>
+                        <li>(0.3, 9999999)</li>
+                        <li>(0.8, 2400)</li>
+                        <li>(1.2, 180)</li>
+                    </points>
+                </ageFractionMtbDaysCurve>
+            </li>
+
+	        <li Class="HediffGiver_RandomAgeCurved">
+                <hediff>ATR_RogueMechanites</hediff>
+                <partsToAffect>
+                    <li>ATR_MechaniteStorage</li>
+                </partsToAffect>
+                <allowOnLodgers>false</allowOnLodgers>
+                <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+                <allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+                <allowOnBeggars>false</allowOnBeggars>
+                <minPlayerPopulation>2</minPlayerPopulation>
+                <ageFractionMtbDaysCurve>
+                    <points>
+                        <li>(0.85, 9999999)</li>
+                        <li>(1.2, 2400)</li>
+                        <li>(3, 300)</li>
+                    </points>
+                </ageFractionMtbDaysCurve>
+            </li>
+	    </hediffGivers>
+	</HediffGiverSetDef>
+</Defs>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Base Cybertech -->
+  
+    <HediffDef Name="ATR_AddedBodyPartCybertechBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef Name="ATR_BodyPartCybertechBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
+        <techLevel>Archotech</techLevel>
+        <graphicData>
+            <texPath>Things/Items/BodyParts/OrganGold</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techHediffsTags>
+            <li>Archotech</li>
+        </techHediffsTags>
+        <statBases>
+            <WorkToMake>78000</WorkToMake>
+            <Mass>2</Mass>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>16</Crafting>
+                <Intellectual>16</Intellectual>
+            </skillRequirements>
+            <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
+            <recipeUsers>
+                <li>ATR_MechPartWorkbench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    </ThingDef>
+
+	<RecipeDef Name="ATR_SurgeryMechanicalCybertech" ParentName="ATR_MechanicalSurgeryInstallBodyPartBase" Abstract="True">
+		<jobString>Implanting Cybertech component.</jobString>
+        <skillRequirements>
+            <Crafting>16</Crafting>
+        </skillRequirements>
+		<workAmount>4000</workAmount>
+        <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+		<anesthetize>false</anesthetize>
+	</RecipeDef>
+
+    <!-- Cybertech Arm -->
+  
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechArm</defName>
+        <label>Cybertech arm</label>
+        <description>An archotech device in the form of a cybernetic arm. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>24</power>
+                        <cooldownTime>1.65</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ATR_CybertechArm</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechArm</defName>
+        <label>Cybertech arm</label>
+        <description>An archotech device in the form of a cybernetic arm. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechArm</defName>
+		<label>Install Cybertech arm</label>
+		<description>Installs an Cybertech arm.</description>
+		<jobString>Installing Cybertech arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechArm</addsHediff>
+	</RecipeDef>
+
+    <!-- Advanced Leg -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechLeg</defName>
+        <label>Cybertech leg</label>
+        <description>An archotech device in the form of a cybernetic leg. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <spawnThingOnRemoved>ATR_CybertechLeg</spawnThingOnRemoved>
+     </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechLeg</defName>
+        <label>Cybertech leg</label>
+        <description>An archotech device in the form of a cybernetic leg. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+	
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechLeg</defName>
+		<label>Install Cybertech leg</label>
+		<description>Installs an Cybertech leg.</description>
+		<jobString>Installing Cybertech leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalLeg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechLeg</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Visual Sensor -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechVisualSensor</defName>
+        <label>Cybertech visual sensor</label>
+        <description>An archotech device in the form of a cybernetic eye. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <spawnThingOnRemoved>ATR_CybertechVisualSensor</spawnThingOnRemoved>
+    </HediffDef>
+ 
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechVisualSensor</defName>
+        <label>Cybertech visual sensor</label>
+        <description>An archotech device in the form of a cybernetic eye. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+	
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechVisualSensor</defName>
+		<label>Install Cybertech visual sensor</label>
+		<description>Installs an Cybertech visual sensor.</description>
+		<jobString>Installing Cybertech visual sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechVisualSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechVisualSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalVisualSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechVisualSensor</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Audio Sensor -->
+  
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechAudioSensor</defName>
+        <label>Cybertech audio sensor</label>
+        <description>An archotech device in the form of a cybernetic ear. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <spawnThingOnRemoved>ATR_CybertechAudioSensor</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechAudioSensor</defName>
+        <label>Cybertech audio sensor</label>
+        <description>An archotech device in the form of a cybernetic ear. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+	
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+        <defName>Install_CybertechAudioSensor</defName>
+		<label>install Cybertech hearing sensor</label>
+		<description>Installs an Cybertech audio sensor.</description>
+		<jobString>Installing Cybertech audio sensor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechAudioSensor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechAudioSensor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalAudioSensor</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechAudioSensor</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Heatsink -->
+ 
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechHeatsink</defName>
+        <label>Cybertech heatsink</label>
+        <description>An archotech device in the form of a cybernetic heatsink. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <spawnThingOnRemoved>ATR_CybertechHeatsink</spawnThingOnRemoved>
+        <stages>
+			<li>
+		        <statOffsets>
+                    <ComfyTemperatureMax>30</ComfyTemperatureMax>
+		            <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+		        </statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+ 
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechHeatsink</defName>
+        <label>Cybertech heatsink</label>
+        <description>An archotech device in the form of a cybernetic heatsink. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+	
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechHeatsink</defName>
+		<label>Install Cybertech heatsink</label>
+		<description>Installs an Cybertech heatsink.</description>
+		<jobString>Installing Cybertech heatsink.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechHeatsink</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechHeatsink</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalHeatsink</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechHeatsink</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Coolant Pump -->
+ 
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechCoolantPump</defName>
+        <label>Cybertech coolant pump</label>
+        <description>An archotech device in the form of a cybernetic coolant pump. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <spawnThingOnRemoved>ATR_CybertechCoolantPump</spawnThingOnRemoved>
+        <stages>
+			<li>
+		        <statOffsets>
+                    <ComfyTemperatureMax>12</ComfyTemperatureMax>
+                    <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+		        </statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+  
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechCoolantPump</defName>
+        <label>Cybertech coolant pump</label>
+        <description>An archotech device in the form of a cybernetic heatsink. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechCoolantPump</defName>
+		<label>Install Cybertech coolant pump</label>
+		<description>Installs an Cybertech coolant pump.</description>
+		<jobString>Installing Cybertech coolant pump.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechCoolantPump</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechCoolantPump</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_InternalCorePump</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechCoolantPump</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Battery -->
+ 
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechBattery</defName>
+        <label>Cybertech battery pack</label>
+        <description>An archotech device in the form of a cybernetic battery. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <stages>
+			<li>
+                <hungerRateFactor>0.5</hungerRateFactor>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_CybertechBattery</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechBattery</defName>
+        <label>Cybertech battery pack</label>
+        <description>An archotech device in the form of a cybernetic battery. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechBattery</defName>
+		<label>Install Cybertech battery</label>
+		<description>Installs an Cybertech battery.</description>
+		<jobString>Installing Cybertech battery.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechBattery</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechBattery</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_InternalBattery</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechBattery</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Mechanite Storage -->
+ 
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechMechaniteStorage</defName>
+        <label>Cybertech mechanite storage</label>
+        <description>An archotech device in the form of a cybernetic foundry of nanites with storage for them. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+		<stages>
+			<li>
+                <statOffsets>
+                    <InjuryHealingFactor>5</InjuryHealingFactor>
+                </statOffsets>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_CybertechMechaniteStorage</spawnThingOnRemoved>
+    </HediffDef>
+ 
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechMechaniteStorage</defName>
+        <label>Cybertech mechanite storage</label>
+        <description>An archotech device in the form of a cybernetic foundry of nanites with storage for them. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechMechaniteStorage</defName>
+		<label>Install Cybertech mechanite storage</label>
+		<description>Installs Cybertech mechanite storage.</description>
+		<jobString>Installing Cybertech mechanite storage.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechMechaniteStorage</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechMechaniteStorage</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechaniteStorage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechMechaniteStorage</addsHediff>
+	</RecipeDef>
+
+    <!-- Cybertech Reactor -->
+ 
+    <HediffDef ParentName="ATR_AddedBodyPartCybertechBase">
+        <defName>ATR_CybertechReactor</defName>
+        <label>Cybertech bio-reactor</label>
+        <description>An archotech device in the form of a bio-reactor - but it seems to reduce power consumption as well. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+		<stages>
+			<li>
+			    <hungerRateFactor>0.5</hungerRateFactor>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_CybertechReactor</spawnThingOnRemoved>
+    </HediffDef>
+  
+    <ThingDef ParentName="ATR_BodyPartCybertechBase">
+        <defName>ATR_CybertechReactor</defName>
+        <label>Cybertech bio-reactor</label>
+        <description>An archotech device in the form of a bio-reactor - but it seems to reduce power consumption as well. Significantly more powerful than even glitterworld advanced parts, the esoteric knowledge and skill necessary to produce one is worth nothing without the explicit blessing of an archotech. Perhaps that is the secret to its strength?</description>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
+		<defName>Install_CybertechReactor</defName>
+		<label>install Cybertech bio-reactor</label>
+		<description>Installs an Cybertech bio-reactor.</description>
+		<jobString>Installing Cybertech bio-reactor.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_CybertechReactor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_CybertechReactor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_InternalGenerator</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CybertechReactor</addsHediff>
+	</RecipeDef>
+
+</Defs>

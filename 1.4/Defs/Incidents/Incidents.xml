@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>ATR_HackingIncident</defName>
+		<label>Hacking incident</label>
+		<category>ThreatSmall</category>
+    	<pointsScaleable>true</pointsScaleable>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>ATReforged.Incidents_Hacking</workerClass>
+		<letterDef>NegativeEvent</letterDef>
+        <earliestDay>30</earliestDay>
+		<baseChance>5</baseChance>
+	</IncidentDef>
+</Defs>

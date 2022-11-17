@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>ATR_BodyPartsMechanical</defName>
+        <label>Mechanical</label>
+        <parent>BodyParts</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>WeaponsMech</defName>
+        <label>Mech weapons</label>
+        <parent>Weapons</parent>
+    </ThingCategoryDef>
+
+</Defs>

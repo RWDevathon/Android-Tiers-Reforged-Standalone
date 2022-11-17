@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="ATR_MechanicalAnimalThingBase" ParentName="AnimalThingBase" Abstract="True">
+		<statBases>
+			<Flammability>0</Flammability>
+            <ToxicSensitivity>0</ToxicSensitivity>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+            <PainShockThreshold>1</PainShockThreshold>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>120</ComfyTemperatureMax>
+		</statBases>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<race>
+			<fleshType>AndroidTier</fleshType>
+			<bloodDef>CoolantAndroidTier</bloodDef>
+			<hasGenders>false</hasGenders>
+            <packAnimal>false</packAnimal>
+			<herdAnimal>false</herdAnimal>
+            <herdMigrationAllowed>false</herdMigrationAllowed>
+			<predator>false</predator>
+            <canBePredatorPrey>false</canBePredatorPrey>
+			<foodType>OmnivoreRoughAnimal</foodType>
+            <trainability>None</trainability>
+            <petness>0.6</petness>
+            <wildness>0</wildness>
+			<manhunterOnDamageChance>0</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<!-- <needsRest>false</needsRest> All mechanical pawns don't need rest via C# Run-time patching -->
+			<useMeatFrom>Alpaca</useMeatFrom>
+			<leatherDef>Leather_Patch</leatherDef>
+            <lifeExpectancy>40</lifeExpectancy>
+			<hediffGiverSets>
+				<li>ATR_MechanicalStandard</li>
+			</hediffGiverSets>
+            <ageGenerationCurve>
+                <points>
+                    <li>(0,0)</li>
+                    <li>(1,30)</li>
+                    <li>(2,10)</li>
+                    <li>(10,0)</li>
+                </points>
+            </ageGenerationCurve>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+		<recipes>
+			<li>RemoveBodyPartAndroid</li>
+			<li>ShutdownMechanical</li>
+            <li>RestoreBodyPartAndroid</li>
+            <li>InstallPlasteelPlating</li>
+            <li>InstallCompositePlating</li>
+            <li>InstallMobilityFrame</li>
+            <li>InstallMakeshiftReplacementArm</li>
+            <li>InstallMakeshiftReplacementLeg</li>
+            <li>Install_AdvancedLeg</li>
+            <li>Install_AdvancedVisualSensor</li>
+            <li>InstallMakeshiftReplacementArm</li>
+		</recipes>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef Name="ATR_MechanicalAnimalKindBase" ParentName="AnimalKindBase" Abstract="True">
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.8</ecoSystemWeight>
+	</PawnKindDef>
+
+</Defs>

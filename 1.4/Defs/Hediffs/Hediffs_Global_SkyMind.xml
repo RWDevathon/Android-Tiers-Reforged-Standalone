@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Name="ATR_SkyMindHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+        <initialSeverity>0.5</initialSeverity>
+        <isBad>false</isBad>
+    </HediffDef>
+  
+    <HediffDef ParentName="ATR_SkyMindHediffBase">
+        <defName>ATR_MindOperation</defName>
+        <label>SkyMind operation in progress</label>
+        <description>This unit is currently undergoing a SkyMind operation. In order to maintain the connection and integrity, the consciousness is not currently in control of this body.</description>
+        <labelNoun>SkyMind operation</labelNoun>
+        <defaultLabelColor>(0.8, 0.0, 0.45)</defaultLabelColor>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+  
+    <HediffDef ParentName="ATR_SkyMindHediffBase">
+        <defName>ATR_NoController</defName>
+        <label>No controller connected</label>
+        <description>This surrogate has no controller and is therefore incapable of autonomous action.</description>
+        <labelNoun>No host connected</labelNoun>
+        <defaultLabelColor>(0.0, 0.7, 0.15)</defaultLabelColor>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+                <hungerRateFactor>0.2</hungerRateFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

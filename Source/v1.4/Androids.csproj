@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4387268-4E97-4CB5-8E19-BB7A2344454B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATReforged</RootNamespace>
+    <AssemblyName>Android Tiers Reforged</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\1.0\Assemblies</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlienRace">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\839005762\1.3\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ISharpZipLib">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\ISharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Mono.Posix.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Mono.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alerts\Alert_FullHackingServers.cs" />
+    <Compile Include="Alerts\Alert_FullSkillServers.cs" />
+    <Compile Include="Alerts\Alert_NeedMechanic.cs" />
+    <Compile Include="Alerts\Alert_ServerHeatCritical.cs" />
+    <Compile Include="Alerts\Alert_LowSecurity.cs" />
+    <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
+    <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="Components\CompHeatSensitive.cs" />
+    <Compile Include="Components\CompProperties_SkyMindCore.cs" />
+    <Compile Include="Components\CompProperties_SkyMindTower.cs" />
+    <Compile Include="Components\CompProperties_HeatSensitive.cs" />
+    <Compile Include="Components\CompProperties_SuperComputer.cs" />
+    <Compile Include="Components\CompSuperComputer.cs" />
+    <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
+    <Compile Include="DefsOf\IncidentDefOf.cs" />
+    <Compile Include="DefsOf\MentalStateDefOf.cs" />
+    <Compile Include="DefsOf\QuestScriptDefOf.cs" />
+    <Compile Include="DefsOf\RulePackDefOf.cs" />
+    <Compile Include="DefsOf\WorkTypeDefOf.cs" />
+    <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
+    <Compile Include="Enum\ServerType.cs" />
+    <Compile Include="Extensions\ListingExtensions.cs" />
+    <Compile Include="Extensions\SettingsUIExtensions.cs" />
+    <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
+    <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
+    <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
+    <Compile Include="Harmony\JobGiver_PatientGoToBed_Patch.cs" />
+    <Compile Include="Harmony\Pawn_JobTracker_Patch.cs" />
+    <Compile Include="Harmony\JobGiver_GetRest_Patch.cs" />
+    <Compile Include="Harmony\SkillRecord_Patch.cs" />
+    <Compile Include="Harmony\RestUtility_Patch.cs" />
+    <Compile Include="Harmony\ThingSetMaker_RefugeePod_Patch.cs" />
+    <Compile Include="Harmony\SickPawnVisitUtility_Patch.cs" />
+    <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
+    <Compile Include="Harmony\KidnapUtility_Patch.cs" />
+    <Compile Include="Harmony\PawnBioAndNameGenerator_Patch.cs" />
+    <Compile Include="Harmony\InteractionUtility_Patch.cs" />
+    <Compile Include="Harmony\Pawn_Patch.cs" />
+    <Compile Include="Harmony\Precept_Ritual_Patch.cs" />
+    <Compile Include="Harmony\Pawn_StyleTracker_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_GroinOrChestUncovered_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_HasNoProsthetic_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_IdeoDiversity_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_IdeoDiversity_Uniform_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_GroinUncovered_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Precept_Social_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
+    <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
+    <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
+    <Compile Include="Hediffs\HediffComp_Warper.cs" />
+    <Compile Include="Hediffs\Hediff_AssistingMinds.cs" />
+    <Compile Include="Incidents\Incidents_Hacking.cs" />
+    <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
+    <Compile Include="JobDrivers\JobDriver_TendMechanical.cs" />
+    <Compile Include="MentalStates\MentalState_Exterminator.cs" />
+    <Compile Include="AndroidTiersReforged.cs" />
+    <Compile Include="Buildings\Building_ChargingStation.cs" />
+    <Compile Include="ChoiceLetter\ChoiceLetter_RansomDemand.cs" />
+    <Compile Include="Components\CompAutoDoor.cs" />
+    <Compile Include="Components\CompSkyMindTower.cs" />
+    <Compile Include="Components\CompComputer.cs" />
+    <Compile Include="Components\CompProperties_Computer.cs" />
+    <Compile Include="Components\CompChargingStation.cs" />
+    <Compile Include="Components\CompSkyMindCore.cs" />
+    <Compile Include="Components\CompSkyMind.cs" />
+    <Compile Include="Components\CompSkyMindLink.cs" />
+    <Compile Include="Components\CompProperties_GenericSpawner.cs" />
+    <Compile Include="Components\CompSpawnerGeneric.cs" />
+    <Compile Include="DefsOf\FactionDefOf.cs" />
+    <Compile Include="DefsOf\JobDefOf.cs" />
+    <Compile Include="DefsOf\StatDefOf.cs" />
+    <Compile Include="DefsOf\ThingDefOf.cs" />
+    <Compile Include="DefsOf\TraitDefOf.cs" />
+    <Compile Include="Designators\Designator_AndroidToControl.cs" />
+    <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
+    <Compile Include="Dialogs\Dialog_SkillUp.cs" />
+    <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
+    <Compile Include="Harmony\Apparel_Patch.cs" />
+    <Compile Include="Harmony\Building_TurretGun_Patch.cs" />
+    <Compile Include="Harmony\Caravan_Patch.cs" />
+    <Compile Include="Harmony\Corpse_Patch.cs" />
+    <Compile Include="Harmony\FlickUtility_Patch.cs" />
+    <Compile Include="Harmony\Thing_Patch.cs" />
+    <Compile Include="Harmony\HealthAIUtility_Patch.cs" />
+    <Compile Include="Harmony\HediffSet_Patch.cs" />
+    <Compile Include="Harmony\HediffUtility_Patch.cs" />
+    <Compile Include="Harmony\IncidentWorker_DiseaseAnimal_Patch.cs" />
+    <Compile Include="Harmony\IncidentWorker_DiseaseHuman_Patch.cs" />
+    <Compile Include="Harmony\JobGiver_GetFood_Patch.cs" />
+    <Compile Include="Harmony\MedicalCareUtility_Patch.cs" />
+    <Compile Include="Harmony\Need_Patch.cs" />
+    <Compile Include="Harmony\PawnDiedOrDownedThoughtsUtility_Patch.cs" />
+    <Compile Include="Harmony\PawnGenerator_Patch.cs" />
+    <Compile Include="Harmony\PawnGroupMakerUtility_Patch.cs" />
+    <Compile Include="Harmony\Pawn_HealthTracker_Patch.cs" />
+    <Compile Include="Harmony\Pawn_NeedsTracker_Patch.cs" />
+    <Compile Include="Harmony\StunHandler_Patch.cs" />
+    <Compile Include="Harmony\TendUtility_Patch.cs" />
+    <Compile Include="Harmony\ThinkNode_ConditionalNeedPercentageAbove_Patch.cs" />
+    <Compile Include="Harmony\ThoughtUtility_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_Dark_Patch.cs" />
+    <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
+    <Compile Include="Harmony\Toils_Tend_Patch.cs" />
+    <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
+    <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
+    <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
+    <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
+    <Compile Include="Hediffs\HediffGiver_Android.cs" />
+    <Compile Include="DefsOf\HediffDefOf.cs" />
+    <Compile Include="IngestionOutcomeDoer_GiveTwoHediffs.cs" />
+    <Compile Include="JobDrivers\JobDriver_GoReloadBattery.cs" />
+    <Compile Include="Recipes\Recipe_InstallOrganicSkyMindInterface.cs" />
+    <Compile Include="Recipes\Recipe_InstallAndroidInterface.cs" />
+    <Compile Include="Recipes\Recipe_RestoreMechanicalPart.cs" />
+    <Compile Include="Recipes\Recipe_RemoveMechanicalPart.cs" />
+    <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
+    <Compile Include="WorkGivers\JobGiver_Exterminator.cs" />
+    <Compile Include="MechFallStuff\MechFallClass.cs" />
+    <Compile Include="MechFallStuff\MechFallMote.cs" />
+    <Compile Include="Extensions\ModExtensions.cs" />
+    <Compile Include="Hediffs\Hediff_Fractal.cs" />
+    <Compile Include="PostInitTweaks.cs" />
+    <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
+    <Compile Include="Recipes\Recipe_InstallImplantAndroid.cs" />
+    <Compile Include="Recipes\Recipe_ReprogramDrone.cs" />
+    <Compile Include="Recipes\Recipe_SurgeryAndroids.cs" />
+    <Compile Include="DefsOf\PawnKindDef.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ATReforged_Settings.cs" />
+    <Compile Include="Components\CompSpawnerMicroscyther.cs" />
+    <Compile Include="Thoughts\Thought_AssistedByMinds.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
+    <Compile Include="Toils\Toils_LayDownPower.cs" />
+    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\FilteredGetters.cs" />
+    <Compile Include="Components\ATR_GameComponent.cs" />
+    <Compile Include="Utils\Tex.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="MechFallStuff\Verb_MechFall.cs" />
+    <Compile Include="WorkGivers\WorkGiver_MechTend.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TendSelfEmergencyMech.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TendSelfMech.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TendOtherUrgentMech.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TendOtherMech.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\About\About.xml">
+      <Link>About\About.xml</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

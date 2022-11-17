@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base Class for all mechanical surgeries that applies to appropriate mechanicals -->
+    <RecipeDef Name="ATR_surgeryMechanical" Abstract="True">
+        <effectWorking>Repair</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <workSkillLearnFactor>16</workSkillLearnFactor>
+        <anesthetize>false</anesthetize>
+		<recipeUsers>
+			<li>Tier1Android</li>
+			<li>Tier2Android</li>
+			<li>Tier3Android</li>
+			<li>Tier4Android</li>
+			<li>Tier5Android</li>
+		</recipeUsers>
+    </RecipeDef>
+ 
+	<!-- Surgery to shutdown any incapacitated mechanical unit -->
+    <RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ShutdownMechanical</defName>
+		<label>Shut down central core</label>
+		<description>Shuts down a mechanical unit by disconnecting core hardware. This does not permanently destroy the unit's memory.</description>
+		<workerClass>Recipe_ExecuteByCut</workerClass>
+		<jobString>Shutting down mechanical unit.</jobString>
+		<workAmount>800</workAmount>
+		<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+		<hideBodyPartNames>true</hideBodyPartNames>
+        <isViolation>true</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+	</RecipeDef>
+	
+	<!-- Surgery to remove body parts from mechanical units -->
+	<RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>RemoveBodyPartAndroid</defName>
+		<label>Remove part</label>
+		<description>Removes body part.</description>
+		<workerClass>ATReforged.Recipe_RemoveMechanicalPart</workerClass>
+		<jobString>Removing body part.</jobString>
+		<workAmount>2000</workAmount>
+    	<isViolation>true</isViolation>
+		<surgerySuccessChanceFactor>2.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PartPack</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>ATR_PartPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<!-- Surgery to restore body parts in mechanical units -->
+	<RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>RestoreBodyPartAndroid</defName>
+		<label>Restore part</label>
+		<description>Restores a particular body part.</description>
+		<workerClass>ATReforged.Recipe_RestoreMechanicalPart</workerClass>
+		<jobString>Restoring body part.</jobString>
+		<workAmount>1400</workAmount>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+	  	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PartPack</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+    	</ingredients>
+    	<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PartPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<!-- Surgery to reprogram drones to serve the colony -->
+    <RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ReprogramDrone</defName>
+		<label>reprogram drone</label>
+		<description>A straightforward but delicate operation, reprogramming drones to suit the colony's purposes is an excellent way to strengthen capabilities. However, the previous owners may have installed safeguards against such operations, so there is a high risk of death should it fail.</description>
+		<workerClass>ATReforged.Recipe_ReprogramDrone</workerClass>
+		<jobString>Reprogramming drone.</jobString>
+		<workAmount>5000</workAmount>
+		<skillRequirements>
+            <Crafting>8</Crafting>
+            <Intellectual>6</Intellectual>
+        </skillRequirements>
+		<surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+		<deathOnFailedSurgeryChance>0.4</deathOnFailedSurgeryChance>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+		<researchPrerequisite>ATR_T1Androids</researchPrerequisite>
+		<addsHediff>ATR_LongReboot</addsHediff>
+	</RecipeDef>
+    
+</Defs>

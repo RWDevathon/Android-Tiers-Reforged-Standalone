@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
+		<defName>DroneChemUnit</defName>
+		<label>Chemical processing unit</label>
+		<description>A highly specialized intricate autonomous drone capable of identifying, seeking, and absorbing biological matter for processing into a synthetic chemical precursor to neutroamine or chemfuel. The process's order of operations lent itself well to shaping a machine in the form of a small bird, with the product outputted as a self-stored egg-like capsule. The wings are purely cosmetic.</description>
+		<statBases>
+			<MoveSpeed>4.00</MoveSpeed>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>ChemCapsule</eggUnfertilizedDef>
+				<eggFertilizedDef>ChemCapsule</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>2</eggLayIntervalDays>
+				<eggCountRange>5</eggCountRange>
+				<eggLayFemaleOnly>false</eggLayFemaleOnly>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.65</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<race>
+			<body>ATR_MechBipedal</body>
+			<baseBodySize>0.3</baseBodySize>
+			<baseHealthScale>0.5</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.0</minAge>
+					<soundWounded>Pawn_Chick_Call</soundWounded>
+					<soundDeath>Pawn_Chick_Call</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
+		<defName>DroneChemUnit</defName>
+		<label>Chemical processing unit</label>
+		<race>DroneChemUnit</race>
+        <combatPower>10</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.3</ecoSystemWeight>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneChemUnit/DroneChemUnit</texPath>
+					<drawSize>0.9</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawns/Animals/DroneChemUnit/DroneChemUnit</texPath>
+					<drawSize>0.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+</Defs>

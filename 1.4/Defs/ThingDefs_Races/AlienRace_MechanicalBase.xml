@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Mechanical Android Base-->
+	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMechanicalPawn" ParentName="BasePawn" Abstract="True">
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<statBases>
+			<Mass>70</Mass>
+            <Flammability>0</Flammability>
+			<PainShockThreshold>1</PainShockThreshold>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<ImmunityGainSpeed>10</ImmunityGainSpeed>
+			<LeatherAmount>0</LeatherAmount>
+			<MeatAmount>0</MeatAmount>
+		</statBases>
+        <alienRace>
+			<raceRestriction>
+				<traitList>
+					<li>FeelingsTowardOrganics</li>
+				</traitList>
+			</raceRestriction>
+			<generalSettings>
+				<allowHumanBios>false</allowHumanBios>
+				<maxDamageForSocialfight>20</maxDamageForSocialfight>
+				<immuneToAge>false</immuneToAge>
+				<alienPartGenerator>
+					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
+					<alienbodytypes>
+						<li>Male</li>
+					</alienbodytypes>
+					<aliencrowntypes>
+						<li>Average_Normal</li>
+					</aliencrowntypes>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li> <!--Khaki-->
+										<weight>10</weight>
+										<min>RGBA(74, 90, 41, 255)</min>
+										<max>RGBA(74, 90, 41, 255)</max>
+									</li>
+									<li> <!--Green-->
+										<weight>4</weight>
+										<min>RGBA(112, 158, 97, 255)</min>
+										<max>RGBA(112, 158, 97, 255)</max>
+									</li>
+									<li> <!--White-->
+										<weight>50</weight>
+										<min>RGBA(255, 255, 255, 255)</min>
+										<max>RGBA(255, 255, 255, 255)</max>
+									</li>
+									<li> <!--Black-->
+										<weight>10</weight>
+										<min>RGBA(45, 45, 45, 255)</min>
+										<max>RGBA(45, 45, 45, 255)</max>
+									</li>
+									<li> <!--Gray-->
+										<weight>30</weight>
+										<min>RGBA(127, 127, 127, 255)</min>
+										<max>RGBA(127, 127, 127, 255)</max>
+									</li>
+									<li> <!--Blue-->
+										<weight>10</weight>
+										<min>RGBA(67, 87, 159, 255)</min>
+										<max>RGBA(67, 87, 159, 255)</max>
+									</li>
+									<li> <!--Crimson-->
+										<weight>4</weight>
+										<min>RGBA(134, 23, 22, 255)</min>
+										<max>RGBA(134, 23, 22, 255)</max>
+									</li>
+									<li> <!--Orange-->
+										<weight>10</weight>
+										<min>RGBA(227, 131, 12, 255)</min>
+										<max>RGBA(227, 131, 12, 255)</max>
+									</li>
+									<li> <!--Yellow-->
+										<weight>4</weight>
+										<min>RGBA(207, 227, 12, 255)</min>
+										<max>RGBA(207, 227, 12, 255)</max>
+									</li>
+									<li> <!--Purple-->
+										<weight>4</weight>
+										<min>RGBA(148, 108, 169, 255)</min>
+										<max>RGBA(148, 108, 169, 255)</max>
+									</li>
+									<li> <!--Pink-->
+										<weight>4</weight>
+										<min>RGBA(179, 130, 155, 255)</min>
+										<max>RGBA(179, 130, 155, 255)</max>
+									</li>
+									<li> <!--Cyan-->
+										<weight>4</weight>
+										<min>RGBA(38, 164, 163, 255)</min>
+										<max>RGBA(38, 164, 163, 255)</max>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<min>RGBA(255, 255, 255, 255)</min>
+										<max>RGBA(255, 255, 255, 255)</max>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+            </generalSettings>
+			<styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+				<li>
+                    <key>BeardDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+				<li>
+                    <key>TattooDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+			<relationSettings>
+				<relationChanceModifierChild>0</relationChanceModifierChild>
+				<relationChanceModifierExLover>0</relationChanceModifierExLover>
+				<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+				<relationChanceModifierFiance>0</relationChanceModifierFiance>
+				<relationChanceModifierLover>0</relationChanceModifierLover>
+				<relationChanceModifierParent>0</relationChanceModifierParent>
+				<relationChanceModifierSibling>0</relationChanceModifierSibling>
+				<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+			</relationSettings>
+            <compatibility>
+                <isFlesh>false</isFlesh>
+            </compatibility>
+        </alienRace>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>100</lifeExpectancy>
+			<leatherDef>Leather_Patch</leatherDef>
+			<nameGenerator>ATR_AndroidMaleNames</nameGenerator>
+            <nameGeneratorFemale>ATR_AndroidFemaleNames</nameGeneratorFemale>
+			<needsRest>false</needsRest>
+			<foodType>OmnivoreHuman</foodType>
+			<fleshType>AndroidTier</fleshType>
+			<bloodDef>CoolantAndroidTier</bloodDef>
+			<useMeatFrom>Alpaca</useMeatFrom>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,0)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+					<li>(0,0)</li>
+					<li>(1,400)</li>
+					<li>(20,300)</li>
+					<li>(50,200)</li>
+					<li>(75,50)</li>
+					<li>(100,15)</li>
+					<li>(200,12)</li>
+					<li>(400,8)</li>
+					<li>(480,3)</li>
+					<li>(500,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>ATR_MechanicalStandard</li>
+			</hediffGiverSets>
+		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+			</li>
+		</modExtensions>
+    </AlienRace.ThingDef_AlienRace>
+
+    <!-- M-Series Base -->
+	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMSeriesPawn" ParentName="ATR_BaseMechanicalPawn" Abstract="True">
+        <alienRace>
+			<raceRestriction>
+				<apparelList>
+				</apparelList>
+				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+				<weaponList>
+					<li>ATR_RotaryAutocannon</li>
+					<li>ATR_RotaryShrapnelcannon</li>
+					<li>ATR_HeadhunterCannon</li>
+					<li>ATR_MechPoleaxe</li>
+				</weaponList>
+				<onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
+			</raceRestriction>
+			<thoughtSettings>
+				<cannotReceiveThoughtsAtAll>true</cannotReceiveThoughtsAtAll>
+			</thoughtSettings>
+        </alienRace>
+		<statBases>
+			<MarketValue>18000</MarketValue>
+			<MoveSpeed>5.20</MoveSpeed>
+			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
+			<ComfyTemperatureMax>200</ComfyTemperatureMax>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<GlobalLearningFactor>0.4</GlobalLearningFactor>
+			<Mass>450</Mass>
+		</statBases>
+        <race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<lifeExpectancy>1000</lifeExpectancy>
+			<body>ATR_AndroidBody</body>
+			<baseHungerRate>4</baseHungerRate>
+			<baseHealthScale>7.5</baseHealthScale>
+			<baseBodySize>5</baseBodySize>
+			<ageGenerationCurve>
+				<points>
+                    <li>(0,0)</li>
+					<li>(100,0)</li>
+					<li>(200,2)</li>
+					<li>(800,4)</li>
+					<li>(2000,10)</li>
+					<li>(8000,15)</li>
+					<li>(10000,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+        </race>
+        <recipes>
+            <li>ShutdownMechanical</li>
+            <li>RemoveBodyPartAndroid</li>
+            <li>RestoreBodyPartAndroid</li>
+        </recipes>
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>

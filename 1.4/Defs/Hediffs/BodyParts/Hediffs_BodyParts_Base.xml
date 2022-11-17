@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- ABSTRACT BASE CLASSES -->
+
+    <!-- Base Added Part Hediff -->
+    <HediffDef Name="ATR_MechAddedBodyPartBase" ParentName="ImplantHediffBase" Abstract="True">
+        <hediffClass>Hediff_AddedPart</hediffClass>
+        <addedPartProps>
+            <solid>true</solid>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <!-- Base Body Part Thing -->
+    <ThingDef Name="ATR_MechBodyPartBase" ParentName="BodyPartBase" Abstract="True">
+        <thingCategories>
+            <li>ATR_BodyPartsMechanical</li>
+        </thingCategories>
+    </ThingDef>
+
+    <!-- Base Implant Installation Surgery Recipe -->
+    <RecipeDef Name="ATR_MechanicalSurgeryInstallImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
+        <workerClass>ATReforged.Recipe_InstallImplantAndroid</workerClass>
+        <workAmount>2500</workAmount>
+        <skillRequirements>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <ingredients>
+			<li>
+				<filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+				</filter>
+				<count>2</count>
+			</li>
+        </ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+    <!-- Base Added Part Installation Surgery Recipe -->
+    <RecipeDef Name="ATR_MechanicalSurgeryInstallBodyPartBase" ParentName="ATR_MechanicalSurgeryInstallImplantBase" Abstract="True">
+        <workerClass>ATReforged.Recipe_InstallAndroidPart</workerClass>
+    </RecipeDef>
+	
+    <!-- Base Remove Implant Surgery Recipe-->
+	<RecipeDef Name="ATR_MechanicalSurgeryRemoveImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
+		<workerClass>Recipe_RemoveImplant</workerClass>
+		<workAmount>2000</workAmount>
+        <isViolation>true</isViolation>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+  
+</Defs>

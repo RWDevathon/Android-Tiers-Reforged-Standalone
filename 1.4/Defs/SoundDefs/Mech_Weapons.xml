@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SoundDef>
+      <defName>ATR_AutocannonBlast</defName>
+      <context>MapOnly</context>
+      <eventNames />
+      <subSounds>
+        <li>
+          <grains>
+            <li Class="AudioGrain_Folder">
+              <clipFolderPath>Mechs/40MMShot</clipFolderPath>
+            </li>
+          </grains>
+          <volumeRange>
+            <min>70</min>
+            <max>90</max>
+          </volumeRange>
+          <pitchRange>
+            <min>0.85</min>
+            <max>1.05</max>
+          </pitchRange>
+          <distRange>
+            <min>0</min>
+            <max>80</max>
+          </distRange>
+        </li>
+      </subSounds>
+    </SoundDef>
+
+
+    <SoundDef>
+      <defName>ATR_ShrapnelBlast</defName>
+      <context>MapOnly</context>
+      <eventNames />
+      <subSounds>
+        <li>
+          <grains>
+            <li Class="AudioGrain_Folder">
+              <clipFolderPath>Mechs/SThrowShot</clipFolderPath>
+            </li>
+          </grains>
+          <volumeRange>
+            <min>40</min>
+            <max>70</max>
+          </volumeRange>
+          <pitchRange>
+            <min>0.85</min>
+            <max>0.90</max>
+          </pitchRange>
+          <distRange>
+            <min>0</min>
+            <max>80</max>
+          </distRange>
+        </li>
+      </subSounds>
+    </SoundDef>
+
+</Defs>
