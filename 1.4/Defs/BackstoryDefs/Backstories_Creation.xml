@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationExperiment</defName>
 		<title>Research model</title>
 		<titleShort>Experiment</titleShort>
@@ -13,16 +13,16 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationMassProduced</defName>
 		<title>Mass produced</title>
 		<titleShort>Unit</titleShort>
@@ -35,18 +35,18 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationCitizen</defName>
 		<title>Mechanical citizen</title>
 		<titleShort>Citizen</titleShort>
@@ -59,12 +59,12 @@
 		<skillGains>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationUrbworld</defName>
 		<title>Urbworld model</title>
 		<titleShort>Android</titleShort>
@@ -77,21 +77,21 @@
 		<skillGains>
 			<li>
 				<key>Melee</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Mining</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationPrisoner</defName>
 		<title>Mechanical Convict</title>
 		<titleShort>Convict</titleShort>
@@ -104,24 +104,24 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationCustomModelOne</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
@@ -134,20 +134,20 @@
 		<skillGains>
 			<li>
 				<key>Artistic</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationCustomModelTwo</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
@@ -160,21 +160,21 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Animals</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationSoldierWar</defName>
 		<title>Wartime model</title>
 		<titleShort>Soldier</titleShort>
@@ -187,24 +187,24 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationPrivateCreation</defName>
 		<title>Private creation</title>
 		<titleShort>Android</titleShort>
@@ -217,17 +217,17 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationExport</defName>
 		<title>Exported</title>
 		<titleShort>Export</titleShort>
@@ -240,20 +240,20 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Animals</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationObserved</defName>
 		<title>Observed</title>
 		<titleShort>Subject</titleShort>
@@ -266,12 +266,12 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationAncient</defName>
 		<title>Ancient creation</title>
 		<titleShort>Subject</titleShort>
@@ -284,16 +284,16 @@
 		<skillGains>
 			<li>
 				<key>Artistic</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationPlaything</defName>
 		<title>Toy model</title>
 		<titleShort>Subject</titleShort>
@@ -306,12 +306,12 @@
 		<skillGains>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationCompanion</defName>
 		<title>Companion creation</title>
 		<titleShort>Companion</titleShort>
@@ -324,20 +324,20 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationBattlecreation</defName>
 		<title>Battle droid</title>
 		<titleShort>Companion</titleShort>
@@ -350,16 +350,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationRimworldCreation</defName>
 		<title>Rimworld creation</title>
 		<titleShort>Android</titleShort>
@@ -372,26 +372,26 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Construction</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!-- ATR_Violent Androids Only-->
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
@@ -404,7 +404,7 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -419,9 +419,9 @@
 			<li>Animals</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>	
+	</AlienRace.AlienBackstoryDef>	
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationEscapee</defName>
 		<title>Escapee</title>
 		<titleShort>Escapee</titleShort>
@@ -434,12 +434,12 @@
 		<skillGains>
 			<li>
 				<key>Melee</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationUprisingCadet</defName>
 		<title>Uprising cadet</title>
 		<titleShort>Cadet</titleShort>
@@ -452,16 +452,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationMaliciousAI</defName>
 		<title>Malicious AI</title>
 		<titleShort>Malicious</titleShort>
@@ -474,11 +474,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -491,9 +491,9 @@
 				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationPirate</defName>
 		<title>Pirate creation</title>
 		<titleShort>Pirate</titleShort>
@@ -506,12 +506,12 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 </Defs>

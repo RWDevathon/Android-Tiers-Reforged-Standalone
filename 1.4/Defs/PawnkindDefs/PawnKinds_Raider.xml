@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- <PawnKindDef>
+    <PawnKindDef Name="ATR_AndroidRaiderBase" Abstract="True">
+        <defaultFactionType>MechanicalMarauders</defaultFactionType>
+        <itemQuality>Normal</itemQuality>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ATR_ViolentAndroids</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </PawnKindDef>
+
+ <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT1</defName>
     <label>T1 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -54,7 +69,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
  
- <PawnKindDef>
+ <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSlaveT1</defName>
     <label>T1 Android Slave</label>
     <labelPlural>Enslaved android</labelPlural>
@@ -105,7 +120,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
 
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT2</defName>
     <label>T2 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -158,7 +173,7 @@
   </PawnKindDef>
 
 
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT3</defName>
     <label>T3 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -212,7 +227,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
  
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT4</defName>
     <label>T4 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>

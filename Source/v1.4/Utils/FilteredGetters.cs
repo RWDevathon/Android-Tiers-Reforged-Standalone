@@ -20,7 +20,7 @@ namespace ATReforged
         { 
             return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => thingDef.thingClass?.Name == "Pawn" && thingDef.race.intelligence != Intelligence.ToolUser && !thingDef.race.IsMechanoid);
         }
-
+        
         // Return an enumerable of pawns based on the given intelligence.
         public static IEnumerable<ThingDef> FilterByIntelligence(IEnumerable<ThingDef> options, Intelligence intelligence)
         {

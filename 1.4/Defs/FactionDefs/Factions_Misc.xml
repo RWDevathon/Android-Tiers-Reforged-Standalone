@@ -37,6 +37,7 @@
 		<description>Outcasted or exiled - or fleeing slavery - from human society, many mechanical units end up joining into groups of maligned bandits. United by a love of pillaging and taking out aggression on those who would seek to produce rather than destroy, these marauders elect to terrorize others rather than engage one another.\n\nDiplomacy is not an option with these androids. Violence is the only language they share with outsiders.</description>
 		<pawnSingular>marauder</pawnSingular>
 		<pawnsPlural>marauders</pawnsPlural>
+        <categoryTag>ATR_ViolentAndroids</categoryTag>
         <fixedLeaderKinds>
             <li>ATR_RaiderSoldierT4</li>
         </fixedLeaderKinds>
@@ -130,6 +131,7 @@
 		</colorSpectrum>
 		<pawnSingular>android</pawnSingular>
 		<pawnsPlural>androids</pawnsPlural>
+        <categoryTag>ATR_GeneralAndroids</categoryTag>
 		<settlementGenerationWeight>0.4</settlementGenerationWeight>
         <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<listOrderPriority>35</listOrderPriority>

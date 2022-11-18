@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidRebel</defName>
 		<title>Rebellious AI</title>
 		<titleShort>Rebel</titleShort>
@@ -13,27 +13,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Caring</li>
 			<li>Animals</li>
 		</workDisables>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>40</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidPirate</defName>
 		<title>Android pirate</title>
 		<titleShort>Pirate</titleShort>
@@ -46,20 +42,20 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Cooking</li>
 			<li>Animals</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidHacker</defName>
 		<title>AI hacker</title>
 		<titleShort>Hacker</titleShort>
@@ -72,16 +68,16 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidJunker</defName>
 		<title>Illegal junker</title>
 		<titleShort>Junker</titleShort>
@@ -94,16 +90,16 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidButcher</defName>
 		<title>Butcher</title>
 		<titleShort>Butcher</titleShort>
@@ -116,16 +112,16 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidBadCop</defName>
 		<title>Corrupt cop</title>
 		<titleShort>Cop</titleShort>
@@ -138,16 +134,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidMurderer</defName>
 		<title>Murderer</title>
 		<titleShort>Murderer</titleShort>
@@ -160,22 +156,19 @@
 		<skillGains>
 			<li>
 				<key>Melee</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>Bloodlust</defName>
-				<chance>90</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <Bloodlust>0</Bloodlust>
+		</forcedTraits>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidRobber</defName>
 		<title>Bank robber</title>
 		<titleShort>Thief</titleShort>
@@ -188,16 +181,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidJoywireCon</defName>
 		<title>Joywire con</title>
 		<titleShort>Con</titleShort>
@@ -210,31 +203,24 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>15</chance>
-			</li>
-			<li>
-				<defName>Psychopath</defName>
-				<chance>20</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <Psychopath>0</Psychopath>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidBotanist</defName>
 		<title>Botanist</title>
 		<titleShort>Botanist</titleShort>
@@ -247,16 +233,16 @@
 		<skillGains>
 			<li>
 				<key>Plants</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidEnslaved</defName>
 		<title>Enslaved</title>
 		<titleShort>Slave</titleShort>
@@ -270,11 +256,11 @@
 		<skillGains>
 			<li>
 				<key>Mining</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -283,9 +269,9 @@
 			<li>Animals</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidCoghead</defName>
 		<title>Medieval coghead</title>
 		<titleShort>Coghead</titleShort>
@@ -298,20 +284,20 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Caring</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidSlaver</defName>
 		<title>Slave trafficker</title>
 		<titleShort>Slaver</titleShort>
@@ -324,31 +310,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>5</chance>
-			</li>
-			<li>
-				<defName>Psychopath</defName>
-				<chance>15</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <Psychopath>0</Psychopath>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidMilitia</defName>
 		<title>Militia officer</title>
 		<titleShort>Officer</titleShort>
@@ -361,27 +339,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>80</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidEscapee</defName>
 		<title>Escaped convict</title>
 		<titleShort>Escapee</titleShort>
@@ -394,27 +368,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>60</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>3</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidBounty</defName>
 		<title>Bounty hunter</title>
 		<titleShort>Hunter</titleShort>
@@ -427,15 +397,15 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -444,16 +414,12 @@
 			<li>Animals</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>3</degree>
-				<chance>10</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>3</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidInsurrectionLower</defName>
 		<title>Insurrection soldier</title>
 		<titleShort>Soldier</titleShort>
@@ -466,15 +432,15 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -482,16 +448,12 @@
 			<li>Caring</li>
 			<li>Animals</li>
 		</workDisables>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>90</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidInsurrectionHigher</defName>
 		<title>Insurrection captain</title>
 		<titleShort>Captain</titleShort>
@@ -504,27 +466,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>100</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidConArtist</defName>
 		<title>Con artist</title>
 		<titleShort>Con</titleShort>
@@ -537,11 +495,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -549,9 +507,9 @@
 			<li>Animals</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidUnethicalResearcher</defName>
 		<title>Unethical researcher</title>
 		<titleShort>Researcher</titleShort>
@@ -564,33 +522,26 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>Psychopath</defName>
-				<chance>20</chance>
-			</li>
-			<li>
-				<defName>Bloodlust</defName>
-				<chance>20</chance>
-			</li>
-		</forcedTraitsChance>
+		<forcedTraits>
+            <Psychopath>0</Psychopath>
+		</forcedTraits>
 		<workDisables>
 			<li>Social</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidVengeful</defName>
 		<title>Vengeful android</title>
 		<titleShort>Vengeful</titleShort>
@@ -603,27 +554,20 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>30</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>AndroidAssimilator</defName>
 		<title>Assimilator</title>
 		<titleShort>Assimilator</titleShort>
@@ -636,15 +580,15 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>7</amount>
+				<value>7</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -652,12 +596,8 @@
 			<li>Animals</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>100</chance>
-			</li>
-		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+		<forcedTraits>
+            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+		</forcedTraits>
+	</BackstoryDef>
 </Defs>

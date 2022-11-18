@@ -43,6 +43,7 @@
             </li>
         </tools>
         <race>
+            <intelligence>ToolUser</intelligence>
 			<body>ATR_MechAirborne</body>
             <baseBodySize>0.2</baseBodySize>
 			<baseHealthScale>0.4</baseHealthScale>

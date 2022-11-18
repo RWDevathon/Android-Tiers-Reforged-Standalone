@@ -3,7 +3,7 @@
 
 	<!--Android General-->
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidCleaner</defName>
 		<title>Glitterworld cleaner</title>
 		<titleShort>Cleaner</titleShort>
@@ -16,23 +16,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidSoldier</defName>
 		<title>Shock troop</title>
 		<titleShort>Trooper</titleShort>
@@ -45,11 +45,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
@@ -65,9 +65,9 @@
 			<li>Social</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidAgent</defName>
 		<title>Special agent</title>
 		<titleShort>Agent</titleShort>
@@ -80,23 +80,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>7</amount>
+				<value>7</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidPilot</defName>
 		<title>Spaceplane pilot</title>
 		<titleShort>Pilot</titleShort>
@@ -109,16 +109,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidStarship</defName>
 		<title>Starship commander</title>
 		<titleShort>Commander</titleShort>
@@ -131,20 +131,20 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidRiot</defName>
 		<title>Riot officer</title>
 		<titleShort>Officer</titleShort>
@@ -157,11 +157,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
@@ -172,9 +172,9 @@
 			<li>Cooking</li>
 			<li>PlantWork</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidGuard</defName>
 		<title>Bodyguard</title>
 		<titleShort>Bodyguard</titleShort>
@@ -187,16 +187,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidSoldierInjured</defName>
 		<title>Broken soldier</title>
 		<titleShort>Soldier</titleShort>
@@ -209,15 +209,15 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>12</amount>
+				<value>12</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>7</amount>
+				<value>7</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -225,9 +225,9 @@
 			<li>Intellectual</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHighChef</defName>
 		<title>Gourmet chef</title>
 		<titleShort>Chef</titleShort>
@@ -240,20 +240,20 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Mining</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidUrbworldChef</defName>
 		<title>Urbworld chef</title>
 		<titleShort>Chef</titleShort>
@@ -266,16 +266,16 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Animals</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidBartender</defName>
 		<title>Bartender</title>
 		<titleShort>Chef</titleShort>
@@ -288,20 +288,20 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidPrisonCook</defName>
 		<title>Prison cook</title>
 		<titleShort>Cook</titleShort>
@@ -314,16 +314,16 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Violent</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidPet</defName>
 		<title>Subservient machine</title>
 		<titleShort>Subservient</titleShort>
@@ -336,11 +336,11 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -348,9 +348,9 @@
 			<li>Crafting</li>
 			<li>Mining</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDeepMiner</defName>
 		<title>Mining drone</title>
 		<titleShort>Drone</titleShort>
@@ -363,23 +363,23 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Mining</key>
-				<amount>7</amount>
+				<value>7</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
 			<li>ATR_MiningArm</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMiner</defName>
 		<title>Tunnel worker</title>
 		<titleShort>Tunneler</titleShort>
@@ -392,15 +392,15 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Mining</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>-2</amount>
+				<value>-2</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -409,9 +409,9 @@
 				<chance>40</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidProspector</defName>
 		<title>Prospector drone</title>
 		<titleShort>Prospector</titleShort>
@@ -424,16 +424,16 @@
 		<skillGains>
 			<li>
 				<key>Mining</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidConstructor</defName>
 		<title>Orbital engineer</title>
 		<titleShort>Engineer</titleShort>
@@ -446,16 +446,16 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidBuilder</defName>
 		<title>Android architect</title>
 		<titleShort>Architect</titleShort>
@@ -468,20 +468,20 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidGrunt</defName>
 		<title>Construction drone</title>
 		<titleShort>Builder</titleShort>
@@ -495,23 +495,23 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHydroponicFarmer</defName>
 		<title>Hydroponics engineer</title>
 		<titleShort>Engineer</titleShort>
@@ -524,16 +524,16 @@
 		<skillGains>
 			<li>
 				<key>Plants</key>
-				<amount>7</amount>
+				<value>7</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidFarmer</defName>
 		<title>Mechanical farmer</title>
 		<titleShort>Farmer</titleShort>
@@ -546,16 +546,16 @@
 		<skillGains>
 			<li>
 				<key>Plants</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Animals</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidGardener</defName>
 		<title>Mechanical gardener</title>
 		<titleShort>Gardener</titleShort>
@@ -568,19 +568,19 @@
 		<skillGains>
 			<li>
 				<key>Plants</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMechanic</defName>
 		<title>Android mechanic</title>
 		<titleShort>Mechanic</titleShort>
@@ -593,19 +593,19 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
 			<li>ATR_MechanicAssistant</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidAerofleetEngineer</defName>
 		<title>Aerofleet engineer</title>
 		<titleShort>Engineer</titleShort>
@@ -618,20 +618,20 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Cooking</li>
 			<li>PlantWork</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidComabtEngineer</defName>
 		<title>Combat engineer</title>
 		<titleShort>Engineer</titleShort>
@@ -644,20 +644,20 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidFactoryWorker</defName>
 		<title>Factory worker</title>
 		<titleShort>Worker</titleShort>
@@ -670,24 +670,24 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Intellectual</li>
 			<li>Artistic</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidSurgeon</defName>
 		<title>Pinpoint surgeon</title>
 		<titleShort>Surgeon</titleShort>
@@ -700,11 +700,11 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<amount>10</amount>
+				<value>10</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -714,9 +714,9 @@
 		<forcedHediffs>
 			<li>ATR_AdvancedArm</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDoctor</defName>
 		<title>Clinic worker</title>
 		<titleShort>Worker</titleShort>
@@ -729,24 +729,24 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Mining</li>
 			<li>Crafting</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidCarer</defName>
 		<title>Care worker</title>
 		<titleShort>Carer</titleShort>
@@ -759,24 +759,24 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Mining</li>
 			<li>Crafting</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidResearcher</defName>
 		<title>Cybernetics researcher</title>
 		<titleShort>Researcher</titleShort>
@@ -790,20 +790,20 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>10</amount>
+				<value>10</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidChessPlayer</defName>
 		<title>Chess pro</title>
 		<titleShort>Professional</titleShort>
@@ -816,19 +816,19 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDamaged</defName>
 		<title>Damaged android</title>
 		<titleShort>Damaged</titleShort>
@@ -841,11 +841,11 @@
 		<skillGains>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-3</amount>
+				<value>-3</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
@@ -855,9 +855,9 @@
 			<li>Firefighting</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHeavyLifter</defName>
 		<title>Heavy lifter</title>
 		<titleShort>Lifter</titleShort>
@@ -870,19 +870,19 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
 			<li>HydraulicFrame</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidProtected</defName>
 		<title>Protected creation</title>
 		<titleShort>Android</titleShort>
@@ -896,20 +896,20 @@
 		<skillGains>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Cooking</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Crafting</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidExiled</defName>
 		<title>Exiled android</title>
 		<titleShort>Exile</titleShort>
@@ -922,11 +922,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -936,9 +936,9 @@
 				<chance>20</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMusician</defName>
 		<title>Restaurant musician</title>
 		<titleShort>Musician</titleShort>
@@ -951,11 +951,11 @@
 		<skillGains>
 			<li>
 				<key>Artistic</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -963,9 +963,9 @@
 
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidExperiment</defName>
 		<title>Experimental android</title>
 		<titleShort>Experiment</titleShort>
@@ -978,24 +978,24 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-5</amount>
+				<value>-5</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Caring</li>
 			<li>Artistic</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidComputer</defName>
 		<title>Mobile computer</title>
 		<titleShort>Computer</titleShort>
@@ -1008,15 +1008,15 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1024,9 +1024,9 @@
 			<li>PlantWork</li>
 			<li>Animals</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDeity</defName>
 		<title>Worshipped android</title>
 		<titleShort>Worshipped</titleShort>
@@ -1039,15 +1039,15 @@
 		<skillGains>
 			<li>
 				<key>Artistic</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1055,9 +1055,9 @@
 			<li>PlantWork</li>
 			<li>Animals</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidScarred</defName>
 		<title>Scarred android</title>
 		<titleShort>Scarred</titleShort>
@@ -1070,15 +1070,15 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1096,9 +1096,9 @@
 			<li>Firefighting</li>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidWaste</defName>
 		<title>Disposal unit</title>
 		<titleShort>Disposal</titleShort>
@@ -1111,16 +1111,16 @@
 		<skillGains>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Construction</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidSecurity</defName>
 		<title>Station security</title>
 		<titleShort>Security</titleShort>
@@ -1133,11 +1133,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<forcedHediffs>
@@ -1146,9 +1146,9 @@
 		<workDisables>
 			<li>ManualSkilled</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidStationCook</defName>
 		<title>Station cook</title>
 		<titleShort>Cook</titleShort>
@@ -1161,23 +1161,23 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Shooting</key>
-				<amount>-4</amount>
+				<value>-4</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Crafting</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidAnimalGeneticist</defName>
 		<title>Animal geneticist</title>
 		<titleShort>Geneticist</titleShort>
@@ -1190,19 +1190,19 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Animals</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidApocalypseAndroid</defName>
 		<title>Apocalypse android</title>
 		<titleShort>Survivor</titleShort>
@@ -1215,15 +1215,15 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1238,9 +1238,9 @@
 				<chance>10</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHumanist</defName>
 		<title>Humanist</title>
 		<titleShort>Humanist</titleShort>
@@ -1253,15 +1253,15 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1275,9 +1275,9 @@
 				<chance>20</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidPacifist</defName>
 		<title>Pacifist</title>
 		<titleShort>Pacifist</titleShort>
@@ -1290,15 +1290,15 @@
 		<skillGains>
 			<li>
 				<key>Animals</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<amount>1</amount>
+				<value>1</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1310,9 +1310,9 @@
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidAndroidRights</defName>
 		<title>Android activist</title>
 		<titleShort>Activist</titleShort>
@@ -1325,11 +1325,11 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1346,9 +1346,9 @@
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHumanSon</defName>
 		<title>Human's son</title>
 		<titleShort>Protected</titleShort>
@@ -1361,11 +1361,11 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1382,9 +1382,9 @@
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidFoundryWorker</defName>
 		<title>Foundry worker</title>
 		<titleShort>Worker</titleShort>
@@ -1397,19 +1397,19 @@
 		<skillGains>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Construction</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>PlantWork</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMaintenanceWorker</defName>
 		<title>Maintenance worker</title>
 		<titleShort>Worker</titleShort>
@@ -1422,16 +1422,16 @@
 		<skillGains>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMechanicalFarmhand</defName>
 		<title>Mechanical farmhand</title>
 		<titleShort>Farmhand</titleShort>
@@ -1444,12 +1444,12 @@
 		<skillGains>
 			<li>
 				<key>Plants</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>CreationHatmaker</defName>
 		<title>Hatmaker</title>
 		<titleShort>hatmaker</titleShort>
@@ -1462,16 +1462,16 @@
 		<skillGains>
 			<li>
 				<key>Crafting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidParticlePhysicist</defName>
 		<title>Particle physicist</title>
 		<titleShort>Physicist</titleShort>
@@ -1484,11 +1484,11 @@
 		<skillGains>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1497,9 +1497,9 @@
 		<forcedHediffs>
 			<li>ATR_InsightAssistant</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidPopIdol</defName>
 		<title>Pop idol</title>
 		<titleShort>Idol</titleShort>
@@ -1512,11 +1512,11 @@
 		<skillGains>
 			<li>
 				<key>Artistic</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>8</amount>
+				<value>8</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1526,9 +1526,9 @@
 			<li>ManualSkilled</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidNegotiator</defName>
 		<title>Hostage negotiator</title>
 		<titleShort>Negotiator</titleShort>
@@ -1541,11 +1541,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>3</amount>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1554,9 +1554,9 @@
 		<forcedHediffs>
 			<li>ATR_SocialAssistant</li>
 		</forcedHediffs>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMilitarySniper</defName>
 		<title>Military sniper</title>
 		<titleShort>Sniper</titleShort>
@@ -1569,11 +1569,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>10</amount>
+				<value>10</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1587,9 +1587,9 @@
 				<chance>90</chance>
 			</li>
 		</forcedTraitsChance>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidGlassworldTerraformer</defName>
 		<title>Glassworld revivalist</title>
 		<titleShort>Terraformer</titleShort>
@@ -1602,16 +1602,16 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDronePilot</defName>
 		<title>Drone pilot</title>
 		<titleShort>Pilot</titleShort>
@@ -1624,16 +1624,16 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<amount>2</amount>
+				<value>2</value>
 			</li>
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidDogWalker</defName>
 		<title>Dog walker</title>
 		<titleShort>Walker</titleShort>
@@ -1646,16 +1646,16 @@
 		<skillGains>
 			<li>
 				<key>Animals</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Crafting</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidMechanicalPriest</defName>
 		<title>Mechanical priest</title>
 		<titleShort>Priest</titleShort>
@@ -1668,23 +1668,23 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Artistic</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<amount>6</amount>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>AndroidHacked</defName>
 		<title>Hacked android</title>
 		<titleShort>Hacked</titleShort>
@@ -1697,11 +1697,11 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<amount>5</amount>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Melee</key>
-				<amount>4</amount>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -1710,5 +1710,5 @@
 			<li>ManualSkilled</li>
 			<li>Intellectual</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 </Defs>

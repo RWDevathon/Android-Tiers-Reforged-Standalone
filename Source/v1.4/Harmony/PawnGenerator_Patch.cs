@@ -22,7 +22,7 @@ namespace ATReforged
                     if (!Utils.IsConsideredMechanical(__result) || Utils.HasSpecialStatus(__result) || Utils.IsConsideredMechanicalAnimal(__result))
                         return;
 
-
+                    
                     // Generate new gender according to settings.
                     __result.gender = Utils.GenerateGender(__result.kindDef);
                     __result.Name = PawnBioAndNameGenerator.GeneratePawnName(__result);
