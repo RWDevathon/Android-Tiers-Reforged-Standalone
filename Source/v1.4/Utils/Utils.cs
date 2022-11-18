@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
-using UnityEngine;
 using HarmonyLib;
 using Verse.AI;
 using RimWorld.Planet;
@@ -191,8 +190,8 @@ namespace ATReforged
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
             PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
-            BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
-            BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
+            blankMechanical.story.Childhood = BackstoryDefOf.FreshBlank;
+            blankMechanical.story.Adulthood = BackstoryDefOf.AdultBlank;
             blankMechanical.story.traits.allTraits.Clear();
             blankMechanical.skills.Notify_SkillDisablesChanged();
             blankMechanical.skills.skills.ForEach(delegate (SkillRecord record)
@@ -332,26 +331,18 @@ namespace ATReforged
                         {
                             bodyType = dest.story.bodyType
                         };
-                        Color hair = new Color
-                        {
-                            a = dest.story.hairColor.a,
-                            r = dest.story.hairColor.r,
-                            g = dest.story.hairColor.g,
-                            b = dest.story.hairColor.b
-                        };
-                        newStory.hairColor = hair;
-                        newStory.crownType = dest.story.crownType;
+                        newStory.HairColor = dest.story.HairColor;
                         newStory.hairDef = dest.story.hairDef;
-
+                        
                         // Duplicate source backstory into destination.
-                        if (source.story.adulthood != null)
+                        if (source.story.Adulthood != null)
                         {
-                            BackstoryDatabase.TryGetWithIdentifier(source.story.adulthood.identifier, out dest.story.adulthood);
+                            dest.story.Adulthood = source.story.Adulthood;
                         }
                         else
-                            newStory.adulthood = null;
+                            newStory.Adulthood = null;
 
-                        BackstoryDatabase.TryGetWithIdentifier(source.story.childhood.identifier, out dest.story.childhood);
+                        dest.story.Childhood = source.story.Childhood;
 
                         // Duplicate source traits into destination.
                         newStory.traits = new TraitSet(dest);
@@ -367,8 +358,8 @@ namespace ATReforged
                     else
                     {
                         dest.story.traits = source.story.traits;
-                        dest.story.childhood = source.story.childhood;
-                        dest.story.adulthood = source.story.adulthood;
+                        dest.story.Childhood = source.story.Childhood;
+                        dest.story.Adulthood = source.story.Adulthood;
                     }
                     dest.story.title = source.story.title;
                     dest.story.favoriteColor = source.story.favoriteColor;
@@ -651,7 +642,7 @@ namespace ATReforged
         public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
         {
             // Generate a new pawn.
-            PawnGenerationRequest request = new PawnGenerationRequest(kind: pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender, fixedMelanin: pawn.story.melanin);
+            PawnGenerationRequest request = new PawnGenerationRequest(kind: pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
             Pawn copy = PawnGenerator.GeneratePawn(request);
 
             // Get rid of any items it may have spawned with.
@@ -662,15 +653,7 @@ namespace ATReforged
             // Copy the pawn's physical attributes.
             copy.Rotation = pawn.Rotation;
             copy.story.bodyType = pawn.story.bodyType;
-            Color hair = new Color
-            {
-                a = pawn.story.hairColor.a,
-                r = pawn.story.hairColor.r,
-                g = pawn.story.hairColor.g,
-                b = pawn.story.hairColor.b
-            };
-            copy.story.hairColor = hair;
-            copy.story.crownType = pawn.story.crownType;
+            copy.story.HairColor = pawn.story.HairColor;
             copy.story.hairDef = pawn.story.hairDef;
 
             // Attempt to transfer all items the pawn may be carrying over to its copy.
@@ -816,8 +799,8 @@ namespace ATReforged
                 // Massive drones get MSeries drone backstory, which they spawn with.
                 if (!IsConsideredMassive(pawn))
                 {
-                    BackstoryDatabase.TryGetWithIdentifier("ATR_DroneChildhood", out pawn.story.childhood);
-                    BackstoryDatabase.TryGetWithIdentifier("ATR_DroneAdulthood", out pawn.story.adulthood);
+                    pawn.story.Childhood = BackstoryDefOf.ATR_MechChildhood;
+                    pawn.story.Childhood = BackstoryDefOf.ATR_MechAdulthood;
                 }
             }
         }

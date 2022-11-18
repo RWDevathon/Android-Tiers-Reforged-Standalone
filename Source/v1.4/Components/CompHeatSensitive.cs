@@ -162,7 +162,7 @@ namespace ATReforged
             Building building = (Building)parent;
             building.HitPoints -= (int)(building.HitPoints * Rand.Range(0.10f, 0.45f));
 
-            GenExplosion.DoExplosion(parent.Position, parent.Map, 3, DamageDefOf.Flame, null, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false);
+            GenExplosion.DoExplosion(parent.Position, parent.Map, 3, DamageDefOf.Flame, null);
         }
 
         public override void PostDeSpawn(Map map)

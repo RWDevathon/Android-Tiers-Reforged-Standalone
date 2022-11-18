@@ -8,8 +8,8 @@
       <subSounds>
         <li>
           <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Fractal/ATR_FractalCall</clipFolderPath>
+            <li Class="AudioGrain_Clip">
+              <clipPath>Fractal/ATR_FractalCall</clipPath>
             </li>
           </grains>
           <volumeRange>
@@ -35,8 +35,8 @@
       <subSounds>
         <li>
           <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Fractal/ATR_FractalDeath</clipFolderPath>
+            <li Class="AudioGrain_Clip">
+              <clipPath>Fractal/ATR_FractalDeath</clipPath>
             </li>
           </grains>
           <volumeRange>
@@ -62,8 +62,8 @@
       <subSounds>
         <li>
           <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Fractal/ATR_FractalPain</clipFolderPath>
+            <li Class="AudioGrain_Clip">
+              <clipPath>Fractal/ATR_FractalPain</clipPath>
             </li>
           </grains>
           <volumeRange>

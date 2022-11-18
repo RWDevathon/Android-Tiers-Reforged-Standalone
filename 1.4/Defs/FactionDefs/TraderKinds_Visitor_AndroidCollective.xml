@@ -33,10 +33,10 @@
           <max>6</max>
         </countRange>
       </li>
-      <li Class="StockGenerator_WeaponsRanged">
+      <li Class="StockGenerator_MarketValue">
         <countRange>
-          <min>0</min>
-          <max>1</max>
+          <min>10</min>
+          <max>18</max>
         </countRange>
       </li>
       <li Class="StockGenerator_Category">
@@ -49,12 +49,6 @@
           <min>100</min>
           <max>300</max>
         </totalPriceRange>
-      </li>
-      <li Class="StockGenerator_Clothes">
-        <countRange>
-          <min>0</min>
-          <max>1</max>
-        </countRange>
       </li>
       <li Class="StockGenerator_BuyExpensiveSimple" />
       <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>

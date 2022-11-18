@@ -87,11 +87,12 @@ namespace ATReforged
                 if (!curDriver.asleep)
                 {
                     // Pawn falls asleep if their rest need or food need is low enough.
-                    if ((restNeed != null && restNeed.CurLevel < RestUtility.FallAsleepMaxLevel(actor)) || (foodNeed != null && foodNeed.CurLevelPercentage < 0.9f))
+                    if ((restNeed != null && RestUtility.CanFallAsleep(actor)) || (foodNeed != null && foodNeed.CurLevelPercentage < 0.9f))
                     {
                         curDriver.asleep = true;
                     }
                 }
+
                 // if the pawn has their charge/rest need met (both if both exist, otherwise which ever one they have), then the job is complete.
                 if (!HealthAIUtility.ShouldSeekMedicalRest(actor) &&!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
                 {

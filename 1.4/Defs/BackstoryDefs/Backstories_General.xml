@@ -7,7 +7,7 @@
 		<defName>AndroidCleaner</defName>
 		<title>Glitterworld cleaner</title>
 		<titleShort>Cleaner</titleShort>
-		<baseDescription>{PAWN_nameDef} used to be a cleaner android on a glitterworld planet, they were never tasked with anything too complex.</baseDescription>
+		<baseDesc>{PAWN_nameDef} used to be a cleaner android on a glitterworld planet, they were never tasked with anything too complex.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -15,15 +15,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-2</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -36,7 +36,7 @@
 		<defName>AndroidSoldier</defName>
 		<title>Shock troop</title>
 		<titleShort>Trooper</titleShort>
-		<baseDescription>{PAWN_nameDef} used to be part of a battalion of specialist made shock troop android soldiers, programmed to kill with cold efficiency whilst still maintaining self-will.</baseDescription>
+		<baseDesc>{PAWN_nameDef} used to be part of a battalion of specialist made shock troop android soldiers, programmed to kill with cold efficiency whilst still maintaining self-will.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -44,23 +44,23 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>5</amount>
 			</li>
 		</skillGains>
 		<forcedHediffs>
 			<li>PlatingPlasteel</li>
 		</forcedHediffs>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Bloodlust</defName>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Social</li>
 			<li>Intellectual</li>
@@ -71,7 +71,7 @@
 		<defName>AndroidAgent</defName>
 		<title>Special agent</title>
 		<titleShort>Agent</titleShort>
-		<baseDescription>{PAWN_nameDef} was bought specifically to protect high-ranking officials such as dictators, members of royal families and cabinet members. They were trained extensively to quickly react to combat whenever needed and to perform on-site medical care.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was bought specifically to protect high-ranking officials such as dictators, members of royal families and cabinet members. They were trained extensively to quickly react to combat whenever needed and to perform on-site medical care.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -79,15 +79,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>7</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -100,7 +100,7 @@
 		<defName>AndroidPilot</defName>
 		<title>Spaceplane pilot</title>
 		<titleShort>Pilot</titleShort>
-		<baseDescription>To help aid human pilots during orbital battles {PAWN_nameDef} was bought as part of a line of military androids. Acting as a mechanical co-pilot for the craft, {PAWN_nameDef} was trained to accurately fire the spaceplanes onboard cannons at enemy ships.</baseDescription>
+		<baseDesc>To help aid human pilots during orbital battles {PAWN_nameDef} was bought as part of a line of military androids. Acting as a mechanical co-pilot for the craft, {PAWN_nameDef} was trained to accurately fire the spaceplanes onboard cannons at enemy ships.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -108,11 +108,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -122,7 +122,7 @@
 		<defName>AndroidStarship</defName>
 		<title>Starship commander</title>
 		<titleShort>Commander</titleShort>
-		<baseDescription>{PAWN_nameDef} was one of three commanders aboard a colony starship, a position only a few androids were ever made for. {PAWN_nameDef} would oversee all functions of the ship, remaining awake when the rest of the crew had entered their hibernation.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was one of three commanders aboard a colony starship, a position only a few androids were ever made for. {PAWN_nameDef} would oversee all functions of the ship, remaining awake when the rest of the crew had entered their hibernation.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -130,15 +130,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -148,7 +148,7 @@
 		<defName>AndroidRiot</defName>
 		<title>Riot officer</title>
 		<titleShort>Officer</titleShort>
-		<baseDescription>As part of a unique line of law enforcement, fitted with a heavy frame - {PAWN_nameDef} was used to control riots that sprawled out of control through any means necessary.</baseDescription>
+		<baseDesc>As part of a unique line of law enforcement, fitted with a heavy frame - {PAWN_nameDef} was used to control riots that sprawled out of control through any means necessary.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -156,11 +156,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -178,7 +178,7 @@
 		<defName>AndroidGuard</defName>
 		<title>Bodyguard</title>
 		<titleShort>Bodyguard</titleShort>
-		<baseDescription>As an android bodyguard to hire,{PAWN_nameDef} has worked with all types of clients, ranging from urbworld entrepreneurs to low-level crime bosses. Specifically built to protect them at all costs.</baseDescription>
+		<baseDesc>As an android bodyguard to hire,{PAWN_nameDef} has worked with all types of clients, ranging from urbworld entrepreneurs to low-level crime bosses. Specifically built to protect them at all costs.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -186,11 +186,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>5</amount>
 			</li>
 		</skillGains>
@@ -200,7 +200,7 @@
 		<defName>AndroidSoldierInjured</defName>
 		<title>Broken soldier</title>
 		<titleShort>Soldier</titleShort>
-		<baseDescription>{PAWN_nameDef} was once part of a squadron of highly trained android soldiers, sent out to only the most dangerous missions. During one of said missions, the entire squad was fired upon with mortars, damaging {PAWN_nameDef} beyond full repair.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was once part of a squadron of highly trained android soldiers, sent out to only the most dangerous missions. During one of said missions, the entire squad was fired upon with mortars, damaging {PAWN_nameDef} beyond full repair.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -208,15 +208,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>12</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>7</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -231,7 +231,7 @@
 		<defName>AndroidHighChef</defName>
 		<title>Gourmet chef</title>
 		<titleShort>Chef</titleShort>
-		<baseDescription>All across his home planet {PAWN_nameDef} is known for his gourmet dishes, serving high-end clientele from all walks of life, each dish being perfectly balanced both logically and aesthetically.</baseDescription>
+		<baseDesc>All across his home planet {PAWN_nameDef} is known for his gourmet dishes, serving high-end clientele from all walks of life, each dish being perfectly balanced both logically and aesthetically.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -239,11 +239,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>8</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -257,7 +257,7 @@
 		<defName>AndroidUrbworldChef</defName>
 		<title>Urbworld chef</title>
 		<titleShort>Chef</titleShort>
-		<baseDescription>{PAWN_nameDef} was the owner of a well-renowned urbworld food station. Known to the locals as "Bolts" he made cheap, available food for the region that didn't taste like slop.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was the owner of a well-renowned urbworld food station. Known to the locals as "Bolts" he made cheap, available food for the region that didn't taste like slop.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -265,11 +265,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -279,7 +279,7 @@
 		<defName>AndroidBartender</defName>
 		<title>Bartender</title>
 		<titleShort>Chef</titleShort>
-		<baseDescription>{PAWN_nameDef} worked long hours at a bar, serving customers food and drink all day long, occasionally breaking up fights.</baseDescription>
+		<baseDesc>{PAWN_nameDef} worked long hours at a bar, serving customers food and drink all day long, occasionally breaking up fights.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -287,15 +287,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -305,7 +305,7 @@
 		<defName>AndroidPrisonCook</defName>
 		<title>Prison cook</title>
 		<titleShort>Cook</titleShort>
-		<baseDescription>Working in a partly automated prison station, {PAWN_nameDef} was tasked with making bulk amounts of low-quality food. Although the food was disgusting, it was very efficiently made and extremely cheap.</baseDescription>
+		<baseDesc>Working in a partly automated prison station, {PAWN_nameDef} was tasked with making bulk amounts of low-quality food. Although the food was disgusting, it was very efficiently made and extremely cheap.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -313,7 +313,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -327,7 +327,7 @@
 		<defName>AndroidPet</defName>
 		<title>Subservient machine</title>
 		<titleShort>Subservient</titleShort>
-		<baseDescription>{PAWN_nameDef} was bought by a family of wealthy humans, made to entertain and perform basic labour around the house without question.{PAWN_nameDef}s owners treated {PAWN_nameDef} as nothing more than a pet.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was bought by a family of wealthy humans, made to entertain and perform basic labour around the house without question.{PAWN_nameDef}s owners treated {PAWN_nameDef} as nothing more than a pet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -335,11 +335,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -354,7 +354,7 @@
 		<defName>AndroidDeepMiner</defName>
 		<title>Mining drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDescription>{PAWN_nameDef} was bought as part of a specialised production line of androids for an asteroid mining colony, working in asteroid fields with humans and other androids, {PAWN_nameDef} was mostly used for dangerous tasks and spacewalks.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was bought as part of a specialised production line of androids for an asteroid mining colony, working in asteroid fields with humans and other androids, {PAWN_nameDef} was mostly used for dangerous tasks and spacewalks.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -362,15 +362,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Mining</defName>
+				<key>Mining</key>
 				<amount>7</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>-2</amount>
 			</li>
 		</skillGains>
@@ -383,7 +383,7 @@
 		<defName>AndroidMiner</defName>
 		<title>Tunnel worker</title>
 		<titleShort>Tunneler</titleShort>
-		<baseDescription>{PAWN_nameDef} helped develop large underground tunnels on caveworlds, working as labour-for-lease by the hour. This line of androids was not custom made for the job however and would usually have a broad range of tasks they could perform other than digging.</baseDescription>
+		<baseDesc>{PAWN_nameDef} helped develop large underground tunnels on caveworlds, working as labour-for-lease by the hour. This line of androids was not custom made for the job however and would usually have a broad range of tasks they could perform other than digging.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -391,31 +391,31 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Mining</defName>
+				<key>Mining</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>-2</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Undergrounder</defName>
 				<chance>40</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidProspector</defName>
 		<title>Prospector drone</title>
 		<titleShort>Prospector</titleShort>
-		<baseDescription>As part of a group of mechanical prospectors - {PAWN_nameDef} was sent from planet to planet, performing mineral analysis of planets in preparation for colonies.</baseDescription>
+		<baseDesc>As part of a group of mechanical prospectors - {PAWN_nameDef} was sent from planet to planet, performing mineral analysis of planets in preparation for colonies.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -423,11 +423,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Mining</defName>
+				<key>Mining</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -437,7 +437,7 @@
 		<defName>AndroidConstructor</defName>
 		<title>Orbital engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>Working aboard an all android orbital shipyard, {PAWN_nameDef} was tasked with creating ships of all sizes, from small fighters to gigantic cargo ships.</baseDescription>
+		<baseDesc>Working aboard an all android orbital shipyard, {PAWN_nameDef} was tasked with creating ships of all sizes, from small fighters to gigantic cargo ships.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -445,11 +445,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>8</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -459,7 +459,7 @@
 		<defName>AndroidBuilder</defName>
 		<title>Android architect</title>
 		<titleShort>Architect</titleShort>
-		<baseDescription>{PAWN_nameDef} was an architect that developed blueprints for mass housing solutions on their urbworld. The blueprints they drew up were cold, lifeless and purely logical but they were functional for housing the billions.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was an architect that developed blueprints for mass housing solutions on their urbworld. The blueprints they drew up were cold, lifeless and purely logical but they were functional for housing the billions.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -467,15 +467,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
@@ -485,7 +485,7 @@
 		<defName>AndroidGrunt</defName>
 		<title>Construction drone</title>
 		<titleShort>Builder</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of a production line of cheap labour construction androids, used to build anything from houses to skyscrapers.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of a production line of cheap labour construction androids, used to build anything from houses to skyscrapers.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -494,15 +494,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
@@ -515,7 +515,7 @@
 		<defName>AndroidHydroponicFarmer</defName>
 		<title>Hydroponics engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>{PAWN_nameDef} is an android that was specifically tasked with maintaining and sowing the hundreds of hydroponics basins aboard a travelling starship.</baseDescription>
+		<baseDesc>{PAWN_nameDef} is an android that was specifically tasked with maintaining and sowing the hundreds of hydroponics basins aboard a travelling starship.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -523,11 +523,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>7</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -537,7 +537,7 @@
 		<defName>AndroidFarmer</defName>
 		<title>Mechanical farmer</title>
 		<titleShort>Farmer</titleShort>
-		<baseDescription>Made for a life of planting and harvesting, {PAWN_nameDef} has never wanted much. The only thing that they wish is to live out in the fields and tend to crops and animals.</baseDescription>
+		<baseDesc>Made for a life of planting and harvesting, {PAWN_nameDef} has never wanted much. The only thing that they wish is to live out in the fields and tend to crops and animals.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -545,11 +545,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -559,7 +559,7 @@
 		<defName>AndroidGardener</defName>
 		<title>Mechanical gardener</title>
 		<titleShort>Gardener</titleShort>
-		<baseDescription>{PAWN_nameDef} used to be part of a team of mechanical servants for numerous high-end clientele, working day and night to maintain their gardens and help host special botanical events.</baseDescription>
+		<baseDesc>{PAWN_nameDef} used to be part of a team of mechanical servants for numerous high-end clientele, working day and night to maintain their gardens and help host special botanical events.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -567,11 +567,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -584,7 +584,7 @@
 		<defName>AndroidMechanic</defName>
 		<title>Android mechanic</title>
 		<titleShort>Mechanic</titleShort>
-		<baseDescription>Working in a glitterworld android factory {PAWN_nameDef} maintained and performed part replacements on all models of android, {PAWN_nameDef} had most of his framework remade, to install advanced upgrades that would help with the intricate work {PAWN_nameDef} would do.</baseDescription>
+		<baseDesc>Working in a glitterworld android factory {PAWN_nameDef} maintained and performed part replacements on all models of android, {PAWN_nameDef} had most of his framework remade, to install advanced upgrades that would help with the intricate work {PAWN_nameDef} would do.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -592,11 +592,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>8</amount>
 			</li>
 		</skillGains>
@@ -609,7 +609,7 @@
 		<defName>AndroidAerofleetEngineer</defName>
 		<title>Aerofleet engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>{PAWN_nameDef}'s model has worked with numerous commercial airliners and a few local militaries to produce high-tech aircraft at low costs.</baseDescription>
+		<baseDesc>{PAWN_nameDef}'s model has worked with numerous commercial airliners and a few local militaries to produce high-tech aircraft at low costs.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -617,11 +617,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>5</amount>
 			</li>
 		</skillGains>
@@ -635,7 +635,7 @@
 		<defName>AndroidComabtEngineer</defName>
 		<title>Combat engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>{PAWN_nameDef} was created on his home glitterworld to develop state-of-art weapons, everything ranging from optimised gunpowder rifles to charge weaponry. </baseDescription>
+		<baseDesc>{PAWN_nameDef} was created on his home glitterworld to develop state-of-art weapons, everything ranging from optimised gunpowder rifles to charge weaponry. </baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -643,15 +643,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -661,7 +661,7 @@
 		<defName>AndroidFactoryWorker</defName>
 		<title>Factory worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDescription>{PAWN_nameDef}s model of android worked in a factory owned by an interstellar megacorporation that specialised in firearms and protective clothing. Usually to supply the local military on whatever planet was closest.</baseDescription>
+		<baseDesc>{PAWN_nameDef}s model of android worked in a factory owned by an interstellar megacorporation that specialised in firearms and protective clothing. Usually to supply the local military on whatever planet was closest.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -669,15 +669,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -691,7 +691,7 @@
 		<defName>AndroidSurgeon</defName>
 		<title>Pinpoint surgeon</title>
 		<titleShort>Surgeon</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of a line of experimental surgeon androids. Enhanced majorly beyond the factory standard, only to be used for the most delicate surgical procedures, which included mostly brain, heart and eye surgery. {PAWN_nameDef} was accurate to the millimeter with his hands, before being replaced with a newer model three years later.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of a line of experimental surgeon androids. Enhanced majorly beyond the factory standard, only to be used for the most delicate surgical procedures, which included mostly brain, heart and eye surgery. {PAWN_nameDef} was accurate to the millimeter with his hands, before being replaced with a newer model three years later.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -699,11 +699,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>10</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 		</skillGains>
@@ -720,7 +720,7 @@
 		<defName>AndroidDoctor</defName>
 		<title>Clinic worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDescription>{PAWN_nameDef} was produced to serve as a specialist doctor for diagnosing patients at a major hospital on his home planet. {PAWN_nameDef} would diagnose and treat a large array of symptoms for upwards of ten outpatients per day.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was produced to serve as a specialist doctor for diagnosing patients at a major hospital on his home planet. {PAWN_nameDef} would diagnose and treat a large array of symptoms for upwards of ten outpatients per day.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -728,15 +728,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -750,7 +750,7 @@
 		<defName>AndroidCarer</defName>
 		<title>Care worker</title>
 		<titleShort>Carer</titleShort>
-		<baseDescription>{PAWN_nameDef} was programmed with a deep understanding of human physiology and emotions, tasked with caring for sick patients at their own homes.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was programmed with a deep understanding of human physiology and emotions, tasked with caring for sick patients at their own homes.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -758,15 +758,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -780,7 +780,7 @@
 		<defName>AndroidResearcher</defName>
 		<title>Cybernetics researcher</title>
 		<titleShort>Researcher</titleShort>
-		<baseDescription>{PAWN_nameDef} was built in cooperation with multiple well-grounded scientific foundations to aid in researching the possibility of cybernetic augmentations, both for humans and androids.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was built in cooperation with multiple well-grounded scientific foundations to aid in researching the possibility of cybernetic augmentations, both for humans and androids.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -789,15 +789,15 @@
 		<linkedBackstory>CreationExperiment</linkedBackstory>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>10</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -807,7 +807,7 @@
 		<defName>AndroidChessPlayer</defName>
 		<title>Chess pro</title>
 		<titleShort>Professional</titleShort>
-		<baseDescription>Among some glitterworlds, android chess is a popular sport. {PAWN_nameDef} used to be a professional among his region, competing in three international tournaments on their home planet, coming first place in one of them.</baseDescription>
+		<baseDesc>Among some glitterworlds, android chess is a popular sport. {PAWN_nameDef} used to be a professional among his region, competing in three international tournaments on their home planet, coming first place in one of them.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -815,11 +815,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -832,7 +832,7 @@
 		<defName>AndroidDamaged</defName>
 		<title>Damaged android</title>
 		<titleShort>Damaged</titleShort>
-		<baseDescription>{PAWN_nameDef} was working their usual role at a factory before being caught in the midst of a planet takeover by a warring system, causing {PAWN_nameDef} to become permanently damaged from cross-fire as they attempted to flee the chaotic planet.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was working their usual role at a factory before being caught in the midst of a planet takeover by a warring system, causing {PAWN_nameDef} to become permanently damaged from cross-fire as they attempted to flee the chaotic planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -840,11 +840,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
@@ -861,7 +861,7 @@
 		<defName>AndroidHeavyLifter</defName>
 		<title>Heavy lifter</title>
 		<titleShort>Lifter</titleShort>
-		<baseDescription>{PAWN_nameDef} worked on construction sites on their home planet, specifically modified with a hydraulic frame to help haul heavy loads with ease around the site.</baseDescription>
+		<baseDesc>{PAWN_nameDef} worked on construction sites on their home planet, specifically modified with a hydraulic frame to help haul heavy loads with ease around the site.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -869,11 +869,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 		</skillGains>
@@ -886,7 +886,7 @@
 		<defName>AndroidProtected</defName>
 		<title>Protected creation</title>
 		<titleShort>Android</titleShort>
-		<baseDescription>{PAWN_nameDef} was created by a young aspiring roboticist, as a hobby to go alongside their education. {PAWN_nameDef} was built from the ground up in luxury and never expected to be anything more than someone to talk to.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created by a young aspiring roboticist, as a hobby to go alongside their education. {PAWN_nameDef} was built from the ground up in luxury and never expected to be anything more than someone to talk to.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -895,11 +895,11 @@
 		<linkedBackstory>CreationPrivateCreation</linkedBackstory>
 		<skillGains>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -913,7 +913,7 @@
 		<defName>AndroidExiled</defName>
 		<title>Exiled android</title>
 		<titleShort>Exile</titleShort>
-		<baseDescription>Created on a planet that had outlawed androids and all forms of sentient AI shortly after the creation of {PAWN_nameDef}. {PAWN_nameDef} was forced to hide away from public eye in fear of disassembly, leaving them bitter and on edge.</baseDescription>
+		<baseDesc>Created on a planet that had outlawed androids and all forms of sentient AI shortly after the creation of {PAWN_nameDef}. {PAWN_nameDef} was forced to hide away from public eye in fear of disassembly, leaving them bitter and on edge.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -921,28 +921,28 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-4</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidMusician</defName>
 		<title>Restaurant musician</title>
 		<titleShort>Musician</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of a new art movement that wanted to introduce android created music to the public, {PAWN_nameDef} would commonly be seen working at restaurants, playing background music for the diners.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of a new art movement that wanted to introduce android created music to the public, {PAWN_nameDef} would commonly be seen working at restaurants, playing background music for the diners.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -950,11 +950,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -969,7 +969,7 @@
 		<defName>AndroidExperiment</defName>
 		<title>Experimental android</title>
 		<titleShort>Experiment</titleShort>
-		<baseDescription>Bought purely for scientific research, {PAWN_nameDef} was modified and reprogrammed daily in an attempt to further understand artifical intelligence and how it develops. This caused much mental strain on {PAWN_nameDef}.</baseDescription>
+		<baseDesc>Bought purely for scientific research, {PAWN_nameDef} was modified and reprogrammed daily in an attempt to further understand artifical intelligence and how it develops. This caused much mental strain on {PAWN_nameDef}.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -977,15 +977,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-5</amount>
 			</li>
 		</skillGains>
@@ -999,7 +999,7 @@
 		<defName>AndroidComputer</defName>
 		<title>Mobile computer</title>
 		<titleShort>Computer</titleShort>
-		<baseDescription>Acting as a mobile computer, {PAWN_nameDef}s model is used by many companies to keep track of finances and other secret information when travelling. With {PAWN_nameDef} being capable of storing large amounts of data and perform complex equations within their mind with ease.</baseDescription>
+		<baseDesc>Acting as a mobile computer, {PAWN_nameDef}s model is used by many companies to keep track of finances and other secret information when travelling. With {PAWN_nameDef} being capable of storing large amounts of data and perform complex equations within their mind with ease.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1007,15 +1007,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -1030,7 +1030,7 @@
 		<defName>AndroidDeity</defName>
 		<title>Worshipped android</title>
 		<titleShort>Worshipped</titleShort>
-		<baseDescription>Being one of the first few androids to even land onto this rimworld, the tribals on the planet were both extremely scared and curious about what {PAWN_nameDef} was. To the point where it wasn't too uncommon to see shrines of themselves in a few tribe settlements, worshipping {PAWN_nameDef} as a fallen god.</baseDescription>
+		<baseDesc>Being one of the first few androids to even land onto this rimworld, the tribals on the planet were both extremely scared and curious about what {PAWN_nameDef} was. To the point where it wasn't too uncommon to see shrines of themselves in a few tribe settlements, worshipping {PAWN_nameDef} as a fallen god.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1038,15 +1038,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -1061,7 +1061,7 @@
 		<defName>AndroidScarred</defName>
 		<title>Scarred android</title>
 		<titleShort>Scarred</titleShort>
-		<baseDescription>{PAWN_nameDef} used to work for a very wealthy family. Unfortuntately it wasn't too uncommon for the homeowners to vent their rage out on {PAWN_nameDef} in the form of physical abuse, mostly when a job wasn't being done quick enough. This eventually led to {PAWN_nameDef} killing his owners in a psychotic break one day.</baseDescription>
+		<baseDesc>{PAWN_nameDef} used to work for a very wealthy family. Unfortuntately it wasn't too uncommon for the homeowners to vent their rage out on {PAWN_nameDef} in the form of physical abuse, mostly when a job wasn't being done quick enough. This eventually led to {PAWN_nameDef} killing his owners in a psychotic break one day.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1069,19 +1069,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
@@ -1091,7 +1091,7 @@
 				<defName>Psychopath</defName>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Firefighting</li>
 			<li>Violent</li>
@@ -1102,7 +1102,7 @@
 		<defName>AndroidWaste</defName>
 		<title>Disposal unit</title>
 		<titleShort>Disposal</titleShort>
-		<baseDescription>{PAWN_nameDef} was built to help with the disposal of waste products that would be hazardous to humans. This included radioactive, toxic, human and animal waste.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was built to help with the disposal of waste products that would be hazardous to humans. This included radioactive, toxic, human and animal waste.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1110,11 +1110,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -1124,7 +1124,7 @@
 		<defName>AndroidSecurity</defName>
 		<title>Station security</title>
 		<titleShort>Security</titleShort>
-		<baseDescription>Aboard a deep space station, {PAWN_nameDef} was a grunt security officer, making sure the human inhabitants were safe and no smugglers made it through the stations boarders.</baseDescription>
+		<baseDesc>Aboard a deep space station, {PAWN_nameDef} was a grunt security officer, making sure the human inhabitants were safe and no smugglers made it through the stations boarders.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1132,11 +1132,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -1152,7 +1152,7 @@
 		<defName>AndroidStationCook</defName>
 		<title>Station cook</title>
 		<titleShort>Cook</titleShort>
-		<baseDescription>{PAWN_nameDef} was once the main cook for a large deep space station, serving hundreds of inhabitants and vistors every day. The food quality was good enough, given how little resources {PAWN_nameDef} had to work with.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was once the main cook for a large deep space station, serving hundreds of inhabitants and vistors every day. The food quality was good enough, given how little resources {PAWN_nameDef} had to work with.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1160,15 +1160,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>-4</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -1181,7 +1181,7 @@
 		<defName>AndroidAnimalGeneticist</defName>
 		<title>Animal geneticist</title>
 		<titleShort>Geneticist</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of a glitterworld research team that had been trying to bring long extinct animals back, implementing them into various ecosystems around the universe.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of a glitterworld research team that had been trying to bring long extinct animals back, implementing them into various ecosystems around the universe.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1189,11 +1189,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -1206,7 +1206,7 @@
 		<defName>AndroidApocalypseAndroid</defName>
 		<title>Apocalypse android</title>
 		<titleShort>Survivor</titleShort>
-		<baseDescription>{PAWN_nameDef} was constructed out of need on a devastated wasteland planet, designed to survive on the harsh surface of the planet and help the inhabitants survive.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was constructed out of need on a devastated wasteland planet, designed to survive on the harsh surface of the planet and help the inhabitants survive.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1214,19 +1214,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Nerves</defName>
 				<degree>2</degree>
@@ -1237,14 +1237,14 @@
 				<degree>1</degree>
 				<chance>10</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidHumanist</defName>
 		<title>Humanist</title>
 		<titleShort>Humanist</titleShort>
-		<baseDescription>Despite on going android rebellions on it's homeworld, {PAWN_nameDef} sided with the humans and fought against it's own kind, finding a violent uprising to not be the right way.</baseDescription>
+		<baseDesc>Despite on going android rebellions on it's homeworld, {PAWN_nameDef} sided with the humans and fought against it's own kind, finding a violent uprising to not be the right way.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1252,19 +1252,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>1</degree>
@@ -1274,14 +1274,14 @@
 				<defName>Kind</defName>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidPacifist</defName>
 		<title>Pacifist</title>
 		<titleShort>Pacifist</titleShort>
-		<baseDescription>{PAWN_nameDef} vehemently dislikes all kinds of violence, whether it from androids or humans, and strives for a peaceful existence with it's surroundings.</baseDescription>
+		<baseDesc>{PAWN_nameDef} vehemently dislikes all kinds of violence, whether it from androids or humans, and strives for a peaceful existence with it's surroundings.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1289,24 +1289,24 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Kind</defName>
 				<chance>50</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
@@ -1316,7 +1316,7 @@
 		<defName>AndroidAndroidRights</defName>
 		<title>Android activist</title>
 		<titleShort>Activist</titleShort>
-		<baseDescription>{PAWN_nameDef} has spent most of it's life moving from planet to planet peacefully protesting for android rights and helping fellow androids regain their free will.</baseDescription>
+		<baseDesc>{PAWN_nameDef} has spent most of it's life moving from planet to planet peacefully protesting for android rights and helping fellow androids regain their free will.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1324,15 +1324,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>3</degree>
@@ -1342,7 +1342,7 @@
 				<defName>Kind</defName>
 				<chance>10</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
@@ -1352,7 +1352,7 @@
 		<defName>AndroidHumanSon</defName>
 		<title>Human's son</title>
 		<titleShort>Protected</titleShort>
-		<baseDescription>Bought by a married couple, {PAWN_nameDef} was treated like their own flesh and blood, growing up to learn various skills and become quite fond of humans. As it's parents passed away, it set out into the world to explore humanity.</baseDescription>
+		<baseDesc>Bought by a married couple, {PAWN_nameDef} was treated like their own flesh and blood, growing up to learn various skills and become quite fond of humans. As it's parents passed away, it set out into the world to explore humanity.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1360,15 +1360,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>1</degree>
@@ -1378,7 +1378,7 @@
 				<defName>Kind</defName>
 				<chance>10</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
@@ -1388,7 +1388,7 @@
 		<defName>AndroidFoundryWorker</defName>
 		<title>Foundry worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDescription>Constructed to be utilised at foundries, {PAWN_nameDef} worked with various metals, helping to refine them from their ore form into their pure elements.</baseDescription>
+		<baseDesc>Constructed to be utilised at foundries, {PAWN_nameDef} worked with various metals, helping to refine them from their ore form into their pure elements.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1396,11 +1396,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -1413,7 +1413,7 @@
 		<defName>AndroidMaintenanceWorker</defName>
 		<title>Maintenance worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDescription>{PAWN_nameDef} was a maintenance worker on-board a starship, tending to all electrical systems and making sure the cryptosleep caskets functioned during the long hiberation.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was a maintenance worker on-board a starship, tending to all electrical systems and making sure the cryptosleep caskets functioned during the long hiberation.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1421,11 +1421,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -1435,7 +1435,7 @@
 		<defName>AndroidMechanicalFarmhand</defName>
 		<title>Mechanical farmhand</title>
 		<titleShort>Farmhand</titleShort>
-		<baseDescription>{PAWN_nameDef} was one of many androids employed on a gigantic farm, working day and night to sow, harvest and maintain the fields that fed the masses in the local area.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was one of many androids employed on a gigantic farm, working day and night to sow, harvest and maintain the fields that fed the masses in the local area.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1443,7 +1443,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>5</amount>
 			</li>
 		</skillGains>
@@ -1453,7 +1453,7 @@
 		<defName>CreationHatmaker</defName>
 		<title>Hatmaker</title>
 		<titleShort>hatmaker</titleShort>
-		<baseDescription>{PAWN_nameDef} was bought to work in a large-scale hat-making factory. When the owner of said factory was found to have been making hats from… rather disturbing sources, the androids were shipped away by the local government.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was bought to work in a large-scale hat-making factory. When the owner of said factory was found to have been making hats from… rather disturbing sources, the androids were shipped away by the local government.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1461,11 +1461,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -1475,7 +1475,7 @@
 		<defName>AndroidParticlePhysicist</defName>
 		<title>Particle physicist</title>
 		<titleShort>Physicist</titleShort>
-		<baseDescription>As part of a team of highly modified androids, {PAWN_nameDef} lead the research on particle physics and experimental physics for his home planet.</baseDescription>
+		<baseDesc>As part of a team of highly modified androids, {PAWN_nameDef} lead the research on particle physics and experimental physics for his home planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1483,11 +1483,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>8</amount>
 			</li>
 		</skillGains>
@@ -1503,7 +1503,7 @@
 		<defName>AndroidPopIdol</defName>
 		<title>Pop idol</title>
 		<titleShort>Idol</titleShort>
-		<baseDescription>{PAWN_nameDef} lived the life of luxury on their home glitterworld as a famous pop idol, famous for being a quirky, singing android that only wanted to bring happiness to it's fans.</baseDescription>
+		<baseDesc>{PAWN_nameDef} lived the life of luxury on their home glitterworld as a famous pop idol, famous for being a quirky, singing android that only wanted to bring happiness to it's fans.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1511,11 +1511,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>8</amount>
 			</li>
 		</skillGains>
@@ -1532,7 +1532,7 @@
 		<defName>AndroidNegotiator</defName>
 		<title>Hostage negotiator</title>
 		<titleShort>Negotiator</titleShort>
-		<baseDescription>{PAWN_nameDef} was built as an experimental negotiator, sent into dicey situations in order to reason with criminals and release hostages.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was built as an experimental negotiator, sent into dicey situations in order to reason with criminals and release hostages.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1540,11 +1540,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -1560,7 +1560,7 @@
 		<defName>AndroidMilitarySniper</defName>
 		<title>Military sniper</title>
 		<titleShort>Sniper</titleShort>
-		<baseDescription>{PAWN_nameDef} was built for two purposes. To serve, and to kill. After a mission gone wrong, {PAWN_nameDef} decided to pack their rifle and head out to the stars to protect those who couldn’t protect themselves.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was built for two purposes. To serve, and to kill. After a mission gone wrong, {PAWN_nameDef} decided to pack their rifle and head out to the stars to protect those who couldn’t protect themselves.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1568,11 +1568,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>10</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -1580,20 +1580,20 @@
 			<li>PlantWork</li>
 			<li>Animals</li>
 		</workDisables>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>ShootingAccuracy</defName>
 				<degree>1</degree>
 				<chance>90</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidGlassworldTerraformer</defName>
 		<title>Glassworld revivalist</title>
 		<titleShort>Terraformer</titleShort>
-		<baseDescription>{PAWN_nameDef} was part a team of androids sent to a glassworld. Their mission was to see if there was any chance of bringing life back to the once thriving world. When the rest of {PAWN_nameDef}’s team later changed their minds and wanted to built a colony of androids and take over other planets, {PAWN_nameDef} left and drifted among the stars before eventually landing here.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part a team of androids sent to a glassworld. Their mission was to see if there was any chance of bringing life back to the once thriving world. When the rest of {PAWN_nameDef}’s team later changed their minds and wanted to built a colony of androids and take over other planets, {PAWN_nameDef} left and drifted among the stars before eventually landing here.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1601,11 +1601,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -1615,7 +1615,7 @@
 		<defName>AndroidDronePilot</defName>
 		<title>Drone pilot</title>
 		<titleShort>Pilot</titleShort>
-		<baseDescription>{PAWN_nameDef} was made as a pilot for drones that dropped incendiary bombs on planets overrun with insectoids. After the inevitable destruction of the planet, {PAWN_nameDef}’s team was disbanded, and let free to live their own lives.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was made as a pilot for drones that dropped incendiary bombs on planets overrun with insectoids. After the inevitable destruction of the planet, {PAWN_nameDef}’s team was disbanded, and let free to live their own lives.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1623,11 +1623,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -1637,7 +1637,7 @@
 		<defName>AndroidDogWalker</defName>
 		<title>Dog walker</title>
 		<titleShort>Walker</titleShort>
-		<baseDescription>{PAWN_nameDef} was bought by a kind family who had them walk their dog every day. They also ended up walking the rest of the neighborhood’s pets after {PAWN_nameDef} started to form a love for animals.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was bought by a kind family who had them walk their dog every day. They also ended up walking the rest of the neighborhood’s pets after {PAWN_nameDef} started to form a love for animals.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1645,7 +1645,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -1659,7 +1659,7 @@
 		<defName>AndroidMechanicalPriest</defName>
 		<title>Mechanical priest</title>
 		<titleShort>Priest</titleShort>
-		<baseDescription>Something short-circuited in {PAWN_nameDef}’s wiring. This resulted in {PAWN_nameDef} seeing visions of a godlike android, which they obsessed over. {PAWN_nameDef} experienced a vision, one that told them to convert as many beings to their religion, by any means necessary.</baseDescription>
+		<baseDesc>Something short-circuited in {PAWN_nameDef}’s wiring. This resulted in {PAWN_nameDef} seeing visions of a godlike android, which they obsessed over. {PAWN_nameDef} experienced a vision, one that told them to convert as many beings to their religion, by any means necessary.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1667,15 +1667,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -1688,7 +1688,7 @@
 		<defName>AndroidHacked</defName>
 		<title>Hacked android</title>
 		<titleShort>Hacked</titleShort>
-		<baseDescription>{PAWN_nameDef} was a party entertainer until he was hacked into by an urbworld teen. The teen hated mechanoids and wanted to make them seem like terrible, soulless creations. {PAWN_nameDef}’s programming was modified to kill everyone at an event they were hired for.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was a party entertainer until he was hacked into by an urbworld teen. The teen hated mechanoids and wanted to make them seem like terrible, soulless creations. {PAWN_nameDef}’s programming was modified to kill everyone at an event they were hired for.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1696,11 +1696,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>

@@ -52,16 +52,16 @@
 							</second>
 						</li>
 					</colorChannels>
-					<alienbodytypes>
+					<bodyTypes>
 						<li>Hulk</li>
-					</alienbodytypes>
+					</bodyTypes>
 				</alienPartGenerator>
 			</generalSettings>
 			<graphicPaths>
-				<li>
-					<body>Things/Pawns/Humanlikes/Tier5/body/</body>
-					<head>Things/Pawns/Humanlikes/Tier5/head/</head>
-				</li>
+                <body>Things/Pawns/Humanlikes/Tier5/body/</body>
+                <head>Things/Pawns/Humanlikes/Tier5/head/</head>
+                <skeleton>Things/Pawns/Humanlikes/Tier5/body/</skeleton>
+                <skull>Things/Pawns/Humanlikes/Tier5/head/</skull>
 			</graphicPaths>
 			<styleSettings>
                 <li>
@@ -109,7 +109,7 @@
 			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
 			<PainShockThreshold>5</PainShockThreshold>
-			<ToxicSensitivity>0</ToxicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
 			<MentalBreakThreshold>0.15</MentalBreakThreshold>
 			<GlobalLearningFactor>4</GlobalLearningFactor>
 			<WorkSpeedGlobal>4</WorkSpeedGlobal>

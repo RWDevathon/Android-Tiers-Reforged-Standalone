@@ -8,8 +8,8 @@
       <subSounds>
         <li>
           <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mechs/40MMShot</clipFolderPath>
+            <li Class="AudioGrain_Clip">
+              <clipPath>Mechs/40MMShot</clipPath>
             </li>
           </grains>
           <volumeRange>
@@ -36,8 +36,8 @@
       <subSounds>
         <li>
           <grains>
-            <li Class="AudioGrain_Folder">
-              <clipFolderPath>Mechs/SThrowShot</clipFolderPath>
+            <li Class="AudioGrain_Clip">
+              <clipPath>Mechs/SThrowShot</clipPath>
             </li>
           </grains>
           <volumeRange>

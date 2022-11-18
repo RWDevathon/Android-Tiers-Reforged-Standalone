@@ -32,7 +32,7 @@ namespace ATReforged
             { // No bed? Reduce surgery success chance significantly.
                 chanceSucceed *= 0.6f;
             }
-
+            
             // Multiply by the tend quality of the kits used.
             chanceSucceed *= KitMedicalPotencyToSurgeryChanceFactor.Evaluate(GetAverageMedicalPotency(ingredients, bill));
 
@@ -51,7 +51,6 @@ namespace ATReforged
 
             // Max chance of success is either the calculated surgery chance or the settings-prescribed max limit (default 1).
             chanceSucceed = Mathf.Min(chanceSucceed, ATReforged_Settings.maxChanceMechanicOperationSuccess);
-
             // Check if the surgery is successful.
             if (ATReforged_Settings.showMechanicalSurgerySuccessChance)
                 Messages.Message("[ATR Debug Utility] Surgery had " + chanceSucceed + " chance to succeed.", MessageTypeDefOf.NeutralEvent);
@@ -59,7 +58,7 @@ namespace ATReforged
             { // Surgery failed. Determine the extent of the failure.
                 if (Rand.Chance(recipe.deathOnFailedSurgeryChance))
                 { // Patient died due to the surgery. This kills them for good. 
-                    HealthUtility.GiveInjuriesOperationFailureCatastrophic(patient, part);
+                    HealthUtility.GiveRandomSurgeryInjuries(patient, 100, part);
                     patient.TakeDamage(new DamageInfo(DamageDefOf.Crush, 99999f, 999f, -1f, null, patient.health.hediffSet.GetBrain()));
                     if (!patient.Dead)
                     { // If they somehow didn't die from that, kill them with extreme force.
@@ -70,12 +69,12 @@ namespace ATReforged
                 else if (Rand.Chance(ATReforged_Settings.chanceFailedOperationMinor))
                 { // Patient suffered minor injuries.
                     Messages.Message("MessageMedicalOperationFailureMinorAndroid".Translate(surgeon.LabelShort, patient.LabelShort), patient, MessageTypeDefOf.NegativeHealthEvent);
-                    HealthUtility.GiveInjuriesOperationFailureMinor(patient, part);
+                    HealthUtility.GiveRandomSurgeryInjuries(patient, 10, part);
                 }
                 else
                 { // Patient suffered major injuries.
                     Messages.Message("MessageMedicalOperationFailureRidiculousAndroid".Translate(surgeon.LabelShort, patient.LabelShort), patient, MessageTypeDefOf.NegativeHealthEvent);
-                    HealthUtility.GiveInjuriesOperationFailureRidiculous(patient);
+                    HealthUtility.GiveRandomSurgeryInjuries(patient, 65, part);
                 }
                 if (!patient.Dead)
                 {
@@ -86,8 +85,9 @@ namespace ATReforged
             return false;
         }
 
+        // Apply a mood/opinion debuff to the victim of the botched surgery.
         private void TryGainBotchedSurgeryThought(Pawn patient, Pawn surgeon)
-        { // Apply a mood/opinion debuff to the victim of the botched surgery.
+        {
             if (!patient.RaceProps.Humanlike)
             {
                 return;
@@ -95,8 +95,9 @@ namespace ATReforged
             patient.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.BotchedMySurgery, surgeon);
         }
 
+        // Taken directly from Vanilla calculations. Returns the average potency of used "medicine" or in this case, kits.
         private float GetAverageMedicalPotency(List<Thing> ingredients, Bill bill)
-        { // Taken directly from Vanilla calculations. Returns the average potency of used "medicine" or in this case, kits.
+        {
             ThingDef thingDef = (bill as Bill_Medical)?.consumedInitialMedicineDef;
             int num = 0;
             float num2 = 0f;

@@ -6,11 +6,11 @@
 		<description>Tier one androids are simply humanlike-machines, designed to mimic the general image and minimal capabilities of humanity. Lacking true sapience, many view them like very intelligent and responsive animals. This often leads to their exploitation as fodder or belittlement as pets, of which the dutiful drones pay no heed. Their existence is to serve, and they do so uncomplainingly.</description>
 		<alienRace>
 			<graphicPaths>
-				<li>
-					<body>Things/Pawns/Humanlikes/Tier1/body/</body>
-					<head>Things/Pawns/Humanlikes/Tier1/head/</head>
-				</li>
-			</graphicPaths>
+                <body>Things/Pawns/Humanlikes/Tier1/body/</body>
+                <head>Things/Pawns/Humanlikes/Tier1/head/</head>
+                <skeleton>Things/Pawns/Humanlikes/Tier1/body/</skeleton>
+                <skull>Things/Pawns/Humanlikes/Tier1/head/</skull>
+            </graphicPaths>
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/Tier1/head/None_Average_Normal_south</uiIconPath>
 		<statBases>

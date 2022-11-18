@@ -168,8 +168,8 @@ namespace ATReforged
             if (attackType == 2)
             { // If the attack was a grid-locker, create a ransom demand for removing the effect and send it.
                 ChoiceLetter_RansomDemand ransom = (ChoiceLetter_RansomDemand)LetterMaker.MakeLetter(DefDatabase<LetterDef>.GetNamed("ATR_RansomChoiceLetter"));
-                ransom.label = "ATR_CryptolockerNeedRansom".Translate();
-                ransom.text = "ATR_CryptolockerNeedRansomDesc".Translate(victims.Count, fee.ToString());
+                ransom.title = "ATR_CryptolockerNeedRansom".Translate();
+                ransom.Text = "ATR_CryptolockerNeedRansomDesc".Translate(victims.Count, fee.ToString());
                 ransom.radioMode = true;
                 ransom.fee = fee;
                 ransom.cryptolockedThings = cryptolockedThings;

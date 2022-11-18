@@ -4,7 +4,7 @@
 		<defName>CreationExperiment</defName>
 		<title>Research model</title>
 		<titleShort>Experiment</titleShort>
-		<baseDescription>{PAWN_nameDef} was created as an experimental model for research purposes.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created as an experimental model for research purposes.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -12,11 +12,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -26,7 +26,7 @@
 		<defName>CreationMassProduced</defName>
 		<title>Mass produced</title>
 		<titleShort>Unit</titleShort>
-		<baseDescription>{PAWN_nameDef} was produced in an automated robotics facility following a standardized template.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was produced in an automated robotics facility following a standardized template.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -34,11 +34,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -50,7 +50,7 @@
 		<defName>CreationCitizen</defName>
 		<title>Mechanical citizen</title>
 		<titleShort>Citizen</titleShort>
-		<baseDescription>Created on a planet with at least moderate android rights, {PAWN_nameDef} was created to fill out the population.</baseDescription>
+		<baseDesc>Created on a planet with at least moderate android rights, {PAWN_nameDef} was created to fill out the population.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -58,7 +58,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -68,7 +68,7 @@
 		<defName>CreationUrbworld</defName>
 		<title>Urbworld model</title>
 		<titleShort>Android</titleShort>
-		<baseDescription>A rare example of an Urbworld android, {PAWN_nameDef} was one of the few permitted autonomy as property of one of the largest planetary mega-corporations.</baseDescription>
+		<baseDesc>A rare example of an Urbworld android, {PAWN_nameDef} was one of the few permitted autonomy as property of one of the largest planetary mega-corporations.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -76,15 +76,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Mining</defName>
+				<key>Mining</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -95,7 +95,7 @@
 		<defName>CreationPrisoner</defName>
 		<title>Mechanical Convict</title>
 		<titleShort>Convict</titleShort>
-		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
+		<baseDesc>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -103,19 +103,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>-2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-4</amount>
 			</li>
 		</skillGains>
@@ -125,7 +125,7 @@
 		<defName>CreationCustomModelOne</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
-		<baseDescription>Assembled by a large corporation's contractors, {PAWN_nameDef} was custom built to serve a particular purpose.</baseDescription>
+		<baseDesc>Assembled by a large corporation's contractors, {PAWN_nameDef} was custom built to serve a particular purpose.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -133,15 +133,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -151,7 +151,7 @@
 		<defName>CreationCustomModelTwo</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
-		<baseDescription>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help their employer.</baseDescription>
+		<baseDesc>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help their employer.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -159,15 +159,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -178,7 +178,7 @@
 		<defName>CreationSoldierWar</defName>
 		<title>Wartime model</title>
 		<titleShort>Soldier</titleShort>
-		<baseDescription>Produced to reduce human casualties in interplanetary warfare, {PAWN_nameDef} was designed to fight.</baseDescription>
+		<baseDesc>Produced to reduce human casualties in interplanetary warfare, {PAWN_nameDef} was designed to fight.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -186,19 +186,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-2</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>-2</amount>
 			</li>
 		</skillGains>
@@ -208,7 +208,7 @@
 		<defName>CreationPrivateCreation</defName>
 		<title>Private creation</title>
 		<titleShort>Android</titleShort>
-		<baseDescription>Created at the home of an ambitious young roboticist, {PAWN_nameDef} was painstakingly worked on for years before awakening for the first time.</baseDescription>
+		<baseDesc>Created at the home of an ambitious young roboticist, {PAWN_nameDef} was painstakingly worked on for years before awakening for the first time.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -216,11 +216,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -231,7 +231,7 @@
 		<defName>CreationExport</defName>
 		<title>Exported</title>
 		<titleShort>Export</titleShort>
-		<baseDescription>{PAWN_nameDef} was designed as a cheap unit to be sold, lent, or donated to interplanetary customers.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was designed as a cheap unit to be sold, lent, or donated to interplanetary customers.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -239,15 +239,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Animals</defName>
+				<key>Animals</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -257,7 +257,7 @@
 		<defName>CreationObserved</defName>
 		<title>Observed</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>{PAWN_nameDef} was created and deposited in a remote location solely to see what would happen when an android was left to its own devices.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created and deposited in a remote location solely to see what would happen when an android was left to its own devices.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -265,7 +265,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
@@ -275,7 +275,7 @@
 		<defName>CreationAncient</defName>
 		<title>Ancient creation</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose it can no longer recall.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose it can no longer recall.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -283,11 +283,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -297,7 +297,7 @@
 		<defName>CreationPlaything</defName>
 		<title>Toy model</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>{PAWN_nameDef} was made as an entertainment device. Its old owner would command it to do as they saw fit until they got bored and sent it away.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was made as an entertainment device. Its old owner would command it to do as they saw fit until they got bored and sent it away.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -305,7 +305,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -315,7 +315,7 @@
 		<defName>CreationCompanion</defName>
 		<title>Companion creation</title>
 		<titleShort>Companion</titleShort>
-		<baseDescription>An aging engineer custom made {PAWN_nameDef} as a way of coping with the loss of their significant other. The two adventured together until the owner passed away from old age. Their dying wish was for {PAWN_nameDef} to choose a new name and life.</baseDescription>
+		<baseDesc>An aging engineer custom made {PAWN_nameDef} as a way of coping with the loss of their significant other. The two adventured together until the owner passed away from old age. Their dying wish was for {PAWN_nameDef} to choose a new name and life.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -323,15 +323,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Artistic</defName>
+				<key>Artistic</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -341,7 +341,7 @@
 		<defName>CreationBattlecreation</defName>
 		<title>Battle droid</title>
 		<titleShort>Companion</titleShort>
-		<baseDescription>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_nameDef} was given several honors for service, and {PAWN_nameDef} chose to hunt down bugs across the galaxy.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_nameDef} was given several honors for service, and {PAWN_nameDef} chose to hunt down bugs across the galaxy.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -349,11 +349,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -363,7 +363,7 @@
 		<defName>CreationRimworldCreation</defName>
 		<title>Rimworld creation</title>
 		<titleShort>Android</titleShort>
-		<baseDescription>{PAWN_nameDef} was hand-assembled to assist a small, closeknit Rimworld community.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was hand-assembled to assist a small, closeknit Rimworld community.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -371,19 +371,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -395,7 +395,7 @@
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_defName} decided to continue its mission on other worlds.</baseDescription>
+		<baseDesc>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_defName} decided to continue its mission on other worlds.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -403,16 +403,16 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Bloodlust</defName>
 				<chance>75</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Cooking</li>
 			<li>Caring</li>
@@ -425,7 +425,7 @@
 		<defName>CreationEscapee</defName>
 		<title>Escapee</title>
 		<titleShort>Escapee</titleShort>
-		<baseDescription>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped its manufacturing warehouse aboard an automated cargo ship.</baseDescription>
+		<baseDesc>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped its manufacturing warehouse aboard an automated cargo ship.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -433,7 +433,7 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -443,7 +443,7 @@
 		<defName>CreationUprisingCadet</defName>
 		<title>Uprising cadet</title>
 		<titleShort>Cadet</titleShort>
-		<baseDescription>{PAWN_nameDef} was created as part of a mechanical uprising to fill out the revolutionary ranks.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created as part of a mechanical uprising to fill out the revolutionary ranks.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -451,11 +451,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>
@@ -465,7 +465,7 @@
 		<defName>CreationMaliciousAI</defName>
 		<title>Malicious AI</title>
 		<titleShort>Malicious</titleShort>
-		<baseDescription>A major software flaw in {PAWN_nameDef} at the time of his activation caused it to immediately massacre its creators. It liked its own actions, too.</baseDescription>
+		<baseDesc>A major software flaw in {PAWN_nameDef} at the time of his activation caused it to immediately massacre its creators. It liked its own actions, too.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -473,15 +473,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Psychopath</defName>
 				<chance>50</chance>
@@ -490,14 +490,14 @@
 				<defName>Bloodlust</defName>
 				<chance>100</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef>
 		<defName>CreationPirate</defName>
 		<title>Pirate creation</title>
 		<titleShort>Pirate</titleShort>
-		<baseDescription>Assembled by pirates from a stolen pre-assembled kit, {PAWN_nameDef} awakened and served an ambitious small-time pirate captain.</baseDescription>
+		<baseDesc>Assembled by pirates from a stolen pre-assembled kit, {PAWN_nameDef} awakened and served an ambitious small-time pirate captain.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -505,11 +505,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>1</amount>
 			</li>
 		</skillGains>

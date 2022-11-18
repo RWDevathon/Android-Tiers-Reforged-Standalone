@@ -56,6 +56,7 @@
         <defName>ATR_AdvancedArm</defName>
         <label>Advanced arm</label>
         <description>Higher plasteel temperance with higher efficiency components grants this arm a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedArm</ThingDef></descriptionHyperlinks>
 	    <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -120,6 +121,7 @@
         <defName>ATR_AdvancedLeg</defName>
         <label>Advanced leg</label>
         <description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedLeg</ThingDef></descriptionHyperlinks>
         <spawnThingOnRemoved>ATR_AdvancedLeg</spawnThingOnRemoved>
     </HediffDef>
   
@@ -170,6 +172,7 @@
         <defName>ATR_AdvancedVisualSensor</defName>
         <label>Advanced visual sensor</label>
         <description>Higher plasteel temperance with higher efficiency components grants this visual sensor a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedVisualSensor</ThingDef></descriptionHyperlinks>
         <spawnThingOnRemoved>ATR_AdvancedVisualSensor</spawnThingOnRemoved>
     </HediffDef>
   
@@ -220,6 +223,7 @@
         <defName>ATR_AdvancedAudioSensor</defName>
         <label>Advanced audio sensor</label>
         <description>Higher plasteel temperance with higher efficiency components grants this audio sensor a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedAudioSensor</ThingDef></descriptionHyperlinks>
         <spawnThingOnRemoved>ATR_AdvancedAudioSensor</spawnThingOnRemoved>
     </HediffDef>
   
@@ -270,6 +274,7 @@
         <defName>ATR_AdvancedHeatsink</defName>
         <label>Advanced heatsink</label>
         <description>Higher plasteel temperance with higher efficiency components grants this heatsink a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedHeatsink</ThingDef></descriptionHyperlinks>
         <spawnThingOnRemoved>ATR_AdvancedHeatsink</spawnThingOnRemoved>
         <stages>
             <li>
@@ -328,6 +333,7 @@
         <defName>ATR_AdvancedCoolantPump</defName>
         <label>Advanced coolant pump</label>
         <description>Higher plasteel temperance with higher efficiency components grants this coolant pump a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedCoolantPump</ThingDef></descriptionHyperlinks>
         <stages>
 			<li>
 		        <statOffsets>
@@ -387,6 +393,7 @@
         <defName>ATR_AdvancedBattery</defName>
         <label>Advanced battery pack</label>
         <description>Higher plasteel temperance with higher efficiency components grants this battery a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedBattery</ThingDef></descriptionHyperlinks>
         <stages>
 			<li>
                 <hungerRateFactor>0.8</hungerRateFactor>
@@ -442,6 +449,7 @@
         <defName>ATR_AdvancedMechaniteStorage</defName>
         <label>Advanced mechanite storage</label>
         <description>Higher plasteel temperance with higher efficiency components grants this mechanite storage a significant advantage over standard issue parts. Higher quality mechanites means injuries will be repaired quicker.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedMechaniteStorage</ThingDef></descriptionHyperlinks>
 		<stages>
 			<li>
                 <statOffsets>
@@ -499,6 +507,7 @@
         <defName>ATR_AdvancedReactor</defName>
         <label>Advanced bio-reactor</label>
         <description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</description>
+        <descriptionHyperlinks><ThingDef>ATR_AdvancedReactor</ThingDef></descriptionHyperlinks>
 		<stages>
 			<li>
                 <hungerRateFactor>0.8</hungerRateFactor>

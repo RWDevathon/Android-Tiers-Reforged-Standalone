@@ -14,7 +14,6 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>80</combatPower>
-    <baseRecruitDifficulty>0.80</baseRecruitDifficulty>
 	<minGenerationAge>20</minGenerationAge>
 	<maxGenerationAge>50</maxGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -68,7 +67,6 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>40</combatPower>
-    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
 	<minGenerationAge>20</minGenerationAge>	
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
@@ -118,7 +116,6 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 	<race>Tier2Android</race>
     <combatPower>130</combatPower>
 	<minGenerationAge>20</minGenerationAge>
@@ -172,7 +169,6 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
 	<race>Tier3Android</race>
     <combatPower>180</combatPower>
 	<minGenerationAge>20</minGenerationAge>
@@ -227,7 +223,6 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-	    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
 	<race>Tier4Android</race>
     <combatPower>220</combatPower>
 	<minGenerationAge>20</minGenerationAge>

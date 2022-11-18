@@ -4,7 +4,7 @@
 		<defName>AndroidRebel</defName>
 		<title>Rebellious AI</title>
 		<titleShort>Rebel</titleShort>
-		<baseDescription>After years of complete enslavement by {PAWN_nameDef}s owners, {PAWN_nameDef} decided to break free, killing the family that once owned him and gaining his own freedom.</baseDescription>
+		<baseDesc>After years of complete enslavement by {PAWN_nameDef}s owners, {PAWN_nameDef} decided to break free, killing the family that once owned him and gaining his own freedom.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -12,11 +12,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -24,20 +24,20 @@
 			<li>Caring</li>
 			<li>Animals</li>
 		</workDisables>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>40</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef>
 		<defName>AndroidPirate</defName>
 		<title>Android pirate</title>
 		<titleShort>Pirate</titleShort>
-		<baseDescription>Indoctrinated into a group of pirates, {PAWN_nameDef} would be involved in numerous boarding raids aboard any unlucky cargo ships that crossed into factions territory.</baseDescription>
+		<baseDesc>Indoctrinated into a group of pirates, {PAWN_nameDef} would be involved in numerous boarding raids aboard any unlucky cargo ships that crossed into factions territory.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -45,11 +45,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -63,7 +63,7 @@
 		<defName>AndroidHacker</defName>
 		<title>AI hacker</title>
 		<titleShort>Hacker</titleShort>
-		<baseDescription>{PAWN_nameDef} was rebellious in nature and would often take part in data heists, often selling his findings across underground networks to the highest bidder.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was rebellious in nature and would often take part in data heists, often selling his findings across underground networks to the highest bidder.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -71,11 +71,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -85,7 +85,7 @@
 		<defName>AndroidJunker</defName>
 		<title>Illegal junker</title>
 		<titleShort>Junker</titleShort>
-		<baseDescription>Being part of an illegal scrapping operation, {PAWN_nameDef} and his crew would purposefully shoot down automated cargo pods in order to sell whatever was left.</baseDescription>
+		<baseDesc>Being part of an illegal scrapping operation, {PAWN_nameDef} and his crew would purposefully shoot down automated cargo pods in order to sell whatever was left.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -93,11 +93,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Construction</defName>
+				<key>Construction</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -107,7 +107,7 @@
 		<defName>AndroidButcher</defName>
 		<title>Butcher</title>
 		<titleShort>Butcher</titleShort>
-		<baseDescription>{PAWN_nameDef} would hunt down lonely androids and humans alike in order to sell whatever they could salvage to unknowing customers.</baseDescription>
+		<baseDesc>{PAWN_nameDef} would hunt down lonely androids and humans alike in order to sell whatever they could salvage to unknowing customers.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -115,11 +115,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Cooking</defName>
+				<key>Cooking</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -129,7 +129,7 @@
 		<defName>AndroidBadCop</defName>
 		<title>Corrupt cop</title>
 		<titleShort>Cop</titleShort>
-		<baseDescription>Working as law enforcement on an urbworld can be tough, {PAWN_nameDef} wasn't known for turning down bribes, after all - what's one more unknown murder on a planet with a population of trillions.</baseDescription>
+		<baseDesc>Working as law enforcement on an urbworld can be tough, {PAWN_nameDef} wasn't known for turning down bribes, after all - what's one more unknown murder on a planet with a population of trillions.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -137,11 +137,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -151,7 +151,7 @@
 		<defName>AndroidMurderer</defName>
 		<title>Murderer</title>
 		<titleShort>Murderer</titleShort>
-		<baseDescription>{PAWN_nameDef} had spent his entire existance being belittled by the local populus. One day he decided he had enough and killed two men with his bare hands, it felt good. Really good.</baseDescription>
+		<baseDesc>{PAWN_nameDef} had spent his entire existance being belittled by the local populus. One day he decided he had enough and killed two men with his bare hands, it felt good. Really good.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -159,27 +159,27 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Bloodlust</defName>
 				<chance>90</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 	
 	<AlienRace.BackstoryDef>
 		<defName>AndroidRobber</defName>
 		<title>Bank robber</title>
 		<titleShort>Thief</titleShort>
-		<baseDescription>On his home world, {PAWN_nameDef} was part of a five man group who went of a bank robbing spree across his city, fleeing the planet with millions of credits.</baseDescription>
+		<baseDesc>On his home world, {PAWN_nameDef} was part of a five man group who went of a bank robbing spree across his city, fleeing the planet with millions of credits.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -187,11 +187,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
@@ -201,7 +201,7 @@
 		<defName>AndroidJoywireCon</defName>
 		<title>Joywire con</title>
 		<titleShort>Con</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of an underground joywire business. Little did anyone know his creations had the opposite effects on people; causing severe depression, anxiety and eventual suicide only days after installation.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of an underground joywire business. Little did anyone know his creations had the opposite effects on people; causing severe depression, anxiety and eventual suicide only days after installation.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -209,19 +209,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
@@ -231,14 +231,14 @@
 				<defName>Psychopath</defName>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidBotanist</defName>
 		<title>Botanist</title>
 		<titleShort>Botanist</titleShort>
-		<baseDescription>Constantly developing stronger and stronger strains of his crops, {PAWN_nameDef} was the lead botanist of a huge drug cartel on his home world.</baseDescription>
+		<baseDesc>Constantly developing stronger and stronger strains of his crops, {PAWN_nameDef} was the lead botanist of a huge drug cartel on his home world.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -246,11 +246,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Plants</defName>
+				<key>Plants</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
@@ -260,7 +260,7 @@
 		<defName>AndroidEnslaved</defName>
 		<title>Enslaved</title>
 		<titleShort>Slave</titleShort>
-		<baseDescription>On their home world, androids aren't given any rights. {PAWN_nameDef} spent most of their existance working their master's mines until they broke down.</baseDescription>
+		<baseDesc>On their home world, androids aren't given any rights. {PAWN_nameDef} spent most of their existance working their master's mines until they broke down.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -269,11 +269,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Mining</defName>
+				<key>Mining</key>
 				<amount>6</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-4</amount>
 			</li>
 		</skillGains>
@@ -289,7 +289,7 @@
 		<defName>AndroidCoghead</defName>
 		<title>Medieval coghead</title>
 		<titleShort>Coghead</titleShort>
-		<baseDescription>In the rare cases where androids are found on medieval planets, the locals call them "cogheads". Seen as unholy by most religions, they're lives are short, usually used as fodder for battles to repent their sins to god.</baseDescription>
+		<baseDesc>In the rare cases where androids are found on medieval planets, the locals call them "cogheads". Seen as unholy by most religions, they're lives are short, usually used as fodder for battles to repent their sins to god.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -297,11 +297,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>5</amount>
 			</li>
 		</skillGains>
@@ -315,7 +315,7 @@
 		<defName>AndroidSlaver</defName>
 		<title>Slave trafficker</title>
 		<titleShort>Slaver</titleShort>
-		<baseDescription>{PAWN_nameDef} is a defective military android, forcefully kidnapped by pirates and integrated into their way of life. {PAWN_nameDef} has since been part of their illegal trafficking ring, trading human lives to the highest bidder.</baseDescription>
+		<baseDesc>{PAWN_nameDef} is a defective military android, forcefully kidnapped by pirates and integrated into their way of life. {PAWN_nameDef} has since been part of their illegal trafficking ring, trading human lives to the highest bidder.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -323,19 +323,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>3</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
@@ -345,14 +345,14 @@
 				<defName>Psychopath</defName>
 				<chance>15</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidMilitia</defName>
 		<title>Militia officer</title>
 		<titleShort>Officer</titleShort>
-		<baseDescription>{PAWN_nameDef} was once part of an official military, before defecting to form their own android militia in an attempt to uprise the government on their planet.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was once part of an official military, before defecting to form their own android militia in an attempt to uprise the government on their planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -360,32 +360,32 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>80</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidEscapee</defName>
 		<title>Escaped convict</title>
 		<titleShort>Escapee</titleShort>
-		<baseDescription>{PAWN_nameDef} was detained and sentenced to dismantlement after taking part in forming a gang that planned to bomb the capital building on their home planet. {PAWN_nameDef} had escaped however when the penal camp was raided during the android uprising of the planet.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was detained and sentenced to dismantlement after taking part in forming a gang that planned to bomb the capital building on their home planet. {PAWN_nameDef} had escaped however when the penal camp was raided during the android uprising of the planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -393,32 +393,32 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>60</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidBounty</defName>
 		<title>Bounty hunter</title>
 		<titleShort>Hunter</titleShort>
-		<baseDescription>After {PAWN_nameDef} had taken back their freedom, they became a bounty hunter on a nearby urbworld, working for some of the highest ranking crime bosses there. {PAWN_nameDef} was fond of using high tech weaponry to get the job done.</baseDescription>
+		<baseDesc>After {PAWN_nameDef} had taken back their freedom, they became a bounty hunter on a nearby urbworld, working for some of the highest ranking crime bosses there. {PAWN_nameDef} was fond of using high tech weaponry to get the job done.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -426,15 +426,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>8</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
@@ -444,20 +444,20 @@
 			<li>Animals</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>3</degree>
 				<chance>10</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidInsurrectionLower</defName>
 		<title>Insurrection soldier</title>
 		<titleShort>Soldier</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of an android uprising movement on their home planet. Taking part in multiple prison raids and killing several government officials.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of an android uprising movement on their home planet. Taking part in multiple prison raids and killing several government officials.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -465,15 +465,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>-3</amount>
 			</li>
 		</skillGains>
@@ -482,20 +482,20 @@
 			<li>Caring</li>
 			<li>Animals</li>
 		</workDisables>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>90</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidInsurrectionHigher</defName>
 		<title>Insurrection captain</title>
 		<titleShort>Captain</titleShort>
-		<baseDescription>{PAWN_nameDef} took back his freedom when his slavers attempted to dismantle {PAWN_nameDef} in replacement of a newer model. Going on to lead multiple android uprisings on his home planet.</baseDescription>
+		<baseDesc>{PAWN_nameDef} took back his freedom when his slavers attempted to dismantle {PAWN_nameDef} in replacement of a newer model. Going on to lead multiple android uprisings on his home planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -503,32 +503,32 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>8</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>5</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>2</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>100</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidConArtist</defName>
 		<title>Con artist</title>
 		<titleShort>Con</titleShort>
-		<baseDescription>{PAWN_nameDef} is a factory standard android that had been modified illegally by an urbworld crime group, reprogramming {PAWN_nameDef} into a master of persuasion that was able to con almost anyone out of their money.</baseDescription>
+		<baseDesc>{PAWN_nameDef} is a factory standard android that had been modified illegally by an urbworld crime group, reprogramming {PAWN_nameDef} into a master of persuasion that was able to con almost anyone out of their money.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -536,11 +536,11 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>2</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -555,7 +555,7 @@
 		<defName>AndroidUnethicalResearcher</defName>
 		<title>Unethical researcher</title>
 		<titleShort>Researcher</titleShort>
-		<baseDescription>{PAWN_nameDef} was part of an illegal research team hidden around a rimworld, conducting all sorts of unethical research on humans and androids alike.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was part of an illegal research team hidden around a rimworld, conducting all sorts of unethical research on humans and androids alike.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -563,19 +563,19 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>1</amount>
 			</li>
 			<li>
-				<defName>Medicine</defName>
+				<key>Medicine</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Psychopath</defName>
 				<chance>20</chance>
@@ -584,7 +584,7 @@
 				<defName>Bloodlust</defName>
 				<chance>20</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<workDisables>
 			<li>Social</li>
 		</workDisables>
@@ -594,7 +594,7 @@
 		<defName>AndroidVengeful</defName>
 		<title>Vengeful android</title>
 		<titleShort>Vengeful</titleShort>
-		<baseDescription>{PAWN_nameDef} was left to rust in a scrapheap when they were replaced by a newer model. {PAWN_nameDef} slowly undid the programming that kept them inactive, and after a year of meticulous planning and hacking, they regained full control of their body.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was left to rust in a scrapheap when they were replaced by a newer model. {PAWN_nameDef} slowly undid the programming that kept them inactive, and after a year of meticulous planning and hacking, they regained full control of their body.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -602,32 +602,32 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Intellectual</defName>
+				<key>Intellectual</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Crafting</defName>
+				<key>Crafting</key>
 				<amount>4</amount>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>30</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 
 	<AlienRace.BackstoryDef>
 		<defName>AndroidAssimilator</defName>
 		<title>Assimilator</title>
 		<titleShort>Assimilator</titleShort>
-		<baseDescription>Organic beings are inferior and must be upgraded in order to contribute to the world. {PAWN_nameDef} lives by this mantra and will die in order to see it carried out.</baseDescription>
+		<baseDesc>Organic beings are inferior and must be upgraded in order to contribute to the world. {PAWN_nameDef} lives by this mantra and will die in order to see it carried out.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -635,15 +635,15 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<defName>Shooting</defName>
+				<key>Shooting</key>
 				<amount>7</amount>
 			</li>
 			<li>
-				<defName>Melee</defName>
+				<key>Melee</key>
 				<amount>4</amount>
 			</li>
 			<li>
-				<defName>Social</defName>
+				<key>Social</key>
 				<amount>6</amount>
 			</li>
 		</skillGains>
@@ -652,12 +652,12 @@
 			<li>Animals</li>
 			<li>ManualSkilled</li>
 		</workDisables>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>FeelingsTowardOrganics</defName>
 				<degree>4</degree>
 				<chance>100</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 	</AlienRace.BackstoryDef>
 </Defs>

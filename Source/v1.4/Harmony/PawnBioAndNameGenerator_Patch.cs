@@ -34,7 +34,7 @@ namespace ATReforged
                         default:
                             if (pawn.RaceProps.hasGenders)
                             {
-                                __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidNoneNames, pawn.story, RulePackDefOf.ATR_AndroidNoneNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                                __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_AndroidNoneNames, pawn.story, null, RulePackDefOf.ATR_AndroidNoneNames, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
                             }
                             break;
                     }
@@ -43,7 +43,7 @@ namespace ATReforged
                 // Mechanical drones never have gender. Generate a new name with the None name maker, ignoring xml tags.
                 else if (Utils.IsConsideredMechanicalDrone(pawn))
                 {
-                    __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_DroneNoneNames, pawn.story, null, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                    __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, RulePackDefOf.ATR_DroneNoneNames, pawn.story, null, null, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
                 }
             }
         }

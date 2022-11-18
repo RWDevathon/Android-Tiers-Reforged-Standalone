@@ -15,9 +15,9 @@
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
-					<alienbodytypes>
+					<bodyTypes>
 						<li>Male</li>
-					</alienbodytypes>
+					</bodyTypes>
 					<borderScale>2</borderScale>
 					<atlasScale>2</atlasScale>
 					<colorChannels>
@@ -45,10 +45,10 @@
 				</alienPartGenerator>
 			</generalSettings>
 			<graphicPaths>
-				<li>
-					<body>Things/Pawns/Humanlikes/M8Mech/body/</body>
-					<head>Things/Pawns/Humanlikes/M8Mech/head/</head>
-				</li>
+                <body>Things/Pawns/Humanlikes/M8Mech/body/</body>
+                <head>Things/Pawns/Humanlikes/M8Mech/head/</head>
+                <skeleton>Things/Pawns/Humanlikes/M8Mech/body/</skeleton>
+                <skull>Things/Pawns/Humanlikes/M8Mech/head/</skull>
 			</graphicPaths>
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/M8Mech/body/Naked_None_south</uiIconPath>

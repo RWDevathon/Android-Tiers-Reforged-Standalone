@@ -3,49 +3,49 @@
 
     <!-- Childhoods -->
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>ATR_MechChildhood</defName>
 		<title>M-Series Drone</title>
 		<titleShort>Mech</titleShort>
-		<baseDescription>Assembled, seemingly, by archotechs long ago, no knowledge of this units origin or purpose remains. It certainly only seems built for warfare, though. What use could Archotechs have had for this?</baseDescription>
+		<baseDesc>Assembled, seemingly, by archotechs long ago, no knowledge of this units origin or purpose remains. It certainly only seems built for warfare, though. What use could Archotechs have had for this?</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_MSeries</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>ATR_DroneChildhood</defName>
 		<title>Drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDescription>Drone "childhoods" are as interesting as they are often forgotten. Many creators don't bother marking the moment of awakening, and no drone knows its own history.</baseDescription>
+		<baseDesc>Drone "childhoods" are as interesting as they are often forgotten. Many creators don't bother marking the moment of awakening, and no drone knows its own history.</baseDesc>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_Drone</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 	
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>FreshBlank</defName>
 		<title>Fresh Blank</title>
 		<titleShort>Unit</titleShort>
-		<baseDescription>{PAWN_nameDef} was created to be a perfectly blank slate, ready for its next owner to form its first and only memories with.</baseDescription>
+		<baseDesc>{PAWN_nameDef} was created to be a perfectly blank slate, ready for its next owner to form its first and only memories with.</baseDesc>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
             <li>SurrogateSoldier</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
     <!-- Adulthoods -->
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>ATR_MechAdulthood</defName>
 		<title>War Drone</title>
 		<titleShort>Mech</titleShort>
-		<baseDescription>{PAWN_nameDef} is a drone that has only ever been capable of warfighting. Bugs, mechanoids, rebels, empires, none of it matters. Drones don't care who they fight, and they don't remember who they've killed.</baseDescription>
+		<baseDesc>{PAWN_nameDef} is a drone that has only ever been capable of warfighting. Bugs, mechanoids, rebels, empires, none of it matters. Drones don't care who they fight, and they don't remember who they've killed.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<slot>Adulthood</slot>
@@ -55,28 +55,28 @@
 		<workDisables>
 			<li>AllWork</li>
 		</workDisables>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef>
+	<BackstoryDef>
 		<defName>ATR_DroneAdulthood</defName>
 		<title>Drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDescription>{PAWN_nameDef} is a drone that continues to serve based on its programming. There's no way of knowing how many times that programming has changed, but the drone does not seem bothered by this.</baseDescription>
+		<baseDesc>{PAWN_nameDef} is a drone that continues to serve based on its programming. There's no way of knowing how many times that programming has changed, but the drone does not seem bothered by this.</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_Drone</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-    <AlienRace.BackstoryDef>
+    <BackstoryDef>
         <defName>AdultBlank</defName>
         <title>Adult Blank</title>
 		<titleShort>Unit</titleShort>
-		<baseDescription>This unit has neither intelligence nor memory. It is entirely devoid of character and utility.</baseDescription>
+		<baseDesc>This unit has neither intelligence nor memory. It is entirely devoid of character and utility.</baseDesc>
 		<slot>Adulthood</slot>
         <spawnCategories>
             <li>SurrogateSoldier</li>
         </spawnCategories>
-    </AlienRace.BackstoryDef>
+    </BackstoryDef>
 
 </Defs>

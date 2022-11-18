@@ -467,11 +467,19 @@ namespace ATReforged
             Scribe_Collections.Look(ref blacklistedMechanicalTraits, "ATR_blacklistedMechanicalTraits", LookMode.Value);
 
             // Considerations
-            Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Def);
-            Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Def);
-            Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Def);
-            Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Def);
-            Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Def);
+            try
+            {
+                Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Def);
+                Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Def);
+                Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Def);
+                Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Def);
+                Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Def);
+            }
+            catch (Exception ex)
+            {
+                Log.Warning("[ATR] Mod settings failed to load appropriately! Resetting to default to avoid further issues. " + ex.Message + " " + ex.StackTrace);
+                ApplyPreset(SettingsPreset.Default);
+            }
 
             // Needs
             Scribe_Values.Look(ref androidsHaveJoyNeed, "ATR_androidsHaveJoyNeed", true);
@@ -486,7 +494,15 @@ namespace ATReforged
             Scribe_Values.Look(ref chargeCapableBioEfficiency, "ATR_chargeCapableBioEfficiency", 0.5f);
             Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);
 
-            Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
+            try
+            {
+                Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
+            }
+            catch (Exception ex)
+            {
+                Log.Warning("[ATR] Mod settings failed to load appropriately! Resetting to default to avoid further issues. " + ex.Message + " " + ex.StackTrace);
+                ApplyPreset(SettingsPreset.Default);
+            }
 
             /* === SECURITY === */
 

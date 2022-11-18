@@ -187,12 +187,6 @@
           <max>8</max>
         </countRange>
       </li>
-      <li Class="StockGenerator_Clothes">
-        <countRange>
-          <min>10</min>
-          <max>16</max>
-        </countRange>
-      </li>
       <li Class="StockGenerator_Category">
         <categoryDef>Drugs</categoryDef>
         <thingDefCountRange>
@@ -204,10 +198,10 @@
           <max>1500</max>
         </totalPriceRange>
       </li>
-      <li Class="StockGenerator_WeaponsRanged">
+      <li Class="StockGenerator_MarketValue">
         <countRange>
-          <min>3</min>
-          <max>6</max>
+          <min>10</min>
+          <max>20</max>
         </countRange>
       </li>
       <li Class="StockGenerator_Category">
@@ -219,12 +213,6 @@
         <countRange>
           <min>1</min>
           <max>2</max>
-        </countRange>
-      </li>
-      <li Class="StockGenerator_Armor">
-        <countRange>
-          <min>2</min>
-          <max>4</max>
         </countRange>
       </li>
       <li Class="StockGenerator_Tag">
@@ -287,12 +275,6 @@
         </thingDefCountRange>
         <countRange>
           <min>1</min>
-          <max>10</max>
-        </countRange>
-      </li>
-      <li Class="StockGenerator_Art">
-        <countRange>
-          <min>5</min>
           <max>10</max>
         </countRange>
       </li>

@@ -6,10 +6,10 @@
 		<description>The pinnacle of known android theory and practice, the class of tier four androids is marked by the possession of a special AI persona core. While these cores are archotech technology, the chassis and internals are all glitterworld technology - there is no known method for the creation of an archotech chassis. \n\nTier four androids are a cut above the rest, and they know it too - ego complexes and disdain toward lesser tiers are very common amongst them.</description>
 		<alienRace>
 			<graphicPaths>
-				<li>
-					<body>Things/Pawns/Humanlikes/Tier4/body/</body>
-					<head>Things/Pawns/Humanlikes/Tier4/head/</head>
-				</li>
+                <body>Things/Pawns/Humanlikes/Tier4/body/</body>
+                <head>Things/Pawns/Humanlikes/Tier4/head/</head>
+                <skeleton>Things/Pawns/Humanlikes/Tier4/body/</skeleton>
+                <skull>Things/Pawns/Humanlikes/Tier4/head/</skull>
 			</graphicPaths>
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/Tier4/head/None_Average_Normal_south</uiIconPath>

@@ -6,6 +6,7 @@
         <techLevel>Ultra</techLevel>
         <relicChance>0</relicChance>
         <tradeability>None</tradeability>
+        <smeltable>false</smeltable>
         <thingCategories>
             <li>WeaponsMech</li>
         </thingCategories>

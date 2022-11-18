@@ -4,7 +4,7 @@
 	<ThingDef Name="ATR_MechanicalAnimalThingBase" ParentName="AnimalThingBase" Abstract="True">
 		<statBases>
 			<Flammability>0</Flammability>
-            <ToxicSensitivity>0</ToxicSensitivity>
+            <ToxicResistance>1</ToxicResistance>
 			<MeatAmount>0</MeatAmount>
 			<LeatherAmount>0</LeatherAmount>
             <PainShockThreshold>1</PainShockThreshold>

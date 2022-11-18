@@ -708,7 +708,7 @@ namespace ATReforged
             if (status == 6)
             {
                 // Generate the clone. 
-                PawnGenerationRequest request = new PawnGenerationRequest(ThisPawn.kindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, fixedBiologicalAge: ThisPawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: ThisPawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: ThisPawn.gender, fixedMelanin: ThisPawn.story.melanin);
+                PawnGenerationRequest request = new PawnGenerationRequest(ThisPawn.kindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, fixedBiologicalAge: ThisPawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: ThisPawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: ThisPawn.gender);
                 Pawn clone = PawnGenerator.GeneratePawn(request);
 
                 // Copy the name of this pawn into the clone.

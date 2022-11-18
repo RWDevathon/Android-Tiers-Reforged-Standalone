@@ -31,7 +31,6 @@
     <PawnKindDef ParentName = "AndroidSurrogateBase">
         <defName>AndroidT2Surrogate</defName>
         <label>T2 Android Surrogate</label>
-	    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 	    <race>Tier2Android</race>
         <combatPower>90</combatPower>
         <apparelTags>
@@ -63,7 +62,6 @@
     <PawnKindDef ParentName = "AndroidSurrogateBase">
         <defName>AndroidT3Surrogate</defName>
         <label>T3 Android Surrogate</label>
-	    <baseRecruitDifficulty>0.94</baseRecruitDifficulty>
 	    <race>Tier3Android</race>
         <combatPower>120</combatPower>
         <apparelTags>
@@ -101,7 +99,6 @@
     <PawnKindDef ParentName = "AndroidSurrogateBase">
         <defName>AndroidT4Surrogate</defName>
         <label>T4 Android Surrogate</label>
-	    <baseRecruitDifficulty>0.98</baseRecruitDifficulty>
 	    <race>Tier4Android</race>
         <combatPower>160</combatPower>
         <apparelTags>
