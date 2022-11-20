@@ -246,9 +246,9 @@ namespace ATReforged
             return (int) (ATReforged_Settings.wattsConsumedPerBodySize * pawn.BodySize);
         }
 
-
+        // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
         public static Building_Bed GetAvailableChargingBed(Pawn pawn)
-        { // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
+        { 
             Map map = pawn.Map;
 
             // Check if the pawn owns a bed that is charge-capable, online, and accessible. If it is, then it will choose that to charge.
@@ -271,7 +271,7 @@ namespace ATReforged
                 CompPowerTrader cpt = bed.TryGetComp<CompPowerTrader>();
                 if (!bed.Destroyed && cpt != null)
                 {
-                    if (!bed.Medical
+                    if (bed.Medical == pawn.health.hediffSet.HasNaturallyHealingInjury()
                     && (pawn.IsPrisoner == bed.ForPrisoners)
                     && !(bed.GetCurOccupant(0) != null || (bed.OwnersForReading.Count() != 0 && !bed.OwnersForReading.Contains(pawn)))
                     && cpt.PowerOn

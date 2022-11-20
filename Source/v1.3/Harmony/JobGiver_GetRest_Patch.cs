@@ -32,7 +32,7 @@ namespace ATReforged
                             return;
                         }
                     }
-                    // If there is no viable charging bed or charging station, then the pawn is free to grab whatever food it was originally planning to consume.
+                    // If there is no viable charging bed, then the pawn is free to use whatever bed it was originally planning to rest in.
                 }
                 catch (Exception ex)
                 {
