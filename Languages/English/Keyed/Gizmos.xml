@@ -49,6 +49,7 @@
 	<ATR_ControlCaravanSurrogateDesc>Recover a hostless surrogate in a caravan.</ATR_ControlCaravanSurrogateDesc>
 	
 	<!-- Link -->
+    <ATR_Surrogate>surrogate</ATR_Surrogate>
 	
 	<ATR_AbsorbExperience>Mind absorption</ATR_AbsorbExperience>
 	<ATR_AbsorbExperienceDesc>Absorb the experience of a prisoner's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>

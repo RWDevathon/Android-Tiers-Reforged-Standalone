@@ -131,39 +131,29 @@ namespace ATReforged
             // Surrogate only operations.
             if (Utils.IsSurrogate(ThisPawn))
             {
-                //Organic surrogates may receive downloads from the SkyMind network.
-                if (!Utils.IsConsideredMechanical(ThisPawn) && Utils.gameComp.GetCloudPawns().Count > 0)
-                yield return new Command_Action
+                //Organic surrogates may receive downloads from the pawn they are connected to in the SkyMind network.
+                if (!Utils.IsConsideredMechanical(ThisPawn) && HasSurrogate())
                 {
-                    icon = Tex.DownloadFromSkyCloud,
-                    defaultLabel = "ATR_DownloadCloudPawn".Translate(),
-                    defaultDesc = "ATR_DownloadCloudPawnDesc".Translate(),
-                    action = delegate ()
+                    Pawn controller = surrogatePawns.First();
+                    // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
+                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Any(surrogate => surrogate != ThisPawn))
                     {
-                        List<FloatMenuOption> opts = new List<FloatMenuOption>();
-
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns())
+                        yield return new Command_Action
                         {
-                            // Skip intelligences that are busy with other mind operations or that are busy controlling surrogates.
-                            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) != null || pawn.TryGetComp<CompSkyMindLink>().HasSurrogate())
-                                continue;
-
-                            opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
+                            icon = Tex.DownloadFromSkyCloud,
+                            defaultLabel = "ATR_DownloadCloudPawn".Translate(),
+                            defaultDesc = "ATR_DownloadCloudPawnDesc".Translate(),
+                            action = delegate ()
                             {
                                 Find.WindowStack.Add(new Dialog_MessageBox("ATR_DownloadCloudPawnConfirm".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_DownloadCloudPawn".Translate(), buttonAAction: delegate
                                 {
-                                    recipientPawn = pawn;
+                                    recipientPawn = controller;
                                     Linked = 4;
                                 }));
-                            }));
-                        }
-                        opts.SortBy((x) => x.Label);
-
-                        if (opts.Count == 0)
-                            opts.Add(new FloatMenuOption("ATR_NoAvailableTarget".Translate(), null));
-                        Find.WindowStack.Add(new FloatMenu(opts, ""));
+                            }
+                        };
                     }
-                };
+                }
 
                 // Surrogates may disconnect freely from their host.
                 yield return new Command_Action
@@ -269,9 +259,10 @@ namespace ATReforged
                     };
                 }
 
-                // A surrogate is connected. Allow disconnection from it.
+                // Allow interactions with surrogates of this pawn.
                 if (HasSurrogate())
                 {
+                    // Always allow controllers to disconnect from all pawns.
                     yield return new Command_Action
                     {
                         icon = Tex.DisconnectIcon,
@@ -282,6 +273,29 @@ namespace ATReforged
                             DisconnectSurrogates();
                         }
                     };
+
+                    // Allow this pawn to do duplications if it is controlling an organic surrogate and isn't controlling multiple surrogates.
+                    if (surrogatePawns.Count == 1)
+                    {
+                        Pawn surrogate = surrogatePawns.First();
+                        if (!Utils.IsConsideredMechanical(surrogate))
+                        {
+                            yield return new Command_Action
+                            {
+                                icon = Tex.Duplicate,
+                                defaultLabel = "ATR_Duplicate".Translate(),
+                                defaultDesc = "ATR_DuplicateDesc".Translate(),
+                                action = delegate ()
+                                {
+                                    Find.WindowStack.Add(new Dialog_MessageBox("ATR_DuplicateConfirm".Translate(parent.LabelShortCap, "ATR_Surrogate".Translate()) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Duplicate".Translate(), buttonAAction: delegate
+                                    {
+                                        recipientPawn = surrogate;
+                                        Linked = 2;
+                                    }));
+                                }
+                            };
+                        }
+                    }
                 }
 
                 // Skip all other operations.
@@ -306,35 +320,6 @@ namespace ATReforged
                             {
                                 recipientPawn = colonist;
                                 Linked = 1;
-                            }));
-                        }));
-                    }
-                    opts.SortBy((x) => x.Label);
-
-                    if (opts.Count == 0)
-                        opts.Add(new FloatMenuOption("ATR_NoAvailableTarget".Translate(), null));
-                    Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableTargets".Translate()));
-                }
-            };
-
-            // Allow this pawn to do duplications.
-            yield return new Command_Action
-            {
-                icon = Tex.Duplicate,
-                defaultLabel = "ATR_Duplicate".Translate(),
-                defaultDesc = "ATR_DuplicateDesc".Translate(),
-                action = delegate ()
-                {
-                    List<FloatMenuOption> opts = new List<FloatMenuOption>();
-
-                    foreach (Pawn colonist in ThisPawn.Map.mapPawns.FreeColonists.Where(colonist => Utils.IsValidMindTransferTarget(colonist) && colonist != ThisPawn && !Utils.IsConsideredMechanical(colonist)))
-                    {
-                        opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
-                        {
-                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_DuplicateConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Duplicate".Translate(), buttonAAction: delegate
-                            {
-                                recipientPawn = colonist;
-                                Linked = 2;
                             }));
                         }));
                     }
@@ -383,7 +368,7 @@ namespace ATReforged
                 if (networkOperationInProgress == -1 && status > -1)
                 { 
                     // If the status is resetting because of a failure, notify that a failure occurred. HandleInterrupt takes care of actual negative events.
-                    if (ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MemoryCorruption) != null)
+                    if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == HediffDefOf.ATR_MemoryCorruption || targetHediff.def == RimWorld.HediffDefOf.Dementia))
                     {
                         Find.LetterStack.ReceiveLetter("ATR_OperationFailure".Translate(), "ATR_OperationFailureDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.NegativeEvent, ThisPawn);
                     }
@@ -391,6 +376,11 @@ namespace ATReforged
                     {
                         HandleSuccess(status);
                     }
+
+                    // All pawns undergo a system reboot upon successful completion of an operation.
+                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_ShortReboot, ThisPawn, null);
+                    hediff.Severity = 1f;
+                    ThisPawn.health.AddHediff(hediff, null, null);
 
                     // Pawns no longer have the mind operation hediff.
                     Hediff target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
@@ -400,16 +390,11 @@ namespace ATReforged
                     // Recipients lose any MindOperation hediffs as well and also reboot.
                     if (recipientPawn != null)
                     {
+                        recipientPawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
                         target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
                         if (target != null)
                             recipientPawn.health.RemoveHediff(target);
-                        recipientPawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
                     }
-
-                    // All pawns undergo a system reboot upon successful completion of an operation.
-                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_ShortReboot, ThisPawn, null);
-                    hediff.Severity = 1f;
-                    ThisPawn.health.AddHediff(hediff, null, null);
 
                     Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
                 }
@@ -579,7 +564,7 @@ namespace ATReforged
             }
         }
 
-        // An operation has been started. Handle the outcome based on which operation has been initialized.
+        // An operation has been started. Apply mind operation to this pawn and the recipient pawn (if it exists), and track the current operation in the game component.
         public void HandleInitialization()
         {
             ThisPawn.health.AddHediff(HediffDefOf.ATR_MindOperation);
@@ -594,23 +579,8 @@ namespace ATReforged
         // An operation was interrupted while in progress. Handle the outcome based on which operation was occurring.
         public void HandleInterrupt()
         {
-            // Permutation failure corrupts both pawns. SkyMind intelligences are protected against such corruptions as they lack physical memory and have back-ups.
-            if (Linked == 1)
-            {
-                ApplyCorruption(ThisPawn);
-                ApplyCorruption(recipientPawn);
-
-                recipientPawn.TryGetComp<CompSkyMindLink>().Linked = -1;
-            }
-            // Duplication or Upload failure corrupts the source pawn.
-            else if (Linked == 2 || Linked == 5)
-            {
-                ApplyCorruption(ThisPawn);
-                if (recipientPawn != null)
-                    recipientPawn.TryGetComp<CompSkyMindLink>().Linked = -1;
-            }
             // Absorption failure kills the source pawn - they were going to die on success any way.
-            else if (Linked == 3)
+            if (Linked == 3)
             {
                 Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                 ThisPawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, ThisPawn.health.hediffSet.GetBrain()));
@@ -621,8 +591,14 @@ namespace ATReforged
                 }
                 return;
             }
-            // Nothing happens on other failures (Download and Replication) as the current pawn has no functioning physical intelligence and clouds keep back ups.
 
+            // Otherwise, corrupt the source and reicipient (if it exists) pawns and delink them.
+            ApplyCorruption(ThisPawn);
+            if (recipientPawn != null)
+            {
+                ApplyCorruption(recipientPawn);
+                recipientPawn.TryGetComp<CompSkyMindLink>().Linked = -1;
+            }
             Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
             Linked = -1;
         }
@@ -639,9 +615,11 @@ namespace ATReforged
                 {
                     Utils.PermutePawn(ThisPawn, recipientPawn);
                 }
-                // Duplication, insert a copy of the current pawn into the recipient.
+                // Duplication, insert a copy of the current pawn into the recipient - an organic surrogate that will now become a fully fledged individual again.
                 else if (status == 2)
                 {
+                    // Disconnect the surrogate to sever the connection, then duplicate this pawn into the surrogate.
+                    Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
                     Utils.Duplicate(ThisPawn, recipientPawn, false, false);
                     // Duplication may only occur via operation on organic surrogates. Remove the receiver (burns out), remove no host hediff.
                     target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
@@ -654,9 +632,10 @@ namespace ATReforged
                 // Download, insert of a copy of the recipient pawn into the current pawn. Then destroy the recipient (SkyMind intelligence).
                 else if (status == 4)
                 {
+                    Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                     Utils.Duplicate(recipientPawn, ThisPawn, false, false);
-                    Utils.gameComp.PopCloudPawn(recipientPawn);
-                    recipientPawn.Destroy();
+                    //Utils.gameComp.PopCloudPawn(recipientPawn);
+                    //recipientPawn.Destroy();
                     target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
                     if (target != null)
                         ThisPawn.health.RemoveHediff(target);
@@ -687,9 +666,6 @@ namespace ATReforged
                 // Add the pawn to storage and suspend any tick-checks it performs.
                 Utils.gameComp.PushCloudPawn(ThisPawn);
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
-
-                // Remove all traits that pawns aren't allowed to have upon uploading.
-                Utils.removeMindBlacklistedTrait(ThisPawn);
 
                 // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
                 Pawn corpse = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
@@ -740,7 +716,7 @@ namespace ATReforged
         // Check if there is an operation in progress. If there is (Linked != -1) and it is the operation source (LinkedPawn != -2), then we need to check if it's been interrupted and respond appropriately. 
         public void CheckInterruptedUpload()
         {
-            if (Linked != -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
+            if (Linked > -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
             {
                 // Check to see if the current pawn is no longer connected to the SkyMind network (or is dead).
                 if (ThisPawn.Dead || (!ThisPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
@@ -752,7 +728,7 @@ namespace ATReforged
                 // Check to see if the operation involves a recipient pawn and ensure their status is similarly acceptable if there is one.
                 if (recipientPawn != null)
                 {
-                    if (recipientPawn.Dead || (!recipientPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
+                    if (recipientPawn.Dead || (!recipientPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(recipientPawn)))
                     {
                         HandleInterrupt();
                         return;

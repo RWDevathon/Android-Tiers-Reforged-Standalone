@@ -43,7 +43,7 @@ namespace ATReforged
         public static int wattsConsumedPerBodySize;
         public static bool chargeCapableMeansDifferentBioEfficiency;
         public static float chargeCapableBioEfficiency;
-        public static float batteryPercentagePerRareTick;
+        public static float batteryChargeRate;
 
         public static HashSet<ThingDef> canUseBattery;
 
@@ -248,7 +248,7 @@ namespace ATReforged
                 {
                     //string wattsConsumedBuffer = wattsConsumedPerBodySize.ToString();
                     //listingStandard.TextFieldNumericLabeled("ATR_wattsConsumedPerBodySize".Translate(), ref wattsConsumedPerBodySize, ref wattsConsumedBuffer, 0, 2000);
-                    listingStandard.SliderLabeled("ATR_batteryPercentagePerRareTick".Translate(), ref batteryPercentagePerRareTick, 0.01f, 1f, displayMult: 100, onChange: onChange);
+                    listingStandard.SliderLabeled("ATR_batteryChargeRate".Translate(), ref batteryChargeRate, 0.1f, 4f, onChange: onChange);
 
                     listingStandard.GapLine();
 
@@ -346,7 +346,7 @@ namespace ATReforged
             wattsConsumedPerBodySize = 500;
             chargeCapableMeansDifferentBioEfficiency = true;
             chargeCapableBioEfficiency = 0.5f;
-            batteryPercentagePerRareTick = 0.07f;
+            batteryChargeRate = 1f;
 
             // SECURITY SETTINGS
             enemyHacksOccur = true;
@@ -484,7 +484,7 @@ namespace ATReforged
             Scribe_Values.Look(ref wattsConsumedPerBodySize, "ATR_wattsConsumedPerBodySize", 500);
             Scribe_Values.Look(ref chargeCapableMeansDifferentBioEfficiency, "ATR_chargeCapableMeansDifferentBioEfficiency", true);
             Scribe_Values.Look(ref chargeCapableBioEfficiency, "ATR_chargeCapableBioEfficiency", 0.5f);
-            Scribe_Values.Look(ref batteryPercentagePerRareTick, "ATR_batteryPercentagePerRareTick", 0.07f);
+            Scribe_Values.Look(ref batteryChargeRate, "ATR_batteryChargeRate", 1f);
 
             Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
 
