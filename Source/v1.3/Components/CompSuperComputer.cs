@@ -21,15 +21,7 @@ namespace ATReforged
 
             // The server lists need to know how much storage and point generation exists for each server mode. This adds it to all three types.
             if (!respawningAfterLoad)
-                Utils.gameComp.AddServer(building, Props.pointStorage);
-        }
-
-        public override void CompTickLong()
-        {
-            base.CompTickLong();
-            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.SkillServer);
-            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.SecurityServer);
-            Utils.gameComp.ChangeServerPoints(Props.passivePointGeneration, ServerType.HackingServer);
+                Utils.gameComp.AddServer(building);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -71,7 +63,7 @@ namespace ATReforged
             base.PostDeSpawn(map);
 
             // The server lists need to know how much storage exists for each server mode. This removes it from all three types.
-            Utils.gameComp.RemoveServer(building, Props.pointStorage);
+            Utils.gameComp.RemoveServer(building);
         }
 
         private Building building = null;

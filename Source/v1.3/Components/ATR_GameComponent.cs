@@ -151,47 +151,114 @@ namespace ATReforged
             }
         }
 
-        // Tally up points from active servers. Servers add/remove themselves from the set as appropriate so there is no reason to check them here.
+        // Add the cached point generations from active servers. When servers are added or removed, the cached amount is recalculated automatically.
         public void CheckServers()
         {
-            // Servers may either be computerComps or superComputerComps. If not compComputer, check compSuperComputer.
-            CompComputer computerComp;
+            ChangeServerPoints(cachedSkillGeneration, ServerType.SkillServer);
+            ChangeServerPoints(cachedSecurityGeneration, ServerType.SecurityServer);
+            ChangeServerPoints(cachedHackingGeneration, ServerType.HackingServer);
+        }
 
-            // Skill Servers
-            int changeAmount = 0;
-            foreach (Building skillServer in skillServers)
+        // Calculate the point capacity and point generation for the given server type from the appropriate server list. Cache results for easy usage elsewhere.
+        public void ResetServers(ServerType type)
+        {
+            CompComputer compComputer;
+            CompSuperComputer compSuperComputer;
+            switch (type)
             {
-                computerComp = skillServer.TryGetComp<CompComputer>();
-                if (computerComp != null)
-                    changeAmount += computerComp.Props.passivePointGeneration;
-                else
-                    changeAmount += skillServer.TryGetComp<CompSuperComputer>().Props.passivePointGeneration;
-            }
-            ChangeServerPoints(changeAmount, ServerType.SkillServer);
+                case ServerType.SkillServer:
+                    skillPointCapacity = 0;
+                    cachedSkillGeneration = 0;
 
-            // Security Servers
-            changeAmount = 0;
-            foreach (Building securityServer in securityServers)
-            {
-                computerComp = securityServer.TryGetComp<CompComputer>();
-                if (computerComp != null)
-                    changeAmount += computerComp.Props.passivePointGeneration;
-                else
-                    changeAmount += securityServer.TryGetComp<CompSuperComputer>().Props.passivePointGeneration;
-            }
-            ChangeServerPoints(changeAmount, ServerType.SecurityServer);
+                    // Calculate Skill server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
+                    foreach (Building building in skillServers.ToList())
+                    {
+                        compComputer = building.TryGetComp<CompComputer>();
+                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        if (compComputer != null)
+                        {
+                            // Check for illegal server status.
+                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
+                            {
+                                skillServers.Remove(building);
+                                continue;
+                            }
+                            skillPointCapacity += compComputer.Props.pointStorage;
+                            cachedSkillGeneration += compComputer.Props.passivePointGeneration;
+                        }
+                        else if (compSuperComputer != null)
+                        {
+                            skillPointCapacity += compSuperComputer.Props.pointStorage;
+                            cachedSkillGeneration += compSuperComputer.Props.passivePointGeneration;
+                        }
+                    }
+                    break;
+                case ServerType.SecurityServer:
+                    securityPointCapacity = 0;
+                    cachedSecurityGeneration = 0;
 
-            // Hacking Servers
-            changeAmount = 0;
-            foreach (Building hackingServer in hackingServers)
-            {
-                computerComp = hackingServer.TryGetComp<CompComputer>();
-                if (computerComp != null)
-                    changeAmount += computerComp.Props.passivePointGeneration;
-                else
-                    changeAmount += hackingServer.TryGetComp<CompSuperComputer>().Props.passivePointGeneration;
+                    // Calculate Security server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
+                    foreach (Building building in securityServers.ToList())
+                    {
+                        compComputer = building.TryGetComp<CompComputer>();
+                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        if (compComputer != null)
+                        {
+                            // Check for illegal server status.
+                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
+                            {
+                                securityServers.Remove(building);
+                                continue;
+                            }
+                            securityPointCapacity += compComputer.Props.pointStorage;
+                            cachedSecurityGeneration += compComputer.Props.passivePointGeneration;
+                        }
+                        else if (compSuperComputer != null)
+                        {
+                            securityPointCapacity += compSuperComputer.Props.pointStorage;
+                            cachedSecurityGeneration += compSuperComputer.Props.passivePointGeneration;
+                        }
+                    }
+                    break;
+                case ServerType.HackingServer:
+                    hackingPointCapacity = 0;
+                    cachedHackingGeneration = 0;
+
+                    // Calculate Hacking server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
+                    foreach (Building building in hackingServers.ToList())
+                    {
+                        compComputer = building.TryGetComp<CompComputer>();
+                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        if (compComputer != null)
+                        {
+                            // Check for illegal server status.
+                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
+                            {
+                                hackingServers.Remove(building);
+                                continue;
+                            }
+                            hackingPointCapacity += compComputer.Props.pointStorage;
+                            cachedHackingGeneration += compComputer.Props.passivePointGeneration;
+                        }
+                        else if (compSuperComputer != null)
+                        {
+                            hackingPointCapacity += compSuperComputer.Props.pointStorage;
+                            cachedHackingGeneration += compSuperComputer.Props.passivePointGeneration;
+                        }
+                    }
+                    break;
+                default:
+                    Log.Error("[ATR] ATR_GC.ResetServers: Attempted illegal server type reset. No changes made. This may generate errors.");
+                    return;
             }
-            ChangeServerPoints(changeAmount, ServerType.HackingServer);
+        }
+
+        // This will reset all point servers of all categories when called.
+        public void ResetServers()
+        {
+            ResetServers(ServerType.SkillServer);
+            ResetServers(ServerType.SecurityServer);
+            ResetServers(ServerType.HackingServer);
         }
 
         public int GetSkillPointCapacity()
@@ -206,7 +273,6 @@ namespace ATReforged
         {
             return hackingPointCapacity;
         }
-
 
         public int GetSkillPoints()
         {
@@ -344,23 +410,21 @@ namespace ATReforged
         }
 
         // Add a server to the appropriate list based on serverMode
-        public void AddServer(Building building, ServerType serverMode, int capacity)
+        public void AddServer(Building building, ServerType serverMode)
         { 
             switch (serverMode)
             {
-                case ServerType.None:
-                    return;
                 case ServerType.SkillServer:
                     skillServers.Add(building);
-                    skillPointCapacity += capacity;
+                    ResetServers(ServerType.SkillServer);
                     break;
                 case ServerType.SecurityServer:
                     securityServers.Add(building);
-                    securityPointCapacity += capacity;
+                    ResetServers(ServerType.SecurityServer);
                     break;
                 case ServerType.HackingServer:
                     hackingServers.Add(building);
-                    hackingPointCapacity += capacity;
+                    ResetServers(ServerType.HackingServer);
                     break;
                 default:
                     Log.Message("[ATR] Attempted to add a server of an invalid mode. No server was added. The building responsible should have a Gizmo to fix the issue.");
@@ -369,54 +433,54 @@ namespace ATReforged
         }
 
         // If a capacity is provided instead of a serverMode, assume this capacity is to be added to all servers
-        public void AddServer(Building building, int capacity)
+        public void AddServer(Building building)
         { 
             skillServers.Add(building);
-            skillPointCapacity += capacity;
-
             securityServers.Add(building);
-            securityPointCapacity += capacity;
-
             hackingServers.Add(building);
-            hackingPointCapacity += capacity;
+            ResetServers();
         }
 
         // Remove the building from the task group it is assigned to.
-        public void RemoveServer(Building building, ServerType serverMode, int capacity)
+        public void RemoveServer(Building building, ServerType serverMode)
         {
             switch (serverMode)
             {
-                case ServerType.None: // None Type has no server list nor a point capacity. 
-                    return;
                 case ServerType.SkillServer: // Remove from skill servers list.
-                    skillServers.Remove(building);
-                    skillPointCapacity -= capacity;
+                    if (skillServers.Contains(building))
+                    {
+                        skillServers.Remove(building);
+                        ResetServers(ServerType.SkillServer);
+                    }
                     break;
                 case ServerType.SecurityServer: // Remove from security servers list.
-                    securityServers.Remove(building);
-                    securityPointCapacity -= capacity;
+                    if (securityServers.Contains(building))
+                    {
+                        securityServers.Remove(building);
+                        ResetServers(ServerType.SecurityServer);
+                    }
                     break;
                 case ServerType.HackingServer: // Remove from hacking servers list.
-                    hackingServers.Remove(building);
-                    hackingPointCapacity -= capacity;
+                    if (hackingServers.Contains(building))
+                    {
+                        hackingServers.Remove(building);
+                        ResetServers(ServerType.HackingServer);
+                    }
                     break;
-                default: // Illegal server type results in no changes as it doesn't know what to change.
-                    Log.Error("[ATR] ATR_GC.RemoveServer was given an invalid serverType. No servers removed.");
+                default:
+                    Log.Error("[ATR] ATR_GC.RemoveServer was given an invalid serverType. All servers recached.");
+                    ResetServers();
                     return;
             }
         }
 
         // If a capacity is provided instead of a serverMode, assume this capacity is to removed from all servers
-        public void RemoveServer(Building building, int capacity)
+        public void RemoveServer(Building building)
         { 
             skillServers.Remove(building);
-            skillPointCapacity -= capacity;
-
             securityServers.Remove(building);
-            securityPointCapacity -= capacity;
-
             hackingServers.Remove(building);
-            hackingPointCapacity -= capacity;
+            ResetServers();
         }
 
         // This always adds the points to the appropriate category. It assumes negative changes are given in the parameter. It also handles illegal types (do nothing).
@@ -429,16 +493,13 @@ namespace ATReforged
                     Log.Error("[ATR] Can't add points to a None server type! No points changed.");
                     return;
                 case ServerType.SkillServer:
-                    skillPoints += toChange;
-                    skillPoints = Mathf.Clamp(skillPoints, 0, skillPointCapacity);
+                    skillPoints = Mathf.Clamp(skillPoints + toChange, 0, skillPointCapacity);
                     break;
                 case ServerType.SecurityServer:
-                    securityPoints += toChange;
-                    securityPoints = Mathf.Clamp(securityPoints, 0, securityPointCapacity);
+                    securityPoints = Mathf.Clamp(securityPoints + toChange, 0, securityPointCapacity);
                     break;
                 case ServerType.HackingServer:
-                    hackingPoints += toChange;
-                    hackingPoints = Mathf.Clamp(hackingPoints, 0, hackingPointCapacity);
+                    hackingPoints = Mathf.Clamp(hackingPoints + toChange, 0, hackingPointCapacity);
                     break;
             }
         }
@@ -563,7 +624,12 @@ namespace ATReforged
         private int SkyMindNetworkCapacity = 0;
         private int SkyMindCloudCapacity = 0;
 
-        // Simple container for the pawn that represents blanks so it can be generated once and then saved for the whole game. It should never be changed.
+        // Cached point generation amounts for efficiency. Recalculated when servers are added/removed.
+        private int cachedSkillGeneration = 0;
+        private int cachedSecurityGeneration = 0;
+        private int cachedHackingGeneration = 0;
+
+        // Simple container for the pawn that represents blanks so it can be generated once and then saved for the whole game. It should never be altered.
         public Pawn blankPawn = null;
 
         // Simple tracker for the extra cost penalty for initiating player hacks after having done one recently.

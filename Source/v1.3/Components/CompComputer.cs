@@ -39,12 +39,12 @@ namespace ATReforged
         {
             if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
             {
-                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode);
             }
 
             if (signal == "PowerTurnedOn")
             {
-                Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.AddServer(building, serverMode);
             }
         }
 
@@ -110,7 +110,6 @@ namespace ATReforged
                     }
                     break;
                 default:
-                    Log.Warning("[ATR] Server has illegal type. Button will link to skill seeking to resolve the issue.");
                     yield return new Command_Action
                     { // In an illegal Mode, can switch to Skill
                         icon = Tex.SkillIcon,
@@ -119,7 +118,7 @@ namespace ATReforged
                         action = delegate ()
                         {
                             serverMode = ServerType.SkillServer;
-                            Utils.gameComp.AddServer(building, serverMode, Props.pointStorage);
+                            Utils.gameComp.AddServer(building, serverMode);
                         }
                     };
                     break;
@@ -138,15 +137,13 @@ namespace ATReforged
                    .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                    .Append("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
             }
-
-            if (serverMode == ServerType.SecurityServer)
+            else if (serverMode == ServerType.SecurityServer)
             {
                 ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
                    .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                    .Append("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
             }
-
-            if (serverMode == ServerType.HackingServer)
+            else if (serverMode == ServerType.HackingServer)
             {
                 ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
                    .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
@@ -161,15 +158,15 @@ namespace ATReforged
 
             // Only servers with types get removed from the lists
             if (serverMode != ServerType.None && !building.IsBrokenDown() && parent.TryGetComp<CompPowerTrader>().PowerOn)
-                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode);
         }
 
         public void ChangeServerMode(ServerType newMode)
         {
             try
             {
-                Utils.gameComp.RemoveServer(building, serverMode, Props.pointStorage);
-                Utils.gameComp.AddServer(building, newMode, Props.pointStorage);
+                Utils.gameComp.RemoveServer(building, serverMode);
+                Utils.gameComp.AddServer(building, newMode);
                 serverMode = newMode;
             }
             catch (Exception ex)
