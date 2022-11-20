@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Male -->
+
+    <HeadTypeDef>
+        <defName>ATR_Male_Average_Normal</defName>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Average_Normal</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+
+  <!-- Female -->
+
+    <HeadTypeDef>
+        <defName>ATR_Female_Average_Normal</defName>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Female/Female_Average_Normal</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    
+  <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_None_Average_Normal</defName>
+        <graphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+</Defs>

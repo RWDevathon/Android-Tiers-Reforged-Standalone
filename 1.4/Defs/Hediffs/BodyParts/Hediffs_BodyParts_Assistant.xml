@@ -221,14 +221,15 @@
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MechanicAssistant</defName>
 		<label>Mechanic assistant</label>
-	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines. \n\nCuriously, this part lends itself well to tending injuries of an organic nature as well.</description>
+	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines.</description>
 		<stages>
 			<li>
 				<statOffsets>
 					<ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
 					<ButcheryMechanoidEfficiency>0.5</ButcheryMechanoidEfficiency>
 					<MechanicalSurgerySuccessChance>0.2</MechanicalSurgerySuccessChance>
-          			<MedicalTendQuality>0.25</MedicalTendQuality>
+          			<MechanicalTendQuality>0.25</MechanicalTendQuality>
+                    <MechanicalTendSpeed>0.25</MechanicalTendSpeed>
 				</statOffsets>
 			</li>
 		</stages>
@@ -238,7 +239,7 @@
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_MechanicAssistant</defName>
     	<label>Mechanic assistant chip</label>
-	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines. \n\nCuriously, this part lends itself well to tending injuries of an organic nature as well.</description>
+	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for engineering and mechanic tasks. Possessing a large library of sub-routines for optimally designing and creating parts as well as installing, repairing, or altering them, chips like these are often banned on worlds with strong mechanic unions to prevent total dominance of the industry by purpose built machines.</description>
     	<costList>
 			<Plasteel>20</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>

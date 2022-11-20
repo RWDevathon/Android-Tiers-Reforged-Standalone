@@ -26,26 +26,29 @@ namespace ATReforged
                     // Generate new gender according to settings.
                     __result.gender = Utils.GenerateGender(__result.kindDef);
                     __result.Name = PawnBioAndNameGenerator.GeneratePawnName(__result);
+                    BodyTypeDef bodyDef;
+                    HeadTypeDef headDef;
 
-                    
+
                     if (__result.gender == Gender.Male)
                     {
-                        BodyTypeDef bd = DefDatabase<BodyTypeDef>.GetNamed("Male", false);
-                        if (bd != null)
-                            __result.story.bodyType = bd;
+                        bodyDef = DefDatabase<BodyTypeDef>.GetNamed("Male", false);
+                        headDef = DefDatabase<HeadTypeDef>.GetNamed("ATR_Male_Average_Normal", false);
                     }
                     else if (__result.gender == Gender.Female)
                     {
-                        BodyTypeDef bd = DefDatabase<BodyTypeDef>.GetNamed("Female", false);
-                        if (bd != null)
-                            __result.story.bodyType = bd;
+                        bodyDef = DefDatabase<BodyTypeDef>.GetNamed("Female", false);
+                        headDef = DefDatabase<HeadTypeDef>.GetNamed("ATR_Female_Average_Normal", false);
                     }
                     else
                     {
-                        BodyTypeDef bd = DefDatabase<BodyTypeDef>.GetNamed("None", false);
-                        if (bd != null)
-                            __result.story.bodyType = bd;
+                        bodyDef = DefDatabase<BodyTypeDef>.GetNamed("None", false);
+                        headDef = DefDatabase<HeadTypeDef>.GetNamed("ATR_None_Average_Normal", false);
                     }
+                    if (bodyDef != null)
+                        __result.story.bodyType = bodyDef;
+                    if (headDef != null)
+                        __result.story.headType = headDef;
 
                     Utils.removeMindBlacklistedTrait(__result);
                     Utils.ReconfigureDrone(__result);

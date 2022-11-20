@@ -19,6 +19,18 @@
 					<li>FeelingsTowardOrganics</li>
 				</traitList>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+                <blackEndoCategories>
+                    <li>Melanin</li>
+                    <li>HairColor</li>
+                    <li>Ears</li>
+                    <li>Nose</li>
+                    <li>Jaw</li>
+                    <li>Hands</li>
+                    <li>Headbone</li>
+                    <li>Head</li>
+                    <li>BodyType</li>
+                    <li>Voice</li>
+                </blackEndoCategories>
 			</raceRestriction>
 			<generalSettings>
 				<allowHumanBios>false</allowHumanBios>
@@ -26,11 +38,16 @@
 				<immuneToAge>false</immuneToAge>
 				<alienPartGenerator>
 					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
-                    <!--
-					<headTypes Inherit="False">
-                        <li>AverageNormal</li>
+					<headTypes>
+                        <li>ATR_Male_Average_Normal</li>
+                        <li>ATR_Female_Average_Normal</li>
+                        <li>ATR_None_Average_Normal</li>
                     </headTypes>
-                    -->
+                    <bodyTypes>
+                        <li>Male</li>
+                        <li>Female</li>
+                        <li>None</li>
+                    </bodyTypes>
 					<colorChannels Inherit="False">
 						<li>
 							<name>skin</name>
@@ -253,12 +270,6 @@
 					<li>(10000,0)</li>
 				</points>
 			</ageGenerationCurve>
-			<lifeStageAges>
-				<li>
-					<def>HumanlikeAdult</def>
-					<minAge>0</minAge>
-				</li>
-			</lifeStageAges>
         </race>
         <recipes>
             <li>ShutdownMechanical</li>
