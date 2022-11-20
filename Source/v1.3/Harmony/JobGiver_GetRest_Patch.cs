@@ -28,6 +28,7 @@ namespace ATReforged
                         Building_Bed bed = Utils.GetAvailableChargingBed(pawn);
                         if (bed != null)
                         {
+                            pawn.ownership.ClaimBedIfNonMedical(bed);
                             __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(bed));
                             return;
                         }

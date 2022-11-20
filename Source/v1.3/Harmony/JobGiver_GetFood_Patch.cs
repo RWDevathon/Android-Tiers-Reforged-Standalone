@@ -41,6 +41,7 @@ namespace ATReforged
                                 IntVec3 freePlace = station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn);
                                 if (freePlace != IntVec3.Invalid && pawn.CanReach(freePlace, PathEndMode.OnCell, Danger.Deadly))
                                 {
+                                    pawn.ownership.ClaimBedIfNonMedical(bed);
                                     __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
                                     return;
                                 }

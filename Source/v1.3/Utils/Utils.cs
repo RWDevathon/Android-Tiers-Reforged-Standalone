@@ -278,8 +278,7 @@ namespace ATReforged
                     && bed.Position.InAllowedArea(pawn)
                     && pawn.CanReserveAndReach(bed, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, false))
                     {
-                        // Located the closest available charging bed. Claim it if possible, then return it.
-                        pawn.ownership.ClaimBedIfNonMedical(bed);
+                        // Located the closest available charging bed. Return it.
                         return bed;
                     }
                 }
