@@ -6,7 +6,7 @@ namespace ATReforged
 {
     internal class RestUtility_Patch
     {
-        // Mechanicals that can charge can ONLY use charge-capable beds.
+        // Mechanicals that can charge will only consider active charging beds as valid, unless there are no such available charging beds.
         [HarmonyPatch(typeof(RestUtility), "IsValidBedFor")]
         public class IsValidBedFor_Patch
         {
@@ -16,7 +16,8 @@ namespace ATReforged
                 if (!__result)
                     return;
 
-                if (Utils.IsConsideredMechanical(sleeper) && Utils.CanUseBattery(sleeper) && bedThing.TryGetComp<CompPowerTrader>() == null)
+                if (Utils.IsConsideredMechanical(sleeper) && Utils.CanUseBattery(sleeper) && Utils.GetAvailableChargingBed(sleeper) != null &&
+                    (bedThing.TryGetComp<CompPowerTrader>() == null || !bedThing.TryGetComp<CompPowerTrader>().PowerOn || bedThing.IsBrokenDown()))
                 {
                     __result = false;
                 }

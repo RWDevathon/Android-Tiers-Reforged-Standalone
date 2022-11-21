@@ -245,9 +245,9 @@ namespace ATReforged
             return (int) (ATReforged_Settings.wattsConsumedPerBodySize * pawn.BodySize);
         }
 
-
+        // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
         public static Building_Bed GetAvailableChargingBed(Pawn pawn)
-        { // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
+        { 
             Map map = pawn.Map;
 
             // Check if the pawn owns a bed that is charge-capable, online, and accessible. If it is, then it will choose that to charge.
@@ -270,15 +270,14 @@ namespace ATReforged
                 CompPowerTrader cpt = bed.TryGetComp<CompPowerTrader>();
                 if (!bed.Destroyed && cpt != null)
                 {
-                    if (!bed.Medical
+                    if (bed.Medical == pawn.health.hediffSet.HasNaturallyHealingInjury()
                     && (pawn.IsPrisoner == bed.ForPrisoners)
                     && !(bed.GetCurOccupant(0) != null || (bed.OwnersForReading.Count() != 0 && !bed.OwnersForReading.Contains(pawn)))
                     && cpt.PowerOn
                     && bed.Position.InAllowedArea(pawn)
                     && pawn.CanReserveAndReach(bed, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, false))
                     {
-                        // Located the closest available charging bed. Claim it if possible, then return it.
-                        pawn.ownership.ClaimBedIfNonMedical(bed);
+                        // Located the closest available charging bed. Return it.
                         return bed;
                     }
                 }
@@ -323,17 +322,18 @@ namespace ATReforged
                 // Duplicate source story into destination.
                 if (source.story != null)
                 {
-                    // If not tethered, simply copy data over.
+                    // If not tethered, copy all critical data over.
                     if (!isTethered)
                     {
-                        // Copy the destination's physical attributes. They are not duplicated from the source.
+                        // Copy the destination's physical attributes. None are duplicated from the source.
                         Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest)
                         {
-                            bodyType = dest.story.bodyType
+                            bodyType = dest.story.bodyType,
+                            HairColor = dest.story.HairColor,
+                            hairDef = dest.story.hairDef
                         };
-                        newStory.HairColor = dest.story.HairColor;
-                        newStory.hairDef = dest.story.hairDef;
-                        
+
+                        Log.Warning("[ATR DEBUG] backstory check");
                         // Duplicate source backstory into destination.
                         if (source.story.Adulthood != null)
                         {
@@ -346,9 +346,9 @@ namespace ATReforged
 
                         // Duplicate source traits into destination.
                         newStory.traits = new TraitSet(dest);
-                        foreach (Trait trait in source.story.traits.allTraits)
+                        foreach (Trait trait in source.story.traits?.allTraits)
                         {
-                            Trait newTrait = new Trait(trait.def, trait.Degree, false);
+                            Trait newTrait = new Trait(trait.def, trait.Degree, true);
                             newStory.traits.allTraits.Add(newTrait);
                         }
 
@@ -367,6 +367,7 @@ namespace ATReforged
                     dest.skills.Notify_SkillDisablesChanged();
                 }
 
+                Log.Warning("[ATR DEBUG] " + source + " " + dest + " ideo");
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
@@ -383,6 +384,27 @@ namespace ATReforged
                     }
                 }
 
+                Log.Warning("[ATR DEBUG] " + source + " " + dest + " royalty");
+                // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
+                if (ModsConfig.RoyaltyActive)
+                {
+                    if (source.royalty != null)
+                    {
+                        source.royalty.UpdateAvailableAbilities();
+                        if (source.needs != null)
+                            source.needs.AddOrRemoveNeedsAsAppropriate();
+                        source.abilities.Notify_TemporaryAbilitiesChanged();
+                    }
+                    if (dest.royalty != null)
+                    {
+                        dest.royalty.UpdateAvailableAbilities();
+                        if (dest.needs != null)
+                            dest.needs.AddOrRemoveNeedsAsAppropriate();
+                        dest.abilities.Notify_TemporaryAbilitiesChanged();
+                    }
+                }
+
+                Log.Warning("[ATR DEBUG] " + source + " " + dest + " skills");
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {
@@ -419,10 +441,8 @@ namespace ATReforged
                         memories.RemoveMemoriesOfDef(ThoughtDefOf.HoneymoonPhase);
                     }
                     Traverse.Create(dest.relations).Method("AffectBondedAnimalsOnMyDeath").GetValue();
-                    Hediff target = dest.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
-                    if (target == null)
-                        target = dest.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_IsolatedCore);
-                    dest.health.NotifyPlayerOfKilled(null, target, null);
+                    dest.health.NotifyPlayerOfKilled(null, null, null);
+                    dest.relations.ClearAllRelations();
                 }
 
                 // Duplicate relations.
@@ -430,9 +450,20 @@ namespace ATReforged
                 {
                     Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
 
-                    // Duplicate all of the source's relations.
-                    foreach (DirectPawnRelation pawnRelation in source.relations.DirectRelations.ToList())
+                    List<Pawn> checkedOtherPawns = new List<Pawn>();
+                    // Duplicate all of the source's relations. Ensure that other pawns with relations to the source also have them to the destination.
+                    foreach (DirectPawnRelation pawnRelation in source.relations?.DirectRelations?.ToList())
                     {
+                        // Ensure that we check the pawn relations for the opposite side only once to avoid doing duplicate relations.
+                        if (!checkedOtherPawns.Contains(pawnRelation.otherPawn))
+                        {
+                            // Ensure the other pawn has all the same relations to the destination as it does to the source.
+                            foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations?.Where(relation => relation.otherPawn == source))
+                            {
+                                pawnRelation.otherPawn.relations.AddDirectRelation(otherPawnRelation.def, dest);
+                            }
+                            checkedOtherPawns.Add(pawnRelation.otherPawn);
+                        }
                         destRelations.AddDirectRelation(pawnRelation.def, pawnRelation.otherPawn);
                     }
 
@@ -441,15 +472,16 @@ namespace ATReforged
                     // Transfer animal master status to destination
                     foreach (Map map in Find.Maps)
                     {
-                        foreach (Pawn pawn in map.mapPawns.AllPawns)
+                        foreach (Pawn animal in map.mapPawns.SpawnedColonyAnimals)
                         {
-                            if (pawn.playerSettings == null || pawn == source || pawn == dest)
+                            if (animal.playerSettings == null || animal == source || animal == dest)
                                 continue;
 
-                            if (pawn.playerSettings.Master != null && pawn.playerSettings.Master == source)
-                                pawn.playerSettings.Master = dest;
+                            if (animal.playerSettings.Master != null && animal.playerSettings.Master == source)
+                                animal.playerSettings.Master = dest;
                         }
                     }
+                    dest.relations = destRelations;
                 }
                 // Tether destination relations to the source.
                 else
@@ -519,7 +551,7 @@ namespace ATReforged
             }
             catch(Exception e)
             {
-                Log.Error("[ATR] Utils.Duplicate : " + e.Message + " - " + e.StackTrace);
+                Log.Error("[ATR] Utils.Duplicate: Error occurred duplicating " + source + " into " + dest + ". This will have severe consequences. " + e.Message + e.StackTrace);
             }
         }
 
@@ -561,45 +593,11 @@ namespace ATReforged
                         tlog.Field("recipient").SetValue(recipient);
                     }
                 }
-
-                // Swap any applicable royal titles between the two pawns as appropriate.
-                Pawn_RoyaltyTracker tmpRoyalty = firstPawn.royalty;
-
-                if(firstPawn.royalty != null)
-                    firstPawn.royalty.pawn = secondPawn;
-                if(secondPawn.royalty != null)
-                    secondPawn.royalty.pawn = firstPawn;
-
-                firstPawn.royalty = secondPawn.royalty;
-                secondPawn.royalty = tmpRoyalty;
-                if (firstPawn.royalty != null)
-                {
-                    firstPawn.royalty.UpdateAvailableAbilities();
-                    if (firstPawn.needs != null)
-                        firstPawn.needs.AddOrRemoveNeedsAsAppropriate();
-                    firstPawn.abilities.Notify_TemporaryAbilitiesChanged();
-                }
-                if (secondPawn.royalty != null)
-                {
-                    secondPawn.royalty.UpdateAvailableAbilities();
-                    if (secondPawn.needs != null)
-                        secondPawn.needs.AddOrRemoveNeedsAsAppropriate();
-                    secondPawn.abilities.Notify_TemporaryAbilitiesChanged();
-                }
             }
             catch(Exception e)
             {
                 Log.Message("[ATR] Utils.PermutePawn : " + e.Message + " - " + e.StackTrace);
             }
-        }
-
-
-        public static void gainDirectTrait(Pawn_StoryTracker tr,  Trait trait)
-        {
-            if (tr.traits.HasTrait(trait.def))
-                return;
-
-            tr.traits.allTraits.Add(trait);
         }
 
         // Check if the targetted pawn is a valid target for receiving mind transfer operations.
@@ -642,7 +640,7 @@ namespace ATReforged
         public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
         {
             // Generate a new pawn.
-            PawnGenerationRequest request = new PawnGenerationRequest(kind: pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
+            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
             Pawn copy = PawnGenerator.GeneratePawn(request);
 
             // Get rid of any items it may have spawned with.
@@ -718,17 +716,21 @@ namespace ATReforged
             // If we are "killing" the pawn, that means the body is now a blank. Properly duplicate those features.
             if (kill)
             {
-                Duplicate(GetBlank(), copy, isTethered: false);
+                Duplicate(GetBlank(), copy, false, false);
 
                 // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
                 if (IsConsideredMechanicalAndroid(copy))
                 {
+                    copy.health.AddHediff(HediffDefOf.ATR_IsolatedCore, copy.health.hediffSet.GetBrain());
                     Hediff autoCore = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
                     if (autoCore != null)
                     {
                         copy.health.RemoveHediff(autoCore);
                     }
-                    copy.health.AddHediff(HediffDefOf.ATR_IsolatedCore, copy.health.hediffSet.GetBrain());
+                }
+                else
+                {
+                    copy.Kill(null);
                 }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.

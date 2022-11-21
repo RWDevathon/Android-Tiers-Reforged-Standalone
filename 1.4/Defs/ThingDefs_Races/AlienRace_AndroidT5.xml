@@ -22,6 +22,11 @@
 				<immuneToAge>true</immuneToAge>
 				<alienPartGenerator>
 					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
+					<headTypes>
+                        <li>ATR_Tier5_Male</li>
+                        <li>ATR_Tier5_Female</li>
+                        <li>ATR_Tier5_None</li>
+                    </headTypes>
 					<colorChannels>
 						<li>
 							<name>skin</name>

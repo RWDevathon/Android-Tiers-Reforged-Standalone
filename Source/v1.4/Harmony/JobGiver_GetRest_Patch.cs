@@ -28,11 +28,12 @@ namespace ATReforged
                         Building_Bed bed = Utils.GetAvailableChargingBed(pawn);
                         if (bed != null)
                         {
+                            pawn.ownership.ClaimBedIfNonMedical(bed);
                             __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(bed));
                             return;
                         }
                     }
-                    // If there is no viable charging bed or charging station, then the pawn is free to grab whatever food it was originally planning to consume.
+                    // If there is no viable charging bed, then the pawn is free to use whatever bed it was originally planning to rest in.
                 }
                 catch (Exception ex)
                 {

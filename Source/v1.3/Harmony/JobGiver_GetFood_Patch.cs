@@ -29,6 +29,7 @@ namespace ATReforged
                         Building_Bed bed = Utils.GetAvailableChargingBed(pawn);
                         if (bed != null)
                         {
+                            pawn.ownership.ClaimBedIfNonMedical(bed);
                             __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(bed));
                             return;
                         }
@@ -41,7 +42,6 @@ namespace ATReforged
                                 IntVec3 freePlace = station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn);
                                 if (freePlace != IntVec3.Invalid && pawn.CanReach(freePlace, PathEndMode.OnCell, Danger.Deadly))
                                 {
-                                    pawn.ownership.ClaimBedIfNonMedical(bed);
                                     __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
                                     return;
                                 }

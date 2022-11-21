@@ -32,7 +32,7 @@ namespace ATReforged
             { // No bed? Reduce surgery success chance significantly.
                 chanceSucceed *= 0.6f;
             }
-            
+
             // Multiply by the tend quality of the kits used.
             chanceSucceed *= KitMedicalPotencyToSurgeryChanceFactor.Evaluate(GetAverageMedicalPotency(ingredients, bill));
 
@@ -51,6 +51,7 @@ namespace ATReforged
 
             // Max chance of success is either the calculated surgery chance or the settings-prescribed max limit (default 1).
             chanceSucceed = Mathf.Min(chanceSucceed, ATReforged_Settings.maxChanceMechanicOperationSuccess);
+
             // Check if the surgery is successful.
             if (ATReforged_Settings.showMechanicalSurgerySuccessChance)
                 Messages.Message("[ATR Debug Utility] Surgery had " + chanceSucceed + " chance to succeed.", MessageTypeDefOf.NeutralEvent);

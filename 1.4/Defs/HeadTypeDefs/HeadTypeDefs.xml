@@ -1,27 +1,152 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Male -->
+    <!-- Tier 1 -->
+    <!-- Male -->
 
     <HeadTypeDef>
-        <defName>ATR_Male_Average_Normal</defName>
-        <graphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Average_Normal</graphicPath>
+        <defName>ATR_Tier1_Male</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier1/head/Male_Average_Normal</graphicPath>
         <gender>Male</gender>
     </HeadTypeDef>
 
-  <!-- Female -->
+    <!-- Female -->
 
     <HeadTypeDef>
-        <defName>ATR_Female_Average_Normal</defName>
-        <graphicPath>Things/Pawn/Humanlike/Heads/Female/Female_Average_Normal</graphicPath>
+        <defName>ATR_Tier1_Female</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier1/head/Female_Average_Normal</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
     
-  <!-- None -->
+    <!-- None -->
 
     <HeadTypeDef>
-        <defName>ATR_None_Average_Normal</defName>
-        <graphicPath>Things/Pawn/Humanlike/Heads/Male/Male_Average_Normal</graphicPath>
+        <defName>ATR_Tier1_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier1/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+
+    <!-- Tier 2 -->
+    <!-- Male -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier2_Male</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier2/head/Male_Average_Normal</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+
+    <!-- Female -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier2_Female</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier2/head/Female_Average_Normal</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier2_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+    
+    <!-- Tier 3 -->
+    <!-- Male -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier3_Male</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier3/head/Male_Average_Normal</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+
+    <!-- Female -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier3_Female</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier3/head/Female_Average_Normal</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier3_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier3/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+    
+    <!-- Tier 4 -->
+    <!-- Male -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier4_Male</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier4/head/Male_Average_Normal</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+
+    <!-- Female -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier4_Female</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier4/head/Female_Average_Normal</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier4_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier4/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+
+    <!-- Tier 5 -->
+    <!-- Male -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier5_Male</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/Male_Average_Normal</graphicPath>
+        <gender>Male</gender>
+    </HeadTypeDef>
+
+    <!-- Female -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier5_Female</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/Female_Average_Normal</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+    
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_Tier5_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+    
+
+    <!-- M7 -->
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_M7_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/M7/head/None_Average_Normal</graphicPath>
+        <gender>None</gender>
+    </HeadTypeDef>
+
+
+    <!-- M8 -->
+    <!-- None -->
+
+    <HeadTypeDef>
+        <defName>ATR_M8_None</defName>
+        <graphicPath>Things/Pawns/Humanlikes/M8/head/None_Average_Normal</graphicPath>
         <gender>None</gender>
     </HeadTypeDef>
 

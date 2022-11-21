@@ -24,7 +24,6 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -186,8 +185,6 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
-    <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
-    <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />
     <Compile Include="Components\CompProperties_SkyMindTower.cs" />
@@ -195,8 +192,10 @@
     <Compile Include="Components\CompProperties_SuperComputer.cs" />
     <Compile Include="Components\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
-    <Compile Include="DefsOf\IncidentDefOf.cs" />
+    <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
+    <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
     <Compile Include="DefsOf\BackstoryDefOf.cs" />
+    <Compile Include="DefsOf\IncidentDefOf.cs" />
     <Compile Include="DefsOf\MentalStateDefOf.cs" />
     <Compile Include="DefsOf\QuestScriptDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />

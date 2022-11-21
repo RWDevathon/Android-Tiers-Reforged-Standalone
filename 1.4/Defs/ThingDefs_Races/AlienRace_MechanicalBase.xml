@@ -38,15 +38,10 @@
 				<immuneToAge>false</immuneToAge>
 				<alienPartGenerator>
 					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
-					<headTypes>
-                        <li>ATR_Male_Average_Normal</li>
-                        <li>ATR_Female_Average_Normal</li>
-                        <li>ATR_None_Average_Normal</li>
-                    </headTypes>
                     <bodyTypes>
                         <li>Male</li>
                         <li>Female</li>
-                        <li>None</li>
+                        <!--<li>None</li>-->
                     </bodyTypes>
 					<colorChannels Inherit="False">
 						<li>
@@ -179,8 +174,8 @@
 			<canBePredatorPrey>false</canBePredatorPrey>
 			<lifeStageAges>
 				<li>
-					<def>HumanlikeAdult</def>
-					<minAge>0</minAge>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0.0</minAge>
 				</li>
 			</lifeStageAges>
 			<litterSizeCurve>

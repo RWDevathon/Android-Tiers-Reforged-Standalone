@@ -11,6 +11,15 @@
                 <skeleton>Things/Pawns/Humanlikes/Tier4/body/</skeleton>
                 <skull>Things/Pawns/Humanlikes/Tier4/head/</skull>
 			</graphicPaths>
+            <generalSettings>
+                <alienPartGenerator>
+					<headTypes>
+                        <li>ATR_Tier4_Male</li>
+                        <li>ATR_Tier4_Female</li>
+                        <li>ATR_Tier4_None</li>
+                    </headTypes>
+                </alienPartGenerator>
+            </generalSettings>
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/Tier4/head/None_Average_Normal_south</uiIconPath>
 		<statBases>

@@ -18,6 +18,9 @@
 					<bodyTypes>
 						<li>Male</li>
 					</bodyTypes>
+					<headTypes>
+                        <li>ATR_M8_None</li>
+                    </headTypes>
 					<borderScale>2</borderScale>
 					<atlasScale>2</atlasScale>
 					<colorChannels>

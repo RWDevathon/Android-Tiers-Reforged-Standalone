@@ -246,9 +246,7 @@ namespace ATReforged
                 }
                 case OptionsTab.Power:
                 {
-                    //string wattsConsumedBuffer = wattsConsumedPerBodySize.ToString();
-                    //listingStandard.TextFieldNumericLabeled("ATR_wattsConsumedPerBodySize".Translate(), ref wattsConsumedPerBodySize, ref wattsConsumedBuffer, 0, 2000);
-                    listingStandard.SliderLabeled("ATR_batteryChargeRate".Translate(), ref batteryChargeRate, 0.1f, 4f, onChange: onChange);
+                    listingStandard.SliderLabeled("ATR_batteryPercentagePerTick".Translate(), ref batteryChargeRate, 0.1f, 4f, onChange: onChange);
 
                     listingStandard.GapLine();
 

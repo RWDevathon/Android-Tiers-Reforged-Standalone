@@ -271,7 +271,7 @@ namespace ATReforged
                 CompPowerTrader cpt = bed.TryGetComp<CompPowerTrader>();
                 if (!bed.Destroyed && cpt != null)
                 {
-                    if (bed.Medical == pawn.health.hediffSet.HasNaturallyHealingInjury()
+                    if (bed.Medical == HealthAIUtility.ShouldSeekMedicalRest(pawn)
                     && (pawn.IsPrisoner == bed.ForPrisoners)
                     && !(bed.GetCurOccupant(0) != null || (bed.OwnersForReading.Count() != 0 && !bed.OwnersForReading.Contains(pawn)))
                     && cpt.PowerOn
