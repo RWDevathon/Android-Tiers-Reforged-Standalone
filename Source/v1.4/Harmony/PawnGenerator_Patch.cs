@@ -13,7 +13,7 @@ namespace ATReforged
         public class GeneratePawn_Prefix
         {
             [HarmonyPrefix]
-            public static bool Prefix(PawnGenerationRequest request)
+            public static bool Prefix(ref PawnGenerationRequest request)
             {
                 ThingDef targetDef = request.KindDef?.race;
                 if (targetDef != null)

@@ -242,8 +242,6 @@ namespace ATReforged
         public static ThoughtDef SkyMindAttackVictimDef = new ThoughtDef();
         public static ThoughtDef SkyMindTrollVictimDef = new ThoughtDef();
 
-        public static List<string> BlacklistedHediffsForAndroids = new List<string> { "Anxiety" };
-
         public static ATR_GameComponent gameComp;
 
         public static int GetPowerUsageByPawn(Pawn pawn)

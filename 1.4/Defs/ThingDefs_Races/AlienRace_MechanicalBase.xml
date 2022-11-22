@@ -18,9 +18,7 @@
 				<traitList>
 					<li>FeelingsTowardOrganics</li>
 				</traitList>
-                <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
                 <blackEndoCategories>
-                    <li>Melanin</li>
                     <li>HairColor</li>
                     <li>Ears</li>
                     <li>Nose</li>
@@ -43,7 +41,7 @@
                         <li>Female</li>
                         <!--<li>None</li>-->
                     </bodyTypes>
-					<colorChannels Inherit="False">
+                    <colorChannels Inherit="False">
 						<li>
 							<name>skin</name>
 							<first Class="ColorGenerator_Options">
