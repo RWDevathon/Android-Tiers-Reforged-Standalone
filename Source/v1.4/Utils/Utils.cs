@@ -12,10 +12,11 @@ namespace ATReforged
     public static class Utils
     {
         // GENERAL UTILITIES
+        // Return a new Gender for a mechanical pawn, based on settings and on the pawn kind.
         public static Gender GenerateGender(PawnKindDef pawnKind)
-        { // Return a Gender for a new pawn, based on settings and on the pawn being spawned.
+        {
             // Only mechanical androids have proper genders. Mechanical drones and animals never have gender.
-            if (!ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawnKind.race))
+            if (!IsConsideredMechanicalAndroid(pawnKind.race))
                 return Gender.None;
 
             // If androids are not allowed to have genders by setting, then set to none.
@@ -47,6 +48,11 @@ namespace ATReforged
         public static bool IsConsideredMechanicalAnimal(Pawn pawn)
         {
             return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def);
+        }
+
+        public static bool IsConsideredMechanicalAnimal(ThingDef thingDef)
+        {
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef);
         }
 
         public static bool IsConsideredMechanicalAndroid(Pawn pawn)
@@ -329,6 +335,10 @@ namespace ATReforged
                         Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest)
                         {
                             bodyType = dest.story.bodyType,
+                            skinColorOverride = dest.story.skinColorOverride,
+                            SkinColorBase = dest.story.SkinColorBase,
+                            furDef = dest.story.furDef,
+                            headType = dest.story.headType,
                             HairColor = dest.story.HairColor,
                             hairDef = dest.story.hairDef
                         };
@@ -765,16 +775,6 @@ namespace ATReforged
             return (int) result;
         }
 
-        // Remove blacklisted traits from mechanical units.
-        public static void removeMindBlacklistedTrait(Pawn pawn)
-        {
-            // Remove blacklisted traits for androids.
-            foreach (Trait trait in pawn.story.traits.allTraits.Where(trait => ATReforged_Settings.blacklistedMechanicalTraits.Contains(trait.def.defName)).ToList())
-            {
-                pawn.story.traits.RemoveTrait(trait);
-            }
-        }
-
         // Handle various parts of resetting drones to default status.
         public static void ReconfigureDrone(Pawn pawn)
         {
@@ -789,6 +789,7 @@ namespace ATReforged
                 // Drones don't have ideos.
                 pawn.ideo = null;
 
+
                 // Drones have a set skill of 8 in all skills. Massive drones get 14 in all skills.
                 int skillLevel = IsConsideredMassive(pawn) ? 14 : 8;
                 foreach (SkillRecord skillRecord in pawn.skills.skills)
@@ -801,8 +802,13 @@ namespace ATReforged
                 // Massive drones get MSeries drone backstory, which they spawn with.
                 if (!IsConsideredMassive(pawn))
                 {
-                    pawn.story.Childhood = BackstoryDefOf.ATR_MechChildhood;
-                    pawn.story.Childhood = BackstoryDefOf.ATR_MechAdulthood;
+                    pawn.story.Childhood = BackstoryDefOf.ATR_DroneChildhood;
+                    pawn.story.Adulthood = BackstoryDefOf.ATR_DroneAdulthood;
+                }
+                // Massive drones don't spawn with apparel. They shouldn't be able to wear any either.
+                else
+                {
+                    pawn.apparel.DestroyAll();
                 }
             }
         }

@@ -8,8 +8,6 @@
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/Tier2/body/</body>
                 <head>Things/Pawns/Humanlikes/Tier2/head/</head>
-                <skeleton>Things/Pawns/Humanlikes/Tier2/body/</skeleton>
-                <skull>Things/Pawns/Humanlikes/Tier2/head/</skull>
 			</graphicPaths>
             <generalSettings>
                 <alienPartGenerator>

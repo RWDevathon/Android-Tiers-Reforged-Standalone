@@ -106,22 +106,6 @@
 
 
     <!-- Tier 5 -->
-    <!-- Male -->
-
-    <HeadTypeDef>
-        <defName>ATR_Tier5_Male</defName>
-        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/Male_Average_Normal</graphicPath>
-        <gender>Male</gender>
-    </HeadTypeDef>
-
-    <!-- Female -->
-
-    <HeadTypeDef>
-        <defName>ATR_Tier5_Female</defName>
-        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/Female_Average_Normal</graphicPath>
-        <gender>Female</gender>
-    </HeadTypeDef>
-    
     <!-- None -->
 
     <HeadTypeDef>

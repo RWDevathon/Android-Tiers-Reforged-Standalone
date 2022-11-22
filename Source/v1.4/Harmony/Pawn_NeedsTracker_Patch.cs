@@ -20,7 +20,7 @@ namespace ATReforged
                 switch (nd.defName)
                 {
                     case "Mood":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn);
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName);
                         break;
                     case "Joy":
                         __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveJoyNeed;
