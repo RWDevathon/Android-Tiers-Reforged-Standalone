@@ -322,7 +322,7 @@ namespace ATReforged
         // Duplicate the source pawn into the destination pawn. If overwriteAsDeath is true, then it is considered murdering the destination pawn.
         // if isTethered is true, then the duplicated pawn will actually share the class with the source so changing one will affect the other automatically.
         public static void Duplicate(Pawn source, Pawn dest, bool overwriteAsDeath=true, bool isTethered = true)
-        { 
+        {
             try
             {
                 // Duplicate source story into destination.
@@ -331,53 +331,29 @@ namespace ATReforged
                     // If not tethered, copy all critical data over.
                     if (!isTethered)
                     {
-                        // Copy the destination's physical attributes. None are duplicated from the source.
-                        Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest)
+                        // Duplicate source traits into destination. First clear all destination traits to avoid issues.
+                        foreach (Trait trait in dest.story.traits.allTraits.ToList())
                         {
-                            bodyType = dest.story.bodyType,
-                            skinColorOverride = dest.story.skinColorOverride,
-                            SkinColorBase = dest.story.SkinColorBase,
-                            furDef = dest.story.furDef,
-                            headType = dest.story.headType,
-                            HairColor = dest.story.HairColor,
-                            hairDef = dest.story.hairDef
-                        };
-
-                        Log.Warning("[ATR DEBUG] backstory check");
-                        // Duplicate source backstory into destination.
-                        if (source.story.Adulthood != null)
-                        {
-                            dest.story.Adulthood = source.story.Adulthood;
+                            dest.story.traits.RemoveTrait(trait);
                         }
-                        else
-                            newStory.Adulthood = null;
-
-                        dest.story.Childhood = source.story.Childhood;
-
-                        // Duplicate source traits into destination.
-                        newStory.traits = new TraitSet(dest);
                         foreach (Trait trait in source.story.traits?.allTraits)
                         {
-                            Trait newTrait = new Trait(trait.def, trait.Degree, true);
-                            newStory.traits.allTraits.Add(newTrait);
+                            dest.story.traits.GainTrait(new Trait(trait.def, trait.Degree, true));
                         }
-
-                        dest.story = newStory;
                     }
-                    // Tether destination and source traits and backstory together.
+                    // Tether destination and source traits together. Affecting one will affect the other.
                     else
                     {
                         dest.story.traits = source.story.traits;
-                        dest.story.Childhood = source.story.Childhood;
-                        dest.story.Adulthood = source.story.Adulthood;
                     }
+                    dest.story.Childhood = source.story.Childhood;
+                    dest.story.Adulthood = source.story.Adulthood;
                     dest.story.title = source.story.title;
                     dest.story.favoriteColor = source.story.favoriteColor;
                     dest.Notify_DisabledWorkTypesChanged();
                     dest.skills.Notify_SkillDisablesChanged();
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " ideo");
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
@@ -394,7 +370,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " royalty");
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
@@ -414,7 +389,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " skills");
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {

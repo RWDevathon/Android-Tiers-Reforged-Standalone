@@ -320,54 +320,29 @@ namespace ATReforged
         { 
             try
             {
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " story");
                 // Duplicate source story into destination.
                 if (source.story != null)
                 {
                     // If not tethered, copy all critical data over.
                     if (!isTethered)
                     {
-                        Log.Warning("[ATR DEBUG] physical attributes check");
-                        // Copy the destination's physical attributes. None are duplicated from the source.
-                        Pawn_StoryTracker newStory = new Pawn_StoryTracker(dest)
+                        // Duplicate source traits into destination. First clear all destination traits to avoid issues.
+                        foreach (Trait trait in dest.story.traits?.allTraits.ToList())
                         {
-                            bodyType = dest.story.bodyType,
-                            hairColor = dest.story.hairColor,
-                            crownType = dest.story.crownType,
-                            hairDef = dest.story.hairDef,
-                            melanin = dest.story.melanin,
-                        };
-
-                        Log.Warning("[ATR DEBUG] backstory check");
-                        // Duplicate source backstory into destination.
-                        if (source.story.adulthood != null)
-                        {
-                            BackstoryDatabase.TryGetWithIdentifier(source.story.adulthood.identifier, out newStory.adulthood);
+                            dest.story.traits.RemoveTrait(trait);
                         }
-                        else
-                            newStory.adulthood = null;
-
-                        BackstoryDatabase.TryGetWithIdentifier(source.story.childhood.identifier, out newStory.childhood);
-
-                        Log.Warning("[ATR DEBUG] trait check");
-                        // Duplicate source traits into destination.
-                        newStory.traits = new TraitSet(dest);
                         foreach (Trait trait in source.story.traits?.allTraits)
                         {
-                            Trait newTrait = new Trait(trait.def, trait.Degree, true);
-                            newStory.traits.allTraits.Add(newTrait);
+                            dest.story.traits.GainTrait(new Trait(trait.def, trait.Degree, true));
                         }
-
-                        Log.Warning("[ATR DEBUG] assignment check");
-                        dest.story = newStory;
                     }
                     // Tether destination and source traits and backstory together.
                     else
                     {
                         dest.story.traits = source.story.traits;
-                        dest.story.childhood = source.story.childhood;
-                        dest.story.adulthood = source.story.adulthood;
                     }
+                    dest.story.childhood = source.story.childhood;
+                    dest.story.adulthood = source.story.adulthood;
                     dest.story.title = source.story.title;
                     dest.story.favoriteColor = source.story.favoriteColor;
                     dest.Notify_DisabledWorkTypesChanged();
