@@ -123,7 +123,7 @@ namespace ATReforged
                     {
                         chargeEffectiveness = !station.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : station.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
                     }
-                    actor.needs.food.CurLevelPercentage += 0.028f * ATReforged_Settings.batteryChargeRate * chargeEffectiveness;
+                    actor.needs.food.CurLevelPercentage += 0.00028f * ATReforged_Settings.batteryChargeRate * chargeEffectiveness;
                 }
 
                 // If the apply bed thought timer is up, set applyBedThoughtsOnLeave to true so that it will apply when done with the job.
