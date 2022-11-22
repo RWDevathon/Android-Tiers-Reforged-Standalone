@@ -8,6 +8,7 @@
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/Tier2/body/</body>
                 <head>Things/Pawns/Humanlikes/Tier2/head/</head>
+                <skinShader>Cutout</skinShader>
 			</graphicPaths>
             <generalSettings>
                 <alienPartGenerator>

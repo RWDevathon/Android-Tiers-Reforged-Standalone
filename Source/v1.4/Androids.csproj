@@ -207,7 +207,7 @@
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\CompFoodPoisonable_Patch.cs" />
     <Compile Include="Harmony\CompAbilityEffect_Convert_Patch.cs" />
-    <Compile Include="Harmony\JobGiver_GetFood_Patch - Copy.cs" />
+    <Compile Include="Harmony\JobDriver_Vomit_Patch.cs" />
     <Compile Include="Harmony\JobGiver_PatientGoToBed_Patch.cs" />
     <Compile Include="Harmony\Pawn_JobTracker_Patch.cs" />
     <Compile Include="Harmony\JobGiver_GetRest_Patch.cs" />

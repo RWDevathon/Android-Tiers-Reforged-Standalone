@@ -59,6 +59,7 @@
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/M7Mech/body/</body>
                 <head>Things/Pawns/Humanlikes/M7Mech/head/</head>
+                <skinShader>Cutout</skinShader>
 			</graphicPaths>
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/M7Mech/body/Naked_None_south</uiIconPath>

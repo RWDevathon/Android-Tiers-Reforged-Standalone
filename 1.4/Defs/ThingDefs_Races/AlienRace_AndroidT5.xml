@@ -63,6 +63,7 @@
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/Tier5/body/</body>
                 <head>Things/Pawns/Humanlikes/Tier5/head/</head>
+                <skinShader>Cutout</skinShader>
 			</graphicPaths>
 			<styleSettings>
                 <li>
