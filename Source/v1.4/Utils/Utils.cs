@@ -710,10 +710,6 @@ namespace ATReforged
                         copy.health.RemoveHediff(autoCore);
                     }
                 }
-                else
-                {
-                    copy.Kill(null);
-                }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
             else
@@ -723,6 +719,10 @@ namespace ATReforged
 
             // Spawn the copy.
             GenSpawn.Spawn(copy, pawn.Position, pawn.Map);
+
+            // Ensure only spawned pawns die, otherwise errors can occur.
+            if (kill && !IsConsideredMechanicalAndroid(copy))
+                copy.Kill(null);
 
             // Draw the copy.
             copy.Drawer.renderer.graphics.ResolveAllGraphics();

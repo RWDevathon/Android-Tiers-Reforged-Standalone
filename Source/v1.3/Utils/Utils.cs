@@ -349,7 +349,6 @@ namespace ATReforged
                     dest.skills.Notify_SkillDisablesChanged();
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " ideo");
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
@@ -366,7 +365,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " royalty");
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
@@ -386,7 +384,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " skills");
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {
@@ -411,7 +408,6 @@ namespace ATReforged
                     dest.skills = source.skills;
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " relational death");
                 // Duplicate source relations into destination. If this duplication is considered murder, handle destination relations first.
                 if (overwriteAsDeath)
                 {
@@ -428,7 +424,6 @@ namespace ATReforged
                     dest.relations.ClearAllRelations();
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " relations");
                 // Duplicate relations.
                 if (!isTethered)
                 {
@@ -473,12 +468,10 @@ namespace ATReforged
                     dest.relations = source.relations;
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " faction");
                 // Duplicate faction. No difference if tethered or not.
                 if (source.Faction != dest.Faction)
                     dest.SetFaction(source.Faction);
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " needs");
                 // Duplicate source needs into destination. This is not tetherable.
                 Pawn_NeedsTracker newNeeds = new Pawn_NeedsTracker(dest);
                 foreach (Thought_Memory memory in source.needs.mood.thoughts.memories.Memories)
@@ -489,7 +482,6 @@ namespace ATReforged
                 dest.needs.AddOrRemoveNeedsAsAppropriate();
                 dest.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " player settings");
                 // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
                 if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
                 {
@@ -530,12 +522,10 @@ namespace ATReforged
                     dest.outfits.CurrentOutfit = source.outfits.CurrentOutfit;
                 }
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " name");
                 // Duplicate source name into destination.
                 NameTriple sourceName = (NameTriple)source.Name;
                 dest.Name = new NameTriple(sourceName.First, sourceName.Nick, sourceName.Last);
 
-                Log.Warning("[ATR DEBUG] " + source + " " + dest + " graphics [name should now be identical]");
                 dest.Drawer.renderer.graphics.ResolveAllGraphics();
             }
             catch(Exception e)
@@ -725,10 +715,6 @@ namespace ATReforged
                         copy.health.RemoveHediff(autoCore);
                     }
                 }
-                else
-                {
-                    copy.Kill(null);
-                }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
             else
@@ -738,6 +724,10 @@ namespace ATReforged
 
             // Spawn the copy.
             GenSpawn.Spawn(copy, pawn.Position, pawn.Map);
+
+            // Ensure only spawned pawns die, otherwise errors can occur.
+            if (kill && !IsConsideredMechanicalAndroid(copy))
+                copy.Kill(null);
 
             // Draw the copy.
             copy.Drawer.renderer.graphics.ResolveAllGraphics();
