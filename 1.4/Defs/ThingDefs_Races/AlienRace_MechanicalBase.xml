@@ -194,6 +194,7 @@
 			<ageGenerationCurve>
 				<points>
 					<li>(0,0)</li>
+					<li>(0.2,300)</li>
 					<li>(1,400)</li>
 					<li>(20,300)</li>
 					<li>(50,200)</li>
