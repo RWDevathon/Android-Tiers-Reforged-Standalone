@@ -665,7 +665,7 @@
   
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
-		<label>Mental assistant</label>
+		<label>Psychic assistant</label>
 		<description>This organic component assists the core intelligence. This organic assistant is highly psychically attuned, acting as a conduit for the core intelligence to utilize psychic capabilities. Due to the organic nature of the assistant, the core intelligence is unable to fully manipulate it like other parts, and is vulnerable to all that which comes with psychic sensitivity. The assistant consumes a vast amount of energy to sustain itself, leading to greater power consumption overall.</description>
 		<costList>
 			<Plasteel>10</Plasteel>
