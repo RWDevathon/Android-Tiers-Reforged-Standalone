@@ -33,7 +33,7 @@ namespace ATReforged
                 if (target != null)
                     pawn.health.RemoveHediff(target);
                 pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
-                pawn.playerSettings.medCare = MedicalCareCategory.Best;
+                pawn.playerSettings.medCare = MedicalCareCategory.NormalOrWorse;
                 Messages.Message("ATR_NewbootAndroidCreated".Translate(), MessageTypeDefOf.PositiveEvent);
             }
 
