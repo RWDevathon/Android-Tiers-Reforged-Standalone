@@ -11,10 +11,6 @@ namespace ATReforged
             DefOfHelper.EnsureInitializedInCtor(typeof(RulePackDefOf));
         }
 
-        public static RulePackDef ATR_AndroidMaleNames;
-
-        public static RulePackDef ATR_AndroidFemaleNames;
-
         public static RulePackDef ATR_AndroidNoneNames;
 
         public static RulePackDef ATR_DroneNoneNames;

@@ -68,7 +68,7 @@ namespace ATReforged
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_IsolatedCore);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def);
         }
 
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
@@ -323,6 +323,7 @@ namespace ATReforged
         {
             try
             {
+                Log.Warning("[ATR DEBUG] Pre Story");
                 // Duplicate source story into destination.
                 if (source.story != null)
                 {
@@ -352,10 +353,15 @@ namespace ATReforged
                     dest.skills.Notify_SkillDisablesChanged();
                 }
 
+                Log.Warning("[ATR DEBUG] Pre Ideo");
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
-                    if (!isTethered)
+                    if (source.ideo == null)
+                    {
+                        dest.ideo = null;
+                    }
+                    else if (!isTethered)
                     {
                         dest.ideo = new Pawn_IdeoTracker(dest);
                         dest.ideo.SetIdeo(source.Ideo);
@@ -368,6 +374,7 @@ namespace ATReforged
                     }
                 }
 
+                Log.Warning("[ATR DEBUG] Pre Royalty");
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
@@ -387,6 +394,7 @@ namespace ATReforged
                     }
                 }
 
+                Log.Warning("[ATR DEBUG] Pre Skills");
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {
@@ -411,6 +419,7 @@ namespace ATReforged
                     dest.skills = source.skills;
                 }
 
+                Log.Warning("[ATR DEBUG] Pre death relationships");
                 // Duplicate source relations into destination. If this duplication is considered murder, handle destination relations first.
                 if (overwriteAsDeath)
                 {
@@ -427,6 +436,7 @@ namespace ATReforged
                     dest.relations.ClearAllRelations();
                 }
 
+                Log.Warning("[ATR DEBUG] Pre relationships");
                 // Duplicate relations.
                 if (!isTethered)
                 {
@@ -471,20 +481,26 @@ namespace ATReforged
                     dest.relations = source.relations;
                 }
 
+                Log.Warning("[ATR DEBUG] Pre faction");
                 // Duplicate faction. No difference if tethered or not.
                 if (source.Faction != dest.Faction)
                     dest.SetFaction(source.Faction);
 
+                Log.Warning("[ATR DEBUG] Pre needs");
                 // Duplicate source needs into destination. This is not tetherable.
                 Pawn_NeedsTracker newNeeds = new Pawn_NeedsTracker(dest);
-                foreach (Thought_Memory memory in source.needs.mood.thoughts.memories.Memories)
+                if (source.needs?.mood != null)
                 {
-                    newNeeds.mood.thoughts.memories.Memories.Add(memory);
+                    foreach (Thought_Memory memory in source.needs.mood.thoughts.memories.Memories)
+                    {
+                        newNeeds.mood.thoughts.memories.TryGainMemory(memory, memory.otherPawn);
+                    }
                 }
                 dest.needs = newNeeds;
-                dest.needs.AddOrRemoveNeedsAsAppropriate();
-                dest.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
+                dest.needs?.AddOrRemoveNeedsAsAppropriate();
+                dest.needs?.mood?.thoughts?.situational?.Notify_SituationalThoughtsDirty();
 
+                Log.Warning("[ATR DEBUG] Pre playersettings");
                 // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
                 if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
                 {
@@ -511,7 +527,7 @@ namespace ATReforged
                                 dest.workSettings.SetPriority(workTypeDef, source.workSettings.GetPriority(workTypeDef));
                         }
                     }
-
+                    
                     // Duplicate source restrictions from into destination.
                     for (int i = 0; i != 24; i++)
                     {
@@ -525,6 +541,7 @@ namespace ATReforged
                     dest.outfits.CurrentOutfit = source.outfits.CurrentOutfit;
                 }
 
+                Log.Warning("[ATR DEBUG] Pre finalization");
                 // Duplicate source name into destination.
                 NameTriple sourceName = (NameTriple)source.Name;
                 dest.Name = new NameTriple(sourceName.First, sourceName.Nick, sourceName.Last);

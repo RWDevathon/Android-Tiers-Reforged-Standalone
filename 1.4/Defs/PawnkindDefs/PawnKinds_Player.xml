@@ -6,11 +6,11 @@
 		<label>T5 Android Colonist</label>
 		<race>Tier5Android</race>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_ArchotechAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_ArchotechAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<techHediffsMoney>
@@ -30,11 +30,11 @@
     <PawnKindDef Name="BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
 		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_NewbootAndroids</li>
-			</categories>
-		  </li>
+            <li>
+                <categories>
+                    <li>ATR_NewbootAndroids</li>
+                </categories>
+            </li>
 		</backstoryFiltersOverride>
 		<maxGenerationAge>1</maxGenerationAge>
 		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>

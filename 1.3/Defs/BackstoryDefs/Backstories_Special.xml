@@ -12,7 +12,6 @@
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 
-    <!-- TODO: This backstoryDef for newboot adulthood may or may not be necessary. Ascertain which it is.
     <AlienRace.BackstoryDef>
 		<defName>ATR_NewbootAdulthood</defName>
 		<title>Mechanical unit</title>
@@ -23,7 +22,6 @@
 			<li>ATR_NewbootAndroids</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
-    -->
 
     <AlienRace.BackstoryDef>
         <defName>ATR_MechanicalArchotechChildhood</defName>

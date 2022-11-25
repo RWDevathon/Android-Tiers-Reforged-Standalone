@@ -250,7 +250,6 @@
     <Compile Include="Components\CompSkyMindLink.cs" />
     <Compile Include="Components\CompProperties_GenericSpawner.cs" />
     <Compile Include="Components\CompSpawnerGeneric.cs" />
-    <Compile Include="DefsOf\FactionDefOf.cs" />
     <Compile Include="DefsOf\JobDefOf.cs" />
     <Compile Include="DefsOf\StatDefOf.cs" />
     <Compile Include="DefsOf\ThingDefOf.cs" />

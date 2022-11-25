@@ -25,6 +25,10 @@
 		<spawnCategories>
 			<li>ATR_Drone</li>
 		</spawnCategories>
+		<workDisables>
+			<li>Animals</li>
+            <li>Social</li>
+		</workDisables>
 	</BackstoryDef>
 	
 	<BackstoryDef>

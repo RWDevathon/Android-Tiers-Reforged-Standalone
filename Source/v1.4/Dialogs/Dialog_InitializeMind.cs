@@ -57,7 +57,7 @@ namespace ATReforged
             // Players may choose to allow the new pawn to initialize itself and choose its own personality and intelligence.
             buttonBAction = delegate ()
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0);
+                PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
                 newPawn.story.Childhood = BackstoryDefOf.ATR_NewbootChildhood;
                 Utils.Duplicate(newPawn, newIntelligence, false, false);

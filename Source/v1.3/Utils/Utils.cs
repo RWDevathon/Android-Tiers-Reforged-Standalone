@@ -63,7 +63,7 @@ namespace ATReforged
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_IsolatedCore);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def);
         }
 
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
@@ -352,7 +352,7 @@ namespace ATReforged
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
-                    if (!isTethered)
+                    if (source.ideo != null && !isTethered)
                     {
                         dest.ideo = new Pawn_IdeoTracker(dest);
                         dest.ideo.SetIdeo(source.Ideo);
@@ -474,13 +474,16 @@ namespace ATReforged
 
                 // Duplicate source needs into destination. This is not tetherable.
                 Pawn_NeedsTracker newNeeds = new Pawn_NeedsTracker(dest);
-                foreach (Thought_Memory memory in source.needs.mood.thoughts.memories.Memories)
+                if (source.needs?.mood != null)
                 {
-                    newNeeds.mood.thoughts.memories.Memories.Add(memory);
+                    foreach (Thought_Memory memory in source.needs.mood.thoughts.memories.Memories)
+                    {
+                        newNeeds.mood.thoughts.memories.TryGainMemory(memory, memory.otherPawn);
+                    }
                 }
                 dest.needs = newNeeds;
-                dest.needs.AddOrRemoveNeedsAsAppropriate();
-                dest.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
+                dest.needs?.AddOrRemoveNeedsAsAppropriate();
+                dest.needs?.mood?.thoughts?.situational.Notify_SituationalThoughtsDirty();
 
                 // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
                 if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
