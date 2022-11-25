@@ -1,64 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 using RimWorld;
 using Verse;
 using Verse.AI;
+using Verse.Sound;
 
 namespace ATReforged
 {
-    public class JobDriver_ResurrectMechanical : JobDriver
+    public class JobDriver_ResurrectMechanical : JobDriver_Resurrect
     {
-        internal Corpse Corpse
-        {
-            get
-            {
-                return (Corpse)job.GetTarget(TargetIndex.A).Thing;
-            }
-        }
+        private Corpse Corpse => (Corpse)job.GetTarget(TargetIndex.A).Thing;
 
-        private Thing Item
-        {
-            get
-            {
-                return job.GetTarget(TargetIndex.B).Thing;
-            }
-        }
+        private Thing Item => job.GetTarget(TargetIndex.B).Thing;
 
-        private Thing User
-        {
-            get
-            {
-                return job.GetTarget(TargetIndex.C).Thing;
-            }
-        }
-
-        // Figure out if the pawn can reserve the corpse and the item. Return true if it can reserve both, false if not.
-        public override bool TryMakePreToilReservations(bool errorOnFailed)
-        { 
-            Pawn pawn = this.pawn;
-            LocalTargetInfo target = Corpse;
-            Job job = this.job;
-            bool result = pawn.Reserve(target, job, 1, -1, null, errorOnFailed);
-            if (result)
-            {
-                target = Item;
-                result = pawn.Reserve(target, job, 1, -1, null, errorOnFailed);
-            }
-            return result;
-        }
+        private Mote warmupMote;
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.B).FailOnDespawnedOrNull(TargetIndex.A);
-            yield return Toils_Haul.StartCarryThing(TargetIndex.B, false, false, false);
+            yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);
-            Toil prepare = Toils_General.Wait(1200, TargetIndex.None);
-            prepare.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            prepare.FailOnDespawnedOrNull(TargetIndex.A);
-            prepare.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
-            yield return prepare;
+            Toil toil = Toils_General.Wait(1200);
+            toil.WithProgressBarToilDelay(TargetIndex.A);
+            toil.FailOnDespawnedOrNull(TargetIndex.A);
+            toil.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
+            toil.tickAction = delegate
+            {
+                CompUsable compUsable = Item.TryGetComp<CompUsable>();
+                if (compUsable != null && warmupMote == null && compUsable.Props.warmupMote != null)
+                {
+                    warmupMote = MoteMaker.MakeAttachedOverlay(Corpse, compUsable.Props.warmupMote, Vector3.zero);
+                }
+
+                warmupMote?.Maintain();
+            };
+            yield return toil;
             yield return Toils_General.Do(new Action(Resurrect));
-            yield break;
         }
 
         // Resurrect the targetted pawn if it is legal to do so.
@@ -76,12 +54,13 @@ namespace ATReforged
                     return;
                 }
 
-                // Apply the long reboot (24 hours) to the pawn. This will ensure hostile units can be safely captured, and that your own units can't be reactivated mid-combat.
+                // Apply the long reboot (24 hours) to the pawn. This will ensure hostile units can be safely captured, and that friendly units can't be reactivated mid-combat.
                 Hediff rebootHediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("ATR_LongReboot"), innerPawn);
                 innerPawn.health.AddHediff(rebootHediff);
 
                 // This kit executes a full resurrection which removes all negative hediffs.
                 ResurrectionUtility.Resurrect(innerPawn);
+                SoundDefOf.MechSerumUsed.PlayOneShot(SoundInfo.InMap(innerPawn));
 
                 // If the target is an android surrogate, then ensure it is booted up as a blank if a surrogate without any rebooting. Autonomous intact cores are fine as is.
                 if (Utils.IsSurrogate(innerPawn))
@@ -93,7 +72,7 @@ namespace ATReforged
                     innerPawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore);
                     innerPawn.health.RemoveHediff(rebootHediff);
 
-                    // Dead surrogates of other factions are still be considered foreign. Remove that flag.
+                    // Dead surrogates of other factions should no longer be considered foreign. Remove that flag.
                     CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
                     if (targetComp.isForeign)
                         targetComp.isForeign = false;
@@ -102,7 +81,7 @@ namespace ATReforged
                 // Make the revived pawn grateful to the pawn that revived them.
                 if (innerPawn.needs.mood != null)
                 {
-                    innerPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.RescuedMe, (Pawn)User);
+                    innerPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.RescuedMe, pawn);
                 }
 
                 // Notify successful resurrection and destroy the used kit.
@@ -112,11 +91,5 @@ namespace ATReforged
             else
                 Messages.Message("ATR_ResurrectionFailedInvalidPawn".Translate(innerPawn).CapitalizeFirst(), innerPawn, MessageTypeDefOf.RejectInput, true);
         }
-
-        private const TargetIndex CorpseInd = TargetIndex.A;
-
-        private const TargetIndex ItemInd = TargetIndex.B;
-
-        private const int DurationTicks = 600;
     }
 }

@@ -280,9 +280,7 @@
                 <useJob>UseItem</useJob>
                 <useLabel>Use resurrector kit</useLabel>
                 <useDuration>0</useDuration>
-            </li>
-            <li Class="CompProperties_UseEffect">
-                <compClass>CompUseEffect_DestroySelf</compClass>
+                <warmupMote>Mote_ResurrectAbility</warmupMote>
             </li>
             <li Class="CompProperties_Targetable">
                 <compClass>CompTargetable_SingleCorpse</compClass>

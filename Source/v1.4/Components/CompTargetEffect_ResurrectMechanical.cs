@@ -9,16 +9,13 @@ namespace ATReforged
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {
-            // Exit if the user is not a player controlled pawn or the pawn can not reserve/reach the intended target.
-            if (user.Faction != Faction.OfPlayer || !user.CanReserveAndReach(target, PathEndMode.Touch, Danger.Deadly))
+            // Only player controlled pawns that can reach the target can use the kit.
+            if (user.Faction == Faction.OfPlayer && user.CanReserveAndReach(target, PathEndMode.Touch, Danger.Deadly))
             {
-                return;
+                Job job = JobMaker.MakeJob(JobDefOf.ResurrectMechanical, target, parent);
+                job.count = 1;
+                user.jobs.TryTakeOrderedJob(job, JobTag.Misc);
             }
-            Job job = new Job(JobDefOf.ResurrectMechanical, target, parent, user)
-            {
-                count = 1
-            };
-            user.jobs.TryTakeOrderedJob(job, JobTag.Misc);
         }
     }
 }
