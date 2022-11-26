@@ -302,7 +302,7 @@
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_ConstructionAssistant</defName>
-		<label>Install blueprint banks</label>
+		<label>Install construction assistant</label>
 		<description>Installs a construction assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing construction assistant.</jobString>
 		<ingredients>
