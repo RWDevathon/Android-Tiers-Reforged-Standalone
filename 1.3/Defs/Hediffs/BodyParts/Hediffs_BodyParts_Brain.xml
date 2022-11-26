@@ -177,7 +177,7 @@
     <HediffDef ParentName="ATR_ImplantCoreBase">
         <defName>ATR_SkyMindTransceiver</defName>
         <label>SkyMind Transceiver</label>
-        <description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. This implant is safe to add or remove without issue.</description>
+        <description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</description>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartCoreBase">
@@ -187,7 +187,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <label>SkyMind Transceiver</label>
-        <description>A small module that can be implaned into an organic brain, allowing the subject to freely interact with the SkyMind network. This implant is safe to add or remove without issue.</description>
+        <description>A small module that can be implaned into an organic brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</description>
         <recipeMaker>
             <researchPrerequisite>ATR_SurrogateOptimization</researchPrerequisite>
         </recipeMaker>
