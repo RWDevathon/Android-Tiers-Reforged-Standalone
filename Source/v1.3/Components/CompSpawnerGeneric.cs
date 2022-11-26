@@ -25,8 +25,8 @@ namespace ATReforged
             PawnGenerationRequest request = new PawnGenerationRequest(Spawnprops.pawnKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, fixedIdeo: null, forceNoIdeo: true, fixedGender : Utils.GenerateGender(Spawnprops.pawnKind));
             Pawn pawn = PawnGenerator.GeneratePawn(request);
 
-            // Pawns may sometimes spawn with apparel somewhere in the generation process. Ensure they don't actually spawn with any.
-            pawn.apparel.DestroyAll();
+            // Pawns may sometimes spawn with apparel somewhere in the generation process. Ensure they don't actually spawn with any - if they can even wear apparel.
+            pawn.apparel?.DestroyAll();
 
             // If the pawn is an android, it is spawned dormant without an installed intelligence. Animals are spawned pre-initialized.
             if (Utils.IsConsideredMechanicalAndroid(pawn))
