@@ -52,6 +52,7 @@
 		<factionIconPath>UI/Icons/Sites/AndroidBase</factionIconPath>
 		<factionNameMaker>NamerFactionRaiderAndroid</factionNameMaker>
 		<settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+        <basicMemberKind>ATR_RaiderSoldierT2</basicMemberKind>
 		<colorSpectrum>
 			<li>(0.95, 0.9, 0.92)</li>
 			<li>(0.9, 0.9, 0.9)</li>
@@ -100,7 +101,7 @@
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
-				<commonality>10</commonality>
+				<commonality>1</commonality>
                 <maxTotalPoints>1000</maxTotalPoints>
 				<options>
 					<ATR_RaiderSlaveT1>4</ATR_RaiderSlaveT1>
@@ -158,6 +159,7 @@
 		</backstoryFilters>
 		<melaninRange>0.1~0.5</melaninRange>
         <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
+        <basicMemberKind>AndroidT2CollectiveSoldier</basicMemberKind>
 		<caravanTraderKinds>
 			<li>Caravan_AndroidCollective_BulkGoods</li>
 			<li>Caravan_AndroidCollective_CombatSupplier</li>
@@ -219,6 +221,7 @@
 					<AndroidT1CollectiveSoldier>7</AndroidT1CollectiveSoldier>
 					<AndroidT2CollectiveSoldier>6</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveSoldier>4.5</AndroidT3CollectiveSoldier>
+					<AndroidT4CollectiveLeader>1</AndroidT4CollectiveLeader>
 				</guards>
 			</li>
 			<li>

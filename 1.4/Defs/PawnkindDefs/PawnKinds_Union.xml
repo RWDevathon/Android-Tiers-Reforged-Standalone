@@ -122,7 +122,6 @@
                 </categories>
             </li>
 		</backstoryFiltersOverride>
-		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
@@ -228,7 +227,7 @@
             </li>
 		</backstoryFiltersOverride>
 		<race>Tier2Android</race>
-		<combatPower>120</combatPower>
+		<combatPower>80</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<aiAvoidCover>false</aiAvoidCover>
@@ -281,7 +280,7 @@
             </li>
 		</backstoryFiltersOverride>
 		<race>Tier3Android</race>
-		<combatPower>180</combatPower>
+		<combatPower>140</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<aiAvoidCover>false</aiAvoidCover>
@@ -335,7 +334,7 @@
             </li>
 		</backstoryFiltersOverride>
 		<race>Tier4Android</race>
-		<combatPower>230</combatPower>
+		<combatPower>180</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<aiAvoidCover>false</aiAvoidCover>
@@ -389,7 +388,7 @@
             </li>
 		</backstoryFiltersOverride>
 		<race>Tier4Android</race>
-		<combatPower>250</combatPower>
+		<combatPower>220</combatPower>
 		<factionLeader>true</factionLeader>
 		<minGenerationAge>20</minGenerationAge>
 		<invNutrition>3.0</invNutrition>

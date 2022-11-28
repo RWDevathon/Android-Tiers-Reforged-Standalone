@@ -240,8 +240,8 @@
 			<MoveSpeed>5.20</MoveSpeed>
 			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
-			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.00</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
 			<GlobalLearningFactor>0.4</GlobalLearningFactor>
 			<Mass>450</Mass>
 		</statBases>
