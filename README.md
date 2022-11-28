@@ -27,9 +27,9 @@ Android Tiers itself is a mod that intends to add mechanical colonists, animals,
 
 ## Links
 
-[Discord] (https://discord.gg/qVJzeB8)
+[Discord](https://discord.gg/qVJzeB8)
 
-[GitHub] (https://github.com/RWDevathon/Android-Tiers-Reforged)
+[GitHub](https://github.com/RWDevathon/Android-Tiers-Reforged)
 
 Special thanks to:
 * Atlas - The OG and absolute lad creator
