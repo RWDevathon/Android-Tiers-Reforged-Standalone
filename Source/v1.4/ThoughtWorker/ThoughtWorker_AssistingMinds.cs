@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace ATReforged
@@ -19,7 +18,7 @@ namespace ATReforged
                 return false;
             }
 
-            int num = Utils.gameComp.GetCloudPawns().Where(pawn => !pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_MindOperation) && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count();
+            int num = Utils.gameComp.GetCloudPawns().Count;
             if (num >= 15)
             {
                 return ThoughtState.ActiveAtStage(2);

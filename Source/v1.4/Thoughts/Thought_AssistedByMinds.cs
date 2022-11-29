@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Linq;
-using Verse;
-using RimWorld;
+﻿using RimWorld;
 
 namespace ATReforged
 {
@@ -12,15 +9,6 @@ namespace ATReforged
             get
             {
                 return CurStage.label;
-            }
-        }
-        
-        protected override float BaseMoodOffset
-        {
-            get
-            {
-                int points = Utils.gameComp.GetCloudPawns().Where(pawn => !pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_MindOperation) && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count();
-                return Mathf.Min(points, 10);
             }
         }
     }

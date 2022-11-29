@@ -1,7 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
 using RimWorld;
-using System.Linq;
 
 namespace ATReforged
 {
@@ -33,9 +32,9 @@ namespace ATReforged
                 {
                     return false;
                 }
-                foreach (Pawn pawn in ownedBed.OwnersForReading.Where(pawn => pawn != p))
+                foreach (Pawn pawn in ownedBed.OwnersForReading)
                 {
-                    if (!Utils.IsControlledSurrogate(pawn) && !LovePartnerRelationUtility.LovePartnerRelationExists(p, pawn.TryGetComp<CompSkyMindLink>().GetSurrogates().First()))
+                    if (!Utils.IsControlledSurrogate(pawn) && pawn != p && !LovePartnerRelationUtility.LovePartnerRelationExists(p, pawn.TryGetComp<CompSkyMindLink>().GetSurrogates().FirstOrFallback()))
                     {
                         return false;
                     }
