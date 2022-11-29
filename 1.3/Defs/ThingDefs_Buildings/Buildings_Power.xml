@@ -173,7 +173,7 @@
         <graphicData>
             <drawSize>(3,6)</drawSize>
         </graphicData>
-        <size>(3,6)</size>
+        <size>(1,2)</size>
         <costList>
             <Steel>250</Steel>
             <Silver>150</Silver>
