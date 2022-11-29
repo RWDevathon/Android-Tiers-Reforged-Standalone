@@ -93,10 +93,19 @@ namespace ATReforged
                 }
 
                 // if the pawn has their charge/rest need met (both if both exist, otherwise which ever one they have), then the job is complete.
-                if (!HealthAIUtility.ShouldSeekMedicalRest(actor) &&!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
+                if (!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
                 {
-                    actor.jobs.EndCurrentJob(JobCondition.Succeeded, true);
-                    return;
+                    // If the job is complete by measures of needs, terminate the job if they are uninjured.
+                    if (!HealthAIUtility.ShouldSeekMedicalRest(actor))
+                    {
+                        actor.jobs.EndCurrentJob(JobCondition.Succeeded, true);
+                        return;
+                    }
+                    // If the pawn is injured but ready for other tasks (and isn't forced to do this one), then check if there is another preferred job.
+                    else if (!actor.jobs.curJob.playerForced)
+                    {
+                        actor.jobs.CheckForJobOverride();
+                    }
                 }
 
                 // Increment comfort from where the pawn is resting, if applicable.
