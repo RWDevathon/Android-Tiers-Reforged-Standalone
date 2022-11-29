@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 using HarmonyLib;
-using Verse.AI;
 using RimWorld.Planet;
+using System.Linq;
 
 namespace ATReforged
 {
@@ -249,47 +248,6 @@ namespace ATReforged
             return (int) (ATReforged_Settings.wattsConsumedPerBodySize * pawn.BodySize);
         }
 
-        // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
-        public static Building_Bed GetAvailableChargingBed(Pawn pawn)
-        { 
-            Map map = pawn.Map;
-
-            // Check if the pawn owns a bed that is charge-capable, online, and accessible. If it is, then it will choose that to charge.
-            if (pawn.ownership != null && pawn.ownership.OwnedBed != null)
-            {
-                Building_Bed pawnBed = pawn.ownership.OwnedBed;
-                CompPowerTrader compPowerTrader = pawnBed.TryGetComp<CompPowerTrader>();
-                if (pawnBed is Building_Bed && compPowerTrader != null)
-                {
-                    if (!pawnBed.Destroyed && compPowerTrader.PowerOn && pawn.CanReserveAndReach(pawn.ownership.OwnedBed, PathEndMode.OnCell, Danger.Deadly) && pawn.ownership.OwnedBed.Position.InAllowedArea(pawn))
-                    {
-                        return pawnBed;
-                    }
-                }
-            }
-
-            // Locate a viable charge-capable, online, accessible bed for the pawn. Store the closest such bed - achieved by looking from closest bed to furthest bed.
-            foreach(Building_Bed bed in map.listerBuildings.allBuildingsColonist.Where(target => target is Building_Bed && target.TryGetComp<CompPowerTrader>() != null).OrderBy(b => b.Position.DistanceToSquared(pawn.Position)).Cast<Building_Bed>())
-            {
-                CompPowerTrader cpt = bed.TryGetComp<CompPowerTrader>();
-                if (!bed.Destroyed && cpt != null)
-                {
-                    if (bed.Medical == pawn.health.hediffSet.HasNaturallyHealingInjury()
-                    && (pawn.IsPrisoner == bed.ForPrisoners)
-                    && !(bed.GetCurOccupant(0) != null || (bed.OwnersForReading.Count() != 0 && !bed.OwnersForReading.Contains(pawn)))
-                    && cpt.PowerOn
-                    && bed.Position.InAllowedArea(pawn)
-                    && pawn.CanReserveAndReach(bed, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, false))
-                    {
-                        // Located the closest available charging bed. Return it.
-                        return bed;
-                    }
-                }
-            }
-
-            return null;
-        }
-
         // Generate a surrogate and properly apply to it a blank personality and the appropriate receiver implant.
         public static Pawn GenerateSurrogate(Faction faction, PawnKindDef kindDef, Gender gender = Gender.None)
         {
@@ -312,18 +270,12 @@ namespace ATReforged
             return surrogate;
         }
 
-        public static void ThrowFleck(FleckDef fleckDef, Pawn pawn)
-        {
-            FleckMaker.ThrowMetaIcon(pawn.Position, pawn.Map, fleckDef, Rand.Range(0.35f, 0.55f));
-        }
-
         // Duplicate the source pawn into the destination pawn. If overwriteAsDeath is true, then it is considered murdering the destination pawn.
         // if isTethered is true, then the duplicated pawn will actually share the class with the source so changing one will affect the other automatically.
         public static void Duplicate(Pawn source, Pawn dest, bool overwriteAsDeath=true, bool isTethered = true)
         {
             try
             {
-                Log.Warning("[ATR DEBUG] Pre Story");
                 // Duplicate source story into destination.
                 if (source.story != null)
                 {
@@ -353,7 +305,6 @@ namespace ATReforged
                     dest.skills.Notify_SkillDisablesChanged();
                 }
 
-                Log.Warning("[ATR DEBUG] Pre Ideo");
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
@@ -374,7 +325,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] Pre Royalty");
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
@@ -394,7 +344,6 @@ namespace ATReforged
                     }
                 }
 
-                Log.Warning("[ATR DEBUG] Pre Skills");
                 // Duplicate source skills into destination.
                 if (!isTethered)
                 {
@@ -419,7 +368,6 @@ namespace ATReforged
                     dest.skills = source.skills;
                 }
 
-                Log.Warning("[ATR DEBUG] Pre death relationships");
                 // Duplicate source relations into destination. If this duplication is considered murder, handle destination relations first.
                 if (overwriteAsDeath)
                 {
@@ -436,7 +384,6 @@ namespace ATReforged
                     dest.relations.ClearAllRelations();
                 }
 
-                Log.Warning("[ATR DEBUG] Pre relationships");
                 // Duplicate relations.
                 if (!isTethered)
                 {
@@ -481,12 +428,10 @@ namespace ATReforged
                     dest.relations = source.relations;
                 }
 
-                Log.Warning("[ATR DEBUG] Pre faction");
                 // Duplicate faction. No difference if tethered or not.
                 if (source.Faction != dest.Faction)
                     dest.SetFaction(source.Faction);
 
-                Log.Warning("[ATR DEBUG] Pre needs");
                 // Duplicate source needs into destination. This is not tetherable.
                 Pawn_NeedsTracker newNeeds = new Pawn_NeedsTracker(dest);
                 if (source.needs?.mood != null)
@@ -500,7 +445,6 @@ namespace ATReforged
                 dest.needs?.AddOrRemoveNeedsAsAppropriate();
                 dest.needs?.mood?.thoughts?.situational?.Notify_SituationalThoughtsDirty();
 
-                Log.Warning("[ATR DEBUG] Pre playersettings");
                 // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
                 if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
                 {
@@ -541,7 +485,6 @@ namespace ATReforged
                     dest.outfits.CurrentOutfit = source.outfits.CurrentOutfit;
                 }
 
-                Log.Warning("[ATR DEBUG] Pre finalization");
                 // Duplicate source name into destination.
                 NameTriple sourceName = (NameTriple)source.Name;
                 dest.Name = new NameTriple(sourceName.First, sourceName.Nick, sourceName.Last);
@@ -609,9 +552,14 @@ namespace ATReforged
             }
 
             // Pawns afflicted with dementia, memory corruption, or who are already subjects of mind operations are not permissible targets for mind operations.
-            if (pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_MemoryCorruption || hediff.def == RimWorld.HediffDefOf.Dementia || hediff.def == HediffDefOf.ATR_MindOperation).Any())
+            List<Hediff> targetHediffs = pawn.health.hediffSet.hediffs;
+            for (int i = targetHediffs.Count - 1; i >= 0; i--)
             {
-                return false;
+                Hediff hediff = targetHediffs[i];
+                if (hediff.def == HediffDefOf.ATR_MemoryCorruption || hediff.def == RimWorld.HediffDefOf.Dementia || hediff.def == HediffDefOf.ATR_MindOperation)
+                {
+                    return false;
+                }
             }
 
             // If the pawn has a cloud capable implant or is in the SkyMind network already, then it is valid.
@@ -621,7 +569,7 @@ namespace ATReforged
         // Returns a list of all surrogates without hosts in caravans. Return null if there are none.
         public static IEnumerable<Pawn> GetHostlessCaravanSurrogates()
         {
-            IEnumerable<Pawn> hostlessSurrogates = new HashSet<Pawn>();
+            HashSet<Pawn> hostlessSurrogates = new HashSet<Pawn>();
             foreach (Caravan caravan in Find.World.worldObjects.Caravans)
             {
                 foreach (Pawn pawn in caravan.pawns)
@@ -632,7 +580,7 @@ namespace ATReforged
                     }
                 }
             }
-            return hostlessSurrogates.Count() == 0 ? null : hostlessSurrogates;
+            return hostlessSurrogates.Count == 0 ? null : hostlessSurrogates;
         }
         
         // Create as close to a perfect copy of the provided pawn as possible. If kill is true, then we're trying to make a corpse copy of it.

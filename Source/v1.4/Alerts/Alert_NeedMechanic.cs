@@ -2,7 +2,6 @@
 using System.Text;
 using Verse;
 using RimWorld;
-using System.Linq;
 
 namespace ATReforged
 {
@@ -33,7 +32,15 @@ namespace ATReforged
                     if (hasMechanic)
                         continue;
 
-                    patientsResult.AddRange(map.mapPawns.FreeColonists.Where(pawn => (pawn.Spawned || pawn.BrieflyDespawned()) && Utils.IsConsideredMechanical(pawn) && HealthAIUtility.ShouldBeTendedNowByPlayer(pawn)));
+                    List<Pawn> colonists = map.mapPawns.FreeColonists;
+                    for (int i = colonists.Count - 1; i >= 0; i--)
+                    {
+                        Pawn colonist = colonists[i];
+                        if ((colonist.Spawned || colonist.BrieflyDespawned()) && Utils.IsConsideredMechanical(colonist) && HealthAIUtility.ShouldBeTendedNowByPlayer(colonist))
+                        {
+                            patientsResult.Add(colonist);
+                        }
+                    }
                 }
 
                 return patientsResult;

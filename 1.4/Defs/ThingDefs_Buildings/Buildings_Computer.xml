@@ -8,6 +8,7 @@
         <pathCost>70</pathCost>
         <blockWind>true</blockWind>
         <castEdgeShadows>true</castEdgeShadows>
+        <tickerType>Rare</tickerType>
         <fillPercent>0.40</fillPercent>
         <comps>
             <li Class="CompProperties_Breakdownable"/>

@@ -1,9 +1,7 @@
 ﻿using System;
 using Verse;
-using Verse.AI;
 using HarmonyLib;
 using RimWorld;
-using System.Linq;
 
 namespace ATReforged
 {

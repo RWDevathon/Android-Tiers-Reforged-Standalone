@@ -678,6 +678,7 @@ namespace ATReforged
                 // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
                 Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
                 ThisPawn.DeSpawn();
+                ThisPawn.ownership.UnclaimAll();
             }
 
             // Replication simply creates a new SkyMind intelligence duplicated from another.

@@ -2,9 +2,7 @@
 using System.Linq;
 using RimWorld;
 using Verse;
-using Verse.AI;
 using UnityEngine;
-using RimWorld.Planet;
 
 namespace ATReforged
 {
@@ -309,7 +307,7 @@ namespace ATReforged
             }
 
             // If there is no available space in the network, return false. No connection is made.
-            if (networkedDevices.Count() >= SkyMindNetworkCapacity)
+            if (networkedDevices.Count >= SkyMindNetworkCapacity)
             {
                 return false;
             }
@@ -351,7 +349,7 @@ namespace ATReforged
             SkyMindNetworkCapacity -= tower.Props.SkyMindSlotsProvided;
 
             // Removing a tower may result in being over the SkyMind network limit. Randomly disconnect some until under the limit if necessary.
-            while (SkyMindNetworkCapacity < networkedDevices.Count())
+            while (SkyMindNetworkCapacity < networkedDevices.Count)
             {
                 Thing device = networkedDevices.RandomElement();
                 DisconnectFromSkyMind(device);
@@ -376,7 +374,7 @@ namespace ATReforged
             SkyMindCloudCapacity -= core.Props.cloudPawnCapacityProvided;
 
             // Removing a core may result in being over the cloud pawn limit. Randomly murder stored intelligences until under the limit if necessary.
-            while (SkyMindCloudCapacity < cloudPawns.Count())
+            while (SkyMindCloudCapacity < cloudPawns.Count)
             {
                 // Killing the pawn will automatically handle any interrupted mind operations or surrogate connections.
                 Pawn victim = cloudPawns.RandomElement();
@@ -404,9 +402,22 @@ namespace ATReforged
         }
 
         // Return all heat sensitive devices on a given map. If a map isn't provided, return all heat sensitive devices across all maps.
-        public IEnumerable<Thing> GetHeatSensitiveDevices(Map map = null)
+        public List<Thing> GetHeatSensitiveDevices(Map map = null)
         {
-            return heatSensitiveDevices.Where(device => map != null ? device.Map == map : device != null);
+            if (map == null)
+            {
+                return heatSensitiveDevices;
+            }
+            else
+            {
+                List<Thing> devices = new List<Thing>();
+                foreach (Thing device in heatSensitiveDevices)
+                {
+                    if (device.MapHeld == map)
+                        devices.Add(device);
+                }
+                return devices;
+            }
         }
 
         // Add a server to the appropriate list based on serverMode
@@ -599,7 +610,7 @@ namespace ATReforged
             if (networkedDevices == null)
                 networkedDevices = new HashSet<Thing>();
             if (heatSensitiveDevices == null)
-                heatSensitiveDevices = new HashSet<Thing>();
+                heatSensitiveDevices = new List<Thing>();
             if (skillServers == null)
                 skillServers = new HashSet<Building>();
             if (securityServers == null)
@@ -646,8 +657,8 @@ namespace ATReforged
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();
 
-        // Dictionary mapping maps to heat sensitive devices in them for the purpose of checking their heat levels for alerts.
-        private HashSet<Thing> heatSensitiveDevices = new HashSet<Thing>();
+        // List of heat sensitive devices for easy checking of devices that may overheat and explode.
+        private List<Thing> heatSensitiveDevices = new List<Thing>();
 
         // Virused devices are things with their values being the tick at which to release them. This avoids the CompSkyMind having to store this information.
         private Dictionary<Thing, int> virusedDevices = new Dictionary<Thing, int>();

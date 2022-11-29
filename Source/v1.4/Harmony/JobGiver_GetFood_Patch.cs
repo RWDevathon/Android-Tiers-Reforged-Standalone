@@ -3,7 +3,7 @@ using Verse;
 using Verse.AI;
 using HarmonyLib;
 using RimWorld;
-using System.Linq;
+using Verse.Noise;
 
 namespace ATReforged
 {
@@ -19,14 +19,14 @@ namespace ATReforged
                 try
                 {
                     // If the pawn can't use charging or isn't on a map, then there's nothing to override. 
-                    if (pawn != null && pawn.Map != null && Utils.CanUseBattery(pawn))
+                    if (pawn != null && pawn.Map != null && (pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer) && Utils.CanUseBattery(pawn))
                     {
                         // Don't override non-spawned or drafted pawns.
                         if (!pawn.Spawned || pawn.Drafted)
                             return;
                         
                         // Attempt to locate a viable charging bed for the pawn. This can suit comfort, rest, and room needs whereas the charging station can not.
-                        Building_Bed bed = Utils.GetAvailableChargingBed(pawn);
+                        Building_Bed bed = RestUtility.FindBedFor(pawn);
                         if (bed != null)
                         {
                             pawn.ownership.ClaimBedIfNonMedical(bed);
@@ -35,17 +35,11 @@ namespace ATReforged
                         }
 
                         // Attempt to locate a viable charging station. Set the result to this if one is found.
-                        foreach (Building station in pawn.Map.listerBuildings.allBuildingsColonist.Where(building => building.TryGetComp<CompChargingStation>() != null).OrderBy(building => building.Position.DistanceToSquared(pawn.Position)))
+                        Building station = (Building)GenClosest.ClosestThingReachable(pawn.PositionHeld, pawn.MapHeld, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.Touch, TraverseParms.For(pawn), validator: building => building.TryGetComp<CompPowerTrader>() != null && building.TryGetComp<CompPowerTrader>().PowerOn && building.TryGetComp<CompChargingStation>()?.GetOpenRechargeSpot(pawn) != null);
+                        if (station != null)
                         {
-                            if (!station.Destroyed && !station.IsBrokenDown() && (bool)station.TryGetComp<CompPowerTrader>()?.PowerOn && station.Position.InAllowedArea(pawn))
-                            {
-                                IntVec3 freePlace = station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn);
-                                if (freePlace != IntVec3.Invalid && pawn.CanReach(freePlace, PathEndMode.OnCell, Danger.Deadly))
-                                {
-                                    __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
-                                    return;
-                                }
-                            }
+                            __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
+                            return;
                         }
                     }
                     // If there is no viable charging bed or charging station, then the pawn is free to grab whatever food it was originally planning to consume.
