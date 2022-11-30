@@ -101,11 +101,13 @@ namespace ATReforged
                         actor.jobs.EndCurrentJob(JobCondition.Succeeded, true);
                         return;
                     }
+                    /* TODO: Fix the ThinkNode_ConditionalMustKeepLyingDown_Patch to restore this check without error spam.
                     // If the pawn is injured but ready for other tasks (and isn't forced to do this one), then check if there is another preferred job.
-                    else if (!actor.jobs.curJob.playerForced)
+                    else if (!actor.jobs.curJob.restUntilHealed)
                     {
                         actor.jobs.CheckForJobOverride();
                     }
+                    */
                 }
 
                 // Increment comfort from where the pawn is resting, if applicable.
