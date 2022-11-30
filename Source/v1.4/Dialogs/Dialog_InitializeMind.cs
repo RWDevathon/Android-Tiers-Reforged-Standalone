@@ -45,6 +45,7 @@ namespace ATReforged
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
                             Utils.Duplicate(pawn, newIntelligence, false, false);
+                            Close();
                         }));
                     }
                     foreach (Pawn pawn in Utils.gameComp.networkedDevices.Where(thing => thing is Pawn).Cast<Pawn>())
@@ -52,6 +53,7 @@ namespace ATReforged
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
                             Utils.Duplicate(pawn, newIntelligence, false, false);
+                            Close();
                         }));
                     }
                     opts.SortBy((x) => x.Label);
@@ -100,7 +102,6 @@ namespace ATReforged
                 if (buttonAAction != null)
                 {
                     buttonAAction();
-                    Close();
                 }
                 else
                 {
