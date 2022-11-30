@@ -168,14 +168,14 @@
 			<li>
 				<statOffsets>
 					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
-					<AimingDelayFactor>0.9</AimingDelayFactor>
           			<MeleeHitChance>2</MeleeHitChance>
-					<MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
           			<MeleeDodgeChance>5</MeleeDodgeChance>
 					<HuntingStealth>0.5</HuntingStealth>
 				</statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<AimingDelayFactor>0.9</AimingDelayFactor>
+					<MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
                 </statFactors>
 			</li>
 		</stages>
