@@ -1,5 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
+using RimWorld;
 
 namespace ATReforged
 {
@@ -16,7 +17,8 @@ namespace ATReforged
                 if (nutritionIngested <= 0f)
                     return;
 
-                if (ATReforged_Settings.chargeCapableMeansDifferentBioEfficiency && Utils.CanUseBattery(ingester))
+                // If charging efficiency differences are enabled, the unit can charge, and is a player pawn (to avoid issues with foreign pawns not bringing enough food), then modify it.
+                if (ATReforged_Settings.chargeCapableMeansDifferentBioEfficiency && Utils.CanUseBattery(ingester) && ingester.Faction == Faction.OfPlayer)
                 {
                     nutritionIngested *= ATReforged_Settings.chargeCapableBioEfficiency;
                 }

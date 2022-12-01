@@ -6,7 +6,6 @@ using System.Reflection.Emit;
 
 namespace ATReforged
 {
-    /*
     // ThinkNode_ConditionalMustKeepLyingDown.Satisfied has a non-null checked rest conditional that will throw erors for mechanicals if not handled. This transpiler adds that null-check.
     internal class ThinkNode_ConditionalMustKeepLyingDown_Patch
     {
@@ -16,63 +15,57 @@ namespace ATReforged
         {
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insts, ILGenerator generator)
             {
-                Log.Warning("[ATR DEBUG] Transpiler running!");
+                CodeInstruction startInstruction = new CodeInstruction(OpCodes.Ldarg_1);
                 List<CodeInstruction> instructions = new List<CodeInstruction>(insts);
-                bool grabNextLabel = false;
-                List<int> insertionPoints = new List<int>();
+                int insertionPoint = -1;
                 List<CodeInstruction> insertInstructions = new List<CodeInstruction>();
-                List<Label> insertionLabels = new List<Label>();
+                Label insertLabelEnd = generator.DefineLabel();
 
-                // Locate all instances of the Rest need check, and store their location in the order and the label they branch to.
+                // Locate the first Need_Rest instance and insert a null check before it.
                 for (int i = 0; i < instructions.Count; i++)
                 {
                     if (instructions[i].Calls(AccessTools.PropertyGetter(typeof(Need), nameof(Need.CurLevel))))
                     {
-                        Log.Warning("[ATR DEBUG] Target located! InsertionPoint should be " + (i - 3) + ".");
-                        // Ensure our additional instruction occurs before the call and the instructions needed for the call.
-                        insertionPoints.Add(i - 3);
+                        // Mark the place where our instruction goes.
+                        insertionPoint = i - 3;
+                        // Ensure that any reference to this label ends up at our start instruction instead.
+                        instructions[i - 3].MoveLabelsTo(startInstruction);
+                        // Ensure that our branch out instruction ends up at this instruction.
+                        instructions[i - 3].labels.Add(insertLabelEnd);
                         // Copy the three previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
                         if (insertInstructions.Count == 0)
                         {
-                            for (int j = 3; j > 0; j--)
+                            for (int j = 2; j > 0; j--)
                             {
-                                Log.Warning("[ATR DEBUG] Caught pawn instruction opCode " + instructions[i - j].opcode + " with operand " + instructions[i - j].operand);
                                 insertInstructions.Add(instructions[i - j]);
                             }
                         }
-                        // Mark the next branch that occurs as possessing our desired label for jumping to if it is null.
-                        grabNextLabel = true;
-                    }
-                    // If this instruction is the branch instruction we're looking for and we need to grab a label, the operand of this instruction is what we need.
-                    else if (grabNextLabel && instructions[i].opcode == OpCodes.Ble_Un_S)
-                    {
-                        insertionLabels.Add((Label)instructions[i].operand);
-                        grabNextLabel = false;
+                        break;
                     }
                 }
 
-                int insertionsMade = 0;
                 // Yield the actual instructions, adding in our additional instructions where necessary.
                 for (int i = 0; i < instructions.Count; i++)
                 {
-                    // No remaining target instructions, skip the check until all instructions have been yielded.
-                    if (insertionsMade > insertionPoints.Count - 1)
-                    {
-                        Log.Warning("[ATR DEBUG] No additional checks necessary.");
-                        yield return instructions[i];
-                        continue;
-                    }
                     // Operation target hit, yield contained instructions and add null-check branch.
-                    else if (insertionPoints[insertionsMade] == i)
+                    if (insertionPoint == i)
                     {
-                        Log.Warning("[ATR DEBUG] Successfully located target index " + i + " and inserting instructions into result.");
+                        // If (pawn.Needs.Rest == null)
+                        yield return startInstruction; // Load Pawn
                         foreach (CodeInstruction instruction in insertInstructions)
                         {
                             yield return instruction;
                         }
-                        yield return new CodeInstruction(OpCodes.Brfalse_S, insertionLabels[insertionsMade++]);
-                        yield return instructions[i];
+                        yield return new CodeInstruction(OpCodes.Ldnull); // Load a null
+                        yield return new CodeInstruction(OpCodes.Ceq); // Compare Pawn.Needs.Rest to Null
+
+                        yield return new CodeInstruction(OpCodes.Brfalse_S, insertLabelEnd); // Branch to next check if Pawn.Needs.Rest != null
+
+                        yield return new CodeInstruction(OpCodes.Ldc_I4_0); // Load 0
+                        yield return new CodeInstruction(OpCodes.Ret); // Return 0 (false)
+                        yield return instructions[i]; // Return the instruction we encountered initially
                     }
+                    // Not a target, return instruction as normal.
                     else
                     {
                         yield return instructions[i];
@@ -103,7 +96,11 @@ namespace ATReforged
                     {
                         return false;
                     }
-                    if (pawn.needs.rest != null && pawn.needs.rest.CurLevel > 0.14f && ChildcareUtility.ShouldWakeUpToAutofeedUrgent(pawn))
+                    if (pawn.needs.rest == null)
+                    {
+                        return false;
+                    }
+                    if (pawn.needs.rest.CurLevel > 0.14f && ChildcareUtility.ShouldWakeUpToAutofeedUrgent(pawn))
                     {
                         return false;
                     }
@@ -121,5 +118,4 @@ namespace ATReforged
         }
 
     }
-    */
 }
