@@ -24,6 +24,7 @@
 		<statBases>
 			<MarketValue>6000</MarketValue>
 			<MoveSpeed>7.20</MoveSpeed>
+			<PsychicSensitivity>0.5</PsychicSensitivity>
 			<ComfyTemperatureMin>-70</ComfyTemperatureMin>
 			<ComfyTemperatureMax>70</ComfyTemperatureMax>
 			<MentalBreakThreshold>0.2</MentalBreakThreshold>
