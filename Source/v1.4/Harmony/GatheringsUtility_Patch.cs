@@ -6,32 +6,31 @@ using System.Reflection.Emit;
 
 namespace ATReforged
 {
-    // ThinkNode_ConditionalMustKeepLyingDown.Satisfied has a non-null checked rest conditional that will throw erors for mechanicals if not handled. This transpiler adds that null-check.
-    internal class ThinkNode_ConditionalMustKeepLyingDown_Patch
+    // GatheringsUtility.ShouldGuestKeepAttendingGathering has a non-null checked food conditional that will throw erors for any humanlike pawn that does not eat food if not handled. This transpiler adds that null-check.
+    internal class GatheringsUtility_Patch
     {
-        [HarmonyPatch(typeof(ThinkNode_ConditionalMustKeepLyingDown))]
-        [HarmonyPatch("Satisfied")]
-        public class Satisfied_Patch
+        [HarmonyPatch(typeof(GatheringsUtility))]
+        [HarmonyPatch("ShouldGuestKeepAttendingGathering")]
+        public class ShouldGuestKeepAttendingGathering_Patch
         {
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insts, ILGenerator generator)
             {
-                CodeInstruction startInstruction = new CodeInstruction(OpCodes.Ldarg_1);
+                CodeInstruction startInstruction = new CodeInstruction(OpCodes.Ldarg_0);
                 List<CodeInstruction> instructions = new List<CodeInstruction>(insts);
-                int insertionPoint = -1;
                 List<CodeInstruction> insertInstructions = new List<CodeInstruction>();
-                Label insertLabelEnd = generator.DefineLabel();
+                bool needNextLabel = false;
+                int insertionPoint = -1;
+                Label? insertLabelEnd = new Label?();
 
-                // Locate the first Need_Rest instance and insert a null check before it.
+                // Locate the food check that we need to add a null check for, and handle the appropriate features.
                 for (int i = 0; i < instructions.Count; i++)
                 {
-                    if (instructions[i].Calls(AccessTools.PropertyGetter(typeof(Need), nameof(Need.CurLevel))))
+                    if (instructions[i].Calls(AccessTools.PropertyGetter(typeof(Need_Food), nameof(Need_Food.Starving))))
                     {
                         // Mark the place where our instruction goes.
                         insertionPoint = i - 3;
-                        // Ensure that any reference to this label ends up at our start instruction instead.
+                        // Move any jumps over to our start instruction so they don't get skipped.
                         instructions[i - 3].MoveLabelsTo(startInstruction);
-                        // Ensure that our branch out instruction ends up at this instruction.
-                        instructions[i - 3].labels.Add(insertLabelEnd);
                         // Copy the three previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
                         if (insertInstructions.Count == 0)
                         {
@@ -40,6 +39,10 @@ namespace ATReforged
                                 insertInstructions.Add(instructions[i - j]);
                             }
                         }
+                        needNextLabel = true;
+                    }
+                    else if (needNextLabel && instructions[i].Branches(out insertLabelEnd))
+                    {
                         break;
                     }
                 }
@@ -50,19 +53,13 @@ namespace ATReforged
                     // Operation target hit, yield contained instructions and add null-check branch.
                     if (insertionPoint == i)
                     {
-                        // If (pawn.Needs.Rest == null)
+                        // If (pawn.Needs.Food != null)
                         yield return startInstruction; // Load Pawn
                         foreach (CodeInstruction instruction in insertInstructions)
                         {
                             yield return instruction;
                         }
-                        yield return new CodeInstruction(OpCodes.Ldnull); // Load a null
-                        yield return new CodeInstruction(OpCodes.Ceq); // Compare Pawn.Needs.Rest to Null
-
-                        yield return new CodeInstruction(OpCodes.Brfalse_S, insertLabelEnd); // Branch to next check if Pawn.Needs.Rest != null
-
-                        yield return new CodeInstruction(OpCodes.Ldc_I4_0); // Load 0
-                        yield return new CodeInstruction(OpCodes.Ret); // Return 0 (false)
+                        yield return new CodeInstruction(OpCodes.Brfalse_S, insertLabelEnd); // Branch to next check if Pawn.Needs.Rest == null
                         yield return instructions[i]; // Return the instruction we encountered initially
                     }
                     // Not a target, return instruction as normal.
