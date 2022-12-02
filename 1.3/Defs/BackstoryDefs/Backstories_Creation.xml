@@ -395,7 +395,7 @@
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_defName} decided to continue its mission on other worlds.</baseDescription>
+		<baseDescription>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue its mission on other worlds.</baseDescription>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
