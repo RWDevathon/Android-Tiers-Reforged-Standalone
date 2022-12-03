@@ -31,7 +31,7 @@ namespace ATReforged
                         insertionPoint = i - 3;
                         // Move any jumps over to our start instruction so they don't get skipped.
                         instructions[i - 3].MoveLabelsTo(startInstruction);
-                        // Copy the three previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
+                        // Copy the two previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
                         if (insertInstructions.Count == 0)
                         {
                             for (int j = 2; j > 0; j--)

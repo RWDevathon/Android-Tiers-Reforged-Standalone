@@ -32,7 +32,7 @@ namespace ATReforged
                         instructions[i - 3].MoveLabelsTo(startInstruction);
                         // Ensure that our branch out instruction ends up at this instruction.
                         instructions[i - 3].labels.Add(insertLabelEnd);
-                        // Copy the three previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
+                        // Copy the two previous instructions so they match the exact need call stack values. Do this only once, as it will be the same for all calls.
                         if (insertInstructions.Count == 0)
                         {
                             for (int j = 2; j > 0; j--)
