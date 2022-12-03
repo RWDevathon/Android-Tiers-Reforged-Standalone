@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <def>ATR_InternalGenerator</def>
-                    <coverage>0.025</coverage>
+                    <coverage>0.005</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -30,7 +30,7 @@
                 </li>
                 <li>
                     <def>ATR_InternalCorePump</def>
-                    <coverage>0.020</coverage>
+                    <coverage>0.004</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -39,7 +39,7 @@
                 <li>
                     <def>ATR_MechanicalHeatsink</def>
                     <customLabel>left heatsink</customLabel>
-                    <coverage>0.025</coverage>
+                    <coverage>0.005</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -48,7 +48,7 @@
                 <li>
                     <def>ATR_MechanicalHeatsink</def>
                     <customLabel>right heatsink</customLabel>
-                    <coverage>0.025</coverage>
+                    <coverage>0.005</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -56,7 +56,7 @@
                 </li>
                 <li>
                     <def>ATR_InternalBattery</def>
-                    <coverage>0.017</coverage>
+                    <coverage>0.005</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -64,7 +64,7 @@
                     </li>
                 <li>
                     <def>ATR_MechaniteStorage</def>
-                    <coverage>0.017</coverage>
+                    <coverage>0.005</coverage>
                     <depth>Inside</depth>
                     <groups>
                         <li>Torso</li>
@@ -72,7 +72,7 @@
                 </li>
                 <li>
                     <def>ATR_MechanicalNeck</def>
-                    <coverage>0.05</coverage>
+                    <coverage>0.08</coverage>
                     <height>Top</height>
                     <groups>
                         <li>Neck</li>
@@ -322,7 +322,7 @@
                 <li>
                     <def>ATR_MechanicalLeg</def>
                     <customLabel>left leg</customLabel>
-                    <coverage>0.12</coverage>
+                    <coverage>0.16</coverage>
                     <height>Bottom</height>
                     <groups>
                         <li>Legs</li>
@@ -331,7 +331,7 @@
                         <li>
                             <def>ATR_MechanicalFoot</def>
                             <customLabel>left foot</customLabel>
-                            <coverage>0.2</coverage>
+                            <coverage>0.3</coverage>
                             <groups>
                                 <li>Feet</li>
                             </groups>
@@ -341,7 +341,7 @@
                 <li>
                     <def>ATR_MechanicalLeg</def>
                     <customLabel>right leg</customLabel>
-                    <coverage>0.12</coverage>
+                    <coverage>0.16</coverage>
                     <height>Bottom</height>
                     <groups>
                         <li>Legs</li>
@@ -350,7 +350,7 @@
                         <li>
                             <def>ATR_MechanicalFoot</def>
                             <customLabel>right foot</customLabel>
-                            <coverage>0.1</coverage>
+                            <coverage>0.3</coverage>
                             <groups>
                                 <li>Feet</li>
                             </groups>
