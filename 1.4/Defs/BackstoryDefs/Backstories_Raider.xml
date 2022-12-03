@@ -9,6 +9,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -38,6 +39,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -64,6 +66,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -86,6 +89,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -108,6 +112,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -130,6 +135,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -152,6 +158,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -177,6 +184,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -199,6 +207,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -229,6 +238,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -252,6 +262,7 @@
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -280,6 +291,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -306,6 +318,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -335,6 +348,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -364,6 +378,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -393,6 +408,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -428,6 +444,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -462,6 +479,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -491,6 +509,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -518,6 +537,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -550,6 +570,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -576,6 +597,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>

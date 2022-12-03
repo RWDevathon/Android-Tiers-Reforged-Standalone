@@ -9,6 +9,7 @@
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_NewbootAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 	</BackstoryDef>
 
@@ -20,6 +21,7 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_NewbootAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 
@@ -31,6 +33,7 @@
         <slot>Childhood</slot>
         <spawnCategories>
 			<li>ATR_ArchotechAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
     </BackstoryDef>
         
@@ -43,7 +46,58 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ArchotechAndroids</li>
+            <li>ATR_Inorganic</li>
 		</spawnCategories>
+		<skillGains>
+            <li>
+                <key>Shooting</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Melee</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Construction</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Mining</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Cooking</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Plants</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Animals</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Crafting</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Artistic</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Medicine</key>
+                <value>10</value>
+            </li>
+			<li>
+				<key>Social</key>
+				<value>10</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>10</value>
+			</li>
+		</skillGains>
 	</BackstoryDef>
 
 </Defs>
