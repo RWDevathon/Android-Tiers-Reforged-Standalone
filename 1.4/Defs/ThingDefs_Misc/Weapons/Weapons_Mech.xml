@@ -8,17 +8,17 @@
         <tradeability>None</tradeability>
         <smeltable>false</smeltable>
         <thingCategories>
-            <li>WeaponsMech</li>
+            <li>ATR_WeaponsMech</li>
         </thingCategories>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>1000</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Beauty>-6</Beauty>
 			<SellPriceFactor>0.20</SellPriceFactor>
 		</statBases>
         <weaponTags>
-            <li>MechWeapon</li>
+            <li>ATR_MechWeapon</li>
         </weaponTags>
 	</ThingDef>
   
@@ -55,17 +55,17 @@
             <AccuracyShort>0.65</AccuracyShort>
             <AccuracyMedium>0.70</AccuracyMedium>
             <AccuracyLong>0.5</AccuracyLong>
-            <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
         </statBases>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
+                <warmupTime>1</warmupTime>
                 <range>30.9</range>
                 <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
-                <burstShotCount>3</burstShotCount>
+                <burstShotCount>2</burstShotCount>
                 <soundCast>ATR_AutocannonBlast</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>18</muzzleFlashScale>
@@ -132,7 +132,7 @@
             <AccuracyShort>0.65</AccuracyShort>
             <AccuracyMedium>0.3</AccuracyMedium>
             <AccuracyLong>0.15</AccuracyLong>
-            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
         </statBases>
         <verbs>
             <li>
@@ -190,10 +190,10 @@
             <MarketValue>800</MarketValue>
             <Mass>30</Mass>
             <AccuracyTouch>0.4</AccuracyTouch>
-            <AccuracyShort>0.80</AccuracyShort>
-            <AccuracyMedium>0.85</AccuracyMedium>
-            <AccuracyLong>0.8</AccuracyLong>
-            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <AccuracyShort>0.95</AccuracyShort>
+            <AccuracyMedium>1.00</AccuracyMedium>
+            <AccuracyLong>1.1</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
         </statBases>
         <verbs>
             <li>
@@ -201,7 +201,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
                 <warmupTime>1</warmupTime>
-                <range>44.9</range>
+                <range>59.9</range>
                 <soundCast>ATR_AutocannonBlast</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>20</muzzleFlashScale>
@@ -242,7 +242,7 @@
         <description>This massive weapon, the size of a full-grown human, serves the exact same purpose its smaller cousins serve: to close with the enemy and hack them apart. Of course, this tool is better at it than its ancestors - it is made of fine glitterworld grade materials and honed to perfection... and is large enough to splatter people rather than need to stab or cut. \n\nWeapons like this, usable only be massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
         <techLevel>Ultra</techLevel>
         <thingCategories>
-            <li>WeaponsMech</li>
+            <li>ATR_WeaponsMech</li>
         </thingCategories>
         <relicChance>0</relicChance>
         <tradeability>None</tradeability>
@@ -252,10 +252,10 @@
             <drawSize>3.5</drawSize>
 		</graphicData>
         <weaponTags>
-            <li>MechWeapon</li>
+            <li>ATR_MechWeapon</li>
         </weaponTags>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>1000</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>25</Mass>
@@ -269,7 +269,7 @@
                     <li>Stab</li>
                 </capacities>
                 <power>125</power>
-                <cooldownTime>3</cooldownTime>
+                <cooldownTime>1.5</cooldownTime>
             </li>
             <li>
                 <label>axe</label>
@@ -277,7 +277,7 @@
                     <li>Cut</li>
                 </capacities>
                 <power>95</power>
-                <cooldownTime>2.5</cooldownTime>
+                <cooldownTime>1</cooldownTime>
             </li>
             <li>
                 <label>hammer</label>
@@ -285,7 +285,7 @@
                     <li>Blunt</li>
                 </capacities>
                 <power>95</power>
-                <cooldownTime>2.5</cooldownTime>
+                <cooldownTime>1</cooldownTime>
             </li>
         </tools>
     </ThingDef>

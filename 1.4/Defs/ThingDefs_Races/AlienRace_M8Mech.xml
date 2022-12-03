@@ -121,7 +121,7 @@
 			<max>9999</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>MechWeapon</li>
+			<li>ATR_MechWeapon</li>
 		</weaponTags>
 		<initialResistanceRange>13~21</initialResistanceRange>
 	</PawnKindDef>
