@@ -54,9 +54,6 @@
 				<value>5</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>PlatingPlasteel</li>
-		</forcedHediffs>
 		<forcedTraitsChance>
 			<li>
 				<defName>Bloodlust</defName>
@@ -170,9 +167,6 @@
 				<value>4</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>GuardianFrame</li>
-		</forcedHediffs>
 		<workDisables>
 			<li>Intellectual</li>
 			<li>Cooking</li>
@@ -388,9 +382,6 @@
 				<value>-2</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>ATR_MiningArm</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
@@ -623,9 +614,6 @@
 				<value>8</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>ATR_MechanicAssistant</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
@@ -738,9 +726,6 @@
 			<li>Mining</li>
 			<li>Cooking</li>
 		</workDisables>
-		<forcedHediffs>
-			<li>ATR_AdvancedArm</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
@@ -880,9 +865,6 @@
 				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>ATR_MakeshiftMechArm</li>
-		</forcedHediffs>
 		<workDisables>
 			<li>Firefighting</li>
 			<li>Intellectual</li>
@@ -910,9 +892,6 @@
 				<value>-4</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>HydraulicFrame</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
@@ -1182,9 +1161,6 @@
 				<value>4</value>
 			</li>
 		</skillGains>
-		<forcedHediffs>
-			<li>GuardianFrame</li>
-		</forcedHediffs>
 		<workDisables>
 			<li>ManualSkilled</li>
 		</workDisables>
@@ -1548,9 +1524,6 @@
 		<workDisables>
 			<li>Violent</li>
 		</workDisables>
-		<forcedHediffs>
-			<li>ATR_InsightAssistant</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
@@ -1607,9 +1580,6 @@
 		<workDisables>
 			<li>ManualSkilled</li>
 		</workDisables>
-		<forcedHediffs>
-			<li>ATR_SocialAssistant</li>
-		</forcedHediffs>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
