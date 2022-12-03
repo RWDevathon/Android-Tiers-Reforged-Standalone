@@ -13,7 +13,7 @@
 			</categories>
 		  </li>
 		</backstoryFilters>
-		<basicMemberKind>T2Refugee</basicMemberKind>
+		<basicMemberKind>ATR_T2Refugee</basicMemberKind>
 		<pawnsPlural>colonists</pawnsPlural>
 		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
 		<factionNameMaker>NamerFactionOutlander</factionNameMaker>

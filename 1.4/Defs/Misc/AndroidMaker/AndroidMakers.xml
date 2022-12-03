@@ -19,7 +19,7 @@
         </graphicData>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
-                <pawnKind>T1Colonist</pawnKind>
+                <pawnKind>ATR_T1Colonist</pawnKind>
             </li>
         </comps>
     </ThingDef>
@@ -34,7 +34,7 @@
         </graphicData>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
-                <pawnKind>T2Colonist</pawnKind>
+                <pawnKind>ATR_T2Colonist</pawnKind>
             </li>
         </comps>
     </ThingDef>
@@ -49,7 +49,7 @@
         </graphicData>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
-                <pawnKind>T3Colonist</pawnKind>
+                <pawnKind>ATR_T3Colonist</pawnKind>
             </li>
         </comps>
     </ThingDef>
@@ -64,7 +64,7 @@
         </graphicData>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
-                <pawnKind>T4Colonist</pawnKind>
+                <pawnKind>ATR_T4Colonist</pawnKind>
             </li>
         </comps>
     </ThingDef>

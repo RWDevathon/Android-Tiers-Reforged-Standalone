@@ -3,46 +3,18 @@
 	<AlienRace.RaceSettings>
 		<defName>AndroidScenarioSettings</defName>
 		<pawnKindSettings>
-			<alienslavekinds>
-				<li>
-					<kindDefs>
-						<li>T2Refugee</li>
-					</kindDefs>
-					<chance>10.0</chance>
-				</li>
-				<li>
-					<kindDefs>
-						<li>T3Refugee</li>
-					</kindDefs>
-					<chance>1.0</chance>
-				</li>
-			</alienslavekinds>
-			<alienrefugeekinds>
-				<li>
-					<kindDefs>
-						<li>T2Refugee</li>
-					</kindDefs>
-					<chance>10.0</chance>
-				</li>
-				<li>
-					<kindDefs>
-						<li>T3Refugee</li>
-					</kindDefs>
-					<chance>1.0</chance>
-				</li>
-			</alienrefugeekinds>
 			<startingColonists>
 				<li>
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>T2Refugee</li>
+								<li>ATR_T2Refugee</li>
 							</kindDefs>
 							<chance>10.0</chance>
 						</li>
 						<li>
 							<kindDefs>
-								<li>T3Refugee</li>
+								<li>ATR_T3Refugee</li>
 							</kindDefs>
 							<chance>1.0</chance>
 						</li>
@@ -57,7 +29,7 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>T2Refugee</li>
+								<li>ATR_T2Refugee</li>
 							</kindDefs>
 							<chance>1</chance>
 						</li>

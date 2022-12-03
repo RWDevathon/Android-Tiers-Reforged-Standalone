@@ -2,7 +2,7 @@
 <Defs>
 
 	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>T5Colonist</defName>
+		<defName>ATR_T5Colonist</defName>
 		<label>T5 Android Colonist</label>
 		<race>Tier5Android</race>
 		<backstoryFiltersOverride>
@@ -44,27 +44,27 @@
     </PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
-		<defName>T4Colonist</defName>
+		<defName>ATR_T4Colonist</defName>
 		<label>T4 Newboot Colonist</label>
 		<race>Tier4Android</race>
 	</PawnKindDef>
 
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
-		<defName>T3Colonist</defName>
+		<defName>ATR_T3Colonist</defName>
 		<label>T3 Newboot Colonist</label>
 		<race>Tier3Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
-		<defName>T2Colonist</defName>
+		<defName>ATR_T2Colonist</defName>
 		<label>T2 Newboot Colonist</label>
 		<race>Tier2Android</race>
 	</PawnKindDef>
 
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
-		<defName>T1Colonist</defName>
+		<defName>ATR_T1Colonist</defName>
 		<label>T1 Newboot Colonist</label>
 		<race>Tier1Android</race>
 	</PawnKindDef>
@@ -84,7 +84,7 @@
     </PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
-		<defName>T4Refugee</defName>
+		<defName>ATR_T4Refugee</defName>
 		<label>T4 Android Colonist</label>
 		<backstoryFiltersOverride>
 		  <li>
@@ -97,7 +97,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
-		<defName>T3Refugee</defName>
+		<defName>ATR_T3Refugee</defName>
 		<label>T3 Android Colonist</label>
 		<backstoryFiltersOverride>
 		  <li>
@@ -110,7 +110,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
-		<defName>T2Refugee</defName>
+		<defName>ATR_T2Refugee</defName>
 		<label>T2 Android Colonist</label>
 		<backstoryFiltersOverride>
 		  <li>
@@ -123,7 +123,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
-		<defName>T1Refugee</defName>
+		<defName>ATR_T1Refugee</defName>
 		<label>T1 Android Colonist</label>
 		<backstoryFiltersOverride>
 		  <li>

@@ -12,8 +12,6 @@ namespace ATReforged
         }
         public static HediffDef ATR_FractalPillOrganic;
 
-        public static HediffDef ATR_ATR_FractalPillMechanical;
-
         public static HediffDef ATR_StasisPill;
 
         public static HediffDef ATR_RemainingCharge;
