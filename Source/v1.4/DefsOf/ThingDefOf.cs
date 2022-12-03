@@ -42,7 +42,7 @@ namespace ATReforged
 
         public static ThingDef HospitalBed;
 
-        public static ThingDef FractalPill;
+        public static ThingDef ATR_FractalPill;
     }
 
 }

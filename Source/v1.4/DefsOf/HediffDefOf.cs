@@ -10,9 +10,11 @@ namespace ATReforged
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(HediffDefOf));
         }
-        public static HediffDef FractalPillOrganic;
+        public static HediffDef ATR_FractalPillOrganic;
 
-        public static HediffDef FractalPillMechanical;
+        public static HediffDef ATR_ATR_FractalPillMechanical;
+
+        public static HediffDef ATR_StasisPill;
 
         public static HediffDef ATR_RemainingCharge;
 

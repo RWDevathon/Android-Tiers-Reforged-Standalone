@@ -228,6 +228,15 @@ namespace ATReforged
                     }
                     // All members of the group that were unaltered are returned to the final grouping.
                     __result = unalteredGroup.Concat(ret);
+
+                    // Generated mechanical pawns in groups will always receive the Stasis Hediff to reduce their power consumption significantly so they don't run into malnutrition issues.
+                    foreach (Pawn member in __result)
+                    {
+                        if (Utils.IsConsideredMechanical(member))
+                        {
+                            member.health.AddHediff(HediffMaker.MakeHediff(HediffDefOf.ATR_StasisPill, member));
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {

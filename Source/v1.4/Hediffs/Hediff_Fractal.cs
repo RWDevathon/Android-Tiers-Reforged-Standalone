@@ -49,7 +49,7 @@ namespace ATReforged
 
         public override bool TryMergeWith(Hediff other)
         {
-            if (other.def == HediffDefOf.FractalPillOrganic)
+            if (other.def == HediffDefOf.ATR_FractalPillOrganic)
             {
                 ChangeState();
                 return true;
