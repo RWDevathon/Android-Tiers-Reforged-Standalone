@@ -244,7 +244,7 @@
 			<ArmorRating_Blunt>1.00</ArmorRating_Blunt>
             <ArmorRating_Heat>1.00</ArmorRating_Heat>
 			<GlobalLearningFactor>0.4</GlobalLearningFactor>
-            <StaggerDurationFactor>0</StaggerDurationFactor>
+            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0</StaggerDurationFactor>
 			<Mass>450</Mass>
 		</statBases>
         <race>
