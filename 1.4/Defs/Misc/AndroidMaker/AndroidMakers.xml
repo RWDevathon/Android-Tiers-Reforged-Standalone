@@ -145,7 +145,7 @@
     </ThingDef>
 	
     <ThingDef ParentName="ATR_GeneratorBase">
-        <defName>MicroScytherGeneratorAI</defName>
+        <defName>MicroScytherGenerator</defName>
         <label>MicroScyther</label>
         <comps>
             <li>

@@ -225,8 +225,8 @@
 			</hediffGiverSets>
 		</race>
         <recipes>
-            <li>RemoveBodyPartAndroid</li>
-            <li>RestoreBodyPartAndroid</li>
+            <li>ATR_RemoveBodyPartAndroid</li>
+            <li>ATR_RestoreBodyPartAndroid</li>
         </recipes>
 		<butcherProducts>
 			<Plasteel>160</Plasteel>

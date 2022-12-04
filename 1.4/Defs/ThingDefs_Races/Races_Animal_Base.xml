@@ -47,9 +47,9 @@
 			<li>AnimalExotic</li>
 		</tradeTags>
 		<recipes>
-			<li>RemoveBodyPartAndroid</li>
-			<li>ShutdownMechanical</li>
-            <li>RestoreBodyPartAndroid</li>
+			<li>ATR_RemoveBodyPartAndroid</li>
+			<li>ATR_ShutdownMechanical</li>
+            <li>ATR_RestoreBodyPartAndroid</li>
             <li>InstallPlasteelPlating</li>
             <li>InstallCompositePlating</li>
             <li>InstallMobilityFrame</li>

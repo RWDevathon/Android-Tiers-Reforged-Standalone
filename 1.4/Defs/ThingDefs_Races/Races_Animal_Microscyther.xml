@@ -30,7 +30,7 @@
                 </capacities>
                 <power>6</power>
                 <cooldownTime>1</cooldownTime>
-                <linkedBodyPartsGroup>MechanicalLeftWing</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>ATR_MechanicalLeftWing</linkedBodyPartsGroup>
             </li>
             <li>
                 <label>right wing</label>
@@ -39,7 +39,7 @@
                 </capacities>
                 <power>6</power>
                 <cooldownTime>1</cooldownTime>
-                <linkedBodyPartsGroup>MechanicalRightWing</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>ATR_MechanicalRightWing</linkedBodyPartsGroup>
             </li>
         </tools>
         <race>

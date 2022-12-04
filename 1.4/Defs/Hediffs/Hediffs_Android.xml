@@ -3,7 +3,7 @@
   <!-- Added body parts -->
  
     <HediffDef>
-        <defName>ShutdownMechanical</defName>
+        <defName>ATR_ShutdownMechanical</defName>
         <label>decommissioned</label>
         <description>AI core shutdown.</description>
         <initialSeverity>0</initialSeverity>

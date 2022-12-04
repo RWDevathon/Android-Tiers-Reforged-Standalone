@@ -100,7 +100,7 @@
                     <coverage>0.17</coverage>
                     <groups>
                         <li>Arms</li>
-                        <li>MechanicalLeftWing</li>
+                        <li>ATR_MechanicalLeftWing</li>
                     </groups>
                 </li>
                 <li>
@@ -109,7 +109,7 @@
                     <coverage>0.17</coverage>
                     <groups>
                         <li>Arms</li>
-                        <li>MechanicalRightWing</li>
+                        <li>ATR_MechanicalRightWing</li>
                     </groups>
                 </li>
                 <li>

@@ -69,7 +69,7 @@
             <soundExplode>Explosion_EMP</soundExplode>
             <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
             <soundAmbient>MortarRound_Ambient</soundAmbient>
-            <postExplosionSpawnThingDef>MicroScytherGeneratorAI</postExplosionSpawnThingDef>
+            <postExplosionSpawnThingDef>MicroScytherGenerator</postExplosionSpawnThingDef>
             <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>ExtinguisherExplosion</explosionEffect>

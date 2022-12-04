@@ -20,7 +20,7 @@
  
 	<!-- Surgery to shutdown any incapacitated mechanical unit -->
     <RecipeDef ParentName="ATR_surgeryMechanical">
-		<defName>ShutdownMechanical</defName>
+		<defName>ATR_ShutdownMechanical</defName>
 		<label>Shut down central core</label>
 		<description>Shuts down a mechanical unit by disconnecting core hardware. This does not permanently destroy the unit's memory.</description>
 		<workerClass>Recipe_ExecuteByCut</workerClass>
@@ -34,7 +34,7 @@
 	
 	<!-- Surgery to remove body parts from mechanical units -->
 	<RecipeDef ParentName="ATR_surgeryMechanical">
-		<defName>RemoveBodyPartAndroid</defName>
+		<defName>ATR_RemoveBodyPartAndroid</defName>
 		<label>Remove part</label>
 		<description>Removes body part.</description>
 		<workerClass>ATReforged.Recipe_RemoveMechanicalPart</workerClass>
@@ -75,7 +75,7 @@
 
 	<!-- Surgery to restore body parts in mechanical units -->
 	<RecipeDef ParentName="ATR_surgeryMechanical">
-		<defName>RestoreBodyPartAndroid</defName>
+		<defName>ATR_RestoreBodyPartAndroid</defName>
 		<label>Restore part</label>
 		<description>Restores a particular body part.</description>
 		<workerClass>ATReforged.Recipe_RestoreMechanicalPart</workerClass>
@@ -103,7 +103,7 @@
 
 	<!-- Surgery to reprogram drones to serve the colony -->
     <RecipeDef ParentName="ATR_surgeryMechanical">
-		<defName>ReprogramDrone</defName>
+		<defName>ATR_ReprogramDrone</defName>
 		<label>reprogram drone</label>
 		<description>A straightforward but delicate operation, reprogramming drones to suit the colony's purposes is an excellent way to strengthen capabilities. However, the previous owners may have installed safeguards against such operations, so there is a high risk of death should it fail.</description>
 		<workerClass>ATReforged.Recipe_ReprogramDrone</workerClass>

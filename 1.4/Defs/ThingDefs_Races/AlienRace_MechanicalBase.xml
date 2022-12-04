@@ -269,9 +269,9 @@
 			</ageGenerationCurve>
         </race>
         <recipes>
-            <li>ShutdownMechanical</li>
-            <li>RemoveBodyPartAndroid</li>
-            <li>RestoreBodyPartAndroid</li>
+            <li>ATR_ShutdownMechanical</li>
+            <li>ATR_RemoveBodyPartAndroid</li>
+            <li>ATR_RestoreBodyPartAndroid</li>
         </recipes>
 	</AlienRace.ThingDef_AlienRace>
 
