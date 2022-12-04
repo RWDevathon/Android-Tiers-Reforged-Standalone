@@ -283,12 +283,14 @@
         <stages>
             <li>
                 <statOffsets>
-                    <FilthRate>0</FilthRate>
-                    <FoodPoisonChance>0</FoodPoisonChance>
                     <MedicalTendQuality>0.15</MedicalTendQuality>
                     <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance>
                     <ButcheryFleshEfficiency>0.15</ButcheryFleshEfficiency>
                 </statOffsets>
+                <statFactors>
+                    <FilthRate>0</FilthRate>
+                    <FoodPoisonChance>0</FoodPoisonChance>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>SanitaryFrame</spawnThingOnRemoved>
@@ -343,8 +345,10 @@
                 <statOffsets>
                     <MoveSpeed>1.5</MoveSpeed>
                     <MeleeDodgeChance>10</MeleeDodgeChance>
-                    <MeleeWeapon_CooldownMultiplier>0.75</MeleeWeapon_CooldownMultiplier>
                 </statOffsets>
+                <statFactors>
+                    <MeleeWeapon_CooldownMultiplier>0.75</MeleeWeapon_CooldownMultiplier>
+                </statFactors>
             </li>
         </stages>
         <spawnThingOnRemoved>MobilityFrame</spawnThingOnRemoved>
@@ -397,10 +401,10 @@
             <li>
                 <statOffsets>
                     <MeleeDodgeChance>-10</MeleeDodgeChance>
-                    <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
-                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
                 </statOffsets>
                 <statFactors>
+                    <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
+                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
                     <IncomingDamageFactor>1.5</IncomingDamageFactor>
                 </statFactors>
             </li>
