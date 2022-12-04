@@ -10,8 +10,9 @@
         <thingCategories>
             <li>ATR_WeaponsMech</li>
         </thingCategories>
+        <useHitPoints>false</useHitPoints>
 		<statBases>
-			<MaxHitPoints>1000</MaxHitPoints>
+            <MarketValue>4000</MarketValue>
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Beauty>-6</Beauty>
@@ -49,7 +50,6 @@
             <drawSize>3</drawSize>
         </graphicData>
         <statBases>
-            <MarketValue>800</MarketValue>
             <Mass>42</Mass>
             <AccuracyTouch>0.5</AccuracyTouch>
             <AccuracyShort>0.65</AccuracyShort>
@@ -126,7 +126,6 @@
         <drawSize>3</drawSize>
         </graphicData>
         <statBases>
-            <MarketValue>800</MarketValue>
             <Mass>42</Mass>
             <AccuracyTouch>0.8</AccuracyTouch>
             <AccuracyShort>0.65</AccuracyShort>
@@ -187,7 +186,6 @@
             <drawSize>4</drawSize>
         </graphicData>
         <statBases>
-            <MarketValue>800</MarketValue>
             <Mass>30</Mass>
             <AccuracyTouch>0.4</AccuracyTouch>
             <AccuracyShort>0.95</AccuracyShort>
@@ -244,6 +242,7 @@
         <thingCategories>
             <li>ATR_WeaponsMech</li>
         </thingCategories>
+        <useHitPoints>false</useHitPoints>
         <relicChance>0</relicChance>
         <tradeability>None</tradeability>
 		<graphicData>
@@ -255,7 +254,7 @@
             <li>ATR_MechWeapon</li>
         </weaponTags>
 		<statBases>
-			<MaxHitPoints>1000</MaxHitPoints>
+            <MarketValue>4000</MarketValue>
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>25</Mass>
