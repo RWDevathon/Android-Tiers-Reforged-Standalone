@@ -206,6 +206,8 @@
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
+    <Compile Include="Harmony\JobGiver_GetHemogen_Patch.cs" />
+    <Compile Include="Harmony\CompAbilityEffect_BloodfeederBite_Patch.cs" />
     <Compile Include="Harmony\DownedRefugeeQuestUtility_Patch.cs" />
     <Compile Include="Harmony\GatheringsUtility_Patch.cs" />
     <Compile Include="Harmony\ThinkNode_ConditionalMustKeepLyingDown_Patch.cs" />
