@@ -230,6 +230,7 @@ namespace ATReforged
         
         // RESERVED UTILITIES, INTERNAL USE ONLY
         public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android" };
+        public static HashSet<string> ReservedBlacklistedDiseases = new HashSet<string> { "WoundInfection" };
 
         public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
