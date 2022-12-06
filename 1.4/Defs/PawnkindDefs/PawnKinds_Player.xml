@@ -78,6 +78,13 @@
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
         <initialResistanceRange>13~21</initialResistanceRange>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>ATR_GeneralAndroids</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
         <apparelTags>
             <li>IndustrialBasic</li>
         </apparelTags>
@@ -86,52 +93,24 @@
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T4Refugee</defName>
 		<label>T4 Android Colonist</label>
-		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
-		</backstoryFiltersOverride>
 		<race>Tier4Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T3Refugee</defName>
 		<label>T3 Android Colonist</label>
-		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
-		</backstoryFiltersOverride>
 		<race>Tier3Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T2Refugee</defName>
 		<label>T2 Android Colonist</label>
-		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
-		</backstoryFiltersOverride>
 		<race>Tier2Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T1Refugee</defName>
 		<label>T1 Android Colonist</label>
-		<backstoryFiltersOverride>
-		  <li>
-			<categories>
-			  <li>ATR_GeneralAndroids</li>
-			</categories>
-		  </li>
-		</backstoryFiltersOverride>
 		<race>Tier1Android</race>
 	</PawnKindDef>
 

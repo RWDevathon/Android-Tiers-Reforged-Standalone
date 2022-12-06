@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>AndroidT3CollectiveColonist</defName>
-		<label>T3 Android Citizen</label>
-		<race>Tier3Android</race>
-		<combatPower>60</combatPower>
-		<isFighter>false</isFighter>
+
+    <PawnKindDef Name="ATR_AndroidCollectivePawnKindBase" ParentName="BasePlayerPawnKind" Abstract="True">
 		<backstoryFiltersOverride>
             <li>
                 <categories>
@@ -13,10 +9,20 @@
                 </categories>
             </li>
 		</backstoryFiltersOverride>
-		<minGenerationAge>20</minGenerationAge>
-		<defaultFactionType>AndroidUnion</defaultFactionType>
+        <invFoodDef>MealSurvivalPack</invFoodDef>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    </PawnKindDef>
+
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
+		<defName>AndroidT3CollectiveColonist</defName>
+		<label>T3 Android Citizen</label>
+		<race>Tier3Android</race>
+        <invNutrition>2.55</invNutrition>
+		<combatPower>60</combatPower>
+		<isFighter>false</isFighter>
+		<minGenerationAge>20</minGenerationAge>
+		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<gearHealthRange>
 			<min>1</min>
 			<max>1</max>
@@ -54,23 +60,15 @@
 	</PawnKindDef>
 
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT1CollectiveColonist</defName>
 		<label>T1 Android Citizen</label>
 		<race>Tier1Android</race>
+        <invNutrition>3.85</invNutrition>
 		<combatPower>40</combatPower>
 		<isFighter>false</isFighter>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
-		<chemicalAddictionChance>0.00</chemicalAddictionChance>
-		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<gearHealthRange>
 			<min>1</min>
 			<max>1</max>
@@ -108,23 +106,15 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT2CollectiveTrader</defName>
 		<label>T2 Android Trader</label>
 		<race>Tier2Android</race>
+        <invNutrition>3.25</invNutrition>
 		<trader>true</trader>
 		<combatPower>40</combatPower>
 		<isFighter>false</isFighter>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
-		<chemicalAddictionChance>0.00</chemicalAddictionChance>
-		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<gearHealthRange>
 			<min>1</min>
 			<max>1</max>
@@ -162,18 +152,12 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef>
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT1CollectiveSoldier</defName>
 		<label>T1 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<race>Tier1Android</race>
+        <invNutrition>3.85</invNutrition>
 		<combatPower>60</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -215,18 +199,12 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef>
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT2CollectiveSoldier</defName>
 		<label>T2 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<race>Tier2Android</race>
+        <invNutrition>3.25</invNutrition>
 		<combatPower>80</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -268,18 +246,12 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef>
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT3CollectiveSoldier</defName>
 		<label>T3 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<race>Tier3Android</race>
+        <invNutrition>2.55</invNutrition>
 		<combatPower>140</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -322,18 +294,12 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef>
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT4CollectiveSoldier</defName>
 		<label>T4 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<race>Tier4Android</race>
+        <invNutrition>2.55</invNutrition>
 		<combatPower>180</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
@@ -376,22 +342,15 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-	<PawnKindDef>
+	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT4CollectiveLeader</defName>
 		<label>Android leader</label>
 		<labelPlural>Android leaders</labelPlural>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_GeneralAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
 		<race>Tier4Android</race>
+        <invNutrition>2.55</invNutrition>
 		<combatPower>220</combatPower>
 		<factionLeader>true</factionLeader>
 		<minGenerationAge>20</minGenerationAge>
-		<invNutrition>3.0</invNutrition>
 		<defaultFactionType>AndroidUnion</defaultFactionType>
 		<aiAvoidCover>false</aiAvoidCover>
 		<gearHealthRange>

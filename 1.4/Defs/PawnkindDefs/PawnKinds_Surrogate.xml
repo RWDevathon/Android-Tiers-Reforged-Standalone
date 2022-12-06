@@ -10,6 +10,7 @@
                 </categories>
             </li>
         </backstoryFiltersOverride>
+        <invNutrition>2.15</invNutrition>
     </PawnKindDef>
 
     <PawnKindDef Name="AndroidSurrogateBase" ParentName="SurrogateBase" Abstract="True">
@@ -32,6 +33,7 @@
         <defName>AndroidT2Surrogate</defName>
         <label>T2 Android Surrogate</label>
 	    <race>Tier2Android</race>
+        <invNutrition>3.25</invNutrition>
         <combatPower>90</combatPower>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -63,6 +65,7 @@
         <defName>AndroidT3Surrogate</defName>
         <label>T3 Android Surrogate</label>
 	    <race>Tier3Android</race>
+        <invNutrition>2.55</invNutrition>
         <combatPower>120</combatPower>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -100,6 +103,7 @@
         <defName>AndroidT4Surrogate</defName>
         <label>T4 Android Surrogate</label>
 	    <race>Tier4Android</race>
+        <invNutrition>2.55</invNutrition>
         <combatPower>160</combatPower>
         <apparelTags>
             <li>IndustrialBasic</li>

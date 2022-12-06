@@ -11,6 +11,8 @@
                 </categories>
             </li>
         </backstoryFiltersOverride>
+        <invNutrition>2.15</invNutrition>
+        <invFoodDef>MealSurvivalPack</invFoodDef>
         <techHediffsTags>
             <li>Advanced</li>
         </techHediffsTags>
@@ -29,6 +31,7 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>80</combatPower>
+    <invNutrition>3.85</invNutrition>
 	<minGenerationAge>20</minGenerationAge>
 	<maxGenerationAge>50</maxGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -81,6 +84,7 @@
 	  </li>
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
+    <invNutrition>3.85</invNutrition>
     <combatPower>40</combatPower>
 	<minGenerationAge>20</minGenerationAge>	
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -132,6 +136,7 @@
 	  </li>
 	</backstoryFiltersOverride>
 	<race>Tier2Android</race>
+    <invNutrition>3.2</invNutrition>
     <combatPower>130</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -185,6 +190,7 @@
 	  </li>
 	</backstoryFiltersOverride>
 	<race>Tier3Android</race>
+    <invNutrition>2.55</invNutrition>
     <combatPower>180</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -239,6 +245,7 @@
 	  </li>
 	</backstoryFiltersOverride>
 	<race>Tier4Android</race>
+    <invNutrition>2.55</invNutrition>
     <combatPower>220</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>

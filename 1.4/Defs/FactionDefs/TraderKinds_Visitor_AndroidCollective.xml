@@ -19,13 +19,13 @@
           <max>5</max>
         </countRange>
       </li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>MealSurvivalPack</thingDef>
-				<countRange>
-					<min>3</min>
-					<max>6</max>
-				</countRange>
-			</li>
+        <li Class="StockGenerator_SingleDef">
+            <thingDef>MealSurvivalPack</thingDef>
+            <countRange>
+                <min>3</min>
+                <max>6</max>
+            </countRange>
+        </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ATR_PartPack</thingDef>
         <countRange>
