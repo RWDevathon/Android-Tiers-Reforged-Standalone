@@ -292,8 +292,8 @@ namespace ATReforged
                 }
 
                 DuplicateSkills(ref source, ref dest, isTethered);
-
-                // If this duplication is considered to be killing a sapient individual, then 
+                
+                // If this duplication is considered to be killing a sapient individual, then handle some relations before they're duplicated.
                 if (overwriteAsDeath)
                 {
                     PawnDiedOrDownedThoughtsUtility.TryGiveThoughts(dest, null, PawnDiedOrDownedThoughtsKind.Died);

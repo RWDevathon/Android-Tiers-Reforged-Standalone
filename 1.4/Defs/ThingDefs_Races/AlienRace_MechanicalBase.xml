@@ -121,6 +121,8 @@
 						</li>
 					</colorChannels>
 				</alienPartGenerator>
+                <growthAges>
+                </growthAges>
             </generalSettings>
 			<styleSettings>
                 <li>
