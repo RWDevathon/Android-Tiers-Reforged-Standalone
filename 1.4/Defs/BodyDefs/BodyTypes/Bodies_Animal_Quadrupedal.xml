@@ -151,6 +151,8 @@
                                     <coverage>0.1</coverage>
                                     <groups>
                                         <li>Teeth</li>
+                                        <li>FullHead</li>
+                                        <li>Mount</li>
                                     </groups>
                                 </li>
                             </parts>

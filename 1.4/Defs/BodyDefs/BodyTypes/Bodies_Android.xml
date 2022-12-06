@@ -109,7 +109,9 @@
                                     <def>ATR_VoiceSynthesizer</def>
                                     <coverage>0.14</coverage>
                                     <groups>
+                                        <li>Teeth</li>
                                         <li>FullHead</li>
+                                        <li>Mouth</li>
                                     </groups>
                                 </li>
                                 <li>
