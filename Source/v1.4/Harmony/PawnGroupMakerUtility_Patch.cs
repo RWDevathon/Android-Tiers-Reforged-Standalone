@@ -29,6 +29,16 @@ namespace ATReforged
                         {
                             nbHumanoids++;
                         }
+
+                        Hediff stasisHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_StasisPill);
+                        if (Utils.IsConsideredMechanical(pawn) && stasisHediff == null)
+                        {
+                            pawn.health.AddHediff(HediffMaker.MakeHediff(HediffDefOf.ATR_StasisPill, pawn));
+                        }
+                        else if (stasisHediff != null)
+                        {
+                            stasisHediff.Severity = 1f;
+                        }
                     }
 
                     // Skip factions not allowed to use surrogates or groups that are too small
@@ -229,12 +239,17 @@ namespace ATReforged
                     // All members of the group that were unaltered are returned to the final grouping.
                     __result = unalteredGroup.Concat(ret);
 
-                    // Generated mechanical pawns in groups will always receive the Stasis Hediff to reduce their power consumption significantly so they don't run into malnutrition issues.
+                    // Generated mechanical pawns in groups will always receive the Stasis Hediff to reduce their power consumption significantly so they don't run into malnutrition issues as frequently.
                     foreach (Pawn member in __result)
                     {
-                        if (Utils.IsConsideredMechanical(member))
+                        Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_StasisPill);
+                        if (Utils.IsConsideredMechanical(member) && stasisHediff == null)
                         {
                             member.health.AddHediff(HediffMaker.MakeHediff(HediffDefOf.ATR_StasisPill, member));
+                        }
+                        else if (stasisHediff != null)
+                        {
+                            stasisHediff.Severity = 1f;
                         }
                     }
                 }
