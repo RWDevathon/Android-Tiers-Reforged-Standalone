@@ -277,75 +277,165 @@ namespace ATReforged
         {
             try
             {
-                // Duplicate source story into destination.
-                if (source.story != null)
-                {
-                    // If not tethered, copy all critical data over.
-                    if (!isTethered)
-                    {
-                        // Duplicate source traits into destination. First clear all destination traits to avoid issues.
-                        foreach (Trait trait in dest.story.traits.allTraits.ToList())
-                        {
-                            dest.story.traits.RemoveTrait(trait);
-                        }
-                        foreach (Trait trait in source.story.traits?.allTraits)
-                        {
-                            dest.story.traits.GainTrait(new Trait(trait.def, trait.Degree, true));
-                        }
-                    }
-                    // Tether destination and source traits together. Affecting one will affect the other.
-                    else
-                    {
-                        dest.story.traits = source.story.traits;
-                    }
-                    dest.story.Childhood = source.story.Childhood;
-                    dest.story.Adulthood = source.story.Adulthood;
-                    dest.story.title = source.story.title;
-                    dest.story.favoriteColor = source.story.favoriteColor;
-                    dest.Notify_DisabledWorkTypesChanged();
-                    dest.skills.Notify_SkillDisablesChanged();
-                }
+                DuplicateStory(ref source, ref dest);
 
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
-                    if (source.ideo == null)
-                    {
-                        dest.ideo = null;
-                    }
-                    else if (!isTethered)
-                    {
-                        dest.ideo = new Pawn_IdeoTracker(dest);
-                        dest.ideo.SetIdeo(source.Ideo);
-                        dest.ideo.OffsetCertainty(source.ideo.Certainty - dest.ideo.Certainty);
-                        dest.ideo.joinTick = source.ideo.joinTick;
-                    }
-                    else
-                    {
-                        dest.ideo = source.ideo;
-                    }
+                    DuplicateIdeology(ref source, ref dest, isTethered);
                 }
 
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
-                    if (source.royalty != null)
-                    {
-                        source.royalty.UpdateAvailableAbilities();
-                        if (source.needs != null)
-                            source.needs.AddOrRemoveNeedsAsAppropriate();
-                        source.abilities.Notify_TemporaryAbilitiesChanged();
-                    }
-                    if (dest.royalty != null)
-                    {
-                        dest.royalty.UpdateAvailableAbilities();
-                        if (dest.needs != null)
-                            dest.needs.AddOrRemoveNeedsAsAppropriate();
-                        dest.abilities.Notify_TemporaryAbilitiesChanged();
-                    }
+                    DuplicateRoyalty(ref source, ref dest, isTethered);
                 }
 
-                // Duplicate source skills into destination.
+                DuplicateSkills(ref source, ref dest, isTethered);
+
+                // If this duplication is considered to be killing a sapient individual, then 
+                if (overwriteAsDeath)
+                {
+                    PawnDiedOrDownedThoughtsUtility.TryGiveThoughts(dest, null, PawnDiedOrDownedThoughtsKind.Died);
+                    Pawn spouse = dest.relations?.GetFirstDirectRelationPawn(PawnRelationDefOf.Spouse);
+                    if (spouse != null && !spouse.Dead && spouse.needs.mood != null)
+                    {
+                        MemoryThoughtHandler memories = spouse.needs.mood.thoughts.memories;
+                        memories.RemoveMemoriesOfDef(ThoughtDefOf.GotMarried);
+                        memories.RemoveMemoriesOfDef(ThoughtDefOf.HoneymoonPhase);
+                    }
+                    Traverse.Create(dest.relations).Method("AffectBondedAnimalsOnMyDeath").GetValue();
+                    dest.health.NotifyPlayerOfKilled(null, null, null);
+                    dest.relations.ClearAllRelations();
+                }
+
+                // Duplicate relations.
+                DuplicateRelations(ref source, ref dest, isTethered);
+
+                // Duplicate faction. No difference if tethered or not.
+                if (source.Faction != dest.Faction)
+                    dest.SetFaction(source.Faction);
+
+                // Duplicate source needs into destination. This is not tetherable.
+                DuplicateNeeds(ref source, ref dest);
+
+                // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
+                if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
+                {
+                    DuplicatePlayerSettings(ref source, ref dest);
+                }
+
+                // Duplicate source name into destination.
+                NameTriple sourceName = (NameTriple)source.Name;
+                dest.Name = new NameTriple(sourceName.First, sourceName.Nick, sourceName.Last);
+
+                dest.Drawer.renderer.graphics.ResolveAllGraphics();
+            }
+            catch(Exception e)
+            {
+                Log.Error("[ATR] Utils.Duplicate: Error occurred duplicating " + source + " into " + dest + ". This will have severe consequences. " + e.Message + e.StackTrace);
+            }
+        }
+
+        // Duplicate all appropriate details from the StoryTracker of the source into the destination.
+        public static void DuplicateStory(ref Pawn source, ref Pawn dest)
+        {
+            if (source.story == null || dest.story == null)
+            {
+                Log.Warning("[ATR] A Storytracker for a duplicate operation was null. Destination story unchanged. This will have no further effects.");
+                return;
+            }
+
+            try
+            {
+                // Clear all destination traits first to avoid issues. Only remove traits that are unspecific to genes.
+                foreach (Trait trait in dest.story.traits.allTraits.ToList().Where(trait => trait.sourceGene == null))
+                {
+                    dest.story.traits.RemoveTrait(trait);
+                }
+
+                // Add all source traits to the destination. Only add traits that are unspecific to genes.
+                foreach (Trait trait in source.story.traits?.allTraits.Where(trait => trait.sourceGene == null))
+                {
+                    dest.story.traits.GainTrait(new Trait(trait.def, trait.Degree, true));
+                }
+
+                // Copy some backstory related details, and double check work types and skill modifiers.
+                dest.story.Childhood = source.story.Childhood;
+                dest.story.Adulthood = source.story.Adulthood;
+                dest.story.title = source.story.title;
+                dest.story.favoriteColor = source.story.favoriteColor;
+                dest.Notify_DisabledWorkTypesChanged();
+                dest.skills.Notify_SkillDisablesChanged();
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during story duplication between " + source + " " + dest + ". The destination StoryTracker may be left unstable!" + exception.Message + exception.StackTrace);
+            }
+        }
+
+        // Duplicate ideology details from the source to the destination.
+        public static void DuplicateIdeology(ref Pawn source, ref Pawn dest, bool isTethered)
+        {
+            try
+            {
+                // If source ideology is null, then destination's ideology should also be null. Vanilla handles null ideologies relatively gracefully.
+                if (source.ideo == null)
+                {
+                    dest.ideo = null;
+                }
+                // If untethered, copy the details of the ideology over, as a separate copy.
+                else if (!isTethered)
+                {
+                    dest.ideo = new Pawn_IdeoTracker(dest);
+                    dest.ideo.SetIdeo(source.Ideo);
+                    dest.ideo.OffsetCertainty(source.ideo.Certainty - dest.ideo.Certainty);
+                    dest.ideo.joinTick = source.ideo.joinTick;
+                }
+                // If tethered, the destination and source will share a single IdeologyTracker.
+                else
+                {
+                    dest.ideo = source.ideo;
+                }
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during ideology duplication between " + source + " " + dest + ". The destination IdeoTracker may be left unstable!" + exception.Message + exception.StackTrace);
+            }
+        }
+
+        // Royalty status can not actually be duplicated, but duplicating a pawn should still handle cases around royal abilities/details.
+        public static void DuplicateRoyalty(ref Pawn source, ref Pawn dest, bool isTethered)
+        {
+            try
+            {
+                if (source.royalty != null)
+                {
+                    source.royalty.UpdateAvailableAbilities();
+                    if (source.needs != null)
+                        source.needs.AddOrRemoveNeedsAsAppropriate();
+                    source.abilities.Notify_TemporaryAbilitiesChanged();
+                }
+                if (dest.royalty != null)
+                {
+                    dest.royalty.UpdateAvailableAbilities();
+                    if (dest.needs != null)
+                        dest.needs.AddOrRemoveNeedsAsAppropriate();
+                    dest.abilities.Notify_TemporaryAbilitiesChanged();
+                }
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during royalty duplication between " + source + " " + dest + ". No further issues are anticipated." + exception.Message + exception.StackTrace);
+            }
+        }
+
+        // Duplicate all skill levels, xp gains, and passions into the destination.
+        public static void DuplicateSkills(ref Pawn source, ref Pawn dest, bool isTethered)
+        {
+            try
+            {
+                // If untethered, create a copy of the source SkillTracker for the destination to use.
                 if (!isTethered)
                 {
                     Pawn_SkillTracker newSkills = new Pawn_SkillTracker(dest);
@@ -364,28 +454,24 @@ namespace ATReforged
                     }
                     dest.skills = newSkills;
                 }
+                // If tethered, the destination and source will share their skill tracker directly.
                 else
                 {
                     dest.skills = source.skills;
                 }
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during skill duplication between " + source + " " + dest + ". The destination SkillTracker may be left unstable!" + exception.Message + exception.StackTrace);
+            }
+        }
 
-                // Duplicate source relations into destination. If this duplication is considered murder, handle destination relations first.
-                if (overwriteAsDeath)
-                {
-                    PawnDiedOrDownedThoughtsUtility.TryGiveThoughts(dest, null, PawnDiedOrDownedThoughtsKind.Died);
-                    Pawn spouse = dest.relations?.GetFirstDirectRelationPawn(PawnRelationDefOf.Spouse);
-                    if (spouse != null && !spouse.Dead && spouse.needs.mood != null)
-                    {
-                        MemoryThoughtHandler memories = spouse.needs.mood.thoughts.memories;
-                        memories.RemoveMemoriesOfDef(ThoughtDefOf.GotMarried);
-                        memories.RemoveMemoriesOfDef(ThoughtDefOf.HoneymoonPhase);
-                    }
-                    Traverse.Create(dest.relations).Method("AffectBondedAnimalsOnMyDeath").GetValue();
-                    dest.health.NotifyPlayerOfKilled(null, null, null);
-                    dest.relations.ClearAllRelations();
-                }
-
-                // Duplicate relations.
+        // Duplicate relations from the source to the destination. This should also affect other pawn relations, and any animals involved.
+        public static void DuplicateRelations(ref Pawn source, ref Pawn dest, bool isTethered)
+        {
+            try
+            {
+                // If untethered, copy all relations that involve the source pawn and apply them to the destination. As animals may have only one master, assign it to the destination.
                 if (!isTethered)
                 {
                     Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
@@ -398,9 +484,12 @@ namespace ATReforged
                         if (!checkedOtherPawns.Contains(pawnRelation.otherPawn))
                         {
                             // Ensure the other pawn has all the same relations to the destination as it does to the source.
-                            foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations?.Where(relation => relation.otherPawn == source))
+                            foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations)
                             {
-                                pawnRelation.otherPawn.relations.AddDirectRelation(otherPawnRelation.def, dest);
+                                if (otherPawnRelation.otherPawn == source)
+                                {
+                                    pawnRelation.otherPawn.relations.AddDirectRelation(otherPawnRelation.def, dest);
+                                }
                             }
                             checkedOtherPawns.Add(pawnRelation.otherPawn);
                         }
@@ -428,12 +517,18 @@ namespace ATReforged
                 {
                     dest.relations = source.relations;
                 }
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during relation duplication between " + source + " " + dest + ". The destination RelationTracker may be left unstable!" + exception.Message + exception.StackTrace);
+            }
+        }
 
-                // Duplicate faction. No difference if tethered or not.
-                if (source.Faction != dest.Faction)
-                    dest.SetFaction(source.Faction);
-
-                // Duplicate source needs into destination. This is not tetherable.
+        // Duplicate applicable needs from the source to the destination. This includes mood thoughts, memories, and ensuring it updates its needs as appropriate.
+        public static void DuplicateNeeds(ref Pawn source, ref Pawn dest)
+        {
+            try
+            {
                 Pawn_NeedsTracker newNeeds = new Pawn_NeedsTracker(dest);
                 if (source.needs?.mood != null)
                 {
@@ -445,56 +540,56 @@ namespace ATReforged
                 dest.needs = newNeeds;
                 dest.needs?.AddOrRemoveNeedsAsAppropriate();
                 dest.needs?.mood?.thoughts?.situational?.Notify_SituationalThoughtsDirty();
+            }
+            catch (Exception exception)
+            {
+                Log.Warning("[ATR] An unexpected error occurred during need duplication between " + source + " " + dest + ". The destination NeedTracker may be left unstable!" + exception.Message + exception.StackTrace);
+            }
+        }
 
-                // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
-                if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
+        public static void DuplicatePlayerSettings(ref Pawn source, ref Pawn dest)
+        {
+            try
+            {
+                // Initialize source work settings if not initialized.
+                if (source.workSettings == null)
                 {
-                    // Initialize source work settings if not initialized.
-                    if (source.workSettings == null)
-                    { 
-                        source.workSettings = new Pawn_WorkSettings(source);
-                    }
-                    source.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
+                    source.workSettings = new Pawn_WorkSettings(source);
+                }
+                source.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
 
-                    // Initialize destination work settings if not initialized.
-                    if (dest.workSettings == null)
-                    { 
-                        dest.workSettings = new Pawn_WorkSettings(dest);
-                    }
-                    dest.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
+                // Initialize destination work settings if not initialized.
+                if (dest.workSettings == null)
+                {
+                    dest.workSettings = new Pawn_WorkSettings(dest);
+                }
+                dest.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
 
-                    // Apply work settings to destination from the source
-                    if (source.workSettings != null && source.workSettings.EverWork)
-                    { 
-                        foreach (WorkTypeDef workTypeDef in DefDatabase<WorkTypeDef>.AllDefsListForReading)
-                        {
-                            if (!dest.WorkTypeIsDisabled(workTypeDef))
-                                dest.workSettings.SetPriority(workTypeDef, source.workSettings.GetPriority(workTypeDef));
-                        }
-                    }
-                    
-                    // Duplicate source restrictions from into destination.
-                    for (int i = 0; i != 24; i++)
+                // Apply work settings to destination from the source
+                if (source.workSettings != null && source.workSettings.EverWork)
+                {
+                    foreach (WorkTypeDef workTypeDef in DefDatabase<WorkTypeDef>.AllDefsListForReading)
                     {
-                        dest.timetable.SetAssignment(i, source.timetable.GetAssignment(i));
+                        if (!dest.WorkTypeIsDisabled(workTypeDef))
+                            dest.workSettings.SetPriority(workTypeDef, source.workSettings.GetPriority(workTypeDef));
                     }
-
-                    dest.playerSettings = new Pawn_PlayerSettings(dest);
-                    dest.playerSettings.AreaRestriction = source.playerSettings.AreaRestriction;
-                    dest.playerSettings.hostilityResponse = source.playerSettings.hostilityResponse;
-                    dest.outfits = new Pawn_OutfitTracker(dest);
-                    dest.outfits.CurrentOutfit = source.outfits.CurrentOutfit;
                 }
 
-                // Duplicate source name into destination.
-                NameTriple sourceName = (NameTriple)source.Name;
-                dest.Name = new NameTriple(sourceName.First, sourceName.Nick, sourceName.Last);
+                // Duplicate source restrictions from into destination.
+                for (int i = 0; i != 24; i++)
+                {
+                    dest.timetable.SetAssignment(i, source.timetable.GetAssignment(i));
+                }
 
-                dest.Drawer.renderer.graphics.ResolveAllGraphics();
+                dest.playerSettings = new Pawn_PlayerSettings(dest);
+                dest.playerSettings.AreaRestriction = source.playerSettings.AreaRestriction;
+                dest.playerSettings.hostilityResponse = source.playerSettings.hostilityResponse;
+                dest.outfits = new Pawn_OutfitTracker(dest);
+                dest.outfits.CurrentOutfit = source.outfits.CurrentOutfit;
             }
-            catch(Exception e)
+            catch (Exception exception)
             {
-                Log.Error("[ATR] Utils.Duplicate: Error occurred duplicating " + source + " into " + dest + ". This will have severe consequences. " + e.Message + e.StackTrace);
+                Log.Warning("[ATR] An unexpected error occurred during player setting duplication between " + source + " " + dest + ". The destination PlayerSettings may be left unstable!" + exception.Message + exception.StackTrace);
             }
         }
 
