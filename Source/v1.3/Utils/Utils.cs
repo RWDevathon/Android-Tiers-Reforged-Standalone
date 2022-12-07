@@ -690,7 +690,7 @@ namespace ATReforged
             {
                 try
                 {
-                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart)
+                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart && hediff.def != HediffDefOf.ATR_MindOperation)
                     {
                         hediff.pawn = copy;
                         copy.health.AddHediff(hediff, hediff.Part);
@@ -717,6 +717,20 @@ namespace ATReforged
                     {
                         copy.health.RemoveHediff(autoCore);
                     }
+                    copy.guest?.SetGuestStatus(Faction.OfPlayer);
+                    if (copy.playerSettings != null)
+                        copy.playerSettings.medCare = MedicalCareCategory.Best;
+                }
+                // Non androids can not truly become blanks as they have no Core body parts to affect. Instead, make them into a simple new pawn.
+                else
+                {
+                    // Ensure the pawn has a proper name.
+                    copy.Name = PawnBioAndNameGenerator.GeneratePawnName(copy);
+                    Hediff OperationHediff = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver);
+                    if (OperationHediff != null)
+                    {
+                        copy.health.RemoveHediff(OperationHediff);
+                    }
                 }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
@@ -727,10 +741,6 @@ namespace ATReforged
 
             // Spawn the copy.
             GenSpawn.Spawn(copy, pawn.Position, pawn.Map);
-
-            // Ensure only spawned pawns die, otherwise errors can occur.
-            if (kill && !IsConsideredMechanicalAndroid(copy))
-                copy.Kill(null);
 
             // Draw the copy.
             copy.Drawer.renderer.graphics.ResolveAllGraphics();

@@ -193,7 +193,7 @@ namespace ATReforged
             }
             
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             blankMechanical.story.Childhood = BackstoryDefOf.FreshBlank;
             blankMechanical.story.Adulthood = BackstoryDefOf.AdultBlank;
@@ -213,6 +213,11 @@ namespace ATReforged
                 AreaRestriction = null,
                 hostilityResponse = HostilityResponseMode.Flee
             };
+            if (ModsConfig.BiotechActive)
+                for (int i = blankMechanical.genes.GenesListForReading.Count - 1; i >= 0; i--)
+                {
+                    blankMechanical.genes.RemoveGene(blankMechanical.genes.GenesListForReading[i]);
+                }
             if (blankMechanical.timetable == null)
                 blankMechanical.timetable = new Pawn_TimetableTracker(blankMechanical);
             if (blankMechanical.playerSettings == null)
@@ -484,7 +489,7 @@ namespace ATReforged
                         if (!checkedOtherPawns.Contains(pawnRelation.otherPawn))
                         {
                             // Ensure the other pawn has all the same relations to the destination as it does to the source.
-                            foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations)
+                            foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations.ToList())
                             {
                                 if (otherPawnRelation.otherPawn == source)
                                 {
@@ -686,6 +691,28 @@ namespace ATReforged
             PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
             Pawn copy = PawnGenerator.GeneratePawn(request);
 
+            // Gene generation is a bit strange, so we manually handle it ourselves.
+            copy.genes = new Pawn_GeneTracker(copy);
+            copy.genes.SetXenotypeDirect(pawn.genes?.Xenotype);
+            foreach (Gene gene in pawn.genes?.Xenogenes)
+            {
+                copy.genes.AddGene(gene.def, true);
+            }
+            foreach (Gene gene in pawn.genes?.Endogenes)
+            {
+                copy.genes.AddGene(gene.def, false);
+            }
+            // Melanin is controlled via genes. If the pawn has one, use it. Otherwise just take whatever skinColorBase the pawn has.
+            if (copy.genes?.GetMelaninGene() != null)
+            {
+                copy.genes.GetMelaninGene().skinColorBase = pawn.genes.GetMelaninGene().skinColorBase;
+            }
+            else
+            {
+                copy.story.skinColorOverride = pawn.story?.skinColorOverride;
+                copy.story.SkinColorBase = pawn.story.SkinColorBase;
+            }
+
             // Get rid of any items it may have spawned with.
             copy?.equipment?.DestroyAllEquipment();
             copy?.apparel?.DestroyAll();
@@ -743,7 +770,7 @@ namespace ATReforged
             {
                 try
                 {
-                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart)
+                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart && hediff.def != HediffDefOf.ATR_MindOperation)
                     {
                         hediff.pawn = copy;
                         copy.health.AddHediff(hediff, hediff.Part);
@@ -770,6 +797,20 @@ namespace ATReforged
                     {
                         copy.health.RemoveHediff(autoCore);
                     }
+                    copy.guest?.SetGuestStatus(Faction.OfPlayer);
+                    if (copy.playerSettings != null)
+                        copy.playerSettings.medCare = MedicalCareCategory.Best;
+                }
+                // Non androids can not truly become blanks as they have no Core body parts to affect. Instead, make them into a simple new pawn.
+                else
+                {
+                    // Ensure the pawn has a proper name.
+                    copy.Name = PawnBioAndNameGenerator.GeneratePawnName(copy);
+                    Hediff OperationHediff = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver);
+                    if (OperationHediff != null)
+                    {
+                        copy.health.RemoveHediff(OperationHediff);
+                    }
                 }
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
@@ -780,10 +821,6 @@ namespace ATReforged
 
             // Spawn the copy.
             GenSpawn.Spawn(copy, pawn.Position, pawn.Map);
-
-            // Ensure only spawned pawns die, otherwise errors can occur.
-            if (kill && !IsConsideredMechanicalAndroid(copy))
-                copy.Kill(null);
 
             // Draw the copy.
             copy.Drawer.renderer.graphics.ResolveAllGraphics();

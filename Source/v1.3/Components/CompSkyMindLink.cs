@@ -668,11 +668,13 @@ namespace ATReforged
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
 
                 // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
-                Pawn corpse = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
+                Pawn replacement = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
                 // If in the settings, uploading is set to Permakill, find the new pawn copy's brain and mercilessly destroy it so it can't be revived.
                 if (ATReforged_Settings.uploadingToSkyMindPermaKills)
                 {
-                    corpse.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, corpse.health.hediffSet.GetBrain()));
+                    replacement.SetFactionDirect(null);
+                    replacement.relations.ClearAllRelations();
+                    replacement.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, replacement.health.hediffSet.GetBrain()));
                 }
 
                 // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
