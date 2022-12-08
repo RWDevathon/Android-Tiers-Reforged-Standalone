@@ -123,6 +123,10 @@
 				</alienPartGenerator>
                 <growthAges>
                 </growthAges>
+                <additionalTraits>
+                    <min>0</min>
+                    <max>3</max>
+                </additionalTraits>
             </generalSettings>
 			<styleSettings>
                 <li>
