@@ -30,6 +30,8 @@
 		<workDisables>
 			<li>Animals</li>
             <li>Social</li>
+            <li>Artistic</li>
+            <li>Intellectual</li>
 		</workDisables>
 	</BackstoryDef>
 	

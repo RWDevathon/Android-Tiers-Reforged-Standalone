@@ -193,7 +193,7 @@
         </countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>MedicineIndustrial</thingDef>
+        <thingDef>ATR_RepairStimIntermediate</thingDef>
         <countRange>
           <min>2</min>
           <max>5</max>
@@ -298,7 +298,7 @@
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>MedicineUltratech</thingDef>
+				<thingDef>ATR_RepairStimAdvanced</thingDef>
 				<countRange>
 					<min>2</min>
 					<max>8</max>
@@ -315,7 +315,6 @@
 					<max>1</max>
 				</countRange>
         <excludedThingDefs>
-          <li>MedicineUltratech</li> <!-- already handled by single def -->
           <li>ComponentSpacer</li> <!-- already handled by single def -->
         </excludedThingDefs>
         <customCountRanges>
