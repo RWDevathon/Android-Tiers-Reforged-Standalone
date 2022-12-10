@@ -171,12 +171,10 @@
       </li>
       <li Class="StockGenerator_Animals">
         <tradeTagsSell>
-          <li>AnimalFarm</li>
-          <li>AnimalPet</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsSell>
         <tradeTagsBuy>
-          <li>AnimalUncommon</li>
-          <li>AnimalExotic</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsBuy>
         <kindCountRange>
           <min>2</min>

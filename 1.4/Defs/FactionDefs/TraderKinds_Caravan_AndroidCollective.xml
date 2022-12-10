@@ -95,11 +95,10 @@
       <li Class="StockGenerator_Animals">
         <maxWildness>0.70</maxWildness>
         <tradeTagsSell>
-          <li>AnimalFarm</li>
-          <li>AnimalPet</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsSell>
         <tradeTagsBuy>
-          <li>AnimalExotic</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsBuy>
         <kindCountRange>
           <min>0</min>
@@ -234,11 +233,10 @@
 			</li>
       <li Class="StockGenerator_Animals">
         <tradeTagsSell>
-          <li>AnimalFighter</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsSell>
         <tradeTagsBuy>
-          <li>AnimalUncommon</li>
-          <li>AnimalExotic</li>
+          <li>ATR_MechanicalAnimal</li>
         </tradeTagsBuy>
         <kindCountRange>
           <min>1</min>
@@ -364,12 +362,11 @@
 			</li>
 			<li Class="StockGenerator_Animals">
 				<tradeTagsSell>
-					<li>AnimalUncommon</li>
-					<li>AnimalFighter</li>
+                    <li>ATR_MechanicalAnimal</li>
 				</tradeTagsSell>
-        <tradeTagsBuy>
-          <li>AnimalExotic</li>
-        </tradeTagsBuy>
+                <tradeTagsBuy>
+                    <li>ATR_MechanicalAnimal</li>
+                </tradeTagsBuy>
 				<kindCountRange>
 					<min>3</min>
 					<max>3</max>

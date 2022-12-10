@@ -45,6 +45,7 @@
 		</race>
 		<tradeTags>
 			<li>AnimalExotic</li>
+            <li>ATR_MechanicalAnimal</li>
 		</tradeTags>
 		<recipes>
 			<li>RemoveBodyPartAndroid</li>

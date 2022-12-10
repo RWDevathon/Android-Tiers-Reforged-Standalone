@@ -5,6 +5,7 @@
 		<statBases>
 			<Flammability>0</Flammability>
             <ToxicResistance>1</ToxicResistance>
+            <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<MeatAmount>0</MeatAmount>
 			<LeatherAmount>0</LeatherAmount>
             <PainShockThreshold>1</PainShockThreshold>
@@ -45,6 +46,7 @@
 		</race>
 		<tradeTags>
 			<li>AnimalExotic</li>
+            <li>ATR_MechanicalAnimal</li>
 		</tradeTags>
 		<recipes>
 			<li>ATR_RemoveBodyPartAndroid</li>
