@@ -10,7 +10,6 @@
                 </categories>
             </li>
         </backstoryFiltersOverride>
-        <invNutrition>2.15</invNutrition>
     </PawnKindDef>
 
     <PawnKindDef Name="AndroidSurrogateBase" ParentName="SurrogateBase" Abstract="True">
@@ -23,6 +22,7 @@
             <min>0.8</min>
             <max>1.6</max>
         </gearHealthRange>
+        <invNutrition>2.15</invNutrition>
         <initialResistanceRange>14~20</initialResistanceRange>
         <initialWillRange>0~0</initialWillRange>
     </PawnKindDef>

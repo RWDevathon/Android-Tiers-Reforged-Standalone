@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- <PawnKindDef>
+    <PawnKindDef Name="ATR_AndroidRaiderBase" Abstract="True">
+        <defaultFactionType>MechanicalMarauders</defaultFactionType>
+        <itemQuality>Normal</itemQuality>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ATR_ViolentAndroids</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <invNutrition>2.15</invNutrition>
+        <invFoodDef>MealSurvivalPack</invFoodDef>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </PawnKindDef>
+
+ <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT1</defName>
     <label>T1 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -14,7 +31,7 @@
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
     <combatPower>80</combatPower>
-    <baseRecruitDifficulty>0.80</baseRecruitDifficulty>
+    <invNutrition>3.85</invNutrition>
 	<minGenerationAge>20</minGenerationAge>
 	<maxGenerationAge>50</maxGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -55,7 +72,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
  
- <PawnKindDef>
+ <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSlaveT1</defName>
     <label>T1 Android Slave</label>
     <labelPlural>Enslaved android</labelPlural>
@@ -67,8 +84,8 @@
 	  </li>
 	</backstoryFiltersOverride>
 	<race>Tier1Android</race>
+    <invNutrition>3.85</invNutrition>
     <combatPower>40</combatPower>
-    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
 	<minGenerationAge>20</minGenerationAge>	
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
@@ -107,7 +124,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
 
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT2</defName>
     <label>T2 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -118,8 +135,8 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 	<race>Tier2Android</race>
+    <invNutrition>3.2</invNutrition>
     <combatPower>130</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -161,7 +178,7 @@
   </PawnKindDef>
 
 
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT3</defName>
     <label>T3 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -172,8 +189,8 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
 	<race>Tier3Android</race>
+    <invNutrition>2.55</invNutrition>
     <combatPower>180</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
@@ -216,7 +233,7 @@
 	<initialWillRange>0~0</initialWillRange>
   </PawnKindDef>
  
-  <PawnKindDef>
+  <PawnKindDef ParentName="ATR_AndroidRaiderBase">
     <defName>ATR_RaiderSoldierT4</defName>
     <label>T4 Android Raider</label>
     <labelPlural>Raider androids</labelPlural>
@@ -227,8 +244,8 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
-	    <baseRecruitDifficulty>0.92</baseRecruitDifficulty>
 	<race>Tier4Android</race>
+    <invNutrition>2.55</invNutrition>
     <combatPower>220</combatPower>
 	<minGenerationAge>20</minGenerationAge>
     <defaultFactionType>MechanicalMarauders</defaultFactionType>
