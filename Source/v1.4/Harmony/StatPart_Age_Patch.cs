@@ -1,0 +1,24 @@
+﻿using Verse;
+using Verse.AI;
+using HarmonyLib;
+using RimWorld;
+using System.Collections.Generic;
+using System;
+
+namespace ATReforged
+{
+    internal class StatPart_Age_Patch
+    {
+        // Age as a StatPart is not used for mechanical units. This resolves issues around "baby" mechanical units with reduced work speed, and other related issues.
+        [HarmonyPatch(typeof(StatPart_Age), "ActiveFor")]
+        public class ActiveFor_Patch
+        {
+            [HarmonyPostfix]
+            public static void Listener(Pawn pawn, ref bool __result)
+            {
+                if (Utils.IsConsideredMechanical(pawn))
+                    __result = false;
+            }
+        }
+    }
+}
