@@ -68,6 +68,21 @@
             </li>
         </comps>
     </ThingDef>
+	  
+    <ThingDef ParentName="ATR_GeneratorBase">
+        <defName>M1WarriorGenerator</defName>
+        <label>M1 Warrior</label>
+        <description>An uninitialized Mark 1 Warrior. Mark one warrior units, freed from the constraint of appearing humanlike, are a class above tier 1 Androids in survivability, strength, and power efficiency. They lack sapience, and are usually considered lesser than T1's and only a minor step above mechanoids in thought. These are units crafted for war and war alone, and they are very good at it for their cost.\n\nDue to its small boxy shape, it is often referred to as a "Battle-box" or "Blaster-bucket."</description>
+        <graphicData>
+            <texPath>Things/Pawns/Humanlikes/Tier1/head/None_Average_Normal_south</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_T1Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
 
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>WatchdogGenerator</defName>

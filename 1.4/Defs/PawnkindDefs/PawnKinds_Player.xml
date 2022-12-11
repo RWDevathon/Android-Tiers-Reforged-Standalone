@@ -49,7 +49,6 @@
 		<race>Tier4Android</race>
 	</PawnKindDef>
 
-
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T3Colonist</defName>
 		<label>T3 Newboot Colonist</label>
@@ -62,11 +61,16 @@
 		<race>Tier2Android</race>
 	</PawnKindDef>
 
-
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T1Colonist</defName>
 		<label>T1 Newboot Colonist</label>
 		<race>Tier1Android</race>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+		<defName>ATR_M1WarriorColony</defName>
+		<label>M1 Newboot Warrior</label>
+		<race>ATR_Mark1Warrior</race>
 	</PawnKindDef>
 
 	<!--Androids With Real Backstories-->
