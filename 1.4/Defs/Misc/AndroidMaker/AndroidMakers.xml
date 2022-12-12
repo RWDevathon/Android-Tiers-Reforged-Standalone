@@ -79,7 +79,7 @@
         </graphicData>
         <comps>
             <li Class="ATReforged.CompProperties_GenericSpawner">
-                <pawnKind>ATR_T1Colonist</pawnKind>
+                <pawnKind>ATR_M1WarriorColony</pawnKind>
             </li>
         </comps>
     </ThingDef>
