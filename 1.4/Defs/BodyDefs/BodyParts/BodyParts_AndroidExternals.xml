@@ -8,9 +8,16 @@
         <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
         <bleedRate>0</bleedRate>
-        <tags>
-            <li>BreathingSourceCage</li>
-        </tags>
+        <solid>true</solid>
+    </BodyPartDef>
+
+    <BodyPartDef>
+        <defName>ATR_CoreIntegrityCage</defName>
+        <label>core cage</label>
+        <hitPoints>50</hitPoints>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <bleedRate>0</bleedRate>
         <solid>true</solid>
     </BodyPartDef>
 

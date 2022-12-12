@@ -3,7 +3,6 @@ using Verse;
 using Verse.AI;
 using HarmonyLib;
 using RimWorld;
-using Verse.Noise;
 
 namespace ATReforged
 {

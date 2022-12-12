@@ -207,6 +207,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\GasUtility_Patch.cs" />
+    <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
     <Compile Include="Harmony\ImmunityHandler_Patch.cs" />
     <Compile Include="Harmony\Pawn_InteractionsTracker.cs" />
     <Compile Include="Harmony\JobGiver_GetHemogen_Patch.cs" />
@@ -240,6 +241,8 @@
     <Compile Include="Harmony\ThoughtWorker_SharedBed_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_NeedNeuralSupercharge_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_AgeReversalDemanded_Patch.cs" />
+    <Compile Include="Harmony\StatPart_Age_Patch.cs" />
+    <Compile Include="Harmony\WorkGiver_PatientGoToBedTreatment_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />

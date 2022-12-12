@@ -874,6 +874,8 @@ namespace ATReforged
                 {
                     pawn.story.Childhood = BackstoryDefOf.ATR_DroneChildhood;
                     pawn.story.Adulthood = BackstoryDefOf.ATR_DroneAdulthood;
+                    pawn.workSettings.Notify_DisabledWorkTypesChanged();
+                    pawn.skills.Notify_SkillDisablesChanged();
                 }
                 // Massive drones don't spawn with apparel. They shouldn't be able to wear any either.
                 else

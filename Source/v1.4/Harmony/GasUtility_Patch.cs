@@ -1,7 +1,5 @@
 ﻿using Verse;
 using HarmonyLib;
-using System.Linq;
-using RimWorld.Planet;
 
 namespace ATReforged
 {

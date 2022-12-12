@@ -4,7 +4,7 @@
     <ThingDef ParentName="MakeableShellBase">
         <defName>MicroscytherShell</defName>
         <label>Swarm shell</label>
-        <description>An artillery shell containing two pre-programmed microscythers that will be unleashed and assault hostile targets upon impact.</description>
+        <description>An artillery shell containing several pre-programmed microscythers that will be unleashed and assault all nearby targets upon impact.</description>
         <graphicData>
             <texPath>Things/Items/Shells/Microscyther_shell</texPath>
             <graphicClass>Graphic_Single</graphicClass>
