@@ -28,6 +28,9 @@
     <packageId>Killathon.AndroidTiersReforged</packageId>
 	<incompatibleWith>
         <li>Atlas.AndroidTiers</li>
+		<li>EdB.PrepareCarefully</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+		<li>EdB.PrepareCarefully.UnofficialPatch</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
     </incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li>
