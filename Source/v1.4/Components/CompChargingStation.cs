@@ -19,7 +19,7 @@ namespace ATReforged
         {
             foreach (IntVec3 adjPos in adjacencies)
             {
-                if (pawn.CanReach(new LocalTargetInfo(adjPos), PathEndMode.OnCell, Danger.Deadly) && !pawn.Map.pawnDestinationReservationManager.IsReserved(adjPos))
+                if (pawn.CanReach(new LocalTargetInfo(adjPos), PathEndMode.OnCell, Danger.Deadly) && (pawn.Position == adjPos || !pawn.Map.pawnDestinationReservationManager.IsReserved(adjPos)))
                     return adjPos;
             }
             return IntVec3.Invalid;
