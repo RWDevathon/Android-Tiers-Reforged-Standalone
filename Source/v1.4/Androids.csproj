@@ -190,6 +190,7 @@
     <Compile Include="Components\CompProperties_SkyMindTower.cs" />
     <Compile Include="Components\CompProperties_HeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SuperComputer.cs" />
+    <Compile Include="Components\CompScorchPack.cs" />
     <Compile Include="Components\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />

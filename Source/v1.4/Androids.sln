@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Androids", "Androids.csproj", "{A4387268-4E97-4CB5-8E19-BB7A2344454B}"
 EndProject
@@ -25,7 +25,7 @@ Global
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
-		$0.TextStylePolicy = $2
+		$0.TextStylePolicy = $5
 		$2.inheritsSet = null
 		$2.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $3
@@ -39,12 +39,10 @@ Global
 		$3.NewLineForClausesInQuery = False
 		$3.SpaceAfterControlFlowStatementKeyword = False
 		$3.scope = text/x-csharp
-		$0.TextStylePolicy = $4
 		$4.FileWidth = 80
 		$4.TabsToSpaces = True
 		$4.NoTabsAfterNonTabs = True
 		$4.scope = text/plain
-		$0.TextStylePolicy = $5
 		$5.inheritsSet = null
 		$5.scope = application/xml
 		$0.XmlFormattingPolicy = $6
