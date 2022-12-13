@@ -34,9 +34,17 @@
     </incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
         <li>erdelf.HumanoidAlienRaces</li>
 		<li>CarnySenpai.EnableOversizedWeapons</li>
+		<li>CETeam.CombatExtended</li>
     </loadAfter>
+	<LoadBefore>
+		<li>avilmask.CommonSense</li>
+	</LoadBefore>
     <description><![CDATA[  
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
 Reworked for maximal flexibility and dynamic controls in settings and compatibility. 
