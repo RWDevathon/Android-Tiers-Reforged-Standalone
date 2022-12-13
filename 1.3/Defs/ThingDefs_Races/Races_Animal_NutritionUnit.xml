@@ -31,10 +31,11 @@
         <race>
             <body>ATR_MechQuadrupedal</body>
             <packAnimal>true</packAnimal>
-            <baseBodySize>1.25</baseBodySize>
+            <baseBodySize>2.4</baseBodySize>
             <baseHealthScale>1</baseHealthScale>
-            <baseHungerRate>1.5</baseHungerRate>
+            <baseHungerRate>0.535</baseHungerRate> <!-- Cows have a hunger rate of 0.535, copy that -->
             <nameOnTameChance>1</nameOnTameChance>
+			<foodType>VegetableOrFruit, Meat, Corpse, Seed, Plant, Fungus</foodType>
             <lifeStageAges>
                 <li>
                     <def>AnimalAdult</def>
