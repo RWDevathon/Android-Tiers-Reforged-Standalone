@@ -14,7 +14,8 @@
 		<thingClass>ATReforged.Building_ChargingBed</thingClass>
 		<tickerType>Rare</tickerType>
 		<designationCategory>AndroidTiersDesignation</designationCategory>
-		<comps>
+		<comps>            
+            <li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ATR_MechanicCabinet</li>
