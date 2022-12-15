@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Mono.Unix.Native;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -7,11 +8,11 @@ namespace ATReforged
 {
     public class Building_ChargingStation : Building
     {
-
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
 
+            adjacencies = GenAdj.CellsAdjacent8Way(this);
         }
 
         // If forcing a pawn to recharge is illegal for the given pawn, return why that is the case. If they can charge, return null.
@@ -23,18 +24,18 @@ namespace ATReforged
                 return new FloatMenuOption("CannotUseNoPath".Translate(), null);
             }
             // Check if the building itself has power and is not broken down.
-            if (!this.TryGetComp<CompPowerTrader>().PowerOn || this.IsBrokenDown())
+            if (this.TryGetComp<CompPowerTrader>()?.PowerOn != true || this.IsBrokenDown())
             { 
                 return new FloatMenuOption("CannotUseNoPower".Translate(), null);
             }
             // Check if the pawn is allowed to use its battery by settings.
-            if (!Utils.CanUseBattery(pawn) || pawn.needs.food == null)
+            if (!Utils.CanUseBattery(pawn) || pawn.needs?.food == null)
             { 
                 return new FloatMenuOption("ATR_NeedToAllowCharge".Translate(pawn), null);
             }
 
             // Check if the building has all of its interaction spots used.
-            if (this.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn) == IntVec3.Invalid)
+            if (GetOpenRechargeSpot(pawn) == IntVec3.Invalid)
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }
@@ -61,7 +62,7 @@ namespace ATReforged
             else
             {
                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate () {
-                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
+                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
                     pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 });
             }
@@ -95,21 +96,31 @@ namespace ATReforged
             else
             {
                  yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate(){
-                     CompChargingStation stationComp = this.TryGetComp<CompChargingStation>();
-
                      // Attempt to assign all pawns that can reach to the station a spot. If a pawn takes the last slot, then abort the process. Left-over pawns won't charge.
                      foreach (Pawn pawn in pawnsCanReach) {
-                         IntVec3 reloadPlacePos = stationComp.GetOpenRechargeSpot(pawn);
+                         IntVec3 chargingSpot = GetOpenRechargeSpot(pawn);
 
-                         if (reloadPlacePos == IntVec3.Invalid)
+                         if (chargingSpot == IntVec3.Invalid)
                              break;
 
-                         Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(reloadPlacePos), new LocalTargetInfo(this));
+                         Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(chargingSpot), new LocalTargetInfo(this));
                          pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                      }
                  });
             }
         }
 
+        // Return the first available spot on this station. Return IntVec3.Invalid if there is none.
+        public IntVec3 GetOpenRechargeSpot(Pawn pawn)
+        {
+            foreach (IntVec3 adjPos in adjacencies)
+            {
+                if (pawn.CanReach(new LocalTargetInfo(adjPos), PathEndMode.OnCell, Danger.Deadly) && (pawn.Position == adjPos || !pawn.Map.pawnDestinationReservationManager.IsReserved(adjPos)))
+                    return adjPos;
+            }
+            return IntVec3.Invalid;
+        }
+
+        private IEnumerable<IntVec3> adjacencies;
     }
 }

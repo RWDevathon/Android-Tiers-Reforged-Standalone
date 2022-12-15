@@ -185,6 +185,7 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="Components\CompPawnCharger.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />
     <Compile Include="Components\CompProperties_SkyMindTower.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\FeedPatientUtility_Patch.cs" />
     <Compile Include="Harmony\GasUtility_Patch.cs" />
     <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
     <Compile Include="Harmony\ImmunityHandler_Patch.cs" />
@@ -259,7 +261,6 @@
     <Compile Include="Components\CompSkyMindTower.cs" />
     <Compile Include="Components\CompComputer.cs" />
     <Compile Include="Components\CompProperties_Computer.cs" />
-    <Compile Include="Components\CompChargingStation.cs" />
     <Compile Include="Components\CompSkyMindCore.cs" />
     <Compile Include="Components\CompSkyMind.cs" />
     <Compile Include="Components\CompSkyMindLink.cs" />

@@ -29,7 +29,7 @@ namespace ATReforged
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
-            if(Medical || (!AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this))
+            if (Medical || (!AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this))
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }
@@ -53,24 +53,12 @@ namespace ATReforged
             }
             // Yield an option to force the pawn to charge from the charging bed.
             else
-            { 
-                yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate () {
-                    IntVec3 chargingSpot;
-                    // Locate a legal place for the pawn to claim.
-                    for (int spotIndex = 0; spotIndex < TotalSleepingSlots; spotIndex++)
-                    {
-                        chargingSpot = GetSleepingSlotPos(spotIndex);
-                        // If this particular spot is unoccupied and no one has reserved it, then it is open and can be claimed.
-                        if (GetCurOccupantAt(chargingSpot) == null && !myPawn.Map.pawnDestinationReservationManager.IsReserved(chargingSpot))
-                        {
-                            myPawn.ownership.ClaimBedIfNonMedical(this);
-                            Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this));
-                            myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
-                            return;
-                        }
-                    }
-                    // If this is reached, then something went wrong. The pawn will not claim the bed and will not start charging. Send a log message.
-                    Log.Warning("[ATR] Pawn " + myPawn.Name + " was unable to claim a charging bed that was available! The order failed, and the pawn will not go to charge now.");
+            {
+                yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate ()
+                {
+                    myPawn.ownership.ClaimBedIfNonMedical(this);
+                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this));
+                    myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 });
             }
         }

@@ -33,7 +33,7 @@
 			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
 			<ComfyTemperatureMax>65</ComfyTemperatureMax>
 			<MentalBreakThreshold>0.08</MentalBreakThreshold>
-			<GlobalLearningFactor>0.4</GlobalLearningFactor>
+			<GlobalLearningFactor>0.2</GlobalLearningFactor>
 			<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
 			<SocialImpact>0.05</SocialImpact>
 			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
@@ -89,9 +89,9 @@
 		</tools>
 		<race>
 			<body>ATR_MechWarriorBody</body>
-			<baseHealthScale>1.6</baseHealthScale>
+			<baseHealthScale>1.2</baseHealthScale>
 			<baseHungerRate>1</baseHungerRate>
-			<baseBodySize>0.5</baseBodySize>
+			<baseBodySize>0.65</baseBodySize>
 		</race>
 		<butcherProducts>
             <Steel>30</Steel>

@@ -13,12 +13,12 @@
         <rotatable>false</rotatable>
         <comps>
             <li>
-                <compClass>ATReforged.CompChargingStation</compClass>
+                <compClass>ATReforged.CompPawnCharger</compClass>
             </li>
             <li Class="CompProperties_Breakdownable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>1000</basePowerConsumption>
+                <basePowerConsumption>20</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Flickable"/>
@@ -78,6 +78,74 @@
         <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
     </ThingDef>
 
+    <!-- Bedside Charger -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>ATR_BedsideCharger</defName>
+        <label>bedside charger</label>
+        <description>A bedside device that allows the occupant of the linked bed to charge. This can provide energy while in bed, but consumes a lot of electricity. It must be placed directly adjacent to and facing the head of the bed.</description>
+        <graphicData>
+            <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+            <damageData>
+                <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+                <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+                <rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+                <rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+                <cornerTR>Damage/Corner</cornerTR>
+            </damageData>
+        </graphicData>
+        <uiIconScale>0.85</uiIconScale>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.2</fillPercent>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>6000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>10</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <tickerType>Rare</tickerType>
+        <comps>
+            <li>
+                <compClass>ATReforged.CompPawnCharger</compClass>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>20</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Facility">
+                <maxSimultaneous>1</maxSimultaneous>
+                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+                <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+            </li>
+        </comps>    
+        <designationHotKey>Misc6</designationHotKey>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+    </ThingDef>
+
     <!-- Charging Pods -->
 
     <ThingDef Name="ATR_ChargingPodBase" ParentName="BedWithQualityBase" Abstract="True">
@@ -103,6 +171,9 @@
         </statBases>
 	    <comps>
             <li Class="CompProperties_Flickable"/>
+            <li>
+                <compClass>ATReforged.CompPawnCharger</compClass>
+            </li>
         </comps>
         <tickerType>Rare</tickerType>
         <thingCategories>
@@ -156,7 +227,7 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>200</basePowerConsumption>
+                <basePowerConsumption>20</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
 			    <linkableFacilities>
@@ -183,7 +254,7 @@
 	        <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>30</basePowerConsumption>
 	        </li>
 	        <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
