@@ -15,6 +15,9 @@
 		<tickerType>Rare</tickerType>
 		<designationCategory>AndroidTiersDesignation</designationCategory>
 		<comps>
+            <li>
+                <compClass>ATReforged.CompPawnCharger</compClass>
+            </li>
             <li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
@@ -24,7 +27,7 @@
 			<li Class="CompProperties_Power">
         		<compClass>CompPowerTrader</compClass>
         		<shortCircuitInRain>true</shortCircuitInRain>
-        		<basePowerConsumption>300</basePowerConsumption>
+        		<basePowerConsumption>30</basePowerConsumption>
 			</li>
 		</comps>
 		<castEdgeShadows>True</castEdgeShadows>
