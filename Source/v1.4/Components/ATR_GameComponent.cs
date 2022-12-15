@@ -327,7 +327,7 @@ namespace ATReforged
             {
                 // Remove the device from the network.
                 networkedDevices.Remove(thing);
-                // Inform all comps that the thing is no longer connected to the SkyMind network. If this was a manual disconnection, inform it appropriately.
+                // Inform all comps that the thing is no longer connected to the SkyMind network.
                 ((ThingWithComps)thing).BroadcastCompSignal("SkyMindNetworkUserDisconnected");
             }
         }
@@ -652,7 +652,7 @@ namespace ATReforged
         // Cloud Pawns are pawns that are stored in the SkyMind Network. This is important as their gizmo's are inaccessible and can't be connected to the SkyMind (but should be considered as if they are).
         private HashSet<Pawn> cloudPawns = new HashSet<Pawn>();
 
-        // Servers have 3 different states they may be in, and may be saved/changed independently of each other. They must also be saved so points may be generated.
+        // Servers have 3 different active states they may be in, and may be saved/changed independently of each other. They must also be saved so points may be generated.
         private HashSet<Building> skillServers = new HashSet<Building>();
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();

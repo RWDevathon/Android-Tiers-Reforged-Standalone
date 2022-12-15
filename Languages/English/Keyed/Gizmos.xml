@@ -8,6 +8,8 @@
 	<ATR_AutoDoorCloseDescription>Close remotely via a SkyCloud server.</ATR_AutoDoorCloseDescription>
 	
 	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>Server not connected to SkyMind network.</ATR_ServerNetworkConnectionNeeded>
+
 	<ATR_SkillMode>Skill Mode</ATR_SkillMode>
 	<ATR_SkillModeDesc>This server is assigned to skill point generation. Click to switch to security.</ATR_SkillModeDesc>
 	

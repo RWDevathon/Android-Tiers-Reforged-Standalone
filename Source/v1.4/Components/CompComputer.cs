@@ -28,6 +28,7 @@ namespace ATReforged
         {
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
+            networkConnection = parent.TryGetComp<CompSkyMind>();
 
             if (!respawningAfterLoad)
             {
@@ -37,12 +38,11 @@ namespace ATReforged
 
         public override void ReceiveCompSignal(string signal)
         {
-            if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
+            if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff" || signal == "SkyMindNetworkUserDisconnected")
             {
                 Utils.gameComp.RemoveServer(building, serverMode);
             }
-
-            if (signal == "PowerTurnedOn")
+            else if (signal == "SkyMindNetworkUserConnected" || (networkConnection == null && signal == "PowerTurnedOn"))
             {
                 Utils.gameComp.AddServer(building, serverMode);
             }
@@ -50,7 +50,7 @@ namespace ATReforged
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn)
+            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn || networkConnection?.connected == false)
                 yield break;
 
             // Generate button to switch server mode based on which servermode the server is currently in.
@@ -131,6 +131,12 @@ namespace ATReforged
             if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn)
                 return "";
 
+            if (networkConnection?.connected == false)
+            {
+                ret.Append("ATR_ServerNetworkConnectionNeeded".Translate());
+                return ret.Append(base.CompInspectStringExtra()).ToString();
+            }
+
             if (serverMode == ServerType.SkillServer)
             {
                 ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
@@ -156,9 +162,11 @@ namespace ATReforged
         {
             base.PostDeSpawn(map);
 
-            // Only servers with types get removed from the lists
-            if (serverMode != ServerType.None && !building.IsBrokenDown() && parent.TryGetComp<CompPowerTrader>().PowerOn)
-                Utils.gameComp.RemoveServer(building, serverMode);
+            // Servers can not be connected to the network when despawned.
+            if (networkConnection?.connected == true)
+            {
+                Utils.gameComp.DisconnectFromSkyMind(building);
+            }
         }
 
         public void ChangeServerMode(ServerType newMode)
@@ -171,10 +179,11 @@ namespace ATReforged
             }
             catch (Exception ex)
             {
-                Log.Error("[ATR] Unable to change the server mode of building " + parent.def.defName + " to the new server type! Error: " + ex.Message + " " + ex.StackTrace);
+                Log.Error("[ATR] Unable to change the server mode of building " + parent.def.defName + " to the new server type " + newMode + "! Error: " + ex.Message + " " + ex.StackTrace);
             }
         }
 
+        private CompSkyMind networkConnection;
         private Building building;
         private ServerType serverMode = ServerType.SkillServer;
     }
