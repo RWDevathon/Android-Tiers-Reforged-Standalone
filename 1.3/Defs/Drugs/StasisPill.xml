@@ -25,7 +25,7 @@
 			<outcomeDoers>
 				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
 					<hediffDef_Organic>ATR_Toxicated</hediffDef_Organic>
-					<hediffDef_Mechanical>MechaniteSurge</hediffDef_Mechanical>
+					<hediffDef_Mechanical>ATR_StasisPill</hediffDef_Mechanical>
 					<severity>1</severity>
 				</li>  
 			</outcomeDoers>
