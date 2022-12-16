@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BasicBedBase"]/comps/li/linkableFacilities</xpath>
+		<value>
+			<li>ATR_BedsideCharger</li>
+		</value>
+	</Operation>
+    
+</Patch>

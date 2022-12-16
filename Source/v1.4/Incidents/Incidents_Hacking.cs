@@ -64,7 +64,7 @@ namespace ATReforged
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentGridVirusDefeated", "ATR_IncidentGridVirusAllyIntercept"))
                 return true; // Function handles everything if it returns true.
@@ -191,8 +191,8 @@ namespace ATReforged
         public bool TryExecuteDDOS(IncidentParms parms)
         {
             // Generate an attack strength that is 1.0 - 4.0 times normal attack strength. DDOS attacks are very dangerous to security points.
-            float attackStrength = GenerateAttackStrength((int)parms.points, 1, 4);
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float attackStrength = GenerateAttackStrength(parms.points, 1, 4);
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentDDOSDefeated", "ATR_IncidentDDOSAllyIntercept"))
@@ -202,7 +202,7 @@ namespace ATReforged
             int targetPawnCount = Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Count();
 
             // Remaining points goes to damaging Skill/Hacking, half each.
-            int leftOverPoints = (int)(attackStrength - defenseStrength);
+            float leftOverPoints = attackStrength - defenseStrength;
             Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ServerType.SkillServer);
             Utils.gameComp.ChangeServerPoints(-leftOverPoints / 2, ServerType.HackingServer);
 
@@ -251,7 +251,7 @@ namespace ATReforged
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -262,8 +262,8 @@ namespace ATReforged
 
             // Select victim. Troll attacks target a singular (non-surrogate) individual.
             Pawn victim = (Pawn) Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !Utils.IsSurrogate(pawn)).RandomElement();
-            int remainingAttackStrength = (int)(attackStrength - defenseStrength);
-            int totalSkillPointsLost = 0;
+            float remainingAttackStrength = attackStrength - defenseStrength;
+            float totalSkillPointsLost = 0;
 
             // Damage the victim's good (> 10 levels) skills and the skills they like doing (passions).
             foreach (SkillRecord skillRecord in victim.skills.skills)
@@ -307,7 +307,7 @@ namespace ATReforged
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
 
             // Handle point loss, attack success checking, and ally intervention.
@@ -344,7 +344,7 @@ namespace ATReforged
         {
             // Generate attack strength and defense strength
             float attackStrength = parms.points * ATReforged_Settings.enemyHackAttackStrengthModifier;
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 1, "ATR_IncidentProvokerhackDefeated", "ATR_IncidentProvokerhackAllyIntercept"))
@@ -379,8 +379,8 @@ namespace ATReforged
         public bool TryExecuteCounterhack(IncidentParms parms)
         {
             // Generate attack strength and defense strength
-            float attackStrength = GenerateAttackStrength((int)parms.points, 1, 4);
-            float defenseStrength = Utils.gameComp.GetSecurityPoints();
+            float attackStrength = GenerateAttackStrength(parms.points, 1, 4);
+            float defenseStrength = Utils.gameComp.GetPoints(ServerType.SecurityServer);
 
             // Handle point loss, attack success checking, and ally intervention.
             if (HandleDefenseSuccessful(defenseStrength, attackStrength, 0.25f, "ATR_IncidentCounterhackDefeated", "ATR_IncidentCounterhackAllyIntercept"))
@@ -389,10 +389,10 @@ namespace ATReforged
             // Enemy attack succeeds
 
             // Counterhacks destroy hacking points first, then skill points.
-            float remainingAttackStrengthAfterHacking = parms.points - Utils.gameComp.GetHackingPoints();
-            Utils.gameComp.ChangeServerPoints(-Utils.gameComp.GetHackingPoints(), ServerType.HackingServer);
+            float remainingAttackStrengthAfterHacking = parms.points - Utils.gameComp.GetPoints(ServerType.HackingServer);
+            Utils.gameComp.ChangeServerPoints(-Utils.gameComp.GetPoints(ServerType.HackingServer), ServerType.HackingServer);
             if (remainingAttackStrengthAfterHacking > 0)
-                Utils.gameComp.ChangeServerPoints(-(int)remainingAttackStrengthAfterHacking, ServerType.SkillServer);
+                Utils.gameComp.ChangeServerPoints(-remainingAttackStrengthAfterHacking, ServerType.SkillServer);
 
             // Create hack letter.
             letter = LetterDefOf.ThreatSmall;
@@ -430,11 +430,9 @@ namespace ATReforged
             switch (target)
             {
                 case 1:
-                    return 1;
                 case 2:
                     return 1f;
                 case 3:
-                    return .25f;
                 case 4:
                     return .25f;
                 case 5:
@@ -442,7 +440,7 @@ namespace ATReforged
                 case 6:
                     return 1f;
                 default:
-                    return 1;
+                    return 1f;
             }
         }
 
@@ -453,7 +451,7 @@ namespace ATReforged
             Find.LetterStack.ReceiveLetter(label, text, letter ?? LetterDefOf.NeutralEvent, lookTargets);
         }
 
-        private float GenerateAttackStrength(int baseStrength, float lowerBoundModifier, float upperBoundModifier)
+        private float GenerateAttackStrength(float baseStrength, float lowerBoundModifier, float upperBoundModifier)
         { // Generates the attack strength as the baseStrength times a random percentage value between the lower and upper bound modifiers. IE. 100, 1, 4 == 100 * (100% ~ 400%).
             return baseStrength * Rand.Range(lowerBoundModifier, upperBoundModifier) * ATReforged_Settings.enemyHackAttackStrengthModifier;
         }
@@ -475,7 +473,7 @@ namespace ATReforged
             }
 
             // Points are subtracted from the security servers. 
-            Utils.gameComp.ChangeServerPoints((int)(-attackStrength * damageModifier), ServerType.SecurityServer);
+            Utils.gameComp.ChangeServerPoints(-attackStrength * damageModifier, ServerType.SecurityServer);
             return defenseSuccessful;
         }
 
@@ -488,7 +486,7 @@ namespace ATReforged
                 if (Rand.Chance(ATReforged_Settings.chanceAlliesInterceptHack))
                 {
                     // Add 25% of the attack strength to the security points. Overflows are accounted for automatically.
-                    int gainedStrength = (int)(attackStrength * ATReforged_Settings.pointsGainedOnInterceptPercentage);
+                    float gainedStrength = (attackStrength * ATReforged_Settings.pointsGainedOnInterceptPercentage);
                     Utils.gameComp.ChangeServerPoints(gainedStrength, ServerType.SecurityServer);
 
                     // Generate the message and terminate the function.

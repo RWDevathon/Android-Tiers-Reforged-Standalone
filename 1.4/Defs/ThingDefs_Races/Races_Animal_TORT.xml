@@ -4,10 +4,13 @@
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
 		<defName>DroneTORT</defName>
 		<label>TORT unit</label>
-		<description>Based on ancient treaded multi-terrain vehicles and the strangely successful biological species of tortoises, the Treaded Object for Retrieval and Transport - or TORT - is a heavily armored hollowed out mechanical drone programmed to relocate goods similar to ancient forklifts or serve as long-range land carriers. \n\nWhile large enough to contain people, internal servos constantly shift cargo hazardously, and numerous incidents led to the installation of anti-personnel hosting software measures.</description>
+		<description>Based on ancient treaded multi-terrain vehicles and the strangely successful biological species of tortoises, the Treaded Object for Retrieval and Transport - or TORT - is a heavily armored hollowed out mechanical drone programmed to relocate goods similar to ancient forklifts or serve as long-range land carriers. \n\nThe unit's size and hollow nature allows it to transport people as well as standard cargos, and have on several occasions been used in search and rescue and in smuggling operations.</description>
 		<statBases>
-			<MoveSpeed>3.00</MoveSpeed>
+			<MoveSpeed>3.60</MoveSpeed>
 			<MarketValue>300</MarketValue>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.80</ArmorRating_Heat>
 		</statBases>
 		<tools>
 			<li>
@@ -24,7 +27,8 @@
 			<body>ATR_MechQuadrupedal</body>
 			<packAnimal>true</packAnimal>
 			<baseBodySize>2.4</baseBodySize>
-			<baseHealthScale>1.5</baseHealthScale>
+			<baseHealthScale>2</baseHealthScale>
+            <baseHungerRate>0.4</baseHungerRate>
 			<nameOnTameChance>1</nameOnTameChance>
 			<trainability>Advanced</trainability>
 			<lifeStageAges>

@@ -106,7 +106,7 @@ namespace ATReforged
             // Prisoners may have their mind absorbed for server points. No other operations are legal on them.
             if (ThisPawn.IsPrisonerOfColony)
             {
-                if (Linked == -1 && (Utils.gameComp.GetSkillPointCapacity() > 0 || Utils.gameComp.GetHackingPointCapacity() > 0))
+                if (Linked == -1 && (Utils.gameComp.GetPointCapacity(ServerType.SkillServer) > 0 || Utils.gameComp.GetPointCapacity(ServerType.HackingServer) > 0))
                 {
                     Texture2D tex = Tex.MindAbsorption;
                     yield return new Command_Action

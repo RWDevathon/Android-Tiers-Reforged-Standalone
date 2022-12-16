@@ -63,7 +63,6 @@ namespace ATReforged
         public static float maxHackSuccessChance = 0.95f;
 
         // HEALTH SETTINGS
-
             // Settings for Surgeries
         public static bool medicinesAreInterchangeable = false;
         public static float maxChanceMechanicOperationSuccess = 1.0f;
@@ -331,14 +330,14 @@ namespace ATReforged
 
             // Permissions
             thingsAllowedAsRepairStims = new HashSet<string> { };
-            blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
-            blacklistedMechanicalTraits = new HashSet<string> { "NightOwl", "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+            blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia" };
+            blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
 
             // Needs Settings
             androidsHaveJoyNeed = true;
             androidsHaveBeautyNeed = true;
-            androidsHaveComfortNeed = false;
-            androidsHaveOutdoorsNeed = false;
+            androidsHaveComfortNeed = true;
+            androidsHaveOutdoorsNeed = true;
 
             // POWER SETTINGS
             wattsConsumedPerBodySize = 500;
@@ -482,8 +481,8 @@ namespace ATReforged
             // Needs
             Scribe_Values.Look(ref androidsHaveJoyNeed, "ATR_androidsHaveJoyNeed", true);
             Scribe_Values.Look(ref androidsHaveBeautyNeed, "ATR_androidsHaveBeautyNeed", true);
-            Scribe_Values.Look(ref androidsHaveComfortNeed, "ATR_androidsHaveComfortNeed", false);
-            Scribe_Values.Look(ref androidsHaveOutdoorsNeed, "ATR_androidsHaveOutdoorsNeed", false);
+            Scribe_Values.Look(ref androidsHaveComfortNeed, "ATR_androidsHaveComfortNeed", true);
+            Scribe_Values.Look(ref androidsHaveOutdoorsNeed, "ATR_androidsHaveOutdoorsNeed", true);
 
             /* === POWER === */
 

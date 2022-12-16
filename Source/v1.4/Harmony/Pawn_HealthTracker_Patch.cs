@@ -16,10 +16,10 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Listener(ref Pawn ___pawn, ref Hediff hediff, BodyPartRecord part)
             {
-                // No reason to continue if the hediff is null.
+                // No reason to check here if the pawn or hediff is null.
                 if (___pawn == null || hediff == null)
                 {
-                    return false;
+                    return true;
                 }
 
                 // If this is a mechanical pawn and this particular hediff is forbidden for mechanicals to have, then abort trying to add it.

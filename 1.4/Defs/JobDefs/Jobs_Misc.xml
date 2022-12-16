@@ -12,7 +12,6 @@
         <defName>ResurrectMechanical</defName>
         <driverClass>ATReforged.JobDriver_ResurrectMechanical</driverClass>
         <reportString>repairing TargetA.</reportString>
-        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
     <JobDef>
@@ -20,6 +19,13 @@
         <driverClass>ATReforged.JobDriver_TendMechanical</driverClass>
         <reportString>tending to TargetA.</reportString>
         <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+
+    <JobDef>
+        <defName>ATR_GenerateInsight</defName>
+        <driverClass>ATReforged.JobDriver_GenerateInsight</driverClass>
+        <reportString>generating SkyMind insight.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
     
 </Defs>

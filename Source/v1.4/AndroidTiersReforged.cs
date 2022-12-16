@@ -138,6 +138,16 @@ namespace ATReforged
                             };
                             thingDef.comps.Add(cp);
                         }
+
+                        // Research benches get a special comp to control what server type it can be used to generate points for.
+                        if (typeof(Building_ResearchBench).IsAssignableFrom(thingDef.thingClass))
+                        {
+                            cp = new CompProperties
+                            {
+                                compClass = typeof(CompInsightBench)
+                            };
+                            thingDef.comps.Add(cp);
+                        }
                     }
                 }
             }

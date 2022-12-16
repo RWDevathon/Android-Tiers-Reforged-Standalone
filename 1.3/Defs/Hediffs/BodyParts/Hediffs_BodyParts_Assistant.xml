@@ -645,7 +645,7 @@
 		<addsHediff>ATR_MentalAssistant</addsHediff>
 	</RecipeDef>
 
-  	<!-- Pyschic Assistant -->
+  	<!-- Psychic Assistant -->
  
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
@@ -675,7 +675,7 @@
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>Install_PsychicAssistant</defName>
-		<label>Install pyschic assistant</label>
+		<label>Install psychic assistant</label>
 		<description>Installs a psychic assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing psychic assistant.</jobString>
 		<ingredients>

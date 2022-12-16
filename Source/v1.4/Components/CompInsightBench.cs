@@ -1,18 +1,16 @@
-﻿using System;
-using System.Text;
-using Verse;
+﻿using Verse;
 using RimWorld;
 using System.Collections.Generic;
 
 namespace ATReforged
 {
-    public class CompComputer : ThingComp
+    public class CompInsightBench : ThingComp
     {
-        public CompProperties_Computer Props
+        public ServerType ServerType
         {
             get
             {
-                return (CompProperties_Computer)props;
+                return serverMode;
             }
         }
 
@@ -23,29 +21,11 @@ namespace ATReforged
             Scribe_Values.Look(ref serverMode, "ATR_serverMode", ServerType.SkillServer);
         }
 
-        // There are two possible spawn states: created, in which case it sets its serverMode from Props and waits to turn on; post load spawn, in which case it already has a mode and state.
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
             networkConnection = parent.TryGetComp<CompSkyMind>();
-
-            if (!respawningAfterLoad)
-            {
-                serverMode = Props.serverMode;
-            }
-        }
-
-        public override void ReceiveCompSignal(string signal)
-        {
-            if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff" || signal == "SkyMindNetworkUserDisconnected")
-            {
-                Utils.gameComp.RemoveServer(building, serverMode);
-            }
-            else if (signal == "SkyMindNetworkUserConnected" || (networkConnection == null && signal == "PowerTurnedOn"))
-            {
-                Utils.gameComp.AddServer(building, serverMode);
-            }
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -66,7 +46,7 @@ namespace ATReforged
                         defaultDesc = "ATR_SkillModeDesc".Translate(),
                         action = delegate ()
                         {
-                            ChangeServerMode(ServerType.SecurityServer);
+                            serverMode = ServerType.SecurityServer;
                         }
                     };
                     break;
@@ -78,7 +58,7 @@ namespace ATReforged
                         defaultDesc = "ATR_SecurityModeDesc".Translate(),
                         action = delegate ()
                         {
-                            ChangeServerMode(ServerType.HackingServer);
+                            serverMode = ServerType.HackingServer;
                         }
                     };
                     break;
@@ -90,7 +70,7 @@ namespace ATReforged
                         defaultDesc = "ATR_HackingModeDesc".Translate(),
                         action = delegate ()
                         {
-                            ChangeServerMode(ServerType.SkillServer);
+                            serverMode = ServerType.SkillServer;
                         }
                     };
 
@@ -118,68 +98,20 @@ namespace ATReforged
                         action = delegate ()
                         {
                             serverMode = ServerType.SkillServer;
-                            Utils.gameComp.AddServer(building, serverMode);
                         }
                     };
                     break;
             }
-        }
-        
-        public override string CompInspectStringExtra()
-        {
-            StringBuilder ret = new StringBuilder();
-            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn)
-                return "";
-
-            if (networkConnection?.connected == false)
-            {
-                ret.Append("ATR_ServerNetworkConnectionNeeded".Translate());
-                return ret.Append(base.CompInspectStringExtra()).ToString();
-            }
-
-            if (serverMode == ServerType.SkillServer)
-            {
-                ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.SkillServer), Utils.gameComp.GetPointCapacity(ServerType.SkillServer)))
-                   .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
-                   .Append("ATR_SkillSlotsAdded".Translate(Props.pointStorage));
-            }
-            else if (serverMode == ServerType.SecurityServer)
-            {
-                ret.AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.SecurityServer), Utils.gameComp.GetPointCapacity(ServerType.SecurityServer)))
-                   .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
-                   .Append("ATR_SecuritySlotsAdded".Translate(Props.pointStorage));
-            }
-            else if (serverMode == ServerType.HackingServer)
-            {
-                ret.AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.HackingServer), Utils.gameComp.GetPointCapacity(ServerType.HackingServer)))
-                   .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))
-                   .Append("ATR_HackingSlotsAdded".Translate(Props.pointStorage));
-            }
-            return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
 
-            // Servers can not be connected to the network when despawned.
+            // No building can be connected to the network when despawned.
             if (networkConnection?.connected == true)
             {
                 Utils.gameComp.DisconnectFromSkyMind(building);
-            }
-        }
-
-        public void ChangeServerMode(ServerType newMode)
-        {
-            try
-            {
-                Utils.gameComp.RemoveServer(building, serverMode);
-                Utils.gameComp.AddServer(building, newMode);
-                serverMode = newMode;
-            }
-            catch (Exception ex)
-            {
-                Log.Error("[ATR] Unable to change the server mode of building " + parent.def.defName + " to the new server type " + newMode + "! Error: " + ex.Message + " " + ex.StackTrace);
             }
         }
 

@@ -34,10 +34,10 @@ namespace ATReforged
                         }
 
                         // Attempt to locate a viable charging station. Set the result to this if one is found.
-                        Building station = (Building)GenClosest.ClosestThingReachable(pawn.PositionHeld, pawn.MapHeld, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.Touch, TraverseParms.For(pawn), validator: building => building.TryGetComp<CompPowerTrader>() != null && building.TryGetComp<CompPowerTrader>().PowerOn && building.TryGetComp<CompChargingStation>()?.GetOpenRechargeSpot(pawn) != null);
+                        Building_ChargingStation station = (Building_ChargingStation)GenClosest.ClosestThingReachable(pawn.PositionHeld, pawn.MapHeld, ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.Touch, TraverseParms.For(pawn), validator: building => building is Building_ChargingStation chargeStation && building.Position.InAllowedArea(pawn) && building.TryGetComp<CompPowerTrader>()?.PowerOn == true && chargeStation.GetOpenRechargeSpot(pawn) != IntVec3.Invalid);
                         if (station != null)
                         {
-                            __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.TryGetComp<CompChargingStation>().GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
+                            __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(station.GetOpenRechargeSpot(pawn)), new LocalTargetInfo(station));
                             return;
                         }
                     }

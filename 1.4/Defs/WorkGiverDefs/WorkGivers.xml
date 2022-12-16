@@ -126,5 +126,20 @@
             <li>Manipulation</li>
         </requiredCapacities>
     </WorkGiverDef>
+
+    <!-- ============= Research ============= -->
+    
+    <WorkGiverDef>
+        <defName>ATR_GenerateInsight</defName>
+        <label>generate SkyMind insight points</label>
+        <giverClass>ATReforged.WorkGiver_GenerateInsight</giverClass>
+        <workType>Research</workType>
+        <priorityInType>30</priorityInType>
+        <verb>generate insight</verb>
+        <gerund>generating insight</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
     
 </Defs>

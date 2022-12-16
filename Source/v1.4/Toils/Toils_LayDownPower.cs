@@ -31,7 +31,7 @@ namespace ATReforged
                     Building_Bed bed = (Building_Bed)actor.CurJob.GetTarget(chargingBuilding).Thing;
                     if (!bed.OccupiedRect().Contains(actor.Position))
                     {
-                        Log.Error("Can't start LayDown toil because pawn is not in the bed. pawn=" + actor);
+                        Log.Error("[ATR] Can't start LayDown toil because pawn is not in the bed. pawn=" + actor);
                         actor.jobs.EndCurrentJob(JobCondition.Errored, true);
                         return;
                     }
@@ -43,6 +43,20 @@ namespace ATReforged
                     actor.jobs.posture = PawnPosture.LayingOnGroundNormal;
                     actor.mindState.lastBedDefSleptIn = null;
                 }
+
+                // Identify the charging device responsible for this toil and notify it that this pawn is using it.
+                Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
+                CompPawnCharger compPawnCharger;
+                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
+                {
+                    compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
+                }
+                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
+                else
+                {
+                    compPawnCharger = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null)?.TryGetComp<CompPawnCharger>();
+                }
+                compPawnCharger?.Notify_ConsumerAdded(actor);
 
                 // Initialize the sleeping tracking information, so that the pawn will receive mood buff/debuff if they sleep long enough.
                 curDriver.asleep = true;
@@ -169,23 +183,22 @@ namespace ATReforged
                     return;
                 }
 
-                // If the charging location is unusable for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
-                if (bed != null)
+                // If the power source is offline for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
+                Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
+                Thing powerSource;
+                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
                 {
-                    if (!actor.Downed && (bed.Destroyed || bed.IsBrokenDown() || !(bool)bed.TryGetComp<CompPowerTrader>()?.PowerOn))
-                    {
-                        actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
-                        return;
-
-                    }
+                    powerSource = targetBuilding;
                 }
-                else if (station != null)
+                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
+                else
                 {
-                    if (!actor.Downed && (station.Destroyed || station.IsBrokenDown() || !(bool)station.TryGetComp<CompPowerTrader>()?.PowerOn))
-                    {
-                        actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
-                        return;
-                    }
+                    powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
+                }
+                if (!actor.Downed && !powerSource.TryGetComp<CompPowerTrader>().PowerOn)
+                {
+                    actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
+                    return;
                 }
             };
             layDown.defaultCompleteMode = ToilCompleteMode.Never;
@@ -194,7 +207,7 @@ namespace ATReforged
                 layDown.FailOnBedNoLongerUsable(chargingBuilding);
             }
 
-            // When the job is complete (failed or succeeded), handle the mood thought from sleeping and awaken.
+            // When the job is complete (failed or succeeded), handle some necessary details.
             layDown.AddFinishAction(delegate
             {
                 Pawn actor = layDown.actor;
@@ -206,6 +219,20 @@ namespace ATReforged
                 {
                     ApplyBedThoughts(actor);
                 }
+
+                // Notify the charger that it is no longer being used by this pawn.
+                Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
+                CompPawnCharger compPawnCharger;
+                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
+                {
+                    compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
+                }
+                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
+                else
+                {
+                    compPawnCharger = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null)?.TryGetComp<CompPawnCharger>();
+                }
+                compPawnCharger.Notify_ConsumerRemoved(actor);
             });
             return layDown;
         }

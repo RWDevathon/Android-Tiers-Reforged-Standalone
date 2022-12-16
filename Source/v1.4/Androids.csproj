@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="AlienRace">
       <HintPath>..\..\..\..\..\..\workshop\content\294100\839005762\1.4\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -185,11 +186,14 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="Components\CompInsightBench.cs" />
+    <Compile Include="Components\CompPawnCharger.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />
     <Compile Include="Components\CompProperties_SkyMindTower.cs" />
     <Compile Include="Components\CompProperties_HeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SuperComputer.cs" />
+    <Compile Include="Components\CompScorchPack.cs" />
     <Compile Include="Components\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
@@ -206,6 +210,8 @@
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
+    <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\FeedPatientUtility_Patch.cs" />
     <Compile Include="Harmony\GasUtility_Patch.cs" />
     <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
     <Compile Include="Harmony\ImmunityHandler_Patch.cs" />
@@ -247,6 +253,7 @@
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
+    <Compile Include="JobDrivers\JobDriver_GenerateInsight.cs" />
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
     <Compile Include="JobDrivers\JobDriver_TendMechanical.cs" />
     <Compile Include="MentalStates\MentalState_Exterminator.cs" />
@@ -257,7 +264,6 @@
     <Compile Include="Components\CompSkyMindTower.cs" />
     <Compile Include="Components\CompComputer.cs" />
     <Compile Include="Components\CompProperties_Computer.cs" />
-    <Compile Include="Components\CompChargingStation.cs" />
     <Compile Include="Components\CompSkyMindCore.cs" />
     <Compile Include="Components\CompSkyMind.cs" />
     <Compile Include="Components\CompSkyMindLink.cs" />
@@ -333,6 +339,7 @@
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="MechFallStuff\Verb_MechFall.cs" />
+    <Compile Include="WorkGivers\WorkGiver_GenerateInsight.cs" />
     <Compile Include="WorkGivers\WorkGiver_MechTend.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendSelfEmergencyMech.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendSelfMech.cs" />

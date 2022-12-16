@@ -73,6 +73,9 @@
         <label>Plasteel Frame</label>
         <description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
         <descriptionHyperlinks><RecipeDef>InstallPlasteelPlating</RecipeDef></descriptionHyperlinks>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>60</Plasteel>
             <ComponentSpacer>2</ComponentSpacer>
@@ -130,6 +133,9 @@
         <defName>CompositePlating</defName>
         <label>Composite Frame</label>
         <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>60</Plasteel>
             <ComponentSpacer>2</ComponentSpacer>
@@ -186,6 +192,9 @@
         <defName>HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
         <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
         <costList>
             <Steel>120</Steel>
             <Plasteel>20</Plasteel>
@@ -237,6 +246,9 @@
         <defName>RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
+        <statBases>
+            <MarketValue>800</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>40</Plasteel>
             <Gold>12</Gold>
@@ -300,6 +312,9 @@
         <defName>SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to any form of detritus. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
+        <statBases>
+            <MarketValue>800</MarketValue>
+        </statBases>
         <costList>
             <Neutroamine>40</Neutroamine>
             <Plasteel>40</Plasteel>
@@ -358,6 +373,9 @@
         <defName>MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>40</Plasteel>
             <ComponentSpacer>6</ComponentSpacer>
@@ -416,6 +434,9 @@
         <defName>SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>20</Plasteel>
             <ComponentSpacer>4</ComponentSpacer>
@@ -469,7 +490,10 @@
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>GuardianFrame</defName>
         <label>Guardian Frame</label>
-        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <description>A chassis framework designed to withstand extreme temperature variance and exude intimidation. This framework was designed with dealing with fire - be it natural, accidental, or delivered by molotov - and all the threats that come with it. The insulatory measures also preserves the unit in extreme cold.</description>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
         <costList>
             <Plasteel>60</Plasteel>
             <ComponentSpacer>4</ComponentSpacer>
