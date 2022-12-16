@@ -59,6 +59,7 @@
 						<li>Hulk</li>
 					</bodyTypes>
 				</alienPartGenerator>
+                <corpseCategory>CorpsesMechanoid</corpseCategory>
 			</generalSettings>
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/Tier5/body/</body>

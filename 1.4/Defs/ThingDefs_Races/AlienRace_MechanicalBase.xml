@@ -117,6 +117,7 @@
                     <min>0</min>
                     <max>3</max>
                 </additionalTraits>
+                <corpseCategory>CorpsesMechanoid</corpseCategory>
             </generalSettings>
 			<styleSettings>
                 <li>

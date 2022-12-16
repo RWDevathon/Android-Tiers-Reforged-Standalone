@@ -82,7 +82,7 @@ namespace ATReforged
                         IngestibleProperties ingestibleProps = thingDef.race?.corpseDef?.ingestible;
                         if (ingestibleProps != null)
                         {
-                            ingestibleProps.preferability = FoodPreferability.NeverForNutrition;
+                            ingestibleProps.preferability = FoodPreferability.Undefined;
                         }
                         thingDef.race.needsRest = false;
                     }

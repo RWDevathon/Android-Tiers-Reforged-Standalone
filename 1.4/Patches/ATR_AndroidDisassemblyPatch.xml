@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>	
+
 	<!-- Add robotics workbench bills to the Machining Table WorkGiver -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/WorkGiverDef[defName="DoBillsMachiningTable"]/fixedBillGiverDefs</xpath>
@@ -8,17 +9,5 @@
 			<li>ATR_MechPartWorkbench</li>
 		</value>
 	</Operation>
-	
-	<!-- Add Android Disassembly bill to the Machining Table -->
-	<Operation Class="PatchOperationSequence">
-  	<success>Always</success>
-		<operations>
-			<li Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="TableMachining"]/recipes</xpath>
-				<value>
-					<li>ATR_DisassembleAndroid</li>
-				</value>
-			</li>
-		</operations>
-    </Operation>
+
 </Patch>

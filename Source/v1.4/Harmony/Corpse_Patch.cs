@@ -39,6 +39,7 @@ namespace ATReforged
             }
         }
 
+        // This transpiler ensures that butchering drones does not create a butcher thought or history event.
         [HarmonyPatch]
         public class ButcherProducts_Patch
         {
