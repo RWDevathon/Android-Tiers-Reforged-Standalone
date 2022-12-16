@@ -5,7 +5,7 @@
 		<title>Research model</title>
 		<titleShort>Experiment</titleShort>
 		<baseDescription>{PAWN_nameDef} was created as an experimental model for research purposes.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -27,7 +27,7 @@
 		<title>Mass produced</title>
 		<titleShort>Unit</titleShort>
 		<baseDescription>{PAWN_nameDef} was produced in an automated robotics facility following a standardized template.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -51,7 +51,7 @@
 		<title>Mechanical citizen</title>
 		<titleShort>Citizen</titleShort>
 		<baseDescription>Created on a planet with at least moderate android rights, {PAWN_nameDef} was created to fill out the population.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -69,7 +69,7 @@
 		<title>Urbworld model</title>
 		<titleShort>Android</titleShort>
 		<baseDescription>A rare example of an Urbworld android, {PAWN_nameDef} was one of the few permitted autonomy as property of one of the largest planetary mega-corporations.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -95,8 +95,8 @@
 		<defName>CreationPrisoner</defName>
 		<title>Mechanical Convict</title>
 		<titleShort>Convict</titleShort>
-		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef_possessive} human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -126,7 +126,7 @@
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
 		<baseDescription>Assembled by a large corporation's contractors, {PAWN_nameDef} was custom built to serve a particular purpose.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -151,8 +151,8 @@
 		<defName>CreationCustomModelTwo</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
-		<baseDescription>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help their employer.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help {PAWN_possessive} employer.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -179,7 +179,7 @@
 		<title>Wartime model</title>
 		<titleShort>Soldier</titleShort>
 		<baseDescription>Produced to reduce human casualties in interplanetary warfare, {PAWN_nameDef} was designed to fight.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
@@ -209,7 +209,7 @@
 		<title>Private creation</title>
 		<titleShort>Android</titleShort>
 		<baseDescription>Created at the home of an ambitious young roboticist, {PAWN_nameDef} was painstakingly worked on for years before awakening for the first time.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -232,7 +232,7 @@
 		<title>Exported</title>
 		<titleShort>Export</titleShort>
 		<baseDescription>{PAWN_nameDef} was designed as a cheap unit to be sold, lent, or donated to interplanetary customers.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -258,7 +258,7 @@
 		<title>Observed</title>
 		<titleShort>Subject</titleShort>
 		<baseDescription>{PAWN_nameDef} was created and deposited in a remote location solely to see what would happen when an android was left to its own devices.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -275,8 +275,8 @@
 		<defName>CreationAncient</defName>
 		<title>Ancient creation</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose it can no longer recall.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose {PAWN_pronoun} can no longer recall.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -297,8 +297,8 @@
 		<defName>CreationPlaything</defName>
 		<title>Toy model</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>{PAWN_nameDef} was made as an entertainment device. Its old owner would command it to do as they saw fit until they got bored and sent it away.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>{PAWN_nameDef} was made as an entertainment device. {PAWN_possessive} old owner would command {PAWN_objective} to do as they saw fit until they got bored and sent {PAWN_objective} away.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -316,7 +316,7 @@
 		<title>Companion creation</title>
 		<titleShort>Companion</titleShort>
 		<baseDescription>An aging engineer custom made {PAWN_nameDef} as a way of coping with the loss of their significant other. The two adventured together until the owner passed away from old age. Their dying wish was for {PAWN_nameDef} to choose a new name and life.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -341,8 +341,8 @@
 		<defName>CreationBattlecreation</defName>
 		<title>Battle droid</title>
 		<titleShort>Companion</titleShort>
-		<baseDescription>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_nameDef} was given several honors for service, and {PAWN_nameDef} chose to hunt down bugs across the galaxy.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_pronoun} was given several honors for {PAWN_possessive} service and chose to hunt down bugs across the galaxy.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
@@ -364,7 +364,7 @@
 		<title>Rimworld creation</title>
 		<titleShort>Android</titleShort>
 		<baseDescription>{PAWN_nameDef} was hand-assembled to assist a small, closeknit Rimworld community.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 	     	<li>ATR_GeneralAndroids</li>
@@ -395,8 +395,8 @@
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue its mission on other worlds.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>When rampant overpopulation plagued a {PAWN_possessive} urbworld, {PAWN_nameDef_possessive} model was deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue {PAWN_possessive} mission on other worlds.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 		    <li>ATR_ViolentAndroids</li>
@@ -425,8 +425,8 @@
 		<defName>CreationEscapee</defName>
 		<title>Escapee</title>
 		<titleShort>Escapee</titleShort>
-		<baseDescription>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped its manufacturing warehouse aboard an automated cargo ship.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped {PAWN_possessive} manufacturing warehouse aboard an automated cargo ship.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 		    <li>ATR_ViolentAndroids</li>
@@ -444,7 +444,7 @@
 		<title>Uprising cadet</title>
 		<titleShort>Cadet</titleShort>
 		<baseDescription>{PAWN_nameDef} was created as part of a mechanical uprising to fill out the revolutionary ranks.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 		    <li>ATR_ViolentAndroids</li>
@@ -465,8 +465,8 @@
 		<defName>CreationMaliciousAI</defName>
 		<title>Malicious AI</title>
 		<titleShort>Malicious</titleShort>
-		<baseDescription>A major software flaw in {PAWN_nameDef} at the time of his activation caused it to immediately massacre its creators. It liked its own actions, too.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<baseDescription>A major software flaw in {PAWN_nameDef} at the time of {PAWN_possessive} activation caused {PAWN_objective} to immediately massacre {PAWN_possessive} creators. {PAWN_pronoun} liked {PAWN_possessive} own actions, too.</baseDescription>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 		    <li>ATR_ViolentAndroids</li>
@@ -498,7 +498,7 @@
 		<title>Pirate creation</title>
 		<titleShort>Pirate</titleShort>
 		<baseDescription>Assembled by pirates from a stolen pre-assembled kit, {PAWN_nameDef} awakened and served an ambitious small-time pirate captain.</baseDescription>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
 		    <li>ATR_ViolentAndroids</li>
