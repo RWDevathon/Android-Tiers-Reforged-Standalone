@@ -17,7 +17,7 @@
 		<defName>ATR_NewbootAdulthood</defName>
 		<title>Mechanical unit</title>
 		<titleShort>Unit</titleShort>
-		<baseDesc>{PAWN_nameDef} was "born" a member of this society. The future is both uncertain and undecided for {PAWN_nameDef}.</baseDesc>
+		<baseDesc>{PAWN_nameDef} has only known this RimWorld, and was "born" a member of this society. The future is both uncertain and undecided for {PAWN_nameDef}.</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_NewbootAndroids</li>

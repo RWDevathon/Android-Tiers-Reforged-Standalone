@@ -99,7 +99,7 @@
 		<defName>CreationPrisoner</defName>
 		<title>Mechanical Convict</title>
 		<titleShort>Convict</titleShort>
-		<baseDesc>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDesc>
+		<baseDesc>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef_possessive} human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -157,7 +157,7 @@
 		<defName>CreationCustomModelTwo</defName>
 		<title>Custom model</title>
 		<titleShort>Custom</titleShort>
-		<baseDesc>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help their employer.</baseDesc>
+		<baseDesc>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help {PAWN_possessive} employer.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -286,7 +286,7 @@
 		<defName>CreationAncient</defName>
 		<title>Ancient creation</title>
 		<titleShort>Subject</titleShort>
-		<baseDesc>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose it can no longer recall.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose {PAWN_pronoun} can no longer recall.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -309,7 +309,7 @@
 		<defName>CreationPlaything</defName>
 		<title>Toy model</title>
 		<titleShort>Subject</titleShort>
-		<baseDesc>{PAWN_nameDef} was made as an entertainment device. Its old owner would command it to do as they saw fit until they got bored and sent it away.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was made as an entertainment device. {PAWN_possessive} old owner would command {PAWN_objective} to do as they saw fit until they got bored and sent {PAWN_objective} away.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -355,7 +355,7 @@
 		<defName>CreationBattlecreation</defName>
 		<title>Battle droid</title>
 		<titleShort>Companion</titleShort>
-		<baseDesc>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_nameDef} was given several honors for service, and {PAWN_nameDef} chose to hunt down bugs across the galaxy.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_pronoun} was given several honors for {PAWN_possessive} service and chose to hunt down bugs across the galaxy.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -411,7 +411,7 @@
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDesc>When rampant overpopulation plagued a its urbworld, {PAWN_nameDef}'s model deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue its mission on other worlds.</baseDesc>
+		<baseDesc>When rampant overpopulation plagued a {PAWN_possessive} urbworld, {PAWN_nameDef_possessive} model was deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue {PAWN_possessive} mission on other worlds.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -442,7 +442,7 @@
 		<defName>CreationEscapee</defName>
 		<title>Escapee</title>
 		<titleShort>Escapee</titleShort>
-		<baseDesc>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped its manufacturing warehouse aboard an automated cargo ship.</baseDesc>
+		<baseDesc>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped {PAWN_possessive} manufacturing warehouse aboard an automated cargo ship.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -484,7 +484,7 @@
 		<defName>CreationMaliciousAI</defName>
 		<title>Malicious AI</title>
 		<titleShort>Malicious</titleShort>
-		<baseDesc>A major software flaw in {PAWN_nameDef} at the time of his activation caused it to immediately massacre its creators. It liked its own actions, too.</baseDesc>
+		<baseDesc>A major software flaw in {PAWN_nameDef} at the time of {PAWN_possessive} activation caused {PAWN_objective} to immediately massacre {PAWN_possessive} creators. {PAWN_pronoun} liked {PAWN_possessive} own actions, too.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>

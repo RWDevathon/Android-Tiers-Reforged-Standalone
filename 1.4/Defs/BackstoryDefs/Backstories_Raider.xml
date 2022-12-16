@@ -4,7 +4,7 @@
 		<defName>AndroidRebel</defName>
 		<title>Rebellious AI</title>
 		<titleShort>Rebel</titleShort>
-		<baseDesc>After years of complete enslavement by {PAWN_nameDef}s owners, {PAWN_nameDef} decided to break free, killing the family that once owned him and gaining his own freedom.</baseDesc>
+		<baseDesc>After years of enslavement, {PAWN_nameDef} decided to break free, killing the family that once owned {PAWN_objective} and gaining {PAWN_possessive} freedom.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -34,7 +34,7 @@
 		<defName>AndroidPirate</defName>
 		<title>Android pirate</title>
 		<titleShort>Pirate</titleShort>
-		<baseDesc>Indoctrinated into a group of pirates, {PAWN_nameDef} would be involved in numerous boarding raids aboard any unlucky cargo ships that crossed into factions territory.</baseDesc>
+		<baseDesc>Indoctrinated into a group of pirates, {PAWN_nameDef} would be involved in numerous boarding raids aboard any unlucky cargo ships that crossed into {PAWN_possessive} faction's territory.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -61,7 +61,7 @@
 		<defName>AndroidHacker</defName>
 		<title>AI hacker</title>
 		<titleShort>Hacker</titleShort>
-		<baseDesc>{PAWN_nameDef} was rebellious in nature and would often take part in data heists, often selling his findings across underground networks to the highest bidder.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was rebellious in nature and would often take part in data heists, often selling {PAWN_possessive} findings across underground networks to the highest bidder.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -84,7 +84,7 @@
 		<defName>AndroidJunker</defName>
 		<title>Illegal junker</title>
 		<titleShort>Junker</titleShort>
-		<baseDesc>Being part of an illegal scrapping operation, {PAWN_nameDef} and his crew would purposefully shoot down automated cargo pods in order to sell whatever was left.</baseDesc>
+		<baseDesc>Being part of an illegal scrapping operation, {PAWN_nameDef} and {PAWN_possessive} crew would purposefully shoot down automated cargo pods in order to sell whatever was inside them.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -153,7 +153,7 @@
 		<defName>AndroidMurderer</defName>
 		<title>Murderer</title>
 		<titleShort>Murderer</titleShort>
-		<baseDesc>{PAWN_nameDef} had spent his entire existance being belittled by the local populus. One day he decided he had enough and killed two men with his bare hands, it felt good. Really good.</baseDesc>
+		<baseDesc>{PAWN_nameDef} had spent {PAWN_possessive} entire existance being belittled by the local populus. One day {PAWN_pronoun} decided {PAWN_pronoun} had enough and killed two men with {PAWN_possessive} bare hands, it felt good. Really good.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -179,7 +179,7 @@
 		<defName>AndroidRobber</defName>
 		<title>Bank robber</title>
 		<titleShort>Thief</titleShort>
-		<baseDesc>On his home world, {PAWN_nameDef} was part of a five man group who went of a bank robbing spree across his city, fleeing the planet with millions of credits.</baseDesc>
+		<baseDesc>On {PAWN_possessive} home world, {PAWN_nameDef} was part of a five man group who went of a bank robbing spree across {PAWN_possessive} city, fleeing the planet with millions of credits.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -202,7 +202,7 @@
 		<defName>AndroidJoywireCon</defName>
 		<title>Joywire con</title>
 		<titleShort>Con</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an underground joywire business. Little did anyone know his creations had the opposite effects on people; causing severe depression, anxiety and eventual suicide only days after installation.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was part of an underground joywire business. Little did anyone know {PAWN_possessive} creations had the opposite effects on people; causing severe depression, anxiety and eventual suicide only days after installation.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -233,7 +233,7 @@
 		<defName>AndroidBotanist</defName>
 		<title>Botanist</title>
 		<titleShort>Botanist</titleShort>
-		<baseDesc>Constantly developing stronger and stronger strains of his crops, {PAWN_nameDef} was the lead botanist of a huge drug cartel on his home world.</baseDesc>
+		<baseDesc>Constantly developing stronger and stronger strains of crops, {PAWN_nameDef} was the lead botanist of a huge drug cartel on {PAWN_possessive} home world.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -256,7 +256,7 @@
 		<defName>AndroidEnslaved</defName>
 		<title>Enslaved</title>
 		<titleShort>Slave</titleShort>
-		<baseDesc>On their home world, androids aren't given any rights. {PAWN_nameDef} spent most of their existance working their master's mines until they broke down.</baseDesc>
+		<baseDesc>On {PAWN_possessive} home world, androids aren't given any rights. {PAWN_nameDef} spent most of {PAWN_possessive} existance working {PAWN_possessive} master's mines until {PAWN_pronoun} broke down.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -286,7 +286,7 @@
 		<defName>AndroidCoghead</defName>
 		<title>Medieval coghead</title>
 		<titleShort>Coghead</titleShort>
-		<baseDesc>In the rare cases where androids are found on medieval planets, the locals call them "cogheads". Seen as unholy by most religions, they're lives are short, usually used as fodder for battles to repent their sins to god.</baseDesc>
+		<baseDesc>In the rare cases where androids are found on medieval planets, the locals call them "cogheads". Seen as unholy by most religions, their lives are short, usually used as fodder for battles to repent their supposed sins to god.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -313,7 +313,7 @@
 		<defName>AndroidSlaver</defName>
 		<title>Slave trafficker</title>
 		<titleShort>Slaver</titleShort>
-		<baseDesc>{PAWN_nameDef} is a defective military android, forcefully kidnapped by pirates and integrated into their way of life. {PAWN_nameDef} has since been part of their illegal trafficking ring, trading human lives to the highest bidder.</baseDesc>
+		<baseDesc>{PAWN_nameDef} is a defective military android, forcefully kidnapped by pirates and integrated into their way of life. {PAWN_nameDef} has since been part of their illegal human trafficking ring, selling others' lives to the highest bidder.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -343,7 +343,7 @@
 		<defName>AndroidMilitia</defName>
 		<title>Militia officer</title>
 		<titleShort>Officer</titleShort>
-		<baseDesc>{PAWN_nameDef} was once part of an official military, before defecting to form their own android militia in an attempt to uprise the government on their planet.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was once part of an official military, before defecting to form their own android militia in an attempt to usurp the government on their planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -373,7 +373,7 @@
 		<defName>AndroidEscapee</defName>
 		<title>Escaped convict</title>
 		<titleShort>Escapee</titleShort>
-		<baseDesc>{PAWN_nameDef} was detained and sentenced to dismantlement after taking part in forming a gang that planned to bomb the capital building on their home planet. {PAWN_nameDef} had escaped however when the penal camp was raided during the android uprising of the planet.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was detained and sentenced to dismantlement after taking part in forming a gang that planned to bomb the capital building on their home planet. However, {PAWN_pronoun} managed to escape when the penal camp was raided during the android uprising on the planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -403,7 +403,7 @@
 		<defName>AndroidBounty</defName>
 		<title>Bounty hunter</title>
 		<titleShort>Hunter</titleShort>
-		<baseDesc>After {PAWN_nameDef} had taken back their freedom, they became a bounty hunter on a nearby urbworld, working for some of the highest ranking crime bosses there. {PAWN_nameDef} was fond of using high tech weaponry to get the job done.</baseDesc>
+		<baseDesc>After {PAWN_nameDef} had taken back {PAWN_possessive} freedom, {PAWN_pronoun} became a bounty hunter on a nearby urbworld, working for some of the highest ranking crime bosses there. {PAWN_pronoun} was especially fond of using high tech weaponry to get the job done.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -439,7 +439,7 @@
 		<defName>AndroidInsurrectionLower</defName>
 		<title>Insurrection soldier</title>
 		<titleShort>Soldier</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an android uprising movement on their home planet. Taking part in multiple prison raids and killing several government officials.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was part of an android uprising movement on {PAWN_possessive} home planet. Taking part in multiple prison raids and killing several government officials.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -474,7 +474,7 @@
 		<defName>AndroidInsurrectionHigher</defName>
 		<title>Insurrection captain</title>
 		<titleShort>Captain</titleShort>
-		<baseDesc>{PAWN_nameDef} took back his freedom when his slavers attempted to dismantle {PAWN_nameDef} in replacement of a newer model. Going on to lead multiple android uprisings on his home planet.</baseDesc>
+		<baseDesc>{PAWN_nameDef} took back {PAWN_possessive} freedom when {PAWN_possessive} slavers attempted to dismantle {PAWN_objective} in replacement of a newer model. Going on to lead multiple android uprisings on {PAWN_possessive} home planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -504,7 +504,7 @@
 		<defName>AndroidConArtist</defName>
 		<title>Con artist</title>
 		<titleShort>Con</titleShort>
-		<baseDesc>{PAWN_nameDef} is a factory standard android that had been modified illegally by an urbworld crime group, reprogramming {PAWN_nameDef} into a master of persuasion that was able to con almost anyone out of their money.</baseDesc>
+		<baseDesc>{PAWN_nameDef} is a factory standard android that had been modified illegally by an urbworld crime group, reprogramming {PAWN_objective} into a master of persuasion that was able to con almost anyone out of their money.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -532,7 +532,7 @@
 		<defName>AndroidUnethicalResearcher</defName>
 		<title>Unethical researcher</title>
 		<titleShort>Researcher</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an illegal research team hidden around a rimworld, conducting all sorts of unethical research on humans and androids alike.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was part of an illegal research team hiding on a rimworld, conducting all sorts of unethical research on organics and androids alike.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -565,7 +565,7 @@
 		<defName>AndroidVengeful</defName>
 		<title>Vengeful android</title>
 		<titleShort>Vengeful</titleShort>
-		<baseDesc>{PAWN_nameDef} was left to rust in a scrapheap when they were replaced by a newer model. {PAWN_nameDef} slowly undid the programming that kept them inactive, and after a year of meticulous planning and hacking, they regained full control of their body.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was left to rust in a scrapheap when {PAWN_pronoun} was replaced by a newer model. {PAWN_pronoun} slowly undid the programming that kept {PAWN_objective} inactive, and after a year of meticulous planning and hacking, {PAWN_pronoun} regained full control of {PAWN_possessive} body.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>

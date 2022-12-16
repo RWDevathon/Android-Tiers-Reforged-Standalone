@@ -635,7 +635,7 @@
 		<defName>AndroidComabtEngineer</defName>
 		<title>Combat engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDescription>{PAWN_nameDef} was created on {PAWN_possessive} home glitterworld to develop state-of-art weapons. Everything, ranging from optimised gunpowder rifles to charge weaponry. </baseDescription>
+		<baseDescription>{PAWN_nameDef} was created on {PAWN_possessive} home glitterworld to develop state-of-art weapons. Everything, ranging from optimised gunpowder rifles to charge weaponry.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1116,7 +1116,7 @@
 		<defName>AndroidSecurity</defName>
 		<title>Station security</title>
 		<titleShort>Security</titleShort>
-		<baseDescription>Aboard a deep space station, {PAWN_nameDef} was a grunt security officer, making sure the human inhabitants were safe and no smugglers made it through the stations boarders.</baseDescription>
+		<baseDescription>Aboard a deep space station, {PAWN_nameDef} was a grunt security officer, making sure the human inhabitants were safe and no smugglers made it through the station's borders.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1734,4 +1734,5 @@
 			<li>Intellectual</li>
 		</workDisables>
 	</AlienRace.BackstoryDef>
+    
 </Defs>

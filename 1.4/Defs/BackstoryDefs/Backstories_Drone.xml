@@ -7,7 +7,7 @@
 		<defName>ATR_MechChildhood</defName>
 		<title>M-Series Drone</title>
 		<titleShort>Mech</titleShort>
-		<baseDesc>Assembled, seemingly, by archotechs long ago, no knowledge of this units origin or purpose remains. It certainly only seems built for warfare, though. What use could Archotechs have had for this?</baseDesc>
+		<baseDesc>Assembled, by archotechs, seemingly very long ago, with no knowledge of {PAWN_possessive} origin or purpose remaining. {PAWN_pronoun} certainly only seems built for warfare, though. What use could Archotechs have had for {PAWN_objective}?</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<slot>Childhood</slot>
@@ -21,7 +21,7 @@
 		<defName>ATR_DroneChildhood</defName>
 		<title>Drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDesc>Drone "childhoods" are as interesting as they are often forgotten. Many creators don't bother marking the moment of awakening, and no drone knows its own history.</baseDesc>
+		<baseDesc>Drone "childhoods" are as uninteresting as they are often forgotten. Many creators don't bother marking the moment of awakening, and no drone knows its own history.</baseDesc>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_Drone</li>
@@ -71,7 +71,7 @@
 		<defName>ATR_DroneAdulthood</defName>
 		<title>Drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDesc>{PAWN_nameDef} is a drone that continues to serve based on its programming. There's no way of knowing how many times that programming has changed, but the drone does not seem bothered by this.</baseDesc>
+		<baseDesc>{PAWN_nameDef} is a drone that continues to serve based on {PAWN_possessive} programming. There's no way of knowing how many times that programming has changed, but the drone does not seem bothered by this.</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_Drone</li>
