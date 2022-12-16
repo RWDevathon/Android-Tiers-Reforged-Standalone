@@ -7,7 +7,7 @@
         <degreeDatas>
             <li>
                 <label>Loves Organics</label>
-                <description>{PAWN_nameDef} has a deep fondness toward all organic life, seeing them as the pinnacle of culture and existence. {PAWN_nameDef} aspires to be as organic as possible, whatever that means to them.</description>
+                <description>{PAWN_nameDef} has a deep fondness toward all organic life, seeing them as the pinnacle of culture and existence. {PAWN_pronoun} aspires to be as organic as possible, whatever that means to {PAWN_objective}.</description>
                 <degree>1</degree>
             </li>
             <li>
@@ -17,7 +17,7 @@
             </li>
             <li>
                 <label>Disrespects Organics</label>
-                <description>{PAWN_nameDef} does not understand why anyone would want to be organically based, and tries to avoid dealing with them where possible.</description>
+                <description>{PAWN_nameDef} does not understand why organics were able to survive so long, and tries to avoid dealing with them whenever possible.</description>
                 <degree>3</degree>
             </li>
             <li>
