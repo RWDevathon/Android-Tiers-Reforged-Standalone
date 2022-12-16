@@ -42,6 +42,9 @@ namespace ATReforged
             Scribe_Values.Look(ref SkyMindNetworkCapacity, "ATR_SkyMindNetworkCapacity", 0);
             Scribe_Values.Look(ref SkyMindCloudCapacity, "ATR_SkyMindCloudCapacity", 0);
             Scribe_Values.Look(ref hackCostTimePenalty, "ATR_hackCostTimePenalty", 0);
+            Scribe_Values.Look(ref cachedSkillGeneration, "ATR_cachedSkillGeneration", 0);
+            Scribe_Values.Look(ref cachedSecurityGeneration, "ATR_cachedSecurityGeneration", 0);
+            Scribe_Values.Look(ref cachedHackingGeneration, "ATR_cachedHackingGeneration", 0);
 
             Scribe_Deep.Look(ref blankPawn, "ATR_blankPawn");
 

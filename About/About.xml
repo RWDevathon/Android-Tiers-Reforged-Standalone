@@ -42,9 +42,9 @@
 		<li>CarnySenpai.EnableOversizedWeapons</li>
 		<li>CETeam.CombatExtended</li>
     </loadAfter>
-	<LoadBefore>
+	<loadBefore>
 		<li>avilmask.CommonSense</li>
-	</LoadBefore>
+	</loadBefore>
     <description><![CDATA[  
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
 Reworked for maximal flexibility and dynamic controls in settings and compatibility. 
