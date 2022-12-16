@@ -73,7 +73,7 @@
             </li>
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SecurityServer</serverMode>
-                <passivePointGeneration>160</passivePointGeneration>
+                <passivePointGeneration>40</passivePointGeneration>
                 <pointStorage>10000</pointStorage>
             </li>
             <li Class="ATReforged.CompProperties_SkyMindTower">
@@ -189,7 +189,7 @@
             </li>
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
-                <passivePointGeneration>20</passivePointGeneration>
+                <passivePointGeneration>4</passivePointGeneration>
                 <pointStorage>0</pointStorage>
             </li>
             <li Class="CompProperties_Power">
@@ -249,7 +249,7 @@
             </li>
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
-                <passivePointGeneration>100</passivePointGeneration>
+                <passivePointGeneration>20</passivePointGeneration>
                 <pointStorage>500</pointStorage>
             </li>
             <li Class="CompProperties_Power">

@@ -93,7 +93,7 @@ namespace ATReforged
             {
                 return;
             }
-            patient.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.BotchedMySurgery, surgeon);
+            patient.needs?.mood?.thoughts?.memories?.TryGainMemory(ThoughtDefOf.BotchedMySurgery, surgeon);
         }
 
         // Taken directly from Vanilla calculations. Returns the average potency of used "medicine" or in this case, kits.

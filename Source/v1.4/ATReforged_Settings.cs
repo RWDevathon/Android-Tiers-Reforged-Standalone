@@ -80,14 +80,14 @@ namespace ATReforged
             // Settings for Cloud
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;
-        public static int timeToCompleteSkyMindOperations = 12;
+        public static int timeToCompleteSkyMindOperations = 24;
         public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
 
             // Settings for Skill Points
         public static bool receiveSkillAlert = true;
-        public static int skillPointConversionRate = 10;
+        public static float skillPointConversionRate = 0.5f;
         public static int passionSoftCap = 8;
-        public static float basePointsNeededForPassion = 1000f;
+        public static float basePointsNeededForPassion = 5000f;
 
         // STATS SETTINGS
 
@@ -285,7 +285,7 @@ namespace ATReforged
                     string passionSoftCapBuffer = passionSoftCap.ToString();
                     string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
                     listingStandard.CheckboxLabeled("ATR_receiveFullSkillAlert".Translate(), ref receiveSkillAlert, onChange: onChange);
-                    listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 1, 500);
+                    listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 0.01f, 10);
                     listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
                     listingStandard.GapLine();
@@ -294,7 +294,7 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_UploadingKills".Translate(), ref uploadingToSkyMindKills, onChange: onChange);
                     listingStandard.CheckboxLabeled("ATR_UploadingPermakills".Translate(), ref uploadingToSkyMindPermaKills, onChange: onChange);
                     string SkyMindOperationTimeBuffer = timeToCompleteSkyMindOperations.ToString();
-                    listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 50);
+                    listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 256);
                     break;
                 }
                 default:
@@ -360,15 +360,15 @@ namespace ATReforged
 
             // CONNECTIVITY SETTINGS
             // Skills
-            skillPointConversionRate = 10;
+            skillPointConversionRate = 0.5f;
             passionSoftCap = 8;
-            basePointsNeededForPassion = 1000f;
+            basePointsNeededForPassion = 5000f;
 
             // Cloud
             receiveSkillAlert = true;
             uploadingToSkyMindKills = true;
             uploadingToSkyMindPermaKills = true;
-            timeToCompleteSkyMindOperations = 12;
+            timeToCompleteSkyMindOperations = 24;
 
             RebuildCaches();
         }
@@ -521,14 +521,14 @@ namespace ATReforged
 
             // Skills
             Scribe_Values.Look(ref receiveSkillAlert, "ATR_receiveSkillAlert", true);
-            Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 10);
+            Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 0.5f);
             Scribe_Values.Look(ref passionSoftCap, "ATR_passionSoftCap", 8);
-            Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 1000f);
+            Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 5000f);
 
             // Cloud
             Scribe_Values.Look(ref uploadingToSkyMindKills, "ATR_uploadingToSkyMindKills", true);
             Scribe_Values.Look(ref uploadingToSkyMindPermaKills, "ATR_uploadingToSkyMindPermaKills", true);
-            Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 12);
+            Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 24);
         }
     }
 
