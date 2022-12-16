@@ -19,17 +19,7 @@
 				<traitList>
 					<li>FeelingsTowardOrganics</li>
 				</traitList>
-                <blackEndoCategories>
-                    <li>HairColor</li>
-                    <li>Ears</li>
-                    <li>Nose</li>
-                    <li>Jaw</li>
-                    <li>Hands</li>
-                    <li>Headbone</li>
-                    <li>Head</li>
-                    <li>BodyType</li>
-                    <li>Voice</li>
-                </blackEndoCategories>
+                <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
 			</raceRestriction>
 			<generalSettings>
 				<allowHumanBios>false</allowHumanBios>
