@@ -16,7 +16,7 @@ namespace ATReforged
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             // Do not show button to manually open/close door if the door isn't connected to the SkyMind or there is no SkyMind Cloud.
-            if (!Utils.gameComp.HasSkyMindConnection(parent) || Utils.gameComp.GetSkyMindCloudCapacity() == 0)
+            if (parent.TryGetComp<CompSkyMind>()?.connected != true || Utils.gameComp.GetSkyMindCloudCapacity() == 0)
             {
                 yield break;
             }

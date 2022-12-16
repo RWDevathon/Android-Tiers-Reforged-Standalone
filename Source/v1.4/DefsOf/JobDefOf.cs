@@ -15,5 +15,7 @@ namespace ATReforged
         public static JobDef ResurrectMechanical;
 
         public static JobDef TendMechanical;
+
+        public static JobDef ATR_GenerateInsight;
     }
 }

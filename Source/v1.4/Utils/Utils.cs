@@ -249,11 +249,6 @@ namespace ATReforged
 
         public static ATR_GameComponent gameComp;
 
-        public static int GetPowerUsageByPawn(Pawn pawn)
-        {
-            return (int) (ATReforged_Settings.wattsConsumedPerBodySize * pawn.BodySize);
-        }
-
         // Generate a surrogate and properly apply to it a blank personality and the appropriate receiver implant.
         public static Pawn GenerateSurrogate(Faction faction, PawnKindDef kindDef, Gender gender = Gender.None)
         {
@@ -841,7 +836,7 @@ namespace ATReforged
                 result *= (float) Math.Pow(1.25, passionCount - ATReforged_Settings.passionSoftCap);
             } 
 
-            // Return the end result as an integer for nice display numbers and costs (servers can't give parts of a skill point).
+            // Return the end result as an integer for nice display numbers and costs.
             return (int) result;
         }
 

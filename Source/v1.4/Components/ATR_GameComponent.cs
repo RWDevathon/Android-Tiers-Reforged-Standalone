@@ -259,36 +259,34 @@ namespace ATReforged
             ResetServers(ServerType.HackingServer);
         }
 
-        public int GetSkillPointCapacity()
+        public float GetPointCapacity(ServerType pointMode)
         {
-            return skillPointCapacity;
-        }
-        public int GetSecurityPointCapacity()
-        {
-            return securityPointCapacity;
-        }
-        public int GetHackingPointCapacity()
-        {
-            return hackingPointCapacity;
-        }
-
-        public int GetSkillPoints()
-        {
-            return skillPoints;
-        }
-        public int GetSecurityPoints()
-        {
-            return securityPoints;
-        }
-        public int GetHackingPoints()
-        {
-            return hackingPoints;
+            switch (pointMode)
+            {
+                case ServerType.SkillServer:
+                    return skillPointCapacity;
+                case ServerType.SecurityServer:
+                    return securityPointCapacity;
+                case ServerType.HackingServer:
+                    return hackingPointCapacity;
+                default:
+                    return 0;
+            }
         }
 
-        // Determine if the provided thing is connected to the SkyMind Network.
-        public bool HasSkyMindConnection(Thing thing)
+        public float GetPoints(ServerType pointMode)
         {
-            return networkedDevices.Contains(thing);
+            switch (pointMode)
+            {
+                case ServerType.SkillServer:
+                    return skillPoints;
+                case ServerType.SecurityServer:
+                    return securityPoints;
+                case ServerType.HackingServer:
+                    return hackingPoints;
+                default:
+                    return 0;
+            }
         }
 
         // Determine if the provided pawn is connected to the SkyMind Network.
@@ -496,7 +494,7 @@ namespace ATReforged
 
         // This always adds the points to the appropriate category. It assumes negative changes are given in the parameter. It also handles illegal types (do nothing).
         // It handles numbers going out of bounds by ensuring it doesn't drop below 0 or go above the capacity.
-        public void ChangeServerPoints(int toChange, ServerType serverMode)
+        public void ChangeServerPoints(float toChange, ServerType serverMode)
         {
             switch (serverMode)
             {
@@ -625,20 +623,20 @@ namespace ATReforged
                 cloudPawns = new HashSet<Pawn>();
         }
 
-        // Ints for storing capacities of various comps. Servers also have current point values.
-        private int skillPointCapacity = 0;
-        private int skillPoints = 0;
-        private int securityPointCapacity = 0;
-        private int securityPoints = 0;
-        private int hackingPointCapacity = 0;
-        private int hackingPoints = 0;
+        // Floats for storing capacities of various comps. Servers also have current point values.
+        private float skillPointCapacity = 0;
+        private float skillPoints = 0;
+        private float securityPointCapacity = 0;
+        private float securityPoints = 0;
+        private float hackingPointCapacity = 0;
+        private float hackingPoints = 0;
         private int SkyMindNetworkCapacity = 0;
         private int SkyMindCloudCapacity = 0;
 
         // Cached point generation amounts for efficiency. Recalculated when servers are added/removed.
-        private int cachedSkillGeneration = 0;
-        private int cachedSecurityGeneration = 0;
-        private int cachedHackingGeneration = 0;
+        private float cachedSkillGeneration = 0;
+        private float cachedSecurityGeneration = 0;
+        private float cachedHackingGeneration = 0;
 
         // Simple container for the pawn that represents blanks so it can be generated once and then saved for the whole game. It should never be altered.
         public Pawn blankPawn = null;

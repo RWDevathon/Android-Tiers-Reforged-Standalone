@@ -74,7 +74,6 @@
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SecurityServer</serverMode>
                 <passivePointGeneration>160</passivePointGeneration>
-                <percentageWorkBoost>100</percentageWorkBoost>
                 <pointStorage>10000</pointStorage>
             </li>
             <li Class="ATReforged.CompProperties_SkyMindTower">
@@ -128,7 +127,6 @@
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>0</passivePointGeneration>
-                <percentageWorkBoost>10</percentageWorkBoost>
                 <pointStorage>1000</pointStorage>
             </li>
             <li Class="CompProperties_HeatPusher">
@@ -192,7 +190,6 @@
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>20</passivePointGeneration>
-                <percentageWorkBoost>0</percentageWorkBoost>
                 <pointStorage>0</pointStorage>
             </li>
             <li Class="CompProperties_Power">
@@ -253,7 +250,6 @@
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>100</passivePointGeneration>
-                <percentageWorkBoost>40</percentageWorkBoost>
                 <pointStorage>500</pointStorage>
             </li>
             <li Class="CompProperties_Power">
@@ -311,7 +307,6 @@
             </li>
             <li Class="ATReforged.CompProperties_SuperComputer">
                 <passivePointGeneration>1000</passivePointGeneration>
-                <percentageWorkBoost>2000</percentageWorkBoost>
                 <pointStorage>100000</pointStorage>
             </li>
         </comps>

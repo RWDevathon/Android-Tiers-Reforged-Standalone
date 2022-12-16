@@ -46,9 +46,9 @@ namespace ATReforged
         {
             StringBuilder ret = new StringBuilder();
 
-            ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetSkillPoints(), Utils.gameComp.GetSkillPointCapacity()))
-               .AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetSecurityPoints(), Utils.gameComp.GetSecurityPointCapacity()))
-               .AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetHackingPoints(), Utils.gameComp.GetHackingPointCapacity()))
+            ret.AppendLine("ATR_SkillServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.SkillServer), Utils.gameComp.GetPointCapacity(ServerType.SkillServer)))
+               .AppendLine("ATR_SecurityServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.SecurityServer), Utils.gameComp.GetPointCapacity(ServerType.SecurityServer)))
+               .AppendLine("ATR_HackingServersSynthesis".Translate(Utils.gameComp.GetPoints(ServerType.HackingServer), Utils.gameComp.GetPointCapacity(ServerType.HackingServer)))
                .AppendLine("ATR_SkillProducedPoints".Translate(Props.passivePointGeneration))
                .AppendLine("ATR_SecurityProducedPoints".Translate(Props.passivePointGeneration))
                .AppendLine("ATR_HackingProducedPoints".Translate(Props.passivePointGeneration))

@@ -110,7 +110,7 @@ namespace ATReforged
             float maxWidth = listingStandard.ColumnWidth;
 
             SkillRecord skillRecord;
-            int availableSkillPoints = Utils.gameComp.GetSkillPoints();
+            float availableSkillPoints = Utils.gameComp.GetPoints(ServerType.SkillServer);
 
             // Controls for buying skill points
             for (int i = 0; i != skillDefList.Count; i++)

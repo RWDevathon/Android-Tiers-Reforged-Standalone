@@ -24,7 +24,7 @@ namespace ATReforged
 
         float cachedScrollHeight = 0;
         int cachedHackPenalty;
-        int availableHackingPoints;
+        float availableHackingPoints;
 
         readonly static float guidanceCostBase = 400f;
         readonly static float guidanceSuccessChanceBase = 0.8f;
@@ -82,7 +82,7 @@ namespace ATReforged
 
             float maxWidth = listingStandard.ColumnWidth;
 
-            availableHackingPoints = Utils.gameComp.GetHackingPoints();
+            availableHackingPoints = Utils.gameComp.GetPoints(ServerType.HackingServer);
 
             // Guidance Hack operation
             HackSelector(listingStandard, maxWidth, "ATR_GuidanceHack".Translate(), ref guidanceCostModifier, guidanceCostBase, OperationSuccessChance(guidanceSuccessChanceBase, guidanceCostBase, guidanceCostModifier), "ATR_GuidanceHackDesc".Translate(), delegate
@@ -194,7 +194,7 @@ namespace ATReforged
                             }
                             cachedHackPenalty += (int)guidanceCostBase;
                             Utils.gameComp.hackCostTimePenalty += (int)guidanceCostBase;
-                            Utils.gameComp.ChangeServerPoints((int)-guidanceCostModifier, ServerType.HackingServer);
+                            Utils.gameComp.ChangeServerPoints(-guidanceCostModifier, ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -235,7 +235,7 @@ namespace ATReforged
                             }
                             cachedHackPenalty += (int)propagandaCostBase;
                             Utils.gameComp.hackCostTimePenalty += (int)propagandaCostBase;
-                            Utils.gameComp.ChangeServerPoints((int)-propagandaCostModifier, ServerType.HackingServer);
+                            Utils.gameComp.ChangeServerPoints(-propagandaCostModifier, ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -305,7 +305,7 @@ namespace ATReforged
                             }
                             cachedHackPenalty += (int)espionageCostBase;
                             Utils.gameComp.hackCostTimePenalty += (int)espionageCostBase;
-                            Utils.gameComp.ChangeServerPoints((int)-espionageCostModifier, ServerType.HackingServer);
+                            Utils.gameComp.ChangeServerPoints(-espionageCostModifier, ServerType.HackingServer);
                             ResetCostModifiers();
                         }));
                     }));
@@ -356,7 +356,7 @@ namespace ATReforged
                                 }
                                 cachedHackPenalty += (int)disruptorCostBase;
                                 Utils.gameComp.hackCostTimePenalty += (int)disruptorCostBase;
-                                Utils.gameComp.ChangeServerPoints((int)-disruptorCostModifier, ServerType.HackingServer);
+                                Utils.gameComp.ChangeServerPoints(-disruptorCostModifier, ServerType.HackingServer);
                                 ResetCostModifiers();
                             }));
                         }));

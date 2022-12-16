@@ -186,6 +186,7 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="Components\CompInsightBench.cs" />
     <Compile Include="Components\CompPawnCharger.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />
@@ -252,6 +253,7 @@
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
+    <Compile Include="JobDrivers\JobDriver_GenerateInsight.cs" />
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
     <Compile Include="JobDrivers\JobDriver_TendMechanical.cs" />
     <Compile Include="MentalStates\MentalState_Exterminator.cs" />
@@ -337,6 +339,7 @@
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="MechFallStuff\Verb_MechFall.cs" />
+    <Compile Include="WorkGivers\WorkGiver_GenerateInsight.cs" />
     <Compile Include="WorkGivers\WorkGiver_MechTend.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendSelfEmergencyMech.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendSelfMech.cs" />
