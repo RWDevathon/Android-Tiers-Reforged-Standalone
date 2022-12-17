@@ -2,7 +2,7 @@
 <Defs>
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
 		<defName>ATR_Mark1Warrior</defName>
-		<label>T1 Warrior</label>
+		<label>M1 Warrior</label>
 		<description>Mark one warrior units, freed from the constraint of appearing humanlike, are a class above tier 1 Androids in survivability, strength, and power efficiency. They lack sapience, and are usually considered lesser than T1's and only a minor step above mechanoids in thought. These are units crafted for war and war alone, and they are very good at it for their cost.\n\nDue to its small boxy shape, it is often referred to as a "Battle-box" or "Blaster-bucket."</description>
 		<alienRace>
 			<raceRestriction>
