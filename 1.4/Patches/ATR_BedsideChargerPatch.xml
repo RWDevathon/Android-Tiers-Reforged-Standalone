@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[@Name="BasicBedBase"]/comps/li/linkableFacilities</xpath>
-		<value>
-			<li>ATR_BedsideCharger</li>
-		</value>
+<Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BedWithQualityBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BedWithQualityBase"]/comps</xpath>
+            <value>
+                <li Class="CompProperties_AffectedByFacilities">
+                    <linkableFacilities>
+                        <li>ATR_BedsideCharger</li>
+                    </linkableFacilities>
+                </li>
+            </value>
+        </nomatch>
+		<match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BedWithQualityBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+                <li>ATR_Inorganic</li>
+            </value>
+		</match>
 	</Operation>
-    
+
 </Patch>
