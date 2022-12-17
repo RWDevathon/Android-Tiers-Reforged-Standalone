@@ -65,7 +65,6 @@
 				</statOffsets>
 			</li>
 		</stages>
-        <spawnThingOnRemoved>PlasteelPlating</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -126,7 +125,6 @@
                 </statFactors>
 			</li>
 		</stages>
-        <spawnThingOnRemoved>CompositePlating</spawnThingOnRemoved>
     </HediffDef>
   
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -185,7 +183,6 @@
 				</statOffsets>
 			</li>
 		</stages>
-        <spawnThingOnRemoved>HydraulicFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -239,7 +236,6 @@
                 </statOffsets>
             </li>
         </stages>
-        <spawnThingOnRemoved>RefinedFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -305,7 +301,6 @@
                 </statFactors>
             </li>
         </stages>
-        <spawnThingOnRemoved>SanitaryFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -366,7 +361,6 @@
                 </statFactors>
             </li>
         </stages>
-        <spawnThingOnRemoved>MobilityFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -427,7 +421,6 @@
                 </statFactors>
             </li>
         </stages>
-        <spawnThingOnRemoved>SuppressorFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
@@ -484,7 +477,6 @@
                 </statFactors>
             </li>
         </stages>
-        <spawnThingOnRemoved>GuardianFrame</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
