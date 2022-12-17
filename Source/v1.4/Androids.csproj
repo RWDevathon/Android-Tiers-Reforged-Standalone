@@ -315,7 +315,6 @@
     <Compile Include="Recipes\Recipe_RestoreMechanicalPart.cs" />
     <Compile Include="Recipes\Recipe_RemoveMechanicalPart.cs" />
     <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
-    <Compile Include="WorkGivers\JobGiver_Exterminator.cs" />
     <Compile Include="MechFallStuff\MechFallClass.cs" />
     <Compile Include="MechFallStuff\MechFallMote.cs" />
     <Compile Include="Extensions\ModExtensions.cs" />

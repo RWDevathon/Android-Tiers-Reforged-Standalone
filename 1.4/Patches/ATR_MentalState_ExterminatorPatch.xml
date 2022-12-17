@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+	<!-- Add the exterminator mental state think tree to the MentalStateCritical think tree so any pawn can use it -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
+		<value>
+            <li Class="ThinkNode_ConditionalMentalStateClass">
+                <stateClass>ATReforged.MentalState_Exterminator</stateClass>
+                <subNodes>
+                    <li Class="ThinkNode_Priority">
+                        <subNodes>
+                            <li Class="JobGiver_AIFightEnemies" />
+                            <li Class="JobGiver_WanderAnywhere">
+                                <maxDanger>Deadly</maxDanger>
+                            </li>
+                        </subNodes>
+                    </li>
+                </subNodes>
+            </li>
+		</value>
+	</Operation>
+</Patch>

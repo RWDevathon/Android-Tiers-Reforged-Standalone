@@ -16,6 +16,7 @@ namespace ATReforged
                 if (!__result || !Utils.IsConsideredMechanical(p))
                     return;
 
+
                 Building_Bed building_Bed = p.CurrentBed();
                 // Charging bed check
                 if (building_Bed != null && building_Bed is Building_ChargingBed && building_Bed.TryGetComp<CompPowerTrader>()?.PowerOn == true)
@@ -25,7 +26,7 @@ namespace ATReforged
                 }
 
                 // Bed with bedside charger check
-                if (building_Bed != null && building_Bed.TryGetComp<CompAffectedByFacilities>().LinkedFacilitiesListForReading.Any(thing => thing.TryGetComp<CompPawnCharger>() != null && thing.TryGetComp<CompPowerTrader>()?.PowerOn == true))
+                if (building_Bed != null && building_Bed.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.Any(thing => thing.TryGetComp<CompPawnCharger>() != null && thing.TryGetComp<CompPowerTrader>()?.PowerOn == true) != null)
                 {
                     __result = false;
                     return;

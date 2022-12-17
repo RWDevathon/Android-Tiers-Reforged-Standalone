@@ -261,6 +261,7 @@
 			<Beauty>-6</Beauty>
 		</statBases>
 		<equippedAngleOffset>-15</equippedAngleOffset>
+        <generateCommonality>0.33</generateCommonality>
         <tools>
             <li>
                 <label>spike</label>
