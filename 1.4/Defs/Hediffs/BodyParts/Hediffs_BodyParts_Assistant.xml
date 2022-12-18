@@ -65,7 +65,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<ResearchSpeed>0.35</ResearchSpeed>
+					<ResearchSpeed>0.4</ResearchSpeed>
 					<GlobalLearningFactor>2</GlobalLearningFactor>
 				</statOffsets>
 			</li>
@@ -115,10 +115,10 @@
 	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is deliberately unspecialized, instead possessing dedicated processes to a wide range of tasks. This results in vast speed increases in the rate at which any task where quality is a concern can be completed - it allows the core intelligence to focus on quality while it handles less intricate details.</description>
 		<stages>
 			<li>
-				<statOffsets>
-					<GeneralLaborSpeed>1.5</GeneralLaborSpeed>
-					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
-				</statOffsets>
+                <statFactors>
+					<GeneralLaborSpeed>1.4</GeneralLaborSpeed>
+					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_GeneralAssistant</spawnThingOnRemoved>
@@ -163,19 +163,20 @@
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant</label>
-	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.</description>
+	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete. \n\nThe assistant's constant tactical analysis can lead to paranoia and reduced work focus.</description>
 		<stages>
 			<li>
 				<statOffsets>
 					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
           			<MeleeHitChance>2</MeleeHitChance>
           			<MeleeDodgeChance>5</MeleeDodgeChance>
-					<HuntingStealth>0.5</HuntingStealth>
 				</statOffsets>
                 <statFactors>
+					<HuntingStealth>1.2</HuntingStealth>
                     <IncomingDamageFactor>0.8</IncomingDamageFactor>
 					<AimingDelayFactor>0.9</AimingDelayFactor>
 					<MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+                    <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
                 </statFactors>
 			</li>
 		</stages>
@@ -225,12 +226,14 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
 					<ButcheryMechanoidEfficiency>0.5</ButcheryMechanoidEfficiency>
-					<MechanicalSurgerySuccessChance>0.2</MechanicalSurgerySuccessChance>
           			<MechanicalTendQuality>0.25</MechanicalTendQuality>
-                    <MechanicalTendSpeed>0.25</MechanicalTendSpeed>
 				</statOffsets>
+                <statFactors>
+					<MechanicalSurgerySuccessChance>1.2</MechanicalSurgerySuccessChance>
+					<ButcheryMechanoidSpeed>1.6</ButcheryMechanoidSpeed>
+                    <MechanicalTendSpeed>1.6</MechanicalTendSpeed>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_MechanicAssistant</spawnThingOnRemoved>
@@ -280,7 +283,7 @@
 			<li>
 				<statOffsets>
 					<SmoothingSpeed>0.4</SmoothingSpeed>
-					<ConstructionSpeedFactor>1.4</ConstructionSpeedFactor>
+					<ConstructionSpeedFactor>1.6</ConstructionSpeedFactor>
 					<ConstructSuccessChance>0.4</ConstructSuccessChance>
 					<FixBrokenDownBuildingSuccessChance>0.4</FixBrokenDownBuildingSuccessChance>
 				</statOffsets>
@@ -332,10 +335,12 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MiningSpeed>0.65</MiningSpeed>
 					<MiningYield>0.5</MiningYield>
           			<DeepDrillingSpeed>0.5</DeepDrillingSpeed>
 				</statOffsets>
+                <statFactors>
+					<MiningSpeed>1.6</MiningSpeed>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_ExcavationAssistant</spawnThingOnRemoved>
@@ -385,10 +390,12 @@
 			<li>
 				<statOffsets>
 					<ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
-					<ButcheryFleshSpeed>0.5</ButcheryFleshSpeed>
 					<FoodPoisonChance>-1</FoodPoisonChance>
-					<CookSpeed>0.5</CookSpeed>
 				</statOffsets>
+                <statFactors>
+					<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
+					<CookSpeed>1.2</CookSpeed>
+                </statFactors>
 			</li>
 		</stages>
    		<spawnThingOnRemoved>ATR_VictualAssistant</spawnThingOnRemoved>
@@ -437,15 +444,17 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<PlantWorkSpeed>1</PlantWorkSpeed>
 					<PlantHarvestYield>0.5</PlantHarvestYield>
 					<DrugHarvestYield>0.5</DrugHarvestYield>
-					<AnimalGatherSpeed>1</AnimalGatherSpeed>
 					<AnimalGatherYield>0.5</AnimalGatherYield>
-					<TameAnimalChance>0.75</TameAnimalChance>
-					<TrainAnimalChance>0.75</TrainAnimalChance>
-					<BondAnimalChanceFactor MayRequire="Ludeon.RimWorld.Ideology">1.5</BondAnimalChanceFactor>
 				</statOffsets>
+                <statFactors>
+					<BondAnimalChanceFactor MayRequire="Ludeon.RimWorld.Ideology">1.5</BondAnimalChanceFactor>
+					<TameAnimalChance>1.2</TameAnimalChance>
+					<TrainAnimalChance>1.2</TrainAnimalChance>
+					<PlantWorkSpeed>1.6</PlantWorkSpeed>
+					<AnimalGatherSpeed>1.6</AnimalGatherSpeed>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_CultivationAssistant</spawnThingOnRemoved>
@@ -494,11 +503,13 @@
 		<stages>
 			<li>
 				<statOffsets>
-                    <SurgerySuccessChanceFactor>1.25</SurgerySuccessChanceFactor>
-                    <MedicalOperationSpeed>0.5</MedicalOperationSpeed>
                     <MedicalTendQuality>0.25</MedicalTendQuality>
-                    <MedicalTendSpeed>0.5</MedicalTendSpeed>
 				</statOffsets>
+                <statFactors>
+                    <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>
+                    <MedicalTendSpeed>1.6</MedicalTendSpeed>
+                    <MedicalOperationSpeed>1.6</MedicalOperationSpeed>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_MedicineAssistant</spawnThingOnRemoved>
@@ -547,14 +558,16 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<TradePriceImprovement>0.25</TradePriceImprovement>
 					<NegotiationAbility>0.5</NegotiationAbility>
 					<SocialImpact>0.5</SocialImpact>
-					<ArrestSuccessChance>0.75</ArrestSuccessChance>
-					<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</SuppressionPower>
 					<PawnBeauty>1</PawnBeauty>
-					<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
 				</statOffsets>
+                <statFactors>
+					<TradePriceImprovement>1.2</TradePriceImprovement>
+					<ArrestSuccessChance>1.2</ArrestSuccessChance>
+					<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">1.2</SuppressionPower>
+					<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1.2</ConversionPower>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_SocialAssistant</spawnThingOnRemoved>
@@ -603,10 +616,12 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MentalBreakThreshold>-0.2</MentalBreakThreshold>
-					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
 					<JoyGainFactor>2</JoyGainFactor>
 				</statOffsets>
+                <statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+                </statFactors>
 			</li>
 		</stages>
     	<spawnThingOnRemoved>ATR_MentalAssistant</spawnThingOnRemoved>
@@ -703,12 +718,12 @@
 		<defName>ATR_SapientAssistant</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Evolving AI</label>
-		<description>Installed sapient intelligence that interacts with the core intelligence. This assistant is fully sapient, and will grow wiser and more harmonious with the core intelligence over time. As the sub-intelligence is housed within an archotech chip, its intelligence will likely one day exceed its host's. Curiously, this does not seem to bother the captured intelligence. Perhaps it prefers being away from the world. Perhaps it's not truly constrained here at all.</description>
+		<description>Installed sapient intelligence that interacts with the core intelligence. This assistant is fully sapient, and will grow wiser and more harmonious with the core intelligence over time, reaching maturity in about three years. As the sub-intelligence is housed within an archotech chip, its intelligence will likely one day exceed its host's. Curiously, this does not seem to bother the captured intelligence. Perhaps it prefers being away from the world. Perhaps it's not truly constrained here at all.</description>
 		<maxSeverity>1</maxSeverity>
 		<initialSeverity>0.001</initialSeverity>
     	<comps>
       		<li Class="HediffCompProperties_SeverityPerDay">
-        		<severityPerDay>0.01</severityPerDay>
+        		<severityPerDay>0.0055</severityPerDay> <!-- max severity 1 / 0.0055 == 181.81 days -->
       		</li>
     	</comps>
     	<stages>
@@ -722,6 +737,19 @@
 				<capMods>
 				<li>
 					<capacity>Consciousness</capacity>
+					<offset>0.1</offset>
+				</li>
+				</capMods>
+				<statOffsets>
+				    <GlobalLearningFactor>0.25</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.3</minSeverity>
+				<label>Young Intelligence</label>
+				<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
 					<offset>0.25</offset>
 				</li>
 				</capMods>
@@ -730,8 +758,8 @@
 				</statOffsets>
 			</li>
 			<li>
-				<minSeverity>0.3</minSeverity>
-				<label>Young Intelligence</label>
+				<minSeverity>0.5</minSeverity>
+				<label>Adult Intelligence</label>
 				<capMods>
 				<li>
 					<capacity>Consciousness</capacity>
@@ -743,29 +771,16 @@
 				</statOffsets>
 			</li>
 			<li>
-				<minSeverity>0.5</minSeverity>
-				<label>Adult Intelligence</label>
-				<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<offset>1.5</offset>
-				</li>
-				</capMods>
-				<statOffsets>
-				    <GlobalLearningFactor>2</GlobalLearningFactor>
-				</statOffsets>
-			</li>
-			<li>
 				<minSeverity>0.7</minSeverity>
 				<label>Wise Intelligence</label>
 				<capMods>
 				<li>
 					<capacity>Consciousness</capacity>
-					<offset>2.5</offset>
+					<offset>1</offset>
 				</li>
 				</capMods>
 				<statOffsets>
-				    <GlobalLearningFactor>3</GlobalLearningFactor>
+				    <GlobalLearningFactor>2</GlobalLearningFactor>
 				</statOffsets>
 			</li>
 			<li>
@@ -774,7 +789,7 @@
 				<capMods>
 				<li>
 					<capacity>Consciousness</capacity>
-					<offset>3</offset>
+					<offset>2</offset>
 				</li>
 				</capMods>
 				<statOffsets>
@@ -785,7 +800,7 @@
     	<spawnThingOnRemoved>ATR_SapientAssistant</spawnThingOnRemoved>
   	</HediffDef>
 
-  	<!-- Note: This thing does not derive from the base class! This is to avoid it being manufacturable. -->
+  	<!-- Note: This assistant does not derive from the base class! This is to avoid it being manufacturable. -->
   	<ThingDef ParentName="ATR_MechBodyPartBase">
 		<defName>ATR_SapientAssistant</defName>
 		<label>Archotech sapient assistant</label>
