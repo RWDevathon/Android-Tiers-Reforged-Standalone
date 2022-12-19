@@ -82,7 +82,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>ATR_BedsideCharger</defName>
         <label>bedside charger</label>
-        <description>A bedside device that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power even in idle. It must be placed directly adjacent to and facing the head of the bed.</description>
+        <description>A bedside device that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to and facing the head of the bed.</description>
         <graphicData>
             <texPath>Things/Building/Misc/VitalsMonitor</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -149,7 +149,7 @@
 	<ThingDef ParentName="ATR_BedsideCharger">
 		<defName>ATR_WallCharger</defName>
 		<label>wall-mounted charger</label>
-		<description>A wall-mounted power outlet with an integrated voltage converter that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power even in idle. It must be placed directly adjacent to the head of the bed.</description>
+		<description>A wall-mounted power outlet with an integrated voltage converter that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to the head of the bed.</description>
 		<graphicData>
 			<texPath>WallCharger/ATR_WallCharger</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
