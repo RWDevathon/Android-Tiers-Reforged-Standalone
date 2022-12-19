@@ -161,7 +161,7 @@ namespace ATReforged
                             {
                                 Find.WindowStack.Add(new Dialog_MessageBox("ATR_ReplicateCloudPawnDesc".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_ReplicateCloudPawn".Translate(), buttonAAction: delegate
                                 {
-                                    pawn.TryGetComp<CompSkyMindLink>().Linked = 6;
+                                    pawn.TryGetComp<CompSkyMindLink>().InitiateConnection(6);
                                     Utils.gameComp.PushNetworkLinkedPawn(pawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
                                 }));
                             }));

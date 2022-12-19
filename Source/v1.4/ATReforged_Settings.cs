@@ -406,22 +406,30 @@ namespace ATReforged
             HashSet<ThingDef> matchingChargers = new HashSet<ThingDef>();
             foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()))
             {
-                // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension
-                if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f)
+                // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension. Or are simply marked as canBeAndroid and not canBeDrone.
+                if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid && (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone))
                 {
                     matchingAndroids.Add(validHumanlike);
-                    // Particularly high global learning factor implies this unit is not a normal android but is a higher power.
-                    if (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 4f)
+                    // A special bool in the mod extension marks this as a special android.
+                    if (validHumanlike.GetModExtension<ATR_MechTweaker>().isSpecialMechanical)
                         matchingSpecials.Add(validHumanlike);
+
+                    // All mechanical humanlikes may charge inherently.
+                    matchingChargers.Add(validHumanlike);
+                    matchingMechanicals.Add(validHumanlike);
                 }
-                // Mechanical Drones are humanlikes with global learning factor < 0.5 that have the ModExtension
-                else
+                // Mechanical Drones are humanlikes with global learning factor < 0.5 that have the ModExtension. Or are simply marked as canBeDrone and not canBeAndroid.
+                else if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone && (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) < 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid))
                 {
                     matchingDrones.Add(validHumanlike);
+                    // All mechanical humanlikes may charge inherently.
+                    matchingChargers.Add(validHumanlike);
+                    matchingMechanicals.Add(validHumanlike);
                 }
-                // All mechanical humanlikes may charge inherently.
-                matchingChargers.Add(validHumanlike);
-                matchingMechanicals.Add(validHumanlike);
+                else
+                {
+                    Log.Warning("[ATR] A humanlike race " + validHumanlike + " with the ATR_MechTweaker mod extension was unable to automatically select its categorization! This will leave it as being considered organic.");
+                }
             }
             // Mechanical animals are animals that have the ModExtension
             HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()).ToHashSet();

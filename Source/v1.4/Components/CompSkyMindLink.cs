@@ -118,7 +118,7 @@ namespace ATReforged
                         {
                             Find.WindowStack.Add(new Dialog_MessageBox("ATR_AbsorbExperienceConfirm".Translate(parent.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_AbsorbExperience".Translate(), buttonAAction: delegate
                             {
-                                Linked = 3;
+                                InitiateConnection(3);
                             }));
                         }
                     };
@@ -147,8 +147,7 @@ namespace ATReforged
                             {
                                 Find.WindowStack.Add(new Dialog_MessageBox("ATR_DownloadCloudPawnConfirm".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_DownloadCloudPawn".Translate(), buttonAAction: delegate
                                 {
-                                    recipientPawn = controller;
-                                    Linked = 4;
+                                    InitiateConnection(4, controller);
                                 }));
                             }
                         };
@@ -274,7 +273,7 @@ namespace ATReforged
                         }
                     };
 
-                    // Allow this pawn to do duplications if it is controlling an organic surrogate and isn't controlling multiple surrogates.
+                    // Allow this pawn to do transfers if it is controlling an organic surrogate and isn't controlling multiple surrogates.
                     if (surrogatePawns.Count == 1)
                     {
                         Pawn surrogate = surrogatePawns.First();
@@ -282,15 +281,14 @@ namespace ATReforged
                         {
                             yield return new Command_Action
                             {
-                                icon = Tex.Duplicate,
-                                defaultLabel = "ATR_Duplicate".Translate(),
-                                defaultDesc = "ATR_DuplicateDesc".Translate(),
+                                icon = Tex.DownloadFromSkyCloud,
+                                defaultLabel = "ATR_Transfer".Translate(),
+                                defaultDesc = "ATR_TransferDesc".Translate(),
                                 action = delegate ()
                                 {
-                                    Find.WindowStack.Add(new Dialog_MessageBox("ATR_DuplicateConfirm".Translate(parent.LabelShortCap, "ATR_Surrogate".Translate()) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Duplicate".Translate(), buttonAAction: delegate
+                                    Find.WindowStack.Add(new Dialog_MessageBox("ATR_TransferConfirm".Translate(parent.LabelShortCap, "ATR_Surrogate".Translate()) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Transfer".Translate(), buttonAAction: delegate
                                     {
-                                        recipientPawn = surrogate;
-                                        Linked = 2;
+                                        surrogate.TryGetComp<CompSkyMindLink>().InitiateConnection(4, ThisPawn);
                                     }));
                                 }
                             };
@@ -318,8 +316,7 @@ namespace ATReforged
                         {
                             Find.WindowStack.Add(new Dialog_MessageBox("ATR_PermuteConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Permute".Translate(), buttonAAction: delegate
                             {
-                                recipientPawn = colonist;
-                                Linked = 1;
+                                InitiateConnection(1, colonist);
                             }));
                         }));
                     }
@@ -343,7 +340,7 @@ namespace ATReforged
                     {
                         Find.WindowStack.Add(new Dialog_MessageBox("ATR_UploadConfirm".Translate() + "\n" + ("ATR_SkyMindDisconnectionRisk").Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Upload".Translate(), buttonAAction: delegate
                         {
-                            Linked = 5;
+                            InitiateConnection(5);
                         }));
                     }
                 };
@@ -378,7 +375,7 @@ namespace ATReforged
                     }
 
                     // All pawns undergo a system reboot upon successful completion of an operation.
-                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_ShortReboot, ThisPawn, null);
+                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, ThisPawn, null);
                     hediff.Severity = 1f;
                     ThisPawn.health.AddHediff(hediff, null, null);
 
@@ -390,7 +387,7 @@ namespace ATReforged
                     // Recipients lose any MindOperation hediffs as well and also reboot.
                     if (recipientPawn != null)
                     {
-                        recipientPawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
+                        recipientPawn.health.AddHediff(HediffDefOf.ATR_LongReboot);
                         target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
                         if (target != null)
                             recipientPawn.health.RemoveHediff(target);
@@ -583,6 +580,7 @@ namespace ATReforged
             if (Linked == 3)
             {
                 Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                Utils.Duplicate(Utils.GetBlank(), ThisPawn, true, false);
                 ThisPawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, ThisPawn.health.hediffSet.GetBrain()));
                 // If they're somehow not dead from that, make them dead for real.
                 if (!ThisPawn.Dead)
@@ -629,19 +627,25 @@ namespace ATReforged
                     if (target != null)
                         recipientPawn.health.RemoveHediff(target);
                 }
-                // Download, insert of a copy of the recipient pawn into the current pawn. Then destroy the recipient (SkyMind intelligence).
+                // Download, insert of a copy of the recipient pawn into the current pawn. After, destroy the recipient's intelligence.
+                // For androids, this means becoming a blank. For humans, a wild person. For SkyMind intelligences, ceasing to exist.
                 else if (status == 4)
                 {
-                    Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                    // Organic pawns that have been downloaded into should lose some hediffs and disconnect from the network.
+                    if (!Utils.IsConsideredMechanicalAndroid(ThisPawn))
+                    {
+                        Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                        if (target != null)
+                            ThisPawn.health.RemoveHediff(target);
+                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+                        if (target != null)
+                            ThisPawn.health.RemoveHediff(target);
+                    }
+
                     Utils.Duplicate(recipientPawn, ThisPawn, false, false);
-                    //Utils.gameComp.PopCloudPawn(recipientPawn);
-                    //recipientPawn.Destroy();
-                    target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
-                    if (target != null)
-                        ThisPawn.health.RemoveHediff(target);
-                    target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
-                    if (target != null)
-                        ThisPawn.health.RemoveHediff(target);
+                    Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
+                    Utils.KillPawnIntelligence(recipientPawn);
                 }
             }
 
@@ -657,6 +661,7 @@ namespace ATReforged
 
                 Utils.gameComp.ChangeServerPoints(sum/2, ServerType.HackingServer);
                 Utils.gameComp.ChangeServerPoints(sum/2, ServerType.SkillServer);
+                Utils.Duplicate(Utils.GetBlank(), ThisPawn, true, false);
                 ThisPawn.Kill(null);
             }
 
@@ -739,13 +744,30 @@ namespace ATReforged
                     }
                 }
 
-                // Check to see if there is a functional SkyMind Core if one is required for an operation to continue. One is required for uploading, downloading, or replicating.
-                if (Linked >= 4 && Utils.gameComp.GetSkyMindCloudCapacity() == 0)
+                // Check to see if there is a functional SkyMind Core if one is required for an operation to continue. One is required for uploading, or replicating.
+                if (Linked >= 5 && Utils.gameComp.GetSkyMindCloudCapacity() == 0)
                 {
                     HandleInterrupt();
                     return;
                 }
             }
+        }
+
+        // A public method for other classes to initiate SkyMind operations. It will fail and do nothing if this pawn is already preoccupied.
+        public void InitiateConnection(int operationType, Pawn targetRecipient = null)
+        {
+            if (Linked > -1)
+            {
+                Log.Warning("[ATR] Something attempted to initiate a connection for " + ThisPawn + " while it was busy! Command was ignored.");
+                return;
+            }
+            else if (operationType == -2)
+            {
+                Log.Warning("[ATR] Surrogate connections can not be established directly with the InitiateConnection function. Use ConnectSurrogate instead.");
+            }
+
+            recipientPawn = targetRecipient;
+            Linked = operationType;
         }
 
         // Operation tracker. -2 = player surrogate operation, -1 = No operation, 1 = permutation, 2 = duplication, 3 = absorption, 4 = download, 5 = upload, 6 = replication

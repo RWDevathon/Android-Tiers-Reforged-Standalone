@@ -26,7 +26,7 @@
 			<MoveSpeed>3.00</MoveSpeed>
 			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
 			<ComfyTemperatureMax>35</ComfyTemperatureMax>
-			<MentalBreakThreshold>0.08</MentalBreakThreshold>
+			<MentalBreakThreshold>0.16</MentalBreakThreshold>
 			<GlobalLearningFactor>0.2</GlobalLearningFactor>
 			<WorkSpeedGlobal>0.45</WorkSpeedGlobal>
 			<SocialImpact>0.1</SocialImpact>
@@ -87,6 +87,11 @@
 			<baseHungerRate>1.5</baseHungerRate>
 			<baseBodySize>0.5</baseBodySize>
 		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <droneSkillLevel>8</droneSkillLevel>
+			</li>
+		</modExtensions>
 		<butcherProducts>
             <Steel>30</Steel>
 			<Plasteel>15</Plasteel>

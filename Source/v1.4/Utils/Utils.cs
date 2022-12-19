@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
+using Verse.AI;
 using HarmonyLib;
 using RimWorld.Planet;
 using System.Linq;
@@ -82,12 +83,12 @@ namespace ATReforged
 
         public static bool HasSpecialStatus(Pawn pawn)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def) || ReservedSpecialPawns.Contains(pawn.def.defName);
+            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def);
         }
 
         public static bool HasSpecialStatus(ThingDef thingDef)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef) || ReservedSpecialPawns.Contains(thingDef.defName);
+            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef);
         }
 
         public static bool IsSolarFlarePresent()
@@ -104,6 +105,15 @@ namespace ATReforged
         public static bool CanUseBattery(ThingDef thingDef)
         {
             return ATReforged_Settings.canUseBattery.Contains(thingDef);
+        }
+        
+        // Locate the nearest available charging bed for the given pawn user, as carried by the given pawn carrier. Pawns may carry themselves here, if they are not downed.
+        public static Building_Bed GetChargingBed(Pawn user, Pawn carrier)
+        {
+            if (user.Map == null)
+                return null;
+
+            return (Building_Bed)GenClosest.ClosestThingReachable(user.PositionHeld, user.MapHeld, ThingRequest.ForGroup(ThingRequestGroup.Bed), PathEndMode.OnCell, TraverseParms.For(carrier), 9999f, (Thing b) => b.def.IsBed && (int)b.Position.GetDangerFor(user, user.Map) <= (int)Danger.Deadly && RestUtility.IsValidBedFor(b, user, carrier, true) && ((b.TryGetComp<CompPawnCharger>() != null && b.TryGetComp<CompPowerTrader>()?.PowerOn == true) || b.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.Any(thing => thing.TryGetComp<CompPawnCharger>() != null && thing.TryGetComp<CompPowerTrader>()?.PowerOn == true) == true));
         }
 
         /* === HEALTH UTILITIES === */
@@ -234,7 +244,6 @@ namespace ATReforged
         }
         
         // RESERVED UTILITIES, INTERNAL USE ONLY
-        public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android" };
         public static HashSet<string> ReservedBlacklistedDiseases = new HashSet<string> { "WoundInfection" };
 
         public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
@@ -444,13 +453,9 @@ namespace ATReforged
                         SkillRecord newSkill = newSkills.GetSkill(skillDef);
                         SkillRecord sourceSkill = source.skills.GetSkill(skillDef);
                         newSkill.Level = sourceSkill.Level;
-
-                        if (!sourceSkill.TotallyDisabled)
-                        {
-                            newSkill.passion = sourceSkill.passion;
-                            newSkill.xpSinceLastLevel = sourceSkill.xpSinceLastLevel;
-                            newSkill.xpSinceMidnight = sourceSkill.xpSinceMidnight;
-                        }
+                        newSkill.passion = sourceSkill.passion;
+                        newSkill.xpSinceLastLevel = sourceSkill.xpSinceLastLevel;
+                        newSkill.xpSinceMidnight = sourceSkill.xpSinceMidnight;
                     }
                     dest.skills = newSkills;
                 }
@@ -781,32 +786,7 @@ namespace ATReforged
             // If we are "killing" the pawn, that means the body is now a blank. Properly duplicate those features.
             if (kill)
             {
-                Duplicate(GetBlank(), copy, false, false);
-
-                // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
-                if (IsConsideredMechanicalAndroid(copy))
-                {
-                    copy.health.AddHediff(HediffDefOf.ATR_IsolatedCore, copy.health.hediffSet.GetBrain());
-                    Hediff autoCore = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
-                    if (autoCore != null)
-                    {
-                        copy.health.RemoveHediff(autoCore);
-                    }
-                    copy.guest?.SetGuestStatus(Faction.OfPlayer);
-                    if (copy.playerSettings != null)
-                        copy.playerSettings.medCare = MedicalCareCategory.Best;
-                }
-                // Non androids can not truly become blanks as they have no Core body parts to affect. Instead, make them into a simple new pawn.
-                else
-                {
-                    // Ensure the pawn has a proper name.
-                    copy.Name = PawnBioAndNameGenerator.GeneratePawnName(copy);
-                    Hediff OperationHediff = copy.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver);
-                    if (OperationHediff != null)
-                    {
-                        copy.health.RemoveHediff(OperationHediff);
-                    }
-                }
+                KillPawnIntelligence(copy);
             }
             // Else, duplicate all mind-related things to the copy. This is not considered murder.
             else
@@ -840,43 +820,88 @@ namespace ATReforged
             return (int) result;
         }
 
+        // Handle the "killing" of a pawn's intelligence by duplicating in a blank and handling organic vs. mechanical cases.
+        public static void KillPawnIntelligence(Pawn pawn)
+        {
+            Duplicate(GetBlank(), pawn, false, false);
+
+            // Killed SkyMind intelligences cease to exist.
+            if (gameComp.GetCloudPawns().Contains(pawn))
+            {
+                gameComp.PopCloudPawn(pawn);
+                pawn.Destroy();
+            }
+
+            // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
+            if (IsConsideredMechanicalAndroid(pawn))
+            {
+                pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
+                Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
+                if (target != null)
+                {
+                    pawn.health.RemoveHediff(target);
+                }
+                target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_ReceiverCore);
+                if (target != null)
+                {
+                    pawn.health.RemoveHediff(target);
+                }
+                pawn.guest?.SetGuestStatus(Faction.OfPlayer);
+                if (pawn.playerSettings != null)
+                    pawn.playerSettings.medCare = MedicalCareCategory.Best;
+            }
+            // Non androids can not truly become blanks as they have no Core body parts to affect. Instead, make them into a simple new pawn.
+            else
+            {
+                // Ensure the pawn has a proper name.
+                pawn.Name = PawnBioAndNameGenerator.GeneratePawnName(pawn);
+
+                // Ensure the pawn has no SkyMind capable implants any more.
+                Hediff OperationHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver);
+                if (OperationHediff != null)
+                {
+                    pawn.health.RemoveHediff(OperationHediff);
+                }
+                OperationHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                if (OperationHediff != null)
+                {
+                    pawn.health.RemoveHediff(OperationHediff);
+                }
+            }
+        }
+
         // Handle various parts of resetting drones to default status.
         public static void ReconfigureDrone(Pawn pawn)
         {
-            if (IsConsideredMechanicalDrone(pawn))
+            ATR_MechTweaker pawnExtension = pawn.def.GetModExtension<ATR_MechTweaker>();
+            if (pawnExtension?.dronesCanHaveTraits == false)
             {
-                // Drones don't have traits.
                 foreach (Trait trait in pawn.story.traits.allTraits.ToList())
                 {
                     pawn.story.traits.RemoveTrait(trait);
                 }
+            }
 
-                // Drones don't have ideos.
-                pawn.ideo = null;
+            // Drones don't have ideos.
+            pawn.ideo = null;
+                
+            // Drones have a set skill, which is taken from their mod extension if it exists. If not, it defaults to 8 (which is the default value for the extension).
+            // Since drones are incapable of learning, their passions and xp does not matter. Set it to 0 for consistency's sake.
+            int skillLevel = pawnExtension?.droneSkillLevel ?? 8;
+            foreach (SkillRecord skillRecord in pawn.skills.skills)
+            {
+                skillRecord.passion = 0;
+                skillRecord.Level = skillLevel;
+                skillRecord.xpSinceLastLevel = 0;
+            }
 
-
-                // Drones have a set skill of 8 in all skills. Massive drones get 14 in all skills.
-                int skillLevel = IsConsideredMassive(pawn) ? 14 : 8;
-                foreach (SkillRecord skillRecord in pawn.skills.skills)
-                {
-                    skillRecord.passion = 0;
-                    skillRecord.Level = skillLevel;
-                    skillRecord.xpSinceLastLevel = 0;
-                }
-
-                // Massive drones get MSeries drone backstory, which they spawn with.
-                if (!IsConsideredMassive(pawn))
-                {
-                    pawn.story.Childhood = BackstoryDefOf.ATR_DroneChildhood;
-                    pawn.story.Adulthood = BackstoryDefOf.ATR_DroneAdulthood;
-                    pawn.workSettings.Notify_DisabledWorkTypesChanged();
-                    pawn.skills.Notify_SkillDisablesChanged();
-                }
-                // Massive drones don't spawn with apparel. They shouldn't be able to wear any either.
-                else
-                {
-                    pawn.apparel.DestroyAll();
-                }
+            // If pawn kind backstories should be overwritten, then try to take it from the mod extension. If it does not exist, it defaults to ATR_DroneChildhood (which is default for the extension).
+            if (pawnExtension?.letPawnKindHandleDroneBackstories == false)
+            {
+                pawn.story.Childhood = pawnExtension?.droneChildhoodBackstoryDef ?? BackstoryDefOf.ATR_DroneChildhood;
+                pawn.story.Adulthood = pawnExtension?.droneAdulthoodBackstoryDef ?? BackstoryDefOf.ATR_DroneAdulthood;
+                pawn.workSettings.Notify_DisabledWorkTypesChanged();
+                pawn.skills.Notify_SkillDisablesChanged();
             }
         }
     }

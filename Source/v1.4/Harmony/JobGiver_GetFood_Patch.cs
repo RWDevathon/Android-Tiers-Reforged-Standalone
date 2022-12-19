@@ -23,9 +23,10 @@ namespace ATReforged
                         // Don't override non-spawned or drafted pawns.
                         if (!pawn.Spawned || pawn.Drafted)
                             return;
-                        
+
                         // Attempt to locate a viable charging bed for the pawn. This can suit comfort, rest, and room needs whereas the charging station can not.
-                        Building_Bed bed = RestUtility.FindBedFor(pawn);
+                        Building_Bed bed;
+                        bed = Utils.GetChargingBed(pawn, pawn);
                         if (bed != null)
                         {
                             pawn.ownership.ClaimBedIfNonMedical(bed);

@@ -32,13 +32,7 @@ namespace ATReforged
             // Initializing a new android. Create the new intelligence.
             if (recipe.addsHediff == HediffDefOf.ATR_AutonomousCore)
             {
-                /*
-                PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, Faction.OfPlayer, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0, fixedGender: pawn.gender);
-                Pawn newIntelligence = PawnGenerator.GeneratePawn(request);
-                Utils.Duplicate(newIntelligence, pawn, false, false);
-                */
                 Find.WindowStack.Add(new Dialog_InitializeMind(pawn));
-                pawn.health.AddHediff(HediffDefOf.ATR_LongReboot);
             }
             // Initializing a surrogate. Ensure surrogate details are initialized properly.
             else

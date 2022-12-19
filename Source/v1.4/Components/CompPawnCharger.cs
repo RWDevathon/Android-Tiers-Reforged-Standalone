@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using Verse;
 
@@ -49,9 +50,14 @@ namespace ATReforged
             UpdatePowerConsumption();
         }
 
+        public override string CompInspectStringExtra()
+        {
+            return "ATR_CurrentChargerPowerConsumption".Translate(cachedConsumption.ToString("#####0"));
+        }
+
         private void UpdatePowerConsumption()
         {
-            compPowerTrader.PowerOutput = cachedConsumption;
+            compPowerTrader.PowerOutput = -cachedConsumption;
         }
 
         // Inform this charger that a given pawn is now charging here.

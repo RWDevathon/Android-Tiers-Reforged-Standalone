@@ -24,11 +24,10 @@
 		<statBases>
 			<MarketValue>4800</MarketValue>
 			<MoveSpeed>6.00</MoveSpeed>
-			<Flammability>0</Flammability>
 			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
 			<ComfyTemperatureMax>60</ComfyTemperatureMax>
 			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
-			<MentalBreakThreshold>0.16</MentalBreakThreshold>
+			<MentalBreakThreshold>0.35</MentalBreakThreshold>
 			<GlobalLearningFactor>1.4</GlobalLearningFactor>
 			<SocialImpact>1.4</SocialImpact>
 			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
@@ -87,6 +86,11 @@
 			<baseHealthScale>1.2</baseHealthScale>
 			<baseBodySize>1.4</baseBodySize>
 		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <droneSkillLevel>12</droneSkillLevel>
+			</li>
+		</modExtensions>
 		<butcherProducts>
 			<Plasteel>40</Plasteel>
 			<Uranium>10</Uranium>

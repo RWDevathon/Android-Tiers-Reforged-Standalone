@@ -13,6 +13,9 @@
 	<ATR_HackingServersSynthesis>Hacking Points available: {0} / {1}</ATR_HackingServersSynthesis>
 	<ATR_HackingProducedPoints>Hacking Points producing: {0}</ATR_HackingProducedPoints>
 	<ATR_HackingSlotsAdded>Hacking Storage added: {0}</ATR_HackingSlotsAdded>
+
+    <!-- Charging -->
+    <ATR_CurrentChargerPowerConsumption>Current power draw: {0} W</ATR_CurrentChargerPowerConsumption>
 	
 	<!-- Heat -->
 	<ATR_CompHotSensitiveCriticalText>Heat threshold surpassed: damage imminent!</ATR_CompHotSensitiveCriticalText>

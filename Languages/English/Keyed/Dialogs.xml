@@ -47,7 +47,7 @@
     
     <!-- Initialize Mind Dialog/Keys -->
 	<ATR_InitializeMindTitle>Mechanical unit needs initialization</ATR_InitializeMindTitle>
-	<ATR_InitializeMindDesc>The newly connected core interface is ready to contain an intelligence, but has not yet initialized one. An intelligence may be imported from the SkyMind if any exist or it may be permitted to form a personality on its own.</ATR_InitializeMindDesc>
+	<ATR_InitializeMindDesc>The newly connected core interface is ready to contain an intelligence, but has not yet initialized one. An intelligence may be transferred from any SkyMind-linked pawns if available or it may be permitted to form a personality on its own.</ATR_InitializeMindDesc>
 	
 	<ATR_SkyMindInitialization>Initialize from SkyMind</ATR_SkyMindInitialization>
 	<ATR_AutomaticInitialization>Initialize automatically</ATR_AutomaticInitialization>

@@ -20,22 +20,22 @@ namespace ATReforged
                 switch (nd.defName)
                 {
                     case "Mood":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName);
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn);
                         break;
                     case "Joy":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveJoyNeed;
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn) && ATReforged_Settings.androidsHaveJoyNeed;
                         return;
                     case "Beauty":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveBeautyNeed;
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn) && ATReforged_Settings.androidsHaveBeautyNeed;
                         return;
                     case "Outdoors":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveOutdoorsNeed;
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn) && ATReforged_Settings.androidsHaveOutdoorsNeed;
                         return;
                     case "Indoors":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveOutdoorsNeed;
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn) && ATReforged_Settings.androidsHaveOutdoorsNeed;
                         return;
                     case "Comfort":
-                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.ReservedSpecialPawns.Contains(___pawn.def.defName) && ATReforged_Settings.androidsHaveComfortNeed;
+                        __result = !Utils.IsConsideredMechanicalDrone(___pawn) && !Utils.HasSpecialStatus(___pawn) && ATReforged_Settings.androidsHaveComfortNeed;
                         return;
                     case "Hygiene":
                     case "Bladder":

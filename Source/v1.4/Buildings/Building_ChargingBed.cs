@@ -29,7 +29,7 @@ namespace ATReforged
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.
-            if (Medical || (!AnyUnownedSleepingSlot && pawn.ownership.OwnedBed != this))
+            if (!AnyUnoccupiedSleepingSlot && pawn.ownership.OwnedBed != this)
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
             }
@@ -58,6 +58,10 @@ namespace ATReforged
                 {
                     myPawn.ownership.ClaimBedIfNonMedical(this);
                     Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this));
+                    if (Medical)
+                    {
+                        job.restUntilHealed = true;
+                    }
                     myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 });
             }

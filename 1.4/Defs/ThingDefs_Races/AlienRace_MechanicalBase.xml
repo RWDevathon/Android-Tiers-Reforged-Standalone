@@ -163,7 +163,7 @@
 			<foodType>OmnivoreHuman</foodType>
 			<fleshType>AndroidTier</fleshType>
 			<bloodDef>CoolantAndroidTier</bloodDef>
-			<useMeatFrom>Alpaca</useMeatFrom>
+            <specificMeatDef>Steel</specificMeatDef>
 			<canBePredatorPrey>false</canBePredatorPrey>
 			<lifeStageAges>
 				<li>
@@ -205,10 +205,6 @@
 				<li>ATR_MechanicalStandard</li>
 			</hediffGiverSets>
 		</race>
-		<modExtensions>
-			<li Class="ATReforged.ATR_MechTweaker">
-			</li>
-		</modExtensions>
     </AlienRace.ThingDef_AlienRace>
 
     <!-- M-Series Base -->
@@ -262,6 +258,12 @@
 				</points>
 			</ageGenerationCurve>
         </race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <letPawnKindHandleDroneBackstories>true</letPawnKindHandleDroneBackstories>
+                <droneSkillLevel>14</droneSkillLevel>
+			</li>
+		</modExtensions>
         <recipes>
             <li>ATR_ShutdownMechanical</li>
             <li>ATR_RemoveBodyPartAndroid</li>

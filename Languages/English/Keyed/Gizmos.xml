@@ -70,9 +70,9 @@
 	<ATR_PermuteDesc>Permute the consciousness of the currently selected colonist with another colonist.</ATR_PermuteDesc>
 	<ATR_PermuteConfirm>This operation will swap the intelligences of {0} and {1}.</ATR_PermuteConfirm>
 	
-	<ATR_Duplicate>Duplicate</ATR_Duplicate>
-	<ATR_DuplicateDesc>Duplicate the consciousness of the currently selected colonist into an organic surrogate.</ATR_DuplicateDesc>
-	<ATR_DuplicateConfirm>This operation will transfer a copy of {0} into the target {1}'s body. This is an autonomous intelligence. The SkyMind receiver will burn out once the operation is complete.</ATR_DuplicateConfirm>
+	<ATR_Transfer>Transfer</ATR_Transfer>
+	<ATR_TransferDesc>Transfer the consciousness of the currently selected colonist into an organic surrogate.</ATR_TransferDesc>
+	<ATR_TransferConfirm>This operation will transfer {0} into the target surrogate's body. This will leave {0}'s original body mindless. The SkyMind receiver will burn out once the operation is complete.</ATR_TransferConfirm>
 	
 	<ATR_Upload>Upload</ATR_Upload>
 	<ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>

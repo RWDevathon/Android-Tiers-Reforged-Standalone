@@ -1,5 +1,6 @@
 ﻿using Verse;
 using Verse.AI;
+using System;
 using RimWorld;
 
 namespace ATReforged
@@ -46,13 +47,11 @@ namespace ATReforged
 
                 // Identify the charging device responsible for this toil and notify it that this pawn is using it.
                 Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
-                CompPawnCharger compPawnCharger;
-                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
-                {
-                    compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
-                }
-                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
-                else
+
+                // The target building itself may have the CompPawnCharger we need.
+                CompPawnCharger compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
+                // If the power source isn't the building itself, we need to grab a linkable charger connected to this building.
+                if (compPawnCharger == null)
                 {
                     compPawnCharger = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null)?.TryGetComp<CompPawnCharger>();
                 }
@@ -106,8 +105,26 @@ namespace ATReforged
                     }
                 }
 
-                // if the pawn has their charge/rest need met (both if both exist, otherwise which ever one they have), then the job is complete.
-                if (!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
+                // If the power source is offline for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
+                Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
+                Thing powerSource;
+                if (targetBuilding.TryGetComp<CompPawnCharger>() != null)
+                {
+                    powerSource = targetBuilding;
+                }
+                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
+                else
+                {
+                    powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
+                }
+                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true)
+                {
+                    actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
+                    return;
+                }
+
+                // if the pawn has their charge/rest need met (both if both exist, otherwise which ever one they have), then the job can be complete.
+                if (!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f || powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
                 {
                     // If the job is complete by measures of needs, terminate the job if they are uninjured.
                     if (!HealthAIUtility.ShouldSeekMedicalRest(actor))
@@ -129,11 +146,11 @@ namespace ATReforged
                 if (restNeed != null)
                 {
                     float restEffectiveness = (bed == null || !bed.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness)) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : bed.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
-                    actor.needs.rest.TickResting(restEffectiveness);
+                    restNeed.TickResting(restEffectiveness);
                 }
 
                 // If the pawn is asleep and can charge (food not null), then charge.
-                if (foodNeed != null)
+                if (foodNeed != null && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn == true)
                 {
                     float chargeEffectiveness;
                     // Beds get charging effectiveness from their BedRestEffectiveness stat.
@@ -145,7 +162,7 @@ namespace ATReforged
                     {
                         chargeEffectiveness = !station.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : station.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
                     }
-                    actor.needs.food.CurLevelPercentage += 0.00028f * ATReforged_Settings.batteryChargeRate * chargeEffectiveness;
+                    foodNeed.CurLevelPercentage += 0.00028f * ATReforged_Settings.batteryChargeRate * chargeEffectiveness;
                 }
 
                 // If the apply bed thought timer is up, set applyBedThoughtsOnLeave to true so that it will apply when done with the job.
@@ -162,7 +179,7 @@ namespace ATReforged
                     {
                         FleckMaker.ThrowMetaIcon(actor.Position, actor.Map, FleckDefOf.SleepZ);
                     }
-                    if (foodNeed != null)
+                    if (foodNeed != null && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn == true)
                     {
                         FleckMaker.ThrowMetaIcon(actor.Position, actor.Map, GetChargeFleckDef(foodNeed));
                     }
@@ -179,24 +196,6 @@ namespace ATReforged
                     {
                         actor.Position = CellFinder.RandomClosewalkCellNear(actor.Position, actor.Map, 1, null);
                     }
-                    actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
-                    return;
-                }
-
-                // If the power source is offline for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
-                Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
-                Thing powerSource;
-                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
-                {
-                    powerSource = targetBuilding;
-                }
-                // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
-                else
-                {
-                    powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
-                }
-                if (!actor.Downed && !powerSource.TryGetComp<CompPowerTrader>().PowerOn)
-                {
                     actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                     return;
                 }
@@ -222,17 +221,13 @@ namespace ATReforged
 
                 // Notify the charger that it is no longer being used by this pawn.
                 Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
-                CompPawnCharger compPawnCharger;
-                if (targetBuilding is Building_ChargingBed || targetBuilding is Building_ChargingStation)
-                {
-                    compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
-                }
+                CompPawnCharger compPawnCharger = targetBuilding.TryGetComp<CompPawnCharger>();
                 // If it's not a charging bed or a charging station, we need to grab the linkable bedside charger that this bed is attached to.
-                else
+                if (compPawnCharger == null)
                 {
                     compPawnCharger = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null)?.TryGetComp<CompPawnCharger>();
                 }
-                compPawnCharger.Notify_ConsumerRemoved(actor);
+                compPawnCharger?.Notify_ConsumerRemoved(actor);
             });
             return layDown;
         }

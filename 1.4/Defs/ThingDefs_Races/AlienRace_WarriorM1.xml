@@ -93,6 +93,11 @@
 			<baseHungerRate>1</baseHungerRate>
 			<baseBodySize>0.65</baseBodySize>
 		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <droneSkillLevel>8</droneSkillLevel>
+			</li>
+		</modExtensions>
 		<butcherProducts>
             <Steel>30</Steel>
 			<Plasteel>15</Plasteel>

@@ -33,33 +33,37 @@ namespace ATReforged
         // Dialog options for initializing the mind of a mechanical unit that just had its autonomous core initialized.
         public Dialog_InitializeMind(Pawn newIntelligence) : base("ATR_InitializeMindDesc".Translate(), "ATR_SkyMindInitialization".Translate(), null, "ATR_AutomaticInitialization".Translate(), null, "ATR_InitializeMindTitle".Translate(), false)
         {
-            // If there is any intelligence in the SkyMind, then the new intelligence may copy it. It does not matter if the pawn is in a mind operation or is a controller - this is an immediate and sync-safe operation.
-            if (Utils.gameComp.GetCloudPawns().Count() + Utils.gameComp.networkedDevices.Where(thing => thing is Pawn).Count() > 0)
+            // If there is any idle intelligence in the SkyMind, then the new intelligence may download it. This is a standard download action.
+            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate());
+            IEnumerable<Thing> networkedPawns = Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.TryGetComp<CompSkyMindLink>()?.HasSurrogate() == false);
+            if (cloudPawns.Count() + networkedPawns.Count() > 0 && Utils.gameComp.networkedDevices.Count < Utils.gameComp.GetSkyMindNetworkSlots())
             {
                 buttonAAction = delegate ()
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns())
+                    foreach (Pawn pawn in cloudPawns)
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
-                            Utils.Duplicate(pawn, newIntelligence, false, false);
+                            Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
+                            newIntelligence.TryGetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
                     }
-                    foreach (Pawn pawn in Utils.gameComp.networkedDevices.Where(thing => thing is Pawn).Cast<Pawn>())
+                    foreach (Pawn pawn in networkedPawns.Cast<Pawn>())
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
-                            Utils.Duplicate(pawn, newIntelligence, false, false);
+                            Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
+                            newIntelligence.TryGetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
                     }
                     opts.SortBy((x) => x.Label);
 
                     if (opts.Count == 0)
-                        Log.Error("[ATR] Initializing a mind via SkyMind attempted but no viable cloud pawns were found! Unknown behavior may occur.");
+                        Log.Error("[ATR] Initializing a mind via SkyMind attempted but no viable pawns were found!");
                     Find.WindowStack.Add(new FloatMenu(opts, ""));
                 };
             }
@@ -70,6 +74,9 @@ namespace ATReforged
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
                 newPawn.story.Childhood = BackstoryDefOf.ATR_NewbootChildhood;
                 Utils.Duplicate(newPawn, newIntelligence, false, false);
+                Hediff rebootHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, newIntelligence, null);
+                rebootHediff.Severity = 1;
+                newIntelligence.health.AddHediff(rebootHediff);
             };
             closeOnCancel = false;
             closeOnAccept = false;

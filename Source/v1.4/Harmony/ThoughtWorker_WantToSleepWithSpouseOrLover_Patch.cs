@@ -6,7 +6,7 @@ namespace ATReforged
 {
     internal class ThoughtWorker_WantToSleepWithSpouseOrLover_Patch
     {
-        // Mechanical and Cloud pawns don't trigger spouse/lover sleeping needs.
+        // Cloud pawns don't trigger spouse/lover sleeping needs.
         [HarmonyPatch(typeof(ThoughtWorker_WantToSleepWithSpouseOrLover), "CurrentStateInternal")]
         public class CurrentStateInternal_Patch
         {
@@ -18,7 +18,7 @@ namespace ATReforged
 
                 Pawn otherPawn = LovePartnerRelationUtility.ExistingMostLikedLovePartnerRel(p, false).otherPawn;
 
-                if (Utils.IsConsideredMechanical(p) || Utils.IsConsideredMechanical(otherPawn) || Utils.gameComp.GetCloudPawns().Contains(p) || Utils.gameComp.GetCloudPawns().Contains(otherPawn))
+                if (Utils.gameComp.GetCloudPawns().Contains(p) || Utils.gameComp.GetCloudPawns().Contains(otherPawn))
                     __result = false;
             }
         }

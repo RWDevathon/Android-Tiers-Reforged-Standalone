@@ -186,7 +186,7 @@
 			<foodType>None</foodType>
 			<fleshType>AndroidTier</fleshType>
 			<bloodDef>CoolantAndroidTier</bloodDef>
-			<useMeatFrom>Alpaca</useMeatFrom>
+            <specificMeatDef>Steel</specificMeatDef>
 			<baseBodySize>2.4</baseBodySize>
 			<gestationPeriodDays>1</gestationPeriodDays>
 			<canBePredatorPrey>false</canBePredatorPrey>
@@ -237,6 +237,8 @@
 		</butcherProducts>
 		<modExtensions>
 			<li Class="ATReforged.ATR_MechTweaker">
+                <canBeDrone>false</canBeDrone>
+                <isSpecialMechanical>true</isSpecialMechanical>
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
