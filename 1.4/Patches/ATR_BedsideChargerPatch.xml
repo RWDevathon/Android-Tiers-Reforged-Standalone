@@ -7,6 +7,7 @@
         <xpath>Defs/ThingDef[@Name="BasicBedBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
             <li>ATR_BedsideCharger</li>
+			<li>ATR_WallCharger</li>
         </value>
 	</Operation>
 
@@ -16,6 +17,7 @@
         <xpath>Defs/ThingDef[defName="HospitalBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
             <li>ATR_BedsideCharger</li>
+			<li>ATR_WallCharger</li>
         </value>
 	</Operation>
 
@@ -23,6 +25,7 @@
         <xpath>Defs/ThingDef[defName="Bedroll"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
             <li>ATR_BedsideCharger</li>
+			<li>ATR_WallCharger</li>
         </value>
 	</Operation>
 
@@ -30,6 +33,7 @@
         <xpath>Defs/ThingDef[defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
             <li>ATR_BedsideCharger</li>
+			<li>ATR_WallCharger</li>
         </value>
 	</Operation>
 

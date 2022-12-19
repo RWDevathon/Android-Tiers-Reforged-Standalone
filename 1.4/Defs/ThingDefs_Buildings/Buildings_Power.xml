@@ -82,7 +82,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>ATR_BedsideCharger</defName>
         <label>bedside charger</label>
-        <description>A bedside device that allows the occupant of the linked bed to charge. This can provide energy while in bed, but consumes a lot of electricity. It must be placed directly adjacent to and facing the head of the bed.</description>
+        <description>A bedside device that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to and facing the head of the bed.</description>
         <graphicData>
             <texPath>Things/Building/Misc/VitalsMonitor</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -145,6 +145,47 @@
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
     </ThingDef>
+	
+	<ThingDef ParentName="ATR_BedsideCharger">
+		<defName>ATR_WallCharger</defName>
+		<label>wall-mounted charger</label>
+		<description>A wall-mounted power outlet with an integrated voltage converter that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to the head of the bed.</description>
+		<graphicData>
+			<texPath>WallCharger/ATR_WallCharger</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>1,1</drawSize>
+		</graphicData>
+		<uiIconPath>WallCharger/ATR_WallCharger_UI</uiIconPath>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Blueprint</altitudeLayer>
+		<passability>Standable</passability>
+		<fillPercent>0.1</fillPercent>
+		<costList>
+            <Steel>5</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<comps>
+			<li>
+				<compClass>ATReforged.CompPawnCharger</compClass>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>20</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>1</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToAndFacingBedHead>false</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+			</li>
+		</comps>
+	</ThingDef>
 
     <!-- Charging Pods -->
 
