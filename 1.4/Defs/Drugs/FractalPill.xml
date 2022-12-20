@@ -48,9 +48,6 @@
 		<label>Fractal Warping</label>
 		<description>Fractal warping of the body. As flesh toughens and takes on metallic qualities and the mind rots and yet also grows, a uniquely enlightening and agonizing perspective takes hold. This is the archotech's work, but for what inscrutable purpose was this warping manifested?</description>
 		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>0</severityPerDay>
-			</li>
             <li Class="HediffCompProperties_HealPermanentWounds" />
 		</comps>
 		<defaultLabelColor>(255, 130, 0)</defaultLabelColor>

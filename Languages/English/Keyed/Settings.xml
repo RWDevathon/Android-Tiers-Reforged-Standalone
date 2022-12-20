@@ -91,7 +91,11 @@
 	<ATR_passionSoftCap>Passion soft-cap before cost increases per passion [default: 8]</ATR_passionSoftCap>
 	<ATR_basePointsNeededForPassion>Base skill points needed per passion [default: 5000]</ATR_basePointsNeededForPassion>
 
+        <!-- Cloud -->
     <ATR_UploadingKills>Uploading to SkyMind turns the initiator's body into a blank.</ATR_UploadingKills>
     <ATR_UploadingPermakills>Uploading to SkyMind leaves the initiator's body completely useless and dead.</ATR_UploadingPermakills>
     <ATR_SkyMindOperationTimeRequired>Hours required to complete SkyMind operations [default: 24]</ATR_SkyMindOperationTimeRequired>
+
+        <!-- Surrogates -->
+    <safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties<safeSurrogateConnectivityCountBeforePenalty>
 </LanguageData>

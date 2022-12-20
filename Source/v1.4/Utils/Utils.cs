@@ -134,7 +134,7 @@ namespace ATReforged
 
         public static bool IsSurrogate(Pawn pawn)
         { // Returns true if the pawn has a receiver core or a receiver implant.
-            return pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_ReceiverCore || hediff.def == HediffDefOf.ATR_SkyMindReceiver).Any();
+            return pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_ReceiverCore || hediff.def == HediffDefOf.ATR_SkyMindReceiver);
         }
 
         // Returns true if the pawn is a surrogate and has an active controller.

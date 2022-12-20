@@ -7,7 +7,7 @@ namespace ATReforged
 {
     internal class RestUtility_Patch
     {
-        /*
+        /* TODO: Remove RestUtility_Patch once verification of charging working without it is complete.
         // Mechanicals that can charge will only consider active charging beds as valid.
         [HarmonyPatch(typeof(RestUtility), "IsValidBedFor")]
         public class IsValidBedFor_Patch
