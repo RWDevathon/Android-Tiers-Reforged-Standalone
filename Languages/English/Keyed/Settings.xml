@@ -97,5 +97,5 @@
     <ATR_SkyMindOperationTimeRequired>Hours required to complete SkyMind operations [default: 24]</ATR_SkyMindOperationTimeRequired>
 
         <!-- Surrogates -->
-    <safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties</safeSurrogateConnectivityCountBeforePenalty>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties:</ATR_safeSurrogateConnectivityCountBeforePenalty>
 </LanguageData>
