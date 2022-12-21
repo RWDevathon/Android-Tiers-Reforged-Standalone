@@ -47,12 +47,7 @@ namespace ATReforged
 
         public void SpawnPawn()
         {
-            PawnKindDef landingMech;
-            if (Rand.Chance(0.25f))
-                landingMech = PawnKindDefOf.M8MechPawn;
-            else
-                landingMech = PawnKindDefOf.M7MechPawn;
-            PawnGenerationRequest request = new PawnGenerationRequest(landingMech, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.M7MechPawn, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
             Pawn pawn = PawnGenerator.GeneratePawn(request);
             FilthMaker.TryMakeFilth(Position, Map, RimWorld.ThingDefOf.Filth_RubbleBuilding, 30);
 

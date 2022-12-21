@@ -9,7 +9,15 @@ namespace ATReforged
         {
             base.PostMake();
             // Initialize mutation ticks so that the fractal warping will mutate every 10 - 20 days.
-            nextMutationTick = ageTicks + Rand.RangeInclusive(600000, 1200000);
+            nextMutationTick = ageTicks + Rand.RangeInclusive(120000, 240000);
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref isTerminal, "ATR_FractalTerminalBool", false);
+            Scribe_Values.Look(ref nextMutationTick, "ATR_nextMutationTick", 0);
         }
 
         private void ChangeState()
@@ -44,7 +52,7 @@ namespace ATReforged
                 severityInt -= .1f;
             }
             // Pick some time in the next 10 - 20 days for mutation.
-            nextMutationTick = ageTicks + Rand.RangeInclusive(600000, 1200000);
+            nextMutationTick = ageTicks + Rand.RangeInclusive(120000, 240000);
         }
 
         public override bool TryMergeWith(Hediff other)
