@@ -14,6 +14,7 @@
 			<ArmorRating_Blunt>1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>1</ArmorRating_Sharp>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
             <InjuryHealingFactor>10</InjuryHealingFactor>
 			<MeatAmount>50</MeatAmount>
 			<LeatherAmount>40</LeatherAmount>
