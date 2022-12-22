@@ -28,7 +28,7 @@
 			<packAnimal>true</packAnimal>
 			<baseBodySize>2.4</baseBodySize>
 			<baseHealthScale>2</baseHealthScale>
-            <baseHungerRate>0.4</baseHungerRate>
+            <baseHungerRate>0.25</baseHungerRate>
 			<nameOnTameChance>1</nameOnTameChance>
 			<trainability>Advanced</trainability>
 			<lifeStageAges>
