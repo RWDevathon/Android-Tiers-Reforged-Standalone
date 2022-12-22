@@ -14,8 +14,8 @@
 				<eggUnfertilizedDef>ChemCapsule</eggUnfertilizedDef>
 				<eggFertilizedDef>ChemCapsule</eggFertilizedDef>
 				<eggFertilizationCountMax>1</eggFertilizationCountMax>
-				<eggLayIntervalDays>2</eggLayIntervalDays>
-				<eggCountRange>5</eggCountRange>
+				<eggLayIntervalDays>1</eggLayIntervalDays>
+				<eggCountRange>1</eggCountRange>
 				<eggLayFemaleOnly>false</eggLayFemaleOnly>
 			</li>
 		</comps>
@@ -32,6 +32,7 @@
 		</tools>
 		<race>
 			<body>ATR_MechBipedal</body>
+            <baseHungerRate>0.14</baseHungerRate>
 			<baseBodySize>0.3</baseBodySize>
 			<baseHealthScale>0.5</baseHealthScale>
 			<foodType>OmnivoreRoughAnimal</foodType>
