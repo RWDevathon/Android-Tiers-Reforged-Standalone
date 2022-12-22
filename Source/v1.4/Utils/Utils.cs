@@ -154,8 +154,9 @@ namespace ATReforged
         { // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
             try
             {
-                if (victims != null)
-                { // Victims were directly attacked by a hack and get a worse mood debuff
+                // Victims were directly attacked by a hack and get a worse mood debuff
+                if (victims != null && victims.Count() > 0)
+                { 
                     foreach (Pawn pawn in victims)
                     {
                         pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forVictim ?? SkyMindAttackVictimDef);
@@ -163,9 +164,12 @@ namespace ATReforged
                 }
 
                 // Witnesses (connected to SkyMind but not targetted directly) get a minor mood debuff
-                foreach (Pawn pawn in gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && !victims.Contains(pawn)).Cast<Pawn>())
+                foreach (Thing thing in gameComp.GetSkyMindDevices())
                 {
-                    pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? SkyMindAttackVictimDef);
+                    if (thing is Pawn pawn && (victims == null || !victims.Contains(pawn)))
+                    {
+                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? SkyMindAttackVictimDef);
+                    }
                 }
             }
             catch (Exception ex)
