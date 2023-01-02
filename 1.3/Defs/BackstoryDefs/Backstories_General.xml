@@ -1678,7 +1678,7 @@
 		<defName>AndroidMechanicalPriest</defName>
 		<title>Mechanical priest</title>
 		<titleShort>Priest</titleShort>
-		<baseDescription>Someday, something short-circuited in {PAWN_nameDef_possessive} wiring. This resulted in {PAWN_objective} seeing visions of a godlike android, which {PAWN_objective} obsessed over. One day {PAWN_pronoun} saw a vision, one that told {PAWN_objective} to convert as many beings to {PAWN_possessive} religion as possible, by any means necessary.</baseDescription>
+		<baseDescription>Someday, something short-circuited in {PAWN_possessive} wiring. This resulted in {PAWN_nameDef} seeing visions of a godlike android, which {PAWN_objective} obsessed over. One day {PAWN_pronoun} saw a vision, one that told {PAWN_objective} to convert as many beings to {PAWN_possessive} religion as possible, by any means necessary.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1707,7 +1707,7 @@
 		<defName>AndroidHacked</defName>
 		<title>Hacked android</title>
 		<titleShort>Hacked</titleShort>
-		<baseDescription>{PAWN_nameDef} was a party entertainer until he was hacked into by an urbworld teen. The teen hated mechanoids and wanted to make them seem like terrible, soulless creations. {PAWN_nameDef_possessive} programming was modified to kill everyone at an event they were hired for.</baseDescription>
+		<baseDescription>{PAWN_nameDef} was a party entertainer until {PAWN_pronoun} was hacked into by an urbworld teen. The teen hated mechanoids and wanted to make them seem like terrible, soulless creations. {PAWN_possessive} programming was modified to kill everyone at an event they were hired for.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Adulthood</slot>
 		<spawnCategories>
