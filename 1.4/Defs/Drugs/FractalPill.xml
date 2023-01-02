@@ -48,9 +48,6 @@
 		<label>Fractal Warping</label>
 		<description>Fractal warping of the body. As flesh toughens and takes on metallic qualities and the mind rots and yet also grows, a uniquely enlightening and agonizing perspective takes hold. This is the archotech's work, but for what inscrutable purpose was this warping manifested?</description>
 		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>0</severityPerDay>
-			</li>
             <li Class="HediffCompProperties_HealPermanentWounds" />
 		</comps>
 		<defaultLabelColor>(255, 130, 0)</defaultLabelColor>
@@ -62,134 +59,195 @@
 			<li>
 				<minSeverity>0.0</minSeverity>
 				<label>Transcendant</label>
-				<painOffset>0.05</painOffset>
+				<painFactor>2</painFactor>
 				<vomitMtbDays>16</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>8</offset>
+						<offset>0.6</offset>
 					</li>
 					<li>
+						<capacity>Talking</capacity>
+						<offset>0.8</offset>
+					</li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.8</offset>
+                    </li>
+					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>10</offset>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<GlobalLearningFactor>12</GlobalLearningFactor>
-					<WorkSpeedGlobal>3</WorkSpeedGlobal>
-					<MentalBreakThreshold>-0.50</MentalBreakThreshold>
-					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+					<GlobalLearningFactor>1</GlobalLearningFactor>
+					<MentalBreakThreshold>0.16</MentalBreakThreshold>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.05</minSeverity>
 				<label>Blessed</label>
-				<painOffset>0.1</painOffset>
-				<vomitMtbDays>8</vomitMtbDays>
+				<painFactor>1.5</painFactor>
+				<vomitMtbDays>16</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>6</offset>
+						<offset>0.3</offset>
 					</li>
 					<li>
+						<capacity>Talking</capacity>
+						<offset>0.4</offset>
+					</li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.4</offset>
+                    </li>
+					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>4</offset>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<GlobalLearningFactor>8</GlobalLearningFactor>
-					<WorkSpeedGlobal>1</WorkSpeedGlobal>
-					<MentalBreakThreshold>-0.30</MentalBreakThreshold>
+					<GlobalLearningFactor>0.5</GlobalLearningFactor>
+					<MentalBreakThreshold>0.08</MentalBreakThreshold>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.15</minSeverity>
 				<label>Gifted</label>
-				<painOffset>0.2</painOffset>
-				<vomitMtbDays>4</vomitMtbDays>
+				<painFactor>1.25</painFactor>
+				<vomitMtbDays>8</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>2</offset>
+						<offset>0.15</offset>
 					</li>
 					<li>
+						<capacity>Talking</capacity>
+						<offset>0.2</offset>
+					</li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.2</offset>
+                    </li>
+					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>4</offset>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<GlobalLearningFactor>2</GlobalLearningFactor>
-					<WorkSpeedGlobal>0.50</WorkSpeedGlobal>
-					<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+					<GlobalLearningFactor>0.25</GlobalLearningFactor>
+					<MentalBreakThreshold>0.04</MentalBreakThreshold>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.25</minSeverity>
 				<label>Balanced</label>
-				<painOffset>0.05</painOffset>
-				<vomitMtbDays>2</vomitMtbDays>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>0.5</offset>
-					</li>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>4</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<GlobalLearningFactor>0.05</GlobalLearningFactor>
-					<WorkSpeedGlobal>0.10</WorkSpeedGlobal>
-					<MentalBreakThreshold>-0.05</MentalBreakThreshold>
-					<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.35</minSeverity>
-				<label>Tainted</label>
-				<painOffset>0.2</painOffset>
 				<vomitMtbDays>4</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>.75</offset>
+						<offset>0.15</offset>
 					</li>
 					<li>
+						<capacity>Talking</capacity>
+						<offset>0.2</offset>
+					</li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.2</offset>
+                    </li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.2</offset>
+                    </li>
+					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>4</offset>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
 					</li>
 				</capMods>
-				<statOffsets>
-					<MoveSpeed>1</MoveSpeed>
-					<WorkSpeedGlobal>1.00</WorkSpeedGlobal>
-					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.35</minSeverity>
+				<label>Tainted</label>
+				<painFactor>0.75</painFactor>
+				<vomitMtbDays>2</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.2</offset>
+                    </li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
+					</li>
+				</capMods>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
 			</li>
 			<li>
 				<minSeverity>0.45</minSeverity>
 				<label>Vile</label>
-				<painOffset>0.3</painOffset>
-				<vomitMtbDays>8</vomitMtbDays>
+				<painFactor>0.5</painFactor>
+				<vomitMtbDays>1</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>1.5</offset>
+						<offset>0.3</offset>
 					</li>
 					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.4</offset>
+					</li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.4</offset>
+                    </li>
+					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>4</offset>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
 					</li>
 				</capMods>
-				<statOffsets>
-					<MoveSpeed>2</MoveSpeed>
-					<WorkSpeedGlobal>3.00</WorkSpeedGlobal>
-					<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.6</IncomingDamageFactor>
+                </statFactors>
 			</li>
 			<li>
 				<minSeverity>0.5</minSeverity>
@@ -204,15 +262,12 @@
 		<defName>ATR_FractalPillMechanical</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Fractal Integration</label>
-		<description>Fractal integration into the whole chassis. Substantially improves all aspects of existence at the cost of the need to defragment memory occasionally. The emotional burden of being blessed with knowledge also takes its toll.</description>
+		<description>Fractal integration into the whole chassis. While the warping that occurs is harmless to the unit, this also means the effects are vastly reduced. Indeed, a larger and warped ego seems more overt than any physical change - although occasional memory defragmentations are necessary. Perhaps archotechs did not design fractal warping with machines in mind, and find its application to them uninteresting?</description>
 		<defaultLabelColor>(0.9,0.9,1)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>0</severityPerDay>
-			</li>
             <li Class="HediffCompProperties_HealPermanentWounds" />
 		</comps>
 		<stages>
@@ -225,20 +280,18 @@
 				<label>Awakened</label>
 				<capMods>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>0.2</offset>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
 					</li>
 					<li>
-						<capacity>Moving</capacity>
-						<offset>0.2</offset>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
 					<GlobalLearningFactor>0.25</GlobalLearningFactor>
-					<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
 					<MentalBreakThreshold>0.04</MentalBreakThreshold>
-					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 			<li>
@@ -247,42 +300,32 @@
 				<hungerRateFactorOffset>1.25</hungerRateFactorOffset>
 				<capMods>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>0.55</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>0.55</offset>
-					</li>
-					<li>
 						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
 						<offset>0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
 					<GlobalLearningFactor>0.5</GlobalLearningFactor>
-					<WorkSpeedGlobal>0.55</WorkSpeedGlobal>
 					<MentalBreakThreshold>0.08</MentalBreakThreshold>
-					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.7</minSeverity>
 				<label>Enlightened</label>
-				<hungerRateFactorOffset>2.5</hungerRateFactorOffset>
+				<hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 				<capMods>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>1.5</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>1.5</offset>
-					</li>
-					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.8</offset>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
 					</li>
 				</capMods>
 				<mentalStateGivers>
@@ -292,29 +335,23 @@
 					</li>
 				</mentalStateGivers>
 				<statOffsets>
-					<GlobalLearningFactor>1.4</GlobalLearningFactor>
+					<GlobalLearningFactor>0.75</GlobalLearningFactor>
 					<MentalBreakThreshold>0.12</MentalBreakThreshold>
-					<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
-					<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>1</minSeverity>
 				<label>Transcendant</label>
-				<hungerRateFactorOffset>4</hungerRateFactorOffset>
+				<hungerRateFactorOffset>2</hungerRateFactorOffset>
 				<capMods>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>3.5</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>3.5</offset>
-					</li>
-					<li>
 						<capacity>Consciousness</capacity>
-						<offset>3</offset>
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.4</offset>
 					</li>
 				</capMods>
 				<mentalStateGivers>
@@ -324,11 +361,9 @@
 					</li>
 				</mentalStateGivers>
 				<statOffsets>
-					<GlobalLearningFactor>4</GlobalLearningFactor>
+					<GlobalLearningFactor>1</GlobalLearningFactor>
 					<MentalBreakThreshold>0.16</MentalBreakThreshold>
-					<WorkSpeedGlobal>3.2</WorkSpeedGlobal>
-					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 		</stages>

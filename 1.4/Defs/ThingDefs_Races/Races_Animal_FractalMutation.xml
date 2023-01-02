@@ -5,7 +5,7 @@
 	<ThingDef ParentName="BasePawn">
 		<defName>ATR_FractalAbomination</defName>
 		<label>Fractal Abomination</label>
-		<description>The warped and horrific results of fully fledged fractal warping, abominations are relentless killers and nightmarish beings. Capable of and willing to chase any creature that crosses its path, their echoing screams of damnation are common fodder for even glitterworld horror media. \n\nTo those who know no fear, or to researchers of the archotechs, these beings are of great interest. Born of and yielding so-called fractal pills, abominations are drawn to archotech devices - often congregating around especially powerful artifacts. For this reason, morally corrupt archeologists have been known to forceably create abominations in order to follow them to archotech ruins, often only to be murdered by it upon arrival.</description>
+		<description>The warped and horrific results of fully fledged fractal warping, abominations are relentless killers and nightmarish beings. Capable of and willing to chase any creature that crosses its path, their echoing screams of damnation are common fodder for even glitterworld horror media. \n\nTo those who know no fear, or to researchers of the archotechs, these beings are of great interest. Born of and yielding so-called fractal pills, abominations are drawn to archotech devices - often congregating around especially powerful artifacts. For this reason, morally corrupt archeologists have been known to stalk abominations in order to follow them to archotech ruins, often only to be murdered by it upon arrival.</description>
 		<statBases>
 			<Mass>80</Mass>
 			<MoveSpeed>6.5</MoveSpeed>
@@ -14,6 +14,7 @@
 			<ArmorRating_Blunt>1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>1</ArmorRating_Sharp>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
             <InjuryHealingFactor>10</InjuryHealingFactor>
 			<MeatAmount>50</MeatAmount>
 			<LeatherAmount>40</LeatherAmount>

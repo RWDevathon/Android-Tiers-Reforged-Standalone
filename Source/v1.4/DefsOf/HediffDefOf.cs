@@ -20,6 +20,8 @@ namespace ATReforged
 
         public static HediffDef RecoveringFromDDOS;
 
+        public static HediffDef ATR_SplitConsciousness;
+
         public static HediffDef ATR_ShortReboot;
 
         public static HediffDef ATR_LongReboot;

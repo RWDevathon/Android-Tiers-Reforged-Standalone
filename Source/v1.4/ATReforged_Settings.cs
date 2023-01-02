@@ -76,18 +76,21 @@ namespace ATReforged
         public static int minGroupSizeForSurrogates = 5;
         public static float minSurrogatePercentagePerLegalGroup = 0.2f;
         public static float maxSurrogatePercentagePerLegalGroup = 0.7f;
-        
-            // Settings for Cloud
-        public static bool uploadingToSkyMindKills = true;
-        public static bool uploadingToSkyMindPermaKills = true;
-        public static int timeToCompleteSkyMindOperations = 24;
-        public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
+
+        public static int safeSurrogateConnectivityCountBeforePenalty = 1;
 
             // Settings for Skill Points
         public static bool receiveSkillAlert = true;
         public static float skillPointConversionRate = 0.5f;
         public static int passionSoftCap = 8;
         public static float basePointsNeededForPassion = 5000f;
+
+            // Settings for Cloud
+        public static bool uploadingToSkyMindKills = true;
+        public static bool uploadingToSkyMindPermaKills = true;
+        public static int timeToCompleteSkyMindOperations = 24;
+        public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
+
 
         // STATS SETTINGS
 
@@ -295,6 +298,10 @@ namespace ATReforged
                     listingStandard.CheckboxLabeled("ATR_UploadingPermakills".Translate(), ref uploadingToSkyMindPermaKills, onChange: onChange);
                     string SkyMindOperationTimeBuffer = timeToCompleteSkyMindOperations.ToString();
                     listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 256);
+                    listingStandard.GapLine();
+
+                    string safeSurrogateConnectivityCountBeforePenaltyBuffer = safeSurrogateConnectivityCountBeforePenalty.ToString();
+                    listingStandard.TextFieldNumericLabeled("ATR_safeSurrogateConnectivityCountBeforePenalty".Translate(), ref safeSurrogateConnectivityCountBeforePenalty, ref safeSurrogateConnectivityCountBeforePenaltyBuffer, 1, 40);
                     break;
                 }
                 default:
@@ -369,6 +376,9 @@ namespace ATReforged
             uploadingToSkyMindKills = true;
             uploadingToSkyMindPermaKills = true;
             timeToCompleteSkyMindOperations = 24;
+
+            // Surrogates
+            safeSurrogateConnectivityCountBeforePenalty = 1;
 
             RebuildCaches();
         }
@@ -537,6 +547,9 @@ namespace ATReforged
             Scribe_Values.Look(ref uploadingToSkyMindKills, "ATR_uploadingToSkyMindKills", true);
             Scribe_Values.Look(ref uploadingToSkyMindPermaKills, "ATR_uploadingToSkyMindPermaKills", true);
             Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 24);
+
+            // Surrogates
+            Scribe_Values.Look(ref safeSurrogateConnectivityCountBeforePenalty, "ATR_safeSurrogateConnectivityCountBeforePenalty", 1);
         }
     }
 

@@ -68,7 +68,7 @@
 					<GlobalLearningFactor>2</GlobalLearningFactor>
 				</statOffsets>
                 <statFactors>
-                    <HackingSpeed>1.6</HackingSpeed>
+                    <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1.6</HackingSpeed>
 					<ResearchSpeed>1.6</ResearchSpeed>
                 </statFactors>
 			</li>
@@ -341,10 +341,10 @@
 			<li>
 				<statOffsets>
 					<MiningYield>0.5</MiningYield>
-          			<DeepDrillingSpeed>0.5</DeepDrillingSpeed>
 				</statOffsets>
                 <statFactors>
 					<MiningSpeed>1.6</MiningSpeed>
+          			<DeepDrillingSpeed>1.6</DeepDrillingSpeed>
                 </statFactors>
 			</li>
 		</stages>

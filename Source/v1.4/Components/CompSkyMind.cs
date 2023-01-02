@@ -110,8 +110,9 @@ namespace ATReforged
             {
                 int status = integrityBreach;
                 integrityBreach = value;
-                if(integrityBreach == -1 && status != -1)
-                { // Device is no longer breached. Release restrictions and remove from the virus list.
+                // Device is no longer breached. Release restrictions and remove from the virus list.
+                if (integrityBreach == -1 && status != -1)
+                { 
                     if (parent is Pawn pawn)
                     { // Release hacked pawns. Surrogates are downed. All pawns undergo a full system reboot.
                         Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
@@ -122,8 +123,9 @@ namespace ATReforged
                             pawn.health.AddHediff(HediffDefOf.ATR_NoController);
                         }
                     }
+                    // Handle buildings that lost power.
                     else
-                    { // Handle buildings that lost power.
+                    { 
                         CompFlickable cf = parent.TryGetComp<CompFlickable>();
                         if (cf != null)
                         {
@@ -135,13 +137,14 @@ namespace ATReforged
                 }
                 else
                 {
+                    // Breached building. Hacking effect is that it gets turned off and is applied to a hostile faction until released.
                     if (parent is Building)
-                    { // Breached building. Hacking effect is that it gets turned off and is applied to a neutral faction until released.
+                    {
                         CompFlickable cf = parent.TryGetComp<CompFlickable>();
                         if (cf != null)
                         {
                             cf.SwitchIsOn = false;
-                            parent.SetFaction(null);
+                            parent.SetFaction(Faction.OfAncientsHostile);
                         }
                     }
                 }

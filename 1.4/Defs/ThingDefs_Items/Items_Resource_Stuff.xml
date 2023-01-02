@@ -3,7 +3,7 @@
   
 	<RecipeDef>
 		<defName>Make_ChemfuelFromChemCapsule</defName>
-		<label>make chemfuel from chemical capsules</label>
+		<label>synthesize chemfuel from chemical capsules</label>
 		<description>Make a batch of chemfuel by refining the raw resources within chemical capsules.</description>
 		<jobString>Refining chemfuel from capsules.</jobString>
 		<effectWorking>Cremate</effectWorking>
@@ -17,7 +17,7 @@
 						<li>ChemCapsule</li>
 					</thingDefs>
 				</filter>
-				<count>2</count>
+				<count>4</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -26,7 +26,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Chemfuel>15</Chemfuel>
+			<Chemfuel>10</Chemfuel>
 		</products>
         <recipeUsers>
             <li>BiofuelRefinery</li>
@@ -36,12 +36,12 @@
 	
 	<RecipeDef>
 		<defName>Make_NeutroamineFromChemCapsule</defName>
-		<label>make neutroamine from chemical capsules</label>
+		<label>synthesize neutroamine from chemical capsules</label>
 		<description>Make a batch of neutroamine by refining the raw resources within chemical capsules.</description>
 		<jobString>Refining neutroamine from capsules.</jobString>
 		<effectWorking>Cremate</effectWorking>
 		<soundWorking>Recipe_Cremate</soundWorking>
-		<workAmount>2000</workAmount>
+		<workAmount>1400</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<ingredients>
 			<li>
@@ -50,7 +50,7 @@
 						<li>ChemCapsule</li>
 					</thingDefs>
 				</filter>
-				<count>2</count>
+				<count>4</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -59,7 +59,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Neutroamine>5</Neutroamine>
+			<Neutroamine>2</Neutroamine>
 		</products>
 	    <recipeUsers>
             <li>BiofuelRefinery</li>
@@ -81,7 +81,7 @@
         <stackLimit>50</stackLimit>
         <statBases>
             <MaxHitPoints>70</MaxHitPoints>
-            <MarketValue>10</MarketValue>
+            <MarketValue>5</MarketValue>
             <Mass>0.1</Mass>
             <Flammability>1.2</Flammability>
             <DeteriorationRate>2.0</DeteriorationRate>
@@ -102,12 +102,12 @@
         <stackLimit>150</stackLimit>
         <socialPropernessMatters>true</socialPropernessMatters>
         <statBases>
-        <MarketValue>8</MarketValue>
-        <Mass>0.02</Mass>
-        <MaxHitPoints>60</MaxHitPoints>
-        <Flammability>0.1</Flammability>
-        <Nutrition>0.15</Nutrition>
-        <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+            <MarketValue>8</MarketValue>
+            <Mass>0.04</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.1</Flammability>
+            <Nutrition>0.15</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">

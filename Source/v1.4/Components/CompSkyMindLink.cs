@@ -454,8 +454,22 @@ namespace ATReforged
             // Foreign controllers aren't saved, so only handle linking the surrogate and controller together if it's a player pawn.
             if (!external)
             {
+                // Ensure both pawns link to one another in their surrogatePawns.
                 surrogatePawns.Add(surrogate);
                 surrogate.TryGetComp<CompSkyMindLink>().surrogatePawns.Add(ThisPawn);
+
+                // If this is not a cloud pawn, both the surrogate and controller should have Hediff_SplitConsciousness.
+                if (!Utils.gameComp.GetCloudPawns().Contains(ThisPawn))
+                {
+                    Hediff splitConsciousness = HediffMaker.MakeHediff(HediffDefOf.ATR_SplitConsciousness, surrogate);
+                    surrogate.health.AddHediff(splitConsciousness);
+                    if (!ThisPawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_SplitConsciousness))
+                    {
+                        splitConsciousness = HediffMaker.MakeHediff(HediffDefOf.ATR_SplitConsciousness, ThisPawn);
+                        ThisPawn.health.AddHediff(splitConsciousness);
+                    }
+                }
+
                 FleckMaker.ThrowDustPuffThick(surrogate.Position.ToVector3Shifted(), surrogate.Map, 4.0f, Color.blue);
                 Messages.Message("ATR_SurrogateControlled".Translate(ThisPawn.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
                 Linked = -2;
@@ -485,7 +499,7 @@ namespace ATReforged
             return surrogatePawns; 
         }
 
-        // Called only on controlled surrogates, this will deactivate the surrogate and inform the controller it was disconnected. External controllers (other factions) are deleted.
+        // Called only on controlled surrogates, this will deactivate the surrogate and inform the controller it was disconnected.
         public void DisconnectController()
         {
             if (!HasSurrogate() && !isForeign)

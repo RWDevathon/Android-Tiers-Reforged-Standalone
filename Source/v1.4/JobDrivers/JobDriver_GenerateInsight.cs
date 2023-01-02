@@ -33,7 +33,7 @@ namespace ATReforged
             generateInsight.tickAction = delegate
             {
                 Pawn actor = generateInsight.actor;
-                float pointsGenerated = 0.002f;
+                float pointsGenerated = 0.008f;
                 pointsGenerated *= actor.GetStatValue(RimWorld.StatDefOf.ResearchSpeed);
                 pointsGenerated *= TargetThingA.GetStatValue(RimWorld.StatDefOf.ResearchSpeedFactor);
                 Utils.gameComp.ChangeServerPoints(pointsGenerated, CompInsightBench.ServerType);

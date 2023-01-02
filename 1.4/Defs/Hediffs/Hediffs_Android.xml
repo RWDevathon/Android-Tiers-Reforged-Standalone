@@ -149,7 +149,7 @@
     <HediffDef>
         <defName>RecoveringFromDDOS</defName>
         <label>DDOS Recovery</label>
-        <description>This unit is recovering from exposure to a DDOS attack. Recompiling and separating junk data from true data is a strenous and distracting activity as little data can be fully trusted until it is complete.</description>
+        <description>This unit is recovering from exposure to a DDOS attack. Recompiling and separating junk data from true data is a frustrating and distracting activity as little data can be fully trusted until it is complete.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>1</initialSeverity>
         <isBad>false</isBad>
