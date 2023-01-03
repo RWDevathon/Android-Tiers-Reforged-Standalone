@@ -21,5 +21,7 @@ namespace ATReforged
         public static StatDef MechanicalTendQualityOffset;
 
         public static StatDef MechanicalSurgerySuccessChanceFactor;
+
+        public static StatDef ATR_MaintenanceRetention;
     }
 }

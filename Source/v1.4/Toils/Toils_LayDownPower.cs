@@ -1,6 +1,5 @@
 ﻿using Verse;
 using Verse.AI;
-using System;
 using RimWorld;
 
 namespace ATReforged
@@ -15,7 +14,7 @@ namespace ATReforged
         private static readonly FleckDef halfChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_HalfChargeFleck");
         private static readonly FleckDef emptyChargeFleck = DefDatabase<FleckDef>.GetNamed("ATR_EmptyChargeFleck");
 
-        public static Toil LayDown(TargetIndex chargingBuilding, bool hasBed)
+        public static Toil LayDown(TargetIndex chargingBuilding, bool hasBed, bool lookForOtherJobs = true, bool canSleep = true)
         {
             Toil layDown = new Toil();
 
@@ -70,9 +69,6 @@ namespace ATReforged
                 {
                     ThoughtUtility.RemovePositiveBedroomThoughts(actor);
                 }
-
-                // Mark the pawn as sleeping for targetting information for other factions.
-                actor.GetComp<CompCanBeDormant>()?.ToSleep();
             };
 
             // Responsible for handling information done per tick of the action, including gaining energy and checking if the job fails for a particular reason.
@@ -96,7 +92,7 @@ namespace ATReforged
                 Need_Rest restNeed = actor.needs.rest;
 
                 // If the pawn is not asleep, check to see if they should sleep.
-                if (!curDriver.asleep)
+                if (!curDriver.asleep && canSleep)
                 {
                     // Pawn falls asleep if their rest need or food need is low enough.
                     if ((restNeed != null && RestUtility.CanFallAsleep(actor)) || (foodNeed != null && foodNeed.CurLevelPercentage < 0.9f))
@@ -106,6 +102,7 @@ namespace ATReforged
                 }
 
                 // If the power source is offline for some reason, then abort the job. Downed pawns do not have a choice of exiting the job in this way.
+                // Pawns that are using this bed for some other purpose (like maintenance) will not abort either, as charging is not their primary job here.
                 Thing targetBuilding = actor.CurJob.GetTarget(chargingBuilding).Thing;
                 Thing powerSource;
                 if (targetBuilding.TryGetComp<CompPawnCharger>() != null)
@@ -117,7 +114,7 @@ namespace ATReforged
                 {
                     powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
                 }
-                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true)
+                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true && lookForOtherJobs)
                 {
                     actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                     return;
@@ -126,14 +123,14 @@ namespace ATReforged
                 // if the pawn has their charge/rest need met (both if both exist, otherwise which ever one they have), then the job can be complete.
                 if (!actor.Downed && (foodNeed == null || foodNeed.CurLevelPercentage >= 1.0f || powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true) && (bed == null || restNeed == null || restNeed.CurLevelPercentage >= 1.0f))
                 {
-                    // If the job is complete by measures of needs, terminate the job if they are uninjured.
-                    if (!HealthAIUtility.ShouldSeekMedicalRest(actor))
+                    // If the job is complete by measures of needs, terminate the job if they are uninjured and not doing this toil as part of a non-charging job.
+                    if (!HealthAIUtility.ShouldSeekMedicalRest(actor) && lookForOtherJobs)
                     {
                         actor.jobs.EndCurrentJob(JobCondition.Succeeded, true);
                         return;
                     }
                     // If the pawn is injured but ready for other tasks (and isn't forced to do this one), then check if there is another preferred job.
-                    else if (!actor.jobs.curJob.restUntilHealed && actor.IsHashIntervalTick(211))
+                    else if (!actor.jobs.curJob.restUntilHealed && lookForOtherJobs && actor.IsHashIntervalTick(211))
                     {
                         actor.jobs.CheckForJobOverride();
                     }

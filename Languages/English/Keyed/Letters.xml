@@ -66,7 +66,7 @@
 	<ATR_IncidentDiplohackDefeated>Diplohack defeated</ATR_IncidentDiplohackDefeated>
 	
 	<ATR_IncidentDiplohackAttack>Diplohack</ATR_IncidentDiplohackAttack>
-	<ATR_IncidentDiplohackAttackDesc>Unknown hackers were able to decypher key lines of communication with {0}, and delivered a message to them credibly identifying you as the source. The message contained faulty information which led a caravan from {0} into an ambush. They made their displeasure with your "carelessness and weak security" in a strongly worded - and presumably real - diplomatic response. They promised to spread word of this incident to other factions as well.</ATR_IncidentDiplohackAttackDesc>
+	<ATR_IncidentDiplohackAttackDesc>Unknown hackers were able to decypher key lines of communication with {0}, and delivered a message to them credibly identifying you as the source. The message contained faulty information which led a caravan from {0} into an ambush. They made their displeasure with your "carelessness and weak security" clear in a strongly worded - and presumably real - diplomatic response. They promised to spread word of this incident to other factions as well.</ATR_IncidentDiplohackAttackDesc>
 	
 	<ATR_IncidentDiplohackAllyIntercept>Diplohack intercepted!</ATR_IncidentDiplohackAllyIntercept>
 	
@@ -87,7 +87,10 @@
 	<ATR_IncidentCounterhackAllyIntercept>Counterhack intercepted!</ATR_IncidentCounterhackAllyIntercept>
 
         <!-- Player Hacks failing -->
-    <ATR_RelationshipRetaliation>Relations Damaged</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliation>Relations damaged</ATR_RelationshipRetaliation>
     <ATR_RelationshipRetaliationDesc>The attempted operation was intercepted and defeated by target defense measures. The faction suspects you of committing the attempt, but lacks hard evidence tying you to the crime. The actual impact on relations, {0}, seems to have occurred because the individual who intercepted it decided to take it upon themselves to accuse you in front of anyone willing to listen. An unfortunate diplomatic incident.</ATR_RelationshipRetaliationDesc>
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>Poor maintenance</ATR_PoorMaintenanceLetter>
 	
 </LanguageData>

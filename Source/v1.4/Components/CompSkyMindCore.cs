@@ -200,7 +200,12 @@ namespace ATReforged
                 }
             };
 
-            // Allow connecting free SkyMind Intelligences to surrogates.
+            // No need to check surrogate conditions if settings forbid using them.
+            if (!ATReforged_Settings.surrogatesAllowed)
+            {
+                yield break;
+            }
+
             yield return new Command_Action
             {
                 icon = Tex.ConnectIcon,

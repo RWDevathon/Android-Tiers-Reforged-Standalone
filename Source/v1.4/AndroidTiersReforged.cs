@@ -73,7 +73,7 @@ namespace ATReforged
                         thingDef.comps.Add(cp);
                     }
 
-                    // Mechanical pawns do not need rest or get butchered like organics do.
+                    // Mechanical pawns do not need rest or get butchered like organics do. Mechanical pawns get the maintenance need unless they have a mod extension that prevents it.
                     if (Utils.IsConsideredMechanical(thingDef))
                     {
                         androidDisassembly.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
@@ -85,6 +85,15 @@ namespace ATReforged
                             ingestibleProps.preferability = FoodPreferability.Undefined;
                         }
                         thingDef.race.needsRest = false;
+
+                        if (thingDef.GetModExtension<ATR_MechTweaker>()?.needsMaintenance == true)
+                        {
+                            CompProperties cp = new CompProperties
+                            {
+                                compClass = typeof(CompMaintenanceNeed)
+                            };
+                            thingDef.comps.Add(cp);
+                        }
                     }
 
                     // Drones do not have learning factors.

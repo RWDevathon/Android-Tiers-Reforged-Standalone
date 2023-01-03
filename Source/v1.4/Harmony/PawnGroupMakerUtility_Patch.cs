@@ -18,6 +18,12 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(PawnGroupMakerParms parms, bool warnOnZeroResults, ref IEnumerable<Pawn> __result)
             {
+                // If settings disable this faction from using surrogates (or all surrogates are banned entirely), then there is no work to do here. Allow default generation to proceed.
+                if (!ATReforged_Settings.surrogatesAllowed || !ATReforged_Settings.otherFactionsAllowedSurrogates || parms.faction == null || !Utils.FactionCanUseSkyMind(parms.faction.def))
+                {
+                    return;
+                }
+
                 try
                 {
                     int nbHumanoids = 0;
@@ -25,14 +31,14 @@ namespace ATReforged
                     foreach (Pawn pawn in __result)
                     {
                         // Count all non-trader pawns with humanlike intelligence that aren't drones.
-                        if (pawn.def.race != null && pawn.def.race.Humanlike && pawn.trader == null && pawn.TraderKind == null)
+                        if (pawn.def.race != null && pawn.def.race.Humanlike && pawn.trader == null && pawn.TraderKind == null && !Utils.IsConsideredMechanicalDrone(pawn))
                         {
                             nbHumanoids++;
                         }
                     }
 
-                    // Skip factions not allowed to use surrogates or groups that are too small
-                    if (parms.faction == null || !ATReforged_Settings.otherFactionsAllowedSurrogates || !Utils.FactionCanUseSkyMind(parms.faction.def) || nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
+                    // Skip groups that are too small
+                    if (nbHumanoids <= ATReforged_Settings.minGroupSizeForSurrogates)
                     {
                         return;
                     }
@@ -110,7 +116,7 @@ namespace ATReforged
                             }
 
                         // Generate the new surrogate according to the above calcuations with the correct faction.
-                        Pawn surrogate = Utils.GenerateSurrogate(parms.faction, closestCombatPowerSurrogate, gender: chosenCandidate.gender);
+                        Pawn surrogate = Utils.GenerateSurrogate(closestCombatPowerSurrogate, chosenCandidate.gender);
 
                         // If resulting surrogate is not a pawn that is not a valid surrogate type, abandon and use the original candidate pawn.
                         if (!Utils.ValidSurrogatePawnKindDefs.Contains(surrogate.kindDef))

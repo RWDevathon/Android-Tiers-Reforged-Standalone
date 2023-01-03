@@ -41,5 +41,28 @@ namespace ATReforged
         public static HediffDef ATR_MindOperation;
 
         public static HediffDef ATR_NoController;
+
+        // Maintenance Part failures
+
+        public static HediffDef ATR_PartDecay;
+
+        public static HediffDef ATR_RustedPart;
+
+        public static HediffDef ATR_PowerLoss;
+
+        public static HediffDef ATR_DamagedCore;
+
+        public static HediffDef ATR_FailingCoolantValves;
+
+        public static HediffDef ATR_RogueMechanites;
+
+        // Maintenance effects
+
+        public static HediffDef ATR_MaintenanceCritical;
+
+        public static HediffDef ATR_MaintenancePoor;
+
+        public static HediffDef ATR_MaintenanceSatisfactory;
+
     }
 }

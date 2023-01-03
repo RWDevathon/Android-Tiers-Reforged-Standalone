@@ -7,6 +7,7 @@ namespace ATReforged
 {
     internal class InteractionWorker_EnslaveAttempt_Patch
     {
+        /* TODO: Verify this path is unnecessary as surrogates disconnect long before they can be imprisoned, let alone enslaved.
         // Surrogates disconnect on enslavement attempts.
         [HarmonyPatch(typeof(InteractionWorker_EnslaveAttempt), "Interacted")]
         public class InteractionWorker_EnslaveAttempt_Interacted
@@ -20,5 +21,6 @@ namespace ATReforged
                 }
             }
         }
+        */
     }
 }

@@ -170,18 +170,21 @@ namespace ATReforged
                 yield break;
             }
 
-            // Always show surrogate control mode, as any non-surrogate SkyMind connected pawn may use them.
-            yield return new Command_Toggle
+            // Show surrogate control mode as long as they are enabled via settings, as any non-surrogate SkyMind connected pawn may use them.
+            if (ATReforged_Settings.surrogatesAllowed)
             {
-                icon = Tex.ControlModeIcon,
-                defaultLabel = "ATR_ToggleControlMode".Translate(),
-                defaultDesc = "ATR_ToggleControlModeDesc".Translate(),
-                isActive = () => controlMode,
-                toggleAction = delegate ()
+                yield return new Command_Toggle
                 {
-                    ToggleControlMode();
-                }
-            };
+                    icon = Tex.ControlModeIcon,
+                    defaultLabel = "ATR_ToggleControlMode".Translate(),
+                    defaultDesc = "ATR_ToggleControlModeDesc".Translate(),
+                    isActive = () => controlMode,
+                    toggleAction = delegate ()
+                    {
+                        ToggleControlMode();
+                    }
+                };
+            }
 
             // Always show Skill Up menu option, as any non-surrogate SkyMind connected pawn may use them.
             yield return new Command_Action

@@ -42,7 +42,7 @@ namespace ATReforged
             {
                 Utils.gameComp.RemoveServer(building, serverMode);
             }
-            else if (signal == "SkyMindNetworkUserConnected" || (networkConnection == null && signal == "PowerTurnedOn"))
+            else if ((signal == "SkyMindNetworkUserConnected" && parent.TryGetComp<CompPowerTrader>().PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected == true))
             {
                 Utils.gameComp.AddServer(building, serverMode);
             }

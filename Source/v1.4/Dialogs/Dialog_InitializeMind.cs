@@ -74,9 +74,6 @@ namespace ATReforged
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
                 newPawn.story.Childhood = BackstoryDefOf.ATR_NewbootChildhood;
                 Utils.Duplicate(newPawn, newIntelligence, false, false);
-                Hediff rebootHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, newIntelligence, null);
-                rebootHediff.Severity = 1;
-                newIntelligence.health.AddHediff(rebootHediff);
             };
             closeOnCancel = false;
             closeOnAccept = false;

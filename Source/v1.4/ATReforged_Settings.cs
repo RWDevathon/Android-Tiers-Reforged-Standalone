@@ -24,7 +24,6 @@ namespace ATReforged
         public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "NightOwl", "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
 
             // Settings for debug displays
-        public static bool showMechanicalSurgerySuccessChance = true;
         
             // Settings for what is considered mechanical and massive
         public static HashSet<ThingDef> isConsideredMechanicalAnimal;
@@ -63,14 +62,18 @@ namespace ATReforged
         public static float maxHackSuccessChance = 0.95f;
 
         // HEALTH SETTINGS
-            // Settings for Surgeries
+        // Settings for Surgeries
         public static bool medicinesAreInterchangeable = false;
+        public static bool showMechanicalSurgerySuccessChance = false;
         public static float maxChanceMechanicOperationSuccess = 1.0f;
         public static float chanceFailedOperationMinor = 0.75f;
         public static float chancePartSavedOnFailure = 0.75f;
 
+        // Settings for Maintenance
+        public static bool receiveMaintenanceFailureLetters = true;
+
         // CONNECTIVITY SETTINGS
-            // Settings for Surrogates
+        // Settings for Surrogates
         public static bool surrogatesAllowed = true;
         public static bool otherFactionsAllowedSurrogates = true;
         public static int minGroupSizeForSurrogates = 5;
@@ -282,8 +285,40 @@ namespace ATReforged
                     }
                     break;
                 }
+                case OptionsTab.Health:
+                {
+                    // MEDICAL
+                    listingStandard.CheckboxLabeled("ATR_medicinesAreInterchangeable".Translate(), ref medicinesAreInterchangeable, onChange: onChange);
+                    listingStandard.CheckboxLabeled("ATR_showMechanicalSurgerySuccessChance".Translate(), ref showMechanicalSurgerySuccessChance, onChange: onChange);
+                    listingStandard.SliderLabeled("ATR_maxChanceMechanicOperationSuccess".Translate(), ref maxChanceMechanicOperationSuccess, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                    listingStandard.SliderLabeled("ATR_chanceFailedOperationMinor".Translate(), ref chanceFailedOperationMinor, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                    listingStandard.SliderLabeled("ATR_chancePartSavedOnFailure".Translate(), ref chancePartSavedOnFailure, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                    listingStandard.GapLine();
+
+                    // MAINTENANCE
+                    listingStandard.CheckboxLabeled("ATR_receiveMaintenanceFailureLetters".Translate(), ref receiveMaintenanceFailureLetters, onChange: onChange);
+                    break;
+                }
                 case OptionsTab.Connectivity:
                 {
+                    // SURROGATES
+                    listingStandard.CheckboxLabeled("ATR_surrogatesAllowed".Translate(), ref surrogatesAllowed, onChange: onChange);
+                    if (surrogatesAllowed)
+                    {
+                        listingStandard.CheckboxLabeled("ATR_otherFactionsAllowedSurrogates".Translate(), ref otherFactionsAllowedSurrogates, onChange: onChange);
+                        if (otherFactionsAllowedSurrogates)
+                        {
+                            string minGroupSizeForSurrogatesBuffer = minGroupSizeForSurrogates.ToString();
+                            listingStandard.TextFieldNumericLabeled("ATR_minGroupSizeForSurrogates".Translate(), ref minGroupSizeForSurrogates, ref minGroupSizeForSurrogatesBuffer, 1, 50);
+                            listingStandard.SliderLabeled("ATR_minSurrogatePercentagePerLegalGroup".Translate(), ref minSurrogatePercentagePerLegalGroup, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                            listingStandard.SliderLabeled("ATR_maxSurrogatePercentagePerLegalGroup".Translate(), ref maxSurrogatePercentagePerLegalGroup, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        }
+                        string safeSurrogateConnectivityCountBeforePenaltyBuffer = safeSurrogateConnectivityCountBeforePenalty.ToString();
+                        listingStandard.TextFieldNumericLabeled("ATR_safeSurrogateConnectivityCountBeforePenalty".Translate(), ref safeSurrogateConnectivityCountBeforePenalty, ref safeSurrogateConnectivityCountBeforePenaltyBuffer, 1, 40);
+                    }
+                    listingStandard.GapLine();
+                        
+                    // SKILL POINTS
                     string skillPointConversionRateBuffer = skillPointConversionRate.ToString();
                     string passionSoftCapBuffer = passionSoftCap.ToString();
                     string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
@@ -293,15 +328,13 @@ namespace ATReforged
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
                     listingStandard.GapLine();
 
-
+                    // CLOUD
                     listingStandard.CheckboxLabeled("ATR_UploadingKills".Translate(), ref uploadingToSkyMindKills, onChange: onChange);
                     listingStandard.CheckboxLabeled("ATR_UploadingPermakills".Translate(), ref uploadingToSkyMindPermaKills, onChange: onChange);
                     string SkyMindOperationTimeBuffer = timeToCompleteSkyMindOperations.ToString();
                     listingStandard.TextFieldNumericLabeled("ATR_SkyMindOperationTimeRequired".Translate(), ref timeToCompleteSkyMindOperations, ref SkyMindOperationTimeBuffer, 1, 256);
                     listingStandard.GapLine();
 
-                    string safeSurrogateConnectivityCountBeforePenaltyBuffer = safeSurrogateConnectivityCountBeforePenalty.ToString();
-                    listingStandard.TextFieldNumericLabeled("ATR_safeSurrogateConnectivityCountBeforePenalty".Translate(), ref safeSurrogateConnectivityCountBeforePenalty, ref safeSurrogateConnectivityCountBeforePenaltyBuffer, 1, 40);
                     break;
                 }
                 default:
@@ -365,7 +398,26 @@ namespace ATReforged
             minHackSuccessChance = 0.05f;
             maxHackSuccessChance = 0.95f;
 
+            // HEALTH SETTINGS
+            // Medical
+            medicinesAreInterchangeable = false;
+            showMechanicalSurgerySuccessChance = false;
+            maxChanceMechanicOperationSuccess = 1f;
+            chanceFailedOperationMinor = 0.75f;
+            chancePartSavedOnFailure = 0.75f;
+
+            // Maintenance
+            receiveMaintenanceFailureLetters = true;
+
             // CONNECTIVITY SETTINGS
+            // Surrogates
+            surrogatesAllowed = true;
+            otherFactionsAllowedSurrogates = true;
+            minGroupSizeForSurrogates = 5;
+            minSurrogatePercentagePerLegalGroup = 0.2f;
+            maxSurrogatePercentagePerLegalGroup = 0.7f;
+            safeSurrogateConnectivityCountBeforePenalty = 1;
+
             // Skills
             skillPointConversionRate = 0.5f;
             passionSoftCap = 8;
@@ -376,9 +428,6 @@ namespace ATReforged
             uploadingToSkyMindKills = true;
             uploadingToSkyMindPermaKills = true;
             timeToCompleteSkyMindOperations = 24;
-
-            // Surrogates
-            safeSurrogateConnectivityCountBeforePenalty = 1;
 
             RebuildCaches();
         }
@@ -535,7 +584,25 @@ namespace ATReforged
             Scribe_Values.Look(ref minHackSuccessChance, "ATR_minHackSuccessChance", 0.05f);
             Scribe_Values.Look(ref maxHackSuccessChance, "ATR_maxHackSuccessChance", 0.95f);
 
+            /* === HEALTH === */
+            // Medical
+            Scribe_Values.Look(ref medicinesAreInterchangeable, "ATR_medicinesAreInterchangeable", false);
+            Scribe_Values.Look(ref showMechanicalSurgerySuccessChance, "ATR_showMechanicalSurgerySuccessChance", false);
+            Scribe_Values.Look(ref maxChanceMechanicOperationSuccess, "ATR_maxChanceMechanicOperationSuccess", 1f);
+            Scribe_Values.Look(ref chanceFailedOperationMinor, "ATR_chanceFailedOperationMinor", 0.75f);
+            Scribe_Values.Look(ref chancePartSavedOnFailure, "ATR_chancePartSavedOnFailure", 0.75f);
+
+            // Maintenance
+            Scribe_Values.Look(ref receiveMaintenanceFailureLetters, "ATR_receiveMaintenanceFailureLetters", true);
+
             /* === CONNECTIVITY === */
+            // Surrogates
+            Scribe_Values.Look(ref surrogatesAllowed, "ATR_surrogatesAllowed", true);
+            Scribe_Values.Look(ref otherFactionsAllowedSurrogates, "ATR_otherFactionsAllowedSurrogates", true);
+            Scribe_Values.Look(ref minGroupSizeForSurrogates, "ATR_minGroupSizeForSurrogates", 5);
+            Scribe_Values.Look(ref minSurrogatePercentagePerLegalGroup, "ATR_minSurrogatePercentagePerLegalGroup", 0.2f);
+            Scribe_Values.Look(ref maxSurrogatePercentagePerLegalGroup, "ATR_maxSurrogatePercentagePerLegalGroup", 0.7f);
+            Scribe_Values.Look(ref safeSurrogateConnectivityCountBeforePenalty, "ATR_safeSurrogateConnectivityCountBeforePenalty", 1);
 
             // Skills
             Scribe_Values.Look(ref receiveSkillAlert, "ATR_receiveSkillAlert", true);
@@ -547,9 +614,6 @@ namespace ATReforged
             Scribe_Values.Look(ref uploadingToSkyMindKills, "ATR_uploadingToSkyMindKills", true);
             Scribe_Values.Look(ref uploadingToSkyMindPermaKills, "ATR_uploadingToSkyMindPermaKills", true);
             Scribe_Values.Look(ref timeToCompleteSkyMindOperations, "ATR_timeToCompleteSkyMindOperations", 24);
-
-            // Surrogates
-            Scribe_Values.Look(ref safeSurrogateConnectivityCountBeforePenalty, "ATR_safeSurrogateConnectivityCountBeforePenalty", 1);
         }
     }
 

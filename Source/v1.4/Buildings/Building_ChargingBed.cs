@@ -25,7 +25,7 @@ namespace ATReforged
             // Check if the pawn is allowed to use its battery by settings.
             if (!Utils.CanUseBattery(pawn) || pawn.needs.food == null)
             { 
-                return new FloatMenuOption("ATR_NeedToAllowCharge".Translate(), null);
+                return new FloatMenuOption("ATR_NeedToAllowCharge".Translate(pawn), null);
             }
 
             // Check if the building has all of its unowned interaction spots used or if the pawn owns a slot in this bed.

@@ -78,6 +78,10 @@
 	<ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>
 	<ATR_UploadConfirm>This operation transfers this intelligence into the SkyMind network, leaving the body behind.</ATR_UploadConfirm>
 	
-		
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>Maintenance</ATR_MaintenanceGizmoLabel>
+
+    <ATR_SetMaintenanceNeedCommand>Set target maintenance</ATR_SetMaintenanceNeedCommand>
+    <ATR_SetMaintenanceNeedCommandDesc>Set the level of maintenance that this unit should try to achieve.</ATR_SetMaintenanceNeedCommandDesc>
 
 </LanguageData>

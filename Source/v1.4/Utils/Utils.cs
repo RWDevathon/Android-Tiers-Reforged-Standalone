@@ -148,8 +148,8 @@ namespace ATReforged
             return ATReforged_Settings.factionsUsingSkyMind.Contains(factionDef.defName);
         }
 
-        // Misc
 
+        // Misc
         public static void ApplySkyMindAttack(IEnumerable<Pawn> victims = null, ThoughtDef forVictim = null, ThoughtDef forWitness = null)
         { // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
             try
@@ -263,9 +263,9 @@ namespace ATReforged
         public static ATR_GameComponent gameComp;
 
         // Generate a surrogate and properly apply to it a blank personality and the appropriate receiver implant.
-        public static Pawn GenerateSurrogate(Faction faction, PawnKindDef kindDef, Gender gender = Gender.None)
+        public static Pawn GenerateSurrogate(PawnKindDef kindDef, Gender gender = Gender.None)
         {
-            PawnGenerationRequest request = new PawnGenerationRequest(kindDef, faction, PawnGenerationContext.NonPlayer, forceGenerateNewPawn: true, fixedGender : gender);
+            PawnGenerationRequest request = new PawnGenerationRequest(kindDef, forceGenerateNewPawn: true, fixedGender : gender);
             Pawn surrogate = PawnGenerator.GeneratePawn(request);
             if (IsConsideredMechanicalAndroid(surrogate))
             {
@@ -674,6 +674,10 @@ namespace ATReforged
         // Returns a list of all surrogates without hosts in caravans. Return null if there are none.
         public static IEnumerable<Pawn> GetHostlessCaravanSurrogates()
         {
+            // If surrogates aren't allowed, there can be no hostless surrogates.
+            if (!ATReforged_Settings.surrogatesAllowed)
+                return null;
+
             HashSet<Pawn> hostlessSurrogates = new HashSet<Pawn>();
             foreach (Caravan caravan in Find.World.worldObjects.Caravans)
             {
@@ -809,7 +813,7 @@ namespace ATReforged
         // Calculate the number of skill points required in order to give a pawn a new passion.
         public static int GetSkillPointsToIncreasePassion(Pawn pawn, int passionCount)
         {
-            // Assign base cost based on settings. Default is 1000.
+            // Assign base cost based on settings. Default is 5000.
             float result = ATReforged_Settings.basePointsNeededForPassion;
 
             // Multiply result by the pawn's global learning factor (inverse relation, as higher learning factor should reduce cost).

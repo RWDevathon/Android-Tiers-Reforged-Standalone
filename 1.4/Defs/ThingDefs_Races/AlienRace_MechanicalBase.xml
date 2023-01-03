@@ -237,6 +237,7 @@
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
 			<GlobalLearningFactor>0.4</GlobalLearningFactor>
             <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0</StaggerDurationFactor>
+            <ATR_MaintenanceRetention>0.8</ATR_MaintenanceRetention>
 			<Mass>450</Mass>
 		</statBases>
         <race>

@@ -32,6 +32,7 @@
 			<SocialImpact>0.1</SocialImpact>
 			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+            <ATR_MaintenanceRetention>0.5</ATR_MaintenanceRetention>
 			<Mass>32.5</Mass>
 		</statBases>
 		<tools>

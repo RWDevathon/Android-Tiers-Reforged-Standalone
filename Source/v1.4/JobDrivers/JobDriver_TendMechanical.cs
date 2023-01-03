@@ -8,20 +8,6 @@ namespace ATReforged
     // Create an alternate version of the TendPatient job to use the appropriate Mechanical stats instead of medical stats.
     public class JobDriver_TendMechanical : JobDriver_TendPatient
     {
-        private bool usesMedicine;
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref usesMedicine, "usesMedicine", defaultValue: false);
-        }
-
-        public override void Notify_Starting()
-        {
-            base.Notify_Starting();
-            usesMedicine = MedicineUsed != null;
-        }
-
         // Override the Toils to use mechanical tend stats instead of medical ones.
         protected override IEnumerable<Toil> MakeNewToils()
         {
@@ -33,7 +19,7 @@ namespace ATReforged
                     return true;
                 }
 
-                return (pawn == Deliveree && pawn.Faction == Faction.OfPlayer && pawn.playerSettings != null && !pawn.playerSettings.selfTend) ? true : false;
+                return pawn == Deliveree && pawn.Faction == Faction.OfPlayer && pawn.playerSettings != null && !pawn.playerSettings.selfTend;
             });
             AddEndCondition(delegate
             {
@@ -61,7 +47,7 @@ namespace ATReforged
             }
 
             Toil gotoToil = Toils_Goto.GotoThing(TargetIndex.A, interactionCell);
-            if (usesMedicine)
+            if (MedicineUsed != null)
             {
                 reserveMedicine = Toils_Tend.ReserveMedicine(TargetIndex.B, Deliveree).FailOnDespawnedNullOrForbidden(TargetIndex.B);
                 yield return Toils_Jump.JumpIf(gotoToil, () => IsMedicineInDoctorInventory);
@@ -111,11 +97,11 @@ namespace ATReforged
                     pawn.rotationTracker.FaceTarget(Deliveree);
                 }
             };
-            yield return Toils_Jump.JumpIf(waitToil, () => !usesMedicine || !IsMedicineInDoctorInventory);
+            yield return Toils_Jump.JumpIf(waitToil, () => MedicineUsed == null || !IsMedicineInDoctorInventory);
             yield return Toils_Tend.PickupMedicine(TargetIndex.B, Deliveree).FailOnDestroyedOrNull(TargetIndex.B);
             yield return waitToil;
             yield return Toils_Tend.FinalizeTend(Deliveree);
-            if (usesMedicine)
+            if (MedicineUsed != null)
             {
                 Toil toil = new Toil();
                 toil.initAction = delegate

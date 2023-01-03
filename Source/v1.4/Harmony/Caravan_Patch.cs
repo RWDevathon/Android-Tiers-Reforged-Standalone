@@ -1,6 +1,4 @@
-﻿using Verse;
-using HarmonyLib;
-using System.Linq;
+﻿using HarmonyLib;
 using RimWorld.Planet;
 
 namespace ATReforged
@@ -16,7 +14,17 @@ namespace ATReforged
             {
                 if (!__result)
                     return;
-                __result = __instance.pawns.InnerListForReading.Any(pawn => !Utils.IsConsideredMechanical(pawn));
+
+                bool hasAnyPawnWithRestNeed = false;
+                for (int i = __instance.PawnsListForReading.Count - 1; i >= 0; i--)
+                {
+                    if (!Utils.IsConsideredMechanical(__instance.PawnsListForReading[i]) && __instance.PawnsListForReading[i].needs.rest != null)
+                    {
+                        hasAnyPawnWithRestNeed = true;
+                        break;
+                    }
+                }
+                __result = hasAnyPawnWithRestNeed;
             }
         }
     }

@@ -12,7 +12,12 @@ namespace ATReforged
         public bool canBeAndroid = true;
         public bool canBeDrone = true;
 
+        // Temporary method for T5's to not be affected by some details. Setting this to true will remove all needs regardless of android settings, and change some other details.
+        // This is not recommended to be used, as this will be removed after T5's are reworked.
         public bool isSpecialMechanical = false;
+
+        // Bool for whether this race has the maintenance need added by this mod. Setting this to disabled may be preferred for other race mods with their own maintenance needs.
+        public bool needsMaintenance = true;
 
         // Simple int for the stat level of this race when set as a drone. This does nothing if the race is not considered drones.
         public int droneSkillLevel = 8;

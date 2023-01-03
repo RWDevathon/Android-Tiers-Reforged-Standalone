@@ -23,10 +23,11 @@
 			<drugCategory>Medical</drugCategory>
 			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
-				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
-					<hediffDef_Organic>ATR_Toxicated</hediffDef_Organic>
-					<hediffDef_Mechanical>ATR_MechaniteSurge</hediffDef_Mechanical>
-					<severity>1</severity>
+				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+					<organicEffect>ATR_Toxicated</organicEffect>
+                    <organicSeverity>1</organicSeverity>
+					<mechanicalEffect>ATR_MechaniteSurge</mechanicalEffect>
+					<mechanicalSeverity>1</mechanicalSeverity>
 				</li>  
 			</outcomeDoers>
 		</ingestible>

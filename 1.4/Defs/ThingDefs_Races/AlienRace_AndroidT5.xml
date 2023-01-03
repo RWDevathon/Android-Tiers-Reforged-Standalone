@@ -176,7 +176,7 @@
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
-			<lifeExpectancy>10000</lifeExpectancy>
+			<lifeExpectancy>1000000</lifeExpectancy>
 			<leatherDef>Leather_Patch</leatherDef>
 			<nameGenerator>ATR_Archotechs</nameGenerator>
 			<body>ATR_AndroidBody</body>
@@ -239,6 +239,7 @@
 			<li Class="ATReforged.ATR_MechTweaker">
                 <canBeDrone>false</canBeDrone>
                 <isSpecialMechanical>true</isSpecialMechanical>
+                <needsMaintenance>false</needsMaintenance>
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>

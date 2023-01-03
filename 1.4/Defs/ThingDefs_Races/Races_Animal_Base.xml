@@ -11,6 +11,7 @@
             <PainShockThreshold>1</PainShockThreshold>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
 			<ComfyTemperatureMax>120</ComfyTemperatureMax>
+            <ATR_MaintenanceRetention>4</ATR_MaintenanceRetention>
 		</statBases>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<race>

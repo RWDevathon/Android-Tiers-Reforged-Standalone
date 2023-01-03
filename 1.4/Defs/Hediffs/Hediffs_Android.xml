@@ -289,7 +289,7 @@
     <HediffDef>
         <defName>ATR_RemainingCharge</defName>
         <label>battery life</label>
-        <description>Battery life remaining before loss of function</description>
+        <description>Battery life remaining before loss of function.</description>
 	    <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>1</initialSeverity>
         <defaultLabelColor>(0.3, 0.7, 0.3)</defaultLabelColor>
@@ -333,125 +333,5 @@
             </li>
         </stages>
     </HediffDef>
-	
-	
-	<HediffDef>
-		<defName>ATR_CoolantLoss</defName>
-		<label>coolant loss</label>
-		<description>Loss of coolant in the chassis, resulting in reduced cooling capacity and loss of finetuned motor control. Lack of circulation prevents restorative mechanites from functioning properly, leading to extended recovery times. \n\nPrioritization ensures core functionality receives sufficient coolant flow until critical levels are reached.</description>
-		<maxSeverity>1.0</maxSeverity>
-	    <defaultLabelColor>(0.6, 0.6, 0.9)</defaultLabelColor>
-        <stages>
-            <li>
-                <label>nominal</label>
-                <becomeVisible>false</becomeVisible>
-            </li>
-            <li>
-                <minSeverity>0.15</minSeverity>
-                <label>minor</label>
-                <statOffsets>
-                    <ComfyTemperatureMax>-5</ComfyTemperatureMax>
-                </statOffsets>
-            </li>
-            <li>
-                <minSeverity>0.3</minSeverity>
-                <label>moderate</label>
-                <statOffsets>
-                    <ComfyTemperatureMax>-15</ComfyTemperatureMax>
-					<InjuryHealingFactor>-0.2</InjuryHealingFactor>
-                </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <postFactor>0.8</postFactor>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <postFactor>0.8</postFactor>
-                    </li>
-                </capMods>
-                <hungerRateFactor>1.2</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.45</minSeverity>
-                <label>significant</label>
-                <statOffsets>
-                    <ComfyTemperatureMax>-30</ComfyTemperatureMax>
-					<InjuryHealingFactor>-0.4</InjuryHealingFactor>
-                </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <postFactor>0.6</postFactor>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <postFactor>0.6</postFactor>
-                    </li>
-                </capMods>
-                <hungerRateFactor>1.4</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.6</minSeverity>
-                <label>significant</label>
-                <lifeThreatening>true</lifeThreatening>
-                <statOffsets>
-                    <ComfyTemperatureMax>-45</ComfyTemperatureMax>
-					<InjuryHealingFactor>-0.6</InjuryHealingFactor>
-                </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <postFactor>0.4</postFactor>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <postFactor>0.4</postFactor>
-                    </li>
-                </capMods>
-                <hungerRateFactor>1.6</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.75</minSeverity>
-                <label>severe</label>
-                <lifeThreatening>true</lifeThreatening>
-                <statOffsets>
-                    <ComfyTemperatureMax>-60</ComfyTemperatureMax>
-					<InjuryHealingFactor>-0.75</InjuryHealingFactor>
-                </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <postFactor>0.8</postFactor>
-                    </li>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <postFactor>0.2</postFactor>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <postFactor>0.2</postFactor>
-                    </li>
-                </capMods>
-                <hungerRateFactor>1.8</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.9</minSeverity>
-                <label>critical</label>
-                <lifeThreatening>true</lifeThreatening>
-                <statOffsets>
-                    <ComfyTemperatureMax>-70</ComfyTemperatureMax>
-					<InjuryHealingFactor>-0.9</InjuryHealingFactor>
-                </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-                <hungerRateFactor>2</hungerRateFactor>
-            </li>
-	    </stages>
-	</HediffDef>
  
 </Defs>

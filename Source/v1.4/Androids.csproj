@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>..\..\1.4\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -186,7 +186,9 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="Commands\Command_SetTargetMaintenanceLevel.cs" />
     <Compile Include="Components\CompInsightBench.cs" />
+    <Compile Include="Components\CompMaintenanceNeed.cs" />
     <Compile Include="Components\CompPawnCharger.cs" />
     <Compile Include="Components\CompHeatSensitive.cs" />
     <Compile Include="Components\CompProperties_SkyMindCore.cs" />
@@ -198,8 +200,10 @@
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
+    <Compile Include="DefsOf\BodyPartDefOf.cs" />
     <Compile Include="DefsOf\BackstoryDefOf.cs" />
     <Compile Include="DefsOf\IncidentDefOf.cs" />
+    <Compile Include="DefsOf\NeedDefOf.cs" />
     <Compile Include="DefsOf\MentalStateDefOf.cs" />
     <Compile Include="DefsOf\QuestScriptDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />
@@ -208,9 +212,11 @@
     <Compile Include="Enum\ServerType.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
+    <Compile Include="Gizmos\Gizmo_MaintenanceStatus.cs" />
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\InteractionWorker_RomanceAttempt_Patch.cs" />
     <Compile Include="Harmony\FeedPatientUtility_Patch.cs" />
     <Compile Include="Harmony\GasUtility_Patch.cs" />
     <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
@@ -251,10 +257,14 @@
     <Compile Include="Harmony\WorkGiver_PatientGoToBedTreatment_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
+    <Compile Include="Hediffs\HediffComp_MaintenanceStageEffect.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_MaintenanceStageEffect.cs" />
     <Compile Include="Hediffs\Hediff_SplitConsciousness.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
+    <Compile Include="JobDrivers\JobDriver_DoMaintenanceIdle.cs" />
     <Compile Include="JobDrivers\JobDriver_GenerateInsight.cs" />
+    <Compile Include="JobDrivers\JobDriver_DoMaintenanceUrgent.cs" />
     <Compile Include="JobDrivers\JobDriver_ResurrectMechanical.cs" />
     <Compile Include="JobDrivers\JobDriver_TendMechanical.cs" />
     <Compile Include="MentalStates\MentalState_Exterminator.cs" />
@@ -304,21 +314,25 @@
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
+    <Compile Include="Needs\Need_Maintenance.cs" />
     <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
     <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
-    <Compile Include="Hediffs\HediffGiver_Android.cs" />
     <Compile Include="DefsOf\HediffDefOf.cs" />
-    <Compile Include="IngestionOutcomeDoer_GiveTwoHediffs.cs" />
+    <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
     <Compile Include="JobDrivers\JobDriver_GoReloadBattery.cs" />
     <Compile Include="Recipes\Recipe_InstallOrganicSkyMindInterface.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidInterface.cs" />
     <Compile Include="Recipes\Recipe_RestoreMechanicalPart.cs" />
     <Compile Include="Recipes\Recipe_RemoveMechanicalPart.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_RustedPart.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_ChronicAnnoyance.cs" />
+    <Compile Include="WorkGivers\JobGiver_DoMaintenanceIdle.cs" />
+    <Compile Include="WorkGivers\JobGiver_DoMaintenanceUrgent.cs" />
     <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
     <Compile Include="MechFallStuff\MechFallClass.cs" />
     <Compile Include="MechFallStuff\MechFallMote.cs" />
-    <Compile Include="Extensions\ModExtensions.cs" />
+    <Compile Include="Extensions\PawnExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="PostInitTweaks.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
@@ -329,7 +343,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ATReforged_Settings.cs" />
     <Compile Include="Components\CompSpawnerMicroscyther.cs" />
-    <Compile Include="Thoughts\Thought_AssistedByMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
     <Compile Include="Toils\Toils_LayDownPower.cs" />

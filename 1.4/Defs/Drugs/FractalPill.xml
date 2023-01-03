@@ -28,10 +28,11 @@
 			<ingestReportString>Consuming {0}.</ingestReportString>
 			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
-				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
-					<hediffDef_Organic>ATR_FractalPillOrganic</hediffDef_Organic>
-					<hediffDef_Mechanical>ATR_FractalPillMechanical</hediffDef_Mechanical>
-					<severity>0.25</severity>
+				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+					<organicEffect>ATR_FractalPillOrganic</organicEffect>
+                    <organicSeverity>0.25</organicSeverity>
+					<mechanicalEffect>ATR_FractalPillMechanical</mechanicalEffect>
+					<mechanicalSeverity>0.25</mechanicalSeverity>
 				</li> 	
 			</outcomeDoers>
 		</ingestible>

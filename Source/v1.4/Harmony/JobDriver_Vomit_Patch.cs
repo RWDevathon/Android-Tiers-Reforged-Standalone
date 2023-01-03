@@ -23,7 +23,7 @@ namespace ATReforged
                 }
                 catch (Exception ex)
                 {
-                    Log.Warning("[ATR] ATReforged.JobDriver_Vomit_Patch Encountered an error while attempting to check if a pawn should vomit. The pawn will vomit." + ex.Message + " " + ex.StackTrace);
+                    Log.Warning("[ATR] ATReforged.JobDriver_Vomit_Patch Encountered an error while attempting to check if a pawn should vomit." + ex.Message + " " + ex.StackTrace);
                 }
             }
         }

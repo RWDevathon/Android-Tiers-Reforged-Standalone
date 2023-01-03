@@ -5,7 +5,6 @@ namespace ATReforged
 {
     public class ThoughtWorker_AssistedByMinds : ThoughtWorker
     {
-     
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             // Skip pawns that can't connect to the SkyMind.

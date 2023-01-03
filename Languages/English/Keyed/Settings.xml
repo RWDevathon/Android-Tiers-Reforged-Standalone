@@ -83,8 +83,27 @@
     <ATR_RetaliationChanceOnFailure>Chance the target faction will retaliate on a failed hack</ATR_RetaliationChanceOnFailure>
     <ATR_MinHackSuccessChance>Minimum chance of a successful hack</ATR_MinHackSuccessChance>
     <ATR_MaxHackSuccessChance>Maximum chance of a successful hack</ATR_MaxHackSuccessChance>
+
+    <!-- Health Settings -->
+        <!-- Medical -->
+    <ATR_medicinesAreInterchangeable>Organic/Mechanical medicines are interchangeable.</ATR_medicinesAreInterchangeable>
+    <ATR_maxChanceMechanicOperationSuccess>Max success change for mechanical surgeries</ATR_maxChanceMechanicOperationSuccess>
+    <ATR_chanceFailedOperationMinor>Chance failed mechanical surgeries are minor [default 75%]</ATR_chanceFailedOperationMinor>
+    <ATR_chancePartSavedOnFailure>Chance that parts are returned from failed mechanical surgeries [default 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- Maintenance -->
+    <ATR_receiveMaintenanceFailureLetters>Receive letters about maintenance-related health issues.</ATR_receiveMaintenanceFailureLetters>
+
     
 	<!-- Connectivity Settings -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>Surrogates are permitted.</ATR_surrogatesAllowed>
+    <ATR_otherFactionsAllowedSurrogates>Other factions may use surrogates.</ATR_otherFactionsAllowedSurrogates>
+    <ATR_minGroupSizeForSurrogates>Number of members for faction groups to spawn with surrogates</ATR_minGroupSizeForSurrogates>
+    <ATR_minSurrogatePercentagePerLegalGroup>Minimum percentage of surrogates in legal groups [default 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+    <ATR_maxSurrogatePercentagePerLegalGroup>Maximum percentage of surrogates in legal groups [default 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
         <!-- Skills -->
     <ATR_receiveFullSkillAlert>Alert for skill points exceeding 90% of capacity.</ATR_receiveFullSkillAlert>
 	<ATR_skillPointConversionRate>Amount of base XP generated per skill point [default: 0.5]</ATR_skillPointConversionRate>
@@ -96,6 +115,4 @@
     <ATR_UploadingPermakills>Uploading to SkyMind leaves the initiator's body completely useless and dead.</ATR_UploadingPermakills>
     <ATR_SkyMindOperationTimeRequired>Hours required to complete SkyMind operations [default: 24]</ATR_SkyMindOperationTimeRequired>
 
-        <!-- Surrogates -->
-    <ATR_safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties:</ATR_safeSurrogateConnectivityCountBeforePenalty>
 </LanguageData>

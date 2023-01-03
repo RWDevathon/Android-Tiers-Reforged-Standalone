@@ -3,7 +3,6 @@
   
     <ThoughtDef>
         <defName>ATR_AssistingMindBoost</defName>
-	    <thoughtClass>ATReforged.Thought_AssistedByMinds</thoughtClass>
         <workerClass>ATReforged.ThoughtWorker_AssistedByMinds</workerClass>
         <stages>
             <li>

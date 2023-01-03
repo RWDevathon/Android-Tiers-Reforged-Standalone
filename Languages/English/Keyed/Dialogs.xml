@@ -51,5 +51,8 @@
 	
 	<ATR_SkyMindInitialization>Initialize from SkyMind</ATR_SkyMindInitialization>
 	<ATR_AutomaticInitialization>Initialize automatically</ATR_AutomaticInitialization>
+
+    <!-- Maintenance Level Setter Dialog -->
+    <ATR_SetTargetMaintenanceLevel>Desired maintenance level: {0}%</ATR_SetTargetMaintenanceLevel>
 	
 </LanguageData>
