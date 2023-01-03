@@ -95,7 +95,7 @@
 		<defName>CreationPrisoner</defName>
 		<title>Mechanical Convict</title>
 		<titleShort>Convict</titleShort>
-		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef_possessive} human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
+		<baseDescription>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef} committed such a crime.\nAs punishment, {PAWN_possessive} human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -395,7 +395,7 @@
 		<defName>CreationPurgist</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDescription>When rampant overpopulation plagued a {PAWN_possessive} urbworld, {PAWN_nameDef_possessive} model was deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue {PAWN_possessive} mission on other worlds.</baseDescription>
+		<baseDescription>When rampant overpopulation plagued {PAWN_possessive} urbworld, {PAWN_possessive} model was deployed to indiscriminately purge organic life as a drastic countermeasure.\nAfter the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue {PAWN_possessive} mission on other worlds.</baseDescription>
 		<!-- <bodyTypeGlobal>Male</bodyTypeGlobal> -->
 		<slot>Childhood</slot>
 		<spawnCategories>

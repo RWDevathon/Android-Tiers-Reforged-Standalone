@@ -3,7 +3,7 @@
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
 		<defName>Tier1Android</defName>
 		<label>T1 Android</label>
-		<description>Tier one androids are simply humanlike-machines, designed to mimic the general image and minimal capabilities of humanity. Lacking true sapience, many view them like very intelligent and responsive animals. This often leads to their exploitation as fodder or belittlement as pets, of which the dutiful drones pay no heed. Their existence is to serve, and they do so uncomplainingly.</description>
+		<description>Tier one androids are simply humanlike-machines, designed to mimic the general image and minimal capabilities of humanity. Lacking true sapience, many view them like very intelligent and responsive animals. This often leads to their exploitation as fodder or belittlement as pets, of which the dutiful drones pay no heed. Their existence is to serve, and they do so uncomplainingly.\nNote: Due to drones being incapable of social interactions, they cannot be recruited and must instead be reprogrammed when taken prisoner.</description>
 		<alienRace>
 			<graphicPaths>
                 <body>Things/Pawns/Humanlikes/Tier1/body/</body>
