@@ -296,8 +296,7 @@ namespace ATReforged
         {
             StringBuilder ret = new StringBuilder();
 
-            ret.AppendLine("ATR_CloudIntelligenceSummary".Translate(Utils.gameComp.GetCloudPawns().Count(), Utils.gameComp.GetSkyMindCloudCapacity()));
-            ret.Append("ATR_AssistingIntelligenceSummary".Translate(Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()).Count()));
+            ret.Append("ATR_CloudIntelligenceSummary".Translate(Utils.gameComp.GetCloudPawns().Count(), Utils.gameComp.GetSkyMindCloudCapacity()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }
