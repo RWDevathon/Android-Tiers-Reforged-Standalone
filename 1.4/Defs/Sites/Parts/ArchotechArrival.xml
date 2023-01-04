@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SitePartDef>
+        <defName>ATR_ArchotechArrival</defName>
+        <label>enigmatic crashsite</label>
+        <description>The location that seems to be beckoning across time and space. What could possibly land and make this happen?</description>
+        <workerClass>ATReforged.SitePartWorker_ArchotechArrival</workerClass>
+        <siteTexture>UI/Icons/Sites/StrangeCrash</siteTexture>
+        <expandingIconTexture>UI/Icons/Sites/StrangeCrash</expandingIconTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>16</forceExitAndRemoveMapCountdownDurationDays>
+        <increasesPopulation>true</increasesPopulation>
+        <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+        <tags>
+            <li>ATR_ArchotechArrival</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>ATR_ArchotechArrival</defName>
+        <linkWithSite>ATR_ArchotechArrival</linkWithSite>
+        <order>480</order>
+        <genStep Class="ATReforged.GenStep_DownedT5Android">
+            <count>1</count>
+            <nearMapCenter>true</nearMapCenter>
+        </genStep>
+    </GenStepDef>
+	
+</Defs>

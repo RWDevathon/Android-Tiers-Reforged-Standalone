@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="InjuryBase">
+        <defName>FractalLance</defName>
+        <label>fractal warping</label>
+        <labelNoun>an agonizing wound warped by fractal energy</labelNoun>
+        <description>A wound being continually warped and twisted by fractal energy.</description>
+		<comps>
+            <li>
+                <compClass>ATReforged.HediffComp_Warper</compClass>
+            </li>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>stabilized</labelTendedWell>
+                <labelTendedWellInner>stabilized</labelTendedWellInner>
+                <labelSolidTendedWell>settled</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.60</infectionChance>
+            </li>
+		</comps>
+        <injuryProps>
+            <painPerSeverity>0.125</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.0</averagePainPerSeverityPermanent>
+            <bleedRate>0.0</bleedRate>
+            <canMerge>true</canMerge>
+            <destroyedLabel>Warp torn</destroyedLabel>
+            <destroyedOutLabel>Warp shredded</destroyedOutLabel>
+        </injuryProps>
+    </HediffDef>
+</Defs>

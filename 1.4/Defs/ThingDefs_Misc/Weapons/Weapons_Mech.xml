@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Base Mech Gun -->
+	<ThingDef Name="ATR_BaseMechGun" ParentName="BaseGun" Abstract="True">
+        <techLevel>Ultra</techLevel>
+        <relicChance>0</relicChance>
+        <tradeability>None</tradeability>
+        <smeltable>false</smeltable>
+        <thingCategories>
+            <li>ATR_WeaponsMech</li>
+        </thingCategories>
+        <useHitPoints>false</useHitPoints>
+		<statBases>
+            <MarketValue>4000</MarketValue>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Beauty>-6</Beauty>
+			<SellPriceFactor>0.20</SellPriceFactor>
+		</statBases>
+        <weaponTags>
+            <li>ATR_MechWeapon</li>
+        </weaponTags>
+	</ThingDef>
+  
+    <!-- Rotary Autocannon -->
+	<ThingDef ParentName="BaseBullet">
+        <defName>ATR_AutocannonShell</defName>
+        <label>Autocannon shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellHighExplosive</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <speed>110</speed>
+            <stoppingPower>4.5</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_RotaryAutocannon</defName>
+        <label>Rotary Autocannon</label>
+        <description>This massive weapon, larger than entire humans, is designed to bring even the largest opponents down under a barrage of direct-fire artillery shells. Rotating barrels integrated with a high efficiency autoloading magazine ensure steady rate of lethal fire. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
+        <graphicData>
+            <texPath>Things/Items/Weapons/RotaryAutocannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>3</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>42</Mass>
+            <AccuracyTouch>0.5</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.5</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
+                <warmupTime>1</warmupTime>
+                <range>30.9</range>
+                <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>ATR_AutocannonBlast</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>18</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- Rotary Shrapnelcannon -->
+	<ThingDef ParentName="BaseBullet">
+        <defName>ATR_ShrapnelcannonChunk</defName>
+        <label>Shrapnel chunk</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <speed>110</speed>
+            <stoppingPower>2</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_RotaryShrapnelcannon</defName>
+        <label>Rotary Shrapnelcannon</label>
+        <description>This massive weapon, larger than entire humans, is designed to shred densely packed targets with a barrage of shrapnel the size of a bench. Rotating barrels integrated with a high efficiency autoloading magazine ensure steady rate of lethal fire. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
+        <graphicData>
+        <texPath>Things/Items/Weapons/RotaryShrapnelcannon</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>3</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>42</Mass>
+            <AccuracyTouch>0.8</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.3</AccuracyMedium>
+            <AccuracyLong>0.15</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>ATR_ShrapnelcannonChunk</defaultProjectile>
+                <warmupTime>1</warmupTime>
+                <range>22.9</range>
+                <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+                <burstShotCount>6</burstShotCount>
+                <soundCast>ATR_ShrapnelBlast</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+  
+    <!-- Headhunter Cannon -->
+    <ThingDef ParentName="ATR_BaseMechGun">
+        <defName>ATR_HeadhunterCannon</defName>
+        <label>Headhunter Cannon</label>
+        <description>This massive weapon, the size of a full-grown human, is designed to fire long-range direct-fire artillery shells with pinpoint accuracy to take out key targets before they can retaliate. With a great deal of internal auto-correcting components, this weapon is a tank-buster by nature. \n\nWeapons like this, mountable only on massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
+        <graphicData>
+            <texPath>Things/Items/Weapons/HeadhunterCannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>4</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>30</Mass>
+            <AccuracyTouch>0.4</AccuracyTouch>
+            <AccuracyShort>0.95</AccuracyShort>
+            <AccuracyMedium>1.00</AccuracyMedium>
+            <AccuracyLong>1.1</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>ATR_AutocannonShell</defaultProjectile>
+                <warmupTime>1</warmupTime>
+                <range>59.9</range>
+                <soundCast>ATR_AutocannonBlast</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>20</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- Mech Poleaxe -->
+  	<ThingDef ParentName="BaseWeapon">
+		<defName>ATR_MechPoleaxe</defName>
+		<label>Mech Poleaxe</label>
+        <description>This massive weapon, the size of a full-grown human, serves the exact same purpose its smaller cousins serve: to close with the enemy and hack them apart. Of course, this tool is better at it than its ancestors - it is made of fine glitterworld grade materials and honed to perfection... and is large enough to splatter people rather than need to stab or cut. \n\nWeapons like this, usable only be massive weapons of war, raise the question: Was such weaponry invented to defeat mechs or were mechs invented in order to wield it?</description>
+        <techLevel>Ultra</techLevel>
+        <thingCategories>
+            <li>ATR_WeaponsMech</li>
+        </thingCategories>
+        <useHitPoints>false</useHitPoints>
+        <relicChance>0</relicChance>
+        <tradeability>None</tradeability>
+		<graphicData>
+			<texPath>Things/Items/Weapons/MechPoleaxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+            <drawSize>3.5</drawSize>
+		</graphicData>
+        <weaponTags>
+            <li>ATR_MechWeapon</li>
+        </weaponTags>
+		<statBases>
+            <MarketValue>4000</MarketValue>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>25</Mass>
+			<Beauty>-6</Beauty>
+		</statBases>
+		<equippedAngleOffset>-15</equippedAngleOffset>
+        <generateCommonality>0.33</generateCommonality>
+        <tools>
+            <li>
+                <label>spike</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>125</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+            <li>
+                <label>axe</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>95</power>
+                <cooldownTime>1</cooldownTime>
+            </li>
+            <li>
+                <label>hammer</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>95</power>
+                <cooldownTime>1</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

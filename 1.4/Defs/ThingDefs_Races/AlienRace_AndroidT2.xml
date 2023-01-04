@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
+		<defName>Tier2Android</defName>
+		<label>T2 Android</label>
+		<description>The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>
+		<alienRace>
+			<graphicPaths>
+                <body>Things/Pawns/Humanlikes/Tier2/body/</body>
+                <head>Things/Pawns/Humanlikes/Tier2/head/</head>
+                <skinShader>Cutout</skinShader>
+			</graphicPaths>
+            <generalSettings>
+                <alienPartGenerator>
+					<headTypes>
+                        <li>ATR_Tier2_Male</li>
+                        <li>ATR_Tier2_Female</li>
+                        <li>ATR_Tier2_None</li>
+                    </headTypes>
+                </alienPartGenerator>
+            </generalSettings>
+		</alienRace>
+        <uiIconPath>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal_south</uiIconPath>
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<MoveSpeed>4.50</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>40</ComfyTemperatureMax>
+			<WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+			<MentalBreakThreshold>0.28</MentalBreakThreshold>
+			<GlobalLearningFactor>0.9</GlobalLearningFactor>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <ATR_MaintenanceRetention>1</ATR_MaintenanceRetention>
+			<Mass>62.5</Mass>
+		</statBases>
+		<tools>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>ATR_AndroidBody</body>
+			<baseHealthScale>0.8</baseHealthScale>
+			<baseHungerRate>1.25</baseHungerRate>
+			<baseBodySize>0.8</baseBodySize>
+		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <droneSkillLevel>10</droneSkillLevel>
+			</li>
+		</modExtensions>
+		<butcherProducts>
+            <Steel>50</Steel>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</butcherProducts>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

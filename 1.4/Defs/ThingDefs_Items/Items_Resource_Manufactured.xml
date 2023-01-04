@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ATR_PartPack</defName>
+        <label>Mechanical Part Pack</label>
+        <description>This pack of half-assembled parts is designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/PartPack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>25</stackLimit>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>30</MarketValue>
+            <Mass>0.45</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeability>All</tradeability>
+        <techLevel>Industrial</techLevel>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
+    </ThingDef>
+  
+    <RecipeDef>
+        <defName>ATR_PartPack</defName>
+        <label>Make a mechanical part pack</label>
+        <description>Create a pack of half-assembled parts designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
+        <jobString>Making part pack</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_PartPack>4</ATR_PartPack>
+        </products>
+        <workAmount>2150</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <recipeUsers>
+            <li>TableMachining</li>
+            <li>ATR_MechPartWorkbench</li>
+        </recipeUsers>
+        </RecipeDef>
+
+    <RecipeDef>
+        <defName>ATR_MakeAIPersonaCore</defName>
+        <label>Make an AI persona core</label>
+        <description>Create a complexe AI core capable of sentience.</description>
+        <jobString>Making AI Core</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <AIPersonaCore>1</AIPersonaCore>
+        </products>
+        <workAmount>8650</workAmount>
+        <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Repair Stim Base -->
+
+    <ThingDef Name="ATR_RepairStimBase" ParentName="ResourceBase" Abstract="True">
+        <thingClass>Medicine</thingClass>
+        <stackLimit>25</stackLimit>
+        <drawGUIOverlay>True</drawGUIOverlay>
+        <uiIconForStackCount>1</uiIconForStackCount>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>0.70</Mass>
+            <Flammability>0.5</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+        <thingCategories>
+            <li>Medicine</li>
+        </thingCategories>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <recipeUsers>
+                <li>ATR_MechPartWorkbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <bulkRecipeCount>4</bulkRecipeCount>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- Simple Repair Stim -->
+    <ThingDef ParentName="ATR_RepairStimBase">
+        <defName>ATR_RepairStimSimple</defName>
+        <label>Simple Repair Stim</label>
+        <description>A small, simple assembled kit of industrial components, and tools for assisting and stimulating mechanical repairs. The kit lacks a number of very helpful assets for more serious injuries or operations, and is suited more for battlefield triage than professional use.</description>
+        <stackLimit>48</stackLimit>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/ATR_RepairStimSimple</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>12</MarketValue>
+            <MedicalPotency>0.60</MedicalPotency>
+            <MedicalQualityMax>0.70</MedicalQualityMax>
+            <WorkToMake>1000</WorkToMake>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+                <Intellectual>4</Intellectual>
+            </skillRequirements>
+            <researchPrerequisite>Electricity</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- Intermediate Repair Stim -->
+    <ThingDef ParentName="ATR_RepairStimBase">
+        <defName>ATR_RepairStimIntermediate</defName>
+        <label>Intermediate Repair Stim</label>
+        <description>An assembled kit of industrial components, mechanites and tools for assisting and stimulating mechanical repairs. Stimulation kits like this are the core tools of any mechanic who believes in quality. Well-suited to a range of tasks, it is functionally capable and practical.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/ATR_RepairStimIntermediate</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>21</MarketValue>
+            <MedicalPotency>1.00</MedicalPotency>
+            <MedicalQualityMax>1.00</MedicalQualityMax>
+            <DeteriorationRate>2</DeteriorationRate>
+            <WorkToMake>3500</WorkToMake>
+        </statBases>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ATR_MechanicalStandardization</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+                <Intellectual>6</Intellectual>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- Advanced Repair Stim -->
+    <ThingDef ParentName="ATR_RepairStimBase">
+        <defName>ATR_RepairStimAdvanced</defName>
+        <label>Advanced Repair Stim</label>
+        <description>An array of high-tech mechanites and tools for assisting and stimulating mechanical repairs. Relatively uncommon outside Glitterworlds, kits like these are highly prized by mechanics and any self-respecting android. The autonomous mechanites can make even poor mechanics seem very competent.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/ATR_RepairStimAdvanced</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>60</MarketValue>
+            <MedicalPotency>1.60</MedicalPotency>
+            <MedicalQualityMax>1.30</MedicalQualityMax>
+            <WorkToMake>6500</WorkToMake>
+        </statBases>
+        <costList>
+            <Gold>1</Gold>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ATR_RepairOptimization</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+                <Intellectual>12</Intellectual>
+            </skillRequirements>
+        </recipeMaker>
+    </ThingDef>
+
+    <!-- Resurrector Kits -->
+
+    <ThingDef Name="ATR_ApplicableKitBase" ParentName="ResourceBase" Abstract="True">
+	    <thingClass>ThingWithComps</thingClass>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <stackLimit>10</stackLimit>
+        <intricate>true</intricate>
+        <tradeNeverStack>true</tradeNeverStack>
+        <statBases>
+            <MarketValue>350</MarketValue>
+            <DeteriorationRate>2.0</DeteriorationRate>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Mass>0.2</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+	    <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <comps>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Use resurrector kit</useLabel>
+                <useDuration>0</useDuration>
+                <warmupMote>Mote_ResurrectAbility</warmupMote>
+            </li>
+            <li Class="CompProperties_Targetable">
+                <compClass>CompTargetable_SingleCorpse</compClass>
+                <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
+            </li>
+            <li>
+                <compClass>ATReforged.CompTargetEffect_ResurrectMechanical</compClass>
+            </li>
+        </comps>
+        <tradeability>Sellable</tradeability>
+        <thingSetMakerTags>
+            <li>Manufactured</li>
+        </thingSetMakerTags>
+	    <techLevel>Industrial</techLevel>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+    <!-- Android Resurrection Kit -->
+    <ThingDef ParentName="ATR_ApplicableKitBase">
+        <defName>ATR_AndroidResurrectorKit</defName>
+        <label>Android Resurrector Kit</label>
+        <description>A specialized suite of tools capable of bringing disabled mechanical units back to life. The tools are sufficiently advanced to bring any such unit back to nominal functionality. Revived units must fully reboot in order to begin operating again.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/AndroidResurrectionKit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+  
+    <RecipeDef>
+        <defName>ATR_AndroidResurrectorKit</defName>
+        <label>Make an android resurrector kit</label>
+        <description>Create a specialized kit of tools capable of reviving offline mechanical units to full functionality. The process of reactivating a deceased unit can be exceedingly expensive due to the inherent difficulties of restoring a deceased intelligence.</description>
+        <jobString>Making android resurrector kit</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_AndroidResurrectorKit>1</ATR_AndroidResurrectorKit>
+        </products>
+        <workAmount>4550</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+	    <recipeUsers>
+            <li>TableMachining</li>
+            <li>ATR_MechPartWorkbench</li>
+        </recipeUsers>
+	</RecipeDef>
+
+    <!-- Drone Resurrector Kit -->
+    <ThingDef ParentName="ATR_ApplicableKitBase">
+        <defName>ATR_DroneResurrectorKit</defName>
+        <label>Drone Resurrector Kit</label>
+        <description>A specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
+        <graphicData>
+            <texPath>Things/Items/Manufactured/DroneResurrectionKit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tradeability>Sellable</tradeability>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
+    </ThingDef>
+  
+    <RecipeDef>
+        <defName>ATR_DroneResurrectorKit</defName>
+        <label>Make a drone resurrector kit</label>
+        <description>Create a specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
+        <jobString>Making drone resurrector kit</jobString>
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_DroneResurrectorKit>1</ATR_DroneResurrectorKit>
+        </products>
+        <workAmount>2450</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+	    <recipeUsers>
+            <li>TableMachining</li>
+            <li>ATR_MechPartWorkbench</li>
+        </recipeUsers>
+	</RecipeDef>
+
+</Defs>

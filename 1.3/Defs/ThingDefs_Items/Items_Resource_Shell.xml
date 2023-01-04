@@ -4,7 +4,7 @@
     <ThingDef ParentName="MakeableShellBase">
         <defName>MicroscytherShell</defName>
         <label>Swarm shell</label>
-        <description>An artillery shell containing two pre-programmed microscythers that will be unleashed and assault hostile targets upon impact.</description>
+        <description>An artillery shell containing several pre-programmed microscythers that will be unleashed and assault all nearby targets upon impact.</description>
         <graphicData>
             <texPath>Things/Items/Shells/Microscyther_shell</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -32,23 +32,23 @@
             </li>
         </comps>
         <projectileWhenLoaded>MicroscytherShell_round</projectileWhenLoaded>
-            <recipeMaker>
-                <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
-                <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-                <effectWorking>Repair</effectWorking>
-                <soundWorking>Recipe_Machining</soundWorking>
-                <workAmount>800</workAmount>
-                <targetCountAdjustment>1</targetCountAdjustment>
-                <productCount>1</productCount>
-                <workSkill>Crafting</workSkill>
-                <recipeUsers>
-                    <li>ATR_MechanicalAssemblyPod</li>
-                </recipeUsers>
-            </recipeMaker>
-            <costList>
-                <Steel>50</Steel>
-                <ComponentIndustrial>2</ComponentIndustrial>
-            </costList>
+        <recipeMaker>
+            <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <effectWorking>Repair</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <workAmount>800</workAmount>
+            <targetCountAdjustment>1</targetCountAdjustment>
+            <productCount>1</productCount>
+            <workSkill>Crafting</workSkill>
+            <recipeUsers>
+                <li>ATR_MechanicalAssemblyPod</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="MakeableShellBase">
+        <defName>MicroscytherShell</defName>
+        <label>Swarm shell</label>
+        <description>An artillery shell containing several pre-programmed microscythers that will be unleashed and assault all nearby targets upon impact.</description>
+        <graphicData>
+            <texPath>Things/Items/Shells/Microscyther_shell</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>175</MarketValue>
+            <Mass>2</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2</explosiveRadius>
+                <explosiveDamageType>Smoke</explosiveDamageType>
+                <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+                <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+                <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+                <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+                <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                <explosionEffect>ExtinguisherExplosion</explosionEffect>
+                <wickTicks>
+                <min>10</min>
+                <max>30</max>
+                </wickTicks>
+            </li>
+        </comps>
+        <projectileWhenLoaded>MicroscytherShell_round</projectileWhenLoaded>
+        <recipeMaker>
+            <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <effectWorking>Repair</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <workAmount>800</workAmount>
+            <targetCountAdjustment>1</targetCountAdjustment>
+            <productCount>1</productCount>
+            <workSkill>Crafting</workSkill>
+            <recipeUsers>
+                <li>ATR_MechanicalAssemblyPod</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>MicroscytherShell_round</defName>
+        <label>Swarm shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellEMP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Smoke</damageDef>
+            <speed>41</speed>
+            <explosionRadius>1.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>Explosion_EMP</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+            <postExplosionSpawnThingDef>MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        </projectile>
+    </ThingDef>
+
+</Defs>

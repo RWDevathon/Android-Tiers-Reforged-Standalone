@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
+		<defName>Tier3Android</defName>
+		<label>T3 Android</label>
+		<description>Androids classified as tier three are often qualified by their large stature - standing at a height ranging from seven to nine feet - and impressive capabilities. They are incredibly durable, modular, and capable. Requiring extensive amounts of rare resources, they are generally only mass-produced on glitterworlds.</description>
+		<alienRace>
+			<graphicPaths>
+                <body>Things/Pawns/Humanlikes/Tier3/body/</body>
+                <head>Things/Pawns/Humanlikes/Tier3/head/</head>
+                <skinShader>Cutout</skinShader>
+            </graphicPaths>
+            <generalSettings>
+                <alienPartGenerator>
+					<headTypes>
+                        <li>ATR_Tier3_Male</li>
+                        <li>ATR_Tier3_Female</li>
+                        <li>ATR_Tier3_None</li>
+                    </headTypes>
+                </alienPartGenerator>
+            </generalSettings>
+		</alienRace>
+        <uiIconPath>Things/Pawns/Humanlikes/Tier3/head/None_Average_Normal_south</uiIconPath>
+		<statBases>
+			<MarketValue>4800</MarketValue>
+			<MoveSpeed>6.00</MoveSpeed>
+			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
+			<MentalBreakThreshold>0.35</MentalBreakThreshold>
+			<GlobalLearningFactor>1.4</GlobalLearningFactor>
+			<SocialImpact>1.4</SocialImpact>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+            <ATR_MaintenanceRetention>1.4</ATR_MaintenanceRetention>
+			<Mass>92.5</Mass>
+		</statBases>
+		<tools>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>ATR_AndroidBody</body>
+			<baseHealthScale>1.2</baseHealthScale>
+			<baseBodySize>1.4</baseBodySize>
+		</race>
+		<modExtensions>
+			<li Class="ATReforged.ATR_MechTweaker">
+                <droneSkillLevel>12</droneSkillLevel>
+			</li>
+		</modExtensions>
+		<butcherProducts>
+			<Plasteel>40</Plasteel>
+			<Uranium>10</Uranium>
+			<ComponentIndustrial>6</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+		</butcherProducts>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

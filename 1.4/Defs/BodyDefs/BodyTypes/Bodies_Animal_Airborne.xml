@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <BodyDef>
+        <defName>ATR_MechAirborne</defName>
+        <label>Aerial Drone</label>
+        <corePart>
+            <def>ATR_MechanicalThorax</def>
+            <height>Middle</height>
+            <depth>Outside</depth>
+            <groups>
+                <li>Torso</li>
+            </groups>
+            <parts>
+                <li>
+                    <def>ATR_Framework</def>
+                    <coverage>0.2</coverage>
+                    <depth>Outside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_InternalCorePump</def>
+                    <coverage>0.023</coverage>
+                    <depth>Inside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_MechanicalHeatsink</def>
+                    <customLabel>left heatsink</customLabel>
+                    <coverage>0.025</coverage>
+                    <depth>Inside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_MechanicalHeatsink</def>
+                    <customLabel>right heatsink</customLabel>
+                    <coverage>0.025</coverage>
+                    <depth>Inside</depth>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_MechanicalNeck</def>
+                    <coverage>0.10</coverage>
+                    <height>Top</height>
+                    <groups>
+                        <li>Neck</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>ATR_MechanicalHead</def>
+                            <coverage>0.72</coverage>
+                            <groups>
+                                <li>UpperHead</li>
+                                <li>FullHead</li>
+                                <li>HeadAttackTool</li>
+                            </groups>
+                            <parts>
+                                <li>
+                                    <def>ATR_ArtificialBrain</def>
+                                    <coverage>0.10</coverage>
+                                    <depth>Inside</depth>
+                                    <groups>
+                                        <li>UpperHead</li>
+                                        <li>FullHead</li>
+                                    </groups>
+                                </li>
+                                <li>
+                                    <def>ATR_MechanicalVisualSensor</def>
+                                    <customLabel>left visual sensor</customLabel>
+                                    <coverage>0.13</coverage>
+                                    <groups>
+                                        <li>FullHead</li>
+                                        <li>Eyes</li>
+                                    </groups>
+                                </li>
+                                <li>
+                                    <def>ATR_MechanicalVisualSensor</def>
+                                    <customLabel>right visual sensor</customLabel>
+                                    <coverage>0.13</coverage>
+                                    <groups>
+                                        <li>FullHead</li>
+                                        <li>Eyes</li>
+                                    </groups>
+                                </li>
+                            </parts>
+                        </li>
+                    </parts>
+                </li>
+                <li>
+                    <def>ATR_MechanicalWing</def>
+                    <customLabel>left wing</customLabel>
+                    <coverage>0.17</coverage>
+                    <groups>
+                        <li>Arms</li>
+                        <li>ATR_MechanicalLeftWing</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_MechanicalWing</def>
+                    <customLabel>right wing</customLabel>
+                    <coverage>0.17</coverage>
+                    <groups>
+                        <li>Arms</li>
+                        <li>ATR_MechanicalRightWing</li>
+                    </groups>
+                </li>
+                <li>
+                    <def>ATR_MechanicalPropeller</def>
+                    <coverage>0.2</coverage>
+                    <height>Bottom</height>
+                    <groups>
+                        <li>Legs</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>ATR_CounterWeightTop</def>
+                            <coverage>0.2</coverage>
+                            <groups>
+                                <li>Feet</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+            </parts>
+        </corePart>
+    </BodyDef>
+  
+</Defs>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JobDef>
+		<defName>RechargeBattery</defName>
+		<driverClass>ATReforged.JobDriver_GoReloadBattery</driverClass>
+		<reportString>Recharging battery.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>ResurrectMechanical</defName>
+        <driverClass>ATReforged.JobDriver_ResurrectMechanical</driverClass>
+        <reportString>repairing TargetA.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>TendMechanical</defName>
+        <driverClass>ATReforged.JobDriver_TendMechanical</driverClass>
+        <reportString>tending to TargetA.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+
+    <JobDef>
+        <defName>ATR_GenerateInsight</defName>
+        <driverClass>ATReforged.JobDriver_GenerateInsight</driverClass>
+        <reportString>generating SkyMind insight.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>ATR_DoMaintenanceUrgent</defName>
+        <driverClass>ATReforged.JobDriver_DoMaintenanceUrgent</driverClass>
+        <reportString>doing self maintenance.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ATR_DoMaintenanceIdle</defName>
+        <driverClass>ATReforged.JobDriver_DoMaintenanceIdle</driverClass>
+        <reportString>doing self maintenance.</reportString>
+    </JobDef>
+    
+</Defs>

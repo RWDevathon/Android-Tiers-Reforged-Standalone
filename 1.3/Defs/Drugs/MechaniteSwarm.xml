@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>ATR_MechSwarm</defName>
+		<label>Mechanite swarm</label>
+		<description>A small pill containing a veritable legion of mechanites. These mechanites greatly enhance the hosts ability to control the chassis, for two days, as natural mechanite production can not sustain the surge.</description>
+		<graphicData>
+			<texPath>Things/Drugs/MechSwarm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<WorkToMake>1550</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+            <preferability>NeverForNutrition</preferability>
+			<drugCategory>Medical</drugCategory>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_GiveTwoHediffs">
+					<hediffDef_Organic>ATR_Toxicated</hediffDef_Organic>
+					<hediffDef_Mechanical>ATR_MechaniteSurge</hediffDef_Mechanical>
+					<severity>1</severity>
+				</li>  
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>ATR_MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Neutroamine>1</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>803</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>ATR_MechaniteSurge</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanite surge</label>
+		<description>An extra boost of mechanites flowing through coolant tubing. The overpopulation of mechanites can't be sustained by the mechanite storage, and will return to normal levels before long.\n\nIn the mean time however, overall efficiency will be improved.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<statOffsets>
+					<CarryingCapacity>10</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<statOffsets>
+					<CarryingCapacity>30</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>Significant</label>
+				<statOffsets>
+					<CarryingCapacity>50</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+
+
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>Peak</label>
+				<statOffsets>
+					<CarryingCapacity>70</CarryingCapacity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

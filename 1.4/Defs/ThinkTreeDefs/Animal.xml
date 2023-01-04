@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThinkTreeDef>
+        <defName>ATR_AnimalIdleMaintenance</defName>
+        <insertTag>Animal_PreWander</insertTag>
+        <insertPriority>2</insertPriority>
+        <thinkRoot Class="ATReforged.JobGiver_DoMaintenanceIdle"/>
+    </ThinkTreeDef>
+    
+</Defs>

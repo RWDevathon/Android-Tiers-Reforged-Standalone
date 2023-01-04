@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <MentalStateDef ParentName="BaseMentalState" Name="ATR_MentalState_Exterminator">
+        <defName>ATR_MentalState_Exterminator</defName>
+        <stateClass>ATReforged.MentalState_Exterminator</stateClass>
+        <label>seeking targets</label>
+        <category>Aggro</category>
+        <nameColor>(0.7,0.5,0.5)</nameColor>
+        <baseInspectLine>Seeking targets</baseInspectLine>
+        <unspawnedNotInCaravanCanDo>true</unspawnedNotInCaravanCanDo>
+        <minTicksBeforeRecovery>99999999</minTicksBeforeRecovery>
+        <recoverFromSleep>false</recoverFromSleep>
+        <recoverFromDowned>false</recoverFromDowned>
+        <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+    </MentalStateDef>
+
+</Defs>

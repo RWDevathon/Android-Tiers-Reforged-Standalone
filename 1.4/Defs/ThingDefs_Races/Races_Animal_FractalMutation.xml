@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ====== Abomination ===== -->
+	<ThingDef ParentName="BasePawn">
+		<defName>ATR_FractalAbomination</defName>
+		<label>Fractal Abomination</label>
+		<description>The warped and horrific results of fully fledged fractal warping, abominations are relentless killers and nightmarish beings. Capable of and willing to chase any creature that crosses its path, their echoing screams of damnation are common fodder for even glitterworld horror media. \n\nTo those who know no fear, or to researchers of the archotechs, these beings are of great interest. Born of and yielding so-called fractal pills, abominations are drawn to archotech devices - often congregating around especially powerful artifacts. For this reason, morally corrupt archeologists have been known to stalk abominations in order to follow them to archotech ruins, often only to be murdered by it upon arrival.</description>
+		<statBases>
+			<Mass>80</Mass>
+			<MoveSpeed>6.5</MoveSpeed>
+			<Flammability>0</Flammability>
+			<PainShockThreshold>5</PainShockThreshold>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1</ArmorRating_Sharp>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+			<MeatAmount>50</MeatAmount>
+			<LeatherAmount>40</LeatherAmount>
+			<ComfyTemperatureMin>-198</ComfyTemperatureMin>
+			<ComfyTemperatureMax>200</ComfyTemperatureMax>
+			<ImmunityGainSpeed>5</ImmunityGainSpeed>
+		</statBases>
+		<tools>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>45</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+            <li>
+                <label>fractal lance</label>
+                <capacities>
+                    <li>FractalLance</li>
+                </capacities>
+                <power>8</power>
+                <armorPenetration>2.0</armorPenetration>
+                <cooldownTime>0.3</cooldownTime>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+                <chanceFactor>0.025</chanceFactor>
+            </li>
+		</tools>
+		<race>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<intelligence>ToolUser</intelligence>
+			<body>Human</body>
+			<needsRest>false</needsRest>
+			<makesFootprints>true</makesFootprints>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<wildness>1</wildness>
+			<hasGenders>false</hasGenders>
+			<leatherDef>Leather_Patch</leatherDef>
+			<foodType>None</foodType>
+			<lifeExpectancy>1000</lifeExpectancy>
+			<baseBodySize>2.4</baseBodySize>
+			<baseHungerRate>0.1</baseHungerRate>
+			<baseHealthScale>5</baseHealthScale>
+			<useMeatFrom>Human</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>ATR_FractalPain</soundWounded>
+					<soundDeath>ATR_FractalDeath</soundDeath>
+					<soundCall>ATR_FractalCall</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>
+				<min>400</min>
+				<max>1800</max>
+			</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>ATR_FractalAbomination</defName>
+		<label>Fractal abomination</label>
+		<race>ATR_FractalAbomination</race>
+		<combatPower>230</combatPower>
+		<defaultFactionType>AncientsHostile</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>9999</ecoSystemWeight>
+		<apparelTags>
+			<li>Worker</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>80</max>
+		</apparelMoney>
+		<apparelAllowHeadgearChance>0.1</apparelAllowHeadgearChance>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawns/Animals/Abomination/Abomination</texPath>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.45, 1.3, 0.45)</volume>
+						<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawns/Animals/Abomination/Abomination</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<initialResistanceRange>13~21</initialResistanceRange>
+	</PawnKindDef>
+
+</Defs>

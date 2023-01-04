@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+    <ResearchProjectDef>
+        <defName>ATR_MechanicalStandardization</defName>
+        <label>Mechanical standardization</label>
+        <tab>ATR_MechResearch</tab>
+        <description>In order to reach a state of consistent manufactured quality and scaling quantity, a standard of production and maintenance must be established. Androids come in a vast number of styles and designs - standardizing the colony's parts will be critical for success in mechanical fields.</description>
+        <baseCost>1600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalInsight</li>
+        </prerequisites>
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_MassCharging</defName>
+        <label>Charging station</label>
+        <tab>ATR_MechResearch</tab>
+        <description>In order to maximize charging and space efficiency, an effective way to charge a number of mechanical units simultaneously must be developed. A small charging port that can charge 8 at a time could prove essential to expansion.</description>
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+        </prerequisites>
+        <researchViewX>2</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_MechanicalFrameworks</defName>
+        <label>Mechanical framework enhancements</label>
+        <tab>ATR_MechResearch</tab>
+        <description>The framework of a mechanical unit is its most visible feature, as it quite literally holds the entire chassis together. Framework modifications could result in significant gains in a wide range of particular tasks - but does require committing to one particular modification at a time.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ATR_T1Androids</defName>
+		<label>T1 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier one androids are marked by humanlike resemblance, but are still no more than machines. Impressive in their resemblance and capabilities, they represent the higher echelons of UrbWorld creativity and MidWorld dreams. A fine advancement in our progress, and the dawn of a bright future.</description>
+		<baseCost>1600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+            <li>ATR_UtilityBiomimetics</li>
+        </prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_MechanicalStimulators</defName>
+		<label>Mechanical stimulants</label>
+		<tab>ATR_MechResearch</tab>
+		<description>While mechanical units are largely unconcerned by the passage of time and therefore unconcerned about the efficiency of its use, there are times when efficiency at a particular moment is critical. Consumable short-term stimulants could prove useful in these moments.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_AdvancedMechParts</defName>
+        <label>Advanced mechanical parts</label>
+        <tab>ATR_MechResearch</tab>
+        <description>With the acquisition of properly fabrication and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. These parts will function significantly better than factory standard equivalents while remaining within reasonable cost estimates.</description>
+        <baseCost>1600</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+            <li>Fabrication</li>
+        </prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>1</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_T2Androids</defName>
+		<label>T2 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_T1Androids</li>
+            <li>Fabrication</li>
+        </prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+	</ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_StandardizedCommunications</defName>
+        <label>Standardized communications</label>
+        <tab>ATR_MechResearch</tab>
+        <description>If physical standardization can be achieved, then there should similarly be a method for standardizing the methods of communication, thought, and philosophy. The advent of a theoretical cloud environment connecting consciousnesses could promise vast improvements across many fields. A simple relay tower allowing mechanical intra-net communications is a strong start.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+        </prerequisites>
+        <researchViewX>4</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+        <defName>ATR_RemoteControlProtocols</defName>
+        <label>Remote control protocols</label>
+        <tab>ATR_MechResearch</tab>
+        <description>With standardized communication methods across hosts, it is theoretically possible to develop a framework for remotely controlling so-called surrogate bodies. Technical limitations prevent organic involvement in this service due to a lack of efficiency and universal organic applications, but this could prove revolutionary for mechanical units.</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_StandardizedCommunications</li>
+        </prerequisites>
+        <researchViewX>5</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>

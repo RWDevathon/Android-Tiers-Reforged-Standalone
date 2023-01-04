@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BackstoryDef>
+		<defName>ATR_NewbootChildhood</defName>
+		<title>Mechanical unit</title>
+		<titleShort>Unit</titleShort>
+		<baseDesc>{PAWN_nameDef} first awakened on this RimWorld as a fresh intelligence.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ATR_NewbootAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+    <AlienRace.AlienBackstoryDef>
+		<defName>ATR_NewbootAdulthood</defName>
+		<title>Mechanical unit</title>
+		<titleShort>Unit</titleShort>
+		<baseDesc>{PAWN_nameDef} has only known this RimWorld, and was "born" a member of this society. The future is both uncertain and undecided for {PAWN_nameDef}.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_NewbootAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+    <BackstoryDef>
+        <defName>ATR_MechanicalArchotechChildhood</defName>
+        <title>Archotech</title>
+        <titleShort>Archotech</titleShort>
+        <baseDesc>It is not known whether archotechs truly have childhoods, or if they even have something as simplistic and basic as a date of creation. How, then, could anyone claim to know anything about the youth of such a being?</baseDesc>
+        <slot>Childhood</slot>
+        <spawnCategories>
+			<li>ATR_ArchotechAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+    </BackstoryDef>
+        
+	<BackstoryDef>
+		<defName>ATR_MechanicalArchotechAdulthood</defName>
+		<title>Archotech</title>
+		<titleShort>Archotech</titleShort>
+		<baseDesc>Enshrouded in mystery, archotechs remain one of the least understood phenomena. Even the most advanced glitterworlds fail to grasp even the most basic attributes of archotech civilization. What, then, could possibly be said about any individual of such a civilization?</baseDesc>
+		<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_ArchotechAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+            <li>
+                <key>Shooting</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Melee</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Construction</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Mining</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Cooking</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Plants</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Animals</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Crafting</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Artistic</key>
+                <value>10</value>
+            </li>
+            <li>
+                <key>Medicine</key>
+                <value>10</value>
+            </li>
+			<li>
+				<key>Social</key>
+				<value>10</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>10</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+
+</Defs>

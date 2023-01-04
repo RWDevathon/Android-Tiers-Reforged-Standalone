@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="TrapIEDBase">
+        <defName>TrapIED_Microscyther</defName>
+        <label>Microscyther trap</label>
+        <description>A pair of microscyther shells with a simple pressure/contact trigger to unleash the units within. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Security/IEDSwarm</texPath>
+        </graphicData>
+        <costList>
+            <MicroscytherShell>2</MicroscytherShell>
+        </costList>
+        <designationHotKey>Misc10</designationHotKey>
+        <comps>
+        <li Class="CompProperties_Explosive">
+            <explosiveRadius>1.9</explosiveRadius>
+            <explosiveDamageType>Smoke</explosiveDamageType>
+            <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+            <postExplosionSpawnThingDef>MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>ExtinguisherExplosion</explosionEffect>
+            <wickTicks>15</wickTicks>
+            <startWickOnDamageTaken>
+                <li>Bullet</li>
+                <li>Arrow</li>
+                <li>ArrowHighVelocity</li>
+            </startWickOnDamageTaken>
+        </li>
+        </comps>
+        <specialDisplayRadius>1.9</specialDisplayRadius>
+    </ThingDef>
+
+</Defs>

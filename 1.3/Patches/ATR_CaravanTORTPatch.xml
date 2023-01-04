@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+	<!-- Add the TORT unit to all Biome Defs as valid caravan animals -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef/allowedPackAnimals</xpath>
+		<value>
+			<li>DroneTORT</li>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="ATR_ServerBase" ParentName="BuildingBase" Abstract="True">
+        <thingClass>Building</thingClass>	
+        <canOverlapZones>false</canOverlapZones>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <tickerType>Rare</tickerType>
+        <fillPercent>0.40</fillPercent>
+        <comps>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="ATReforged.CompProperties_HeatSensitive">
+                <safeHeat>20</safeHeat>
+                <warningHeat>30</warningHeat>
+                <dangerHeat>40</dangerHeat>
+            </li>
+        </comps>
+        <rotatable>false</rotatable>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>AndroidTiersDesignation</designationCategory>
+        <staticSunShadowHeight>0.2</staticSunShadowHeight>
+        <constructEffect>ConstructMetal</constructEffect>
+        <designationHotKey>Misc4</designationHotKey>
+    </ThingDef>
+
+    <!-- SkyMind Core -->
+    <ThingDef ParentName="ATR_ServerBase">
+        <defName>SkyMindCore</defName>
+        <label>SkyMind Core</label>
+        <description>A network of persona intelligences collectively forming a single supercomputer capable of processing, storing, and manipulating vast quantities of information - that which ultimately defines a consciousness. This device is capable of providing digital immortality, consciousness operations, and remote controls to properly outfitted organic and mechanical individuals alike. Its existence is proof of strength, willpower, and wealth. \n\nShould it lose power or critically overheat, its contents will be irrevocably lost. The ability to overcome death is not risk-free.</description>
+        <statBases>
+            <WorkToBuild>65000</WorkToBuild>
+            <Mass>500</Mass>
+            <Flammability>0.1</Flammability>
+            <Beauty>5</Beauty>
+            <MaxHitPoints>850</MaxHitPoints>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Buildings/SkyMindCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(8,8)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <size>(8,8)</size>
+        <costList>
+            <Steel>2000</Steel>
+            <Plasteel>600</Plasteel>
+            <Gold>400</Gold>
+            <ComponentIndustrial>48</ComponentIndustrial>
+            <ComponentSpacer>24</ComponentSpacer>
+            <AIPersonaCore>4</AIPersonaCore>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>10</glowRadius>
+                <glowColor>(250, 250, 250)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>60</heatPerSecond>
+            </li>
+            <li Class="ATReforged.CompProperties_SkyMindCore">
+                <cloudPawnCapacityProvided>20</cloudPawnCapacityProvided>
+            </li>
+            <li Class="ATReforged.CompProperties_Computer">
+                <serverMode>SecurityServer</serverMode>
+                <passivePointGeneration>40</passivePointGeneration>
+                <pointStorage>10000</pointStorage>
+            </li>
+            <li Class="ATReforged.CompProperties_SkyMindTower">
+                <SkyMindSlotsProvided>5</SkyMindSlotsProvided>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>2500</basePowerConsumption>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>ATR_SkyMindCore</li>
+        </researchPrerequisites>
+    </ThingDef>
+    
+    <!-- Networked Database -->
+    <ThingDef ParentName="ATR_ServerBase">
+        <defName>ATR_NetworkedDatabase</defName>
+        <label>Networked Database</label>
+        <description>A basic server for data tabulation, storage, and calculations. It is incapable of generating insights, but greatly enhances the workflow of those who wish to spend less time doing math and more time analyzing. It generates a small amount of heat, and may be damaged if the heat exceeds its safety threshold.</description>
+        <statBases>
+            <WorkToBuild>12500</WorkToBuild>
+            <Mass>140</Mass>
+            <Flammability>0.3</Flammability>
+            <Beauty>-15</Beauty>
+            <MaxHitPoints>125</MaxHitPoints>
+        </statBases>
+        <costList>
+            <Steel>120</Steel>
+            <Gold>25</Gold>
+            <ComponentIndustrial>12</ComponentIndustrial>
+        </costList>
+        <graphicData>
+            <texPath>Things/Buildings/DatabaseServer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <size>(2,2)</size>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>4</glowRadius>
+                <glowColor>(46,204,113,0)</glowColor>
+            </li>
+            <li Class="ATReforged.CompProperties_Computer">
+                <serverMode>SkillServer</serverMode>
+                <passivePointGeneration>0</passivePointGeneration>
+                <pointStorage>1000</pointStorage>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>2</heatPerSecond>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>120</basePowerConsumption>
+            </li>
+        </comps>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <researchPrerequisites>
+            <li>ATR_MechanicalInsight</li>
+        </researchPrerequisites>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+    </ThingDef>
+    
+    <!-- Networked Analyst -->
+    <ThingDef ParentName="ATR_ServerBase">
+        <defName>ATR_NetworkedAnalyst</defName>
+        <label>Networked Analyst</label>
+        <description>A basic server for analyzing data and generating insights into the chosen task focus using rudimentary machine learning algorithms. Due to its small size and number of calculations, it relies on data servers for storage and generates significant heat. It may be damaged if the heat exceeds its safety threshold.</description>
+        <statBases>
+            <WorkToBuild>22500</WorkToBuild>
+            <Mass>80</Mass>
+            <Flammability>0.4</Flammability>
+            <Beauty>-10</Beauty>
+            <MaxHitPoints>225</MaxHitPoints>
+        </statBases>
+        <costList>
+            <Steel>120</Steel>
+            <Gold>55</Gold>
+            <ComponentIndustrial>12</ComponentIndustrial>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <graphicData>
+            <texPath>Things/Buildings/AnalyzerServer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <size>(1,2)</size>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>4</glowRadius>
+                <glowColor>(46,204,113,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>8</heatPerSecond>
+            </li>
+            <li Class="ATReforged.CompProperties_Computer">
+                <serverMode>SkillServer</serverMode>
+                <passivePointGeneration>4</passivePointGeneration>
+                <pointStorage>0</pointStorage>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>250</basePowerConsumption>
+            </li>
+        </comps>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <researchPrerequisites>
+        <li>ATR_MechanicalInsight</li>
+        </researchPrerequisites>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+    </ThingDef>
+    
+    <!-- Networked Intelligence -->
+    <ThingDef ParentName="ATR_ServerBase">
+        <defName>ATR_NetworkedIntelligence</defName>
+        <label>Networked Intelligence</label>
+        <description>An advanced server for data analysis, tabulation, storage, and insight generation in a chosen task focus using an autonomous AI persona. While it theoretically makes other servers obsolete, the space efficiency and use cases come at a high cost of power and heat generation. It is very susceptible to overheating and may become damaged if it overheats.</description>
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>35000</WorkToBuild>
+            <Mass>40</Mass>
+            <Flammability>0.5</Flammability>
+            <Beauty>-2</Beauty>
+        </statBases>
+        <costList>
+            <Steel>120</Steel>
+            <Gold>60</Gold>
+            <ComponentIndustrial>8</ComponentIndustrial>
+            <ComponentSpacer>4</ComponentSpacer>
+            <AIPersonaCore>1</AIPersonaCore>
+        </costList>
+        <graphicData>
+            <texPath>Things/Buildings/IntelligentServer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <size>(1,2)</size>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>4</glowRadius>
+                <glowColor>(46,204,113,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>16</heatPerSecond>
+            </li>
+            <li Class="ATReforged.CompProperties_Computer">
+                <serverMode>SkillServer</serverMode>
+                <passivePointGeneration>20</passivePointGeneration>
+                <pointStorage>500</pointStorage>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>600</basePowerConsumption>
+            </li>
+        </comps>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <researchPrerequisites>
+        <li>ATR_ServerOptimization</li>
+        </researchPrerequisites>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+    </ThingDef>
+
+    <!-- Archotech Network -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>ATR_ArchotechNetwork</defName>
+        <label>Archotech Server Network</label>
+        <description>An incredibly powerful archotech device that seems to readily offer equally incredible insights in training skills, and how to both secure and breach critical data. It neither uses energy nor produces heat to the amazement of any who have the honor of witnessing it. Many believe that they serve as the eyes and ears of invisible archotech societies interested in monitoring the universe, and that they only gift information to those who have earned an archotech's blessing. Others believe them to be cursed, as they serve as beacons to the unfortunate souls corrupted by fractal warping. \n\nThis is an extremely powerful asset, and many have sought to claim it as their own. Most of those who have tried have become fractal abominations. Even in that sad state, they will continue to seek it out. Be warned.</description>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.40</fillPercent>
+        <statBases>
+            <Mass>20</Mass>
+            <Flammability>0</Flammability>
+            <Beauty>100</Beauty>
+        </statBases>
+        <canOverlapZones>false</canOverlapZones>
+        <pathCost>30</pathCost>
+        <rotatable>false</rotatable>
+        <destroyable>false</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <building>
+            <deconstructible>false</deconstructible>
+        </building>
+        <graphicData>
+            <texPath>Things/Building/Misc/Urn</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.55, 0.35, 0.3)</volume>
+                <offset>(0, 0, -0.28)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.3,0,0.3,0.9)</rect>
+            </damageData>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>10</glowRadius>
+                <glowColor>(250, 250, 250)</glowColor>
+            </li>
+            <li Class="ATReforged.CompProperties_SuperComputer">
+                <passivePointGeneration>1000</passivePointGeneration>
+                <pointStorage>100000</pointStorage>
+            </li>
+        </comps>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ATR_MechanicalAnimalThingBase">
+        <defName>MicroScyther</defName>
+        <label>Micro Scyther</label>
+        <description>A small flying drone with two side-mounted plasteel blades. While not particularly dangerous alone, these drones are rarely ever seen alone. Swarms can shred targets to pieces swiftly.\n\nThese drones have barebones IFF sensors, and will attack any non-microscyther.</description>
+		<statBases>
+			<MarketValue>40</MarketValue>
+			<MoveSpeed>6.20</MoveSpeed>
+			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
+			<ComfyTemperatureMax>200</ComfyTemperatureMax>
+			<Mass>1</Mass>
+		</statBases>
+        <tools>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>1.25</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <chanceFactor>0.1</chanceFactor>
+            </li>
+            <li>
+                <label>left wing</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>ATR_MechanicalLeftWing</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right wing</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>ATR_MechanicalRightWing</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <race>
+            <intelligence>ToolUser</intelligence>
+			<body>ATR_MechAirborne</body>
+            <baseBodySize>0.2</baseBodySize>
+			<baseHealthScale>0.4</baseHealthScale>
+			<foodType>None</foodType>
+			<lifeExpectancy>1</lifeExpectancy>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.0</minAge>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<ageGenerationCurve>
+				<points>
+					<li>(0,0)</li>
+					<li>(0.1,100)</li>
+					<li>(0.2,0)</li>
+				</points>
+			</ageGenerationCurve>
+        </race>
+		<butcherProducts>
+			<Steel>3</Steel>
+		</butcherProducts>
+    </ThingDef>
+  
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>MicroScyther</defName>
+        <label>Microscyther</label>
+        <race>MicroScyther</race>
+        <combatPower>10</combatPower>
+        <canArriveManhunter>false</canArriveManhunter>
+        <ecoSystemWeight>9999</ecoSystemWeight>
+        <backstoryCategories><li>ATR_MSeries</li></backstoryCategories>
+        <defaultFactionType>PlayerColony</defaultFactionType>
+        <lifeStages>
+        <li>
+            <bodyGraphicData>
+            <texPath>Things/Pawns/Animals/MicroScyther/MicroScyther</texPath>
+            <drawSize>1.5</drawSize>
+            <shadowData>
+                <volume>(0.25, 0.3, 0.25)</volume>
+                <offset>(0,0,-0.15)</offset>
+            </shadowData>
+            </bodyGraphicData>
+        </li>
+
+        </lifeStages>
+    </PawnKindDef>
+
+</Defs>

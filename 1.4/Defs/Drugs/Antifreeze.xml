@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>ATR_MechAntifreeze</defName>
+		<label>Mechanite antifreeze</label>
+		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<graphicData>
+			<texPath>Things/Drugs/Antifreeze</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<WorkToMake>550</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+            <preferability>NeverForNutrition</preferability>
+			<drugCategory>Medical</drugCategory>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+					<organicEffect>ATR_Toxicated</organicEffect>
+                    <organicSeverity>1</organicSeverity>
+					<mechanicalEffect>ATR_MechAntifreeze</mechanicalEffect>
+					<mechanicalSeverity>1</mechanicalSeverity>
+				</li>   
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>ATR_MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Chemfuel>5</Chemfuel>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>802</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>ATR_Toxicated</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Toxicated</label>
+		<description>Toxic synthetic compounds within the bloodstream, causing severe health defects.</description>
+		<makesSickThought>true</makesSickThought>
+		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.02</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.02</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<painOffset>0.15</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Major</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>Systemic</label>
+				<painOffset>0.35</painOffset>
+				<vomitMtbDays>0.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!--HediffMechanical-->
+
+	<HediffDef>
+		<defName>ATR_MechAntifreeze</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanite antifreeze</label>
+		<description>Synthetic chemical compound designed to reduce chassis susceptibility to adverse temperature - positive and negative. Not safe for organic consumption.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+					<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+					<ComfyTemperatureMax>20</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Significant</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+					<ComfyTemperatureMax>30</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>Peak</label>
+				<statOffsets>
+					<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+					<ComfyTemperatureMax>40</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

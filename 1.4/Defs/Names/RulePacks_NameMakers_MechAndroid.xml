@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>AndroidAtlasMech</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[AndroidAtlasMechNames]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>AndroidAtlasMechNames</keyword>
+          <path>ATR_Names/MechName</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>AndroidTiers_AndroidAtlas8Mech</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[AndroidAtlas8MechNames]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>AndroidAtlas8MechNames</keyword>
+          <path>ATR_Names/Mech8Name</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

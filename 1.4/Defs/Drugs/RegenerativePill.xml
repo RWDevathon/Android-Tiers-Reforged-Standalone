@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>ATR_RegenerativePill</defName>
+		<label>Regenerative pill</label>
+		<description>A rare case of a mechanical-designed pill (mostly) safe for organic consumption, regenerative pills use specially programmed mechanites that traverse the host's body seeking to repair and fortify damaged parts for faster recovery. \n\nOrganics will find the experience quite unpleasant, but do still fully benefit from the pill's effects.</description>
+		<graphicData>
+			<texPath>Things/Drugs/RegenerativePill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<WorkToMake>2500</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+					<organicEffect>ATR_RegenOrganic</organicEffect>
+                    <organicSeverity>1</organicSeverity>
+					<mechanicalEffect>ATR_RegenMechanical</mechanicalEffect>
+					<mechanicalSeverity>1</mechanicalSeverity>
+				</li>      
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>ATR_MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Chemfuel>10</Chemfuel>
+			<Neutroamine>1</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>805</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>ATR_RegenOrganic</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Organic regeneration</label>
+		<description>Specialized mechanites are repairing and fortifying damaged parts of the body.</description>
+		<makesSickThought>true</makesSickThought>
+		<defaultLabelColor>(0.6,0.7,0.6)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>Minor</label>
+				<painOffset>0.05</painOffset>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+			</li>
+
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>Moderate</label>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+			</li>
+
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>Significant</label>
+				<painOffset>0.2</painOffset>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+			</li>
+
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>Peak</label>
+				<painOffset>0.3</painOffset>
+				<vomitMtbDays>1</vomitMtbDays>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>ATR_RegenOrganic_Thought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ATR_RegenOrganic</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Insignificant</label>
+				<description>The strangeness has faded. I'm alright.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>Regeneration (Minor)</label>
+				<description>I have a creeping sensation that something doesn't feel right, but I am in control.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+			<li>
+				<label>Regeneration (Moderate)</label>
+				<description>I feel extremely uncomfortable and strange. My body is sending my all sorts of warning signs.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>     
+			<li>
+				<label>Regeneration (Significant)</label>
+				<description>My whole body feels really wrong and weird - like my flesh is crawling.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<li>
+				<label>Regeneration (Peak)</label>
+				<description>My body squirms, twists, burns, and twitches without my control! It feels like my body has a mind of its own!</description>
+				<baseMoodEffect>-16</baseMoodEffect>
+			</li>   
+		</stages>
+	</ThoughtDef>
+
+	<!--HediffMechanical-->
+
+	<HediffDef>
+		<defName>ATR_RegenMechanical</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mechanical regeneration</label>
+		<description>Specially designed mechanites are repairing and fortifying damaged regions of the chassis.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>

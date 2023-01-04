@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!-- Humanlikes colonists should idly do self-maintenance instead of wandering if possible. -->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="JobGiver_WanderColony"]</xpath>
+        <order>Prepend</order>
+        <value>
+            <li Class="ATReforged.JobGiver_DoMaintenanceIdle"/>
+        </value>
+    </Operation>
+
+    <!-- Humanlikes in general should idly do self-maintenance instead of wandering if possible (colonists short circuit this). -->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="JobGiver_WanderAnywhere"]</xpath>
+        <order>Prepend</order>
+        <value>
+            <li Class="ATReforged.JobGiver_DoMaintenanceIdle"/>
+        </value>
+    </Operation>
+
+    <!-- Colonists should have urgent maintenance needs met prior to doing work. -->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThinkTreeDef[defName="MainColonistBehaviorCore"]/thinkRoot/subNodes/li/subNodes/li[@Class="JobGiver_Work"]</xpath>
+        <order>Prepend</order>
+        <value>
+            <li Class="ATReforged.JobGiver_DoMaintenanceUrgent"/>
+        </value>
+    </Operation>
+
+</Patch>

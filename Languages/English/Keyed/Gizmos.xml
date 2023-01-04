@@ -8,6 +8,8 @@
 	<ATR_AutoDoorCloseDescription>Close remotely via a SkyCloud server.</ATR_AutoDoorCloseDescription>
 	
 	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>Server not connected to SkyMind network.</ATR_ServerNetworkConnectionNeeded>
+
 	<ATR_SkillMode>Skill Mode</ATR_SkillMode>
 	<ATR_SkillModeDesc>This server is assigned to skill point generation. Click to switch to security.</ATR_SkillModeDesc>
 	
@@ -20,9 +22,8 @@
     <ATR_HackingWindow>Attempt Hack</ATR_HackingWindow>
     <ATR_HackingWindowDesc>Open the hacking interface, allowing for the usage of hacking points to engage in nefarious activity.</ATR_HackingWindowDesc>
 
-	
-	<ATR_SwitchToSkillMode>Switch to Skill Mode</ATR_SwitchToSkillMode>
-	<ATR_SwitchToSkillModeDesc>Click to switch to skill point generation, this server is not active right now</ATR_SwitchToSkillModeDesc>
+	<ATR_SwitchToSkillMode>Inactive!</ATR_SwitchToSkillMode>
+	<ATR_SwitchToSkillModeDesc>This server is in an illegal state. Click to switch to skill.</ATR_SwitchToSkillModeDesc>
 	
 	<!-- SkyMind -->
 	<ATR_ConnectSkyMind>Connect to SkyMind</ATR_ConnectSkyMind>
@@ -49,6 +50,7 @@
 	<ATR_ControlCaravanSurrogateDesc>Recover a hostless surrogate in a caravan.</ATR_ControlCaravanSurrogateDesc>
 	
 	<!-- Link -->
+    <ATR_Surrogate>surrogate</ATR_Surrogate>
 	
 	<ATR_AbsorbExperience>Mind absorption</ATR_AbsorbExperience>
 	<ATR_AbsorbExperienceDesc>Absorb the experience of a prisoner's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>
@@ -68,14 +70,18 @@
 	<ATR_PermuteDesc>Permute the consciousness of the currently selected colonist with another colonist.</ATR_PermuteDesc>
 	<ATR_PermuteConfirm>This operation will swap the intelligences of {0} and {1}.</ATR_PermuteConfirm>
 	
-	<ATR_Duplicate>Duplicate</ATR_Duplicate>
-	<ATR_DuplicateDesc>Duplicate the consciousness of the currently selected colonist into an organic surrogate.</ATR_DuplicateDesc>
-	<ATR_DuplicateConfirm>This operation will transfer a copy of {0} into the target {1}'s body. This is an autonomous intelligence. The SkyMind receiver will burn out once the operation is complete.</ATR_DuplicateConfirm>
+	<ATR_Transfer>Transfer</ATR_Transfer>
+	<ATR_TransferDesc>Transfer the consciousness of the currently selected colonist into an organic surrogate.</ATR_TransferDesc>
+	<ATR_TransferConfirm>This operation will transfer {0} into the target surrogate's body. This will leave {0}'s original body mindless. The SkyMind receiver will burn out once the operation is complete.</ATR_TransferConfirm>
 	
 	<ATR_Upload>Upload</ATR_Upload>
 	<ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>
 	<ATR_UploadConfirm>This operation transfers this intelligence into the SkyMind network, leaving the body behind.</ATR_UploadConfirm>
 	
-		
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>Maintenance</ATR_MaintenanceGizmoLabel>
+
+    <ATR_SetMaintenanceNeedCommand>Set target maintenance</ATR_SetMaintenanceNeedCommand>
+    <ATR_SetMaintenanceNeedCommandDesc>Set the level of maintenance that this unit should try to achieve.</ATR_SetMaintenanceNeedCommandDesc>
 
 </LanguageData>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef Name="ATR_ChronicDefectiveBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <chronic>true</chronic>
+        <description>_</description>
+        <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+        <initialSeverity>0.001</initialSeverity>
+    </HediffDef>
+    
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_PartDecay</defName>
+        <label>decaying part</label>
+        <labelNoun>a decaying part</labelNoun>
+        <description>This part of this unit has suffered significant decay and is performing suboptimally. Repairs are needed to alleviate this.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>0.25</initialSeverity>
+        <minSeverity>0.2</minSeverity>
+        <maxSeverity>0.3</maxSeverity>
+        <stages>
+            <li>
+                <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_RustedPart</defName>
+        <label>rusted part</label>
+        <labelNoun>a rusted part</labelNoun>
+        <description>This part has rusted. While it is not performing any noticeably worse, it is very displeasing to see, hear, and use. Repairs are needed to alleviate this.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>0.25</initialSeverity>
+        <minSeverity>0.2</minSeverity>
+        <maxSeverity>0.3</maxSeverity>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <stages>
+            <li>
+                <statOffsets>
+                    <Beauty>-1</Beauty>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_PowerLoss</defName>
+        <label>part blackout</label>
+        <labelNoun>a part blackout</labelNoun>
+        <description>This part has suffered a near total power loss. While the part is still somewhat manipulatable by adjacent parts, it is severely impairing functionality and increasing power usage. Repairs can alleviate this, but it will pass on its own as mechanites repair the system.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>1</initialSeverity>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.75</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactor>1.2</hungerRateFactor>
+                <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+            </li>
+        </stages>
+    </HediffDef>
+  
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_DamagedCore</defName>
+        <label>core damage</label>
+        <description>The memory core of this unit has suffered internal physical damage and is not operating at an appropriate level. This may result in additional transitory memory corruptions and impair functionality until repaired.</description>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <initialSeverity>1</initialSeverity>
+        <stages>
+            <li>
+                <forgetMemoryThoughtMtbDays>3</forgetMemoryThoughtMtbDays>
+                <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.8</postFactor>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <GlobalLearningFactor>-0.5</GlobalLearningFactor>
+                </statOffsets>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>WanderConfused</mentalState>
+                        <mtbDays>5</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+ 
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_FailingCoolantValves</defName>
+        <label>failing coolant valves</label>
+        <description>The internal coolant valves of this unit are degrading. Over time, the chassis will lose the ability to circulate coolant, leading to severe impediments to repairs and cooling efficiency until repaired.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <lethalSeverity>1</lethalSeverity>
+        <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.02</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <minSeverity>0</minSeverity>
+                <label>initial</label>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.2</minSeverity>
+                <label>minor</label>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+				<statOffsets>
+                    <InjuryHealingFactor>-0.2</InjuryHealingFactor>
+				</statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>moderate</label>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                </capMods>
+				<statOffsets>
+                    <InjuryHealingFactor>-0.3</InjuryHealingFactor>
+				</statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.6</minSeverity>
+                <label>significant</label>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.5</offset>
+                    </li>
+                </capMods>
+				<statOffsets>
+                    <InjuryHealingFactor>-0.5</InjuryHealingFactor>
+				</statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>severe</label>
+                <lifeThreatening>true</lifeThreatening>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                </capMods>
+				<statOffsets>
+                    <InjuryHealingFactor>-0.7</InjuryHealingFactor>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+  
+    <HediffDef ParentName="ATR_ChronicDefectiveBase">
+        <defName>ATR_RogueMechanites</defName>
+        <label>rogue mechanites</label>
+        <description>The internal mechanite storage has suffered a critical failure, and the mechanites are decohering and preventing coolant flow. As they accumulate in critical regions and damage coolant lines, they may cause a lethal hardware failure unless emergency repairs occur.</description>
+        <hediffClass>Hediff_HeartAttack</hediffClass>
+        <defaultLabelColor>(0.9, 0.7, 0.5)</defaultLabelColor>
+        <initialSeverity>0.2</initialSeverity>
+        <lethalSeverity>1</lethalSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.4</severityPerDay>
+            </li>
+        </comps>
+        <tendable>true</tendable>
+        <stages>
+            <li>
+                <label>high coherence</label>
+                <lifeThreatening>true</lifeThreatening>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.85</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <label>moderate coherence</label>
+                <minSeverity>0.4</minSeverity>
+                <lifeThreatening>true</lifeThreatening>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.5</postFactor>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <label>severe coherence</label>
+                <minSeverity>0.8</minSeverity>
+                <lifeThreatening>true</lifeThreatening>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <label>fatal</label>
+                <minSeverity>1</minSeverity>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef Name="ATR_MaintenanceEffectsBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <description>_</description>
+        <defaultLabelColor>(0.2, 0.42, 0.76)</defaultLabelColor>
+        <initialSeverity>0.001</initialSeverity>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+        <defName>ATR_MaintenanceCritical</defName>
+        <label>critical integrity</label>
+        <labelNoun>critical vulnerability</labelNoun>
+        <description>This unit is suffering from critically poor maintenance and may suffer spontaneous major breakdowns or many small scale failures. The lack of maintenance is also reducing overall efficiency and the chassis' ability to repair itself.</description>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_MaintenanceStageEffect">
+                <activeMaintenanceStage>Critical</activeMaintenanceStage>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactor>1.1</hungerRateFactor>
+                <statFactors>
+                    <InjuryHealingFactor>0.80</InjuryHealingFactor>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.9</postFactor>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>0.9</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+        <defName>ATR_MaintenancePoor</defName>
+        <label>poor integrity</label>
+        <labelNoun>minor vulnerability</labelNoun>
+        <description>This unit is suffering from poor maintenance and may suffer spontaneous small scale failures if left unattended for too long. The lack of maintenance is slightly reducing the chassis' ability to repair itself.</description>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_MaintenanceStageEffect">
+                <activeMaintenanceStage>Poor</activeMaintenanceStage>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactor>1.05</hungerRateFactor>
+                <statFactors>
+                    <InjuryHealingFactor>0.95</InjuryHealingFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="ATR_MaintenanceEffectsBase">
+        <defName>ATR_MaintenanceSatisfactory</defName>
+        <label>high integrity</label>
+        <labelNoun>heightened stability</labelNoun>
+        <description>This unit is benefitting from proper maintenance and is immune to spontaneous part failure. The well-maintained chassis is impressive, slightly more capable of handling damage, and slightly more power efficient.</description>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_MaintenanceStageEffect">
+                <activeMaintenanceStage>Satisfactory</activeMaintenanceStage>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactor>0.95</hungerRateFactor>
+                <statOffsets>
+                    <Beauty>1</Beauty>
+                </statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

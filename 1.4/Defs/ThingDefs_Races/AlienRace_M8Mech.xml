@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
+		<defName>M8Mech</defName>
+		<label>M8 Mechanised infantry</label>
+		<description>A prototype M7 mechanized infantry, equipped with a limited SkyCore unit and SkyMind tower. These units are very strong, powerful war machines and allow digital consciousness to move on battlefields but are subsequently slow and have limited internal storage capacity to them.</description>
+		<comps>
+		  <li Class="ATReforged.CompProperties_SkyMindCore">
+			<cloudPawnCapacityProvided>4</cloudPawnCapacityProvided>
+		  </li>
+		  <li Class="ATReforged.CompProperties_SkyMindTower">
+			<SkyMindSlotsProvided>4</SkyMindSlotsProvided>
+		  </li>
+		</comps>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<bodyTypes>
+						<li>Male</li>
+					</bodyTypes>
+					<headTypes>
+                        <li>ATR_M8_None</li>
+                    </headTypes>
+					<borderScale>2</borderScale>
+					<atlasScale>2</atlasScale>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.18,0.18,0.18,1)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(0.0,0.23,0.0,1)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+					<customDrawSize>(2.7)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+			<graphicPaths>
+                <body>Things/Pawns/Humanlikes/M8Mech/body/</body>
+                <head>Things/Pawns/Humanlikes/M8Mech/head/</head>
+                <skinShader>Cutout</skinShader>
+			</graphicPaths>
+		</alienRace>
+        <uiIconPath>Things/Pawns/Humanlikes/M8Mech/body/Naked_None_south</uiIconPath>
+		<tools>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>65</power>
+				<cooldownTime>3.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>18</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>65</power>
+				<cooldownTime>3.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>18</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<butcherProducts>
+			<Plasteel>160</Plasteel>
+			<ComponentIndustrial>30</ComponentIndustrial>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Uranium>30</Uranium>
+			<Gold>6</Gold>
+            <AIPersonaCore>1</AIPersonaCore>
+		</butcherProducts>
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>M8MechPawn</defName>
+		<label>M8 mech</label>
+		<race>M8Mech</race>
+		<combatPower>1000</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>9999</ecoSystemWeight>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATR_MSeries</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<weaponMoney>
+			<min>9999</min>
+			<max>9999</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATR_MechWeapon</li>
+		</weaponTags>
+		<initialResistanceRange>13~21</initialResistanceRange>
+	</PawnKindDef>
+
+</Defs>

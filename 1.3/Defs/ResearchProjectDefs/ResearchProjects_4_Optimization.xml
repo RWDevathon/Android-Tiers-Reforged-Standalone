@@ -128,7 +128,7 @@
         <defName>ATR_CoreAssistants</defName>
         <label>Core assistance</label>
         <tab>ATR_MechResearch</tab>
-        <description>With the acquisition of properly fabrication and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. These parts will function significantly better than factory standard equivalents while remaining within reasonable cost estimates.</description>
+        <description>With the acquisition of proper fabrication capabilities and a strong standardization scheme, advancements in the quality of mechanical parts is now within reach. There is spare space in all androids' heads, primarily for protective padding purposes - advanced specialized chips could occupy some of that space instead.</description>
         <baseCost>1600</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+    <!-- ============= Mechanic ============= -->
+  
+    <WorkGiverDef>
+        <defName>MechanicTendEmergency</defName>
+        <label>repair patients with urgent needs</label>
+        <giverClass>ATReforged.WorkGiver_TendOtherUrgentMech</giverClass>
+        <workType>Mechanic</workType>
+        <emergency>true</emergency>
+        <verb>repair</verb>
+        <gerund>repairing</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <priorityInType>110</priorityInType>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>MechanicTendToHumanlikes</defName>
+        <label>repair patients</label>
+        <giverClass>ATReforged.WorkGiver_TendOtherMech</giverClass>
+        <workType>Mechanic</workType>
+        <verb>repair</verb>
+        <gerund>repairing</gerund>
+        <priorityInType>100</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+        <tendToHumanlikesOnly>true</tendToHumanlikesOnly>
+    </WorkGiverDef>
+
+    <WorkGiverDef Name="MechanicTendToSelf">
+        <defName>MechanicTendToSelf</defName>
+        <label>repair self</label>
+        <giverClass>ATReforged.WorkGiver_TendSelfMech</giverClass>
+        <workType>Mechanic</workType>
+        <verb>repair</verb>
+        <gerund>repairing</gerund>
+        <priorityInType>90</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef ParentName="MechanicTendToSelf">
+        <defName>MechanicTendToSelfEmergency</defName>
+        <giverClass>ATReforged.WorkGiver_TendSelfEmergencyMech</giverClass>
+        <emergency>True</emergency>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>DoBillsMechanicalOperation</defName>
+        <label>operate on humanlikes</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Mechanic</workType>
+        <priorityInType>70</priorityInType>
+        <billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+        <billGiversAllHumanlikesCorpses>true</billGiversAllHumanlikesCorpses>
+        <verb>operate on</verb>
+        <gerund>operating on</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>MechanicRescue</defName>
+        <label>rescue downed allies to bed</label>
+        <giverClass>WorkGiver_RescueDowned</giverClass>
+        <workType>Mechanic</workType>
+        <verb>rescue</verb>
+        <gerund>rescuing</gerund>
+        <priorityInType>60</priorityInType>
+        <directOrderable>false</directOrderable>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>MechanicTendToAnimals</defName>
+        <label>repair animals</label>
+        <giverClass>ATReforged.WorkGiver_TendOtherMech</giverClass>
+        <workType>Mechanic</workType>
+        <verb>repair</verb>
+        <gerund>repairing</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <priorityInType>50</priorityInType>
+        <prioritizeSustains>true</prioritizeSustains>
+        <tendToAnimalsOnly>true</tendToAnimalsOnly>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>DoBillsMechanicalAnimalOperation</defName>
+        <label>operate on animals</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Mechanic</workType>
+        <priorityInType>30</priorityInType>
+        <billGiversAllAnimals>true</billGiversAllAnimals>
+        <billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
+        <verb>operate on</verb>
+        <gerund>operating on</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>TakeMechanicalToBedToOperate</defName>
+        <label>take patients to bed for operations</label>
+        <giverClass>WorkGiver_TakeToBedToOperate</giverClass>
+        <workType>Mechanic</workType>
+        <priorityInType>20</priorityInType>
+        <verb>take to operate</verb>
+        <gerund>taking to operate</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <!-- ============= Research ============= -->
+    
+    <WorkGiverDef>
+        <defName>ATR_GenerateInsight</defName>
+        <label>generate SkyMind insight points</label>
+        <giverClass>ATReforged.WorkGiver_GenerateInsight</giverClass>
+        <workType>Research</workType>
+        <priorityInType>30</priorityInType>
+        <verb>generate insight</verb>
+        <gerund>generating insight</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+    
+</Defs>

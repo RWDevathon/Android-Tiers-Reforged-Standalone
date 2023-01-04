@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DamageDef ParentName="Bite">
+        <defName>FractalLance</defName>
+        <label>fractal lance</label>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has died due to a fractal lance from an abomination.</deathMessage>
+        <hediff>FractalLance</hediff>
+        <hediffSolid>FractalLance</hediffSolid>
+    </DamageDef>
+
+</Defs>

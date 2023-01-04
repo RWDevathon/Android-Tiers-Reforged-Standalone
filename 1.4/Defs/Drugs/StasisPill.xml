@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>ATR_StasisPill</defName>
+		<label>Stasis pill</label>
+		<description>A small pill containing a slurry of highly conductive, mildly sedative synthetic chemicals. When ingested by mechanical units, the chemicals will greatly reduce power consumption at the cost of reduced work efficiency.\n\nDesigned for long-distance travel without access to reliable power, this pill will reduce power consumption by 75% at a 50% work speed penalty for ~3 days. Commonly used by raiders, traders, and soldiers who value efficiency and who don't engage in labor.</description>
+		<graphicData>
+			<texPath>Things/Drugs/MechSwarm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>10</stackLimit>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<WorkToMake>1550</WorkToMake>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<ingestible>
+            <preferability>NeverForNutrition</preferability>
+			<drugCategory>Medical</drugCategory>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="ATReforged.IngestionOutcomeDoer_MechOrganicDifferentEffects">
+					<organicEffect>ATR_Toxicated</organicEffect>
+                    <organicSeverity>1</organicSeverity>
+					<mechanicalEffect>ATR_StasisPill</mechanicalEffect>
+					<mechanicalSeverity>1</mechanicalSeverity>
+				</li>  
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>ATR_MechanicalStimulators</researchPrerequisite>
+			<recipeUsers>
+				<li>ATR_MechPartWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Neutroamine>1</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>804</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+    <HediffDef>
+		<defName>ATR_StasisPill</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Stasis chemicals</label>
+		<description>A slurry of highly conductive, mildly sedative synthetic chemicals are in the host, greatly reducing power consumption at the cost of reduced work efficiency.\n\nDesigned for long-distance travel without access to reliable power where consumption efficiency triumphs over work efficiency.</description>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.32</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+                <hungerRateFactor>0.25</hungerRateFactor>
+                <statFactors>
+					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+                </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

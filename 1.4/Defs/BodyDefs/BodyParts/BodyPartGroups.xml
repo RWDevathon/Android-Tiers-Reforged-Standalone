@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <BodyPartGroupDef>
+        <defName>ATR_MechanicalLeftWing</defName>
+        <label>left wing</label>
+        <listOrder>101</listOrder>
+    </BodyPartGroupDef>
+    
+    <BodyPartGroupDef>
+        <defName>ATR_MechanicalRightWing</defName>
+        <label>right wing</label>
+        <listOrder>102</listOrder>
+    </BodyPartGroupDef>
+
+</Defs>

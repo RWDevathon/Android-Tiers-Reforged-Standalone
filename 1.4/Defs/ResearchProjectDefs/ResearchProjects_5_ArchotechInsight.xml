@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>ATR_ArchotechInsight</defName>
+		<label>Archotech insight</label>
+		<tab>ATR_MechResearch</tab>
+		<description>This is but an infinetismal glimpse into the might of true archotechs, and yet it promises to alter the fundamental rules of the colony's capabilities. Only an archotech may offer us this insight, and even then only with intense focus and a great deal of simplification and patronizing patience.</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<researchViewX>9</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

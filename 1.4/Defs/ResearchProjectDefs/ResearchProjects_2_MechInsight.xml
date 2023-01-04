@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>ATR_MechanicalInsight</defName>
+		<label>Mechanical insight</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Initiate research into the possibility of creating mechanical recreations of living things - and related opportunities.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites><li>Machining</li></prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_UtilityBiomimetics</defName>
+		<label>Utility biomimetics</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Biomimetics is the theoretical field of creating mechanical versions of living things. The earliest successful mechanical prototypes always iterate upon biological successes. Research in this field could recreate many of humanity's selective breeding successes in a robotic form.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites><li>ATR_MechanicalInsight</li></prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

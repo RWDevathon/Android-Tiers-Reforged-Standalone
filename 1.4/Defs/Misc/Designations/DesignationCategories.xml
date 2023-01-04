@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DesignationCategoryDef>
+        <defName>AndroidTiersDesignation</defName>
+        <label>Android Tiers</label>
+        <description>Android Tiers Buildings</description>
+        <order>499</order>
+        <specialDesignatorClasses>
+            <li>Designator_Cancel</li>
+            <li>Designator_Deconstruct</li>
+        </specialDesignatorClasses>
+    </DesignationCategoryDef>
+</Defs>
