@@ -102,6 +102,31 @@
 		</fixedIngredientFilter>
 	</RecipeDef>
 
+	<!-- Surgery to repaint mechanical units -->
+	<RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ATR_RepaintMechanical</defName>
+		<label>Repaint</label>
+		<description>Changes the paint color of a mechanical unit.</description>
+		<workerClass>ATReforged.Recipe_PaintMechanicalUnit</workerClass>
+		<jobString>Painting mechanical unit.</jobString>
+		<workAmount>400</workAmount>
+	  	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+    	</ingredients>
+    	<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
 	<!-- Surgery to reprogram drones to serve the colony -->
     <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ATR_ReprogramDrone</defName>

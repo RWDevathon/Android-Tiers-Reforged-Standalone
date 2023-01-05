@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ATReforged</RootNamespace>
     <AssemblyName>Android Tiers Reforged</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -208,6 +208,7 @@
     <Compile Include="DefsOf\QuestScriptDefOf.cs" />
     <Compile Include="DefsOf\RulePackDefOf.cs" />
     <Compile Include="DefsOf\WorkTypeDefOf.cs" />
+    <Compile Include="Dialogs\Dialog_Repaint.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
     <Compile Include="Enum\ServerType.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />
@@ -321,6 +322,7 @@
     <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
     <Compile Include="DefsOf\HediffDefOf.cs" />
+    <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
     <Compile Include="JobDrivers\JobDriver_GoReloadBattery.cs" />
     <Compile Include="Recipes\Recipe_InstallOrganicSkyMindInterface.cs" />

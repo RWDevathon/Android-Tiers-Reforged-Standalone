@@ -114,7 +114,7 @@ namespace ATReforged
                 {
                     powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
                 }
-                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true && lookForOtherJobs)
+                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true && lookForOtherJobs && !HealthAIUtility.ShouldHaveSurgeryDoneNow(actor))
                 {
                     actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                     return;
