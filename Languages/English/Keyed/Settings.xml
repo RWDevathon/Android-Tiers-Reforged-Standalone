@@ -87,6 +87,7 @@
     <!-- Health Settings -->
         <!-- Medical -->
     <ATR_medicinesAreInterchangeable>Organic/Mechanical medicines are interchangeable.</ATR_medicinesAreInterchangeable>
+    <ATR_showMechanicalSurgerySuccessChance>Display success chance of completed mechanical surgeries.</ATR_showMechanicalSurgerySuccessChance>
     <ATR_maxChanceMechanicOperationSuccess>Max success change for mechanical surgeries</ATR_maxChanceMechanicOperationSuccess>
     <ATR_chanceFailedOperationMinor>Chance failed mechanical surgeries are minor [default 75%]</ATR_chanceFailedOperationMinor>
     <ATR_chancePartSavedOnFailure>Chance that parts are returned from failed mechanical surgeries [default 75%]</ATR_chancePartSavedOnFailure>

@@ -19,7 +19,7 @@ namespace ATReforged
                 }
                 return 5f;
             }
-            if (timeAssignmentDef == TimeAssignmentDefOf.Work)
+            else if (timeAssignmentDef == TimeAssignmentDefOf.Work)
             {
                 if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
                 {
@@ -27,21 +27,23 @@ namespace ATReforged
                 }
                 return 6f;
             }
-            if (timeAssignmentDef == TimeAssignmentDefOf.Sleep)
-            {if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
+            else if (timeAssignmentDef == TimeAssignmentDefOf.Sleep)
+            {
+                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
                 {
                     return 8.5f;
                 }
                 return 4f;
             }
-            if (timeAssignmentDef == TimeAssignmentDefOf.Joy)
-            {if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
+            else if (timeAssignmentDef == TimeAssignmentDefOf.Joy)
+            {
+                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
                 {
                     return 8.5f;
                 }
                 return 4f;
             }
-            if (timeAssignmentDef == TimeAssignmentDefOf.Meditate)
+            else if (timeAssignmentDef == TimeAssignmentDefOf.Meditate)
             {
                 return 10f;
             }

@@ -699,7 +699,6 @@ namespace ATReforged
                     if (ATReforged_Settings.uploadingToSkyMindPermaKills)
                     {
                         replacement.SetFactionDirect(null);
-                        replacement.relations.ClearAllRelations();
                         replacement.ideo?.SetIdeo(null);
                         replacement.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, replacement.health.hediffSet.GetBrain()));
                     }

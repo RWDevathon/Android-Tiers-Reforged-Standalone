@@ -708,7 +708,7 @@ namespace ATReforged
         public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
         {
             // Generate a new pawn.
-            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
+            PawnGenerationRequest request = new PawnGenerationRequest(pawn.kindDef, faction: null, context: PawnGenerationContext.NonPlayer, canGeneratePawnRelations: false, fixedBiologicalAge: pawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: pawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: pawn.gender);
             Pawn copy = PawnGenerator.GeneratePawn(request);
 
             // Gene generation is a bit strange, so we manually handle it ourselves.
