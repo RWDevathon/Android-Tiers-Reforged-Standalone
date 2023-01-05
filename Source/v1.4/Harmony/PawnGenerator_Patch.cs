@@ -37,8 +37,8 @@ namespace ATReforged
             {
                 try
                 {
-                    // By default, all androids get an autonomous core. Cases where that is not desired can remove it there.
-                    if (Utils.IsConsideredMechanicalAndroid(__result) && !Utils.HasSpecialStatus(__result))
+                    // All androids that need cores (by def extension) receive one by default. Cases where that is not desired can remove it there.
+                    if (Utils.IsConsideredMechanicalAndroid(__result) && __result.def.GetModExtension<ATR_MechTweaker>()?.needsCoreAsAndroid == true)
                     {
                         __result.health.AddHediff(HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                     }

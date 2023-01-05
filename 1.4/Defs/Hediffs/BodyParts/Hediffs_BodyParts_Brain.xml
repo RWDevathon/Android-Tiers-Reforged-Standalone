@@ -96,6 +96,12 @@
         <defName>ATR_AutonomousCore</defName>
         <label>Autonomous core</label>
         <description>This core is fully interfaced with an autonomous intelligence. Everything that makes up the intelligence is stored safely within this core, from which it is able to exert control over the rest of the chassis.</description>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <allowsConnection>true</allowsConnection>
+                <isTransceiver>true</isTransceiver>
+            </li>
+        </comps>
     </HediffDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
@@ -112,6 +118,12 @@
         <defName>ATR_ReceiverCore</defName>
         <label>Receiver core</label>
         <description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</description>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <allowsConnection>true</allowsConnection>
+                <isReceiver>true</isReceiver>
+            </li>
+        </comps>
     </HediffDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
@@ -129,6 +141,12 @@
         <defName>ATR_SkyMindReceiver</defName>
         <label>SkyMind Receiver</label>
         <description>This device is installed directly into the brain, and completely overrides the subject's neural network, converting them into a blank husk to be controlled by an external force. Due to the complexity of the device and the inherent difficulty of controlling organic matter, this device has a tendency to combust violently upon destruction. \n\nMany forces have used this to their advantage to destroy surrogates rather than let them fall into enemy hands.</description>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <allowsConnection>true</allowsConnection>
+                <isReceiver>true</isReceiver>
+            </li>
+        </comps>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartCoreBase">
@@ -172,12 +190,31 @@
         <addsHediff>ATR_SkyMindReceiver</addsHediff>
     </RecipeDef>
 
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <workerClass>ATReforged.Recipe_RemoveOrganicSkyMindInterface</workerClass>
+        <defName>ATR_RemoveSkyMindReceiver</defName>
+        <label>remove SkyMind receiver</label>
+        <description>Remove the Skymind receiver implant.</description>
+        <descriptionHyperlinks>
+            <ThingDef>ATR_SkyMindReceiver</ThingDef>
+            <HediffDef>ATR_SkyMindReceiver</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Skymind receiver.</jobString>
+        <removesHediff>ATR_SkyMindReceiver</removesHediff>
+    </RecipeDef>
+
     <!-- SkyMind Transceiver -->
 
     <HediffDef ParentName="ATR_ImplantCoreBase">
         <defName>ATR_SkyMindTransceiver</defName>
         <label>SkyMind Transceiver</label>
         <description>This device is installed directly into the brain, allowing the subject to freely interact with the SkyMind network. Successfully implanting or removing this implant has no major consequences.</description>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <allowsConnection>true</allowsConnection>
+                <isTransceiver>true</isTransceiver>
+            </li>
+        </comps>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartCoreBase">
@@ -223,9 +260,9 @@
 
     <RecipeDef ParentName="SurgeryRemoveImplantBase">
         <workerClass>ATReforged.Recipe_RemoveOrganicSkyMindInterface</workerClass>
-        <defName>ATR_RemoveSkyMindTransceiver</defName>
-        <label>remove transceiver</label>
-        <description>Remove the Skymind transceiver.</description>
+        <defName>ATR_RemoveOrganicSkyMindTransceiver</defName>
+        <label>remove SkyMind transceiver</label>
+        <description>Remove the Skymind transceiver implant.</description>
         <descriptionHyperlinks>
             <ThingDef>ATR_SkyMindTransceiver</ThingDef>
             <HediffDef>ATR_SkyMindTransceiver</HediffDef>

@@ -293,7 +293,7 @@ namespace ATReforged
         }
 
         // Determine if the provided pawn is connected to the SkyMind Network.
-        public bool HasSkyMindConnection (Pawn pawn)
+        public bool HasSkyMindConnection(Pawn pawn)
         {
             return networkedDevices.Contains(pawn) || cloudPawns.Contains(pawn);
         }

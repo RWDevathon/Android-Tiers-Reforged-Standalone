@@ -47,7 +47,7 @@ namespace ATReforged
             meditate.FailOn(() => !MeditationUtility.CanMeditateNow(pawn) || !MeditationUtility.SafeEnvironmentalConditions(pawn, TargetLocA, Map));
             meditate.AddFinishAction(delegate
             {
-                pawn.GetComp<CompMaintenanceNeed>().ChangeMaintenanceLevel((Find.TickManager.TicksGame - startTick) * 0.000015f);
+                pawn.GetComp<CompMaintenanceNeed>().ChangeMaintenanceLevel((Find.TickManager.TicksGame - startTick) * 0.00003f);
             });
             yield return meditate;
         }

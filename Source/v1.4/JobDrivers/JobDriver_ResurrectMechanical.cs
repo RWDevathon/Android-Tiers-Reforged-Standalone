@@ -62,24 +62,15 @@ namespace ATReforged
                 ResurrectionUtility.Resurrect(innerPawn);
                 SoundDefOf.MechSerumUsed.PlayOneShot(SoundInfo.InMap(innerPawn));
 
-                // If the target is an android surrogate, then ensure it is booted up as a blank if a surrogate without any rebooting. Autonomous intact cores are fine as is.
+                // Dead surrogates originating from other factions should no longer be considered foreign.
                 if (Utils.IsSurrogate(innerPawn))
                 {
-                    Hediff target = innerPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_ReceiverCore);
-                    if (target != null)
-                        innerPawn.health.RemoveHediff(target);
-
-                    innerPawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore);
-                    innerPawn.health.RemoveHediff(rebootHediff);
-
-                    // Dead surrogates of other factions should no longer be considered foreign. Remove that flag.
                     CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
                     if (targetComp.isForeign)
                         targetComp.isForeign = false;
                 }
-
                 // Make the revived pawn grateful to the pawn that revived them.
-                if (innerPawn.needs.mood != null)
+                else if (innerPawn.needs.mood != null)
                 {
                     innerPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.RescuedMe, pawn);
                 }

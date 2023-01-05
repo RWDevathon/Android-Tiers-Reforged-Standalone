@@ -4,7 +4,6 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
-using System.Linq;
 
 namespace ATReforged
 {
@@ -134,9 +133,9 @@ namespace ATReforged
                 //Organic surrogates may receive downloads from the pawn they are connected to in the SkyMind network.
                 if (!Utils.IsConsideredMechanical(ThisPawn) && HasSurrogate())
                 {
-                    Pawn controller = surrogatePawns.First();
+                    Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
-                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Any(surrogate => surrogate != ThisPawn))
+                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
                     {
                         yield return new Command_Action
                         {
@@ -279,7 +278,7 @@ namespace ATReforged
                     // Allow this pawn to do transfers if it is controlling an organic surrogate and isn't controlling multiple surrogates.
                     if (surrogatePawns.Count == 1)
                     {
-                        Pawn surrogate = surrogatePawns.First();
+                        Pawn surrogate = surrogatePawns.FirstOrFallback();
                         if (!Utils.IsConsideredMechanical(surrogate))
                         {
                             yield return new Command_Action
@@ -313,15 +312,18 @@ namespace ATReforged
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn colonist in ThisPawn.Map.mapPawns.FreeColonists.Where(colonist => Utils.IsValidMindTransferTarget(colonist) && colonist != ThisPawn && !Utils.IsSurrogate(colonist)))
+                    foreach (Pawn colonist in ThisPawn.Map.mapPawns.FreeColonists)
                     {
-                        opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
+                        if (Utils.IsValidMindTransferTarget(colonist) && colonist != ThisPawn && !Utils.IsSurrogate(colonist))
                         {
-                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_PermuteConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Permute".Translate(), buttonAAction: delegate
+                            opts.Add(new FloatMenuOption(colonist.LabelShortCap, delegate ()
                             {
-                                InitiateConnection(1, colonist);
+                                Find.WindowStack.Add(new Dialog_MessageBox("ATR_PermuteConfirm".Translate(parent.LabelShortCap, colonist.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Permute".Translate(), buttonAAction: delegate
+                                {
+                                    InitiateConnection(1, colonist);
+                                }));
                             }));
-                        }));
+                        }
                     }
                     opts.SortBy((x) => x.Label);
 
@@ -517,7 +519,7 @@ namespace ATReforged
             if (!isForeign)
             {
                 // Disconnect the surrogate from its controller.
-                surrogatePawns.First().TryGetComp<CompSkyMindLink>().surrogatePawns.Remove(ThisPawn);
+                surrogatePawns.FirstOrFallback().TryGetComp<CompSkyMindLink>().surrogatePawns.Remove(ThisPawn);
                 surrogatePawns.Clear();
             }
 
@@ -542,7 +544,7 @@ namespace ATReforged
             }
 
             // Disconnect each surrogate from the SkyMind (and this pawn by extension).
-            foreach (Pawn surrogate in surrogatePawns.ToList())
+            foreach (Pawn surrogate in new List<Pawn>(surrogatePawns))
             {
                 Utils.gameComp.DisconnectFromSkyMind(surrogate);
             }
@@ -689,21 +691,30 @@ namespace ATReforged
                 Utils.gameComp.PushCloudPawn(ThisPawn);
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
 
-                // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
-                Pawn replacement = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
-                // If in the settings, uploading is set to Permakill, find the new pawn copy's brain and mercilessly destroy it so it can't be revived. Ensure no one cares about this.
-                if (ATReforged_Settings.uploadingToSkyMindPermaKills)
+                try
                 {
-                    replacement.SetFactionDirect(null);
-                    replacement.relations.ClearAllRelations();
-                    replacement.ideo?.SetIdeo(null);
-                    replacement.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, replacement.health.hediffSet.GetBrain()));
+                    // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
+                    Pawn replacement = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
+                    // If in the settings, uploading is set to Permakill, find the new pawn copy's brain and mercilessly destroy it so it can't be revived. Ensure no one cares about this.
+                    if (ATReforged_Settings.uploadingToSkyMindPermaKills)
+                    {
+                        replacement.SetFactionDirect(null);
+                        replacement.relations.ClearAllRelations();
+                        replacement.ideo?.SetIdeo(null);
+                        replacement.TakeDamage(new DamageInfo(DamageDefOf.Burn, 99999f, 999f, -1f, null, replacement.health.hediffSet.GetBrain()));
+                    }
                 }
-
-                // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
-                Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
-                ThisPawn.DeSpawn();
-                ThisPawn.ownership.UnclaimAll();
+                catch (Exception ex)
+                {
+                    Log.Error("[ATR] An unexpected exception occurred while attempting to spawn a corpse replacement for " + ThisPawn + ". Replacement pawn may be left in a bugged state." + ex.Message + ex.StackTrace);
+                }
+                finally
+                {
+                    // The pawn does not need to be connected to the SkyMind directly now, and should disappear.
+                    Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
+                    ThisPawn.DeSpawn();
+                    ThisPawn.ownership.UnclaimAll();
+                }
             }
 
             // Replication simply creates a new SkyMind intelligence duplicated from another.
@@ -720,7 +731,7 @@ namespace ATReforged
                 // Remove any Hediffs the game may have applied when generating the clone - this is to avoid weird hediffs appearing that may cause unexpected behavior.
                 clone.health.RemoveAllHediffs();
 
-                // It should however have an Autonomous Core or Transceiver hediff, as this informs the game that it is SkyMind capable (which it definitely is).
+                // It should however have an Autonomous Core or Transceiver hediff, as this allows it to be SkyMind capable (which it definitely is).
                 if (Utils.IsConsideredMechanical(ThisPawn))
                 {
                     clone.health.AddHediff(HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());

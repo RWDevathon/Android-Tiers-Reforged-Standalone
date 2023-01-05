@@ -32,10 +32,10 @@ namespace ATReforged
             if (Utils.IsConsideredMechanicalAndroid(pawn))
             {
                 Utils.Duplicate(Utils.GetBlank(), pawn, false, false);
+                pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
                 Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
                 if (target != null)
                     pawn.health.RemoveHediff(target);
-                pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
                 pawn.playerSettings.medCare = MedicalCareCategory.NormalOrWorse;
                 pawn.guest.SetGuestStatus(Faction.OfPlayer);
                 Messages.Message("ATR_NewbootAndroidCreated".Translate(), MessageTypeDefOf.PositiveEvent);

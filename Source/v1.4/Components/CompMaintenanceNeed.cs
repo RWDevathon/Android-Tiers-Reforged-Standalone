@@ -126,7 +126,7 @@ namespace ATReforged
 
         public float MaintenanceFallPerDay()
         {
-            return Mathf.Clamp(DailyFallPerStage() * pawn.GetStatValue(StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
+            return Mathf.Clamp(DailyFallPerStage() / pawn.GetStatValue(StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)

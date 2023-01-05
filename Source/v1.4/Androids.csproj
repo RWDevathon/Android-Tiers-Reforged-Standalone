@@ -256,6 +256,8 @@
     <Compile Include="Harmony\StatPart_Age_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_PatientGoToBedTreatment_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_SkyMindEffecter.cs" />
+    <Compile Include="Hediffs\HediffComp_SkyMindEffecter.cs" />
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
     <Compile Include="Hediffs\HediffComp_MaintenanceStageEffect.cs" />
     <Compile Include="Hediffs\HediffComp_Warper.cs" />

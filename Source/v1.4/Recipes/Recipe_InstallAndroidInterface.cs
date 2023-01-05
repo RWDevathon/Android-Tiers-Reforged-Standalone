@@ -12,7 +12,7 @@ namespace ATReforged
         { 
 
             BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
-            if (targetBodyPart != null && (!Utils.IsConsideredMechanical(pawn) || pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_IsolatedCore).Any()))
+            if (targetBodyPart != null && pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_IsolatedCore).Any())
             {
                 yield return targetBodyPart;
             }
@@ -24,8 +24,8 @@ namespace ATReforged
         { 
             base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
 
-            // If the pawn doesn't have any non-isolated core hediff, the operation failed. Also failed if they're dead now.
-            if (pawn.Dead || !pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_AutonomousCore || hediff.def == HediffDefOf.ATR_ReceiverCore).Any())
+            // If the pawn still has an isolated core, the operation failed. Also failed if they're dead now.
+            if (pawn.Dead || pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_IsolatedCore) != null)
                 return;
 
             // There are special considerations for adding the core (brain) itself. Adding a core makes a new intelligence. Receiver core initializes it as a surrogate. Adding any core removes the "Isolated Core" hediff.

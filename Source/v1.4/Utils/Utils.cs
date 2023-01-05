@@ -126,21 +126,33 @@ namespace ATReforged
 
         /* === CONNECTIVITY UTILITIES === */
 
-        // There are four hediffs that grant SkyMind connectivity. If any are present, this pawn has a cloud capable implant. If settings allow the pawn's race to use it innately, return true as well.
+        // If a pawn's Def Extension allows it to use the SkyMind network or it has a hediff that allows it (via a comp bool), return true.
         public static bool HasCloudCapableImplant(Pawn pawn)
         { 
-            return pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_AutonomousCore || testHediff.def == HediffDefOf.ATR_ReceiverCore || testHediff.def == HediffDefOf.ATR_SkyMindReceiver || testHediff.def == HediffDefOf.ATR_SkyMindTransceiver);
+            if (pawn.def.GetModExtension<ATR_MechTweaker>()?.canInherentlyUseSkyMind == true)
+            {
+                return true;
+            }
+
+            List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
+            for (int i = pawnHediffs.Count - 1; i >= 0; i--)
+            {
+                if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.AllowsSkyMindConnection == true)
+                    return true;
+            }
+            return false;
         }
 
+        // Returns true if the pawn has a Hediff that acts as a receiver via the SkyMindEffecter comp marking it as one.
         public static bool IsSurrogate(Pawn pawn)
-        { // Returns true if the pawn has a receiver core or a receiver implant.
-            return pawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_ReceiverCore || hediff.def == HediffDefOf.ATR_SkyMindReceiver);
-        }
-
-        // Returns true if the pawn is a surrogate and has an active controller.
-        public static bool IsControlledSurrogate(Pawn pawn)
-        { 
-            return IsSurrogate(pawn) && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController) != null && pawn.TryGetComp<CompSkyMindLink>().HasSurrogate();
+        {
+            List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
+            for (int i = pawnHediffs.Count - 1; i >= 0; i--)
+            {
+                if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.IsReceiver == true)
+                    return true;
+            }
+            return false;
         }
 
         public static bool FactionCanUseSkyMind(FactionDef factionDef)
@@ -262,7 +274,7 @@ namespace ATReforged
 
         public static ATR_GameComponent gameComp;
 
-        // Generate a surrogate and properly apply to it a blank personality and the appropriate receiver implant.
+        // Generate a surrogate and properly apply a blank personality and the appropriate receiver implant to it.
         public static Pawn GenerateSurrogate(PawnKindDef kindDef, Gender gender = Gender.None)
         {
             PawnGenerationRequest request = new PawnGenerationRequest(kindDef, forceGenerateNewPawn: true, fixedGender : gender);
@@ -656,12 +668,12 @@ namespace ATReforged
                 return false;
             }
 
-            // Pawns afflicted with dementia, memory corruption, or who are already subjects of mind operations are not permissible targets for mind operations.
+            // Pawns afflicted with a Hediff that prevents SkyMind connections, or who are already subjects of mind operations, are not permissible targets for mind operations.
             List<Hediff> targetHediffs = pawn.health.hediffSet.hediffs;
             for (int i = targetHediffs.Count - 1; i >= 0; i--)
             {
                 Hediff hediff = targetHediffs[i];
-                if (hediff.def == HediffDefOf.ATR_MemoryCorruption || hediff.def == RimWorld.HediffDefOf.Dementia || hediff.def == HediffDefOf.ATR_MindOperation)
+                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true || hediff.def == HediffDefOf.ATR_MindOperation)
                 {
                     return false;
                 }
@@ -722,9 +734,9 @@ namespace ATReforged
             }
 
             // Get rid of any items it may have spawned with.
-            copy?.equipment?.DestroyAllEquipment();
-            copy?.apparel?.DestroyAll();
-            copy?.inventory?.DestroyAll();
+            copy.equipment?.DestroyAllEquipment();
+            copy.apparel?.DestroyAll();
+            copy.inventory?.DestroyAll();
 
             // Copy the pawn's physical attributes.
             copy.Rotation = pawn.Rotation;
@@ -858,22 +870,20 @@ namespace ATReforged
                 if (pawn.playerSettings != null)
                     pawn.playerSettings.medCare = MedicalCareCategory.Best;
             }
-            // Non androids can not truly become blanks as they have no Core body parts to affect. Instead, make them into a simple new pawn.
+            // Non androids can not truly become blanks as they have no Core Hediff to affect. Instead, make them into a simple new pawn.
             else
             {
                 // Ensure the pawn has a proper name.
                 pawn.Name = PawnBioAndNameGenerator.GeneratePawnName(pawn);
 
                 // Ensure the pawn has no SkyMind capable implants any more.
-                Hediff OperationHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver);
-                if (OperationHediff != null)
+                List<Hediff> pawnHediffs = pawn.health.hediffSet.hediffs;
+                for (int i = pawnHediffs.Count - 1; i >= 0; i--)
                 {
-                    pawn.health.RemoveHediff(OperationHediff);
-                }
-                OperationHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
-                if (OperationHediff != null)
-                {
-                    pawn.health.RemoveHediff(OperationHediff);
+                    if (pawnHediffs[i].TryGetComp<HediffComp_SkyMindEffecter>()?.AllowsSkyMindConnection == true)
+                    {
+                        pawnHediffs.RemoveAt(i);
+                    }
                 }
             }
         }

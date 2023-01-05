@@ -157,6 +157,9 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.25</severityPerDay>
             </li>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <blocksConnection>true</blocksConnection>
+            </li>
         </comps>
         <stages>
             <li>
@@ -182,6 +185,9 @@
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.01</severityPerDay>
+            </li>
+            <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
+                <blocksConnection>true</blocksConnection>
             </li>
         </comps>
         <stages>

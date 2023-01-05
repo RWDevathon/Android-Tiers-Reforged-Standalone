@@ -99,7 +99,7 @@
         </graphicData>
         <uiIconScale>0.85</uiIconScale>
         <defaultPlacingRot>South</defaultPlacingRot>
-        <researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
+        <researchPrerequisites><li>ATR_MechanicalStandardization</li></researchPrerequisites>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <fillPercent>0.2</fillPercent>
@@ -156,6 +156,7 @@
 			<drawSize>1,1</drawSize>
 		</graphicData>
 		<uiIconPath>Things/Buildings/WallCharger/ATR_WallCharger_south</uiIconPath>
+        <researchPrerequisites><li>ATR_MechanicalStandardization</li></researchPrerequisites>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>Blueprint</altitudeLayer>
 		<passability>Standable</passability>

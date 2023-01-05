@@ -61,7 +61,7 @@ namespace ATReforged
             {
                 FleckMaker.ThrowMetaIcon(pawn.Position, pawn.Map, FleckDefOf.Meditating);
             }
-            pawn.GetComp<CompMaintenanceNeed>().ChangeMaintenanceLevel(0.000015f);
+            pawn.GetComp<CompMaintenanceNeed>().ChangeMaintenanceLevel(0.00003f);
         }
     }
 }

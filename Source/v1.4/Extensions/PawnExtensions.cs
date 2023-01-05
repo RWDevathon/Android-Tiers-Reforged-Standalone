@@ -7,7 +7,7 @@ namespace ATReforged
     // Mod extension for races to control some features. These attributes are only used for humanlikes, there is no reason to provide any to non-humanlikes.
     public class ATR_MechTweaker : DefModExtension
     {
-        // Simple bool for whether this race may be assigned as an android and drone, respectively. Disabling both would effectively mean this pawn is blacklisted from being mechanical.
+        // Bool for whether this race may be assigned as an android and drone, respectively. Disabling both would effectively mean this pawn is blacklisted from being mechanical.
         // However, disabling both will throw a config error, as having the extension will result in some other changes elsewhere, for details like corpses rotting and what category they reside in.
         public bool canBeAndroid = true;
         public bool canBeDrone = true;
@@ -19,16 +19,22 @@ namespace ATReforged
         // Bool for whether this race has the maintenance need added by this mod. Setting this to disabled may be preferred for other race mods with their own maintenance needs.
         public bool needsMaintenance = true;
 
-        // Simple int for the stat level of this race when set as a drone. This does nothing if the race is not considered drones.
+        // Int for the stat levels of this race when set as a drone. This does nothing if the race is not considered drones.
         public int droneSkillLevel = 8;
 
-        // Controls for what backstory the drones of this race will be set to. If the bool is false, this mod will trust the PawnKindDefs to provide correct backstories. This does nothing if the race is not considered drones.
+        // Controls for what backstory the drones of this race will be set to. If the bool is true, this mod will trust the PawnKindDefs to provide correct backstories. This does nothing if the race is not considered drones.
         public bool letPawnKindHandleDroneBackstories = false; // This is likely desired to be false if a race can be either androids or drones!
         public BackstoryDef droneChildhoodBackstoryDef;
         public BackstoryDef droneAdulthoodBackstoryDef;
 
-        // Simple bool for whether drones can have traits.
+        // Bool for whether drones can have traits.
         public bool dronesCanHaveTraits = false;
+
+        // Bool for whether this race can use the SkyMind inherently without the use of an implant.
+        public bool canInherentlyUseSkyMind = false;
+
+        // Bool for whether this race needs Cores (brain part) when assigned as an android.
+        public bool needsCoreAsAndroid = true;
 
         public override IEnumerable<string> ConfigErrors()
         {

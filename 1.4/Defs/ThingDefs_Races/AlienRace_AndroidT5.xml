@@ -240,6 +240,7 @@
                 <canBeDrone>false</canBeDrone>
                 <isSpecialMechanical>true</isSpecialMechanical>
                 <needsMaintenance>false</needsMaintenance>
+                <needsCoreAsAndroid>false</needsCoreAsAndroid>
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
