@@ -127,6 +127,34 @@
 		</fixedIngredientFilter>
 	</RecipeDef>
 
+	<!-- Surgery to increase the maintenance level of a unit to a certain extent. -->
+	<RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ATR_DoEmergencyMaintenance</defName>
+		<label>Do makeshift maintenance</label>
+		<description>Use parts to repair severe maintenance flaws. Since maintenance is primarily an internal activity, this can only bring it to 40%.</description>
+		<workerClass>ATReforged.Recipe_DoEmergencyMaintenance</workerClass>
+		<jobString>Restoring body part.</jobString>
+		<workAmount>800</workAmount>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+	  	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PartPack</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+    	</ingredients>
+    	<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PartPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
 	<!-- Surgery to reprogram drones to serve the colony -->
     <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ATR_ReprogramDrone</defName>

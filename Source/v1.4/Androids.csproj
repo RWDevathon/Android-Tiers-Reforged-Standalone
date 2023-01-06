@@ -318,6 +318,7 @@
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
     <Compile Include="Needs\Need_Maintenance.cs" />
+    <Compile Include="Recipes\Recipe_DoEmergencyMaintenance.cs" />
     <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
     <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
