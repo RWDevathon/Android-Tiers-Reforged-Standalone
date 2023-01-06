@@ -7,45 +7,29 @@ namespace ATReforged
     // Mechanical units should attempt maintenance if in poor maintenance and allowed to gain enough to escape it before doing other work.
     public class JobGiver_DoMaintenanceUrgent : ThinkNode_JobGiver
     {
-        // Pawn ThinkTrees occasionally sort jobs to take on a priority. This is a relatively high priority job, and should almost always be done ahead of work.
+        // Pawn ThinkTrees occasionally sort jobs to take on a priority. This is a high priority job, and should almost always be done ahead of work.
         public override float GetPriority(Pawn pawn)
         {
             TimeAssignmentDef timeAssignmentDef = (pawn.timetable == null) ? TimeAssignmentDefOf.Anything : pawn.timetable.CurrentAssignment;
             if (timeAssignmentDef == TimeAssignmentDefOf.Anything)
             {
-                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
-                {
-                    return 8.5f;
-                }
-                return 5f;
+                return 9.25f;
             }
             else if (timeAssignmentDef == TimeAssignmentDefOf.Work)
             {
-                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
-                {
-                    return 8.5f;
-                }
-                return 6f;
+                return 8f;
             }
             else if (timeAssignmentDef == TimeAssignmentDefOf.Sleep)
             {
-                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
-                {
-                    return 8.5f;
-                }
-                return 4f;
+                return 9.25f;
             }
             else if (timeAssignmentDef == TimeAssignmentDefOf.Joy)
             {
-                if (pawn.GetComp<CompMaintenanceNeed>()?.MaintenanceLevel < 0.1)
-                {
-                    return 8.5f;
-                }
-                return 4f;
+                return 8f;
             }
             else if (timeAssignmentDef == TimeAssignmentDefOf.Meditate)
             {
-                return 10f;
+                return 11f;
             }
             return 0.5f;
         }
@@ -54,24 +38,36 @@ namespace ATReforged
         {
             CompMaintenanceNeed compMaintenanceNeed = pawn.GetComp<CompMaintenanceNeed>();
 
-            if (compMaintenanceNeed == null || pawn.InAggroMentalState)
+            if (compMaintenanceNeed == null || pawn.InAggroMentalState || !pawn.Spawned)
             {
                 return null;
             }
 
-            // Urgent maintenance is done only if in poor or critical maintenance. It will never happen if the target level is below or equal to the poor maintenance threshold.
-            if (compMaintenanceNeed.Stage > CompMaintenanceNeed.MaintenanceStage.Poor || compMaintenanceNeed.TargetMaintenanceLevel <= 0.3f)
+            // Urgent maintenance is not done if the target level is below the poor maintenance threshold.
+            if (compMaintenanceNeed.TargetMaintenanceLevel <= 0.3)
             {
                 return null;
             }
 
-            // If conditions for keeping the job aren't satisfied, it would immediately end upon taking the job. Terminate before giving the job in this case.
-            if (!MeditationUtility.CanMeditateNow(pawn) || !pawn.Spawned || !MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
+            // Urgent maintenance is done only if below poor maintenance or if maintenance level is at least 5% lower than the desired level.
+            if (compMaintenanceNeed.Stage > CompMaintenanceNeed.MaintenanceStage.Poor && compMaintenanceNeed.MaintenanceLevel >= compMaintenanceNeed.TargetMaintenanceLevel - 0.05)
             {
                 return null;
             }
 
-            return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceUrgent, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+            // If this pawn's current position is legal for meditation, use it.
+            if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.CanMeditateNow(pawn) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
+            {
+                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceUrgent, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+            }
+
+            // FindMeditationSpot will find a place that is valid and will allow this job to continue. If it is invalid, then there is nowhere to do maintenance and no job is given.
+            MeditationSpotAndFocus meditationSpot = MeditationUtility.FindMeditationSpot(pawn);
+            if (meditationSpot.IsValid)
+            {
+                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceUrgent, meditationSpot.spot, new LocalTargetInfo(meditationSpot.spot.Cell));
+            }
+            return null;
         }
     }
 }

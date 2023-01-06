@@ -28,13 +28,18 @@ namespace ATReforged
                 return null;
             }
 
-            // If conditions for keeping the job aren't satisfied, it would immediately end upon taking the job. Terminate before giving the job in this case.
-            if (!MeditationUtility.CanMeditateNow(pawn) || !pawn.Spawned || !MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
+            // If this pawn's current position is legal for meditation, use it.
+            if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.CanMeditateNow(pawn) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
             {
-                return null;
+                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
 
-            return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+            MeditationSpotAndFocus meditationSpot = MeditationUtility.FindMeditationSpot(pawn);
+            if (meditationSpot.IsValid)
+            {
+                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, meditationSpot.spot, new LocalTargetInfo(meditationSpot.spot.Cell));
+            }
+            return null;
         }
     }
 }

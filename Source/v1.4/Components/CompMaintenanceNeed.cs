@@ -176,7 +176,7 @@ namespace ATReforged
 
         public void CheckMaintenance(int tickRate)
         {
-            if (Pawn.Dead)
+            if (!Pawn.Spawned)
             {
                 return;
             }
@@ -205,7 +205,7 @@ namespace ATReforged
                 }
             }
 
-            ChangeMaintenanceLevel(-cachedFallRatePerDay / tickRate);
+            ChangeMaintenanceLevel(-(Pawn.Downed ? cachedFallRatePerDay / 2 : cachedFallRatePerDay) / tickRate);
         }
 
         // Alter the maintenance level by the provided amount (decreases are assumed to be negative). Ensure the level never falls outside 0 - 1 range and handle stage changes appropriately.
