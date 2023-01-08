@@ -8,7 +8,7 @@ namespace ATReforged
     {
         // Mechanicals don't have a food meter, they have an energy meter. Since we're hijacking hunger, change the labelled name for mechanicals.
         [HarmonyPatch(typeof(Need), "get_LabelCap")]
-        public class get_LabelCap
+        public class get_LabelCap_Patch
         {
             [HarmonyPostfix]
             public static void Listener( ref string __result, Pawn ___pawn, Need __instance)

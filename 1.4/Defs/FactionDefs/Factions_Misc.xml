@@ -93,10 +93,10 @@
 				<kindDef>Combat</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<ATR_RaiderSoldierT1>8</ATR_RaiderSoldierT1>
-					<ATR_RaiderSoldierT2>6</ATR_RaiderSoldierT2>
-					<ATR_RaiderSoldierT3>4</ATR_RaiderSoldierT3>
-					<ATR_RaiderSoldierT4>1</ATR_RaiderSoldierT4>
+					<ATR_RaiderSoldierT1>12</ATR_RaiderSoldierT1>
+					<ATR_RaiderSoldierT2>24</ATR_RaiderSoldierT2>
+					<ATR_RaiderSoldierT3>6</ATR_RaiderSoldierT3>
+					<ATR_RaiderSoldierT4>2</ATR_RaiderSoldierT4>
 				</options>
 			</li>
 			<li>
@@ -111,10 +111,10 @@
 				<!-- Base defense -->
 				<kindDef>Settlement</kindDef>
 				<options>
-					<ATR_RaiderSoldierT1>2</ATR_RaiderSoldierT1>
-					<ATR_RaiderSoldierT2>4</ATR_RaiderSoldierT2>
-					<ATR_RaiderSoldierT3>6</ATR_RaiderSoldierT3>
-					<ATR_RaiderSoldierT4>6</ATR_RaiderSoldierT4>
+					<ATR_RaiderSoldierT1>24</ATR_RaiderSoldierT1>
+					<ATR_RaiderSoldierT2>48</ATR_RaiderSoldierT2>
+					<ATR_RaiderSoldierT3>12</ATR_RaiderSoldierT3>
+					<ATR_RaiderSoldierT4>3</ATR_RaiderSoldierT4>
 					<ATR_RaiderSlaveT1>1</ATR_RaiderSlaveT1>
 				</options>
 			</li>
@@ -190,7 +190,6 @@
 				<!-- Normal fights, standard mix -->
 				<kindDef>Combat</kindDef>
 				<options>
-					<AndroidT1CollectiveColonist>2</AndroidT1CollectiveColonist>
 					<AndroidT1CollectiveSoldier>6</AndroidT1CollectiveSoldier>
 					<AndroidT2CollectiveSoldier>8</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
@@ -201,9 +200,7 @@
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<AndroidT1CollectiveColonist>20</AndroidT1CollectiveColonist>
-					<AndroidT1CollectiveSoldier>10</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>20</AndroidT2CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>40</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveColonist>10</AndroidT3CollectiveColonist>
 					<AndroidT4CollectiveLeader>4.5</AndroidT4CollectiveLeader>
 				</options>
@@ -217,9 +214,7 @@
 					<DroneTORT>6</DroneTORT>
 				</carriers>
 				<guards>
-					<AndroidT1CollectiveColonist>5</AndroidT1CollectiveColonist>
-					<AndroidT1CollectiveSoldier>7</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>6</AndroidT2CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>18</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveSoldier>4.5</AndroidT3CollectiveSoldier>
 					<AndroidT4CollectiveLeader>1</AndroidT4CollectiveLeader>
 				</guards>
@@ -227,11 +222,10 @@
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<AndroidT1CollectiveColonist>1</AndroidT1CollectiveColonist>
 					<AndroidT1CollectiveSoldier>4</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>6</AndroidT2CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>12</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveSoldier>4</AndroidT4CollectiveSoldier>
+					<AndroidT4CollectiveSoldier>2</AndroidT4CollectiveSoldier>
 					<AndroidT4CollectiveLeader>4</AndroidT4CollectiveLeader>
 				</options>
 			</li>

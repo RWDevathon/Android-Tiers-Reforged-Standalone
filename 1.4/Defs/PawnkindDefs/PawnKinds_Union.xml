@@ -59,53 +59,6 @@
 		<initialWillRange>0~0</initialWillRange>
 	</PawnKindDef>
 
-
-	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-		<defName>AndroidT1CollectiveColonist</defName>
-		<label>T1 Android Citizen</label>
-		<race>Tier1Android</race>
-        <invNutrition>3.85</invNutrition>
-		<combatPower>40</combatPower>
-		<isFighter>false</isFighter>
-		<minGenerationAge>20</minGenerationAge>
-		<defaultFactionType>AndroidUnion</defaultFactionType>
-		<gearHealthRange>
-			<min>1</min>
-			<max>1</max>
-		</gearHealthRange>
-		<itemQuality>Normal</itemQuality>
-		<weaponTags>
-			<li>Gun</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>200</min>
-			<max>400</max>
-		</weaponMoney>
-		<apparelMoney>
-			<min>400</min>
-			<max>1200</max>
-		</apparelMoney>
-		<apparelTags>
-            <li>IndustrialBasic</li>
-			<li>IndustrialMilitaryBasic</li>
-			<li>IndustrialMilitaryAdvanced</li>
-			<li>BeltDefensePop</li>
-			<li>Outlander</li>
-		</apparelTags>
-		<techHediffsChance>0.15</techHediffsChance>
-		<techHediffsMoney>
-			<min>600</min>
-			<max>1500</max>
-		</techHediffsMoney>
-		<techHediffsTags>
-			<li>Poor</li>
-			<li>Simple</li>
-			<li>Advanced</li>
-		</techHediffsTags>
-		<initialResistanceRange>13~21</initialResistanceRange>
-		<initialWillRange>0~0</initialWillRange>
-	</PawnKindDef>
-
 	<PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
 		<defName>AndroidT2CollectiveTrader</defName>
 		<label>T2 Android Trader</label>
