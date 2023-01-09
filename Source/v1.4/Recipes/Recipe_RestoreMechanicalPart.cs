@@ -38,7 +38,7 @@ namespace ATReforged
             List<BodyPartRecord> allPartsList = pawn.def.race.body.AllParts;
             foreach (BodyPartRecord part in allPartsList)
             {
-                if (pawn.health.hediffSet.PartIsMissing(part) || pawn.health.hediffSet.hediffs.Where(hediff => hediff.Part == part && (hediff.def.tendable || hediff.def.chronic)).Any())
+                if (pawn.health.hediffSet.PartIsMissing(part) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.Part == part && (hediff.def.tendable || hediff.def.chronic)))
                 {
                     yield return part;
                 }

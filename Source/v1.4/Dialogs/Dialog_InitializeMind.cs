@@ -100,7 +100,7 @@ namespace ATReforged
             float num5 = inRect.width / (float)num4;
             float width2 = num5 - 10f;
 
-            string label = (InteractionDelayExpired ? buttonAText : (buttonAText + "(" + Mathf.Ceil(TimeUntilInteractive).ToString("F0") + ")"));
+            string label = InteractionDelayExpired ? buttonAText : (buttonAText + "(" + Mathf.Ceil(TimeUntilInteractive).ToString("F0") + ")");
             if (Widgets.ButtonText(new Rect(num5 * (float)(num4 - 1) + 10f, inRect.height - 35f, width2, 35f), label) && InteractionDelayExpired)
             {
                 if (buttonAAction != null)
@@ -116,11 +116,7 @@ namespace ATReforged
             GUI.color = Color.white;
             if (buttonBText != null && Widgets.ButtonText(new Rect(0f, inRect.height - 35f, width2, 35f), buttonBText))
             {
-                if (buttonBAction != null)
-                {
-                    buttonBAction();
-                }
-
+                buttonBAction?.Invoke();
                 Close();
             }
         }

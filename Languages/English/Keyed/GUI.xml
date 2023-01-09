@@ -8,4 +8,9 @@
 	
     <!-- Ritual Permissions -->
     <ATR_DronesCannotSpectate>Drones can not spectate rituals.</ATR_DronesCannotSpectate>
+
+    <!-- Prisoner Tab -->
+    <ATR_PrisonerDroneWarning>Drones can not be interacted with. Use surgeries to reprogram (T1 Research required) or shut down.</ATR_PrisonerDroneWarning>
+    <ATR_SlaveDroneAlert>Drones should not be slaves! You are suffering a free error each tick. Immediately reprogram or eliminate this drone.</ATR_SlaveDroneAlert>
+
 </LanguageData>
