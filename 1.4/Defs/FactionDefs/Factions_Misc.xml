@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- TODO: defNames in Factions_Misc for 1.0 candidate -->
+
 	<FactionDef ParentName="PlayerFactionBase">
 		<defName>PlayerColonyAndroid</defName>
 		<label>New Android Arrivals</label>
@@ -65,6 +67,12 @@
             <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
         </requiredMemes>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+        </disallowedMemes>
         <structureMemeWeights>
             <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
         </structureMemeWeights>
@@ -80,9 +88,9 @@
         <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
-				<li>(0,35)</li>
-				<li>(70, 50)</li>
-				<li>(700, 100)</li>
+				<li>(0,40)</li>
+				<li>(70, 80)</li>
+				<li>(700, 110)</li>
 				<li>(1300, 150)</li>
 				<li>(100000, 10000)</li>
 			</points>
@@ -93,10 +101,11 @@
 				<kindDef>Combat</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<ATR_RaiderSoldierT1>12</ATR_RaiderSoldierT1>
-					<ATR_RaiderSoldierT2>24</ATR_RaiderSoldierT2>
-					<ATR_RaiderSoldierT3>6</ATR_RaiderSoldierT3>
-					<ATR_RaiderSoldierT4>2</ATR_RaiderSoldierT4>
+					<ATR_RaiderSlaveT1>5</ATR_RaiderSlaveT1>
+					<ATR_RaiderSoldierT1>20</ATR_RaiderSoldierT1>
+					<ATR_RaiderSoldierT2>40</ATR_RaiderSoldierT2>
+					<ATR_RaiderSoldierT3>5</ATR_RaiderSoldierT3>
+					<ATR_RaiderSoldierT4>1</ATR_RaiderSoldierT4>
 				</options>
 			</li>
 			<li>
@@ -111,11 +120,11 @@
 				<!-- Base defense -->
 				<kindDef>Settlement</kindDef>
 				<options>
-					<ATR_RaiderSoldierT1>24</ATR_RaiderSoldierT1>
-					<ATR_RaiderSoldierT2>48</ATR_RaiderSoldierT2>
-					<ATR_RaiderSoldierT3>12</ATR_RaiderSoldierT3>
-					<ATR_RaiderSoldierT4>3</ATR_RaiderSoldierT4>
-					<ATR_RaiderSlaveT1>1</ATR_RaiderSlaveT1>
+					<ATR_RaiderSlaveT1>5</ATR_RaiderSlaveT1>
+					<ATR_RaiderSoldierT1>12</ATR_RaiderSoldierT1>
+					<ATR_RaiderSoldierT2>50</ATR_RaiderSoldierT2>
+					<ATR_RaiderSoldierT3>8</ATR_RaiderSoldierT3>
+					<ATR_RaiderSoldierT4>2</ATR_RaiderSoldierT4>
 				</options>
 			</li>
 		</pawnGroupMakers>
@@ -125,7 +134,7 @@
 	<FactionDef ParentName="FactionBase">
 		<defName>AndroidUnion</defName>
 		<label>Civil Androids</label>
-		<description>RimWorlds, with their severe lack of regulations, make fine places for societies of androids to take root. These androids have chosen to form a union of semi-independent cities for mutual defense and prosperity. They are generally amenable to trade and cooperation, and wish for nothing more than to live in peace. \n\nThis faction usually trades high-tech goods along with the basic bulk supplies.</description>
+		<description>RimWorlds, with their severe lack of regulations, make fine places for societies of androids to take root. These androids have chosen to form a union of semi-independent cities for mutual defense and prosperity. They are generally amenable to trade and cooperation, and wish for nothing more than to live in peace. \n\nThis faction usually trades high-tech goods along with basic bulk supplies.</description>
 		<colorSpectrum>
 			<li>(0.65, 0.60, 0.70)</li>
 			<li>(0.95, 0.90, 1)</li>
@@ -146,9 +155,10 @@
 		<techLevel>Spacer</techLevel>
         <allowedCultures><li>Rustican</li></allowedCultures>
         <disallowedMemes>
-            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
         </disallowedMemes>
 		<backstoryFilters>
 		  <li>
@@ -200,9 +210,9 @@
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<AndroidT2CollectiveSoldier>40</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveColonist>10</AndroidT3CollectiveColonist>
-					<AndroidT4CollectiveLeader>4.5</AndroidT4CollectiveLeader>
+					<AndroidT2CollectiveSoldier>50</AndroidT2CollectiveSoldier>
+					<AndroidT3CollectiveSoldier>10</AndroidT3CollectiveSoldier>
+					<AndroidT4CollectiveLeader>2.5</AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
@@ -214,16 +224,15 @@
 					<DroneTORT>6</DroneTORT>
 				</carriers>
 				<guards>
-					<AndroidT2CollectiveSoldier>18</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>4.5</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveLeader>1</AndroidT4CollectiveLeader>
+					<AndroidT2CollectiveSoldier>50</AndroidT2CollectiveSoldier>
+					<AndroidT3CollectiveSoldier>10</AndroidT3CollectiveSoldier>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<AndroidT1CollectiveSoldier>4</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>12</AndroidT2CollectiveSoldier>
+					<AndroidT1CollectiveSoldier>8</AndroidT1CollectiveSoldier>
+					<AndroidT2CollectiveSoldier>24</AndroidT2CollectiveSoldier>
 					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
 					<AndroidT4CollectiveSoldier>2</AndroidT4CollectiveSoldier>
 					<AndroidT4CollectiveLeader>4</AndroidT4CollectiveLeader>
@@ -232,7 +241,6 @@
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 	</FactionDef>
-
 
     <ThingSetMakerDef>
         <defName>AndroidRaidLootMaker</defName>

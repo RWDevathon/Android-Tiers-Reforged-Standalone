@@ -18,11 +18,11 @@
 			<max>10000</max>
 		</techHediffsMoney>
 		<techHediffsTags>
-			<li>secret</li>
+			<li>Advanced</li>
 		</techHediffsTags>
 		<maxGenerationAge>400000</maxGenerationAge>
 		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
-		<techHediffsChance>0.1</techHediffsChance>
+		<techHediffsChance>0.3</techHediffsChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<initialResistanceRange>13~21</initialResistanceRange>
 	</PawnKindDef>
