@@ -6,6 +6,7 @@ using Verse.AI;
 using HarmonyLib;
 using RimWorld.Planet;
 using System.Linq;
+using AlienRace;
 
 namespace ATReforged
 {
@@ -723,13 +724,15 @@ namespace ATReforged
                 copy.genes.AddGene(gene.def, false);
             }
             // Melanin is controlled via genes. If the pawn has one, use it. Otherwise just take whatever skinColorBase the pawn has.
-            if (copy.genes?.GetMelaninGene() != null)
+            if (copy.genes?.GetMelaninGene() != null && pawn.genes?.GetMelaninGene() != null)
             {
                 copy.genes.GetMelaninGene().skinColorBase = pawn.genes.GetMelaninGene().skinColorBase;
+                pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
             }
             else
             {
                 copy.story.skinColorOverride = pawn.story?.skinColorOverride;
+                pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
                 copy.story.SkinColorBase = pawn.story.SkinColorBase;
             }
 
