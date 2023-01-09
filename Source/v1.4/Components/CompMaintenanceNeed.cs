@@ -20,6 +20,8 @@ namespace ATReforged
 
         private static float ThresholdSatisfactory => 0.7f;
 
+        public static readonly List<float> MaintenanceThresholdBandPercentages = new List<float> {0f, ThresholdCritical, ThresholdPoor, ThresholdSatisfactory, 1f};
+
         private static readonly SimpleCurve PartDecayContractChance = new SimpleCurve
         {
             new CurvePoint(3f, 9999999f),
@@ -110,9 +112,9 @@ namespace ATReforged
             }
         }
 
-        private float DailyFallPerStage()
+        private float DailyFallPerStage(MaintenanceStage stage)
         {
-            switch (Stage)
+            switch (stage)
             {
                 case MaintenanceStage.Critical:
                     return 0.03f; // 3% per day base (10 -> 0 should take 3.3 days with 1 efficiency)
@@ -127,7 +129,7 @@ namespace ATReforged
 
         public float MaintenanceFallPerDay()
         {
-            return Mathf.Clamp(DailyFallPerStage() / Pawn.GetStatValue(StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
+            return Mathf.Clamp(DailyFallPerStage(Stage) / Pawn.GetStatValue(StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
         }
 
         public override void PostPostMake()
@@ -246,15 +248,6 @@ namespace ATReforged
         // Maintenance need has associated gizmos for displaying and controlling the maintenance level of pawns.
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            Command_SetTargetMaintenanceLevel setMaintenanceCommand = new Command_SetTargetMaintenanceLevel
-            {
-                maintenanceNeed = this,
-                defaultLabel = "ATR_SetMaintenanceNeedCommand".Translate(),
-                defaultDesc = "ATR_SetMaintenanceNeedCommandDesc".Translate(),
-                icon = SetTargetFuelLevelCommand
-            };
-            yield return setMaintenanceCommand;
-
             if (Find.Selector.SingleSelectedThing == parent)
             {
                 Gizmo_MaintenanceStatus maintenanceStatusGizmo = new Gizmo_MaintenanceStatus
@@ -314,6 +307,18 @@ namespace ATReforged
                 yield return add20PercentMaintenance;
             }
             yield break;
+        }
+
+        public string MaintenanceTipString()
+        {
+            if (maintenanceLevelInfoCached == null)
+            {
+                for (int stageInt = 0; stageInt < MaintenanceThresholdBandPercentages.Count - 1; stageInt++)
+                {
+                    maintenanceLevelInfoCached += "ATR_MaintenanceLevelInfoRange".Translate((MaintenanceThresholdBandPercentages[stageInt] * 100f).ToStringDecimalIfSmall(), (MaintenanceThresholdBandPercentages[stageInt + 1] * 100f).ToStringDecimalIfSmall()) + ": " + "ATR_MaintenanceLevelInfoFallRate".Translate(DailyFallPerStage((MaintenanceStage)stageInt).ToStringPercent()) + "\n";
+                }
+            }
+            return (("ATR_MaintenanceGizmoLabel".Translate() + ": ").Colorize(ColoredText.TipSectionTitleColor) + MaintenanceLevel.ToStringPercent("0.#") + "\n" + "ATR_MaintenanceTargetLabel".Translate() + ": " + TargetMaintenanceLevel.ToStringPercent("0.#") + "\n\n" + "ATR_MaintenanceTargetLabelDesc".Translate() + "\n\n" + "ATR_MaintenanceDesc".Translate() + ":\n\n" + maintenanceLevelInfoCached).Resolve();
         }
 
         // Randomly applies health defects based on random chances from the ticksSincePoorMaintenance level.
@@ -413,8 +418,9 @@ namespace ATReforged
         }
 
         private float maintenanceLevel = -1;
-        private float targetLevel = -1;
+        public float targetLevel = -1;
         private float cachedFallRatePerDay = -1;
         private float ticksSincePoorMaintenance = 0;
+        public static string maintenanceLevelInfoCached;
     }
 }

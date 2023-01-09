@@ -80,8 +80,10 @@
 	
 	<!-- Maintenance -->
     <ATR_MaintenanceGizmoLabel>Maintenance</ATR_MaintenanceGizmoLabel>
-
-    <ATR_SetMaintenanceNeedCommand>Set target maintenance</ATR_SetMaintenanceNeedCommand>
-    <ATR_SetMaintenanceNeedCommandDesc>Set the level of maintenance that this unit should try to achieve.</ATR_SetMaintenanceNeedCommandDesc>
+    <ATR_MaintenanceDesc>Maintenance is a measure of a pawn's internal processor and external part health. Maintenance degrades over time, and must be built by regular maintenance cycling. Poor maintenance degrades efficiency, and may lead to part failures if allowed to persist for too long.\n\nHigher levels of maintenance provide small benefits, but also greatly increase maintenance loss</ATR_MaintenanceDesc>
+    <ATR_MaintenanceTargetLabel>Target maintenance</ATR_MaintenanceTargetLabel>
+    <ATR_MaintenanceTargetLabelDesc>Click to set desired maintenance level.</ATR_MaintenanceTargetLabelDesc>
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+    <ATR_MaintenanceLevelInfoFallRate>Maintenance falls {0} per day.</ATR_MaintenanceLevelInfoFallRate>
 
 </LanguageData>

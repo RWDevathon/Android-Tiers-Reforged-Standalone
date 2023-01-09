@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using UnityEngine;
 using Verse;
 
@@ -10,13 +9,15 @@ namespace ATReforged
     {
         public CompMaintenanceNeed maintenanceNeed;
 
-        private static readonly Texture2D FullBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.35f, 0.35f, 0.2f));
+        private static readonly Texture2D FullBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
 
-        private static readonly Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(Color.black);
+        private static readonly Texture2D FullHighlightTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
 
-        private static readonly Texture2D TargetLevelArrow = ContentFinder<Texture2D>.Get("UI/Misc/BarInstantMarkerRotated");
+        private static readonly Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
 
-        private const float ArrowScale = 0.5f;
+        private static readonly Texture2D TargetLevelTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
+
+        private static bool draggingBar;
 
         public Gizmo_MaintenanceStatus()
         {
@@ -31,7 +32,7 @@ namespace ATReforged
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
             Rect overRect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
-            Find.WindowStack.ImmediateWindow(243114243, overRect, WindowLayer.GameUI, delegate
+            Find.WindowStack.ImmediateWindow(251714293, overRect, WindowLayer.GameUI, delegate
             {
                 Rect firstRect = overRect.AtZero().ContractedBy(6f);
                 firstRect.height = overRect.height / 2f;
@@ -40,16 +41,15 @@ namespace ATReforged
                 Rect secondRect = overRect.AtZero().ContractedBy(6f);
                 secondRect.yMin = overRect.height / 2f;
                 float fillPercent = maintenanceNeed.MaintenanceLevel;
-                Widgets.FillableBar(secondRect, fillPercent, FullBarTex, EmptyBarTex, doBorder: false);
-
-                float x = secondRect.x + maintenanceNeed.TargetMaintenanceLevel * secondRect.width - TargetLevelArrow.width * ArrowScale / 2f;
-                float y = secondRect.y - TargetLevelArrow.height * ArrowScale;
-                GUI.DrawTexture(new Rect(x, y, TargetLevelArrow.width * ArrowScale, TargetLevelArrow.height * ArrowScale), TargetLevelArrow);
-
-                Text.Font = GameFont.Small;
-                Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(secondRect, (int)(maintenanceNeed.MaintenanceLevel * 100) + "%");
-                Text.Anchor = TextAnchor.UpperLeft;
+                if (Find.Selector.SingleSelectedThing is Pawn pawn && pawn.IsColonistPlayerControlled)
+                {
+                    Widgets.DraggableBar(secondRect, FullBarTex, FullHighlightTex, EmptyBarTex, TargetLevelTex, ref draggingBar, fillPercent, ref maintenanceNeed.targetLevel, CompMaintenanceNeed.MaintenanceThresholdBandPercentages);
+                }
+                else
+                {
+                    Widgets.FillableBar(secondRect, fillPercent, FullBarTex, EmptyBarTex, doBorder: true);
+                }
+                TooltipHandler.TipRegion(secondRect, () => maintenanceNeed.MaintenanceTipString(), Gen.HashCombineInt(maintenanceNeed.GetHashCode(), 171495));
             });
             return new GizmoResult(GizmoState.Clear);
         }
