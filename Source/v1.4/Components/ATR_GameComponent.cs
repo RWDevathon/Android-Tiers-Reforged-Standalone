@@ -46,11 +46,6 @@ namespace ATReforged
 
             Scribe_Deep.Look(ref blankPawn, "ATR_blankPawn");
 
-            List<Thing> thingKeyCopy = virusedDevices.Keys.ToList();
-            List<int> thingValueCopy = virusedDevices.Values.ToList();
-            List<Pawn> pawnKeyCopy = networkLinkedPawns.Keys.ToList();
-            List<int> pawnValueCopy = networkLinkedPawns.Values.ToList();
-
             Scribe_Collections.Look(ref skillServers, "ATR_skillServers", LookMode.Reference);
             Scribe_Collections.Look(ref securityServers, "ATR_securityServers", LookMode.Reference);
             Scribe_Collections.Look(ref hackingServers, "ATR_hackingServers", LookMode.Reference);
@@ -142,8 +137,9 @@ namespace ATReforged
                 if (cso == null)
                     continue;
 
+                // Timer has expired. Inform it that it the SkyMind operation has ended. The CompSurrogateOwner will handle the rest.
                 if (networkLinkedPawn.Value != -1 && networkLinkedPawn.Value <= GT)
-                { // Timer has expired. Inform it that it the SkyMind operation has ended. The CompSurrogateOwner will handle the rest.
+                {
                     cso.Linked = -1;
                 }
 
@@ -666,5 +662,11 @@ namespace ATReforged
 
         // Network Linked devices are things (pawns) that are currently undergoing some sort of SkyMind procedure like uploading, duplicating, etc. The value stores the tick at which to release them.
         private Dictionary<Pawn, int> networkLinkedPawns = new Dictionary<Pawn, int>();
+
+        // Local reserved storage for saving/loading virusedDevices and newtorkedLinkedPawns in the ExposeData method.
+        private List<Thing> thingKeyCopy = new List<Thing>();
+        private List<int> thingValueCopy = new List<int>();
+        private List<Pawn> pawnKeyCopy = new List<Pawn>();
+        private List<int> pawnValueCopy = new List<int>();
     }
 }

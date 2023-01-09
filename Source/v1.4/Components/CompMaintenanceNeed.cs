@@ -115,13 +115,13 @@ namespace ATReforged
             switch (Stage)
             {
                 case MaintenanceStage.Critical:
-                    return 0.03f;
+                    return 0.03f; // 3% per day base (10 -> 0 should take 3.3 days with 1 efficiency)
                 case MaintenanceStage.Poor:
-                    return 0.06f;
+                    return 0.06f; // 6% per day base (30 -> 10 should take 3.3 days with 1 efficiency)
                 case MaintenanceStage.Sufficient:
-                    return 0.12f;
+                    return 0.12f; // 12% per day base (70 -> 30 should take 3.3 days with 1 efficiency)
                 default:
-                    return 0.24f;
+                    return 0.24f; // 24% per day base (100 -> 70 should take 1.25 days with 1 efficiency)
             }
         }
 

@@ -28,8 +28,14 @@ namespace ATReforged
                 return null;
             }
 
+            // If the pawn can not do meditation for medical reasons, don't do maintenance.
+            if (!MeditationUtility.CanMeditateNow(pawn))
+            {
+                return null;
+            }
+
             // If this pawn's current position is legal for meditation, use it.
-            if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.CanMeditateNow(pawn) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
+            if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
             {
                 return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
