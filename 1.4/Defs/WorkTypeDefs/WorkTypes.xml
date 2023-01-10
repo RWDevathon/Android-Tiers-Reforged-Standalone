@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
   <WorkTypeDef>
     <defName>Mechanic</defName>
     <labelShort>mechanic</labelShort>
@@ -18,4 +21,5 @@
       <li>AllWork</li>
     </workTags>
   </WorkTypeDef>
+  
 </Defs>

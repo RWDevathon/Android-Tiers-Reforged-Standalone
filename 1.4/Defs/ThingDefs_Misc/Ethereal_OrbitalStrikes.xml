@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- TODO: Fix spacing and review for 1.0 release candidate -->
+
   <ThingDef Abstract="True" Name="OrbitalStrikeBaseMech" ParentName="EtherealThingBase">
     <thingClass>OrbitalStrike</thingClass>
     <tickerType>Normal</tickerType>
@@ -34,7 +36,6 @@
       </li>
     </comps>
   </ThingDef>
-
 
   <ThingDef ParentName="BaseWeapon">
     <defName>OrbitalTargeterMechFall</defName>
@@ -78,4 +79,5 @@
       <li>RewardSpecial</li>
     </thingSetMakerTags>
   </ThingDef>
+
 </Defs>

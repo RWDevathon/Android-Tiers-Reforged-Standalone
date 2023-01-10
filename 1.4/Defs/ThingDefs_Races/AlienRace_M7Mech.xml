@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
     
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
 		<defName>M7Mech</defName>

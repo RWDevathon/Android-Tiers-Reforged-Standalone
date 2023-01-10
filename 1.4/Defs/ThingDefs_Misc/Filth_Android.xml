@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
 	<ThingDef ParentName="BaseFilth">
 		<defName>CoolantAndroidTier</defName>
 		<label>coolant</label>
@@ -17,4 +20,5 @@
 			<color>(114, 170, 230, 150)</color>
 		</graphicData>
 	</ThingDef>
+
 </Defs>

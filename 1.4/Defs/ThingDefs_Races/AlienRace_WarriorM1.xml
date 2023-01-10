@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- TODO: Remove for 1.0 release candidate -->
+
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
 		<defName>ATR_Mark1Warrior</defName>
 		<label>M1 Warrior</label>
@@ -105,4 +108,5 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
 	</AlienRace.ThingDef_AlienRace>
+    
 </Defs>

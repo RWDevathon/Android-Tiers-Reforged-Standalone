@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
     <!-- Mechanical Android Base-->
 	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMechanicalPawn" ParentName="BasePawn" Abstract="True">
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>

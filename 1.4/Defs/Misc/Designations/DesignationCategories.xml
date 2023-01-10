@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
     <DesignationCategoryDef>
         <defName>AndroidTiersDesignation</defName>
         <label>Android Tiers</label>
@@ -10,4 +13,5 @@
             <li>Designator_Deconstruct</li>
         </specialDesignatorClasses>
     </DesignationCategoryDef>
+
 </Defs>

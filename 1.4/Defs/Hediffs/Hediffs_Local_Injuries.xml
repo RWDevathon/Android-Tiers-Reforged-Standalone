@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
     <HediffDef ParentName="InjuryBase">
         <defName>FractalLance</defName>
         <label>fractal warping</label>
@@ -27,4 +30,5 @@
             <destroyedOutLabel>Warp shredded</destroyedOutLabel>
         </injuryProps>
     </HediffDef>
+    
 </Defs>

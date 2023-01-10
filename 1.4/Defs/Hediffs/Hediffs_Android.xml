@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Added body parts -->
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+    
+    <!-- Added body parts -->
  
     <HediffDef>
         <defName>ATR_ShutdownMechanical</defName>

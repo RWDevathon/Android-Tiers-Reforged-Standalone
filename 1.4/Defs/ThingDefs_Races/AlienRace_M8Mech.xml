@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <!-- TODO: Remove for 1.0 release candidate -->
+
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
 		<defName>M8Mech</defName>
 		<label>M8 Mechanised infantry</label>

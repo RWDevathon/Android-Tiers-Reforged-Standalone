@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
     <ThingDef Name="ATR_ServerBase" ParentName="BuildingBase" Abstract="True">
         <thingClass>Building</thingClass>	
         <canOverlapZones>false</canOverlapZones>

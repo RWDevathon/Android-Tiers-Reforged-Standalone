@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- TODO: Remove Wall Charger for 1.0 release candidate -->
+
     <ThingDef Name="ATR_ChargingStationBase" ParentName="BuildingBase" Abstract="True">
         <altitudeLayer>Building</altitudeLayer>
         <thingClass>ATReforged.Building_ChargingStation</thingClass>

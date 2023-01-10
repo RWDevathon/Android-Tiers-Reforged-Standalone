@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!--Civil androids-->
-  
+
+    <!--Civil androids-->
     <RulePackDef>
-    <defName>NamerFactionCollectiveAndroid</defName>
+        <defName>NamerFactionCollectiveAndroid</defName>
         <rulePack>
             <rulesStrings>
                 <li>r_name->The [connecting_verb] [union_type]</li>
@@ -71,7 +71,7 @@
         </rulePack>
     </RulePackDef>
 
-  <!--Raider androids-->
+    <!--Raider androids-->
   
     <RulePackDef>
     <defName>NamerFactionRaiderAndroid</defName>

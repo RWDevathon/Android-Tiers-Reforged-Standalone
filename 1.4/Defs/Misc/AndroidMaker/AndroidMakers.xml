@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
     <ThingDef Name="ATR_GeneratorBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
         <graphicData>
@@ -168,4 +171,5 @@
             </li>
         </comps>
     </ThingDef>
+    
 </Defs>

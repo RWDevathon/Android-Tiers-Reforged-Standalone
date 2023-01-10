@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
 	<HediffGiverSetDef>
         <defName>ATR_MechanicalStandard</defName>
 	    <hediffGivers>
@@ -16,4 +17,5 @@
             <!-- "Age" hediffs are handled by the CompMaintenanceNeed -->
 	    </hediffGivers>
 	</HediffGiverSetDef>
+    
 </Defs>

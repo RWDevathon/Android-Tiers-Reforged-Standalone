@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
     <HediffDef Name="ATR_SkyMindHediffBase" Abstract="True">
         <hediffClass>HediffWithComps</hediffClass>
         <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>

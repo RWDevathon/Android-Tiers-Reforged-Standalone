@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- TODO: Move Android makers to somewhere else where they belong more for 1.0 release candidate -->
+
     <ThingDef ParentName="UnfinishedBase">
         <defName>UnfinishedAndroid</defName>
         <label>unfinished android</label>

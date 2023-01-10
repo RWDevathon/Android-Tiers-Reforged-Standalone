@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
+
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
 		<defName>DroneTORT</defName>
 		<label>TORT unit</label>
