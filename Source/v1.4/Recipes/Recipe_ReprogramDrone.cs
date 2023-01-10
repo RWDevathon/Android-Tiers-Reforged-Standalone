@@ -23,6 +23,7 @@ namespace ATReforged
             if (billDoer != null)
             {
                 pawn.health.AddHediff(recipe.addsHediff, part, null);
+                // Handle success state
                 if (!CheckSurgeryFailAndroid(billDoer, pawn, ingredients, part, null))
                 {
                     TaleRecorder.RecordTale(TaleDefOf.DidSurgery, new object[]
@@ -32,8 +33,10 @@ namespace ATReforged
                     });
                     pawn.SetFaction(Faction.OfPlayer, null);
                     Find.LetterStack.ReceiveLetter("ATR_ReprogramSuccess".Translate(), "ATR_ReprogramSuccessDesc".Translate(pawn.Name.ToStringShort), LetterDefOf.PositiveEvent, pawn, null);
+                    return;
                 }
-                else if (Rand.Chance(0.2f))
+                // Handle fail state, with a 20% chance for especially bad effects occurring.
+                if (Rand.Chance(0.2f))
                 {
                     Hediff corruption = HediffMaker.MakeHediff(HediffDefOf.ATR_MemoryCorruption, pawn, part);
                     corruption.Severity = Rand.Range(0.15f, 0.95f);
