@@ -449,7 +449,7 @@ namespace ATReforged
                     }
                 }
                 // Problem Causer site
-                if (retaliationPick < 0.75f && faction.HostileTo(Faction.OfPlayer))
+                else if (retaliationPick < 0.75f && faction.HostileTo(Faction.OfPlayer) && ModLister.RoyaltyInstalled)
                 {
                     Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.ProblemCauser, StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
                     if (QuestScriptDefOf.ProblemCauser.sendAvailableLetter)
