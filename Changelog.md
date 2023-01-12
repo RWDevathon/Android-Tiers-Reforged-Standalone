@@ -53,9 +53,10 @@
 - Swarm IED
 - AT enchantment
 - SM7 overhaul
+	- The Mech Blade has been replaced with a pole-axe
 - Shiny Androids 
 
-- The TX (Terminator Expansion) submod is currently incompatible. It's on their owner to make them compatible again.
+- _The TX (Terminator Expansion) submod is currently incompatible. It's on their owner to make them compatible again._
 
 ##	Known Issues:
 - "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists.
