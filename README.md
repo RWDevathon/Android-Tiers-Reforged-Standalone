@@ -38,6 +38,14 @@ Android Tiers itself is a mod that intends to add mechanical colonists, animals,
 * The day that genes are supported for ATR will arrive 2+ months after someone makes a gene framework system that is distinct and functional for all races and fully supports extensibility and modification. Don't hold your breath.
 * I can't help you with bugs unless you give me a hugslog and context for an error.
 
+## Known Issues / Incompatibilities
+- Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.
+- Mechanical units will not respond to overheating or hypothermia correctly at the moment as RimWorld is hardcoded to check against the hediffs that androids no longer have.
+- "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists.
+- Activating Self-Tend on a mechanical pawn will throw a message at you complaining that the Doctor work type is not assigned even if the pawn has the Mechanic work type assigned (It's harmless, mechanical pawns will self-tend based on Mechanic, not Doctor).
+- Blood Rot and Paralytic Abasia do not function on androids at the moment. Work is planned to add mechanical variants for them.
+- Prepare Carefully has an annoying tendency to break various features of alien races, has serious performance issues, and can seriously damage the functionality of Hediffs and other mechanics. Use Character Editor instead if you need a pawn editor.
+
 ## Links
 
 [Discord](https://discord.gg/qVJzeB8)
