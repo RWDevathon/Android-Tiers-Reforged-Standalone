@@ -8,7 +8,7 @@ namespace ATReforged
         public override void PostMake()
         {
             base.PostMake();
-            // Initialize mutation ticks so that the fractal warping will mutate every 10 - 20 days.
+            // Initialize mutation ticks so that the fractal warping will mutate every 2 - 4 days.
             nextMutationTick = ageTicks + Rand.RangeInclusive(120000, 240000);
         }
 
@@ -51,7 +51,7 @@ namespace ATReforged
                 }
                 severityInt -= .1f;
             }
-            // Pick some time in the next 10 - 20 days for mutation.
+            // Pick some time in the next 2 - 4 days for mutation.
             nextMutationTick = ageTicks + Rand.RangeInclusive(120000, 240000);
         }
 

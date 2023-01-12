@@ -218,6 +218,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\HealthCardUtility_Patch.cs" />
     <Compile Include="Harmony\ITab_Pawn_Visitor_Patch.cs" />
     <Compile Include="Harmony\InteractionWorker_RomanceAttempt_Patch.cs" />
     <Compile Include="Harmony\FeedPatientUtility_Patch.cs" />
