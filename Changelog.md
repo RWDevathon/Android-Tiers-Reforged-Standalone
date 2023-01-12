@@ -45,6 +45,7 @@
 - You can no longer re-roll androids' stats through surgery. Remove and replace their core instead and live with the consequences of taking a(n) (artificial) life.
 - Duplication of minds now requires the SkyCloud Core building. Swapping and Surrogate control still work as normal.
 - Mechanite banks have gone the way of the Dodo. See the section about maintenance.
+- Removed the anti-material rifle. Other mods do this better. Use one of them instead.
 
 ##	Integrated submods:
 - Gynoids
