@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>ATR_UnfinishedAndroid</defName>
+        <label>unfinished android</label>
+        <graphicData>
+            <texPath>Things/Items/UnfinishedAndroid</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,2.5)</drawSize>
+        </graphicData>
+        <stuffCategories Inherit="false" />
+    </ThingDef>
+
+    <RecipeDef Name="ATR_AndroidMakerBase" Abstract="True">
+        <jobString>Making mechanical unit</jobString>
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Repair</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+        <recipeUsers>
+            <li>ATR_MechanicalAssemblyPod</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateT1Android</defName>
+        <label>Create T1 Android</label>
+        <description>Create a blank T1 Android from Plasteel and components.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_T1AndroidGenerator>1</ATR_T1AndroidGenerator>
+        </products>
+        <researchPrerequisite>ATR_T1Androids</researchPrerequisite>
+        <workAmount>16500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateT2Android</defName>
+        <label>Create T2 Android</label>
+        <description>Create a blank T2 Android from Plasteel, Gold and components.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_T2AndroidGenerator>1</ATR_T2AndroidGenerator>
+        </products>
+        <researchPrerequisite>ATR_T2Androids</researchPrerequisite>
+        <workAmount>18500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateT3Android</defName>
+        <label>Create T3 Android</label>
+        <description>Create a blank T3 Android from Plasteel, Gold and advanced components.</description>
+        <skillRequirements>
+            <Crafting>12</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>220</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_T3AndroidGenerator>1</ATR_T3AndroidGenerator>
+        </products>
+        <researchPrerequisite>ATR_T3Androids</researchPrerequisite>
+        <workAmount>21500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateT4Android</defName>
+        <label>Create T4 Android</label>
+        <description>Create a blank T4 Android from Plasteel, Gold and advanced components.</description>
+        <jobString>Making Android</jobString>  
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <skillRequirements>
+            <Crafting>12</Crafting>
+            <Intellectual>12</Intellectual>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>240</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>AIPersonaCore</li>
+                </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_T4AndroidGenerator>1</ATR_T4AndroidGenerator>
+        </products>
+        <researchPrerequisite>ATR_T4Androids</researchPrerequisite>
+        <workAmount>25000</workAmount>
+    </RecipeDef>
+
+    <!-- Reserved code for future expansion. Uncommenting will do nothing productive without the Race Def, Body Def, and Generator Def.
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateM1Warrior</defName>
+        <label>Create M1 Warrior</label>
+        <description>Create a blank M1 Warrior from Plasteel and components.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <M1WarriorGenerator>1</M1WarriorGenerator>
+        </products>
+        <researchPrerequisite>ATR_T1Androids</researchPrerequisite>
+        <workAmount>16500</workAmount>
+    </RecipeDef>
+	-->
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateWatchdog</defName>
+        <label>Create drone watchdog</label>
+        <description>Create a drone watchdog unit, a mechanical wolf analogue that combines lethality, intelligence, and amicability into a companionable frame.</description>
+        <skillRequirements>
+            <Crafting>12</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_WatchdogGenerator>1</ATR_WatchdogGenerator>
+        </products>
+        <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
+        <workAmount>16500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateTORT</defName>
+        <label>Create TORT unit</label>
+        <description>Create a TORT unit for all retrieval and transportation needs.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                <thingDefs>
+                    <li>Plasteel</li>
+                </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_TORTGenerator>1</ATR_TORTGenerator>
+        </products>
+        <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        <workAmount>16500</workAmount>
+	</RecipeDef>
+
+	
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateMineralUnit</defName>
+        <label>Create drone mineral unit</label>
+        <description>Create a drone mineral unit, a simple utility machine that ravenously consumes organic matter to synthesize steel.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_MineralUnitGenerator>1</ATR_MineralUnitGenerator>
+        </products>
+        <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        <workAmount>16500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateNutritionUnit</defName>
+        <label>Create nutrition unit</label>
+        <description>Create a simple mechanical unit that consumes organic matter to synthesize a long-lasting milk-like foodstuff that is extremely high in nutritive value.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_NutritionUnitGenerator>1</ATR_NutritionUnitGenerator>
+        </products>
+        <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        <workAmount>16500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ATR_AndroidMakerBase">
+        <defName>ATR_CreateChemUnit</defName>
+        <label>Create chemical processing unit</label>
+        <description>Create a simple mechanical unit that consumes organic matter to produce a synthetic chemical precursor that can be processed into chemfuel or neutroamine.</description>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <ATR_ChemUnitGenerator>1</ATR_ChemUnitGenerator>
+        </products>
+        <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        <workAmount>12500</workAmount>
+	</RecipeDef>
+    
+</Defs>

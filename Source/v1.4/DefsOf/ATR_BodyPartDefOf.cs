@@ -4,11 +4,11 @@ using Verse;
 namespace ATReforged
 {
     [DefOf]
-    public static class BodyPartDefOf
+    public static class ATR_BodyPartDefOf
     {
-        static BodyPartDefOf()
+        static ATR_BodyPartDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(BodyPartDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_BodyPartDefOf));
         }
 
         public static BodyPartDef ATR_InternalCorePump;

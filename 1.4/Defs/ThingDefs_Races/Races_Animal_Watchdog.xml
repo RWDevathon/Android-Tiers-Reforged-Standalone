@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
-		<defName>DroneWatchdog</defName>
+		<defName>ATR_DroneWatchdog</defName>
 		<label>Watchdog unit</label>
 		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and have thus can be found in a vast number of different contexts. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as riot police.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
 		<statBases>
@@ -103,9 +101,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
-		<defName>DroneWatchdog</defName>
+		<defName>ATR_DroneWatchdog</defName>
 		<label>Watchdog unit</label>
-		<race>DroneWatchdog</race>
+		<race>ATR_DroneWatchdog</race>
         <combatPower>50</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.7</ecoSystemWeight>

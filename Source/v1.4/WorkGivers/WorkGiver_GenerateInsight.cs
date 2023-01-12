@@ -50,7 +50,7 @@ namespace ATReforged
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return JobMaker.MakeJob(JobDefOf.ATR_GenerateInsight, t);
+            return JobMaker.MakeJob(ATR_JobDefOf.ATR_GenerateInsight, t);
         }
     }
 }

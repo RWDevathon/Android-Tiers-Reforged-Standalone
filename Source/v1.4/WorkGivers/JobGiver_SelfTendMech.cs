@@ -13,12 +13,12 @@ namespace ATReforged
                 return null;
             }
 
-            if (pawn.IsColonist && pawn.WorkTypeIsDisabled(WorkTypeDefOf.Mechanic))
+            if (pawn.IsColonist && pawn.WorkTypeIsDisabled(ATR_WorkTypeDefOf.ATR_Mechanic))
             {
                 return null;
             }
 
-            Job job = JobMaker.MakeJob(JobDefOf.TendMechanical, pawn);
+            Job job = JobMaker.MakeJob(ATR_JobDefOf.ATR_TendMechanical, pawn);
             job.endAfterTendedOnce = true;
             return job;
         }

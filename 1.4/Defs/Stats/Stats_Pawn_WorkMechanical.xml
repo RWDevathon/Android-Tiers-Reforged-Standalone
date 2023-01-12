@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- Mechanical Surgery Success Chance (Base) -->
 	<StatDef>
-		<defName>MechanicalSurgerySuccessChance</defName>
+		<defName>ATR_MechanicalSurgerySuccessChance</defName>
 		<label>mechanical surgery success chance</label>
 		<description>The base chance that a character will succeed when performing an operation on an android. The actual success chance is also affected by factors like facilities, room cleanliness, medicine used, the difficulty of the operation, and inspirations. No matter how high the success chance, there is always a small chance of failure on any operation.</description>
 		<category>PawnWork</category>
@@ -58,7 +56,7 @@
     <!-- Mechanical Surgery Operation Speed -->
 
     <StatDef>
-        <defName>MechanicalOperationSpeed</defName>
+        <defName>ATR_MechanicalOperationSpeed</defName>
         <label>mechanical operation speed</label>
         <description>The speed at which the character performs mechanical operations.</description>
         <category>PawnWork</category>
@@ -89,7 +87,7 @@
     <!-- Mechanical Tend Quality -->
 
     <StatDef>
-        <defName>MechanicalTendQuality</defName>
+        <defName>ATR_MechanicalTendQuality</defName>
         <label>mechanical tend quality</label>
         <description>The base quality of tending given when repairing integrity damage.\n\nThe actual tend quality will also be affected by factors like medicine used, facilities, luck, and so on.</description>
         <category>PawnWork</category>
@@ -130,7 +128,7 @@
     <!-- Mechanical tend speed -->
 
     <StatDef>
-        <defName>MechanicalTendSpeed</defName>
+        <defName>ATR_MechanicalTendSpeed</defName>
         <label>mechanical tend speed</label>
         <description>Speed at which the character tends to integrity damage.</description>
         <category>PawnWork</category>

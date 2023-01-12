@@ -205,14 +205,14 @@ namespace ATReforged
                     }
 
                     if (androidsHaveGenders && !androidsPickGenders)
-                    { // If Androids have genders but don't pick them, players must choose which gender they all are. 0 = Male, 1 = Female
+                    { 
                         bool fixedGender = androidsFixedGender == Gender.Female;
                         listingStandard.CheckboxLabeled("ATR_AndroidsFixedGenderSelector".Translate(), ref fixedGender, tooltip: "ATR_AndroidGenderNotice".Translate(), onChange: onChange);
                         androidsFixedGender = fixedGender ? Gender.Female: Gender.Male;
                     }
 
                     if (androidsHaveGenders && androidsPickGenders)
-                    { // If Androids have genders and pick, players can choose how often they pick male or female.
+                    { 
                         listingStandard.SliderLabeled("ATR_AndroidsGenderRatio".Translate(), ref androidsGenderRatio, 0.0f, 1.0f, displayMult: 100, onChange: onChange);
                     }
                     listingStandard.GapLine();
@@ -538,11 +538,17 @@ namespace ATReforged
                 Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Def);
                 Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Def);
                 Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Def);
+
+                isConsideredMechanicalAnimal.RemoveWhere(thingDef => thingDef is null);
+                isConsideredMechanicalAndroid.RemoveWhere(thingDef => thingDef is null);
+                isConsideredMechanicalDrone.RemoveWhere(thingDef => thingDef is null);
+                isConsideredMechanical.RemoveWhere(thingDef => thingDef is null);
+                hasSpecialStatus.RemoveWhere(thingDef => thingDef is null);
             }
             catch (Exception ex)
             {
                 Log.Warning("[ATR] Mod settings failed to load appropriately! Resetting to default to avoid further issues. " + ex.Message + " " + ex.StackTrace);
-                ApplyPreset(SettingsPreset.Default);
+                RebuildCaches();
             }
 
             // Needs
@@ -561,6 +567,7 @@ namespace ATReforged
             try
             {
                 Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
+                canUseBattery.RemoveWhere(thingDef => thingDef is null);
             }
             catch (Exception ex)
             {

@@ -4,11 +4,11 @@ using RimWorld;
 namespace ATReforged
 {
     [DefOf]
-    public static class RulePackDefOf
+    public static class ATR_RulePackDefOf
     {
-        static RulePackDefOf()
+        static ATR_RulePackDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(RulePackDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_RulePackDefOf));
         }
 
         public static RulePackDef ATR_AndroidNoneNames;

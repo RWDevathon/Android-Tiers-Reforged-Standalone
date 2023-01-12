@@ -4,11 +4,11 @@ using RimWorld;
 namespace ATReforged
 {
     [DefOf]
-    public static class HediffDefOf
+    public static class ATR_HediffDefOf
     {
-        static HediffDefOf()
+        static ATR_HediffDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(HediffDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_HediffDefOf));
         }
         public static HediffDef ATR_FractalPillOrganic;
 
@@ -16,17 +16,19 @@ namespace ATReforged
 
         public static HediffDef ATR_RemainingCharge;
 
-        public static HediffDef ATR_OrganicCharger;
-
-        public static HediffDef RecoveringFromDDOS;
-
-        public static HediffDef ATR_SplitConsciousness;
+        public static HediffDef ATR_RecoveringFromDDOS;
 
         public static HediffDef ATR_ShortReboot;
 
         public static HediffDef ATR_LongReboot;
 
         public static HediffDef ATR_MemoryCorruption;
+
+        // SkyMind related Hediffs
+
+        public static HediffDef ATR_SplitConsciousness;
+
+        public static HediffDef ATR_MindOperation;
 
         public static HediffDef ATR_IsolatedCore;
 
@@ -37,8 +39,6 @@ namespace ATReforged
         public static HediffDef ATR_SkyMindReceiver;
 
         public static HediffDef ATR_SkyMindTransceiver;
-
-        public static HediffDef ATR_MindOperation;
 
         public static HediffDef ATR_NoController;
 

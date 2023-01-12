@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
-		<defName>DroneTORT</defName>
+		<defName>ATR_DroneTORT</defName>
 		<label>TORT unit</label>
 		<description>Based on ancient treaded multi-terrain vehicles and the strangely successful biological species of tortoises, the Treaded Object for Retrieval and Transport - or TORT - is a heavily armored hollowed out mechanical drone programmed to relocate goods similar to ancient forklifts or serve as long-range land carriers. \n\nThe unit's size and hollow nature allows it to transport people as well as standard cargos, and have on several occasions been used in search and rescue and in smuggling operations.</description>
 		<statBases>
@@ -52,9 +50,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
-		<defName>DroneTORT</defName>
+		<defName>ATR_DroneTORT</defName>
 		<label>TORT unit</label>
-		<race>DroneTORT</race>
+		<race>ATR_DroneTORT</race>
         <combatPower>20</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.5</ecoSystemWeight>

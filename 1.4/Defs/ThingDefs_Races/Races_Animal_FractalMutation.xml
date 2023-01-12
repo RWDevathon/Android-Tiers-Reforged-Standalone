@@ -80,7 +80,7 @@
             <li>
                 <label>fractal lance</label>
                 <capacities>
-                    <li>FractalLance</li>
+                    <li>ATR_FractalLance</li>
                 </capacities>
                 <power>8</power>
                 <armorPenetration>2.0</armorPenetration>

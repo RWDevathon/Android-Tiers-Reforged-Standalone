@@ -43,7 +43,7 @@ namespace ATReforged
                 if (part == pawn.health.hediffSet.GetBrain())
                 {
                     removingInterface = true;
-                    isAutonomousIntelligence = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore) != null;
+                    isAutonomousIntelligence = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore) != null;
                 }
 
                 // Check if the surgery failed. If it did, exit early.
@@ -101,8 +101,8 @@ namespace ATReforged
                     }
 
                     // Clean up and apply the appropriate hediff. Apply Isolated core before no host is applied to ensure the pawn doesn't become capable of moving for a tick.
-                    pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
-                    Hediff targetHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+                    pawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
+                    Hediff targetHediff = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_NoController);
                     if (targetHediff != null)
                         pawn.health.RemoveHediff(targetHediff);
                 }

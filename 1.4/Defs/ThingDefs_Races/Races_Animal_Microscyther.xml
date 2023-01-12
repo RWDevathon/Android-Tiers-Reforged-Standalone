@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <ThingDef ParentName="ATR_MechanicalAnimalThingBase">
-        <defName>MicroScyther</defName>
+        <defName>ATR_MicroScyther</defName>
         <label>Micro Scyther</label>
         <description>A small flying drone with two side-mounted plasteel blades. While not particularly dangerous alone, these drones are rarely ever seen alone. Swarms can shred targets to pieces swiftly.\n\nThese drones have barebones IFF sensors, and will attack any non-microscyther.</description>
 		<statBases>
@@ -74,9 +72,9 @@
     </ThingDef>
   
     <PawnKindDef ParentName="BasePlayerPawnKind">
-        <defName>MicroScyther</defName>
+        <defName>ATR_MicroScyther</defName>
         <label>Microscyther</label>
-        <race>MicroScyther</race>
+        <race>ATR_MicroScyther</race>
         <combatPower>10</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <ecoSystemWeight>9999</ecoSystemWeight>

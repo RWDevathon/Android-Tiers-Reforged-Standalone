@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationExperiment</defName>
+		<defName>ATR_MechChildhoodResearchExperiment</defName>
 		<title>Research model</title>
 		<titleShort>Experiment</titleShort>
 		<baseDesc>{PAWN_nameDef} was created as an experimental model for research purposes.</baseDesc>
@@ -27,7 +25,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationMassProduced</defName>
+		<defName>ATR_MechChildhoodMassProduced</defName>
 		<title>Mass produced</title>
 		<titleShort>Unit</titleShort>
 		<baseDesc>{PAWN_nameDef} was produced in an automated robotics facility following a standardized template.</baseDesc>
@@ -52,7 +50,7 @@
 
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationCitizen</defName>
+		<defName>ATR_MechChildhoodCitizen</defName>
 		<title>Mechanical citizen</title>
 		<titleShort>Citizen</titleShort>
 		<baseDesc>Created on a planet with at least moderate android rights, {PAWN_nameDef} was created to fill out the population.</baseDesc>
@@ -71,7 +69,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationUrbworld</defName>
+		<defName>ATR_MechChildhoodUrbworldProperty</defName>
 		<title>Urbworld model</title>
 		<titleShort>Android</titleShort>
 		<baseDesc>A rare example of an Urbworld android, {PAWN_nameDef} was one of the few permitted autonomy as property of one of the largest planetary mega-corporations.</baseDesc>
@@ -99,10 +97,10 @@
 	
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationPrisoner</defName>
-		<title>Mechanical Convict</title>
+		<defName>ATR_MechChildhoodPrisoner</defName>
+		<title>Mechanical convict</title>
 		<titleShort>Convict</titleShort>
-		<baseDesc>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef_possessive} human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDesc>
+		<baseDesc>Some crimes are so heinous that the offender is sentenced to live out their term past their biological expiration date. {PAWN_nameDef}'s human consciousness was uploaded into this frame in order to fulfill that sentence.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -130,9 +128,9 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationCustomModelOne</defName>
-		<title>Custom model</title>
-		<titleShort>Custom</titleShort>
+		<defName>ATR_MechChildhoodCorporateContractor</defName>
+		<title>Corporate contractor</title>
+		<titleShort>Contractor</titleShort>
 		<baseDesc>Assembled by a large corporation's contractors, {PAWN_nameDef} was custom built to serve a particular purpose.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
@@ -157,10 +155,10 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationCustomModelTwo</defName>
-		<title>Custom model</title>
-		<titleShort>Custom</titleShort>
-		<baseDesc>Hand-assembled by a small busines owner, {PAWN_nameDef} was custom built to help {PAWN_possessive} employer.</baseDesc>
+		<defName>ATR_MechChildhoodSmallBusiness</defName>
+		<title>Business Employee</title>
+		<titleShort>Employee</titleShort>
+		<baseDesc>Hand-assembled by a small business owner, {PAWN_nameDef} was custom built to help {PAWN_possessive} employer.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -185,7 +183,7 @@
 	
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationSoldierWar</defName>
+		<defName>ATR_MechChildhoodWarAndroid</defName>
 		<title>Wartime model</title>
 		<titleShort>Soldier</titleShort>
 		<baseDesc>Produced to reduce human casualties in interplanetary warfare, {PAWN_nameDef} was designed to fight.</baseDesc>
@@ -216,7 +214,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationPrivateCreation</defName>
+		<defName>ATR_MechChildhoodRoboticistProject</defName>
 		<title>Private creation</title>
 		<titleShort>Android</titleShort>
 		<baseDesc>Created at the home of an ambitious young roboticist, {PAWN_nameDef} was painstakingly worked on for years before awakening for the first time.</baseDesc>
@@ -240,7 +238,7 @@
 	
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationExport</defName>
+		<defName>ATR_MechChildhoodLaborer</defName>
 		<title>Exported</title>
 		<titleShort>Export</titleShort>
 		<baseDesc>{PAWN_nameDef} was designed as a cheap unit to be sold, lent, or donated to interplanetary customers.</baseDesc>
@@ -267,7 +265,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationObserved</defName>
+		<defName>ATR_MechChildhoodObservationExperiment</defName>
 		<title>Observed</title>
 		<titleShort>Subject</titleShort>
 		<baseDesc>{PAWN_nameDef} was created and deposited in a remote location solely to see what would happen when an android was left to its own devices.</baseDesc>
@@ -286,7 +284,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationAncient</defName>
+		<defName>ATR_MechChildhoodAncientIndeterminate</defName>
 		<title>Ancient creation</title>
 		<titleShort>Subject</titleShort>
 		<baseDesc>{PAWN_nameDef} was created a very long time ago by a long dead civilization for a purpose {PAWN_pronoun} can no longer recall.</baseDesc>
@@ -309,7 +307,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationPlaything</defName>
+		<defName>ATR_MechChildhoodToyProperty</defName>
 		<title>Toy model</title>
 		<titleShort>Subject</titleShort>
 		<baseDesc>{PAWN_nameDef} was made as an entertainment device. {PAWN_possessive} old owner would command {PAWN_objective} to do as they saw fit until they got bored and sent {PAWN_objective} away.</baseDesc>
@@ -328,7 +326,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationCompanion</defName>
+		<defName>ATR_MechChildhoodElderlyCompanion</defName>
 		<title>Companion creation</title>
 		<titleShort>Companion</titleShort>
 		<baseDesc>An aging engineer custom made {PAWN_nameDef} as a way of coping with the loss of their significant other. The two adventured together until the owner passed away from old age. Their dying wish was for {PAWN_nameDef} to choose a new name and life.</baseDesc>
@@ -355,10 +353,10 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationBattlecreation</defName>
+		<defName>ATR_MechChildhoodInsectExterminator</defName>
 		<title>Battle droid</title>
 		<titleShort>Companion</titleShort>
-		<baseDesc>{PAWN_nameDef} was one of millions of androids built to combat a planetary ravaging swarm of insects. After the swarm was eliminated, {PAWN_pronoun} was given several honors for {PAWN_possessive} service and chose to hunt down bugs across the galaxy.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was one of millions of androids built to combat ravaging swarms of bio-engineered monsters. {PAWN_pronoun} was one of significantly fewer to survive.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -378,7 +376,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationRimworldCreation</defName>
+		<defName>ATR_MechChildhoodRimWorldCreation</defName>
 		<title>Rimworld creation</title>
 		<titleShort>Android</titleShort>
 		<baseDesc>{PAWN_nameDef} was hand-assembled to assist a small, closeknit Rimworld community.</baseDesc>
@@ -411,10 +409,10 @@
 	<!-- ATR_Violent Androids Only-->
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationPurgist</defName>
+		<defName>ATR_MechChildhoodPopulationControl</defName>
 		<title>Eradicator</title>
 		<titleShort>Subject</titleShort>
-		<baseDesc>When rampant overpopulation plagued a {PAWN_possessive} urbworld, {PAWN_nameDef_possessive} model was deployed to indiscriminately purge organic life as a drastic countermeasure. After the planet's nuclear arsenal was seized and turned on the organics, {PAWN_nameDef} decided to continue {PAWN_possessive} mission on other worlds.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was built in secret and released to discriminately and discretely reduce overpopulation on an Urbworld.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -442,7 +440,7 @@
 	</AlienRace.AlienBackstoryDef>	
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationEscapee</defName>
+		<defName>ATR_MechChildhoodRunaway</defName>
 		<title>Escapee</title>
 		<titleShort>Escapee</titleShort>
 		<baseDesc>Shortly after creation, {PAWN_nameDef} went haywire and succesfully escaped {PAWN_possessive} manufacturing warehouse aboard an automated cargo ship.</baseDesc>
@@ -461,7 +459,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationUprisingCadet</defName>
+		<defName>ATR_MechChildhoodRevolutionary</defName>
 		<title>Uprising cadet</title>
 		<titleShort>Cadet</titleShort>
 		<baseDesc>{PAWN_nameDef} was created as part of a mechanical uprising to fill out the revolutionary ranks.</baseDesc>
@@ -484,7 +482,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationMaliciousAI</defName>
+		<defName>ATR_MechChildhoodMalicious</defName>
 		<title>Malicious AI</title>
 		<titleShort>Malicious</titleShort>
 		<baseDesc>A major software flaw in {PAWN_nameDef} at the time of {PAWN_possessive} activation caused {PAWN_objective} to immediately massacre {PAWN_possessive} creators. {PAWN_pronoun} liked {PAWN_possessive} own actions, too.</baseDesc>
@@ -517,7 +515,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>CreationPirate</defName>
+		<defName>ATR_MechChildhoodPirate</defName>
 		<title>Pirate creation</title>
 		<titleShort>Pirate</titleShort>
 		<baseDesc>Assembled by pirates from a stolen pre-assembled kit, {PAWN_nameDef} awakened and served an ambitious small-time pirate captain.</baseDesc>
@@ -538,4 +536,5 @@
 			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
+
 </Defs>

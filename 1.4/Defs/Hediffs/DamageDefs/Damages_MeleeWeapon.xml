@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <DamageDef ParentName="Bite">
-        <defName>FractalLance</defName>
+        <defName>ATR_FractalLance</defName>
         <label>fractal lance</label>
         <externalViolence>true</externalViolence>
         <deathMessage>{0} has died due to a fractal lance from an abomination.</deathMessage>
-        <hediff>FractalLance</hediff>
-        <hediffSolid>FractalLance</hediffSolid>
+        <hediff>ATR_FractalLance</hediff>
+        <hediffSolid>ATR_FractalLance</hediffSolid>
     </DamageDef>
 
 </Defs>

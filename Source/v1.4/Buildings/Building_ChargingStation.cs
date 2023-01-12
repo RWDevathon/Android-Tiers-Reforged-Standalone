@@ -61,7 +61,7 @@ namespace ATReforged
             else
             {
                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate () {
-                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
+                    Job job = new Job(ATR_JobDefOf.ATR_RechargeBattery, new LocalTargetInfo(GetOpenRechargeSpot(pawn)), new LocalTargetInfo(this));
                     pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 });
             }
@@ -102,7 +102,7 @@ namespace ATReforged
                          if (chargingSpot == IntVec3.Invalid)
                              break;
 
-                         Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(chargingSpot), new LocalTargetInfo(this));
+                         Job job = new Job(ATR_JobDefOf.ATR_RechargeBattery, new LocalTargetInfo(chargingSpot), new LocalTargetInfo(this));
                          pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                      }
                  });

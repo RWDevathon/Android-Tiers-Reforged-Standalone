@@ -18,7 +18,7 @@
         <alienRace>
 			<raceRestriction>
 				<traitList>
-					<li>FeelingsTowardOrganics</li>
+					<li>ATR_FeelingsTowardOrganics</li>
 				</traitList>
                 <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
 			</raceRestriction>
@@ -150,6 +150,9 @@
 				<relationChanceModifierSibling>0</relationChanceModifierSibling>
 				<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
 			</relationSettings>
+			<compatibility>
+				<isFlesh>false</isFlesh>
+			</compatibility>
         </alienRace>
 		<race>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
@@ -157,13 +160,13 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>100</lifeExpectancy>
-			<leatherDef>Leather_Patch</leatherDef>
+			<leatherDef>Leather_Human</leatherDef>
 			<nameGenerator>ATR_AndroidMaleNames</nameGenerator>
             <nameGeneratorFemale>ATR_AndroidFemaleNames</nameGeneratorFemale>
 			<needsRest>false</needsRest>
 			<foodType>OmnivoreHuman</foodType>
-			<fleshType>AndroidTier</fleshType>
-			<bloodDef>CoolantAndroidTier</bloodDef>
+			<fleshType>ATR_AndroidTier</fleshType>
+			<bloodDef>ATR_CoolantAndroidTier</bloodDef>
             <specificMeatDef>Steel</specificMeatDef>
 			<canBePredatorPrey>false</canBePredatorPrey>
 			<lifeStageAges>

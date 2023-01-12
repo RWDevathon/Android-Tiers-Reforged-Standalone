@@ -17,7 +17,7 @@ namespace ATReforged
                 if (__result == null || __result.targetA.Thing.TryGetComp<CompPowerTrader>() == null || !Utils.CanUseBattery(pawn))
                     return;
 
-                __result = JobMaker.MakeJob(JobDefOf.RechargeBattery, __result.targetA.Thing);
+                __result = JobMaker.MakeJob(ATR_JobDefOf.ATR_RechargeBattery, __result.targetA.Thing);
             }
         }
     }

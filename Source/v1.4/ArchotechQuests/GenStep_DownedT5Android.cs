@@ -17,14 +17,14 @@ namespace ATReforged
                 DownedT5AndroidComp component = map.Parent.GetComponent<DownedT5AndroidComp>();
                 if (component == null || !component.pawn.Any)
                 {
-                    pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, Faction.OfAncients, PawnGenerationContext.NonPlayer, map.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
+                    pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_T5Colonist, Faction.OfAncients, PawnGenerationContext.NonPlayer, map.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
                 }
                 else 
                 {
                     pawn = component.pawn.Take(component.pawn[0]);
                 }
             }
-            Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
+            Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
             hediff.Severity = 1f;
             pawn.health.AddHediff(hediff);
             GenSpawn.Spawn(pawn, loc, map);

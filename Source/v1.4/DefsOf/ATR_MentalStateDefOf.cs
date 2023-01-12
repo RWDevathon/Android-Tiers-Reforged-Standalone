@@ -4,11 +4,11 @@ using Verse;
 namespace ATReforged
 {
     [DefOf]
-    public static class MentalStateDefOf
+    public static class ATR_MentalStateDefOf
     {
-        static MentalStateDefOf()
+        static ATR_MentalStateDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(MentalStateDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_MentalStateDefOf));
         }
         public static MentalStateDef ATR_MentalState_Exterminator;
     }

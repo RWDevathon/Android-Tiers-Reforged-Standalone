@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-		<defName>Tier5Android</defName>
+		<defName>ATR_Tier5Android</defName>
 		<label>T5 Android</label>
 		<description>It is undeniable that this is an archotech device in the form of a mechanical humanoid. It is also undeniable that this is not a true archotech, however. It enigmatically states that "I myself am a common misconception about archotechs," and refuses to elaborate - and also admits that it lies about its birthdate. It is of completely alien comprehension, and can not integrate with the SkyMind. Beings such as this speak nothing of their origin, purpose, or reason for being on a rim world. What could it want, and why does it seem content to participate in normal society? \n\nAnd why are clothes the only thing it refuses to participate in and seems upset by - is it some secret archotech code?</description>
 		<alienRace>
@@ -187,8 +185,8 @@
 			<baseHealthScale>5</baseHealthScale>
 			<needsRest>false</needsRest>
 			<foodType>None</foodType>
-			<fleshType>AndroidTier</fleshType>
-			<bloodDef>CoolantAndroidTier</bloodDef>
+			<fleshType>ATR_AndroidTier</fleshType>
+			<bloodDef>ATR_CoolantAndroidTier</bloodDef>
             <specificMeatDef>Steel</specificMeatDef>
 			<baseBodySize>2.4</baseBodySize>
 			<gestationPeriodDays>1</gestationPeriodDays>

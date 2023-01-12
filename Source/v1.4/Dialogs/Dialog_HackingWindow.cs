@@ -111,7 +111,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     {
-                                        def = IncidentDefOf.ResourcePodCrash,
+                                        def = ATR_IncidentDefOf.ResourcePodCrash,
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, Find.CurrentMap)
                                     };
                                 }
@@ -129,7 +129,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     {
-                                        def = IncidentDefOf.RefugeePodCrash,
+                                        def = ATR_IncidentDefOf.RefugeePodCrash,
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, Find.CurrentMap)
                                     };
                                 }
@@ -169,7 +169,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     {
-                                        def = IncidentDefOf.PsychicEmanatorShipPartCrash,
+                                        def = ATR_IncidentDefOf.PsychicEmanatorShipPartCrash,
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.CurrentMap)
                                     };
                                     incident.parms.points /= 2;
@@ -179,7 +179,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     {
-                                        def = IncidentDefOf.DefoliatorShipPartCrash,
+                                        def = ATR_IncidentDefOf.DefoliatorShipPartCrash,
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.CurrentMap)
                                     };
                                     incident.parms.points /= 2;
@@ -347,7 +347,7 @@ namespace ATReforged
                                     // Apply the DDOS hediff to all hostile SkyMind-capable pawns of this faction.
                                     foreach (Pawn pawn in targetPawns)
                                     {
-                                        Hediff ddosHediff = HediffMaker.MakeHediff(HediffDefOf.RecoveringFromDDOS, pawn, pawn.health.hediffSet.GetBrain());
+                                        Hediff ddosHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_RecoveringFromDDOS, pawn, pawn.health.hediffSet.GetBrain());
                                         ddosHediff.Severity = 1;
                                         pawn.health.AddHediff(ddosHediff, pawn.health.hediffSet.GetBrain());
                                     }
@@ -438,7 +438,7 @@ namespace ATReforged
                         // Incident was unable to fire, try a counterhack instead. If none can fire, then try to affect goodwill instead.
                         incident = new FiringIncident
                         {
-                            def = IncidentDefOf.ATR_HackingIncident,
+                            def = ATR_IncidentDefOf.ATR_HackingIncident,
                             parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatSmall, Find.CurrentMap)
                         };
                         if (!Find.Storyteller.TryFire(incident))
@@ -451,8 +451,8 @@ namespace ATReforged
                 // Problem Causer site
                 else if (retaliationPick < 0.75f && faction.HostileTo(Faction.OfPlayer) && ModLister.RoyaltyInstalled)
                 {
-                    Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.ProblemCauser, StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
-                    if (QuestScriptDefOf.ProblemCauser.sendAvailableLetter)
+                    Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(ATR_QuestScriptDefOf.ProblemCauser, StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
+                    if (ATR_QuestScriptDefOf.ProblemCauser.sendAvailableLetter)
                     {
                         QuestUtility.SendLetterQuestAvailable(quest);
                     }
@@ -461,7 +461,7 @@ namespace ATReforged
                         // Quest was unable to fire, try a counterhack instead. If none can fire, then try to affect goodwill instead.
                         FiringIncident incident = new FiringIncident
                         {
-                            def = IncidentDefOf.ATR_HackingIncident,
+                            def = ATR_IncidentDefOf.ATR_HackingIncident,
                             parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatSmall, Find.CurrentMap)
                         };
                         if (!Find.Storyteller.TryFire(incident))
@@ -477,7 +477,7 @@ namespace ATReforged
                     // Try to execute a random hack incident. If none can fire, then try to affect goodwill instead.
                     FiringIncident incident = new FiringIncident
                     {
-                        def = IncidentDefOf.ATR_HackingIncident,
+                        def = ATR_IncidentDefOf.ATR_HackingIncident,
                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatSmall, Find.CurrentMap)
                     };
                     if (!Find.Storyteller.TryFire(incident))

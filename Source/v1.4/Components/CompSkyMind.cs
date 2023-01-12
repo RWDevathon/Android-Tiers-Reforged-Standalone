@@ -115,12 +115,12 @@ namespace ATReforged
                 { 
                     if (parent is Pawn pawn)
                     { // Release hacked pawns. Surrogates are downed. All pawns undergo a full system reboot.
-                        Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
+                        Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
                         hediff.Severity = 1f;
                         pawn.health.AddHediff(hediff, null, null);
                         if (Utils.IsSurrogate(pawn))
                         {
-                            pawn.health.AddHediff(HediffDefOf.ATR_NoController);
+                            pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
                         }
                     }
                     // Handle buildings that lost power.

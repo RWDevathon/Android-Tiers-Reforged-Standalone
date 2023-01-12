@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- Base Framework -->
 
     <HediffDef Name="ATR_AddedBodyPartFrameworkBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
@@ -56,7 +54,7 @@
     <!-- Plasteel Plating -->
 
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>PlatingPlasteel</defName>
+        <defName>ATR_PlatingPlasteel</defName>
         <label>Plasteel Frame</label>
 		<description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
 		<stages>
@@ -70,10 +68,9 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>PlasteelPlating</defName>
+        <defName>ATR_PlatingPlasteel</defName>
         <label>Plasteel Frame</label>
         <description>A chassis framework infused with hyper-tempered and refined plasteel.</description>
-        <descriptionHyperlinks><RecipeDef>InstallPlasteelPlating</RecipeDef></descriptionHyperlinks>
         <statBases>
             <MarketValue>1000</MarketValue>
         </statBases>
@@ -84,14 +81,14 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryFramework">
-        <defName>InstallPlasteelPlating</defName>
+        <defName>ATR_Install_PlasteelPlating</defName>
         <label>Install Plasteel Plating</label>
         <description>Replaces the chassis frame of this unit with a tempered plasteel-infused frame, enhancing combat survivability.</description>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>PlasteelPlating</li>
+                        <li>ATR_PlatingPlasteel</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -99,21 +96,21 @@
         </ingredients>
         <fixedIngredientFilter>
         <thingDefs>
-            <li>PlasteelPlating</li>
+            <li>ATR_PlatingPlasteel</li>
         </thingDefs>
         </fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-        <addsHediff>PlatingPlasteel</addsHediff>
+        <addsHediff>ATR_PlatingPlasteel</addsHediff>
     </RecipeDef>
  
     <!-- Composite Plating -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>CompositePlating</defName>
+        <defName>ATR_CompositePlating</defName>
         <label>Composite Frame</label>
 	    <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
 		<stages>
@@ -130,7 +127,7 @@
     </HediffDef>
   
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>CompositePlating</defName>
+        <defName>ATR_CompositePlating</defName>
         <label>Composite Frame</label>
         <description>A chassis framework infused with a composite made from taking a tempered plasteel and infusing mechanites into it, then infusing that into the chassis. While the framework itself is no stronger than a plasteel framework, mechanites offer near-instantaneous reactive armor capabilities.</description>
         <statBases>
@@ -144,14 +141,14 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryFramework">
-        <defName>InstallCompositePlating</defName>
+        <defName>ATR_Install_CompositePlating</defName>
         <label>Install Composite Frame</label>
         <description>Replaces the chassis frame of this unit with a mechanite-plasteel composite frame, greatly enhancing combat survivability.</description>
         <ingredients>
             <li>
                 <filter>
                     <thingDefs>
-                        <li>CompositePlating</li>
+                        <li>ATR_CompositePlating</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -159,21 +156,21 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>CompositePlating</li>
+                <li>ATR_CompositePlating</li>
             </thingDefs>
         </fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-        <addsHediff>CompositePlating</addsHediff>
+        <addsHediff>ATR_CompositePlating</addsHediff>
     </RecipeDef>
 
     <!-- Hydraulic -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>HydraulicFrame</defName>
+        <defName>ATR_HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
 	    <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
 		<stages>
@@ -188,7 +185,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>HydraulicFrame</defName>
+        <defName>ATR_HydraulicFrame</defName>
         <label>Hydraulic Frame</label>
         <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
         <statBases>
@@ -202,14 +199,14 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallHydraulicFrame</defName>
+		<defName>ATR_Install_HydraulicFrame</defName>
 		<label>Install Hydraulic Frame</label>
 		<description>Replaces the chassis frame of this unit with a hydraulic frame, greatly enhancing weight capacity and general labor efficiency.</description>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>HydraulicFrame</li>
+						<li>ATR_HydraulicFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -217,15 +214,15 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>HydraulicFrame</li>
+				<li>ATR_HydraulicFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<addsHediff>HydraulicFrame</addsHediff>
+		<addsHediff>ATR_HydraulicFrame</addsHediff>
 	</RecipeDef>
 
     <!-- Refined -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>RefinedFrame</defName>
+        <defName>ATR_RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
         <stages>
@@ -241,7 +238,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>RefinedFrame</defName>
+        <defName>ATR_RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
         <statBases>
@@ -254,7 +251,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallRefinedFrame</defName>
+		<defName>ATR_Install_RefinedFrame</defName>
 		<label>Install Refined Frame</label>
 		<description>Replaces the chassis frame of this unit with a refined frame, accentuating sociability and imbuing a distinctly noble and striking look. Installing the frame is as much up to the components as to the artistic skills of its installer, as there is no way to standardize the beauty of the intricate design.</description>
 		<skillRequirements>
@@ -265,7 +262,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RefinedFrame</li>
+						<li>ATR_RefinedFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -273,21 +270,21 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>RefinedFrame</li>
+				<li>ATR_RefinedFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-		<addsHediff>RefinedFrame</addsHediff>
+		<addsHediff>ATR_RefinedFrame</addsHediff>
 	</RecipeDef>
 
     <!-- Sanitary -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>SanitaryFrame</defName>
+        <defName>ATR_SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to microscopic biological entities. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
         <stages>
@@ -306,7 +303,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>SanitaryFrame</defName>
+        <defName>ATR_SanitaryFrame</defName>
         <label>Sanitary Frame</label>
         <description>A chassis framework ruthlessly treated and sanitized to ensure zero habitability to any form of detritus. This framework completely rejects stains, filth, and pathogens. The frame is also optimized for completely smooth movement, suiting it well in surgeries and treatments.</description>
         <statBases>
@@ -320,14 +317,14 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallSanitaryFrame</defName>
+		<defName>ATR_Install_SanitaryFrame</defName>
 		<label>Install Sanitary Frame</label>
 		<description>Replaces the chassis frame of this unit with a sanitary frame, ensuring it is completely free of filth and completely sanitized.</description>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SanitaryFrame</li>
+						<li>ATR_SanitaryFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -335,21 +332,21 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SanitaryFrame</li>
+				<li>ATR_SanitaryFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-		<addsHediff>SanitaryFrame</addsHediff>
+		<addsHediff>ATR_SanitaryFrame</addsHediff>
 	</RecipeDef>
 
     <!-- Mobility -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>MobilityFrame</defName>
+        <defName>ATR_MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
         <stages>
@@ -366,7 +363,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>MobilityFrame</defName>
+        <defName>ATR_MobilityFrame</defName>
         <label>Mobility Frame</label>
         <description>A chassis framework designed and optimized for fluency and efficiency of motion. This framework has unique design choices alongside specialized counterweights and exterior components to minimize drag, maximize momentum gain and loss, and grant superior flexibility and agility.</description>
         <statBases>
@@ -379,14 +376,14 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallMobilityFrame</defName>
+		<defName>ATR_Install_MobilityFrame</defName>
 		<label>Install Mobility Frame</label>
 		<description>Replaces the chassis frame of this unit with a mobility frame, greatly enhancing its movement capabilities and agility.</description>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MobilityFrame</li>
+						<li>ATR_MobilityFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -394,21 +391,21 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>MobilityFrame</li>
+				<li>ATR_MobilityFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-		<addsHediff>MobilityFrame</addsHediff>
+		<addsHediff>ATR_MobilityFrame</addsHediff>
 	</RecipeDef>
 
     <!-- Suppressor -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>SuppressorFrame</defName>
+        <defName>ATR_SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
         <stages>
@@ -426,7 +423,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>SuppressorFrame</defName>
+        <defName>ATR_SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
         <statBases>
@@ -439,14 +436,14 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallSuppressorFrame</defName>
+		<defName>ATR_Install_SuppressorFrame</defName>
 		<label>Install Suppressor Frame</label>
 		<description>Replaces the chassis frame of this unit with a suppressor frame, greatly reducing the combat threat of this unit.</description>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SuppressorFrame</li>
+						<li>ATR_SuppressorFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -454,15 +451,15 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>SuppressorFrame</li>
+				<li>ATR_SuppressorFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<addsHediff>SuppressorFrame</addsHediff>
+		<addsHediff>ATR_SuppressorFrame</addsHediff>
 	</RecipeDef>
 
     <!-- Guardian -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>GuardianFrame</defName>
+        <defName>ATR_GuardianFrame</defName>
         <label>Guardian Frame</label>
         <description>A chassis framework designed to withstand extreme temperature variance and exude intimidation. This framework was designed with dealing with fire - be it natural, accidental, or delivered by molotov - and all the threats that come with it. The insulatory measures also preserves the unit in extreme cold.</description>
         <stages>
@@ -482,7 +479,7 @@
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>GuardianFrame</defName>
+        <defName>ATR_GuardianFrame</defName>
         <label>Guardian Frame</label>
         <description>A chassis framework designed to withstand extreme temperature variance and exude intimidation. This framework was designed with dealing with fire - be it natural, accidental, or delivered by molotov - and all the threats that come with it. The insulatory measures also preserves the unit in extreme cold.</description>
         <statBases>
@@ -495,14 +492,14 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>InstallGuardianFrame</defName>
+		<defName>ATR_Install_GuardianFrame</defName>
 		<label>Install Guardian Frame</label>
 		<description>Replaces the chassis frame of this unit with a guardian frame, greatly enhancing environmental survivability and police capabilities.</description>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>GuardianFrame</li>
+						<li>ATR_GuardianFrame</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -510,16 +507,16 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>GuardianFrame</li>
+				<li>ATR_GuardianFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
         <recipeUsers>
-            <li>M7Mech</li>
-            <li>M8Mech</li>
-            <li>DroneWatchdog</li>
-            <li>DroneTORT</li>
+            <li>ATR_M7Mech</li>
+            <!--<li>ATR_M8Mech</li>-->
+            <li>ATR_DroneWatchdog</li>
+            <li>ATR_DroneTORT</li>
         </recipeUsers>
-		<addsHediff>GuardianFrame</addsHediff>
+		<addsHediff>ATR_GuardianFrame</addsHediff>
 	</RecipeDef>
 
 </Defs>

@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
   
     <!-- ============= Mechanic ============= -->
   
     <WorkGiverDef>
-        <defName>MechanicTendEmergency</defName>
+        <defName>ATR_MechanicTendEmergency</defName>
         <label>repair patients with urgent needs</label>
         <giverClass>ATReforged.WorkGiver_TendOtherUrgentMech</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <emergency>true</emergency>
         <verb>repair</verb>
         <gerund>repairing</gerund>
@@ -21,10 +19,10 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>MechanicTendToHumanlikes</defName>
+        <defName>ATR_MechanicTendToHumanlikes</defName>
         <label>repair patients</label>
         <giverClass>ATReforged.WorkGiver_TendOtherMech</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <verb>repair</verb>
         <gerund>repairing</gerund>
         <priorityInType>100</priorityInType>
@@ -35,11 +33,11 @@
         <tendToHumanlikesOnly>true</tendToHumanlikesOnly>
     </WorkGiverDef>
 
-    <WorkGiverDef Name="MechanicTendToSelf">
-        <defName>MechanicTendToSelf</defName>
+    <WorkGiverDef Name="ATR_MechanicTendToSelf">
+        <defName>ATR_MechanicTendToSelf</defName>
         <label>repair self</label>
         <giverClass>ATReforged.WorkGiver_TendSelfMech</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <verb>repair</verb>
         <gerund>repairing</gerund>
         <priorityInType>90</priorityInType>
@@ -49,17 +47,17 @@
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>
 
-    <WorkGiverDef ParentName="MechanicTendToSelf">
+    <WorkGiverDef ParentName="ATR_MechanicTendToSelf">
         <defName>MechanicTendToSelfEmergency</defName>
         <giverClass>ATReforged.WorkGiver_TendSelfEmergencyMech</giverClass>
         <emergency>True</emergency>
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>DoBillsMechanicalOperation</defName>
+        <defName>ATR_DoBillsMechanicalOperation</defName>
         <label>operate on humanlikes</label>
         <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <priorityInType>70</priorityInType>
         <billGiversAllHumanlikes>true</billGiversAllHumanlikes>
         <billGiversAllHumanlikesCorpses>true</billGiversAllHumanlikesCorpses>
@@ -72,10 +70,10 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>MechanicRescue</defName>
+        <defName>ATR_MechanicRescue</defName>
         <label>rescue downed allies to bed</label>
         <giverClass>WorkGiver_RescueDowned</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <verb>rescue</verb>
         <gerund>rescuing</gerund>
         <priorityInType>60</priorityInType>
@@ -86,10 +84,10 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>MechanicTendToAnimals</defName>
+        <defName>ATR_MechanicTendToAnimals</defName>
         <label>repair animals</label>
         <giverClass>ATReforged.WorkGiver_TendOtherMech</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <verb>repair</verb>
         <gerund>repairing</gerund>
         <requiredCapacities>
@@ -101,10 +99,10 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>DoBillsMechanicalAnimalOperation</defName>
+        <defName>ATR_DoBillsMechanicalAnimalOperation</defName>
         <label>operate on animals</label>
         <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <priorityInType>30</priorityInType>
         <billGiversAllAnimals>true</billGiversAllAnimals>
         <billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
@@ -117,10 +115,10 @@
     </WorkGiverDef>
 
     <WorkGiverDef>
-        <defName>TakeMechanicalToBedToOperate</defName>
+        <defName>ATR_TakeMechanicalToBedToOperate</defName>
         <label>take patients to bed for operations</label>
         <giverClass>WorkGiver_TakeToBedToOperate</giverClass>
-        <workType>Mechanic</workType>
+        <workType>ATR_Mechanic</workType>
         <priorityInType>20</priorityInType>
         <verb>take to operate</verb>
         <gerund>taking to operate</gerund>

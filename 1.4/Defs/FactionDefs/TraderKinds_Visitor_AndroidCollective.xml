@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- TODO: defNames in FactionDefs for 1.0 candidate -->
-
     <TraderKindDef>
-        <defName>Visitor_AndroidCollective_Standard</defName>
+        <defName>ATR_Visitor_AndroidCollective_Standard</defName>
         <label>trader</label>
         <stockGenerators>
             <li Class="StockGenerator_SingleDef">

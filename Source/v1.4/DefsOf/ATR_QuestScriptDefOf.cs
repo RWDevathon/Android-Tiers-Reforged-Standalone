@@ -3,11 +3,11 @@
 namespace ATReforged
 {
     [DefOf]
-    public static class QuestScriptDefOf
+    public static class ATR_QuestScriptDefOf
     {
-        static QuestScriptDefOf()
+        static ATR_QuestScriptDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(QuestScriptDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_QuestScriptDefOf));
         }
 
         [MayRequireRoyalty]

@@ -5,7 +5,7 @@ using RimWorld;
 
 namespace ATReforged
 {
-    public class JobDriver_GoReloadBattery : JobDriver
+    public class JobDriver_RechargeBattery : JobDriver
     {
         public Building_Bed Bed => job.GetTarget(TargetIndex.A).Thing as Building_Bed;
 

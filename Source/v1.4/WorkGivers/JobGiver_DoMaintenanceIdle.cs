@@ -37,13 +37,13 @@ namespace ATReforged
             // If this pawn's current position is legal for meditation, use it.
             if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
             {
-                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
 
             MeditationSpotAndFocus meditationSpot = MeditationUtility.FindMeditationSpot(pawn);
             if (meditationSpot.IsValid)
             {
-                return JobMaker.MakeJob(JobDefOf.ATR_DoMaintenanceIdle, meditationSpot.spot, new LocalTargetInfo(meditationSpot.spot.Cell));
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceIdle, meditationSpot.spot, new LocalTargetInfo(meditationSpot.spot.Cell));
             }
             return null;
         }

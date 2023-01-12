@@ -31,7 +31,7 @@
         </statBases>
         <rotatable>false</rotatable>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <designationCategory>AndroidTiersDesignation</designationCategory>
+        <designationCategory>ATR_AndroidTiersDesignation</designationCategory>
         <constructEffect>ConstructMetal</constructEffect>
         <designationHotKey>Misc4</designationHotKey>
         <comps>

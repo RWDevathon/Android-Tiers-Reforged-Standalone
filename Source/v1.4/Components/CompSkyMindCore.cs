@@ -31,14 +31,6 @@ namespace ATReforged
             }
         }
 
-        public override void Notify_KilledPawn(Pawn pawn)
-        {
-            base.Notify_KilledPawn(pawn);
-
-            // Pawns that provide core capacity lose it when they die. TODO: Kidnapped pawns, exiled pawns, and more may be able to abuse this.
-            Utils.gameComp.RemoveCore(this);
-        }
-
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
@@ -116,7 +108,7 @@ namespace ATReforged
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                         {
@@ -155,7 +147,7 @@ namespace ATReforged
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
@@ -214,7 +206,7 @@ namespace ATReforged
                 action = delegate ()
                 {
                     List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
                     {
                         cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                         {
@@ -256,7 +248,7 @@ namespace ATReforged
                     action = delegate ()
                     {
                         List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                        foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                             {

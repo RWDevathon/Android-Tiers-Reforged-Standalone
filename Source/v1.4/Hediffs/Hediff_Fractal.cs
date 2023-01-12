@@ -57,7 +57,7 @@ namespace ATReforged
 
         public override bool TryMergeWith(Hediff other)
         {
-            if (other.def == HediffDefOf.ATR_FractalPillOrganic)
+            if (other.def == ATR_HediffDefOf.ATR_FractalPillOrganic)
             {
                 ChangeState();
                 return true;
@@ -87,13 +87,13 @@ namespace ATReforged
             string text = "ATR_FractalCorruptionDesc".Translate(pawn.Name.ToStringShort);
             Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.NegativeEvent, pawn);
 
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_FractalAbomination, Faction.OfAncientsHostile, PawnGenerationContext.NonPlayer, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_FractalAbomination, Faction.OfAncientsHostile, PawnGenerationContext.NonPlayer, fixedGender: Gender.None);
             Pawn abomination = PawnGenerator.GeneratePawn(request);
             FilthMaker.TryMakeFilth(pawn.Position, pawn.Map, RimWorld.ThingDefOf.Filth_AmnioticFluid, pawn.LabelIndefinite(), 10);
             FilthMaker.TryMakeFilth(pawn.Position, pawn.Map, RimWorld.ThingDefOf.Filth_Blood, pawn.LabelIndefinite(), 10);
 
             GenSpawn.Spawn(abomination, pawn.Position, pawn.Map);
-            abomination.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
+            abomination.mindState.mentalStateHandler.TryStartMentalState(ATR_MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
         }
 
         bool isTerminal;

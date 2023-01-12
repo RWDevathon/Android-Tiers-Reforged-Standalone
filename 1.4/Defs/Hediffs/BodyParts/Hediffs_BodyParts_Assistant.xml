@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
   	<!-- Base Core Assistant -->
   
 	<HediffDef Name="ATR_AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
@@ -90,7 +88,7 @@
   	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_InsightAssistant</defName>
+		<defName>ATR_Install_InsightAssistant</defName>
 		<label>Install insight assistant</label>
 		<description>Installs an insight assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing insight assistant.</jobString>
@@ -141,7 +139,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_GeneralAssistant</defName>
+		<defName>ATR_Install_GeneralAssistant</defName>
 		<label>Install general assistant</label>
 		<description>Installs a general assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing general assistant.</jobString>
@@ -200,7 +198,7 @@
   	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_CombatAssistant</defName>
+		<defName>ATR_Install_CombatAssistant</defName>
 		<label>Install combat assistant</label>
 		<description>Installs a combat assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing combat assistant.</jobString>
@@ -232,12 +230,12 @@
 			<li>
 				<statOffsets>
 					<ButcheryMechanoidEfficiency>0.5</ButcheryMechanoidEfficiency>
-          			<MechanicalTendQuality>0.25</MechanicalTendQuality>
+          			<ATR_MechanicalTendQuality>0.25</ATR_MechanicalTendQuality>
 				</statOffsets>
                 <statFactors>
-					<MechanicalSurgerySuccessChance>1.2</MechanicalSurgerySuccessChance>
+					<ATR_MechanicalSurgerySuccessChance>1.2</ATR_MechanicalSurgerySuccessChance>
 					<ButcheryMechanoidSpeed>1.6</ButcheryMechanoidSpeed>
-                    <MechanicalTendSpeed>1.6</MechanicalTendSpeed>
+                    <ATR_MechanicalTendSpeed>1.6</ATR_MechanicalTendSpeed>
                 </statFactors>
 			</li>
 		</stages>
@@ -256,7 +254,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_MechanicAssistant</defName>
+		<defName>ATR_Install_MechanicAssistant</defName>
 		<label>Install mechanic assistant</label>
 		<description>Installs a mechanic assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing mechanic assistant.</jobString>
@@ -311,7 +309,7 @@
   	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_ConstructionAssistant</defName>
+		<defName>ATR_Install_ConstructionAssistant</defName>
 		<label>Install construction assistant</label>
 		<description>Installs a construction assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing construction assistant.</jobString>
@@ -365,7 +363,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_ExcavationAssistant</defName>
+		<defName>ATR_Install_ExcavationAssistant</defName>
 		<label>Install excavator assistant</label>
 		<description>Installs an excavator assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing excavator assistant.</jobString>
@@ -420,7 +418,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_VictualAssistant</defName>
+		<defName>ATR_Install_VictualAssistant</defName>
 		<label>Install victual assistant</label>
 		<description>Installs a victual assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing victual assistant.</jobString>
@@ -479,7 +477,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_CultivationAssistant</defName>
+		<defName>ATR_Install_CultivationAssistant</defName>
 		<label>Install cultivation assistant</label>
 		<description>Installs a cultivation assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing cultivation assistant.</jobString>
@@ -534,7 +532,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_MedicineAssistant</defName>
+		<defName>ATR_Install_MedicineAssistant</defName>
 		<label>Install medicine assistant</label>
 		<description>Installs a medicine assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing medicine assistant.</jobString>
@@ -592,7 +590,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_SocialAssistant</defName>
+		<defName>ATR_Install_SocialAssistant</defName>
 		<label>Install social assistant</label>
 		<description>Installs a social assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing social assistant.</jobString>
@@ -646,7 +644,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_MentalAssistant</defName>
+		<defName>ATR_Install_MentalAssistant</defName>
 		<label>Install mental assistant</label>
 		<description>Installs a mental assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing mental assistant.</jobString>
@@ -697,7 +695,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_PsychicAssistant</defName>
+		<defName>ATR_Install_PsychicAssistant</defName>
 		<label>Install psychic assistant</label>
 		<description>Installs a psychic assistant into the sub-core assistant slot of a unit.</description>
 		<jobString>Installing psychic assistant.</jobString>
@@ -833,7 +831,7 @@
   	</ThingDef> 
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
-		<defName>Install_SapientAssistant</defName>
+		<defName>ATR_Install_SapientAssistant</defName>
 		<label>Install sapient assistant</label>
 		<description>Installs a sapient assistant into the sub-core assistant slot of a unit. This archotech device seems to possess intelligence only when implanted in a mechanical unit. Where does it go when uninstalled?</description>
 		<jobString>Installing sapient assistant.</jobString>

@@ -24,6 +24,8 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -200,14 +202,13 @@
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
-    <Compile Include="DefsOf\BodyPartDefOf.cs" />
-    <Compile Include="DefsOf\BackstoryDefOf.cs" />
-    <Compile Include="DefsOf\IncidentDefOf.cs" />
-    <Compile Include="DefsOf\NeedDefOf.cs" />
-    <Compile Include="DefsOf\MentalStateDefOf.cs" />
-    <Compile Include="DefsOf\QuestScriptDefOf.cs" />
-    <Compile Include="DefsOf\RulePackDefOf.cs" />
-    <Compile Include="DefsOf\WorkTypeDefOf.cs" />
+    <Compile Include="DefsOf\ATR_BodyPartDefOf.cs" />
+    <Compile Include="DefsOf\ATR_BackstoryDefOf.cs" />
+    <Compile Include="DefsOf\ATR_IncidentDefOf.cs" />
+    <Compile Include="DefsOf\ATR_MentalStateDefOf.cs" />
+    <Compile Include="DefsOf\ATR_QuestScriptDefOf.cs" />
+    <Compile Include="DefsOf\ATR_RulePackDefOf.cs" />
+    <Compile Include="DefsOf\ATR_WorkTypeDefOf.cs" />
     <Compile Include="Dialogs\Dialog_Repaint.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
     <Compile Include="Enum\ServerType.cs" />
@@ -240,7 +241,6 @@
     <Compile Include="Harmony\RestUtility_Patch.cs" />
     <Compile Include="Harmony\ThingSetMaker_RefugeePod_Patch.cs" />
     <Compile Include="Harmony\SickPawnVisitUtility_Patch.cs" />
-    <Compile Include="Harmony\InteractionWorker_EnslaveAttempt_Patch.cs" />
     <Compile Include="Harmony\KidnapUtility_Patch.cs" />
     <Compile Include="Harmony\PawnBioAndNameGenerator_Patch.cs" />
     <Compile Include="Harmony\InteractionUtility_Patch.cs" />
@@ -285,10 +285,10 @@
     <Compile Include="Components\CompSkyMindLink.cs" />
     <Compile Include="Components\CompProperties_GenericSpawner.cs" />
     <Compile Include="Components\CompSpawnerGeneric.cs" />
-    <Compile Include="DefsOf\JobDefOf.cs" />
-    <Compile Include="DefsOf\StatDefOf.cs" />
-    <Compile Include="DefsOf\ThingDefOf.cs" />
-    <Compile Include="DefsOf\TraitDefOf.cs" />
+    <Compile Include="DefsOf\ATR_JobDefOf.cs" />
+    <Compile Include="DefsOf\ATR_StatDefOf.cs" />
+    <Compile Include="DefsOf\ATR_ThingDefOf.cs" />
+    <Compile Include="DefsOf\ATR_TraitDefOf.cs" />
     <Compile Include="Designators\Designator_AndroidToControl.cs" />
     <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
@@ -319,15 +319,14 @@
     <Compile Include="Harmony\ThoughtWorker_WantToSleepWithSpouseOrLover_Patch.cs" />
     <Compile Include="Harmony\Toils_Tend_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
-    <Compile Include="Needs\Need_Maintenance.cs" />
     <Compile Include="Recipes\Recipe_DoEmergencyMaintenance.cs" />
     <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
     <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
-    <Compile Include="DefsOf\HediffDefOf.cs" />
+    <Compile Include="DefsOf\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
-    <Compile Include="JobDrivers\JobDriver_GoReloadBattery.cs" />
+    <Compile Include="JobDrivers\JobDriver_RechargeBattery.cs" />
     <Compile Include="Recipes\Recipe_InstallOrganicSkyMindInterface.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidInterface.cs" />
     <Compile Include="Recipes\Recipe_RestoreMechanicalPart.cs" />
@@ -346,7 +345,7 @@
     <Compile Include="Recipes\Recipe_InstallImplantAndroid.cs" />
     <Compile Include="Recipes\Recipe_ReprogramDrone.cs" />
     <Compile Include="Recipes\Recipe_SurgeryAndroids.cs" />
-    <Compile Include="DefsOf\PawnKindDef.cs" />
+    <Compile Include="DefsOf\ATR_PawnKindDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ATReforged_Settings.cs" />
     <Compile Include="Components\CompSpawnerMicroscyther.cs" />

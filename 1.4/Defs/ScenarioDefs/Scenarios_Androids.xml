@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
     
 	<ScenarioDef>
-		<defName>CrashlandedAndroids</defName>
+		<defName>ATR_CrashlandedAndroids</defName>
 		<label>Crashlanding Androids</label>
 		<description>You completed system reinitialization right before breaking atmosphere in what seems to be an escape pod. Memory banks for recent data are blank, and there are no files indicating recent purpose, directive, or history. You are intact - that will suffice for now.</description>
 		<scenario>
 			<summary>Three crashlanded android survivors - the classic RimWorld experience with a mechanical twist.</summary>
 			<playerFaction>
 				<def>PlayerFaction</def>
-				<factionDef>PlayerColonyAndroid</factionDef>
+				<factionDef>ATR_PlayerAndroidFaction</factionDef>
 			</playerFaction>
 			<parts>
 				<!-- Config pages -->

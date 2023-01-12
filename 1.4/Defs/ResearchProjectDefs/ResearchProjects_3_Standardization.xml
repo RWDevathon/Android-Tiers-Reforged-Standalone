@@ -45,7 +45,7 @@
 		<defName>ATR_T1Androids</defName>
 		<label>T1 androids</label>
 		<tab>ATR_MechResearch</tab>
-		<description>Tier one androids are marked by humanlike resemblance, but are still no more than machines. Impressive in their resemblance and capabilities, they represent the higher echelons of UrbWorld creativity and MidWorld dreams. A fine advancement in our progress, and the dawn of a bright future.</description>
+		<description>Tier one androids are marked by humanlike resemblance, but are still no more than machines. Impressive in their resemblance and capabilities, they represent the higher echelons of Urbworld creativity and Midworld dreams. A fine advancement in our progress, and the dawn of a bright future.</description>
 		<baseCost>1600</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>

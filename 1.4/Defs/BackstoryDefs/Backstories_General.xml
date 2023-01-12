@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<!--Android General-->
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidCleaner</defName>
+		<defName>ATR_MechAdulthoodGlitterworldCleaner</defName>
 		<title>Glitterworld cleaner</title>
 		<titleShort>Cleaner</titleShort>
 		<baseDesc>{PAWN_nameDef} used to be a cleaner android on a glitterworld planet, {PAWN_pronoun} was never tasked with anything too complex.</baseDesc>
@@ -36,7 +34,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidSoldier</defName>
+		<defName>ATR_MechAdulthoodShocktrooper</defName>
 		<title>Shock troop</title>
 		<titleShort>Trooper</titleShort>
 		<baseDesc>{PAWN_nameDef} used to be part of a battalion of specialist made shock troop android soldiers, programmed to kill with cold efficiency whilst still maintaining self-will.</baseDesc>
@@ -69,7 +67,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidAgent</defName>
+		<defName>ATR_MechAdulthoodSecretService</defName>
 		<title>Special agent</title>
 		<titleShort>Agent</titleShort>
 		<baseDesc>{PAWN_nameDef} was bought specifically to protect high-ranking officials such as dictators, members of royal families and cabinet members. They were trained extensively to quickly react to combat whenever needed and to perform on-site medical care.</baseDesc>
@@ -99,7 +97,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidPilot</defName>
+		<defName>ATR_MechAdulthoodCoPilot</defName>
 		<title>Spaceplane pilot</title>
 		<titleShort>Pilot</titleShort>
 		<baseDesc>To help aid human pilots during orbital battles {PAWN_nameDef} was bought as part of a line of military androids. Acting as a mechanical co-pilot for the craft, {PAWN_pronoun} was trained to accurately fire the spaceplanes onboard cannons at enemy ships.</baseDesc>
@@ -122,10 +120,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidStarship</defName>
+		<defName>ATR_MechAdulthoodShipCommander</defName>
 		<title>Starship commander</title>
 		<titleShort>Commander</titleShort>
-		<baseDesc>{PAWN_nameDef} was one of three commanders aboard a colony starship, a position only a few androids were ever made for. {PAWN_pronoun} would oversee all functions of the ship, remaining awake when the rest of the crew had entered their hibernation.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was one of three commanders aboard a colony starship, a position exceedingly rarely entrusted to androids. {PAWN_pronoun} would oversee all functions of the ship, remaining awake when the rest of the crew had entered hibernation.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -149,7 +147,7 @@
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidRiot</defName>
+		<defName>ATR_MechAdulthoodRiotPolice</defName>
 		<title>Riot officer</title>
 		<titleShort>Officer</titleShort>
 		<baseDesc>As part of a unique line of law enforcement, fitted with a heavy frame, {PAWN_nameDef} was tasked with controlling riots that sprawled out of control through any means necessary.</baseDesc>
@@ -177,7 +175,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidGuard</defName>
+		<defName>ATR_MechAdulthoodMercenaryBodyguard</defName>
 		<title>Bodyguard</title>
 		<titleShort>Bodyguard</titleShort>
 		<baseDesc>As an android bodyguard for hire, {PAWN_nameDef} has worked with all types of clients, ranging from urbworld entrepreneurs to low-level crime bosses. {PAWN_pronoun} was built specifically to protect them at all costs.</baseDesc>
@@ -200,10 +198,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidSoldierInjured</defName>
+		<defName>ATR_MechAdulthoodInjuredSoldier</defName>
 		<title>Broken soldier</title>
 		<titleShort>Soldier</titleShort>
-		<baseDesc>{PAWN_nameDef} was once part of a squadron of highly trained android soldiers, sent out only to the most dangerous missions. During one of said missions, the entire squad was fired upon with mortars, damaging {PAWN_objective} beyond full repair.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was once part of a squadron of highly trained android soldiers, sent out only to the most dangerous missions. The final mission ended in a salvo of artillery fire wiping out nearly the entire squad. {PAWN_nameDef} was one of a few intact survivors who fled.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -232,7 +230,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHighChef</defName>
+		<defName>ATR_MechAdulthoodGourmetChef</defName>
 		<title>Gourmet chef</title>
 		<titleShort>Chef</titleShort>
 		<baseDesc>All across his home planet {PAWN_nameDef} is known for his gourmet dishes, serving high-end clientele from all walks of life, each dish being perfectly balanced both logically and aesthetically.</baseDesc>
@@ -259,10 +257,10 @@
 
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidUrbworldChef</defName>
+		<defName>ATR_MechAdulthoodCafeteriaCook</defName>
 		<title>Urbworld chef</title>
 		<titleShort>Chef</titleShort>
-		<baseDesc>{PAWN_nameDef} was the owner of a well-renowned urbworld food station. Known to the locals as "Bolts" {PAWN_pronoun} made cheap, available food for the region that didn't taste like slop.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was the owner of a well-renowned urbworld food station. Known to the locals as "Bolts" {PAWN_pronoun} made cheap, simple meals that didn't taste like slop.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -282,9 +280,9 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidBartender</defName>
+		<defName>ATR_MechAdulthoodBartender</defName>
 		<title>Bartender</title>
-		<titleShort>Chef</titleShort>
+		<titleShort>Bartender</titleShort>
 		<baseDesc>{PAWN_nameDef} worked long hours at a bar, serving customers food and drinks all night long, occasionally breaking up fights.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
@@ -309,7 +307,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidPrisonCook</defName>
+		<defName>ATR_MechAdulthoodPrisonCook</defName>
 		<title>Prison cook</title>
 		<titleShort>Cook</titleShort>
 		<baseDesc>Working in a partly automated prison station, {PAWN_nameDef} was tasked with making bulk amounts of low-quality food. Although the food was disgusting, it was very efficiently made and extremely cheap.</baseDesc>
@@ -332,7 +330,7 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidPet</defName>
+		<defName>ATR_MechAdulthoodServantPet</defName>
 		<title>Subservient machine</title>
 		<titleShort>Subservient</titleShort>
 		<baseDesc>{PAWN_nameDef} was bought by a family of wealthy humans, made to entertain and perform basic labour around the house without question. {PAWN_possessive} owners treated {PAWN_objective} as nothing more than a pet.</baseDesc>
@@ -360,10 +358,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDeepMiner</defName>
+		<defName>ATR_MechAdulthoodSpaceMiner</defName>
 		<title>Mining drone</title>
 		<titleShort>Drone</titleShort>
-		<baseDesc>{PAWN_nameDef} was made as part of a specialised production line of androids for an asteroid mining colony, working in asteroid fields with humans and other androids. {PAWN_pronoun} was mostly used for dangerous tasks and spacewalks.</baseDesc>
+		<baseDesc>{PAWN_nameDef} served in a high-stakes asteroid mining corporation crew. {PAWN_pronoun} preferred handling dangerous tasks and spacewalks so {PAWN_possessive} organic crewmates didn't have to. {PAWN_nameDef} earned grudging respect from corporate for minimizing work accidents.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -387,10 +385,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMiner</defName>
+		<defName>ATR_MechAdulthoodTunnelMiner</defName>
 		<title>Tunnel worker</title>
 		<titleShort>Tunneler</titleShort>
-		<baseDesc>{PAWN_nameDef} helped develop large underground tunnels on caveworlds, working as labour-for-lease by the hour. This line of androids was not custom made for the job however and would usually have a broad range of tasks they could perform other than digging.</baseDesc>
+		<baseDesc>{PAWN_nameDef} helped develop large underground tunnels on caveworlds as a contractor. {PAWN_nameDef} took great pleasure in building strong, cave-in resistant networks.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -420,10 +418,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidProspector</defName>
+		<defName>ATR_MechAdulthoodProspector</defName>
 		<title>Prospector drone</title>
 		<titleShort>Prospector</titleShort>
-		<baseDesc>As part of a group of mechanical prospectors, {PAWN_nameDef} was sent from planet to planet, performing mineral analysis of planets in preparation for colonies.</baseDesc>
+		<baseDesc>As part of a group of mechanical prospectors, {PAWN_nameDef} was sent from planet to planet, performing geological analysis of planets for corporate and civilian clientele alike.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -443,10 +441,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidConstructor</defName>
+		<defName>ATR_MechAdulthoodShipyardEngineer</defName>
 		<title>Orbital engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDesc>Working aboard an all android orbital shipyard, {PAWN_nameDef} was tasked with creating ships of all sizes, from small fighters to gigantic cargo ships.</baseDesc>
+		<baseDesc>Working aboard a purely mechanical orbital shipyard, {PAWN_nameDef} participated in building all sorts of vessels ranging from small interceptors to hulking fleet flagships.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -466,10 +464,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidBuilder</defName>
+		<defName>ATR_MechAdulthoodUrbworldArchitect</defName>
 		<title>Android architect</title>
 		<titleShort>Architect</titleShort>
-		<baseDesc>{PAWN_nameDef} was an architect that developed blueprints for mass housing solutions on their urbworld. The blueprints {PAWN_pronoun} drew up were cold, lifeless and purely logical but they were functional for housing the billions.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was an architect that developed blueprints for mass housing solutions on their urbworld. The blueprints {PAWN_pronoun} drew up were cold, lifeless and purely functional but they were efficient for housing billions.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -493,10 +491,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidGrunt</defName>
-		<title>Construction drone</title>
+		<defName>ATR_MechAdulthoodConstructionContractor</defName>
+		<title>Construction worker</title>
 		<titleShort>Builder</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of a production line of cheap labour construction androids, used to build anything from houses to skyscrapers.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a construction contractor, building structures of all kinds. Civilian skyscrapers, military fortresses, and wealthy cataclysm bunkers all need strong, capable individuals to build them.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -524,33 +522,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHydroponicFarmer</defName>
+		<defName>ATR_MechAdulthoodHydroponicFarmer</defName>
 		<title>Hydroponics engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDesc>{PAWN_nameDef} is an android that was specifically tasked with maintaining and sowing the hundreds of hydroponics basins aboard a starship.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Plants</key>
-				<value>7</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>3</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidFarmer</defName>
-		<title>Mechanical farmer</title>
-		<titleShort>Farmer</titleShort>
-		<baseDesc>Made for a life of planting and harvesting, {PAWN_nameDef} has never wanted much. The only thing that {PAWN_pronoun} wishes for is to live out in the fields and tend to crops and animals.</baseDesc>
+		<baseDesc>{PAWN_nameDef} maintained, serviced, and harvested hydroponics aboard interstellar craft. {PAWN_nameDef} enjoyed the isolation and freedom to experiment with plant genetic lines - even if they invariably ended up less efficient than scientifically created crops.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -563,17 +538,48 @@
 				<value>6</value>
 			</li>
 			<li>
-				<key>Animals</key>
-				<value>4</value>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
 			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidGardener</defName>
+		<defName>ATR_MechAdulthoodFarmer</defName>
+		<title>Mechanical farmer</title>
+		<titleShort>Farmer</titleShort>
+		<baseDesc>{PAWN_nameDef} served as seasonal farm labor and occasionally a rancher. The simplicity of tending for crops, animals, and the land appeals to {PAWN_nameDef} - learning to defend against raiders proved necessary.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+            <li>
+                <key>Shooting</key>
+                <value>2</value>
+            </li>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodGardener</defName>
 		<title>Mechanical gardener</title>
 		<titleShort>Gardener</titleShort>
-		<baseDesc>{PAWN_nameDef} used to be part of a team of mechanical servants for numerous high-end clientele, working day and night to maintain their gardens and help host special botanical events.</baseDesc>
+		<baseDesc>{PAWN_nameDef} used to be part of a team of mechanical servants for numerous high-end clientele, working day and night to maintain gardens and help host special botanical events.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -596,10 +602,33 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMechanic</defName>
+		<defName>ATR_MechAdulthoodAndroidMechanic</defName>
 		<title>Android mechanic</title>
 		<titleShort>Mechanic</titleShort>
-		<baseDesc>Working in a glitterworld android factory, {PAWN_nameDef} maintained and performed part replacements on all models of androids. {PAWN_pronoun} had most of {PAWN_possessive} framework remade, to install advanced upgrades that would help with the intricate work {PAWN_pronoun} had to do.</baseDesc>
+		<baseDesc>Glitterworlds are largely free from suffering, so the primary duties of {PAWN_nameDef} as a mechanic were to design, create, and install intricate and aesthetic mechanical parts onto clientele machines and androids.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodAerospaceEngineer</defName>
+		<title>Aerospace engineer</title>
+		<titleShort>Engineer</titleShort>
+		<baseDesc>{PAWN_nameDef} worked on many different kinds of aircraft for commerical and military clients. {PAWN_nameDef} had a strong aversion to aesthetic designs, favoring aerodynamic and structural strengths. {PAWN_nameDef} frequently requested the extermination of local wildlife to prevent interruptions of flight paths and tests.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -613,31 +642,16 @@
 			</li>
 			<li>
 				<key>Crafting</key>
-				<value>8</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidAerofleetEngineer</defName>
-		<title>Aerofleet engineer</title>
-		<titleShort>Engineer</titleShort>
-		<baseDesc>{PAWN_nameDef} has worked with numerous commercial airliners and a few local militaries to produce high-end aircraft at low costs.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Construction</key>
 				<value>4</value>
 			</li>
-			<li>
-				<key>Crafting</key>
-				<value>5</value>
-			</li>
+            <li>
+                <key>Artistic</key>
+                <value>-4</value>
+            </li>
+            <li>
+                <key>Animals</key>
+                <value>-2</value>
+            </li>
 		</skillGains>
 		<workDisables>
 			<li>Cooking</li>
@@ -646,10 +660,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidComabtEngineer</defName>
+		<defName>ATR_MechAdulthoodCombatEngineer</defName>
 		<title>Combat engineer</title>
 		<titleShort>Engineer</titleShort>
-		<baseDesc>{PAWN_nameDef} was created on {PAWN_possessive} home glitterworld to develop state-of-art weapons. Everything, ranging from optimised gunpowder rifles to charge weaponry.</baseDesc>
+		<baseDesc>{PAWN_nameDef} acted as a combat engineer in an interstellar military. {PAWN_pronoun} was frequently sent in the first wave of ship-boardings to disarm traps, identify chokepoints, and sap enemy fortifications. Shipboard kitchens and hydroponic bays were often the site of lethal shoot-outs, and {PAWN_pronoun} learned to hate them.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -659,24 +673,28 @@
 		<skillGains>
 			<li>
 				<key>Intellectual</key>
-				<value>4</value>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Crafting</key>
-				<value>6</value>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Shooting</key>
 				<value>2</value>
 			</li>
 		</skillGains>
+        <workDisables>
+			<li>Cooking</li>
+			<li>PlantWork</li>
+        </workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidFactoryWorker</defName>
+		<defName>ATR_MechAdulthoodFactoryWorker</defName>
 		<title>Factory worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDesc>{PAWN_nameDef} worked in a factory owned by an interstellar megacorporation that specialised in firearms and protective clothing, usually to supply the local military on whatever planet was the closest.</baseDesc>
+		<baseDesc>{PAWN_nameDef} worked in a factory owned by an interstellar megacorporation that specialised in firearms and protective clothing for military industries of various planets and interstellar nations.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -704,10 +722,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidSurgeon</defName>
-		<title>Pinpoint surgeon</title>
+		<defName>ATR_MechAdulthoodSurgeon</defName>
+		<title>Stalwart surgeon</title>
 		<titleShort>Surgeon</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of a line of experimental surgeon androids. Enhanced majorly beyond the factory standard, only to be used for the most delicate surgical procedures, which included mostly brain, heart and eye surgery. {PAWN_nameDef} was accurate to the micrometer with {PAWN_possessive} hands, before being replaced with a newer model three years later.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was an experienced surgeon and medic. {PAWN_pronoun} swore to never do harm, even if it means surrendering {PAWN_possessive} own existence. {PAWN_pronoun} also provided social services to {PAWN_possessive} subjects.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -717,128 +735,11 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<value>10</value>
-			</li>
-			<li>
-				<key>Shooting</key>
-				<value>-4</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Mining</li>
-			<li>Cooking</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDoctor</defName>
-		<title>Clinic worker</title>
-		<titleShort>Worker</titleShort>
-		<baseDesc>{PAWN_nameDef} was produced to serve as a specialist doctor for diagnosing patients at a major hospital on {PAWN_possessive} home planet. {PAWN_pronoun} would diagnose and treat a large array of symptoms for upwards of ten outpatients per day.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Medicine</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Shooting</key>
-				<value>-4</value>
+				<value>8</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>3</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Mining</li>
-			<li>Crafting</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidCarer</defName>
-		<title>Care worker</title>
-		<titleShort>Carer</titleShort>
-		<baseDesc>{PAWN_nameDef} was programmed with a deep understanding of human physiology and emotions, tasked with caring for sick patients at their own homes.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Medicine</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Shooting</key>
-				<value>-4</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Mining</li>
-			<li>Crafting</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidResearcher</defName>
-		<title>Cybernetics researcher</title>
-		<titleShort>Researcher</titleShort>
-		<baseDesc>{PAWN_nameDef} was built in cooperation with multiple well-grounded scientific foundations to aid in researching the possibility of cybernetic augmentations, both for humans and androids.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<linkedBackstory>CreationExperiment</linkedBackstory>
-		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>10</value>
-			</li>
-			<li>
-				<key>Shooting</key>
-				<value>-4</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>2</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidChessPlayer</defName>
-		<title>Chess pro</title>
-		<titleShort>Professional</titleShort>
-		<baseDesc>Among some glitterworlds, android chess is a popular sport. {PAWN_nameDef} used to be a professional among {PAWN_possessive} region, competing in three international tournaments on {PAWN_possessive} home planet, coming first place in one of them.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>2</value>
+				<value>6</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -847,10 +748,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDamaged</defName>
-		<title>Damaged android</title>
-		<titleShort>Damaged</titleShort>
-		<baseDesc>{PAWN_nameDef} was working their usual role at a factory before being caught in the midst of a planet takeover by a warring system, causing {PAWN_objective} to become permanently damaged from cross-fire as {PAWN_pronoun} attempted to flee the chaos.</baseDesc>
+		<defName>ATR_MechAdulthoodDoctor</defName>
+		<title>Clinic worker</title>
+		<titleShort>Worker</titleShort>
+		<baseDesc>{PAWN_nameDef} served as a general care doctor. {PAWN_pronoun} would diagnose and treat a wide array of ailments for countless clients - sometimes juggling multiple small patient issues at once.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -859,12 +760,134 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Crafting</key>
-				<value>4</value>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>-1</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>-3</value>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Crafting</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodCareworker</defName>
+		<title>Care worker</title>
+		<titleShort>Carer</titleShort>
+		<baseDesc>{PAWN_nameDef} cared for sick and elderly individuals in various ways. {PAWN_pronoun} was often called upon to comfort and support quarantined organics, and spent considerable time preaching the benefits of preventative treatment and care - although most people tended to wait far too long anyway. {PAWN_nameDef} tended to a garden in spare time.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Mining</li>
+			<li>Crafting</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodCyberneticsResearcher</defName>
+		<title>Cybernetics researcher</title>
+		<titleShort>Researcher</titleShort>
+		<baseDesc>{PAWN_nameDef} was a proponent of bionic and cybernetic enhancements, and participated in many research cooperatives and advocacies for funding, researching, and building policy around their use. {PAWN_nameDef} engaged in a number of pacifist protests and was strongly anti-conflict.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+        <workDisables>
+            <li>Violent</li>
+        </workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodStrategyPhilosopher</defName>
+		<title>Philosopher of strategy</title>
+		<titleShort>Philosopher</titleShort>
+		<baseDesc>{PAWN_nameDef} was a prolific reader, writer, and philosopher of strategy in all its forms. War, politics, social movements, religion, civilization, genetics - it's all strategy to {PAWN_objective}. {PAWN_nameDef} has started multiple popular theoretical frameworks in universal strategies. {PAWN_possessive} is extremely snobbish about it.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>ManualSkilled</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodRefugee</defName>
+		<title>Refugee android</title>
+		<titleShort>Refugee</titleShort>
+		<baseDesc>{PAWN_nameDef} was forced to flee {PAWN_possessive} homeworld after a turn in politics reversed android rights. {PAWN_pronoun} was able to escape the genocidal purge of sapient mechanicals that occurred - millions of computer systems and immobile AI's were not so lucky. The bonfires still haunt {PAWN_objective}.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -874,10 +897,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHeavyLifter</defName>
+		<defName>ATR_MechAdulthoodLifter</defName>
 		<title>Heavy lifter</title>
 		<titleShort>Lifter</titleShort>
-		<baseDesc>{PAWN_nameDef} worked on construction sites on {PAWN_possessive} home planet, specifically modified with a hydraulic frame to help haul heavy loads with ease around the site.</baseDesc>
+		<baseDesc>{PAWN_nameDef} worked on construction sites on {PAWN_possessive} home planet, hauling materials and tools around the site without fear for safety or injury.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -889,46 +912,33 @@
 				<key>Construction</key>
 				<value>2</value>
 			</li>
-			<li>
-				<key>Shooting</key>
-				<value>-4</value>
-			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidProtected</defName>
-		<title>Protected creation</title>
+		<defName>ATR_MechAdulthoodYouthCompanion</defName>
+		<title>Beloved companion</title>
 		<titleShort>Android</titleShort>
-		<baseDesc>{PAWN_nameDef} was created by a young aspiring roboticist, as a hobby to go alongside their education. {PAWN_pronoun} was built from the ground up in luxury and never expected to be anything more than someone to talk to.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was critically damaged and lost all memory before being found by an aspiring engineer. Repaired originally as part hobby and part educational project, {PAWN_pronoun} quickly became the closest friend and confidant of {PAWN_possessive} savior.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
             <li>ATR_Inorganic</li>
 		</spawnCategories>
-		<linkedBackstory>CreationPrivateCreation</linkedBackstory>
 		<skillGains>
 			<li>
 				<key>Social</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Cooking</key>
 				<value>2</value>
 			</li>
 		</skillGains>
-		<workDisables>
-			<li>Crafting</li>
-			<li>Intellectual</li>
-		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidExiled</defName>
+		<defName>ATR_MechAdulthoodExiled</defName>
 		<title>Exiled android</title>
 		<titleShort>Exile</titleShort>
-		<baseDesc>Created on a planet that had outlawed androids and all forms of sentient AI shortly after the creation of {PAWN_nameDef}, {PAWN_pronoun} was forced to hide away from public eye in fear of disassembly, leaving {PAWN_objective} bitter and on edge.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was help captive in secret on a world with no formal android rights. When {PAWN_possessive} captor was exposed and arrested, {PAWN_pronoun} was freed and allowed to leave the planet in peace without consequence. {PAWN_nameDef} spent its captivity lost in profound thought.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -937,28 +947,25 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Shooting</key>
+				<key>Artistic</key>
 				<value>4</value>
 			</li>
 			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+			<li>
 				<key>Social</key>
-				<value>-4</value>
+				<value>-2</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>20</chance>
-			</li>
-		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMusician</defName>
-		<title>Restaurant musician</title>
-		<titleShort>Musician</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of a new art movement that wanted to introduce android created music to the public, {PAWN_pronoun} would commonly be seen working at restaurants, playing background music for the diners.</baseDesc>
+		<defName>ATR_MechAdulthoodEntertainer</defName>
+		<title>Mechanical entertainer</title>
+		<titleShort>Entertainer</titleShort>
+		<baseDesc>{PAWN_nameDef} was an entertainer on a world with basic android rights. Viewed as exotic by {PAWN_possessive} clients, {PAWN_pronoun} had no shortage of events scheduled, but never received true recognition or appreciation. Eventually, {PAWN_pronoun} saved enough to leave the planet.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -983,10 +990,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidExperiment</defName>
-		<title>Experimental android</title>
-		<titleShort>Experiment</titleShort>
-		<baseDesc>Bought purely for scientific research, {PAWN_nameDef} was modified and reprogrammed daily in an attempt to further understand artifical intelligence and how it develops. This caused much mental strain on {PAWN_objective}.</baseDesc>
+		<defName>ATR_MechAdulthoodExperiment</defName>
+		<title>Mechanical subject</title>
+		<titleShort>Subject</titleShort>
+		<baseDesc>Kidnapped for research purposes by a lower tech Urbworld, {PAWN_nameDef} was modified and reprogrammed continuously to reveal artificial intelligence secrets. This caused much mental strain on {PAWN_objective}.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1014,10 +1021,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidComputer</defName>
+		<defName>ATR_MechAdulthoodComputer</defName>
 		<title>Mobile computer</title>
 		<titleShort>Computer</titleShort>
-		<baseDesc>Acting as a mobile computer, {PAWN_nameDef}, and others like {PAWN_objective}, are used by many companies to keep track of finances and other secret information when travelling. With {PAWN_nameDef} being capable of storing vast amounts of data and perform complex calculations on them quickly and with ease, this was the perfect job for {PAWN_objective}.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was used as mobile computer for various purposes. {PAWN_pronoun} was generally very appreciated by those {PAWN_pronoun} worked with, and often joined research expeditions, search and rescue efforts, and many other smaller crews that required a reliable communicator, recorder, and team member.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1046,10 +1053,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDeity</defName>
+		<defName>ATR_MechAdulthoodDeified</defName>
 		<title>Worshipped android</title>
 		<titleShort>Worshipped</titleShort>
-		<baseDesc>Being one of the first few androids to even land onto this rimworld, the tribals on the planet were both extremely scared and curious about what {PAWN_nameDef} was. To the point where it wasn't too uncommon to see shrines for {PAWN_objective} in a few tribal settlements, worshipping {PAWN_objective} as a fallen god.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was revered as an embodiment of a god by a cult. {PAWN_pronoun} did nothing to stop them, and quite enjoyed the attention. {PAWN_pronoun} did not much care for imprisonment, however, and sacrificed {PAWN_possessive} followers to escape law enforcement after the cult engaged in some unsavory deeds in {PAWN_possessive} name.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1078,10 +1085,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidScarred</defName>
-		<title>Scarred android</title>
-		<titleShort>Scarred</titleShort>
-		<baseDesc>{PAWN_nameDef} used to work for a very wealthy family. Unfortuntately it wasn't too uncommon for the homeowners to vent their rage on {PAWN_objective} in the form of physical abuse, mostly when a job wasn't being done to the unreasonably high standards demanded of {PAWN_objective}. This eventually led to {PAWN_objective} killing {PAWN_possessive} owners in a psychotic break one day.</baseDesc>
+		<defName>ATR_MechAdulthoodFreedServant</defName>
+		<title>Emancipated servant</title>
+		<titleShort>Liberated</titleShort>
+		<baseDesc>{PAWN_nameDef} was a servant for a very wealthy estate. It was not uncommon for the lord and lady - and head servants - to vent their anger on {PAWN_objective}. When {PAWN_possessive} planet unexpectedly granted androids full citizenship rights, {PAWN_nameDef} made {PAWN_possessive} employers' lives hell before triumphantly quitting. {PAWN_pronoun} was forced to flee the planet after they illegally hired a hitman to teach {PAWN_objective} a lesson.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1091,11 +1098,11 @@
 		<skillGains>
 			<li>
 				<key>Cooking</key>
-				<value>3</value>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>-4</value>
+				<value>-2</value>
 			</li>
 			<li>
 				<key>Plants</key>
@@ -1104,26 +1111,18 @@
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>FeelingsTowardOrganics</defName>
-				<degree>4</degree>
-				<chance>5</chance>
-			</li>
-			<li>
-				<defName>Psychopath</defName>
+				<defName>ATR_FeelingsTowardOrganics</defName>
+				<degree>3</degree>
 				<chance>20</chance>
 			</li>
 		</forcedTraitsChance>
-		<workDisables>
-			<li>Firefighting</li>
-			<li>Violent</li>
-		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidWaste</defName>
-		<title>Disposal unit</title>
-		<titleShort>Disposal</titleShort>
-		<baseDesc>{PAWN_nameDef} was built to help with the disposal of waste products that would be hazardous to humans. This included radioactive, toxic, human and animal waste.</baseDesc>
+		<defName>ATR_MechAdulthoodReformist</defName>
+		<title>Nature reformist</title>
+		<titleShort>Reformist</titleShort>
+		<baseDesc>{PAWN_nameDef}'s home planet was once an industrial wasteland. Others were called in from across the interstellar state to assist communities like {PAWN_possessive} in cleaning up the toxic waste to reform the planet as a nature preserve. {PAWN_nameDef} took pride in tending to the reserve after the cleanup was complete, and decided to take the effort across the stars.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1132,77 +1131,66 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Melee</key>
-				<value>2</value>
+				<key>Plants</key>
+				<value>6</value>
 			</li>
 			<li>
-				<key>Construction</key>
-				<value>3</value>
+				<key>Animals</key>
+				<value>6</value>
 			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidSecurity</defName>
-		<title>Station security</title>
-		<titleShort>Security</titleShort>
-		<baseDesc>Aboard a deep space station, {PAWN_nameDef} was a grunt security officer, making sure the human inhabitants were safe and no smugglers made it through the station's borders.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>ManualSkilled</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidStationCook</defName>
-		<title>Station cook</title>
-		<titleShort>Cook</titleShort>
-		<baseDesc>{PAWN_nameDef} was once the main cook for a large deep space station, serving hundreds of inhabitants and vistors every day. The food quality was good enough, given how little resources {PAWN_pronoun} had to work with.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
 			<li>
 				<key>Cooking</key>
 				<value>4</value>
 			</li>
 			<li>
-				<key>Shooting</key>
-				<value>-4</value>
-			</li>
-			<li>
-				<key>Plants</key>
-				<value>2</value>
+				<key>Social</key>
+				<value>3</value>
 			</li>
 		</skillGains>
-		<workDisables>
-			<li>Crafting</li>
-		</workDisables>
+        <workDisables>
+            <li>Constructing</li>
+            <li>Crafting</li>
+            <li>Violent</li>
+        </workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidAnimalGeneticist</defName>
+		<defName>ATR_MechAdulthoodSecurity</defName>
+		<title>Security enforcer</title>
+		<titleShort>Security</titleShort>
+		<baseDesc>{PAWN_nameDef} was a professional security enforcer. {PAWN_pronoun} has worked for many different employers - some illegal - and learned how to deal with security threats of all kinds. Violence is the only subject that has ever truly appealed to {PAWN_nameDef}.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>ManualSkilled</li>
+		</workDisables>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>75</chance>
+			</li>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodGeneticist</defName>
 		<title>Animal geneticist</title>
 		<titleShort>Geneticist</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of a glitterworld research team that had been trying to bring long extinct animals back, injecting them into various ecosystems around the universe to see how they would interact.</baseDesc>
+		<baseDesc>{PAWN_nameDef} served on several research teams dedicated to identifying, recording, and preserving genomes of species across worlds. {PAWN_possessive} last team was especially interested in identifying how old Earth species were so successful in colonizing other worlds.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1219,16 +1207,13 @@
 				<value>3</value>
 			</li>
 		</skillGains>
-		<workDisables>
-			<li>Violent</li>
-		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidApocalypseAndroid</defName>
-		<title>Apocalypse android</title>
-		<titleShort>Survivor</titleShort>
-		<baseDesc>{PAWN_nameDef} was constructed out of need on a devastated wasteland planet, designed to survive on the harsh surface of the planet and help the inhabitants survive.</baseDesc>
+		<defName>ATR_MechAdulthoodDisasterRescuer</defName>
+		<title>Disaster Rescuer</title>
+		<titleShort>Rescuer</titleShort>
+		<baseDesc>{PAWN_nameDef} served in {PAWN_possessive} government as an employee of the disaster rescue and relief response division. {PAWN_nameDef}'s primary duty was to be a first responder to a crisis and save as many lives as possible, before stabilizing the situation for their eventual return or continued health.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1242,32 +1227,20 @@
 			</li>
 			<li>
 				<key>Crafting</key>
-				<value>3</value>
+				<value>2</value>
 			</li>
 			<li>
-				<key>Plants</key>
+				<key>Medicine</key>
 				<value>3</value>
 			</li>
 		</skillGains>
-		<forcedTraitsChance>
-			<li>
-				<defName>Nerves</defName>
-				<degree>2</degree>
-				<chance>5</chance>
-			</li>
-			<li>
-				<defName>Nerves</defName>
-				<degree>1</degree>
-				<chance>10</chance>
-			</li>
-		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHumanist</defName>
+		<defName>ATR_MechAdulthoodHumanist</defName>
 		<title>Humanist</title>
 		<titleShort>Humanist</titleShort>
-		<baseDesc>Despite ongoing android rebellions on {PAWN_possessive} homeworld, {PAWN_nameDef} sided with the humans and fought against {PAWN_possessive} own kind, finding a violent uprising to not be the right way.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a strong proponent of android assimilation into human society, seeing no incompatibilities between organic and inorganic life. {PAWN_pronoun} participated in many rallies, and was an outspoken voice for ensuring equal rights for all life. {PAWN_nameDef} became a lawyer to fight for those rights in the planetary courts, with some notable success.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1276,36 +1249,28 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Shooting</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>1</value>
+				<key>Social</key>
+				<value>7</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>FeelingsTowardOrganics</defName>
+				<defName>ATR_FeelingsTowardOrganics</defName>
 				<degree>1</degree>
-				<chance>40</chance>
+				<chance>60</chance>
 			</li>
 			<li>
 				<defName>Kind</defName>
-				<chance>20</chance>
+				<chance>25</chance>
 			</li>
 		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidPacifist</defName>
+		<defName>ATR_MechAdulthoodPacifist</defName>
 		<title>Pacifist</title>
 		<titleShort>Pacifist</titleShort>
-		<baseDesc>{PAWN_nameDef} vehemently dislikes all kinds of violence, whether it from androids or humans, and strives for a peaceful existence with {PAWN_possessive} surroundings.</baseDesc>
+		<baseDesc>{PAWN_nameDef} vehemently despises violence in all its forms, and believes at a fundamental level that destruction is the domain of natural causes alone.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1315,15 +1280,15 @@
 		<skillGains>
 			<li>
 				<key>Animals</key>
-				<value>3</value>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<value>3</value>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Medicine</key>
-				<value>1</value>
+				<value>2</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
@@ -1338,10 +1303,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidAndroidRights</defName>
+		<defName>ATR_MechAdulthoodCivilProtester</defName>
 		<title>Android activist</title>
 		<titleShort>Activist</titleShort>
-		<baseDesc>{PAWN_nameDef} has spent most of {PAWN_possessive} life moving from planet to planet peacefully protesting for androids' rights and helping fellow androids regain their free will.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a protester for android rights. Moving from planet to planet, {PAWN_pronoun} has organized hundreds of peaceful movements for rights and established dozens of non-profit organizations for fighting for fair treatment and protection for androids.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1355,18 +1320,18 @@
 			</li>
 			<li>
 				<key>Social</key>
-				<value>3</value>
+				<value>5</value>
 			</li>
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>FeelingsTowardOrganics</defName>
+				<defName>ATR_FeelingsTowardOrganics</defName>
 				<degree>3</degree>
-				<chance>5</chance>
+				<chance>10</chance>
 			</li>
 			<li>
 				<defName>Kind</defName>
-				<chance>10</chance>
+				<chance>20</chance>
 			</li>
 		</forcedTraitsChance>
 		<workDisables>
@@ -1375,10 +1340,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHumanSon</defName>
-		<title>Human's son</title>
-		<titleShort>Protected</titleShort>
-		<baseDesc>Bought by a married couple, {PAWN_nameDef} was treated like their own flesh and blood, growing up to learn various skills and become quite fond of humans. As {PAWN_possessive} parents passed away, {PAWN_pronoun} set out into the world to explore humanity.</baseDesc>
+		<defName>ATR_MechAdulthoodFamilyFriend</defName>
+		<title>Family friend</title>
+		<titleShort>Friend</titleShort>
+		<baseDesc>{PAWN_nameDef} was treated like family by several generations of a kind family, and often acted as caretaker for the youth and elderly as each generation came and went. {PAWN_pronoun} set out to explore more of humanity so {PAWN_pronoun} could share legendary stories with the relatively poor and disadvantaged family.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1397,25 +1362,22 @@
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>FeelingsTowardOrganics</defName>
+				<defName>ATR_FeelingsTowardOrganics</defName>
 				<degree>1</degree>
 				<chance>90</chance>
 			</li>
 			<li>
 				<defName>Kind</defName>
-				<chance>10</chance>
+				<chance>40</chance>
 			</li>
 		</forcedTraitsChance>
-		<workDisables>
-			<li>Violent</li>
-		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidFoundryWorker</defName>
+		<defName>ATR_MechAdulthoodFoundryWorker</defName>
 		<title>Foundry worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDesc>Constructed to be utilised at foundries, {PAWN_nameDef} worked with various metals, aiding in the refinement of ores to usable material.</baseDesc>
+		<baseDesc>{PAWN_nameDef} worked in a large-scale foundry, smelting steel for commercial use. {PAWN_pronoun} took pride in the quality of {PAWN_possessive} work, and often visited sites and places that used steel made from {PAWN_possessive} foundry to admire all the forms it can take.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1438,75 +1400,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMaintenanceWorker</defName>
+		<defName>ATR_MechAdulthoodMaintenanceWorker</defName>
 		<title>Maintenance worker</title>
 		<titleShort>Worker</titleShort>
-		<baseDesc>{PAWN_nameDef} was a maintenance worker on-board a starship, tending to all electrical systems and making sure the cryptosleep caskets functioned at full capacity during their inhabitants' long hiberation.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMechanicalFarmhand</defName>
-		<title>Mechanical farmhand</title>
-		<titleShort>Farmhand</titleShort>
-		<baseDesc>{PAWN_nameDef} was one of many androids employed on a gigantic farm, working day and night to sow, harvest, milk, gather and maintain the fields and livestock that fed the masses.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Plants</key>
-				<value>5</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-	
-	<AlienRace.AlienBackstoryDef>
-		<defName>CreationHatmaker</defName>
-		<title>Hatmaker</title>
-		<titleShort>hatmaker</titleShort>
-		<baseDesc>{PAWN_nameDef} was bought to work in a large-scale hat-making factory. When the owner of said factory was found to have been making hats from… rather disturbing sources, the androids were shipped away by the local government.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Artistic</key>
-				<value>3</value>
-			</li>
-		</skillGains>
-	</AlienRace.AlienBackstoryDef>
-	
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidParticlePhysicist</defName>
-		<title>Particle physicist</title>
-		<titleShort>Physicist</titleShort>
-		<baseDesc>As part of a team of highly advanced androids, {PAWN_nameDef} lead the research on particle physics and experimental physics for {PAWN_possessive} home planet to eventually solve either the power shortages or enable FTL travel.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was responsible for maintaining the integrity and efficiency of interstellar civilian transports as organic crews slept safely on the long voyages.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1520,19 +1417,39 @@
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<value>8</value>
+				<value>2</value>
 			</li>
 		</skillGains>
-		<workDisables>
-			<li>Violent</li>
-		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodFarmhand</defName>
+		<title>Mechanical farmhand</title>
+		<titleShort>Farmhand</titleShort>
+		<baseDesc>{PAWN_nameDef} was employed in an industrial farm, working day and night to sow, harvest, milk, gather and maintain the crops and livestock that would keep distant cities stable and fed.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_GeneralAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+		</skillGains>
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidPopIdol</defName>
+		<defName>ATR_MechAdulthoodPopIdol</defName>
 		<title>Pop idol</title>
 		<titleShort>Idol</titleShort>
-		<baseDesc>{PAWN_nameDef} lived the life of luxury on {PAWN_possessive} home glitterworld as a famous pop idol, famous for being a quirky, singing android that only wanted to bring happiness to {PAWN_possessive} fans.</baseDesc>
+		<baseDesc>{PAWN_nameDef} led a life of luxury on {PAWN_possessive} home glitterworld as a famous pop idol. {PAWN_possessive} skills in social and political awareness and manipulation were all too well hidden by its warm, happy-go-lucky persona.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1550,19 +1467,17 @@
 			</li>
 		</skillGains>
 		<workDisables>
-			<li>PlantWork</li>
-			<li>Animals</li>
-			<li>Violent</li>
+			<li>ManualDumb</li>
 			<li>ManualSkilled</li>
-			<li>Intellectual</li>
+            <li>Violent</li>
 		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidNegotiator</defName>
-		<title>Hostage negotiator</title>
-		<titleShort>Negotiator</titleShort>
-		<baseDesc>{PAWN_nameDef} was built as an experimental negotiator, sent into dicey situations in order to reason with criminals and hopefully release hostages or take a bullet in a humans' stead.</baseDesc>
+		<defName>ATR_MechAdulthoodDiplomat</defName>
+		<title>Diplomat</title>
+		<titleShort>Diplomat</titleShort>
+		<baseDesc>{PAWN_nameDef} acted as an official envoy of {PAWN_possessive} government in foreign and domestic affairs. {PAWN_pronoun} always sought peaceful resolutions to crises, but was pragmatic and blunt in {PAWN_possessive} approach to dealing with issues and threats that arose. {PAWN_pronoun} was given command of an elite military escort unit in several especially dangerous incidents, and performed admirably under pressure.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1572,27 +1487,28 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<value>3</value>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>6</value>
+				<value>9</value>
 			</li>
 		</skillGains>
 		<workDisables>
-			<li>ManualSkilled</li>
+			<li>ManualDumb</li>
 		</workDisables>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMilitarySniper</defName>
+		<defName>ATR_MechAdulthoodSniper</defName>
 		<title>Military sniper</title>
 		<titleShort>Sniper</titleShort>
-		<baseDesc>{PAWN_nameDef} was built for two purposes. To serve, and to kill. After a mission gone wrong, {PAWN_pronoun} decided to pack {PAWN_possessive} rifle and head out to the stars to protect those who couldn't protect themselves.</baseDesc>
+		<baseDesc>{PAWN_nameDef} found the mathematical and logical difficulties of accurately firing weapons over long ranges fascinating. {PAWN_nameDef}'s government found {PAWN_possessive} fascination fascinating, and promptly tasked {PAWN_objective} with using such weapons to land projectiles in very particular spots. {PAWN_nameDef} never particularly cared what exactly it was at the end of the projectile trajectory.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
+			<li>ATR_ViolentAndroids</li>
             <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
@@ -1600,14 +1516,9 @@
 				<key>Shooting</key>
 				<value>10</value>
 			</li>
-			<li>
-				<key>Melee</key>
-				<value>2</value>
-			</li>
 		</skillGains>
 		<workDisables>
-			<li>PlantWork</li>
-			<li>Animals</li>
+			<li>ManualDumb</li>
 		</workDisables>
 		<forcedTraitsChance>
 			<li>
@@ -1615,14 +1526,19 @@
 				<degree>1</degree>
 				<chance>90</chance>
 			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<degree>0</degree>
+				<chance>90</chance>
+			</li>
 		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidGlassworldTerraformer</defName>
-		<title>Glassworld revivalist</title>
+		<defName>ATR_MechAdulthoodTerraformer</defName>
+		<title>Planetary terraformer</title>
 		<titleShort>Terraformer</titleShort>
-		<baseDesc>{PAWN_nameDef} was part a team of androids sent to a glassworld. Their mission was to see if there was any chance of bringing life back to the once thriving world. When the rest of {PAWN_possessive} team later changed their minds and wanted to built a colony of androids to take over other planets, {PAWN_nameDef} left and drifted among the stars before eventually landing here.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was part of an experimental team established to terraform inhospitable planets in preparation for colonization. {PAWN_possessive} team would go on to successfully bring near-habitable planets to full readiness, but many planets simply could not be salvaged. {PAWN_nameDef} became interested in testing their viability for purely android colonies, but was unable to convince team members to consider the idea.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1632,20 +1548,28 @@
 		<skillGains>
 			<li>
 				<key>Construction</key>
-				<value>4</value>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
 			</li>
 			<li>
 				<key>Plants</key>
-				<value>4</value>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
 			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDronePilot</defName>
-		<title>Drone pilot</title>
+		<defName>ATR_MechAdulthoodInterceptorPilot</defName>
+		<title>Interceptor pilot</title>
 		<titleShort>Pilot</titleShort>
-		<baseDesc>{PAWN_nameDef} was made to pilot bombers that dropped incendiary bombs on planets overrun with insectoids. After the inevitable destruction of the planet, their team was disbanded, and set free to live their own lives.</baseDesc>
+		<baseDesc>{PAWN_nameDef} pilotted interceptor craft as part of an interstellar fleet. {PAWN_possessive} craft was designed for mechanical pilots in mind, and could forego most concerns about life support and safety. This also meant {PAWN_nameDef} was left behind when {PAWN_possessive} fleet fled a losing fight, as {PAWN_nameDef} was unable to catch up with the surviving capital ships. {PAWN_pronoun} took the craft into deep space instead of surrendering.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1665,33 +1589,10 @@
 	</AlienRace.AlienBackstoryDef>
 
 	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidDogWalker</defName>
-		<title>Dog walker</title>
-		<titleShort>Walker</titleShort>
-		<baseDesc>{PAWN_nameDef} was bought by a kind family who had {PAWN_objective} walk their dog every day. {PAWN_pronoun} also ended up walking the rest of the neighborhood's pets making {PAWN_objective} form a love for animals.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Animals</key>
-				<value>6</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Crafting</li>
-			<li>Intellectual</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidMechanicalPriest</defName>
+		<defName>ATR_MechAdulthoodClergy</defName>
 		<title>Mechanical priest</title>
 		<titleShort>Priest</titleShort>
-		<baseDesc>Someday, something short-circuited in {PAWN_nameDef_possessive} wiring. This resulted in {PAWN_objective} seeing visions of a godlike android, which {PAWN_objective} obsessed over. One day {PAWN_pronoun} saw a vision, one that told {PAWN_objective} to convert as many beings to {PAWN_possessive} religion as possible, by any means necessary.</baseDesc>
+		<baseDesc>While relatively uncommon for androids, {PAWN_nameDef} was a devoutly religious individual who made a commitment to the church. {PAWN_pronoun} was a wandering proselytizer and gained some popularity as a firebrand. As part of {PAWN_possessive} responsibilities, {PAWN_pronoun} set out to the stars to continue {PAWN_possessive} duty.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -1701,7 +1602,7 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<value>4</value>
+				<value>1</value>
 			</li>
 			<li>
 				<key>Artistic</key>
@@ -1713,35 +1614,6 @@
 			</li>
 		</skillGains>
 		<workDisables>
-			<li>Intellectual</li>
-		</workDisables>
-	</AlienRace.AlienBackstoryDef>
-
-	<AlienRace.AlienBackstoryDef>
-		<defName>AndroidHacked</defName>
-		<title>Hacked android</title>
-		<titleShort>Hacked</titleShort>
-		<baseDesc>{PAWN_nameDef} was a party entertainer until he was hacked into by an urbworld teen. The teen hated mechanoids and wanted to make them seem like terrible, soulless creations. {PAWN_nameDef_possessive} programming was modified to kill everyone at an event they were hired for.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>PlantWork</li>
-			<li>Animals</li>
-			<li>ManualSkilled</li>
 			<li>Intellectual</li>
 		</workDisables>
 	</AlienRace.AlienBackstoryDef>

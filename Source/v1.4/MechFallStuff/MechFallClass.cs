@@ -47,7 +47,7 @@ namespace ATReforged
 
         public void SpawnPawn()
         {
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.M7MechPawn, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
+            PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_M7MechPawn, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
             Pawn pawn = PawnGenerator.GeneratePawn(request);
             FilthMaker.TryMakeFilth(Position, Map, RimWorld.ThingDefOf.Filth_RubbleBuilding, 30);
 
@@ -55,9 +55,9 @@ namespace ATReforged
             if (Rand.Chance(0.05f))
             {
                 pawn.SetFactionDirect(Faction.OfAncientsHostile);
-                pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
+                pawn.mindState.mentalStateHandler.TryStartMentalState(ATR_MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
 
-                Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_RemainingCharge, pawn, null);
+                Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_RemainingCharge, pawn, null);
                 hediff.Severity = 1f;
                 pawn.health.AddHediff(hediff, null, null);
             }

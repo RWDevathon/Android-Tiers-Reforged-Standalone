@@ -15,8 +15,8 @@
 		</statBases>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<race>
-			<fleshType>AndroidTier</fleshType>
-			<bloodDef>CoolantAndroidTier</bloodDef>
+			<fleshType>ATR_AndroidTier</fleshType>
+			<bloodDef>ATR_CoolantAndroidTier</bloodDef>
 			<hasGenders>false</hasGenders>
             <packAnimal>false</packAnimal>
 			<herdAnimal>false</herdAnimal>
@@ -31,7 +31,7 @@
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 			<!-- <needsRest>false</needsRest> All mechanical pawns don't need rest via C# Run-time patching -->
 			<useMeatFrom>Alpaca</useMeatFrom>
-			<leatherDef>Leather_Patch</leatherDef>
+			<leatherDef>Leather_Human</leatherDef>
             <lifeExpectancy>40</lifeExpectancy>
 			<hediffGiverSets>
 				<li>ATR_MechanicalStandard</li>
@@ -53,14 +53,14 @@
 			<li>ATR_RemoveBodyPartAndroid</li>
 			<li>ATR_ShutdownMechanical</li>
             <li>ATR_RestoreBodyPartAndroid</li>
-            <li>InstallPlasteelPlating</li>
-            <li>InstallCompositePlating</li>
-            <li>InstallMobilityFrame</li>
-            <li>InstallMakeshiftReplacementArm</li>
-            <li>InstallMakeshiftReplacementLeg</li>
-            <li>Install_AdvancedLeg</li>
-            <li>Install_AdvancedVisualSensor</li>
-            <li>InstallMakeshiftReplacementArm</li>
+            <li>ATR_Install_PlasteelPlating</li>
+            <li>ATR_Install_CompositePlating</li>
+            <li>ATR_Install_MobilityFrame</li>
+            <li>ATR_Install_MakeshiftReplacementArm</li>
+            <li>ATR_Install_MakeshiftReplacementLeg</li>
+            <li>ATR_Install_AdvancedLeg</li>
+            <li>ATR_Install_AdvancedVisualSensor</li>
+            <li>ATR_Install_MakeshiftReplacementArm</li>
 		</recipes>
 		<modExtensions>
 			<li Class="ATReforged.ATR_MechTweaker">

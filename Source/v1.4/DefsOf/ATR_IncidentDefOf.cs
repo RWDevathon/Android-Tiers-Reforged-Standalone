@@ -3,11 +3,11 @@
 namespace ATReforged
 {
     [DefOf]
-    public static class IncidentDefOf
+    public static class ATR_IncidentDefOf
     {
-        static IncidentDefOf()
+        static ATR_IncidentDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(IncidentDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ATR_IncidentDefOf));
         }
         public static IncidentDef ATR_HackingIncident;
 
