@@ -91,12 +91,11 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>ATR_AndroidT2CollectiveSoldier</defName>		
+        <defName>ATR_AndroidT2CollectiveSoldier</defName>
 		<label>T2 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
         <race>ATR_Tier2Android</race>
         <invNutrition>3.2</invNutrition>
-		<trader>true</trader>
         <combatPower>40</combatPower>
         <minGenerationAge>20</minGenerationAge>
         <gearHealthRange>0.7~2.3</gearHealthRange>
