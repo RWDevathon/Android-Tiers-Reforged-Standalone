@@ -68,7 +68,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(ref bool __result, Pawn ___pawn)
             {
-                if (!__result)
+                if (!__result || !___pawn.RaceProps.Humanlike)
                     return;
 
                 // Dead pawns always try to disconnect from the network. This only actually affects player pawns, as they are the only things actually in the network.

@@ -38,43 +38,43 @@ namespace ATReforged
 
         public static bool IsConsideredMechanical(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanical(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMechanicalAnimal(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalAnimal(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMechanicalAndroid(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalAndroid(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef.defName);
         }
 
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMassive(Pawn pawn)
@@ -84,12 +84,12 @@ namespace ATReforged
 
         public static bool HasSpecialStatus(Pawn pawn)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def);
+            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def.defName);
         }
 
         public static bool HasSpecialStatus(ThingDef thingDef)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef);
+            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef.defName);
         }
 
         public static bool IsSolarFlarePresent()
@@ -100,12 +100,12 @@ namespace ATReforged
         /* === POWER UTILITIES === */
         public static bool CanUseBattery(Pawn pawn)
         {
-            return ATReforged_Settings.canUseBattery.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.TryGetComp<HediffComp_ChargeCapable>() != null);
+            return ATReforged_Settings.canUseBattery.Contains(pawn.def.defName) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.TryGetComp<HediffComp_ChargeCapable>() != null);
         }
 
         public static bool CanUseBattery(ThingDef thingDef)
         {
-            return ATReforged_Settings.canUseBattery.Contains(thingDef);
+            return ATReforged_Settings.canUseBattery.Contains(thingDef.defName);
         }
         
         // Locate the nearest available charging bed for the given pawn user, as carried by the given pawn carrier. Pawns may carry themselves here, if they are not downed.

@@ -26,11 +26,11 @@ namespace ATReforged
             // Settings for debug displays
         
             // Settings for what is considered mechanical and massive
-        public static HashSet<ThingDef> isConsideredMechanicalAnimal;
-        public static HashSet<ThingDef> isConsideredMechanicalAndroid;
-        public static HashSet<ThingDef> isConsideredMechanicalDrone;
-        public static HashSet<ThingDef> isConsideredMechanical;
-        public static HashSet<ThingDef> hasSpecialStatus;
+        public static HashSet<string> isConsideredMechanicalAnimal;
+        public static HashSet<string> isConsideredMechanicalAndroid;
+        public static HashSet<string> isConsideredMechanicalDrone;
+        public static HashSet<string> isConsideredMechanical;
+        public static HashSet<string> hasSpecialStatus;
         
             // Settings for what needs mechanical androids have
         public static bool androidsHaveJoyNeed;
@@ -44,7 +44,7 @@ namespace ATReforged
         public static float chargeCapableBioEfficiency;
         public static float batteryChargeRate;
 
-        public static HashSet<ThingDef> canUseBattery;
+        public static HashSet<string> canUseBattery;
 
         // SECURITY SETTINGS
             // Settings for Enemy hacks
@@ -106,17 +106,17 @@ namespace ATReforged
         public void StartupChecks()
         {
             if (isConsideredMechanicalAndroid == null)
-                isConsideredMechanicalAndroid = new HashSet<ThingDef>();
+                isConsideredMechanicalAndroid = new HashSet<string>();
             if (isConsideredMechanicalDrone == null)
-                isConsideredMechanicalDrone = new HashSet<ThingDef>();
+                isConsideredMechanicalDrone = new HashSet<string>();
             if (isConsideredMechanicalAnimal == null)
-                isConsideredMechanicalAnimal = new HashSet<ThingDef>();
+                isConsideredMechanicalAnimal = new HashSet<string>();
             if (isConsideredMechanical == null)
-                isConsideredMechanical = new HashSet<ThingDef>();
+                isConsideredMechanical = new HashSet<string>();
             if (hasSpecialStatus == null)
-                hasSpecialStatus = new HashSet<ThingDef>();
+                hasSpecialStatus = new HashSet<string>();
             if (canUseBattery == null)
-                canUseBattery = new HashSet<ThingDef>();
+                canUseBattery = new HashSet<string>();
             if (ActivePreset == SettingsPreset.None)
             {
                 settingsEverOpened = false;
@@ -458,32 +458,32 @@ namespace ATReforged
         {
             IEnumerable<ThingDef> validPawns = FilteredGetters.GetValidPawns();
 
-            HashSet<ThingDef> matchingAndroids = new HashSet<ThingDef>();
-            HashSet<ThingDef> matchingDrones = new HashSet<ThingDef>();
-            HashSet<ThingDef> matchingMechanicals = new HashSet<ThingDef>();
-            HashSet<ThingDef> matchingSpecials = new HashSet<ThingDef>();
-            HashSet<ThingDef> matchingChargers = new HashSet<ThingDef>();
+            HashSet<string> matchingAndroids = new HashSet<string>();
+            HashSet<string> matchingDrones = new HashSet<string>();
+            HashSet<string> matchingMechanicals = new HashSet<string>();
+            HashSet<string> matchingSpecials = new HashSet<string>();
+            HashSet<string> matchingChargers = new HashSet<string>();
             foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()))
             {
                 // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension. Or are simply marked as canBeAndroid and not canBeDrone.
-                if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid && (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone))
+                if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone))
                 {
-                    matchingAndroids.Add(validHumanlike);
+                    matchingAndroids.Add(validHumanlike.defName);
                     // A special bool in the mod extension marks this as a special android.
                     if (validHumanlike.GetModExtension<ATR_MechTweaker>().isSpecialMechanical)
-                        matchingSpecials.Add(validHumanlike);
+                        matchingSpecials.Add(validHumanlike.defName);
 
                     // All mechanical humanlikes may charge inherently.
-                    matchingChargers.Add(validHumanlike);
-                    matchingMechanicals.Add(validHumanlike);
+                    matchingChargers.Add(validHumanlike.defName);
+                    matchingMechanicals.Add(validHumanlike.defName);
                 }
                 // Mechanical Drones are humanlikes with global learning factor < 0.5 that have the ModExtension. Or are simply marked as canBeDrone and not canBeAndroid.
-                else if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone && (validHumanlike.statBases?.GetStatValueFromList(RimWorld.StatDefOf.GlobalLearningFactor, 0.5f) < 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid))
+                else if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) < 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid))
                 {
-                    matchingDrones.Add(validHumanlike);
+                    matchingDrones.Add(validHumanlike.defName);
                     // All mechanical humanlikes may charge inherently.
-                    matchingChargers.Add(validHumanlike);
-                    matchingMechanicals.Add(validHumanlike);
+                    matchingChargers.Add(validHumanlike.defName);
+                    matchingMechanicals.Add(validHumanlike.defName);
                 }
                 else
                 {
@@ -491,15 +491,17 @@ namespace ATReforged
                 }
             }
             // Mechanical animals are animals that have the ModExtension
-            HashSet<ThingDef> matchingAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()).ToHashSet();
+            HashSet<ThingDef> validAnimals = FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Animal).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()).ToHashSet();
+            HashSet<string> matchingAnimals = new HashSet<string>();
 
             // Mechanical animals of advanced intelligence may charge.
-            foreach (ThingDef validAnimal in matchingAnimals)
+            foreach (ThingDef validAnimal in validAnimals)
             {
-                matchingMechanicals.Add(validAnimal);
+                matchingAnimals.Add(validAnimal.defName);
+                matchingMechanicals.Add(validAnimal.defName);
                 // Advanced mechanical animals may charge.
                 if (validAnimal.race.trainability == TrainabilityDefOf.Advanced)
-                    matchingChargers.Add(validAnimal);
+                    matchingChargers.Add(validAnimal.defName);
             }
 
             isConsideredMechanicalAndroid = matchingAndroids;

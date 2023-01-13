@@ -15,6 +15,12 @@ namespace ATReforged
             return pregenedValidPawns;
         }
 
+        // Returns an IEnumerable<ThingDef> containing all ThingDefs for the provided IEnumerable<string> defNames
+        public static IEnumerable<ThingDef> GetThingDefsFromDefNames(HashSet<string> defNames)
+        {
+            return DefDatabase<ThingDef>.AllDefsListForReading.Where(thingDef => defNames.Contains(thingDef.defName));
+        }
+
         // Searches through all ThingDefs to identify all Pawns valid for this mod's needs, even from other mods.
         public static IEnumerable<ThingDef> AllValidPawnDefs()
         { 
