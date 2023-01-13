@@ -140,6 +140,9 @@
 		<pawnSingular>android</pawnSingular>
 		<pawnsPlural>androids</pawnsPlural>
         <categoryTag>ATR_GeneralAndroids</categoryTag>
+        <fixedLeaderKinds>
+            <li>ATR_AndroidT4CollectiveLeader</li>
+        </fixedLeaderKinds>
 		<settlementGenerationWeight>0.4</settlementGenerationWeight>
         <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<listOrderPriority>35</listOrderPriority>
