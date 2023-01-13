@@ -47,7 +47,6 @@ Android Tiers itself is a mod that intends to add mechanical colonists, animals,
 - Prepare Carefully has an annoying tendency to break various features of alien races, has serious performance issues, and can seriously damage the functionality of Hediffs and other mechanics. Use Character Editor instead if you need a pawn editor.
 
 ## Links
-
 [Discord](https://discord.gg/qVJzeB8)
 
 [GitHub](https://github.com/RWDevathon/Android-Tiers-Reforged)
@@ -58,6 +57,7 @@ Special thanks to:
 * FG_Remastered - PR overlord, diplomat, integral supporter
 * lazycooken - Jumpstarter and eager supporter
 * Winterbloom - Graphic and xml supporter
+* JGH - Donated graphics for simplified buildings
 * Android Tiers Discord - The endless whirlpool of ideas, assistance, and the home domain
 * RimWorld Mod Development Discord - Incredible amounts of support and assistance
 

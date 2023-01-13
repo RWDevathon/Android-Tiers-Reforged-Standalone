@@ -535,17 +535,11 @@ namespace ATReforged
             // Considerations
             try
             {
-                Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Def);
-                Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Def);
-                Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Def);
-                Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Def);
-                Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Def);
-
-                isConsideredMechanicalAnimal.RemoveWhere(thingDef => thingDef is null);
-                isConsideredMechanicalAndroid.RemoveWhere(thingDef => thingDef is null);
-                isConsideredMechanicalDrone.RemoveWhere(thingDef => thingDef is null);
-                isConsideredMechanical.RemoveWhere(thingDef => thingDef is null);
-                hasSpecialStatus.RemoveWhere(thingDef => thingDef is null);
+                Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Value);
+                Scribe_Collections.Look(ref isConsideredMechanicalAndroid, "ATR_isConsideredMechanicalAndroid", LookMode.Value);
+                Scribe_Collections.Look(ref isConsideredMechanicalDrone, "ATR_isConsideredMechanicalDrone", LookMode.Value);
+                Scribe_Collections.Look(ref isConsideredMechanical, "ATR_isConsideredMechanical", LookMode.Value);
+                Scribe_Collections.Look(ref hasSpecialStatus, "ATR_hasSpecialStatus", LookMode.Value);
             }
             catch (Exception ex)
             {
@@ -568,8 +562,7 @@ namespace ATReforged
 
             try
             {
-                Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Def);
-                canUseBattery.RemoveWhere(thingDef => thingDef is null);
+                Scribe_Collections.Look(ref canUseBattery, "ATR_canUseBattery", LookMode.Value);
             }
             catch (Exception ex)
             {

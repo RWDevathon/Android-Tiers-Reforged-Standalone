@@ -84,7 +84,7 @@
         <label>bedside charger</label>
         <description>A bedside device that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to and facing the head of the bed.</description>
         <graphicData>
-            <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+            <texPath>Things/Buildings/BedsideCharger/BedsideCharger</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <shadowData>
                 <volume>(0.55, 0.30, 0.40)</volume>
@@ -97,7 +97,7 @@
                 <cornerTR>Damage/Corner</cornerTR>
             </damageData>
         </graphicData>
-        <uiIconScale>0.85</uiIconScale>
+        <uiIconPath>Things/Buildings/BedsideCharger/BedsideCharger_south</uiIconPath>
         <defaultPlacingRot>South</defaultPlacingRot>
         <researchPrerequisites><li>ATR_MechanicalStandardization</li></researchPrerequisites>
         <altitudeLayer>Building</altitudeLayer>

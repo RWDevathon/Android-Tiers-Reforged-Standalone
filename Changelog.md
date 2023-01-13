@@ -111,6 +111,7 @@
 - Performance and compatibility has been improved across the board, with a number of severe memory and performance flaws resolved.
 - Mod settings have been reworked to allow easier locating of individual settings and editing of various variables and mechanics.
     - Gender of androids is now set at their spawn time via mod settings, with default being None.
+- Androids now generally care about the same things humans do, and are treated with equal respect by default.
 - Fractal abominations have been reworked, with several new mechanics and surprises.
 - (Biotech) Genes and Xenotypes have been prevented from appearing on mechanical units.
 - (Biotech) Various children and pregnancy mechanics are prevented from interacting with mechanical units.

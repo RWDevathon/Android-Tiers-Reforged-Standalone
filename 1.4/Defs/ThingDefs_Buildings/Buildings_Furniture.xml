@@ -9,7 +9,7 @@
 			<texPath>Things/Buildings/MechanicBed/MechanicBed</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(1.35,2.1)</drawSize>
+			<drawSize>(1,2)</drawSize>
 		</graphicData>
 		<thingClass>ATReforged.Building_ChargingBed</thingClass>
 		<tickerType>Rare</tickerType>

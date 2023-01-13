@@ -79,7 +79,7 @@
         <graphicData>
             <texPath>Things/Buildings/NetworkTower</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(3,15)</drawSize>
+            <drawSize>(3,18)</drawSize>
         </graphicData>
         <size>(3,3)</size>
         <costList>

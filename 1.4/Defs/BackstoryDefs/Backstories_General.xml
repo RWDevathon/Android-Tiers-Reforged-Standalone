@@ -993,7 +993,7 @@
 		<defName>ATR_MechAdulthoodExperiment</defName>
 		<title>Mechanical subject</title>
 		<titleShort>Subject</titleShort>
-		<baseDesc>Kidnapped for research purposes by a lower tech Urbworld, {PAWN_nameDef} was modified and reprogrammed continuously to reveal artificial intelligence secrets. This caused much mental strain on {PAWN_objective}.</baseDesc>
+		<baseDesc>Kidnapped for research purposes by a lower tech Urbworld, {PAWN_nameDef} was modified and reprogrammed continuously to reveal artificial intelligence secrets.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
