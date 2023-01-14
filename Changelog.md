@@ -133,7 +133,8 @@
 - Skymind Retexture
 - Swarm IED
 - AT enchantment
-- SM7 overhaul
+- ~~M7 overhaul~~
+	- Due to a miscommunication this submod will be added in the next update.
 	- The Mech Blade has been replaced with a pole-axe
 - Shiny Androids 
 
