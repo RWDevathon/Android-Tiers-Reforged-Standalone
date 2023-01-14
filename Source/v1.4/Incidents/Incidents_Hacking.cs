@@ -220,12 +220,12 @@ namespace ATReforged
                 // All pawns get the recovery hediff. Everyone is a victim of DDOS attacks.
                 foreach (Pawn user in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn).Cast<Pawn>())
                 {
-                    user.health.AddHediff(HediffDefOf.RecoveringFromDDOS, user.health.hediffSet.GetBrain());
+                    user.health.AddHediff(ATR_HediffDefOf.ATR_RecoveringFromDDOS, user.health.hediffSet.GetBrain());
                     victims.Add(user);
                 }
                 foreach (Pawn surrogate in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)).Cast<Pawn>())
                 {
-                    surrogate.health.AddHediff(HediffDefOf.RecoveringFromDDOS, surrogate.health.hediffSet.GetBrain());
+                    surrogate.health.AddHediff(ATR_HediffDefOf.ATR_RecoveringFromDDOS, surrogate.health.hediffSet.GetBrain());
                     victims.Add(surrogate);
                 }
                 // Apply a SkyMind mood debuff to all victims of the DDOS attack. Everyone is a victim of DDOS attacks.

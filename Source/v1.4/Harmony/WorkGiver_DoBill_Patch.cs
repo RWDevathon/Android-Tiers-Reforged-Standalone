@@ -55,7 +55,7 @@ namespace ATReforged
                 {
                     __result = null;
                 }
-                else if (__instance.def.workType == WorkTypeDefOf.Mechanic && thing is Pawn unit && !Utils.IsConsideredMechanical(unit))
+                else if (__instance.def.workType == ATR_WorkTypeDefOf.ATR_Mechanic && thing is Pawn unit && !Utils.IsConsideredMechanical(unit))
                 {
                     __result = null;
                 }

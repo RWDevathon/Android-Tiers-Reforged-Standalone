@@ -12,7 +12,7 @@ namespace ATReforged
         { 
 
             BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
-            if (targetBodyPart != null && pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_IsolatedCore).Any())
+            if (targetBodyPart != null && pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == ATR_HediffDefOf.ATR_IsolatedCore).Any())
             {
                 yield return targetBodyPart;
             }
@@ -25,14 +25,14 @@ namespace ATReforged
             base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
 
             // If the pawn still has an isolated core, the operation failed. Also failed if they're dead now.
-            if (pawn.Dead || pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_IsolatedCore) != null)
+            if (pawn.Dead || pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore) != null)
                 return;
 
             // There are special considerations for adding the core (brain) itself. Adding a core makes a new intelligence. Receiver core initializes it as a surrogate. Adding any core removes the "Isolated Core" hediff.
             // Initializing a new android. Create the new intelligence.
-            if (recipe.addsHediff == HediffDefOf.ATR_AutonomousCore)
+            if (recipe.addsHediff == ATR_HediffDefOf.ATR_AutonomousCore)
             {
-                Hediff rebootHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, pawn, null);
+                Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
                 rebootHediff.Severity = 1;
                 pawn.health.AddHediff(rebootHediff);
                 Find.WindowStack.Add(new Dialog_InitializeMind(pawn));
@@ -40,16 +40,16 @@ namespace ATReforged
             // Initializing a surrogate. Ensure surrogate details are initialized properly.
             else
             {
-                pawn.health.AddHediff(HediffDefOf.ATR_NoController);
+                pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
             }
 
             // Remove the isolated core hediff and the reboot hediff (Androids get Long Reboot and Surrogates get nothing). 
-            Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_IsolatedCore);
+            Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore);
             if (target != null)
             {
                 pawn.health.RemoveHediff(target);
             }
-            target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_ShortReboot);
+            target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
             if (target != null)
             {
                 pawn.health.RemoveHediff(target);

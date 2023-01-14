@@ -34,7 +34,7 @@ namespace ATReforged
         public Dialog_InitializeMind(Pawn newIntelligence) : base("ATR_InitializeMindDesc".Translate(), "ATR_SkyMindInitialization".Translate(), null, "ATR_AutomaticInitialization".Translate(), null, "ATR_InitializeMindTitle".Translate(), false)
         {
             // If there is any idle intelligence in the SkyMind, then the new intelligence may download it. This is a standard download action.
-            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate());
+            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate());
             IEnumerable<Thing> networkedPawns = Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.TryGetComp<CompSkyMindLink>()?.HasSurrogate() == false);
             if (cloudPawns.Count() + networkedPawns.Count() > 0 && Utils.gameComp.networkedDevices.Count < Utils.gameComp.GetSkyMindNetworkSlots())
             {
@@ -72,7 +72,7 @@ namespace ATReforged
             {
                 PawnGenerationRequest request = new PawnGenerationRequest(newIntelligence.kindDef, Faction.OfPlayer, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowAddictions: false, fixedBiologicalAge: 30, forceNoIdeo: true, colonistRelationChanceFactor: 0, forceBaselinerChance: 1f);
                 Pawn newPawn = PawnGenerator.GeneratePawn(request);
-                newPawn.story.Childhood = BackstoryDefOf.ATR_NewbootChildhood;
+                newPawn.story.Childhood = ATR_BackstoryDefOf.ATR_NewbootChildhood;
                 Utils.Duplicate(newPawn, newIntelligence, false, false);
             };
             closeOnCancel = false;

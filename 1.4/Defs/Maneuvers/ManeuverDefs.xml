@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <ManeuverDef>
-        <defName>FractalLance</defName>
-        <requiredCapacity>FractalLance</requiredCapacity>
+        <defName>ATR_FractalLance</defName>
+        <requiredCapacity>ATR_FractalLance</requiredCapacity>
         <verb>
             <verbClass>Verb_MeleeAttackDamage</verbClass>
-            <meleeDamageDef>FractalLance</meleeDamageDef>
+            <meleeDamageDef>ATR_FractalLance</meleeDamageDef>
         </verb>
         <logEntryDef>MeleeAttack</logEntryDef>
         <combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>

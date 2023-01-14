@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- Base Cybertech -->
   
     <HediffDef Name="ATR_AddedBodyPartCybertechBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
@@ -88,7 +86,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechArm</defName>
+		<defName>ATR_Install_CybertechArm</defName>
 		<label>Install Cybertech arm</label>
 		<description>Installs an Cybertech arm.</description>
 		<jobString>Installing Cybertech arm.</jobString>
@@ -133,7 +131,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechLeg</defName>
+		<defName>ATR_Install_CybertechLeg</defName>
 		<label>Install Cybertech leg</label>
 		<description>Installs an Cybertech leg.</description>
 		<jobString>Installing Cybertech leg.</jobString>
@@ -178,7 +176,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechVisualSensor</defName>
+		<defName>ATR_Install_CybertechVisualSensor</defName>
 		<label>Install Cybertech visual sensor</label>
 		<description>Installs an Cybertech visual sensor.</description>
 		<jobString>Installing Cybertech visual sensor.</jobString>
@@ -223,7 +221,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-        <defName>Install_CybertechAudioSensor</defName>
+        <defName>ATR_Install_CybertechAudioSensor</defName>
 		<label>install Cybertech hearing sensor</label>
 		<description>Installs an Cybertech audio sensor.</description>
 		<jobString>Installing Cybertech audio sensor.</jobString>
@@ -276,7 +274,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechHeatsink</defName>
+		<defName>ATR_Install_CybertechHeatsink</defName>
 		<label>Install Cybertech heatsink</label>
 		<description>Installs an Cybertech heatsink.</description>
 		<jobString>Installing Cybertech heatsink.</jobString>
@@ -329,7 +327,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechCoolantPump</defName>
+		<defName>ATR_Install_CybertechCoolantPump</defName>
 		<label>Install Cybertech coolant pump</label>
 		<description>Installs an Cybertech coolant pump.</description>
 		<jobString>Installing Cybertech coolant pump.</jobString>
@@ -379,7 +377,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechBattery</defName>
+		<defName>ATR_Install_CybertechBattery</defName>
 		<label>Install Cybertech battery</label>
 		<description>Installs an Cybertech battery.</description>
 		<jobString>Installing Cybertech battery.</jobString>
@@ -431,7 +429,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechMechaniteStorage</defName>
+		<defName>ATR_Install_CybertechMechaniteStorage</defName>
 		<label>Install Cybertech mechanite storage</label>
 		<description>Installs Cybertech mechanite storage.</description>
 		<jobString>Installing Cybertech mechanite storage.</jobString>
@@ -481,7 +479,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalCybertech">
-		<defName>Install_CybertechReactor</defName>
+		<defName>ATR_Install_CybertechReactor</defName>
 		<label>install Cybertech bio-reactor</label>
 		<description>Installs an Cybertech bio-reactor.</description>
 		<jobString>Installing Cybertech bio-reactor.</jobString>

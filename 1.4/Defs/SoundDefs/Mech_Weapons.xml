@@ -28,7 +28,6 @@
       </subSounds>
     </SoundDef>
 
-
     <SoundDef>
       <defName>ATR_ShrapnelBlast</defName>
       <context>MapOnly</context>

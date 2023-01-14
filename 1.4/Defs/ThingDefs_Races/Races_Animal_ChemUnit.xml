@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
-		<defName>DroneChemUnit</defName>
+		<defName>ATR_DroneChemUnit</defName>
 		<label>Chemical processing unit</label>
 		<description>A highly specialized intricate autonomous drone capable of identifying, seeking, and absorbing biological matter for processing into a synthetic chemical precursor to neutroamine or chemfuel. The process's order of operations lent itself well to shaping a machine in the form of a small bird, with the product outputted as a self-stored egg-like capsule. The wings are purely cosmetic.</description>
 		<statBases>
@@ -13,8 +11,8 @@
 		</statBases>
 		<comps>
 			<li Class="CompProperties_EggLayer">
-				<eggUnfertilizedDef>ChemCapsule</eggUnfertilizedDef>
-				<eggFertilizedDef>ChemCapsule</eggFertilizedDef>
+				<eggUnfertilizedDef>ATR_ChemCapsule</eggUnfertilizedDef>
+				<eggFertilizedDef>ATR_ChemCapsule</eggFertilizedDef>
 				<eggFertilizationCountMax>1</eggFertilizationCountMax>
 				<eggLayIntervalDays>1</eggLayIntervalDays>
 				<eggCountRange>1</eggCountRange>
@@ -58,9 +56,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
-		<defName>DroneChemUnit</defName>
+		<defName>ATR_DroneChemUnit</defName>
 		<label>Chemical processing unit</label>
-		<race>DroneChemUnit</race>
+		<race>ATR_DroneChemUnit</race>
         <combatPower>10</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.3</ecoSystemWeight>

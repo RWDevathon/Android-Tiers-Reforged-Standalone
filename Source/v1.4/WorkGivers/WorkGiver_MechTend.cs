@@ -9,7 +9,7 @@ namespace ATReforged
     {
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is Pawn target) || !Utils.IsConsideredMechanical(t.def) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Mechanic) || (def.tendToHumanlikesOnly && !target.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !target.RaceProps.Animal) || !GoodLayingStatusForTend(target, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(target) || !pawn.CanReserve(target, 1, -1, null, forced) || (target.InAggroMentalState && !target.health.hediffSet.HasHediff(RimWorld.HediffDefOf.Scaria)))
+            if (!(t is Pawn target) || !Utils.IsConsideredMechanical(t.def) || pawn.WorkTypeIsDisabled(ATR_WorkTypeDefOf.ATR_Mechanic) || (def.tendToHumanlikesOnly && !target.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !target.RaceProps.Animal) || !GoodLayingStatusForTend(target, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(target) || !pawn.CanReserve(target, 1, -1, null, forced) || (target.InAggroMentalState && !target.health.hediffSet.HasHediff(RimWorld.HediffDefOf.Scaria)))
             {
                 return false;
             }
@@ -23,10 +23,10 @@ namespace ATReforged
             Thing thing = HealthAIUtility.FindBestMedicine(pawn, target);
             if (thing != null)
             {
-                return JobMaker.MakeJob(JobDefOf.TendMechanical, target, thing);
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_TendMechanical, target, thing);
             }
 
-            return JobMaker.MakeJob(JobDefOf.TendMechanical, target);
+            return JobMaker.MakeJob(ATR_JobDefOf.ATR_TendMechanical, target);
         }
     }
 }

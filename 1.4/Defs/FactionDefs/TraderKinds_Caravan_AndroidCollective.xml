@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- TODO: defNames in FactionDefs for 1.0 candidate -->
-
     <TraderKindDef>
-        <defName>Caravan_AndroidCollective_BulkGoods</defName>
+        <defName>ATR_Caravan_AndroidCollective_BulkGoods</defName>
         <label>bulk goods trader</label>
         <commonality>1</commonality>
         <stockGenerators>

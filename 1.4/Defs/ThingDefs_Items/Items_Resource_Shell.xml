@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <ThingDef ParentName="MakeableShellBase">
-        <defName>MicroscytherShell</defName>
+        <defName>ATR_MicroscytherShell</defName>
         <label>Swarm shell</label>
         <description>An artillery shell containing several pre-programmed microscythers that will be unleashed and assault all nearby targets upon impact.</description>
         <graphicData>
@@ -33,7 +31,7 @@
                 </wickTicks>
             </li>
         </comps>
-        <projectileWhenLoaded>MicroscytherShell_round</projectileWhenLoaded>
+        <projectileWhenLoaded>ATR_MicroscytherShell_round</projectileWhenLoaded>
         <recipeMaker>
             <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -54,7 +52,7 @@
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
-        <defName>MicroscytherShell_round</defName>
+        <defName>ATR_MicroscytherShell_round</defName>
         <label>Swarm shell</label>
         <graphicData>
             <texPath>Things/Projectile/ShellEMP</texPath>
@@ -71,7 +69,7 @@
             <soundExplode>Explosion_EMP</soundExplode>
             <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
             <soundAmbient>MortarRound_Ambient</soundAmbient>
-            <postExplosionSpawnThingDef>MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnThingDef>ATR_MicroScytherGenerator</postExplosionSpawnThingDef>
             <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>ExtinguisherExplosion</explosionEffect>

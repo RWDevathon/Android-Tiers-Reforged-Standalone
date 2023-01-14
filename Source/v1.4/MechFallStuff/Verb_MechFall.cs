@@ -10,7 +10,7 @@ namespace ATReforged
             {
                 return false;
             }
-            MechFall mechfall = (MechFall)GenSpawn.Spawn(ThingDefOf.MechFallBeam, currentTarget.Cell, caster.Map);
+            MechFall mechfall = (MechFall)GenSpawn.Spawn(ATR_ThingDefOf.ATR_MechFallTargetterBeam, currentTarget.Cell, caster.Map);
             mechfall.duration = DurationTicks;
             mechfall.instigator = caster;
             mechfall.weaponDef = EquipmentSource?.def;

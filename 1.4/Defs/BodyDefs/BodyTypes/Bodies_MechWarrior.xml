@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Remove for 1.0 release candidate -->
-
+    <!-- XML code primarily reserved for future expansion. No errors if uncommented. Does nothing if ThingDefs_Races/AlienRace_WarriorM1 is not also uncommented.
     <BodyDef>
         <defName>ATR_MechWarriorBody</defName>
         <label>Android</label>
@@ -372,5 +370,6 @@
             </parts>
         </corePart>
     </BodyDef>
+    -->
   
 </Defs>

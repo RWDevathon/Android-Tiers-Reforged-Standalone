@@ -29,7 +29,7 @@ namespace ATReforged
                         if (bed != null)
                         {
                             pawn.ownership.ClaimBedIfNonMedical(bed);
-                            __result = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(bed));
+                            __result = new Job(ATR_JobDefOf.ATR_RechargeBattery, new LocalTargetInfo(bed));
                             return;
                         }
                     }

@@ -9,7 +9,6 @@ namespace ATReforged
     [StaticConstructorOnStartup]
     public class CompMaintenanceNeed : ThingComp
     {
-        private static readonly Texture2D SetTargetFuelLevelCommand = ContentFinder<Texture2D>.Get("UI/Commands/SetTargetFuelLevel");
         Pawn Pawn => (Pawn)parent;
 
         private static readonly int LowMaintenanceTickCheckRate = 133;
@@ -129,7 +128,7 @@ namespace ATReforged
 
         public float MaintenanceFallPerDay()
         {
-            return Mathf.Clamp(DailyFallPerStage(Stage) / Pawn.GetStatValue(StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
+            return Mathf.Clamp(DailyFallPerStage(Stage) / Pawn.GetStatValue(ATR_StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
         }
 
         public override void PostPostMake()
@@ -222,15 +221,15 @@ namespace ATReforged
                 switch (Stage)
                 {
                     case MaintenanceStage.Critical:
-                        Hediff criticalHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_MaintenanceCritical, Pawn);
+                        Hediff criticalHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MaintenanceCritical, Pawn);
                         Pawn.health.AddHediff(criticalHediff);
                         break;
                     case MaintenanceStage.Poor:
-                        Hediff poorHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_MaintenancePoor, Pawn);
+                        Hediff poorHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MaintenancePoor, Pawn);
                         Pawn.health.AddHediff(poorHediff);
                         break;
                     case MaintenanceStage.Satisfactory:
-                        Hediff satisfactoryHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_MaintenanceSatisfactory, Pawn);
+                        Hediff satisfactoryHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MaintenanceSatisfactory, Pawn);
                         Pawn.health.AddHediff(satisfactoryHediff);
                         break;
                 }
@@ -335,7 +334,7 @@ namespace ATReforged
                 }
                 else
                 {
-                    Hediff decayHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_PartDecay, Pawn, bodyPart);
+                    Hediff decayHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_PartDecay, Pawn, bodyPart);
                     healthTracker.AddHediff(decayHediff);
                     SendPartFailureLetter(Pawn, decayHediff);
                 }
@@ -350,7 +349,7 @@ namespace ATReforged
                 }
                 else
                 {
-                    Hediff rustHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_RustedPart, Pawn, bodyPart);
+                    Hediff rustHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_RustedPart, Pawn, bodyPart);
                     healthTracker.AddHediff(rustHediff);
                     SendPartFailureLetter(Pawn, rustHediff);
                 }
@@ -365,7 +364,7 @@ namespace ATReforged
                 }
                 else
                 {
-                    Hediff powerLossHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_PowerLoss, Pawn, bodyPart);
+                    Hediff powerLossHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_PowerLoss, Pawn, bodyPart);
                     healthTracker.AddHediff(powerLossHediff);
                     SendPartFailureLetter(Pawn, powerLossHediff);
                 }
@@ -379,7 +378,7 @@ namespace ATReforged
                     BodyPartRecord bodyPart = healthTracker.hediffSet.GetBrain();
                     if (bodyPart != null && healthTracker.capacities.GetLevel(PawnCapacityDefOf.Consciousness) > 0.3f)
                     {
-                        Hediff coreDamageHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_DamagedCore, Pawn, bodyPart);
+                        Hediff coreDamageHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_DamagedCore, Pawn, bodyPart);
                         healthTracker.AddHediff(coreDamageHediff);
                         SendPartFailureLetter(Pawn, coreDamageHediff);
                     }
@@ -387,14 +386,14 @@ namespace ATReforged
                 // Attempt to apply failing valves.
                 if (Rand.MTBEventOccurs(FailingValvesContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
                 {
-                    BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(BodyPartDefOf.ATR_InternalCorePump)?.RandomElement();
+                    BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_InternalCorePump)?.RandomElement();
                     if (bodyPart == null)
                     {
                         Log.Warning("[ATR] Attempted to apply failing valves to " + Pawn + " but no viable body parts were found.");
                     }
                     else
                     {
-                        Hediff failingValvesHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_FailingCoolantValves, Pawn, bodyPart);
+                        Hediff failingValvesHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_FailingCoolantValves, Pawn, bodyPart);
                         healthTracker.AddHediff(failingValvesHediff);
                         SendPartFailureLetter(Pawn, failingValvesHediff);
                     }
@@ -402,14 +401,14 @@ namespace ATReforged
                 // Attempt to apply rogue mechanites.
                 if (Rand.MTBEventOccurs(RogueMechanitesContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
                 {
-                    BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(BodyPartDefOf.ATR_MechaniteStorage)?.RandomElement();
+                    BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_MechaniteStorage)?.RandomElement();
                     if (bodyPart == null)
                     {
                         Log.Warning("[ATR] Attempted to apply rogue mechanites to " + Pawn + " but no viable body parts were found.");
                     }
                     else
                     {
-                        Hediff rogueMechanitesHediff = HediffMaker.MakeHediff(HediffDefOf.ATR_RogueMechanites, Pawn, bodyPart);
+                        Hediff rogueMechanitesHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_RogueMechanites, Pawn, bodyPart);
                         healthTracker.AddHediff(rogueMechanitesHediff);
                         SendPartFailureLetter(Pawn, rogueMechanitesHediff);
                     }

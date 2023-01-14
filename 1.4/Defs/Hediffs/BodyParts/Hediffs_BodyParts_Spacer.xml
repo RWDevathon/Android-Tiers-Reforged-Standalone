@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- Base Spacer -->
   
     <HediffDef Name="ATR_AddedATR_BodyPartSpacerBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
@@ -92,7 +90,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedArm</defName>
+		<defName>ATR_Install_AdvancedArm</defName>
 		<label>Install advanced arm</label>
 		<description>Installs an advanced arm.</description>
 		<jobString>Installing advanced arm.</jobString>
@@ -143,7 +141,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedLeg</defName>
+		<defName>ATR_Install_AdvancedLeg</defName>
 		<label>Install advanced leg</label>
         <description>Higher plasteel temperance with higher efficiency components grants this eye a significant advantage over standard issue parts.</description>
 		<jobString>Installing high power leg.</jobString>
@@ -194,7 +192,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedVisualSensor</defName>
+		<defName>ATR_Install_AdvancedVisualSensor</defName>
 		<label>Install advanced visual sensor</label>
 		<description>Installs an advanced visual sensor.</description>
 		<jobString>Installing advanced visual sensor.</jobString>
@@ -245,7 +243,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedAudioSensor</defName>
+		<defName>ATR_Install_AdvancedAudioSensor</defName>
 		<label>Install advanced audio sensor</label>
 		<description>Installs an advanced audio sensor.</description>
 		<jobString>Installing advanced hearing sensor.</jobString>
@@ -304,7 +302,7 @@
     </ThingDef>
 	
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedHeatsink</defName>
+		<defName>ATR_Install_AdvancedHeatsink</defName>
 		<label>Install advanced heatsink</label>
 		<description>Installs an advanced heatsink.</description>
 		<jobString>Installing advanced heatsink.</jobString>
@@ -364,7 +362,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedCoolantPump</defName>
+		<defName>ATR_Install_AdvancedCoolantPump</defName>
 		<label>Install advanced coolant pump</label>
 		<description>Installs an advanced coolant pump.</description>
 		<jobString>Installing advanced coolant pump.</jobString>
@@ -420,7 +418,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedBattery</defName>
+		<defName>ATR_Install_AdvancedBattery</defName>
 		<label>Install advanced battery pack</label>
 		<description>Installs an advanced battery pack.</description>
 		<jobString>Installing advanced battery pack.</jobString>
@@ -478,7 +476,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedMechaniteStorage</defName>
+		<defName>ATR_Install_AdvancedMechaniteStorage</defName>
 		<label>Install advanced mechanite storage</label>
 		<description>Installs an advanced mechanite storage.</description>
 		<jobString>Installing advanced mechanite storage.</jobString>
@@ -534,7 +532,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
-		<defName>Install_AdvancedReactor</defName>
+		<defName>ATR_Install_AdvancedReactor</defName>
 		<label>install advanced bio-reactor</label>
 		<description>Installs an advanced bio-reactor.</description>
 		<jobString>Installing advanced bio-reactor.</jobString>
@@ -606,7 +604,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-		<defName>Install_OrganicCharger</defName>
+		<defName>ATR_Install_OrganicCharger</defName>
 		<label>install organic charger</label>
 		<description>Installs an organic charger.</description>
 		<jobString>Installing organic charger.</jobString>

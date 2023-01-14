@@ -22,7 +22,7 @@ namespace ATReforged
                     bool hasMechanic = false;
                     foreach (Pawn colonist in map.mapPawns.FreeColonists)
                     {
-                        if ((colonist.Spawned || colonist.BrieflyDespawned()) && !colonist.Downed && colonist.workSettings != null && colonist.workSettings.WorkIsActive(WorkTypeDefOf.Mechanic))
+                        if ((colonist.Spawned || colonist.BrieflyDespawned()) && !colonist.Downed && colonist.workSettings != null && colonist.workSettings.WorkIsActive(ATR_WorkTypeDefOf.ATR_Mechanic))
                         {
                             hasMechanic = true;
                             break;

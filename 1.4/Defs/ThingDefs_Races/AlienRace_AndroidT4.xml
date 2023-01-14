@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
-		<defName>Tier4Android</defName>
+		<defName>ATR_Tier4Android</defName>
 		<label>T4 Android</label>
 		<description>The pinnacle of known android theory and practice, the class of tier four androids is marked by the possession of a special AI persona core. While these cores are archotech technology, the chassis and internals are all glitterworld technology - there is no known method for the creation of an archotech chassis. \n\nTier four androids are a cut above the rest, and they know it too - ego complexes and disdain toward lesser tiers are very common amongst them.</description>
 		<alienRace>

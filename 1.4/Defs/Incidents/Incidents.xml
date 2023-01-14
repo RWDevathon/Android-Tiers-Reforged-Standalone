@@ -7,7 +7,7 @@
 		<category>ThreatSmall</category>
     	<pointsScaleable>true</pointsScaleable>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+		    <li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>ATReforged.Incidents_Hacking</workerClass>
 		<letterDef>NegativeEvent</letterDef>

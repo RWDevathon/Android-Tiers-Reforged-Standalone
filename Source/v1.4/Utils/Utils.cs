@@ -38,43 +38,43 @@ namespace ATReforged
 
         public static bool IsConsideredMechanical(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanical.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanical(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanical.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMechanicalAnimal(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalAnimal(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalAnimal.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMechanicalAndroid(Pawn pawn)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalAndroid(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef.defName);
         }
 
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def.defName);
         }
 
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
         {
-            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef);
+            return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef.defName);
         }
 
         public static bool IsConsideredMassive(Pawn pawn)
@@ -84,12 +84,12 @@ namespace ATReforged
 
         public static bool HasSpecialStatus(Pawn pawn)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def);
+            return ATReforged_Settings.hasSpecialStatus.Contains(pawn.def.defName);
         }
 
         public static bool HasSpecialStatus(ThingDef thingDef)
         {
-            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef);
+            return ATReforged_Settings.hasSpecialStatus.Contains(thingDef.defName);
         }
 
         public static bool IsSolarFlarePresent()
@@ -100,12 +100,12 @@ namespace ATReforged
         /* === POWER UTILITIES === */
         public static bool CanUseBattery(Pawn pawn)
         {
-            return ATReforged_Settings.canUseBattery.Contains(pawn.def) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.TryGetComp<HediffComp_ChargeCapable>() != null);
+            return ATReforged_Settings.canUseBattery.Contains(pawn.def.defName) || pawn.health.hediffSet.hediffs.Any(hediff => hediff.TryGetComp<HediffComp_ChargeCapable>() != null);
         }
 
         public static bool CanUseBattery(ThingDef thingDef)
         {
-            return ATReforged_Settings.canUseBattery.Contains(thingDef);
+            return ATReforged_Settings.canUseBattery.Contains(thingDef.defName);
         }
         
         // Locate the nearest available charging bed for the given pawn user, as carried by the given pawn carrier. Pawns may carry themselves here, if they are not downed.
@@ -220,10 +220,10 @@ namespace ATReforged
             }
             
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
-            blankMechanical.story.Childhood = BackstoryDefOf.FreshBlank;
-            blankMechanical.story.Adulthood = BackstoryDefOf.AdultBlank;
+            blankMechanical.story.Childhood = ATR_BackstoryDefOf.ATR_MechChildhoodFreshBlank;
+            blankMechanical.story.Adulthood = ATR_BackstoryDefOf.ATR_MechAdulthoodBlank;
             blankMechanical.story.traits.allTraits.Clear();
             blankMechanical.skills.Notify_SkillDisablesChanged();
             blankMechanical.skills.skills.ForEach(delegate (SkillRecord record)
@@ -263,7 +263,7 @@ namespace ATReforged
         // RESERVED UTILITIES, INTERNAL USE ONLY
         public static HashSet<string> ReservedBlacklistedDiseases = new HashSet<string> { "WoundInfection" };
 
-        public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
+        public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "ATR_AndroidUnion", "ATR_MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
 
         // Utilities not available for direct player editing but not reserved by this mod
@@ -283,16 +283,16 @@ namespace ATReforged
             if (IsConsideredMechanicalAndroid(surrogate))
             {
                 // Remove any isolated or autonomous core hediffs before applying ReceiverCore to the brain.
-                Hediff target = surrogate.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
+                Hediff target = surrogate.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
                 if (target != null)
                     surrogate.health.RemoveHediff(target);
-                target = surrogate.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_IsolatedCore);
+                target = surrogate.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_IsolatedCore);
                 if (target != null)
                     surrogate.health.RemoveHediff(target);
-                surrogate.health.AddHediff(HediffDefOf.ATR_ReceiverCore, surrogate.health.hediffSet.GetBrain());
+                surrogate.health.AddHediff(ATR_HediffDefOf.ATR_ReceiverCore, surrogate.health.hediffSet.GetBrain());
             }
             else
-                surrogate.health.AddHediff(HediffDefOf.ATR_SkyMindReceiver, surrogate.health.hediffSet.GetBrain());
+                surrogate.health.AddHediff(ATR_HediffDefOf.ATR_SkyMindReceiver, surrogate.health.hediffSet.GetBrain());
             Duplicate(GetBlank(), surrogate, false, false);
             return surrogate;
         }
@@ -623,7 +623,7 @@ namespace ATReforged
                     return;
 
                 // Permute all major mind-related components to each other via a temp copy.
-                PawnGenerationRequest request = new PawnGenerationRequest(RimWorld.PawnKindDefOf.Colonist, null, PawnGenerationContext.PlayerStarter, forceGenerateNewPawn: true);
+                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.Colonist, null, PawnGenerationContext.PlayerStarter, forceGenerateNewPawn: true);
                 Pawn tempCopy = PawnGenerator.GeneratePawn(request);
                 Duplicate(firstPawn, tempCopy, false, false);
                 Duplicate(secondPawn, firstPawn, false, false);
@@ -674,7 +674,7 @@ namespace ATReforged
             for (int i = targetHediffs.Count - 1; i >= 0; i--)
             {
                 Hediff hediff = targetHediffs[i];
-                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true || hediff.def == HediffDefOf.ATR_MindOperation)
+                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true || hediff.def == ATR_HediffDefOf.ATR_MindOperation)
                 {
                     return false;
                 }
@@ -793,7 +793,7 @@ namespace ATReforged
             {
                 try
                 {
-                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart && hediff.def != HediffDefOf.ATR_MindOperation)
+                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart && hediff.def != ATR_HediffDefOf.ATR_MindOperation)
                     {
                         hediff.pawn = copy;
                         copy.health.AddHediff(hediff, hediff.Part);
@@ -858,13 +858,13 @@ namespace ATReforged
             // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
             if (IsConsideredMechanicalAndroid(pawn))
             {
-                pawn.health.AddHediff(HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
-                Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_AutonomousCore);
+                pawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
+                Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
                 if (target != null)
                 {
                     pawn.health.RemoveHediff(target);
                 }
-                target = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_ReceiverCore);
+                target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ReceiverCore);
                 if (target != null)
                 {
                     pawn.health.RemoveHediff(target);
@@ -916,11 +916,11 @@ namespace ATReforged
                 skillRecord.xpSinceLastLevel = 0;
             }
 
-            // If pawn kind backstories should be overwritten, then try to take it from the mod extension. If it does not exist, it defaults to ATR_DroneChildhood (which is default for the extension).
+            // If pawn kind backstories should be overwritten, then try to take it from the mod extension. If it does not exist, it defaults to ATR_MechChildhoodDrone (which is default for the extension).
             if (pawnExtension?.letPawnKindHandleDroneBackstories == false)
             {
-                pawn.story.Childhood = pawnExtension?.droneChildhoodBackstoryDef ?? BackstoryDefOf.ATR_DroneChildhood;
-                pawn.story.Adulthood = pawnExtension?.droneAdulthoodBackstoryDef ?? BackstoryDefOf.ATR_DroneAdulthood;
+                pawn.story.Childhood = pawnExtension?.droneChildhoodBackstoryDef ?? ATR_BackstoryDefOf.ATR_MechChildhoodDrone;
+                pawn.story.Adulthood = pawnExtension?.droneAdulthoodBackstoryDef ?? ATR_BackstoryDefOf.ATR_MechAdulthoodDrone;
                 pawn.workSettings.Notify_DisabledWorkTypesChanged();
                 pawn.skills.Notify_SkillDisablesChanged();
             }

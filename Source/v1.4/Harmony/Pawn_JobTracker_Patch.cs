@@ -41,7 +41,7 @@ namespace ATReforged
                     ___pawn.Position = RestUtility.GetBedSleepingSlotPosFor(___pawn, bed);
                     ___pawn.Notify_Teleported(endCurrentJob: false);
                     ___pawn.stances.CancelBusyStanceHard();
-                    __instance.StartJob(JobMaker.MakeJob(JobDefOf.RechargeBattery, bed), JobCondition.InterruptForced, tag: JobTag.TuckedIntoBed);
+                    __instance.StartJob(JobMaker.MakeJob(ATR_JobDefOf.ATR_RechargeBattery, bed), JobCondition.InterruptForced, tag: JobTag.TuckedIntoBed);
                     return false;
                 }
             }

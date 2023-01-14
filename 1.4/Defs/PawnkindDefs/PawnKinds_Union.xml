@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: defNames in PawnKinds_Union for 1.0 candidate -->
-
     <PawnKindDef Name="ATR_AndroidCollectivePawnKindBase" ParentName="BasePlayerPawnKind" Abstract="True">
 		<backstoryFiltersOverride>
             <li>
@@ -13,20 +11,20 @@
 		</backstoryFiltersOverride>
         <invFoodDef>MealSurvivalPack</invFoodDef>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+        <defaultFactionType>ATR_AndroidUnion</defaultFactionType>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>AndroidT2CollectiveTrader</defName>		
+        <defName>ATR_AndroidT2CollectiveTrader</defName>		
         <label>T2 Android Trader</label>
         <labelPlural>Union traders</labelPlural>
-        <race>Tier2Android</race>
+        <race>ATR_Tier2Android</race>
         <invNutrition>3.2</invNutrition>
 		<trader>true</trader>
         <combatPower>40</combatPower>
         <minGenerationAge>20</minGenerationAge>
         <gearHealthRange>0.7~2.3</gearHealthRange>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <apparelMoney>400~1000</apparelMoney>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -56,15 +54,14 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidRaiderBase">
-        <defName>AndroidT1CollectiveSoldier</defName>
+        <defName>ATR_AndroidT1CollectiveSoldier</defName>
 		<label>T1 Android Soldier</label>
 		<labelPlural>Android soldiers</labelPlural>
-        <race>Tier1Android</race>
+        <race>ATR_Tier1Android</race>
         <combatPower>70</combatPower>
         <invNutrition>3.85</invNutrition>
         <minGenerationAge>20</minGenerationAge>
         <maxGenerationAge>50</maxGenerationAge>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <aiAvoidCover>true</aiAvoidCover>
         <itemQuality>Poor</itemQuality>
         <apparelTags>
@@ -94,16 +91,14 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>AndroidT2CollectiveSoldier</defName>		
+        <defName>ATR_AndroidT2CollectiveSoldier</defName>
 		<label>T2 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-        <race>Tier2Android</race>
+        <race>ATR_Tier2Android</race>
         <invNutrition>3.2</invNutrition>
-		<trader>true</trader>
         <combatPower>40</combatPower>
         <minGenerationAge>20</minGenerationAge>
         <gearHealthRange>0.7~2.3</gearHealthRange>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <apparelMoney>400~1000</apparelMoney>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -133,14 +128,13 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>AndroidT3CollectiveSoldier</defName>
+        <defName>ATR_AndroidT3CollectiveSoldier</defName>
 		<label>T3 Android Soldier</label>
         <labelPlural>Union soldiers</labelPlural>
-        <race>Tier3Android</race>
+        <race>ATR_Tier3Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>150</combatPower>
         <minGenerationAge>20</minGenerationAge>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <gearHealthRange>0.7~3.2</gearHealthRange>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -180,14 +174,13 @@
     </PawnKindDef>
     
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>AndroidT4CollectiveSoldier</defName>
+        <defName>ATR_AndroidT4CollectiveSoldier</defName>
 		<label>T4 Android Soldier</label>
 		<labelPlural>Android Soldiers</labelPlural>
-        <race>Tier4Android</race>
+        <race>ATR_Tier4Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>220</combatPower>
         <minGenerationAge>20</minGenerationAge>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <gearHealthRange>1~1</gearHealthRange>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -231,14 +224,13 @@
     </PawnKindDef>
     
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>AndroidT4CollectiveLeader</defName>
+        <defName>ATR_AndroidT4CollectiveLeader</defName>
 		<label>Android leader</label>
 		<labelPlural>Android leaders</labelPlural>
-        <race>Tier4Android</race>
+        <race>ATR_Tier4Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>220</combatPower>
         <minGenerationAge>20</minGenerationAge>
-        <defaultFactionType>AndroidUnion</defaultFactionType>
         <itemQuality>Good</itemQuality>
         <gearHealthRange>1~1</gearHealthRange>
         <apparelTags>

@@ -49,7 +49,7 @@ namespace ATReforged
                     }
                 }
 
-                if (___pawn.kindDef == PawnKindDefOf.MicroScyther || ___pawn.kindDef == PawnKindDefOf.ATR_FractalAbomination)
+                if (___pawn.kindDef == ATR_PawnKindDefOf.ATR_MicroScyther || ___pawn.kindDef == ATR_PawnKindDefOf.ATR_FractalAbomination)
                 {
                     ___pawn.Kill(dinfo, hediff);
                     return false;
@@ -68,7 +68,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(ref bool __result, Pawn ___pawn)
             {
-                if (!__result)
+                if (!__result || !___pawn.RaceProps.Humanlike)
                     return;
 
                 // Dead pawns always try to disconnect from the network. This only actually affects player pawns, as they are the only things actually in the network.
@@ -88,7 +88,7 @@ namespace ATReforged
             public static bool Listener(ref DamageInfo? dinfo, ref Hediff hediff, ref Caravan caravan, Pawn ___pawn)
             {
                 // If the pawn is a surrogate and wasn't just turned into one, then abort.
-                if (Utils.IsSurrogate(___pawn) && hediff != null && hediff.def != HediffDefOf.ATR_SkyMindReceiver)
+                if (Utils.IsSurrogate(___pawn) && hediff != null && hediff.def != ATR_HediffDefOf.ATR_SkyMindReceiver)
                 {
                     return false;
                 }
