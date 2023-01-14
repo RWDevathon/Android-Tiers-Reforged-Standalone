@@ -19,11 +19,6 @@
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
             <downloadUrl>https://github.com/RimWorld-CCL-Reborn/AlienRaces</downloadUrl>
         </li>
-        <li>
-            <packageId>CarnySenpai.EnableOversizedWeapons</packageId>
-            <displayName>Enable Oversized Weapons</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/2543371889</steamWorkshopUrl>
-        </li>
     </modDependencies>
     <packageId>Killathon.AndroidTiersReforged</packageId>
 	<incompatibleWith>
