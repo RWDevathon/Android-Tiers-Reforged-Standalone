@@ -13,7 +13,7 @@ namespace ATReforged
             IEnumerable<BodyPartRecord> missingParts = GetMissingOrDamagedParts(pawn);
             foreach (BodyPartRecord part in missingParts)
             {
-                // No reason to apply this to a part that has its parent missing. Restoring the parent would restore this part. IE. Why restore a finger when you can restore the hand?
+                // No reason to apply this to a part that has its parent missing or damaged. Restoring the parent would restore this part. IE. Why restore a finger when you can restore the hand?
                 if (!missingParts.Contains(part.parent))
                     yield return part;
             }
@@ -58,13 +58,17 @@ namespace ATReforged
             // Destroy hediffs that does not put the HPLeft below 0. If there is any hediff with a severity too high, then recursion stops at this node.
             foreach (Hediff hediff in targetHediffs)
             {
-                if (HPLeftToRestoreChildren < hediff.Severity)
+                // If the Hediff has injuryProps, it's an injury whose severity matches the amount of lost HP.
+                // If it does not have injuryProps, it's a disease or other condition whose severity is likely between 0 - 1 and should be adjusted to not be insignificant compared to injuries.
+                float severity = hediff.Severity * (hediff.def.injuryProps == null ? 0 : 10);
+
+                if (HPLeftToRestoreChildren < severity)
                 {
                     insufficientToCoverSeverity = true;
                 }
                 else
                 {
-                    HPLeftToRestoreChildren -= hediff.Severity;
+                    HPLeftToRestoreChildren -= severity;
                     pawn.health.RemoveHediff(hediff);
                 }
             }

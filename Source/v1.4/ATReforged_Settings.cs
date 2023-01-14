@@ -92,7 +92,7 @@ namespace ATReforged
         public static bool uploadingToSkyMindKills = true;
         public static bool uploadingToSkyMindPermaKills = true;
         public static int timeToCompleteSkyMindOperations = 24;
-        public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
+        public static HashSet<string> factionsUsingSkyMind = new HashSet<string> { "ATR_AndroidUnion", "ATR_MechanicalMarauders" };
 
 
         // STATS SETTINGS

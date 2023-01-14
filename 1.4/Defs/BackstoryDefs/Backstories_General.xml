@@ -359,8 +359,8 @@
 
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodSpaceMiner</defName>
-		<title>Mining drone</title>
-		<titleShort>Drone</titleShort>
+		<title>Space Miner</title>
+		<titleShort>Miner</titleShort>
 		<baseDesc>{PAWN_nameDef} served in a high-stakes asteroid mining corporation crew. {PAWN_pronoun} preferred handling dangerous tasks and spacewalks so {PAWN_possessive} organic crewmates didn't have to. {PAWN_nameDef} earned grudging respect from corporate for minimizing work accidents.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
@@ -419,7 +419,7 @@
 
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodProspector</defName>
-		<title>Prospector drone</title>
+		<title>Terrestrial Prospector</title>
 		<titleShort>Prospector</titleShort>
 		<baseDesc>As part of a group of mechanical prospectors, {PAWN_nameDef} was sent from planet to planet, performing geological analysis of planets for corporate and civilian clientele alike.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>

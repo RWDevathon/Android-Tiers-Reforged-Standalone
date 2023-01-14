@@ -263,7 +263,7 @@ namespace ATReforged
         // RESERVED UTILITIES, INTERNAL USE ONLY
         public static HashSet<string> ReservedBlacklistedDiseases = new HashSet<string> { "WoundInfection" };
 
-        public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "AndroidUnion", "MechanicalMarauders" };
+        public static HashSet<string> ReservedAndroidFactions = new HashSet<string> { "ATR_AndroidUnion", "ATR_MechanicalMarauders" };
         public static HashSet<string> ReservedRepairStims = new HashSet<string> { "ATR_RepairStimSimple", "ATR_RepairStimIntermediate", "ATR_RepairStimAdvanced" };
 
         // Utilities not available for direct player editing but not reserved by this mod
