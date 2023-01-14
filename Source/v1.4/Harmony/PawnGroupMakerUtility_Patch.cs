@@ -238,10 +238,10 @@ namespace ATReforged
                     // Generated mechanical pawns in proper groups will always receive the Stasis Hediff to reduce their power consumption significantly.
                     foreach (Pawn member in __result)
                     {
-                        Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_StasisPill);
+                        Hediff stasisHediff = member.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_StasisPill);
                         if (Utils.IsConsideredMechanical(member) && stasisHediff == null)
                         {
-                            member.health.AddHediff(HediffMaker.MakeHediff(HediffDefOf.ATR_StasisPill, member));
+                            member.health.AddHediff(HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_StasisPill, member));
                         }
                         else if (stasisHediff != null)
                         {

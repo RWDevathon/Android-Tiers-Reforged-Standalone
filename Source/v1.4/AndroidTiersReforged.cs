@@ -50,6 +50,12 @@ namespace ATReforged
             RecipeDef androidSmashing = DefDatabase<RecipeDef>.GetNamed("SmashCorpseMechanoid");
             RecipeDef butcherFlesh = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh");
 
+            // Some patches can't be run with the other harmony patches as Defs aren't loaded yet. So we patch them here.
+            if (HealthCardUtility_Patch.DrawOverviewTab_Patch.Prepare())
+            {
+                new Harmony("ATReforged").CreateClassProcessor(typeof(HealthCardUtility_Patch.DrawOverviewTab_Patch)).Patch();
+            }
+
             // Must dynamically modify some ThingDefs based on certain qualifications.
             foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
             {

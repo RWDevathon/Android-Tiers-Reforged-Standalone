@@ -38,7 +38,7 @@ namespace ATReforged
                 // Handle fail state, with a 20% chance for especially bad effects occurring.
                 if (Rand.Chance(0.2f))
                 {
-                    Hediff corruption = HediffMaker.MakeHediff(HediffDefOf.ATR_MemoryCorruption, pawn, part);
+                    Hediff corruption = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MemoryCorruption, pawn, part);
                     corruption.Severity = Rand.Range(0.15f, 0.95f);
                     pawn.health.AddHediff(corruption, part, null);
                 }

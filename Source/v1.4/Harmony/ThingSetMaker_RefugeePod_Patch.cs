@@ -18,7 +18,7 @@ namespace ATReforged
                 {
                     if (thing is Pawn pawn && Utils.IsConsideredMechanical(pawn))
                     {
-                        pawn.health.AddHediff(HediffDefOf.ATR_LongReboot);
+                        pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
                     }
                 }
             }

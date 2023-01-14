@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
   
 	<RecipeDef>
-		<defName>Make_ChemfuelFromChemCapsule</defName>
+		<defName>ATR_Make_ChemfuelFromChemCapsule</defName>
 		<label>synthesize chemfuel from chemical capsules</label>
 		<description>Make a batch of chemfuel by refining the raw resources within chemical capsules.</description>
 		<jobString>Refining chemfuel from capsules.</jobString>
@@ -16,7 +14,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ChemCapsule</li>
+						<li>ATR_ChemCapsule</li>
 					</thingDefs>
 				</filter>
 				<count>4</count>
@@ -24,7 +22,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ChemCapsule</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -37,7 +35,7 @@
 	</RecipeDef>
 	
 	<RecipeDef>
-		<defName>Make_NeutroamineFromChemCapsule</defName>
+		<defName>ATR_Make_NeutroamineFromChemCapsule</defName>
 		<label>synthesize neutroamine from chemical capsules</label>
 		<description>Make a batch of neutroamine by refining the raw resources within chemical capsules.</description>
 		<jobString>Refining neutroamine from capsules.</jobString>
@@ -49,7 +47,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ChemCapsule</li>
+						<li>ATR_ChemCapsule</li>
 					</thingDefs>
 				</filter>
 				<count>4</count>
@@ -57,7 +55,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ChemCapsule</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -70,7 +68,7 @@
 	</RecipeDef>
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ChemCapsule</defName>
+        <defName>ATR_ChemCapsule</defName>
         <label>Chemical Capsule</label>
         <description>A small, dense capsule full of synthetic precursor chemicals ready for processing into neutroamine or chemfuel.</description>
         <graphicData>

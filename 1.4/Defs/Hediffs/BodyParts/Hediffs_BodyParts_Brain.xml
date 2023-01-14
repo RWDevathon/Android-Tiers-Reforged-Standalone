@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- Base Brain Implant Hediff -->
 
 	<HediffDef Name="ATR_ImplantCoreBase" ParentName="ImplantHediffBase" Abstract="True">
@@ -107,7 +105,7 @@
     </HediffDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
-        <defName>Install_AutonomousCore</defName>
+        <defName>ATR_Install_AutonomousCore</defName>
 		<label>Install autonomous core</label>
 		<description>Installs and connects an autonomous core. Upon completion, the core will be able to store an intelligence - either copied from the SkyMind network or freshly generated.</description>
 		<jobString>Installing autonomous core.</jobString>
@@ -169,7 +167,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreOrganic">
-        <defName>Install_SkyMindReceiver</defName>
+        <defName>ATR_Install_SkyMindReceiver</defName>
         <label>Install SkyMind receiver</label>
         <description>Installs and initializes a receiver in the subjects brain. Whatever intelligence may be stored in the brain will die, and the subject will become a surrogate.</description>
         <researchPrerequisite>ATR_SurrogateOptimization</researchPrerequisite>
@@ -237,7 +235,7 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryCoreOrganic">
-        <defName>Install_SkyMindTransceiver</defName>
+        <defName>ATR_Install_SkyMindTransceiver</defName>
         <label>Install SkyMind transceiver</label>
         <description>Installs and initializes a transceiver in the subjects brain. The pawn will be able to access the SkyMind network freely.</description>
         <researchPrerequisite>ATR_SurrogateOptimization</researchPrerequisite>

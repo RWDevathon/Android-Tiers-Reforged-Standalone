@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
 	<ThingDef ParentName="BaseFilth">
-		<defName>CoolantAndroidTier</defName>
+		<defName>ATR_CoolantAndroidTier</defName>
 		<label>coolant</label>
 		<statBases>
             <Cleanliness>-5</Cleanliness>

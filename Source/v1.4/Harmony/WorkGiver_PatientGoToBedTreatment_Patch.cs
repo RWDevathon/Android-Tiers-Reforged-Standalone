@@ -31,7 +31,7 @@ namespace ATReforged
                 for (int i = 0; i < list.Count; i++)
                 {
                     Pawn target = list[i];
-                    if (target != pawn && (target.RaceProps.Humanlike || target.IsColonyMechPlayerControlled) && !target.Downed && target.Awake() && !target.InBed() && !target.InMentalState && !target.IsPrisoner && target.workSettings != null && target.workSettings.EverWork && target.workSettings.WorkIsActive(WorkTypeDefOf.Mechanic) && target.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) && target.CanReach(pawn, PathEndMode.Touch, Danger.Deadly))
+                    if (target != pawn && (target.RaceProps.Humanlike || target.IsColonyMechPlayerControlled) && !target.Downed && target.Awake() && !target.InBed() && !target.InMentalState && !target.IsPrisoner && target.workSettings != null && target.workSettings.EverWork && target.workSettings.WorkIsActive(ATR_WorkTypeDefOf.ATR_Mechanic) && target.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) && target.CanReach(pawn, PathEndMode.Touch, Danger.Deadly))
                     {
                         __result = true;
                         return;

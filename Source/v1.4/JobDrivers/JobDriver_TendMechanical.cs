@@ -64,7 +64,7 @@ namespace ATReforged
             }
 
             yield return gotoToil;
-            int ticks = (int)(1f / pawn.GetStatValue(StatDefOf.MechanicalTendSpeed) * 600f);
+            int ticks = (int)(1f / pawn.GetStatValue(ATR_StatDefOf.ATR_MechanicalTendSpeed) * 600f);
             Toil waitToil;
             if (!job.draftedTend)
             {

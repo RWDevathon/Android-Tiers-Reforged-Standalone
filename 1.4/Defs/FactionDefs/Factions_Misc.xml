@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: defNames in Factions_Misc for 1.0 candidate -->
-
 	<FactionDef ParentName="PlayerFactionBase">
-		<defName>PlayerColonyAndroid</defName>
+		<defName>ATR_PlayerAndroidFaction</defName>
 		<label>New Android Arrivals</label>
 		<description>Your Android colony.</description>
 		<isPlayer>true</isPlayer>
@@ -34,7 +32,7 @@
 	</FactionDef>
 	
 	<FactionDef ParentName="FactionBase">
-		<defName>MechanicalMarauders</defName>
+		<defName>ATR_MechanicalMarauders</defName>
 		<label>Mechanical Marauders</label>
 		<description>Outcasted or exiled - or fleeing slavery - from human society, many mechanical units end up joining into groups of maligned bandits. United by a love of pillaging and taking out aggression on those who would seek to produce rather than destroy, these marauders elect to terrorize others rather than engage one another.\n\nDiplomacy is not an option with these androids. Violence is the only language they share with outsiders.</description>
 		<pawnSingular>marauder</pawnSingular>
@@ -85,7 +83,7 @@
 		</backstoryFilters>
 		<melaninRange>0.5~0.9</melaninRange>
 		<allowedArrivalTemperatureRange>-70~60</allowedArrivalTemperatureRange>
-        <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
+        <raidLootMaker>ATR_AndroidRaidLootMaker</raidLootMaker>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
 				<li>(0,40)</li>
@@ -132,7 +130,7 @@
 	</FactionDef>
 
 	<FactionDef ParentName="FactionBase">
-		<defName>AndroidUnion</defName>
+		<defName>ATR_AndroidUnion</defName>
 		<label>Civil Androids</label>
 		<description>RimWorlds, with their severe lack of regulations, make fine places for societies of androids to take root. These androids have chosen to form a union of semi-independent cities for mutual defense and prosperity. They are generally amenable to trade and cooperation, and wish for nothing more than to live in peace. \n\nThis faction usually trades high-tech goods along with basic bulk supplies.</description>
 		<colorSpectrum>
@@ -142,6 +140,9 @@
 		<pawnSingular>android</pawnSingular>
 		<pawnsPlural>androids</pawnsPlural>
         <categoryTag>ATR_GeneralAndroids</categoryTag>
+        <fixedLeaderKinds>
+            <li>ATR_AndroidT4CollectiveLeader</li>
+        </fixedLeaderKinds>
 		<settlementGenerationWeight>0.4</settlementGenerationWeight>
         <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<listOrderPriority>35</listOrderPriority>
@@ -168,19 +169,19 @@
 		  </li>
 		</backstoryFilters>
 		<melaninRange>0.1~0.5</melaninRange>
-        <raidLootMaker>AndroidRaidLootMaker</raidLootMaker>
-        <basicMemberKind>AndroidT2CollectiveSoldier</basicMemberKind>
+        <raidLootMaker>ATR_AndroidRaidLootMaker</raidLootMaker>
+        <basicMemberKind>ATR_AndroidT2CollectiveSoldier</basicMemberKind>
 		<caravanTraderKinds>
-			<li>Caravan_AndroidCollective_BulkGoods</li>
+			<li>ATR_Caravan_AndroidCollective_BulkGoods</li>
 			<li>Caravan_AndroidCollective_CombatSupplier</li>
 			<li>Caravan_AndroidCollective_AndroidMerchant</li>
 			<li>Caravan_AndroidCollective_HighTech</li>
 		</caravanTraderKinds>
 		<visitorTraderKinds>
-			<li>Visitor_AndroidCollective_Standard</li>
+			<li>ATR_Visitor_AndroidCollective_Standard</li>
 		</visitorTraderKinds>
 		<baseTraderKinds>
-			<li>Base_AndroidCollective_Standard</li>
+			<li>ATR_Base_AndroidCollective_Standard</li>
 		</baseTraderKinds>
 		<allowedArrivalTemperatureRange>
 			<min>-70</min>
@@ -200,42 +201,42 @@
 				<!-- Normal fights, standard mix -->
 				<kindDef>Combat</kindDef>
 				<options>
-					<AndroidT1CollectiveSoldier>6</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>8</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveSoldier>2</AndroidT4CollectiveSoldier>
-					<AndroidT4CollectiveLeader>4.5</AndroidT4CollectiveLeader>
+					<ATR_AndroidT1CollectiveSoldier>6</ATR_AndroidT1CollectiveSoldier>
+					<ATR_AndroidT2CollectiveSoldier>8</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>6</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveSoldier>2</ATR_AndroidT4CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>4.5</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<AndroidT2CollectiveSoldier>50</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>10</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveLeader>2.5</AndroidT4CollectiveLeader>
+					<ATR_AndroidT2CollectiveSoldier>50</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>10</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>2.5</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<traders>
-					<AndroidT2CollectiveTrader>1</AndroidT2CollectiveTrader>
+					<ATR_AndroidT2CollectiveTrader>1</ATR_AndroidT2CollectiveTrader>
 				</traders>
 				<carriers>
-					<DroneTORT>6</DroneTORT>
+					<ATR_DroneTORT>6</ATR_DroneTORT>
 				</carriers>
 				<guards>
-					<AndroidT2CollectiveSoldier>50</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>10</AndroidT3CollectiveSoldier>
+					<ATR_AndroidT2CollectiveSoldier>50</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>10</ATR_AndroidT3CollectiveSoldier>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<AndroidT1CollectiveSoldier>8</AndroidT1CollectiveSoldier>
-					<AndroidT2CollectiveSoldier>24</AndroidT2CollectiveSoldier>
-					<AndroidT3CollectiveSoldier>6</AndroidT3CollectiveSoldier>
-					<AndroidT4CollectiveSoldier>2</AndroidT4CollectiveSoldier>
-					<AndroidT4CollectiveLeader>4</AndroidT4CollectiveLeader>
+					<ATR_AndroidT1CollectiveSoldier>8</ATR_AndroidT1CollectiveSoldier>
+					<ATR_AndroidT2CollectiveSoldier>24</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>6</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveSoldier>2</ATR_AndroidT4CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>4</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 		</pawnGroupMakers>
@@ -243,7 +244,7 @@
 	</FactionDef>
 
     <ThingSetMakerDef>
-        <defName>AndroidRaidLootMaker</defName>
+        <defName>ATR_AndroidRaidLootMaker</defName>
         <root Class="ThingSetMaker_MarketValue">
             <fixedParams>
                 <filter>

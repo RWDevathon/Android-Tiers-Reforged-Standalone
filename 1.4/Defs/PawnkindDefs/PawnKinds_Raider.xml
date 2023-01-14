@@ -2,7 +2,7 @@
 <Defs>
 
     <PawnKindDef Name="ATR_AndroidRaiderBase" Abstract="True">
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
+        <defaultFactionType>ATR_MechanicalMarauders</defaultFactionType>
         <itemQuality>Normal</itemQuality>
         <backstoryFiltersOverride>
             <li>
@@ -22,11 +22,10 @@
         <defName>ATR_RaiderSlaveT1</defName>
         <label>T1 Android Slave</label>
         <labelPlural>Enslaved android</labelPlural>
-        <race>Tier1Android</race>
+        <race>ATR_Tier1Android</race>
         <invNutrition>3.85</invNutrition>
         <combatPower>40</combatPower>
         <minGenerationAge>20</minGenerationAge>	
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
         <aiAvoidCover>true</aiAvoidCover>
         <gearHealthRange>
             <min>0.5</min>
@@ -71,12 +70,11 @@
         <defName>ATR_RaiderSoldierT1</defName>
         <label>T1 Android Raider</label>
         <labelPlural>Raider androids</labelPlural>
-        <race>Tier1Android</race>
+        <race>ATR_Tier1Android</race>
         <combatPower>70</combatPower>
         <invNutrition>3.85</invNutrition>
         <minGenerationAge>20</minGenerationAge>
         <maxGenerationAge>50</maxGenerationAge>
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
         <aiAvoidCover>true</aiAvoidCover>
         <itemQuality>Poor</itemQuality>
         <apparelTags>
@@ -109,12 +107,11 @@
         <defName>ATR_RaiderSoldierT2</defName>
         <label>T2 Android Raider</label>
         <labelPlural>Raider androids</labelPlural>
-        <race>Tier2Android</race>
+        <race>ATR_Tier2Android</race>
         <invNutrition>3.2</invNutrition>
         <combatPower>110</combatPower>
         <minGenerationAge>20</minGenerationAge>
         <gearHealthRange>0.7~2.3</gearHealthRange>
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
         <apparelMoney>400~1000</apparelMoney>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -154,11 +151,10 @@
             </categories>
         </li>
         </backstoryFiltersOverride>
-        <race>Tier3Android</race>
+        <race>ATR_Tier3Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>150</combatPower>
         <minGenerationAge>20</minGenerationAge>
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
         <gearHealthRange>0.7~3.2</gearHealthRange>
         <apparelTags>
             <li>IndustrialBasic</li>
@@ -201,11 +197,10 @@
         <defName>ATR_RaiderSoldierT4</defName>
         <label>T4 Android Raider</label>
         <labelPlural>Raider androids</labelPlural>
-        <race>Tier4Android</race>
+        <race>ATR_Tier4Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>220</combatPower>
         <minGenerationAge>20</minGenerationAge>
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
         <gearHealthRange>1~1</gearHealthRange>
         <apparelTags>
             <li>IndustrialBasic</li>

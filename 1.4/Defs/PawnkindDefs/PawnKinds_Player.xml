@@ -4,7 +4,7 @@
 	<PawnKindDef ParentName="BasePlayerPawnKind">
 		<defName>ATR_T5Colonist</defName>
 		<label>T5 Android Colonist</label>
-		<race>Tier5Android</race>
+		<race>ATR_Tier5Android</race>
 		<backstoryFiltersOverride>
             <li>
                 <categories>
@@ -21,7 +21,7 @@
 			<li>Advanced</li>
 		</techHediffsTags>
 		<maxGenerationAge>400000</maxGenerationAge>
-		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<defaultFactionType>ATR_PlayerAndroidFaction</defaultFactionType>
 		<techHediffsChance>0.3</techHediffsChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<initialResistanceRange>13~21</initialResistanceRange>
@@ -37,7 +37,7 @@
             </li>
 		</backstoryFiltersOverride>
 		<maxGenerationAge>1</maxGenerationAge>
-		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<defaultFactionType>ATR_PlayerAndroidFaction</defaultFactionType>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<initialResistanceRange>13~21</initialResistanceRange>
@@ -46,39 +46,41 @@
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T4Colonist</defName>
 		<label>T4 Newboot Colonist</label>
-		<race>Tier4Android</race>
+		<race>ATR_Tier4Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T3Colonist</defName>
 		<label>T3 Newboot Colonist</label>
-		<race>Tier3Android</race>
+		<race>ATR_Tier3Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T2Colonist</defName>
 		<label>T2 Newboot Colonist</label>
-		<race>Tier2Android</race>
+		<race>ATR_Tier2Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_T1Colonist</defName>
 		<label>T1 Newboot Colonist</label>
-		<race>Tier1Android</race>
+		<race>ATR_Tier1Android</race>
 	</PawnKindDef>
 
+    <!-- Reserved for future content. Go find the other M1 code if you want it and uncomment all of it.
 	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
 		<defName>ATR_M1WarriorColony</defName>
 		<label>M1 Newboot Warrior</label>
 		<race>ATR_Mark1Warrior</race>
 	</PawnKindDef>
+    -->
 
 	<!--Androids With Real Backstories-->
 
     <PawnKindDef Name="ATR_BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
 		<minGenerationAge>20</minGenerationAge>
-		<defaultFactionType>PlayerColonyAndroid</defaultFactionType>
+		<defaultFactionType>ATR_PlayerAndroidFaction</defaultFactionType>
 		<chemicalAddictionChance>0.00</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
         <initialResistanceRange>13~21</initialResistanceRange>
@@ -97,25 +99,25 @@
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T4Refugee</defName>
 		<label>T4 Android Colonist</label>
-		<race>Tier4Android</race>
+		<race>ATR_Tier4Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T3Refugee</defName>
 		<label>T3 Android Colonist</label>
-		<race>Tier3Android</race>
+		<race>ATR_Tier3Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T2Refugee</defName>
 		<label>T2 Android Colonist</label>
-		<race>Tier2Android</race>
+		<race>ATR_Tier2Android</race>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ATR_BaseMechPlayerPawnKind">
 		<defName>ATR_T1Refugee</defName>
 		<label>T1 Android Colonist</label>
-		<race>Tier1Android</race>
+		<race>ATR_Tier1Android</race>
 	</PawnKindDef>
 
 </Defs>

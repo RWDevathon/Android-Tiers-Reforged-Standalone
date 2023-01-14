@@ -135,7 +135,7 @@ namespace ATReforged
                 {
                     Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
-                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation) == null && controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
+                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
                     {
                         yield return new Command_Action
                         {
@@ -370,7 +370,7 @@ namespace ATReforged
                 if (networkOperationInProgress == -1 && status > -1)
                 { 
                     // If the status is resetting because of a failure, notify that a failure occurred. HandleInterrupt takes care of actual negative events.
-                    if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == HediffDefOf.ATR_MemoryCorruption || targetHediff.def == RimWorld.HediffDefOf.Dementia))
+                    if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == ATR_HediffDefOf.ATR_MemoryCorruption || targetHediff.def == RimWorld.HediffDefOf.Dementia))
                     {
                         Find.LetterStack.ReceiveLetter("ATR_OperationFailure".Translate(), "ATR_OperationFailureDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.NegativeEvent, ThisPawn);
                     }
@@ -380,20 +380,20 @@ namespace ATReforged
                     }
 
                     // All pawns undergo a system reboot upon successful completion of an operation.
-                    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.ATR_LongReboot, ThisPawn, null);
+                    Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, ThisPawn, null);
                     hediff.Severity = 1f;
                     ThisPawn.health.AddHediff(hediff, null, null);
 
                     // Pawns no longer have the mind operation hediff.
-                    Hediff target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
+                    Hediff target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation);
                     if (target != null)
                         ThisPawn.health.RemoveHediff(target);
 
                     // Recipients lose any MindOperation hediffs as well and also reboot.
                     if (recipientPawn != null)
                     {
-                        recipientPawn.health.AddHediff(HediffDefOf.ATR_LongReboot);
-                        target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_MindOperation);
+                        recipientPawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation);
                         if (target != null)
                             recipientPawn.health.RemoveHediff(target);
                     }
@@ -466,11 +466,11 @@ namespace ATReforged
                 // If this is not a cloud pawn, both the surrogate and controller should have Hediff_SplitConsciousness.
                 if (!Utils.gameComp.GetCloudPawns().Contains(ThisPawn))
                 {
-                    Hediff splitConsciousness = HediffMaker.MakeHediff(HediffDefOf.ATR_SplitConsciousness, surrogate);
+                    Hediff splitConsciousness = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_SplitConsciousness, surrogate);
                     surrogate.health.AddHediff(splitConsciousness);
-                    if (!ThisPawn.health.hediffSet.hediffs.Any(hediff => hediff.def == HediffDefOf.ATR_SplitConsciousness))
+                    if (!ThisPawn.health.hediffSet.hediffs.Any(hediff => hediff.def == ATR_HediffDefOf.ATR_SplitConsciousness))
                     {
-                        splitConsciousness = HediffMaker.MakeHediff(HediffDefOf.ATR_SplitConsciousness, ThisPawn);
+                        splitConsciousness = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_SplitConsciousness, ThisPawn);
                         ThisPawn.health.AddHediff(splitConsciousness);
                     }
                 }
@@ -488,7 +488,7 @@ namespace ATReforged
             }
 
             // Remove the surrogate's NoHost hediff.
-            Hediff target = surrogate.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+            Hediff target = surrogate.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_NoController);
             if (target != null)
                 surrogate.health.RemoveHediff(target);
         }
@@ -530,7 +530,7 @@ namespace ATReforged
             // Apply NoHost hediff to player surrogates.
             if (!isForeign)
             {
-                ThisPawn.health.AddHediff(HediffDefOf.ATR_NoController);
+                ThisPawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
                 Linked = -1;
             }
         }
@@ -562,7 +562,7 @@ namespace ATReforged
             Hediff corruption;
             if (Utils.IsConsideredMechanical(pawn))
             {
-                corruption = HediffMaker.MakeHediff(HediffDefOf.ATR_MemoryCorruption, pawn, pawn.health.hediffSet.GetBrain());
+                corruption = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MemoryCorruption, pawn, pawn.health.hediffSet.GetBrain());
                 corruption.Severity = Rand.Range(0.15f, 0.95f);
                 pawn.health.AddHediff(corruption, pawn.health.hediffSet.GetBrain(), null);
             }
@@ -583,11 +583,11 @@ namespace ATReforged
         // An operation has been started. Apply mind operation to this pawn and the recipient pawn (if it exists), and track the current operation in the game component.
         public void HandleInitialization()
         {
-            ThisPawn.health.AddHediff(HediffDefOf.ATR_MindOperation);
+            ThisPawn.health.AddHediff(ATR_HediffDefOf.ATR_MindOperation);
             Utils.gameComp.PushNetworkLinkedPawn(ThisPawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
             if (recipientPawn != null)
             {
-                recipientPawn.health.AddHediff(HediffDefOf.ATR_MindOperation);
+                recipientPawn.health.AddHediff(ATR_HediffDefOf.ATR_MindOperation);
             }
             Messages.Message("ATR_OperationInitiated".Translate(ThisPawn.LabelShort), parent, MessageTypeDefOf.PositiveEvent);
         }
@@ -639,10 +639,10 @@ namespace ATReforged
                     Utils.gameComp.DisconnectFromSkyMind(recipientPawn);
                     Utils.Duplicate(ThisPawn, recipientPawn, false, false);
                     // Duplication may only occur via operation on organic surrogates. Remove the receiver (burns out), remove no host hediff.
-                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
                     if (target != null)
                         recipientPawn.health.RemoveHediff(target);
-                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+                    target = recipientPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_NoController);
                     if (target != null)
                         recipientPawn.health.RemoveHediff(target);
                 }
@@ -654,10 +654,10 @@ namespace ATReforged
                     if (!Utils.IsConsideredMechanicalAndroid(ThisPawn))
                     {
                         Utils.gameComp.DisconnectFromSkyMind(ThisPawn);
-                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
                         if (target != null)
                             ThisPawn.health.RemoveHediff(target);
-                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController);
+                        target = ThisPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_NoController);
                         if (target != null)
                             ThisPawn.health.RemoveHediff(target);
                     }
@@ -733,11 +733,11 @@ namespace ATReforged
                 // It should however have an Autonomous Core or Transceiver hediff, as this allows it to be SkyMind capable (which it definitely is).
                 if (Utils.IsConsideredMechanical(ThisPawn))
                 {
-                    clone.health.AddHediff(HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
+                    clone.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
                 }
                 else
                 {
-                    clone.health.AddHediff(HediffDefOf.ATR_SkyMindTransceiver, clone.health.hediffSet.GetBrain());
+                    clone.health.AddHediff(ATR_HediffDefOf.ATR_SkyMindTransceiver, clone.health.hediffSet.GetBrain());
                 }
 
                 // Duplicate the intelligence of this pawn into the clone (not murder) and add them to the SkyMind network.

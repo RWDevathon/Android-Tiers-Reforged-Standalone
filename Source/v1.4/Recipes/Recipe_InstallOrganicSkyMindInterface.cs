@@ -14,7 +14,7 @@ namespace ATReforged
             if (targetBodyPart != null && !Utils.IsConsideredMechanical(pawn))
             {
                 // If the pawn has a receiver or transceiver already, then we can not install the other (or another one). The two implants are mutually exclusive.
-                Hediff blockingImplant = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindTransceiver) ?? pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_SkyMindReceiver);
+                Hediff blockingImplant = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindTransceiver) ?? pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_SkyMindReceiver);
                 if (blockingImplant == null)
                     yield return targetBodyPart;
             }
@@ -27,14 +27,14 @@ namespace ATReforged
             base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
 
             // If the pawn doesn't have any non-isolated core hediff, the operation failed. Also failed if they're dead now.
-            if (pawn.Dead || !pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == HediffDefOf.ATR_SkyMindReceiver || hediff.def == HediffDefOf.ATR_SkyMindTransceiver).Any())
+            if (pawn.Dead || !pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == ATR_HediffDefOf.ATR_SkyMindReceiver || hediff.def == ATR_HediffDefOf.ATR_SkyMindTransceiver).Any())
                 return;
 
             // There are special considerations for adding these implants. Receiver chips kill the current mind.
-            if (recipe.addsHediff == HediffDefOf.ATR_SkyMindReceiver)
+            if (recipe.addsHediff == ATR_HediffDefOf.ATR_SkyMindReceiver)
             {
                 Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
-                pawn.health.AddHediff(HediffDefOf.ATR_NoController);
+                pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
             }
         }
     }

@@ -25,7 +25,7 @@ namespace ATReforged
                 float tendQuality;
                 if (doctor != null)
                 {
-                    tendQuality = doctor.GetStatValue(StatDefOf.MechanicalTendQuality, true);
+                    tendQuality = doctor.GetStatValue(ATR_StatDefOf.ATR_MechanicalTendQuality, true);
                 }
                 else
                 {
@@ -35,7 +35,7 @@ namespace ATReforged
                 Building_Bed building_Bed = patient?.CurrentBed();
                 if (building_Bed != null)
                 {
-                    tendQuality += building_Bed.GetStatValue(StatDefOf.MechanicalTendQualityOffset, true);
+                    tendQuality += building_Bed.GetStatValue(ATR_StatDefOf.ATR_MechanicalTendQualityOffset, true);
                 }
                 if (doctor == patient && doctor != null)
                 {

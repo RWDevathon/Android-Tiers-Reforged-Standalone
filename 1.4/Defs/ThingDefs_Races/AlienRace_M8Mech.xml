@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- TODO: Remove for 1.0 release candidate -->
-
+    <!-- Reserved for future expansion. Do not uncomment - SkyMindCore is not implemented for pawns at this time.
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
-		<defName>M8Mech</defName>
+		<defName>ATR_M8Mech</defName>
 		<label>M8 Mechanised infantry</label>
 		<description>A prototype M7 mechanized infantry, equipped with a limited SkyCore unit and SkyMind tower. These units are very strong, powerful war machines and allow digital consciousness to move on battlefields but are subsequently slow and have limited internal storage capacity to them.</description>
 		<comps>
@@ -104,9 +103,9 @@
 	</AlienRace.ThingDef_AlienRace>
 
 	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>M8MechPawn</defName>
+		<defName>ATR_M8MechPawn</defName>
 		<label>M8 mech</label>
-		<race>M8Mech</race>
+		<race>ATR_M8Mech</race>
 		<combatPower>1000</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>9999</ecoSystemWeight>
@@ -129,4 +128,5 @@
 		<initialResistanceRange>13~21</initialResistanceRange>
 	</PawnKindDef>
 
+    -->
 </Defs>

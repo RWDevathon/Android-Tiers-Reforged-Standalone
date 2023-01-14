@@ -5,17 +5,17 @@
     <RecipeDef Name="ATR_surgeryMechanical" Abstract="True">
         <effectWorking>Repair</effectWorking>
         <soundWorking>Recipe_Machining</soundWorking>
-        <workSpeedStat>MechanicalOperationSpeed</workSpeedStat>
+        <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
         <workSkill>Crafting</workSkill>
         <workSkillLearnFactor>16</workSkillLearnFactor>
         <anesthetize>false</anesthetize>
 		<recipeUsers>
-			<li>Tier1Android</li>
-			<li>Tier2Android</li>
-			<li>Tier3Android</li>
-			<li>Tier4Android</li>
-			<li>Tier5Android</li>
-            <li>ATR_Mark1Warrior</li>
+			<li>ATR_Tier1Android</li>
+			<li>ATR_Tier2Android</li>
+			<li>ATR_Tier3Android</li>
+			<li>ATR_Tier4Android</li>
+			<li>ATR_Tier5Android</li>
+            <!--<li>ATR_Mark1Warrior</li> Reserved for future content-->
 		</recipeUsers>
     </RecipeDef>
  

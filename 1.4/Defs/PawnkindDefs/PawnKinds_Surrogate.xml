@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <!-- BASE DEFINITIONS -->
-    <PawnKindDef Name="SurrogateBase" Abstract="True">
+    <PawnKindDef Name="ATR_SurrogateBase" Abstract="True">
         <backstoryFiltersOverride>
             <li>
                 <categories>
@@ -14,9 +12,9 @@
         </backstoryFiltersOverride>
     </PawnKindDef>
 
-    <PawnKindDef Name="AndroidSurrogateBase" ParentName="SurrogateBase" Abstract="True">
+    <PawnKindDef Name="ATR_AndroidSurrogateBase" ParentName="ATR_SurrogateBase" Abstract="True">
         <labelPlural>Surrogate Androids</labelPlural>
-        <defaultFactionType>MechanicalMarauders</defaultFactionType>
+        <defaultFactionType>ATR_MechanicalMarauders</defaultFactionType>
         <minGenerationAge>0</minGenerationAge>
         <maxGenerationAge>30</maxGenerationAge>
         <aiAvoidCover>false</aiAvoidCover>
@@ -31,10 +29,10 @@
 
     <!-- CORE MODEL DEFINITIONS -->
 
-    <PawnKindDef ParentName = "AndroidSurrogateBase">
-        <defName>AndroidT2Surrogate</defName>
+    <PawnKindDef ParentName = "ATR_AndroidSurrogateBase">
+        <defName>ATR_AndroidT2Surrogate</defName>
         <label>T2 Android Surrogate</label>
-	    <race>Tier2Android</race>
+	    <race>ATR_Tier2Android</race>
         <invNutrition>3.25</invNutrition>
         <combatPower>90</combatPower>
         <apparelTags>
@@ -63,10 +61,10 @@
         <techHediffsChance>0.3</techHediffsChance>
     </PawnKindDef>
 
-    <PawnKindDef ParentName = "AndroidSurrogateBase">
-        <defName>AndroidT3Surrogate</defName>
+    <PawnKindDef ParentName = "ATR_AndroidSurrogateBase">
+        <defName>ATR_AndroidT3Surrogate</defName>
         <label>T3 Android Surrogate</label>
-	    <race>Tier3Android</race>
+	    <race>ATR_Tier3Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>120</combatPower>
         <apparelTags>
@@ -101,10 +99,10 @@
 	    <initialWillRange>0~0</initialWillRange>
     </PawnKindDef>
 
-    <PawnKindDef ParentName = "AndroidSurrogateBase">
-        <defName>AndroidT4Surrogate</defName>
+    <PawnKindDef ParentName = "ATR_AndroidSurrogateBase">
+        <defName>ATR_AndroidT4Surrogate</defName>
         <label>T4 Android Surrogate</label>
-	    <race>Tier4Android</race>
+	    <race>ATR_Tier4Android</race>
         <invNutrition>2.55</invNutrition>
         <combatPower>160</combatPower>
         <apparelTags>

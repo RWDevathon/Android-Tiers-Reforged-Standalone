@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <ThingDef ParentName="TrapIEDBase">
-        <defName>TrapIED_Microscyther</defName>
+        <defName>ATR_TrapIED_Microscyther</defName>
         <label>Microscyther trap</label>
         <description>A pair of microscyther shells with a simple pressure/contact trigger to unleash the units within. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
         <graphicData>
             <texPath>Things/Buildings/Security/IEDSwarm</texPath>
         </graphicData>
         <costList>
-            <MicroscytherShell>2</MicroscytherShell>
+            <ATR_MicroscytherShell>2</ATR_MicroscytherShell>
         </costList>
         <designationHotKey>Misc10</designationHotKey>
         <comps>
@@ -19,7 +17,7 @@
             <explosiveRadius>1.9</explosiveRadius>
             <explosiveDamageType>Smoke</explosiveDamageType>
             <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
-            <postExplosionSpawnThingDef>MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnThingDef>ATR_MicroScytherGenerator</postExplosionSpawnThingDef>
             <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>ExtinguisherExplosion</explosionEffect>

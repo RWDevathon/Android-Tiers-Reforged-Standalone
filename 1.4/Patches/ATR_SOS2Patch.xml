@@ -6,7 +6,7 @@
 			<li>Save Our Ship 2</li>
 		</mods>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName = "Tier5Android"]</xpath>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName = "ATR_Tier5Android"]</xpath>
 			<value>
 				<tradeTags>
 					<li>AnimalInsectSpace</li>

@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <ThingDef ParentName="ATR_MechanicalAnimalThingBase">
-        <defName>DroneNutritionUnit</defName>
+        <defName>ATR_DroneNutritionUnit</defName>
         <label>Nutrition unit</label>
         <description>A lumbering drone unit specialized in the optimization of generating nutrition from organic matter for human consumption. Unlike other mechanical drones, this unit is quite rare amongst android societies given its intended purpose. With an almost disturbingly long shelf-life and extremely high nutritive content, acquisition of units like this have led to population booms on many worlds - and curiously enough by extension, many wars.</description>
         <statBases>
@@ -57,9 +55,9 @@
     </ThingDef>
  
     <PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
-        <defName>DroneNutritionUnit</defName>
+        <defName>ATR_DroneNutritionUnit</defName>
         <label>Nutrition unit</label>
-        <race>DroneNutritionUnit</race>
+        <race>ATR_DroneNutritionUnit</race>
         <combatPower>20</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
 		<ecoSystemWeight>0.5</ecoSystemWeight>

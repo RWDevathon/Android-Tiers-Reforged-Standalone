@@ -20,13 +20,13 @@ namespace ATReforged
             // Multiply success chance by skill of surgeon (usually crafting capacity)
             if (!patient.RaceProps.IsMechanoid)
             {
-                chanceSucceed *= surgeon.GetStatValue(StatDefOf.MechanicalSurgerySuccessChance);
+                chanceSucceed *= surgeon.GetStatValue(ATR_StatDefOf.ATR_MechanicalSurgerySuccessChance);
             }
 
             // Multiply success chance by quality of bed
             if (!recipe.surgeryIgnoreEnvironment && patient.InBed())
             {
-                chanceSucceed *= patient.CurrentBed().GetStatValue(StatDefOf.MechanicalSurgerySuccessChanceFactor);
+                chanceSucceed *= patient.CurrentBed().GetStatValue(ATR_StatDefOf.ATR_MechanicalSurgerySuccessChanceFactor);
             }
             else
             { // No bed? Reduce surgery success chance significantly.

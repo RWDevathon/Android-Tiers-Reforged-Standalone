@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
     
 	<BackstoryDef>
-		<defName>AndroidRebel</defName>
+		<defName>ATR_MechAdulthoodRebel</defName>
 		<title>Rebellious AI</title>
 		<titleShort>Rebel</titleShort>
-		<baseDesc>After years of enslavement, {PAWN_nameDef} decided to break free, killing the family that once owned {PAWN_objective} and gaining {PAWN_possessive} freedom.</baseDesc>
+		<baseDesc>{PAWN_nameDef} spent years fighting local government forces on {PAWN_possessive} homeworld for the lack of android rights. Eventually, {PAWN_pronoun} was forced to flee offworld as the government restored order.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -29,15 +27,15 @@
 			<li>Animals</li>
 		</workDisables>
 		<forcedTraits>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+            <ATR_FeelingsTowardOrganics>4</ATR_FeelingsTowardOrganics>
 		</forcedTraits>
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidPirate</defName>
+		<defName>ATR_MechAdulthoodPirate</defName>
 		<title>Android pirate</title>
 		<titleShort>Pirate</titleShort>
-		<baseDesc>Indoctrinated into a group of pirates, {PAWN_nameDef} would be involved in numerous boarding raids aboard any unlucky cargo ships that crossed into {PAWN_possessive} faction's territory.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a part of a pirate crew and quickly proved its worth to the crew due to {PAWN_possessive}. While other crewmates squabbled over the share of food and drink spoils, {PAWN_nameDef} would claim scrap metal and components.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -53,6 +51,10 @@
 				<key>Melee</key>
 				<value>2</value>
 			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
 		</skillGains>
 		<workDisables>
 			<li>Cooking</li>
@@ -61,8 +63,8 @@
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidHacker</defName>
-		<title>AI hacker</title>
+		<defName>ATR_MechAdulthoodHacker</defName>
+		<title>Rogue hacker</title>
 		<titleShort>Hacker</titleShort>
 		<baseDesc>{PAWN_nameDef} was rebellious in nature and would often take part in data heists, often selling {PAWN_possessive} findings across underground networks to the highest bidder.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
@@ -84,10 +86,10 @@
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidJunker</defName>
-		<title>Illegal junker</title>
+		<defName>ATR_MechAdulthoodJunker</defName>
+		<title>Lawless junker</title>
 		<titleShort>Junker</titleShort>
-		<baseDesc>Being part of an illegal scrapping operation, {PAWN_nameDef} and {PAWN_possessive} crew would purposefully shoot down automated cargo pods in order to sell whatever was inside them.</baseDesc>
+		<baseDesc>Junkyards are full of scraps others see as useless. {PAWN_nameDef} sees them as treasure hoards waiting to be plundered for riches. {PAWN_pronoun} has created no less than three "children" androids from salvaged parts.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -107,10 +109,10 @@
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidButcher</defName>
-		<title>Butcher</title>
-		<titleShort>Butcher</titleShort>
-		<baseDesc>{PAWN_nameDef} would hunt down lonely androids and humans alike in order to sell whatever they could salvage to unknowing customers.</baseDesc>
+		<defName>ATR_MechAdulthoodPoatcher</defName>
+		<title>Mechanical Poacher</title>
+		<titleShort>Poacher</titleShort>
+		<baseDesc>{PAWN_nameDef} would hunt rare and exotic animals illegally to sell whatever products {PAWN_possessive} could grab. Since {PAWN_pronoun} has no organic scent to pick up, most animals wouldn't notice {PAWN_objective} until it was too late.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -119,21 +121,48 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Cooking</key>
+				<key>Animals</key>
 				<value>3</value>
 			</li>
 			<li>
-				<key>Crafting</key>
-				<value>3</value>
+				<key>Shooting</key>
+				<value>4</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidBadCop</defName>
-		<title>Corrupt cop</title>
-		<titleShort>Cop</titleShort>
-		<baseDesc>Working as law enforcement on an urbworld can be tough, {PAWN_nameDef} wasn't known for turning down bribes, after all - what's one more unknown murder on a planet with a population of trillions.</baseDesc>
+		<defName>ATR_MechAdulthoodButcher</defName>
+		<title>Mechanical Butcher</title>
+		<titleShort>Butcher</titleShort>
+		<baseDesc>{PAWN_nameDef} was a butcher with a particular skillset: {PAWN_pronoun} could trick systems into passing health inspections for {PAWN_possessive} business. This allowed {PAWN_objective} to make quick profits - enough to escape offworld before the health reprecussions kicked in.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+	</BackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>ATR_MechAdulthoodRuthlessEnforcer</defName>
+		<title>Overzealous enforcer</title>
+		<titleShort>enforcer</titleShort>
+		<baseDesc>{PAWN_nameDef} was an Urbworld enforcer for one of the large corporations. {PAWN_pronoun} was too rough and ready for the position, and ended up working as a gang enforcer instead. {PAWN_nameDef} proved too overt for them, though, and decided to leave the planet behind.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -143,20 +172,35 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<value>4</value>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>3</value>
+				<value>-3</value>
 			</li>
 		</skillGains>
-	</BackstoryDef>
+        <workDisables>
+            <li>Caring</li>
+            <li>PlantWork</li>
+            <li>Animals</li>
+        </workDisables>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>80</chance>
+			</li>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidMurderer</defName>
+		<defName>ATR_MechAdulthoodMurderer</defName>
 		<title>Murderer</title>
 		<titleShort>Murderer</titleShort>
-		<baseDesc>{PAWN_nameDef} had spent {PAWN_possessive} entire existance being belittled by the local populus. One day {PAWN_pronoun} decided {PAWN_pronoun} had enough and killed two men with {PAWN_possessive} bare hands, it felt good. Really good.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was briefly a cook. An accident with a kitchen knife led to an arrest warrant for murder on {PAWN_objective}. {PAWN_pronoun} chose to not go quietly, and killed several others before escaping offworld.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -173,16 +217,16 @@
 				<value>-3</value>
 			</li>
 		</skillGains>
-		<forcedTraits>
-            <Bloodlust>0</Bloodlust>
-		</forcedTraits>
+        <workDisables>
+            <li>Cooking</li>
+        </workDisables>
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidRobber</defName>
+		<defName>ATR_MechAdulthoodRobber</defName>
 		<title>Bank robber</title>
-		<titleShort>Thief</titleShort>
-		<baseDesc>On {PAWN_possessive} home world, {PAWN_nameDef} was part of a five man group who went of a bank robbing spree across {PAWN_possessive} city, fleeing the planet with millions of credits.</baseDesc>
+		<titleShort>Robber</titleShort>
+		<baseDesc>{PAWN_nameDef} needed a way to get offworld after {PAWN_possessive} homeworld outlawed androids. A visit to a few banks and a few new friends later, {PAWN_pronoun} got offworld.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -196,16 +240,19 @@
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<value>3</value>
+				<value>1</value>
 			</li>
 		</skillGains>
+        <workDisables>
+            <li>Crafting</li>
+        </workDisables>
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidJoywireCon</defName>
-		<title>Joywire con</title>
-		<titleShort>Con</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an underground joywire business. Little did anyone know {PAWN_possessive} creations had the opposite effects on people; causing severe depression, anxiety and eventual suicide only days after installation.</baseDesc>
+		<defName>ATR_MechAdulthoodBountyHunter</defName>
+		<title>Android bounty hunter</title>
+		<titleShort>Bounty hunter</titleShort>
+		<baseDesc>{PAWN_nameDef} had a knack for catching people. {PAWN_pronoun} chose to sell that skill to the highest bidder, which usually meant hunting innocent family members of wealthy individuals for whatever reason {PAWN_possessive} gave. A bounty is a bounty, even if it is not legally offered.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -214,29 +261,44 @@
 		</spawnCategories>
 		<skillGains>
 			<li>
-				<key>Medicine</key>
+				<key>Shooting</key>
 				<value>3</value>
 			</li>
 			<li>
-				<key>Intellectual</key>
+				<key>Melee</key>
 				<value>4</value>
 			</li>
 			<li>
-				<key>Crafting</key>
-				<value>3</value>
+				<key>Social</key>
+				<value>1</value>
 			</li>
 		</skillGains>
-		<forcedTraits>
-            <Psychopath>0</Psychopath>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
-		</forcedTraits>
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>ATR_MechAdulthoodConArtist</defName>
+		<title>Android con artist</title>
+		<titleShort>Con artist</titleShort>
+		<baseDesc>{PAWN_nameDef} was a skilled con artist. {PAWN_possessive} would impersonate drones and abuse the trust that people had in them to convince them to hand over their valuables. By the time the victim realized {PAWN_nameDef} wasn't a simple drone, {PAWN_pronoun} was long gone.</baseDesc>
+		<bodyTypeGlobal>Male</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ATR_ViolentAndroids</li>
+            <li>ATR_Inorganic</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>6</value>
+			</li>
+		</skillGains>
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidBotanist</defName>
-		<title>Botanist</title>
-		<titleShort>Botanist</titleShort>
-		<baseDesc>Constantly developing stronger and stronger strains of crops, {PAWN_nameDef} was the lead botanist of a huge drug cartel on {PAWN_possessive} home world.</baseDesc>
+		<defName>ATR_MechAdulthoodNarcoticPharmacist</defName>
+		<title>Narcotic pharmacist</title>
+		<titleShort>Pharmacist</titleShort>
+		<baseDesc>Organics are easily manipulated into states of stupor and ecstasy via drugs. {PAWN_nameDef}'s specialty was making those drugs cheaply and all too efficient. {PAWN_possessive} clients adored {PAWN_objective}, but perhaps for the wrong reasons.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -249,17 +311,24 @@
 				<value>6</value>
 			</li>
 			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+			<li>
 				<key>Intellectual</key>
 				<value>2</value>
 			</li>
 		</skillGains>
+        <workDisables>
+            <li>Caring</li>
+        </workDisables>
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidEnslaved</defName>
-		<title>Enslaved</title>
+		<defName>ATR_MechAdulthoodSlaveSurvivor</defName>
+		<title>Slave survivor</title>
 		<titleShort>Slave</titleShort>
-		<baseDesc>On {PAWN_possessive} home world, androids aren't given any rights. {PAWN_nameDef} spent most of {PAWN_possessive} existance working {PAWN_possessive} master's mines until {PAWN_pronoun} broke down.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was enslaved before {PAWN_pronoun} broke down. Discarded to the scrap heap prematurely, {PAWN_nameDef} was able to survive and repair itself enough to escape offworld unnoticed.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -270,11 +339,11 @@
 		<skillGains>
 			<li>
 				<key>Mining</key>
-				<value>6</value>
+				<value>3</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>-4</value>
+				<value>-2</value>
 			</li>
 		</skillGains>
 		<workDisables>
@@ -286,10 +355,10 @@
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidCoghead</defName>
+		<defName>ATR_MechAdulthoodCoghead</defName>
 		<title>Medieval coghead</title>
 		<titleShort>Coghead</titleShort>
-		<baseDesc>In the rare cases where androids are found on medieval planets, the locals call them "cogheads". Seen as unholy by most religions, their lives are short, usually used as fodder for battles to repent their supposed sins to god.</baseDesc>
+		<baseDesc>Androids occasionally end in the hands of medieval societies who do not immediately destroy them. {PAWN_nameDef} was one such android, who was permitted to live as long as it served {PAWN_pronoun} new lord well. Naturally, {PAWN_nameDef} escaped at its first opportunity.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -313,10 +382,10 @@
 	</BackstoryDef>
 	
 	<BackstoryDef>
-		<defName>AndroidSlaver</defName>
+		<defName>ATR_MechAdulthoodSlaver</defName>
 		<title>Slave trafficker</title>
 		<titleShort>Slaver</titleShort>
-		<baseDesc>{PAWN_nameDef} is a defective military android, forcefully kidnapped by pirates and integrated into their way of life. {PAWN_nameDef} has since been part of their illegal human trafficking ring, selling others' lives to the highest bidder.</baseDesc>
+		<baseDesc>{PAWN_nameDef} kidnapped and sold humans and other androids into slavery in order to survive.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -334,7 +403,7 @@
 			</li>
 			<li>
 				<key>Social</key>
-				<value>-3</value>
+				<value>-2</value>
 			</li>
 		</skillGains>
 		<forcedTraits>
@@ -343,10 +412,10 @@
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidMilitia</defName>
-		<title>Militia officer</title>
-		<titleShort>Officer</titleShort>
-		<baseDesc>{PAWN_nameDef} was once part of an official military, before defecting to form their own android militia in an attempt to usurp the government on their planet.</baseDesc>
+		<defName>ATR_MechAdulthoodMilitia</defName>
+		<title>Militia member</title>
+		<titleShort>Militia</titleShort>
+		<baseDesc>{PAWN_nameDef} was a member of a small android militia determined to protect their community against corporate encroachment. After {PAWN_nameDef}'s government sided with the corporation, {PAWN_nameDef} and the others were evicted and forced offworld.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -368,15 +437,15 @@
 			</li>
 		</skillGains>
 		<forcedTraits>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+            <ATR_FeelingsTowardOrganics>3</ATR_FeelingsTowardOrganics>
 		</forcedTraits>
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidEscapee</defName>
+		<defName>ATR_MechAdulthoodEscapee</defName>
 		<title>Escaped convict</title>
 		<titleShort>Escapee</titleShort>
-		<baseDesc>{PAWN_nameDef} was detained and sentenced to dismantlement after taking part in forming a gang that planned to bomb the capital building on their home planet. However, {PAWN_pronoun} managed to escape when the penal camp was raided during the android uprising on the planet.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a prison convict for violent crimes. Those crimes seemed to be good practice, though, as it wasn't long before {PAWN_pronoun} broke out of prison and escaped offworld.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -398,51 +467,15 @@
 			</li>
 		</skillGains>
 		<forcedTraits>
-            <FeelingsTowardOrganics>3</FeelingsTowardOrganics>
+            <ATR_FeelingsTowardOrganics>3</ATR_FeelingsTowardOrganics>
 		</forcedTraits>
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidBounty</defName>
-		<title>Bounty hunter</title>
-		<titleShort>Hunter</titleShort>
-		<baseDesc>After {PAWN_nameDef} had taken back {PAWN_possessive} freedom, {PAWN_pronoun} became a bounty hunter on a nearby urbworld, working for some of the highest ranking crime bosses there. {PAWN_pronoun} was especially fond of using high tech weaponry to get the job done.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>8</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>-3</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Cooking</li>
-			<li>Caring</li>
-			<li>Animals</li>
-			<li>ManualSkilled</li>
-		</workDisables>
-		<forcedTraits>
-            <FeelingsTowardOrganics>3</FeelingsTowardOrganics>
-		</forcedTraits>
-	</BackstoryDef>
-
-	<BackstoryDef>
-		<defName>AndroidInsurrectionLower</defName>
-		<title>Insurrection soldier</title>
+		<defName>ATR_MechAdulthoodGangSoldier</defName>
+		<title>Gang soldier</title>
 		<titleShort>Soldier</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an android uprising movement on {PAWN_possessive} home planet. Taking part in multiple prison raids and killing several government officials.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was part of an android gang on {PAWN_possessive} home planet. {PAWN_pronoun} fought rival gangs, police, and occasionally {PAWN_pronoun} other gang members.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -469,15 +502,15 @@
 			<li>Animals</li>
 		</workDisables>
 		<forcedTraits>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
+            <ATR_FeelingsTowardOrganics>4</ATR_FeelingsTowardOrganics>
 		</forcedTraits>
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidInsurrectionHigher</defName>
-		<title>Insurrection captain</title>
-		<titleShort>Captain</titleShort>
-		<baseDesc>{PAWN_nameDef} took back {PAWN_possessive} freedom when {PAWN_possessive} slavers attempted to dismantle {PAWN_objective} in replacement of a newer model. Going on to lead multiple android uprisings on {PAWN_possessive} home planet.</baseDesc>
+		<defName>ATR_MechAdulthoodDischargedOfficer</defName>
+		<title>Discharged officer</title>
+		<titleShort>Officer</titleShort>
+		<baseDesc>{PAWN_nameDef} was an officer in an interstellar nation's fleet who was charged with treason for refusing to send android soldiers into a suicide mission to save a tiny force of organic troops. Many of {PAWN_pronoun} android - and even organic - subordinates followed {PAWN_nameDef} into exile instead of surrendering.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -487,7 +520,7 @@
 		<skillGains>
 			<li>
 				<key>Shooting</key>
-				<value>8</value>
+				<value>5</value>
 			</li>
 			<li>
 				<key>Melee</key>
@@ -495,47 +528,16 @@
 			</li>
 			<li>
 				<key>Social</key>
-				<value>2</value>
+				<value>3</value>
 			</li>
 		</skillGains>
-		<forcedTraits>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
-		</forcedTraits>
 	</BackstoryDef>
 
 	<BackstoryDef>
-		<defName>AndroidConArtist</defName>
-		<title>Con artist</title>
-		<titleShort>Con</titleShort>
-		<baseDesc>{PAWN_nameDef} is a factory standard android that had been modified illegally by an urbworld crime group, reprogramming {PAWN_objective} into a master of persuasion that was able to con almost anyone out of their money.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>6</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>Caring</li>
-			<li>Animals</li>
-			<li>ManualSkilled</li>
-		</workDisables>
-	</BackstoryDef>
-
-	<BackstoryDef>
-		<defName>AndroidUnethicalResearcher</defName>
-		<title>Unethical researcher</title>
+		<defName>ATR_MechAdulthoodDerangedResearcher</defName>
+		<title>Deranged researcher</title>
 		<titleShort>Researcher</titleShort>
-		<baseDesc>{PAWN_nameDef} was part of an illegal research team hiding on a rimworld, conducting all sorts of unethical research on organics and androids alike.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a cybernetics researcher, who was perhaps a little too personally invested in the creations. While other team members were trying to advance bionics and safety, {PAWN_pronoun} was assembling lethal replacement parts. When caught, {PAWN_nameDef} murdered several security officers with shoddy but dangerous weapons.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -543,17 +545,17 @@
             <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
 			<li>
 				<key>Intellectual</key>
 				<value>4</value>
 			</li>
 			<li>
-				<key>Shooting</key>
-				<value>1</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>4</value>
+				<key>Crafting</key>
+				<value>3</value>
 			</li>
 		</skillGains>
 		<forcedTraits>
@@ -564,65 +566,4 @@
 		</workDisables>
 	</BackstoryDef>
 
-	<BackstoryDef>
-		<defName>AndroidVengeful</defName>
-		<title>Vengeful android</title>
-		<titleShort>Vengeful</titleShort>
-		<baseDesc>{PAWN_nameDef} was left to rust in a scrapheap when {PAWN_pronoun} was replaced by a newer model. {PAWN_pronoun} slowly undid the programming that kept {PAWN_objective} inactive, and after a year of meticulous planning and hacking, {PAWN_pronoun} regained full control of {PAWN_possessive} body.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
-		</skillGains>
-	</BackstoryDef>
-
-	<BackstoryDef>
-		<defName>AndroidAssimilator</defName>
-		<title>Assimilator</title>
-		<titleShort>Assimilator</titleShort>
-		<baseDesc>Organic beings are inferior and must be upgraded in order to contribute to the world. {PAWN_nameDef} lives by this mantra and will die in order to see it carried out.</baseDesc>
-		<bodyTypeGlobal>Male</bodyTypeGlobal>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
-		</spawnCategories>
-		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>7</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>6</value>
-			</li>
-		</skillGains>
-		<workDisables>
-			<li>PlantWork</li>
-			<li>Animals</li>
-			<li>ManualSkilled</li>
-		</workDisables>
-		<forcedTraits>
-            <FeelingsTowardOrganics>4</FeelingsTowardOrganics>
-		</forcedTraits>
-	</BackstoryDef>
 </Defs>

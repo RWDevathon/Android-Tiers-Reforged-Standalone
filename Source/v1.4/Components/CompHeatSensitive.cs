@@ -61,9 +61,7 @@ namespace ATReforged
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
-            //Enregistrement dans la liste  dispositifs senseible a la temperature
-            if (parent != null)
-                Utils.gameComp.PushHeatSensitiveDevice((Building)parent);
+            Utils.gameComp.PushHeatSensitiveDevice((Building)parent);
         }
 
         // Checker for heat on normal Ticks. 250x reduced impact to check heat damage.

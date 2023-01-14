@@ -9,11 +9,11 @@
 			<texPath>Things/Buildings/MechanicBed/MechanicBed</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(1.35,2.1)</drawSize>
+			<drawSize>(1,2)</drawSize>
 		</graphicData>
 		<thingClass>ATReforged.Building_ChargingBed</thingClass>
 		<tickerType>Rare</tickerType>
-		<designationCategory>AndroidTiersDesignation</designationCategory>
+		<designationCategory>ATR_AndroidTiersDesignation</designationCategory>
 		<comps>
             <li>
                 <compClass>ATReforged.CompPawnCharger</compClass>
@@ -39,8 +39,8 @@
 			<BedRestEffectiveness>1.06</BedRestEffectiveness>
 			<Comfort>0.70</Comfort>
 			<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
-			<MechanicalTendQualityOffset>0.20</MechanicalTendQualityOffset>
-			<MechanicalSurgerySuccessChanceFactor>1.3</MechanicalSurgerySuccessChanceFactor>
+			<ATR_MechanicalTendQualityOffset>0.20</ATR_MechanicalTendQualityOffset>
+			<ATR_MechanicalSurgerySuccessChanceFactor>1.3</ATR_MechanicalSurgerySuccessChanceFactor>
 			<SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
 		</statBases>
 		<size>(1,2)</size>
@@ -75,7 +75,7 @@
         <label>Mechanic cabinet</label>
         <description>A small cabinet that can be used in conjunction with mechanical-compatible beds. It contains a number of useful tools for further enhancing mechanic operations.</description>
         <surfaceType>Item</surfaceType>
-        <designationCategory>AndroidTiersDesignation</designationCategory>
+        <designationCategory>ATR_AndroidTiersDesignation</designationCategory>
         <rotatable>false</rotatable>
         <graphicData>
             <texPath>Things/Buildings/MechanicCabinet</texPath>
@@ -107,7 +107,7 @@
         <comps>
             <li Class="CompProperties_Facility">
                 <statOffsets>
-                    <MechanicalSurgerySuccessChanceFactor>0.08</MechanicalSurgerySuccessChanceFactor>
+                    <ATR_MechanicalSurgerySuccessChanceFactor>0.08</ATR_MechanicalSurgerySuccessChanceFactor>
                 </statOffsets>
                 <maxSimultaneous>2</maxSimultaneous>
                 <mustBePlacedAdjacent>true</mustBePlacedAdjacent>

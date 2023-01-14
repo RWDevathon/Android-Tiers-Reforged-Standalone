@@ -40,7 +40,7 @@ namespace ATReforged
                     // All androids that need cores (by def extension) receive one by default. Cases where that is not desired can remove it there.
                     if (Utils.IsConsideredMechanicalAndroid(__result) && __result.def.GetModExtension<ATR_MechTweaker>()?.needsCoreAsAndroid == true)
                     {
-                        __result.health.AddHediff(HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
+                        __result.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, __result.health.hediffSet.GetBrain());
                     }
                     // Drones have some special mechanics that need to be specifically handled.
                     else if (Utils.IsConsideredMechanicalDrone(__result))

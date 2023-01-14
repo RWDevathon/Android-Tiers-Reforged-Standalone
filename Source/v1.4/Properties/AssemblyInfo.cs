@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Android Tiers Reforged")]
-[assembly: AssemblyCopyright("Copyright ©  2022 Killathon")]
+[assembly: AssemblyCopyright("Copyright © 2022 Killathon")]
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("4ed7b8ad-47e8-4436-a9bf-e664b17196d7")]

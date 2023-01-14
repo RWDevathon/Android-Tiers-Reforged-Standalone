@@ -57,7 +57,7 @@ namespace ATReforged
                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate ()
                 {
                     myPawn.ownership.ClaimBedIfNonMedical(this);
-                    Job job = new Job(JobDefOf.RechargeBattery, new LocalTargetInfo(this));
+                    Job job = new Job(ATR_JobDefOf.ATR_RechargeBattery, new LocalTargetInfo(this));
                     if (Medical)
                     {
                         job.restUntilHealed = true;

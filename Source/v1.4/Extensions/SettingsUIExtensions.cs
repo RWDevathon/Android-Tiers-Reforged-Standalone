@@ -19,9 +19,9 @@ namespace ATReforged
         public static readonly Color iconMouseOverColor = new Color(0.6f, 0.6f, 0.4f, 1f);
         public const float PawnListSize = (IconGap + IconSize) * 5;
 
-        public static void PawnSelector(this Listing_Standard instance, IEnumerable<ThingDef> pawnOptions, HashSet<ThingDef> selectedPawns, string selectedLabel, string unselectedLabel, Action onChange = null)
+        public static void PawnSelector(this Listing_Standard instance, IEnumerable<ThingDef> pawnOptions, HashSet<string> selectedPawns, string selectedLabel, string unselectedLabel, Action onChange = null)
         {
-            IEnumerable<ThingDef> unselectedPawns = pawnOptions.Where(w => !ATReforged_Settings.isConsideredMechanical.Contains(w));
+            IEnumerable<ThingDef> unselectedPawns = pawnOptions.Where(w => !ATReforged_Settings.isConsideredMechanical.Contains(w.defName));
             TextAnchor anchorSave = Text.Anchor;
             Color colorSave = GUI.color;
             GUI.color = Color.white;
@@ -55,7 +55,7 @@ namespace ATReforged
             instance.GetRect((Mathf.Max(leftRows, rightRows) * (IconSize + IconGap)) - IconGap);
 
             List<ThingDef> orderedUnselectedPawns = unselectedPawns.ToList().OrderBy(w => w.label).ToList();
-            List<ThingDef> orderedSelectedPawns = selectedPawns.ToList().OrderBy(w => w.label).ToList();
+            List<ThingDef> orderedSelectedPawns = FilteredGetters.GetThingDefsFromDefNames(selectedPawns).OrderBy(w => w.label).ToList();
 
             for (int i = 0; i < orderedSelectedPawns.Count; i++)
             {
@@ -64,9 +64,9 @@ namespace ATReforged
                 bool interacted = DrawIconForPawn(orderedSelectedPawns[i], leftRect, new Vector2(IconSize * collum + collum * IconGap, IconSize * row + row * IconGap));
                 if (interacted)
                 {
-                    selectedPawns.Remove(orderedSelectedPawns[i]);
-                    ATReforged_Settings.isConsideredMechanical.Remove(orderedSelectedPawns[i]);
-                    ATReforged_Settings.canUseBattery.Remove(orderedSelectedPawns[i]);
+                    selectedPawns.Remove(orderedSelectedPawns[i].defName);
+                    ATReforged_Settings.isConsideredMechanical.Remove(orderedSelectedPawns[i].defName);
+                    ATReforged_Settings.canUseBattery.Remove(orderedSelectedPawns[i].defName);
                     onChange?.Invoke();
                 }
             }
@@ -78,8 +78,8 @@ namespace ATReforged
                 bool interacted = DrawIconForPawn(orderedUnselectedPawns[i], rightRect, new Vector2(IconSize * collum + collum * IconGap, IconSize * row + row * IconGap));
                 if (interacted)
                 {
-                    selectedPawns.Add(orderedUnselectedPawns[i]);
-                    ATReforged_Settings.isConsideredMechanical.Add(orderedUnselectedPawns[i]);
+                    selectedPawns.Add(orderedUnselectedPawns[i].defName);
+                    ATReforged_Settings.isConsideredMechanical.Add(orderedUnselectedPawns[i].defName);
                     AddChargeCapable(orderedUnselectedPawns[i]);
                     onChange?.Invoke();
                 }
@@ -90,7 +90,7 @@ namespace ATReforged
         {
             if (pawn.race.intelligence > Intelligence.Animal || pawn.race.trainability != TrainabilityDefOf.None)
             {
-                ATReforged_Settings.canUseBattery.Add(pawn);
+                ATReforged_Settings.canUseBattery.Add(pawn.defName);
             }
         }
 

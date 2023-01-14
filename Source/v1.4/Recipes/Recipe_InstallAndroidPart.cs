@@ -42,7 +42,7 @@ namespace ATReforged
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         { 
             // Mechanical units must undergo a short reboot on all installations.
-            pawn.health.AddHediff(HediffDefOf.ATR_ShortReboot);
+            pawn.health.AddHediff(ATR_HediffDefOf.ATR_ShortReboot);
             bool isViolation = !PawnGenerator.IsBeingGenerated(pawn) && IsViolationOnPawn(pawn, part, Faction.OfPlayer);
             if (billDoer != null)
             {

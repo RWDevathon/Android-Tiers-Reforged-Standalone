@@ -1,23 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
-
     <JobDef>
-		<defName>RechargeBattery</defName>
-		<driverClass>ATReforged.JobDriver_GoReloadBattery</driverClass>
+		<defName>ATR_RechargeBattery</defName>
+		<driverClass>ATReforged.JobDriver_RechargeBattery</driverClass>
 		<reportString>Recharging battery.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
 
     <JobDef>
-        <defName>ResurrectMechanical</defName>
+        <defName>ATR_ResurrectMechanical</defName>
         <driverClass>ATReforged.JobDriver_ResurrectMechanical</driverClass>
         <reportString>repairing TargetA.</reportString>
     </JobDef>
 
     <JobDef>
-        <defName>TendMechanical</defName>
+        <defName>ATR_TendMechanical</defName>
         <driverClass>ATReforged.JobDriver_TendMechanical</driverClass>
         <reportString>tending to TargetA.</reportString>
         <casualInterruptible>false</casualInterruptible>

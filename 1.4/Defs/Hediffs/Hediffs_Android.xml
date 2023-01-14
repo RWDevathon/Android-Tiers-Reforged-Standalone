@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- TODO: Prepend ATR_ to defNames for 1.0 release candidate -->
     
     <!-- Added body parts -->
  
@@ -150,7 +148,7 @@
     </HediffDef>
   
     <HediffDef>
-        <defName>RecoveringFromDDOS</defName>
+        <defName>ATR_RecoveringFromDDOS</defName>
         <label>DDOS Recovery</label>
         <description>This unit is recovering from exposure to a DDOS attack. Recompiling and separating junk data from true data is a frustrating and distracting activity as little data can be fully trusted until it is complete.</description>
         <hediffClass>HediffWithComps</hediffClass>
