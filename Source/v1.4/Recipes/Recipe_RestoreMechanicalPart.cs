@@ -30,6 +30,12 @@ namespace ATReforged
             // Restore this part and 50 points of severity for children to normal functionality.
             float HPLeftForChildrenParts = 50 + part.def.hitPoints;
             RestoreChildParts(pawn, part, ref HPLeftForChildrenParts);
+
+            // If not all hp was used in a non-core part, then apply remaining hp to the Core part and its children.
+            if (HPLeftForChildrenParts > 0 && part != pawn.def.race.body.corePart)
+            {
+                RestoreChildParts(pawn, pawn.def.race.body.corePart, ref HPLeftForChildrenParts);
+            }
         }
 
         // Return an enumerable of all the missing or damaged body parts on this pawn.
@@ -68,6 +74,7 @@ namespace ATReforged
                 }
                 else
                 {
+                    Log.Message("[ATR DEBUG] part " + part + " had hediff " + hediff.def.defName + " removed. Remaining HP is " + HPLeftToRestoreChildren);
                     HPLeftToRestoreChildren -= severity;
                     pawn.health.RemoveHediff(hediff);
                 }

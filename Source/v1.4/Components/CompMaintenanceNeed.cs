@@ -128,7 +128,7 @@ namespace ATReforged
 
         public float MaintenanceFallPerDay()
         {
-            return Mathf.Clamp(DailyFallPerStage(Stage) / Pawn.GetStatValue(ATR_StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
+            return Mathf.Clamp(DailyFallPerStage(Stage) * ATReforged_Settings.maintenanceFallRateFactor / Pawn.GetStatValue(ATR_StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
         }
 
         public override void PostPostMake()
@@ -200,7 +200,7 @@ namespace ATReforged
                 }
 
                 // If maintenance has been low for at least 3 days, issues can begin manifesting.
-                if (ticksSincePoorMaintenance > 180000)
+                if (ticksSincePoorMaintenance > (180000 * ATReforged_Settings.maintenancePartFailureRateFactor))
                 {
                     TryPoorMaintenanceCheck();
                 }
@@ -324,8 +324,9 @@ namespace ATReforged
         public void TryPoorMaintenanceCheck()
         {
             Pawn_HealthTracker healthTracker = Pawn.health;
+            float modifiedFailureTicks = ticksSincePoorMaintenance / ATReforged_Settings.maintenancePartFailureRateFactor;
             // Attempt to apply part decay.
-            if (Rand.MTBEventOccurs(PartDecayContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+            if (Rand.MTBEventOccurs(PartDecayContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts()?.RandomElement();
                 if (bodyPart == null)
@@ -340,7 +341,7 @@ namespace ATReforged
                 }
             }
             // Attempt to apply part rust.
-            if (Rand.MTBEventOccurs(RustContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+            if (Rand.MTBEventOccurs(RustContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts(depth: BodyPartDepth.Outside)?.RandomElement();
                 if (bodyPart == null)
@@ -355,7 +356,7 @@ namespace ATReforged
                 }
             }
             // Attempt to apply power loss.
-            if (Rand.MTBEventOccurs(PowerLossContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+            if (Rand.MTBEventOccurs(PowerLossContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts()?.Where(part => part != healthTracker.hediffSet.GetBrain())?.RandomElement();
                 if (bodyPart == null)
@@ -373,7 +374,7 @@ namespace ATReforged
             if (Stage == MaintenanceStage.Critical)
             {
                 // Attempt to apply core damage.
-                if (Rand.MTBEventOccurs(CoreDamageContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+                if (Rand.MTBEventOccurs(CoreDamageContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
                 {
                     BodyPartRecord bodyPart = healthTracker.hediffSet.GetBrain();
                     if (bodyPart != null && healthTracker.capacities.GetLevel(PawnCapacityDefOf.Consciousness) > 0.3f)
@@ -384,7 +385,7 @@ namespace ATReforged
                     }
                 }
                 // Attempt to apply failing valves.
-                if (Rand.MTBEventOccurs(FailingValvesContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+                if (Rand.MTBEventOccurs(FailingValvesContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
                 {
                     BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_InternalCorePump)?.RandomElement();
                     if (bodyPart == null)
@@ -399,7 +400,7 @@ namespace ATReforged
                     }
                 }
                 // Attempt to apply rogue mechanites.
-                if (Rand.MTBEventOccurs(RogueMechanitesContractChance.Evaluate(ticksSincePoorMaintenance), 60000f, 60f))
+                if (Rand.MTBEventOccurs(RogueMechanitesContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
                 {
                     BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_MechaniteStorage)?.RandomElement();
                     if (bodyPart == null)

@@ -93,7 +93,11 @@
     <ATR_chancePartSavedOnFailure>Chance that parts are returned from failed mechanical surgeries [default 75%]</ATR_chancePartSavedOnFailure>
 
         <!-- Maintenance -->
+    <ATR_maintenanceNeedExists>Mechanical units need maintenance.</ATR_maintenanceNeedExists>
     <ATR_receiveMaintenanceFailureLetters>Receive letters about maintenance-related health issues.</ATR_receiveMaintenanceFailureLetters>
+    <ATR_maintenancePartFailureRateFactor>How long before poor maintenance can result in part failures and the odds that no failure occurs</ATR_maintenancePartFailureRateFactor>
+    <ATR_maintenanceFallRateFactor>How quickly maintenance falls naturally</ATR_maintenanceFallRateFactor>
+    <ATR_maintenanceGainRateFactor>How quickly maintenance is gained when doing maintenance</ATR_maintenanceGainRateFactor>
 
     
 	<!-- Connectivity Settings -->

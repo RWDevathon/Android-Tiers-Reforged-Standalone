@@ -92,7 +92,7 @@ namespace ATReforged
                         }
                         thingDef.race.needsRest = false;
 
-                        if (thingDef.GetModExtension<ATR_MechTweaker>()?.needsMaintenance == true)
+                        if (thingDef.GetModExtension<ATR_MechTweaker>()?.needsMaintenance == true && ATReforged_Settings.maintenanceNeedExists)
                         {
                             CompProperties cp = new CompProperties
                             {

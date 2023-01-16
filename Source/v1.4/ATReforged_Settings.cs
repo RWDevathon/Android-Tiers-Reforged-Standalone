@@ -21,9 +21,7 @@ namespace ATReforged
             // Settings for Permissions
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
         public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
-        public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "NightOwl", "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
-
-            // Settings for debug displays
+        public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
         
             // Settings for what is considered mechanical and massive
         public static HashSet<string> isConsideredMechanicalAnimal;
@@ -62,15 +60,19 @@ namespace ATReforged
         public static float maxHackSuccessChance = 0.95f;
 
         // HEALTH SETTINGS
-        // Settings for Surgeries
+            // Settings for Surgeries
         public static bool medicinesAreInterchangeable = false;
         public static bool showMechanicalSurgerySuccessChance = false;
         public static float maxChanceMechanicOperationSuccess = 1.0f;
         public static float chanceFailedOperationMinor = 0.75f;
         public static float chancePartSavedOnFailure = 0.75f;
 
-        // Settings for Maintenance
+            // Settings for Maintenance
+        public static bool maintenanceNeedExists = true;
         public static bool receiveMaintenanceFailureLetters = true;
+        public static float maintenancePartFailureRateFactor = 1.0f;
+        public static float maintenanceFallRateFactor = 1.0f;
+        public static float maintenanceGainRateFactor = 1.0f;
 
         // CONNECTIVITY SETTINGS
         // Settings for Surrogates
@@ -296,7 +298,14 @@ namespace ATReforged
                     listingStandard.GapLine();
 
                     // MAINTENANCE
-                    listingStandard.CheckboxLabeled("ATR_receiveMaintenanceFailureLetters".Translate(), ref receiveMaintenanceFailureLetters, onChange: onChange);
+                    listingStandard.CheckboxLabeled("ATR_maintenanceNeedExists".Translate(), ref maintenanceNeedExists, onChange: onChange);
+                    if (maintenanceNeedExists)
+                    {
+                        listingStandard.CheckboxLabeled("ATR_receiveMaintenanceFailureLetters".Translate(), ref receiveMaintenanceFailureLetters, onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_maintenancePartFailureRateFactor".Translate(), ref maintenancePartFailureRateFactor, 0.5f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_maintenanceFallRateFactor".Translate(), ref maintenanceFallRateFactor, 0.5f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                        listingStandard.SliderLabeled("ATR_maintenanceGainRateFactor".Translate(), ref maintenanceGainRateFactor, 0.5f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
+                    }
                     break;
                 }
                 case OptionsTab.Connectivity:
@@ -399,7 +408,7 @@ namespace ATReforged
             maxHackSuccessChance = 0.95f;
 
             // HEALTH SETTINGS
-            // Medical
+                // Medical
             medicinesAreInterchangeable = false;
             showMechanicalSurgerySuccessChance = false;
             maxChanceMechanicOperationSuccess = 1f;
@@ -407,10 +416,14 @@ namespace ATReforged
             chancePartSavedOnFailure = 0.75f;
 
             // Maintenance
+            maintenanceNeedExists = true;
             receiveMaintenanceFailureLetters = true;
+            maintenancePartFailureRateFactor = 1.0f;
+            maintenanceFallRateFactor = 1.0f;
+            maintenanceGainRateFactor = 1.0f;
 
             // CONNECTIVITY SETTINGS
-            // Surrogates
+                // Surrogates
             surrogatesAllowed = true;
             otherFactionsAllowedSurrogates = true;
             minGroupSizeForSurrogates = 5;
@@ -595,7 +608,11 @@ namespace ATReforged
             Scribe_Values.Look(ref chancePartSavedOnFailure, "ATR_chancePartSavedOnFailure", 0.75f);
 
             // Maintenance
+            Scribe_Values.Look(ref maintenanceNeedExists, "ATR_maintenanceNeedExists", true);
             Scribe_Values.Look(ref receiveMaintenanceFailureLetters, "ATR_receiveMaintenanceFailureLetters", true);
+            Scribe_Values.Look(ref maintenancePartFailureRateFactor, "ATR_maintenancePartFailureRateFactor", 1.0f);
+            Scribe_Values.Look(ref maintenanceFallRateFactor, "ATR_maintenanceFallRateFactor", 1.0f);
+            Scribe_Values.Look(ref maintenanceGainRateFactor, "ATR_maintenanceGainRateFactor", 1.0f);
 
             /* === CONNECTIVITY === */
             // Surrogates
