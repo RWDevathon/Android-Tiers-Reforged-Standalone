@@ -45,6 +45,9 @@
 	
 	<ATR_ControlSurrogate>Connect</ATR_ControlSurrogate>
 	<ATR_ControlSurrogateDesc>Take control of the selected hostless surrogate.</ATR_ControlSurrogateDesc>
+
+	<ATR_DisconnectCloudPawn>Disconnect</ATR_DisconnectCloudPawn>
+	<ATR_DisconnectCloudPawnDesc>Disconnect a SkyMind consciousness from its surrogates.</ATR_DisconnectCloudPawnDesc>
 	
 	<ATR_ControlCaravanSurrogate>Recover</ATR_ControlCaravanSurrogate>
 	<ATR_ControlCaravanSurrogateDesc>Recover a hostless surrogate in a caravan.</ATR_ControlCaravanSurrogateDesc>
