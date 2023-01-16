@@ -57,6 +57,7 @@ Special thanks to:
 * FG_Remastered - PR overlord, diplomat, integral supporter
 * lazycooken - Jumpstarter and eager supporter
 * Winterbloom - Graphic and xml supporter
+* Kitty Of Pathos - Gynoid textures
 * JGH - Donated graphics for simplified buildings
 * Android Tiers Discord - The endless whirlpool of ideas, assistance, and the home domain
 * RimWorld Mod Development Discord - Incredible amounts of support and assistance
