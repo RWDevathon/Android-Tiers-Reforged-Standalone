@@ -34,6 +34,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
         <li>erdelf.HumanoidAlienRaces</li>
+        <li>Dubwise.DubsBadHygiene</li>
 		<li>CarnySenpai.EnableOversizedWeapons</li>
 		<li>CETeam.CombatExtended</li>
     </loadAfter>
