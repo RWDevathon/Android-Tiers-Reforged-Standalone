@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using Verse;
 using RimWorld;
 using System.Collections.Generic;
@@ -42,7 +41,7 @@ namespace ATReforged
             {
                 Utils.gameComp.RemoveServer(building, serverMode);
             }
-            else if ((signal == "SkyMindNetworkUserConnected" && parent.TryGetComp<CompPowerTrader>().PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected == true))
+            else if ((signal == "SkyMindNetworkUserConnected" && parent.TryGetComp<CompPowerTrader>().PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected != false))
             {
                 Utils.gameComp.AddServer(building, serverMode);
             }
@@ -56,11 +55,10 @@ namespace ATReforged
             // Generate button to switch server mode based on which servermode the server is currently in.
             switch (serverMode)
             {
-                case ServerType.None:
-                    yield break;
+                // In Skill Mode, can switch to Security
                 case ServerType.SkillServer:
                     yield return new Command_Action
-                    { // In Skill Mode, can switch to Security
+                    {
                         icon = Tex.SkillIcon,
                         defaultLabel = "ATR_SkillMode".Translate(),
                         defaultDesc = "ATR_SkillModeDesc".Translate(),
@@ -70,9 +68,10 @@ namespace ATReforged
                         }
                     };
                     break;
+                // In Security Mode, can switch to Hacking
                 case ServerType.SecurityServer:
                     yield return new Command_Action
-                    { // In Security Mode, can switch to Hacking
+                    {
                         icon = Tex.SecurityIcon,
                         defaultLabel = "ATR_SecurityMode".Translate(),
                         defaultDesc = "ATR_SecurityModeDesc".Translate(),
@@ -82,9 +81,10 @@ namespace ATReforged
                         }
                     };
                     break;
+                // In Hacking Mode, can switch to Skill
                 case ServerType.HackingServer:
                     yield return new Command_Action
-                    { // In Hacking Mode, can switch to Skill
+                    {
                         icon = Tex.HackingIcon,
                         defaultLabel = "ATR_HackingMode".Translate(),
                         defaultDesc = "ATR_HackingModeDesc".Translate(),
@@ -109,9 +109,10 @@ namespace ATReforged
                         };
                     }
                     break;
+                // In an illegal Mode, can switch to Skill
                 default:
                     yield return new Command_Action
-                    { // In an illegal Mode, can switch to Skill
+                    { 
                         icon = Tex.SkillIcon,
                         defaultLabel = "ATR_SwitchToSkillMode".Translate(),
                         defaultDesc = "ATR_SwitchToSkillModeDesc".Translate(),
@@ -171,16 +172,9 @@ namespace ATReforged
 
         public void ChangeServerMode(ServerType newMode)
         {
-            try
-            {
-                Utils.gameComp.RemoveServer(building, serverMode);
-                Utils.gameComp.AddServer(building, newMode);
-                serverMode = newMode;
-            }
-            catch (Exception ex)
-            {
-                Log.Error("[ATR] Unable to change the server mode of building " + parent.def.defName + " to the new server type " + newMode + "! Error: " + ex.Message + " " + ex.StackTrace);
-            }
+            Utils.gameComp.RemoveServer(building, serverMode);
+            Utils.gameComp.AddServer(building, newMode);
+            serverMode = newMode;
         }
 
         private CompSkyMind networkConnection;

@@ -167,31 +167,6 @@ namespace ATReforged
                 }
             };
 
-            // Allow disconnecting a particular SkyMind pawn from its surrogates.
-            yield return new Command_Action
-            {
-                icon = Tex.DisconnectIcon,
-                defaultLabel = "ATR_DisconnectCloudPawn".Translate(),
-                defaultDesc = "ATR_DisconnectCloudPawnDesc".Translate(),
-                action = delegate ()
-                {
-                    List<FloatMenuOption> opts = new List<FloatMenuOption>();
-
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
-                    {
-                        opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
-                        {
-                            pawn.TryGetComp<CompSkyMindLink>().DisconnectSurrogates();
-                        }));
-                        opts.SortBy((x) => x.Label);
-
-                        if (opts.Count == 0)
-                            return;
-                        Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableSources".Translate()));
-                    }
-                }
-            };
-
             // Allow all cloud pawns to use the Skill interface.
             yield return new Command_Action
             {
@@ -223,6 +198,7 @@ namespace ATReforged
                 yield break;
             }
 
+            // Allow connecting a SkyMind pawn to available surrogates.
             yield return new Command_Action
             {
                 icon = Tex.ConnectIcon,
@@ -261,8 +237,36 @@ namespace ATReforged
                 }
             };
 
-            IEnumerable<Pawn> hostlessCaravanSurrogates = Utils.GetHostlessCaravanSurrogates();
+            // Allow disconnecting a particular SkyMind pawn from its surrogates.
+            if (Utils.gameComp.GetCloudPawns().Any(pawn => pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+            {
+                yield return new Command_Action
+                {
+                    icon = Tex.DisconnectIcon,
+                    defaultLabel = "ATR_DisconnectCloudPawn".Translate(),
+                    defaultDesc = "ATR_DisconnectCloudPawnDesc".Translate(),
+                    action = delegate ()
+                    {
+                        List<FloatMenuOption> opts = new List<FloatMenuOption>();
+
+                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        {
+                            opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
+                            {
+                                pawn.TryGetComp<CompSkyMindLink>().DisconnectSurrogates();
+                            }));
+                            opts.SortBy((x) => x.Label);
+
+                            if (opts.Count == 0)
+                                return;
+                            Find.WindowStack.Add(new FloatMenu(opts, "ATR_ViableSources".Translate()));
+                        }
+                    }
+                };
+            }
+
             // If there are uncontrolled surrogates in a caravan, allow a SkyMind intelligence to control it.
+            IEnumerable<Pawn> hostlessCaravanSurrogates = Utils.GetHostlessCaravanSurrogates();
             if (hostlessCaravanSurrogates != null)
             {
                 yield return new Command_Action

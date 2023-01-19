@@ -27,7 +27,7 @@
                 <factorStarving>0.7</factorStarving>
             </li>
             <li Class="StatPart_Resting">
-                <factor>1.1</factor>
+                <factor>3</factor>
             </li>
         </parts>
     </StatDef>

@@ -43,7 +43,7 @@
     <ThingDef ParentName="SkyMindTowerBase">
         <defName>ATR_SkyMindRelay</defName>
         <label>SkyMind Relay Tower</label>
-        <description>This tower acts as a relay for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for three nodes.</description>
+        <description>This tower acts as a relay for SkyMind-connected devices to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for three continuous device connections.</description>
         <graphicData>
             <texPath>Things/Buildings/RelayTower</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -75,7 +75,7 @@
         <defName>ATR_SkyMindNetwork</defName>
         <label>SkyMind Network Tower</label>
         <thingClass>Building</thingClass>
-        <description>This tower acts as a powerful network host for SkyMind nodes to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for fifteen nodes.</description>
+        <description>This tower acts as a powerful network host for SkyMind-connected devices to communicate and operate. Towers like these are necessary for surrogate or SkyMind operations - this tower has capacity for fifteen continuous device connections.</description>
         <graphicData>
             <texPath>Things/Buildings/NetworkTower</texPath>
             <graphicClass>Graphic_Single</graphicClass>

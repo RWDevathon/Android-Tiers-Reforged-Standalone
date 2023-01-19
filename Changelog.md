@@ -142,9 +142,11 @@
 
 ## Known Issues:
 - "Guards for me" guards apply a mood buff to nearby pawns, but drones do not have a mood need at all, so it will throw constant errors for them if a drone happens to be nearby a guard. The mod's functionality still works, but expect significant errors or performance drops if drones are nearby guards. The solution would be for Guards for me to only apply it to pawns with a mood need.
+- "No Random Relations" appears to have an incompatibility surrounding the use of surrogates. The exact source of this issue is unknown at this time.
 - Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.
 - Mechanical units will not respond to overheating or hypothermia correctly at the moment as RimWorld is hardcoded to check against the hediffs that androids no longer have.
 - Having a drone in your colony will break the bed assignment menu if it can have more than 1 pawn assigned due to the drone's lack of an ideology and RimWorld's lack of null-checking this. This is a high priority bug to fix.
-- "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists.
+- "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists. Smart medicine may still find a way to cause androids to be untendable.
 - Activating Self-Tend on a mechanical pawn will throw a message at you complaining that the Doctor work type is not assigned even if the pawn has the Mechanic work type assigned (It's harmless, mechanical pawns will self-tend based on Mechanic, not Doctor).
 - Blood Rot and Paralytic Abasia do not function on androids at the moment. Work is planned to add mechanical variants for them.
+- Quest pawns may occasionally be humans in android factions with android backstories. No current plan of attack is viable for this.
