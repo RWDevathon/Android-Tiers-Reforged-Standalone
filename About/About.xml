@@ -16,10 +16,33 @@
         <li>
             <packageId>erdelf.HumanoidAlienRaces</packageId>
             <displayName>Humanoid Alien Races 2.0</displayName>
-            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
             <downloadUrl>https://github.com/RimWorld-CCL-Reborn/AlienRaces</downloadUrl>
         </li>
     </modDependencies>
+	<modDependenciesByVersion>
+		<v1.3>
+		   <li>
+				<packageId>brrainz.harmony</packageId>
+				<displayName>Harmony</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+				<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			</li>
+			<li>
+				<packageId>erdelf.HumanoidAlienRaces</packageId>
+				<displayName>Humanoid Alien Races 2.0</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
+				<downloadUrl>https://github.com/RimWorld-CCL-Reborn/AlienRaces</downloadUrl>
+			</li>
+			<li>
+				<packageId>CarnySenpai.EnableOversizedWeapons</packageId>
+				<displayName>Enable Oversized Weapons</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/2543371889</steamWorkshopUrl>
+				<downloadUrl>https://github.com/splincore/Enable-Oversized-Weapons</downloadUrl>
+			</li>
+		</v1.3>
+		<!-- 1.4 is determined by general modDependencies field. -->
+	</modDependenciesByVersion>
     <packageId>Killathon.AndroidTiersReforged</packageId>
 	<incompatibleWith>
         <li>Atlas.AndroidTiers</li><!--Having them both active at the same time would be a little silly -->
@@ -28,18 +51,18 @@
 		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
     </incompatibleWith>
     <loadAfter>
-        <li>brrainz.harmony</li>
+        <li>brrainz.harmony</li><!-- Dependency -->
 		<li>Ludeon.RimWorld</li><!-- Just making extra sure... -->
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
-        <li>erdelf.HumanoidAlienRaces</li>
-        <li>Dubwise.DubsBadHygiene</li>
-		<li>CarnySenpai.EnableOversizedWeapons</li>
+		<li>Ludeon.RimWorld.Royalty</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Ideology</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Biotech</li><!-- Just making extra sure... -->
+        <li>erdelf.HumanoidAlienRaces</li><!-- Dependency -->
+		<li>CarnySenpai.EnableOversizedWeapons</li><!-- Dependency -->
+        <li>Dubwise.DubsBadHygiene</li><!-- We both patch the same function, so the order is important. -->
 		<li>CETeam.CombatExtended</li>
     </loadAfter>
 	<loadBefore>
-		<li>avilmask.CommonSense</li>
+		<li>avilmask.CommonSense</li><!-- I'd prefer putting this under incompatibleWith, but I don't have a valid reason, unfortunately... If you're reading this, put it at the end of your list, but before any performance mods. -FG -->
 	</loadBefore>
     <description><![CDATA[  
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
