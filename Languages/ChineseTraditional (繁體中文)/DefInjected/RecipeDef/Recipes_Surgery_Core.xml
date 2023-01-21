@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_ShutdownMechanical.label>臨時關閉核心</ATR_ShutdownMechanical.label>
+<ATR_ShutdownMechanical.description>通過斷開核心硬件來關閉機械單元。這不會永久破壞設備的內存。 </ATR_ShutdownMechanical.description>
+<ATR_RemoveBodyPartAndroid.label>移除部件</ATR_RemoveBodyPartAndroid.label>
+<ATR_RemoveBodyPartAndroid.description>移除身體部件</ATR_RemoveBodyPartAndroid.description>
+<ATR_RestoreBodyPartAndroid.label>修復部件</ATR_RestoreBodyPartAndroid.label>
+<ATR_RestoreBodyPartAndroid.description>修復身體的特定部件</ATR_RestoreBodyPartAndroid.description>
+<ATR_RepaintMechanical.label>噴漆</ATR_RepaintMechanical.label>
+<ATR_RepaintMechanical.description>修改機械單元的顏色外觀</ATR_RepaintMechanical.description>
+<ATR_DoEmergencyMaintenance.label>進行臨時維護</ATR_DoEmergencyMaintenance.label>
+<ATR_DoEmergencyMaintenance.description>使用零件修復嚴重的維護缺陷。由於該維護主要是對自身的操作，因此這只能使其達到 40%。 </ATR_DoEmergencyMaintenance.description>
+<ATR_ReprogramDrone.label>重新編程無人機</ATR_ReprogramDrone.label>
+<ATR_ReprogramDrone.description>一項簡單而又微妙的操作，重新編程無人機以適應殖民地是增強能力的絕佳方法。然而，該無人機以前的所有者可能已經安裝了阻止此類操作的預防措施，因此如果失敗，死亡風險很高。 </ATR_ReprogramDrone.description>
+</LanguageData>

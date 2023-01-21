@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<ATR_MechanicalInsight.label>機械精通</ATR_MechanicalInsight.label>
+<ATR_MechanicalInsight.description>開始研究創造機械生物的可能性——以及相關的機會</ATR_MechanicalInsight.description>
+
+<ATR_UtilityBiomimetics.label>實用仿生學</ATR_UtilityBiomimetics.label>
+<ATR_UtilityBiomimetics.description>仿生學是創造生物的機械版本的理論領域。其中最早成功的機械原型的總是在重複生物體已實現的功能。我們對該領域進行研究可以在機械體中仿照人類的選擇性育種方法進行培育特定對象。 </ATR_UtilityBiomimetics.description>
+
+<ATR_MechanicalStandardization.label>標準化機械</ATR_MechanicalStandardization.label>
+<ATR_MechanicalStandardization.description>我們必須要建立生產與維護的標準來同時兼顧製造質量和實現規模製造，以此來降低成本。由於智能人形具有極其大量的款式與設計，對每一個智能人形進行單個維護會產生高昂的成本，所以如何實現對殖民者部件的標準化對於機械領域的進步至關重要。 </ATR_MechanicalStandardization.description>
+
+<ATR_MassCharging.label>充電站</ATR_MassCharging.label>
+<ATR_MassCharging.description>為了最大限度地提高充電和空間效率，我們必須要開發一種能同時為多個機械單元充電的有效方法。一次可以為 8 個機械單元充電的小型充電站可能被證明是一種必要拓展。 </ATR_MassCharging.description>
+
+<ATR_MechanicalFrameworks.label>機體框架升級</ATR_MechanicalFrameworks.label>
+<ATR_MechanicalFrameworks.description>機械單元的框架是他們最直觀的特徵，因為它將整個機體的所有部件同時固定在該框架中。框架的替換可能在各種特定任務中帶來顯著的增益————但需要其裝載對應的一個特定框架。 </ATR_MechanicalFrameworks.description>
+
+<ATR_T1Androids.label>T1 人形製造</ATR_T1Androids.label>
+<ATR_T1Androids.description>一級機器人的特徵是與人相似，但它們仍然不過是個機器。它們的相似性和能力令人印象深刻，它們也代表了都市世界創造力和中世紀世界夢想的更高層次。這是我們發展中的美好成就，也是我們未來前景中的曙光。 </ATR_T1Androids.description>
+
+<ATR_MechanicalStimulators.label>機械興奮劑</ATR_MechanicalStimulators.label>
+<ATR_MechanicalStimulators.description>雖然機械單元在大多是情況下並不關心時間的流逝，因此也不關心其使用效率，但不可否認的是，有時特定時刻的效率提升顯得至關重要。可消耗的短期興奮劑在這些時刻可能有幫助。 </ATR_MechanicalStimulators.description>
+
+<ATR_AdvancedMechParts.label>先進機械部件</ATR_AdvancedMechParts.label>
+<ATR_AdvancedMechParts.description>隨著優秀的製造水平和強大的標準化方案的提出，機械部件質量的大幅提升如今是可以實現的。這些部件的功能將明顯優於工廠車間的標準同類產品，同時也能將成本保持在合理的範疇內。 </ATR_AdvancedMechParts.description>
+
+<ATR_T2Androids.label>T2 人形製造</ATR_T2Androids.label>
+<ATR_T2Androids.description>二級機器人以完全智能所需的最低規格為標誌。它們是最常見的智能人形產品，它們也被廣泛視為區別於人類的新物種。有了這項技術，殖民地將會邁入機械自治的門檻——我們準備好迎接接下來的事情了嗎？ </ATR_T2Androids.description>
+
+<ATR_StandardizedCommunications.label>標準化通信協議</ATR_StandardizedCommunications.label>
+<ATR_StandardizedCommunications.description>如果能夠實現物理標準化，那麼同樣也應該有一種方法來實現溝通、思想和哲學的標準化。這樣的一個連接意識的虛擬雲環境的出現有望在許多領域取得巨大進步。一個可以支持機械體進行內網通信的簡單中繼塔將會是一個良好的開端。 </ATR_StandardizedCommunications.description>
+
+<ATR_RemoteControlProtocols.label>遠程控制協議</ATR_RemoteControlProtocols.label>
+<ATR_RemoteControlProtocols.description>通過對跨主機的標準化通信方法經驗的總結，我們理論上可以開發一個架構來遠程控制所謂的“代理人形”。由於有機體普遍缺乏效率和有機應用，所以技術上並不支持有機體使用該服務，但這對於機械單元來說卻是革命性的進步。 </ATR_RemoteControlProtocols.description>
+
+<ATR_MechanicalOptimization.label>機械體優化</ATR_MechanicalOptimization.label>
+<ATR_MechanicalOptimization.description>單靠標準化並不能解決所有問題——————更深層次的進步將需要一場效率和精度的革命，其中包括了製定新的優化、準確性和能力標準。一旦實現，人類更瘋狂的想法將會觸手可及。 </ATR_MechanicalOptimization.description>
+
+<ATR_T3Androids.label>T3 人形製造</ATR_T3Androids.label>
+<ATR_T3Androids.description>三級機器人以其體型和絕對能力為標誌。因其體內必須要緊密容納大量必要的操作單元，其平均 2.1-2.7 米的身高使得人類相形見絀，它們在力量和敏銳方面的高度也令人生畏。這些單位顯然是人類在設計領域的一項巨大進步。 </ATR_T3Androids.description>
+
+<ATR_SurrogateOptimization.label>代理人協議優化</ATR_SurrogateOptimization.label>
+<ATR_SurrogateOptimization.description>隨著製造能力和協議優化方面的巨大進步，我們很有可能開發出一種將有機體轉變成受控代理人的方法。這是一種革命性的能力，但充滿了道德和倫理問題。這是一條不應該越過的線嗎？ </ATR_SurrogateOptimization.description>
+
+<ATR_CommunicationOptimization.label>通信協議優化</ATR_CommunicationOptimization.label>
+<ATR_CommunicationOptimization.description>為了擴展通信網絡的功率，並為集中式主機系統做準備，我們必須要對通信中繼器及其控制系統的優化方案進行進一步開發。 </ATR_CommunicationOptimization.description>
+
+<ATR_MilitaryBiomimetics.label>軍用仿生學</ATR_MilitaryBiomimetics.label>
+<ATR_MilitaryBiomimetics.description>這項研究以實用仿生學為基礎，進一步深入研究其軍事應用。軍事化比複製單純的家養農場動物要復雜得多，完成它之後可以實現對微型鐮刀無人機、機械獵犬或更多的實驗性改造體的製造。 </ATR_MilitaryBiomimetics.description>
+
+<ATR_ServerOptimization.label>服務器優化</ATR_ServerOptimization.label>
+<ATR_ServerOptimization.description>為了壓縮空間和提高實用性而優化服務器是昂貴的，但有望為殖民地的技能升級帶來革命性的擴展。綜合評估其存儲和反應水平，這些服務器完全可以淘汰舊型號。 </ATR_ServerOptimization.description>
+
+<ATR_T4Androids.label>T4 人形製造</ATR_T4Androids.label>
+<ATR_T4Androids.description>四級機器人的標誌是擁有遠古人格核心。這樣的東西大大減少了其體內部件對空間的需求，從而減少了其尺寸和重量。雖然它的能力本身並沒有超過三級，但它的人格核心確實帶來了好處。 </ATR_T4Androids.description>
+
+<ATR_CoreAssistants.label>核心輔助</ATR_CoreAssistants.label>
+<ATR_CoreAssistants.description>隨著精密的製造水平和強大的標準化方案的獲得，機械部件質量的升級現在指日可待。所有智能人形的頭部都有備用空間，大多填充了保護性材料————先進的專用芯片可能會佔用這些空間的一部分。 (目前一個機體只有一個插槽）</ATR_CoreAssistants.description>
+
+<ATR_RepairOptimization.label>修復優化</ATR_RepairOptimization.label>
+<ATR_RepairOptimization.description>修復類興奮劑的進一步優化應著重去提高機械裝置的恢復速度和操作成功機會。這些興奮劑的質量可與閃耀世界的興奮劑相媲美————即使對他們而言，該領域的技術也只是點到為止。 </ATR_RepairOptimization.description>
+
+<ATR_SkyMindCore.label>天雲核心</ATR_SkyMindCore.label>
+<ATR_SkyMindCore.description>機械和意識研究的巔峰之作，一個能夠永久存儲、保護、複製並對意識進行充分利用的理論性超級計算機核心已經觸手可及。它極其昂貴，但它最終通往的是不朽的道路。以後如果要哄騙這麼多 AI 單元扮演保姆和主人估計會很困難。找到保持高級設施安全和與外界環境隔離所需的虛空電池的難度也不容忽視。 </ATR_SkyMindCore.description>
+
+<!--遠古科技-->
+<ATR_ArchotechInsight.label>遠古科技解讀</ATR_ArchotechInsight.label>
+<ATR_ArchotechInsight.description>這只是對真正的遠古科技無限力量的一瞥，但它卻有望改變殖民地能力的基本規則。只有遠古科技人形（T5）才能理解如此復雜的技術，而且即便如此，也需要保持高度專注、大量簡化技術細節和沈穩的耐心。 </ATR_ArchotechInsight.description>
+</LanguageData>

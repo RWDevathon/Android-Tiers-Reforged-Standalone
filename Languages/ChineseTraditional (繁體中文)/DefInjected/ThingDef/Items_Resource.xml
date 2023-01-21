@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--Manufactured-->
+<ATR_PartPack.label>機械組件包</ATR_PartPack.label>
+<ATR_PartPack.description>這個半組裝的組件包旨在幫助替換標準部件，從整條腿和手臂到復雜的電池和適配器。編程後的機械單元會進行自我改造以適應更複雜的任務。 </ATR_PartPack.description>
+<ATR_RepairStimSimple.label>簡易修復套裝</ATR_RepairStimSimple.label>
+<ATR_RepairStimSimple.description>一個小型、組裝簡單的工業組件套裝，通常用於輔助和刺激機械體進行修復的工具。該工具包缺少一些對更嚴重的傷害或手術有幫助的組件，這使它更適合戰場應急救援而不是專業救治。 </ATR_RepairStimSimple.description>
+<ATR_RepairStimIntermediate.label>中等修復套裝</ATR_RepairStimIntermediate.label>
+<ATR_RepairStimIntermediate.description>一套由工業部件、機械裝置和工具組成的組裝套裝，用於輔助和刺激機械體進行修復。像這樣的修復套件是任何追求質量的機械師的核心工具。它非常適合各種任務，功能強大且實用。 </ATR_RepairStimIntermediate.description>
+<ATR_RepairStimAdvanced.label>高級修復套裝</ATR_RepairStimAdvanced.label>
+<ATR_RepairStimAdvanced.description>一系列高科技機械和工具，用於輔助和刺激機械體進行修復。在閃耀世界之外相對不常見，這樣的工具包也受到了機械師和任何有自尊心的機器人的高度評價。這樣先進的套件可以讓即使是最差的機械師看起來也很能幹。 </ATR_RepairStimAdvanced.description>
+<ATR_ApplicableKitBase.comps.0.useLabel>使用複活工具</ATR_ApplicableKitBase.comps.0.useLabel>
+<ATR_AndroidResurrectorKit.label>智能人形復活套件</ATR_AndroidResurrectorKit.label>
+<ATR_AndroidResurrectorKit.description>一套專門的工具，能夠使損壞的機械裝置起死回生。這些工具足夠先進，可以使任何此類單元恢復正常功能。恢復的單元必須完全重新啟動才能再次開始運行。 </ATR_AndroidResurrectorKit.description>
+<ATR_DroneResurrectorKit.label>無人機復活套件</ATR_DroneResurrectorKit.label>
+<ATR_DroneResurrectorKit.description>一套專門的工具，能夠讓死亡的簡單機械無人機起死回生。這些工具足夠先進，可以讓像動物這樣頭腦簡單的機械單位起死回生。恢復的單元必須重新啟動才能再次開始運行。 </ATR_DroneResurrectorKit.description>
+
+<!--Shell-->
+<ATR_MicroscytherShell.label>蜂群彈頭</ATR_MicroscytherShell.label>
+<ATR_MicroscytherShell.description>一種特殊彈頭，包含數個預先編程的微型鐮刀機器人，它們將在撞擊時釋放並攻擊附近的所有目標。 </ATR_MicroscytherShell.description>
+<ATR_MicroscytherShell_round.label>蜂群彈頭</ATR_MicroscytherShell_round.label>
+
+<!--Stuff-->
+<ATR_ChemCapsule.label>化學膠囊</ATR_ChemCapsule.label>
+<ATR_ChemCapsule.description>一個小而緻密的膠囊，裡面裝滿了合成前體化學品，可以加工成中性胺或化學燃料。 </ATR_ChemCapsule.description>
+<ATR_NutrientSolution.label>營養液</ATR_NutrientSolution.label>
+<ATR_NutrientSolution.description>一種濃稠、營養豐富的溶液，嘗起來有點像牛奶，而且保質期極長。 </ATR_NutrientSolution.description>
+
+</LanguageData>

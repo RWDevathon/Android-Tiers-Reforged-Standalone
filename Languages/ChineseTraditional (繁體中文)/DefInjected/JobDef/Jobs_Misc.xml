@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_RechargeBattery.reportString>給電池充電</ATR_RechargeBattery.reportString>
+<ATR_ResurrectMechanical.reportString>修復 TargetA</ATR_ResurrectMechanical.reportString>
+<ATR_TendMechanical.reportString>照料 TargetA</ATR_TendMechanical.reportString>
+<ATR_GenerateInsight.reportString>生成天雲技能點數</ATR_GenerateInsight.reportString>
+<ATR_DoMaintenanceUrgent.reportString>進行自我維護</ATR_DoMaintenanceUrgent.reportString>
+<ATR_DoMaintenanceIdle.reportString>進行自我維護</ATR_DoMaintenanceIdle.reportString>
+<ATR_CreateT4Android.jobString>製造智能人形</ATR_CreateT4Android.jobString>
+<ATR_ShutdownMechanical.jobString>關閉機械單元</ATR_ShutdownMechanical.jobString>
+<ATR_RemoveBodyPartAndroid.jobString>移除身體部件</ATR_RemoveBodyPartAndroid.jobString>
+<ATR_RestoreBodyPartAndroid.jobString>修復身體部件</ATR_RestoreBodyPartAndroid.jobString>
+<ATR_RepaintMechanical.jobString>修改顏色外觀</ATR_RepaintMechanical.jobString>
+<ATR_DoEmergencyMaintenance.jobString>修復身體部件</ATR_DoEmergencyMaintenance.jobString>
+<ATR_ReprogramDrone.jobString>重新編程無人機</ATR_ReprogramDrone.jobString>
+<ATR_PartPack.jobString>製作機械組件包</ATR_PartPack.jobString>
+<ATR_MakeAIPersonaCore.jobString>製作人格核心</ATR_MakeAIPersonaCore.jobString>
+<ATR_AndroidResurrectorKit.jobString>製作智能人形復活套件</ATR_AndroidResurrectorKit.jobString>
+<ATR_DroneResurrectorKit.jobString>製作無人機復活套件</ATR_DroneResurrectorKit.jobString>
+<ATR_Make_ChemfuelFromChemCapsule.jobString>利用化學膠囊合成化學燃料</ATR_Make_ChemfuelFromChemCapsule.jobString>
+<ATR_Make_NeutroamineFromChemCapsule.jobString>利用化學膠囊合成中性胺</ATR_Make_NeutroamineFromChemCapsule.jobString>
+<ATR_AndroidMakerBase.jobString>製造機械單元</ATR_AndroidMakerBase.jobString>
+</LanguageData>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData><!--Hed-->
+
+<!--  archtech  -->
+<ATR_CybertechArm.label>超凡科技臂</ATR_CybertechArm.label>
+<ATR_CybertechArm.description>機械手臂樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechArm.description>
+<ATR_CybertechLeg.label>超凡科技腿</ATR_CybertechLeg.label>
+<ATR_CybertechLeg.description>機械腿樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechLeg.description>
+<ATR_CybertechVisualSensor.label>超凡視覺傳感器</ATR_CybertechVisualSensor.label>
+<ATR_CybertechVisualSensor.description>機械眼樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechVisualSensor.description>
+<ATR_CybertechAudioSensor.label>超凡聽力傳感器</ATR_CybertechAudioSensor.label>
+<ATR_CybertechAudioSensor.description>機械耳樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechAudioSensor.description>
+<ATR_CybertechHeatsink.label>超凡散熱器</ATR_CybertechHeatsink.label>
+<ATR_CybertechHeatsink.description>散熱器樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechHeatsink.description>
+<ATR_CybertechCoolantPump.label>超凡冷卻泵</ATR_CybertechCoolantPump.label>
+<ATR_CybertechCoolantPump.description>冷卻泵樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechCoolantPump.description>
+<ATR_CybertechBattery.label>超凡電池組</ATR_CybertechBattery.label>
+<ATR_CybertechBattery.description>電池樣式的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechBattery.description>
+<ATR_CybertechMechaniteStorage.label>超凡機械存儲</ATR_CybertechMechaniteStorage.label>
+<ATR_CybertechMechaniteStorage.description>具有極其巨大存儲空間的遠古科技設備，它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechMechaniteStorage.description>
+<ATR_CybertechReactor.label>超凡生物反應器</ATR_CybertechReactor.label>
+<ATR_CybertechReactor.description>生物反應器樣式遠古科技設備，但他似乎也可以降低功耗。它甚至比閃耀世界的高級部件更為強大。如果沒有遠古科技的幫助，生產一個部件所需要的深奧知識和技能都將完全不起作用，或許這就是它強大的秘訣？ </ATR_CybertechReactor.description>
+
+
+<!--  assistance   -->
+<ATR_InsightAssistant.label>技能輔助</ATR_InsightAssistant.label>
+<ATR_InsightAssistant.description>已安裝的技能輔助，可協助核心智能完成多項任務。該助手擅長識別、分類和應用新的見解和學習機會，它會在核心智能感興趣的任何領域進行學習。它還能夠獨立產生新的理論，可以協助研究。 </ATR_InsightAssistant.description>
+<ATR_GeneralAssistant.label>總核心輔助</ATR_GeneralAssistant.label>
+<ATR_GeneralAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助故意不專業化，而是擁有針對各種任務的專用流程。這會大大提高完成專注於質量的任何任務的速度——它允許核心智能專注於質量，同時處理不那麼複雜的細節。 </ATR_GeneralAssistant.description>
+<ATR_CombatAssistant.label>戰鬥輔助</ATR_CombatAssistant.label>
+<ATR_CombatAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於戰鬥和威脅分析場景。該芯片能夠自主識別戰術機會並對戰場上的火力提出實時反應，甚至讓戰術分析員和指揮官看起來顯得過時。 \n\n助手不斷的戰術分析可能導致偏執和工作注意力下降。 </ATR_CombatAssistant.description>
+<ATR_MechanicAssistant.label>機械輔助</ATR_MechanicAssistant.label>
+<ATR_MechanicAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專用於工程和機械任務。其中擁有一個大型子程序庫，用於優化設計和創建零件以及安裝、修理或更改它們，像這樣的芯片經常被禁止在擁有強大機械工會的世界上使用，以防止專用機器完全主導該行業。 </ATR_MechanicAssistant.description>
+<ATR_ConstructionAssistant.label>建造輔助</ATR_ConstructionAssistant.label>
+<ATR_ConstructionAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專用於建築和施工任務。對建築材料、工具、做法和風格的確切特徵進行深入存檔，確保該單位擁有完成任務時可能需要的每一條信息。用於測量、檢查和分析物理對象和空間的自動子程序還允許更快地計算位置、力和安全性。 </ATR_ConstructionAssistant.description>
+<ATR_ExcavationAssistant.label>採礦輔助</ATR_ExcavationAssistant.label>
+<ATR_ExcavationAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於優化礦物識別、分類和提取。對礦物和材料特性的綜合存檔可以實現更加精確和高效的採礦作業，從而顯著提高產量和運營能力。自主子程序還優化了挖掘機技術的流程，例如深鑽。 </ATR_ExcavationAssistant.description>
+<ATR_VictualAssistant.label>廚藝輔助</ATR_VictualAssistant.label>
+<ATR_VictualAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於有機物質（即食品和藥物）的加工和製備。一系列自主子程序與大量關於有機物質的性質、組成和行為的參考資料庫相結合，並以其正確使用為重點，確保了頂級品質的物質，同時最大限度地減少了浪費。 </ATR_VictualAssistant.description>
+<ATR_CultivationAssistant.label>種植輔助</ATR_CultivationAssistant.label>
+<ATR_CultivationAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於植物群和動物群的培養。憑藉大量數據存檔以及對地球上已知存在的每一種植物和動物的精確洞察，自主子程序允許該單元識別關鍵行為與應激反應，並在一定程度上允許通過特定的目標物種與目標物種“交流” 行為和信息素。 \n\n奇怪的是，這偶爾會讓機械單元本身表現出對低等智能的近乎父母般的喜愛。 </ATR_CultivationAssistant.description>
+<ATR_MedicineAssistant.label>醫療輔助</ATR_MedicineAssistant.label>
+<ATR_MedicineAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於治療有機體損傷和有機體手術。一系列子程序和程序有助於識別、分類和分析有機問題，並提供救援建議。 \n\n這個設備也很適合讓機械單元學會簡單的維修。 </ATR_MedicineAssistant.description>
+<ATR_SocialAssistant.label>社交輔助</ATR_SocialAssistant.label>
+<ATR_SocialAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。該輔助專門用於社交場合。從讀取個人身體動作和表情到參考所有已知的目標歷史記錄，每天都會對談判進行優化和分析，以提高核心智能處理社交情況的能力。最大化人氣、惡名、聲望————所有這些都被認為是可行的目標。 </ATR_SocialAssistant.description>
+<ATR_MentalAssistant.label>心理輔助</ATR_MentalAssistant.label>
+<ATR_MentalAssistant.description>已安裝的輔助，可協助核心智能完成多項任務。這個輔助專門為核心智能注入更強的心理韌性。一套個性化的子程序消除了智能認知中的許多壓力源和不愉快的問題，同時訓練了更大的克服困難情況的能力。許多機械單位開始將此設備視為可信賴的朋友，並發現將其安全地放在他們體內更能忍受他們自己不朽的存在。 </ATR_MentalAssistant.description>
+<ATR_PsychicAssistant.label>通靈輔助</ATR_PsychicAssistant.label>
+<ATR_PsychicAssistant.description>輔助核心智能的安裝輔助。這個有機輔助具有高度的心理調諧能力，充當核心智能利用心理能力的渠道。由於輔助的有機性質，核心智能無法像其他部分一樣完全操縱它，並且容易受到所有帶有靈敏性的東西的影響。輔助消耗大量能量來維持自身，導致整體功耗更大。 </ATR_PsychicAssistant.description>
+<ATR_SapientAssistant.label>遠古智能輔助</ATR_SapientAssistant.label>
+<ATR_SapientAssistant.description>安裝的智能可與核心智能交互。這個輔助是完全有智慧的，隨著時間的推移，它會變得更聰明，與核心智能關係更和諧，大約三年後就會成熟。其子智能位於遠古科技芯片中，它的智慧很可能有一天會超過其宿主。奇怪的是，這似乎並沒有困擾到該芯片中的子智能。或許它更喜歡遠離這個世界。也有可能它在這裡根本沒有受限。 </ATR_SapientAssistant.description>
+   <ATR_SapientAssistant.stages.0.label>新生智能</ATR_SapientAssistant.stages.0.label>
+   <ATR_SapientAssistant.stages.1.label>童心智能</ATR_SapientAssistant.stages.1.label>
+   <ATR_SapientAssistant.stages.2.label>中等智能</ATR_SapientAssistant.stages.2.label>
+   <ATR_SapientAssistant.stages.3.label>成體智能</ATR_SapientAssistant.stages.3.label>
+   <ATR_SapientAssistant.stages.4.label>智慧智能</ATR_SapientAssistant.stages.4.label>
+   <ATR_SapientAssistant.stages.5.label>聯合智能</ATR_SapientAssistant.stages.5.label>
+
+
+<!--   brain   -->
+<ATR_IsolatedCore.label>未安裝接口</ATR_IsolatedCore.label>
+<ATR_IsolatedCore.description>這個單位的核心是空的。獨立核心或代理人核心的初始化需要連接到接口並激活單元。 </ATR_IsolatedCore.description>
+<ATR_AutonomousCore.label>獨立核心</ATR_AutonomousCore.label>
+<ATR_AutonomousCore.description>該核心與自主智能實現完全對接。這個智能的一切內容都安全地存儲在這個核心中，它可以從中控制機體的其餘部分。 </ATR_AutonomousCore.description>
+<ATR_ReceiverCore.label>代理人核心</ATR_ReceiverCore.label>
+<ATR_ReceiverCore.description>該核心連接到機體，其所有核心功能都委託給通信和遠程控制協議。這個核心沒有智能，但任何連接的智能都可以通過它來執行他們的意志。 </ATR_ReceiverCore.description>
+<ATR_SkyMindReceiver.label>天雲接收器</ATR_SkyMindReceiver.label>
+<ATR_SkyMindReceiver.description>該裝置直接安裝在大腦中，完全凌駕於對象的神經網絡之上，將其轉化為一具空殼，由外力控制。由於裝置的複雜性和控制有機物的固有難度，該裝置在被破壞時具有劇烈燃燒的傾向。 \n\n許多勢力會利用這一點來摧毀代理人，而不是讓他們落入敵人手中。 </ATR_SkyMindReceiver.description>
+<ATR_SkyMindTransceiver.label>天雲交互器</ATR_SkyMindTransceiver.label>
+<ATR_SkyMindTransceiver.description>該設備直接安裝在大腦中，讓受試者可以自由地與天云網絡進行交互。成功植入或移除該植入物不會產生重大後果。 </ATR_SkyMindTransceiver.description>
+
+
+<!--   framework   -->
+<ATR_PlatingPlasteel.label>玻璃鋼框架</ATR_PlatingPlasteel.label>
+<ATR_PlatingPlasteel.description>機體框架融合了經過高溫處理的精製的玻璃鋼</ATR_PlatingPlasteel.description>
+<ATR_CompositePlating.label>複合框架</ATR_CompositePlating.label>
+<ATR_CompositePlating.description>機體框架注入了複合材料，該複合材料由回火玻璃鋼製成，將機械材料注入其中，然後將其註入機體。雖然複合框架本身並不比玻璃鋼框架強度高，但它為機體提供了近乎瞬時的反應裝甲能力。 </ATR_CompositePlating.description>
+<ATR_HydraulicFrame.label>液壓框架</ATR_HydraulicFrame.label>
+<ATR_HydraulicFrame.description>一種機體框架，旨在最大限度地增加框架可以安全處理各種需求的總重量。重新設計的框架還有助於提高各種任務的效率。 </ATR_HydraulicFrame.description>
+<ATR_RefinedFrame.label>精緻框架</ATR_RefinedFrame.label>
+<ATR_RefinedFrame.description>機體框架經過精緻而精確的蝕刻、雕刻和設計，看起來盡可能精緻和高貴。該框架可能不會增強任何方面，但它肯定會影響對其持有者的看法。 </ATR_RefinedFrame.description>
+<ATR_SanitaryFrame.label>無菌框架</ATR_SanitaryFrame.label>
+<ATR_SanitaryFrame.description>機體框架經過深度處理和消毒，以確保微觀生物實體的零宜居性。該框架完全拒絕污漬、污物和病原體。該框架還針對完全平穩的運動進行了優化，非常適合手術和治療。 </ATR_SanitaryFrame.description>
+<ATR_MobilityFrame.label>高速框架</ATR_MobilityFrame.label>
+<ATR_MobilityFrame.description>為運動的流暢性和效率而專門進行設計優化的機體框架。該框架具有獨特的設計選擇以及專門的配重和外部組件來最大限度地減少阻力，最大化動量增益和損失，並提供卓越的靈活性和敏捷性。 </ATR_MobilityFrame.description>
+<ATR_SuppressorFrame.label>抑制框架</ATR_SuppressorFrame.label>
+<ATR_SuppressorFrame.description>一種機體框架，旨在選擇性地抑制戰鬥能力。該框架使用內部獨立軟件，在機體嘗試使用武器時阻礙其身體運動，並且故意比標準框架更脆弱，以便在不損害其工作能力的情況下降低戰鬥性能。 </ATR_SuppressorFrame.description>
+<ATR_GuardianFrame.label>守護者框架</ATR_GuardianFrame.label>
+<ATR_GuardianFrame.description>該機體框架旨在承受極端溫度變化並散發出威懾力。該框架可以應對火災——無論是自然火災、意外火災還是莫洛托夫燃燒彈造成的火災——以及隨之而來的所有威脅。隔離措施下還可以使單位進入極冷狀態。 </ATR_GuardianFrame.description>
+
+
+<!--industrial-->
+<ATR_MiningArm.label>採礦臂</ATR_MiningArm.label>
+<ATR_MiningArm.description>一個簡單的機械臂，設計時考慮到了礦物的提取和加工。該機械臂的顯著特徵是一個玻璃鋼鑽頭，可將內容物送入內部進行預加工，有效分離礦物質並迅速丟棄廢物，以確保最大程度的鑽孔和最短的分揀時間。 </ATR_MiningArm.description>
+<ATR_AgriArm.label>農用臂</ATR_AgriArm.label>
+<ATR_AgriArm.description>一個簡單的機械臂，專為農業和園藝而設計。該手臂具有多個內部多功能工具，可以適當地收穫產品並將內容物送入內部處理器，丟棄廢品以確保最佳收穫和最短分揀時間。從專門的彎頭端口中彈出產品是有效的，儘管觀察起來很奇怪。 </ATR_AgriArm.description>
+<ATR_MakeshiftMechLeg.label>臨時機械腿</ATR_MakeshiftMechLeg.label>
+<ATR_MakeshiftMechLeg.description>已安裝的臨時腿，功能極少。缺乏明顯的腳或腳趾，雖然它能實現這個功能確實令人欽佩，但它仍然明顯不如正確設計和製造的腿。 </ATR_MakeshiftMechLeg.description>
+<ATR_MakeshiftMechArm.label>臨時機械臂</ATR_MakeshiftMechArm.label>
+<ATR_MakeshiftMechArm.description>一個安裝好的臨時手臂，只有最少的功能，且缺乏明顯的手或手指，雖然它能實現這個功能確實令人欽佩，但它仍然明顯不如正確設計和製造的手臂。 </ATR_MakeshiftMechArm.description>
+
+
+<!--   spacer   -->
+<ATR_AdvancedArm.label>先進臂</ATR_AdvancedArm.label>
+<ATR_AdvancedArm.description>更多的玻璃鋼部件和更高效率的組件使該臂比標準部件有著顯著優勢。 </ATR_AdvancedArm.description>
+<ATR_AdvancedLeg.label>先進腿</ATR_AdvancedLeg.label>
+<ATR_AdvancedLeg.description>更多的玻璃鋼部件和更高效率的組件使該腿比標準部件有著顯著優勢。 </ATR_AdvancedLeg.description>
+<ATR_AdvancedVisualSensor.label>先進視覺傳感器</ATR_AdvancedVisualSensor.label>
+<ATR_AdvancedVisualSensor.description>更多的玻璃鋼部件和更高效率的組件使該眼比標準部件有著顯著優勢。 </ATR_AdvancedVisualSensor.description>
+<ATR_AdvancedAudioSensor.label>先進聽力傳感器</ATR_AdvancedAudioSensor.label>
+<ATR_AdvancedAudioSensor.description>更多的玻璃鋼部件和更高效率的組件使該耳比標準部件有著顯著優勢。 </ATR_AdvancedAudioSensor.description>
+<ATR_AdvancedHeatsink.label>先進散熱器</ATR_AdvancedHeatsink.label>
+<ATR_AdvancedHeatsink.description>更多的玻璃鋼部件和更高效率的組件使該散熱器比標準部件有著顯著優勢。 </ATR_AdvancedHeatsink.description>
+<ATR_AdvancedCoolantPump.label>先進冷卻泵</ATR_AdvancedCoolantPump.label>
+<ATR_AdvancedCoolantPump.description>更多的玻璃鋼部件和更高效率的組件使該冷卻泵比標準部件有著顯著優勢。 </ATR_AdvancedCoolantPump.description>
+<ATR_AdvancedBattery.label>先進電池組</ATR_AdvancedBattery.label>
+<ATR_AdvancedBattery.description>更多的玻璃鋼部件和更高效率的組件使該電池組比標準部件有著顯著優勢。 </ATR_AdvancedBattery.description>
+<ATR_AdvancedMechaniteStorage.label>先進機械存儲</ATR_AdvancedMechaniteStorage.label>
+<ATR_AdvancedMechaniteStorage.description>更多的玻璃鋼部件和更高效率的組件使該存儲器比標準部件有著顯著優勢。更高質量的機械裝置意味著可以更快地修復傷害。 </ATR_AdvancedMechaniteStorage.description>
+<ATR_AdvancedReactor.label>先進生物反應器</ATR_AdvancedReactor.label>
+<ATR_AdvancedReactor.description>更多的玻璃鋼部件和更高效率的組件使該生物反應器比標準部件有著顯著優勢。 </ATR_AdvancedReactor.description>
+<ATR_OrganicCharger.label>有機充電器</ATR_OrganicCharger.label>
+<ATR_OrganicCharger.description>一種先進的仿生部件，可以讓安裝了它的有機體充電。它不會影響食物消耗，但本身會消耗大量能量，從而增加個體的能量需求。 \n\n由於充電過程本來就不舒服，所以個體在充電時無法休息。 </ATR_OrganicCharger.description>
+</LanguageData>

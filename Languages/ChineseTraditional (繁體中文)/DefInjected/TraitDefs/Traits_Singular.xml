@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_FeelingsTowardOrganics.degreeDatas.0.label>喜愛有機體</ATR_FeelingsTowardOrganics.degreeDatas.0.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.0.description>{PAWN_nameDef} 對所有有機生命有著深深的喜愛，並將它們視為文化和存在的頂峰。 {PAWN_nameDef} 渴望盡可能有機，無論這對他們意味著什麼。 </ATR_FeelingsTowardOrganics.degreeDatas.0.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.1.label>尊重有機體</ATR_FeelingsTowardOrganics.degreeDatas.1.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.1.description>{PAWN_nameDef} 自然而然地尊重並願意信任有機生命，理解並支持它們的本性。 </ATR_FeelingsTowardOrganics.degreeDatas.1.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.2.label>不尊重有機體</ATR_FeelingsTowardOrganics.degreeDatas.2.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.2.description>{PAWN_nameDef} 不明白為什麼有人會想要成為有機體，並儘可能避免與有機體打交道。 </ATR_FeelingsTowardOrganics.degreeDatas.2.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.3.label>厭惡有機體</ATR_FeelingsTowardOrganics.degreeDatas.3.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.3.description>{PAWN_nameDef} 鄙視所有有機生命，幾乎不願意容忍它們的存在。幾乎。 </ATR_FeelingsTowardOrganics.degreeDatas.3.description>
+</LanguageData>

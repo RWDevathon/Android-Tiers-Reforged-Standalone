@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_OpportunitySite_ArchotechArrival.questDescriptionRules.rulesStrings.>questDescription->隨著一聲尖銳的轟鳴, 一個火球從天空疾馳而過，你甚至都能感覺到周圍的空氣都在震動。它似乎並不是來自於深空。它不久之後消失在了地平線下，你也大致估算出了它降落的具體位置。但那裡等待你的將會是什麼呢？又出於什麼原因？
+                \n莫名其妙地，你感受到了 [allSitePartsDescriptionsExceptFirst]</ATR_OpportunitySite_ArchotechArrival.questDescriptionRules.rulesStrings.>
+
+<LetterLabelQuestExpired.label>任務過期： [resolvedQuestName]</LetterLabelQuestExpired.label>
+<LetterLabelQuestExpired.text>提醒你前往的未知物體墜落點的神秘信號突然中斷了，任務 [resolvedQuestName] 已過期。 </LetterLabelQuestExpired.text>
+</LanguageData>

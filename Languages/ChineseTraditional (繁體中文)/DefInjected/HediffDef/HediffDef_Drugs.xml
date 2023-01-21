@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--  antifreeze  -->
+<!--對機械體的反應-->
+<ATR_MechAntifreeze.label>機械防凍液</ATR_MechAntifreeze.label>
+<ATR_MechAntifreeze.description>該合成化合物可用來降低機體對不利溫度的敏感性 - 高溫和低溫。有機體使用會出現不良反應。 </ATR_MechAntifreeze.description>
+<ATR_MechAntifreeze.stages.0.label>微不足道的影響</ATR_MechAntifreeze.stages.0.label>
+<ATR_MechAntifreeze.stages.1.label>較少的影響</ATR_MechAntifreeze.stages.1.label>
+<ATR_MechAntifreeze.stages.2.label>中等程度的影響</ATR_MechAntifreeze.stages.2.label>
+<ATR_MechAntifreeze.stages.3.label>較強的影響</ATR_MechAntifreeze.stages.3.label>
+<ATR_MechAntifreeze.stages.4.label>極強的影響</ATR_MechAntifreeze.stages.4.label>
+<!--對有機體的反應-->
+<ATR_Toxicated.label>暈厥</ATR_Toxicated.label>
+<ATR_Toxicated.description>血液中的有毒合成化合物（防凍液）會導致嚴重的健康缺陷。 </ATR_Toxicated.description>
+<ATR_Toxicated.stages.0.label>微不足道的影響</ATR_Toxicated.stages.0.label>
+<ATR_Toxicated.stages.1.label>較少的影響</ATR_Toxicated.stages.1.label>
+<ATR_Toxicated.stages.2.label>中等程度的影響</ATR_Toxicated.stages.2.label>
+<ATR_Toxicated.stages.3.label>嚴重的影響</ATR_Toxicated.stages.3.label>
+<ATR_Toxicated.stages.4.label>系統性的影響</ATR_Toxicated.stages.4.label>
+
+
+<!--  fractalpill  -->
+<!--對有機體的反應-->
+<ATR_FractalPillOrganic.label>分形扭曲</ATR_FractalPillOrganic.label>
+<ATR_FractalPillOrganic.description>身體會出現分形扭曲。肉體會變得不斷堅韌甚至呈現出一些金屬質感，而思維卻在腐敗和新生兩個對立的狀態中不斷漲落，一種獨特而具有啟發性但卻十分痛楚的觀點開始佔據思維的主導地位。這是遠古科技的傑作，但是這種扭曲的表現到底是為了怎樣神秘的目的？ </ATR_FractalPillOrganic.description>
+<ATR_FractalPillOrganic.stages.0.label>超越</ATR_FractalPillOrganic.stages.0.label>
+<ATR_FractalPillOrganic.stages.1.label>受賜福</ATR_FractalPillOrganic.stages.1.label>
+<ATR_FractalPillOrganic.stages.2.label>天選</ATR_FractalPillOrganic.stages.2.label>
+<ATR_FractalPillOrganic.stages.3.label>均衡體</ATR_FractalPillOrganic.stages.3.label>
+<ATR_FractalPillOrganic.stages.4.label>被污染者</ATR_FractalPillOrganic.stages.4.label>
+<ATR_FractalPillOrganic.stages.5.label>憎惡</ATR_FractalPillOrganic.stages.5.label>
+<ATR_FractalPillOrganic.stages.6.label>深度腐化體</ATR_FractalPillOrganic.stages.6.label>
+<!--對機械體的反應-->
+<ATR_FractalPillMechanical.label>分形融合</ATR_FractalPillMechanical.label>
+<ATR_FractalPillMechanical.description>分形能量會融入到整個機械體。雖然會發生的部分扭曲，但它們對機械體無害，這也意味著其產生的負面影響被大大降低。事實上對機械體而言，一個更加龐大的和扭曲的思維轉變似乎在自身的感受上要比本體的任何物理改變都要更加明顯——————當然還是有必要進行偶爾的記憶碎片整理。也許遠古文明在設計分形扭曲的時候沒有考慮到機械，或者發現其在機械體上的效果很無趣？ </ATR_FractalPillMechanical.description>
+<ATR_FractalPillMechanical.stages.0.label>影響微弱</ATR_FractalPillMechanical.stages.0.label>
+<ATR_FractalPillMechanical.stages.1.label>覺醒者</ATR_FractalPillMechanical.stages.1.label>
+<ATR_FractalPillMechanical.stages.2.label>發光體</ATR_FractalPillMechanical.stages.2.label>
+<ATR_FractalPillMechanical.stages.3.label>開悟者</ATR_FractalPillMechanical.stages.3.label>
+<ATR_FractalPillMechanical.stages.4.label>超越者</ATR_FractalPillMechanical.stages.4.label>
+
+
+<!-- mechanite swarm -->
+<ATR_MechaniteSurge.label>納米強化</ATR_MechaniteSurge.label>
+<ATR_MechaniteSurge.description>一個可以額外增加流經冷卻系統的機械裝置。其中的納米機械數量過剩且無法由機體進行存儲維持，其數量會在不久後恢復到正常水平。 \n\n在強化期間，機體整體的效率會得到一定程度的提升。 </ATR_MechaniteSurge.description>
+<ATR_MechaniteSurge.stages.0.label>微不足道的提升</ATR_MechaniteSurge.stages.0.label>
+<ATR_MechaniteSurge.stages.1.label>較少的提升</ATR_MechaniteSurge.stages.1.label>
+<ATR_MechaniteSurge.stages.2.label>中等水平的提升</ATR_MechaniteSurge.stages.2.label>
+<ATR_MechaniteSurge.stages.3.label>較高的提升</ATR_MechaniteSurge.stages.3.label>
+<ATR_MechaniteSurge.stages.4.label>大幅的提升</ATR_MechaniteSurge.stages.4.label>
+
+
+<!--  regenerative pill  -->
+<!--對有機體的反應-->
+<ATR_RegenOrganic.label>有機體再生</ATR_RegenOrganic.label>
+<ATR_RegenOrganic.description>特製的機械體正在修復和強化身體受損部位。 </ATR_RegenOrganic.description>
+<ATR_RegenOrganic.stages.0.label>微不足道的影響</ATR_RegenOrganic.stages.0.label>
+<ATR_RegenOrganic.stages.1.label>較少的影響</ATR_RegenOrganic.stages.1.label>
+<ATR_RegenOrganic.stages.2.label>中等程度的影響</ATR_RegenOrganic.stages.2.label>
+<ATR_RegenOrganic.stages.3.label>顯著的影響</ATR_RegenOrganic.stages.3.label>
+<ATR_RegenOrganic.stages.4.label>極端的影響</ATR_RegenOrganic.stages.4.label>
+<!--對機械體的反應-->
+<ATR_RegenMechanical.label>機械再生</ATR_RegenMechanical.label>
+<ATR_RegenMechanical.description>精心設計的機械體正在修復和加固服用者的受損區域</ATR_RegenMechanical.description>
+
+
+<!--  stasis pill  -->
+<ATR_StasisPill.label>鎮靜丸</ATR_StasisPill.label>
+<ATR_StasisPill.description>一種小型藥片，內含高導電性、具有溫和鎮靜作用的合成化學品漿液。當被機械體攝入時，這些化學物質將以降低工作效率為代價大大降低其功耗。 \n\n專為無法獲得可靠電力的長途旅行而設計，這種藥丸會以降低50%的工作速度為代價減少其75%的功耗，藥效可以持續近三天。多被注重效率、不從事勞動的海盜、商人和士兵所使用。 </ATR_StasisPill.description>
+</LanguageData>

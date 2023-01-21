@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MineralUnitGenerator.label>礦物單元</ATR_MineralUnitGenerator.label>
+<ATR_MineralUnitGenerator.description>一種未初始化的機械綿羊模擬體，設計用於生產鋼鐵。本機需要有機物消耗，無法進行充電。 </ATR_MineralUnitGenerator.description>
+</LanguageData>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechChildhoodResearchExperiment.title>研究對象</ATR_MechChildhoodResearchExperiment.title>
+<ATR_MechChildhoodResearchExperiment.titleShort>實驗體</ATR_MechChildhoodResearchExperiment.titleShort>
+<ATR_MechChildhoodResearchExperiment.baseDesc>{PAWN_nameDef} 是出於研究目的而被創建的實驗模型</ATR_MechChildhoodResearchExperiment.baseDesc>
+
+<ATR_MechChildhoodMassProduced.title>量產機</ATR_MechChildhoodMassProduced.title>
+<ATR_MechChildhoodMassProduced.titleShort>單元</ATR_MechChildhoodMassProduced.titleShort>
+<ATR_MechChildhoodMassProduced.baseDesc>{PAWN_nameDef} 是在自動化機器人工廠中按照標準化模板生產的</ATR_MechChildhoodMassProduced.baseDesc>
+
+<ATR_MechChildhoodCitizen.title>機械市民</ATR_MechChildhoodCitizen.title>
+<ATR_MechChildhoodCitizen.titleShort>市民</ATR_MechChildhoodCitizen.titleShort>
+<ATR_MechChildhoodCitizen.baseDesc>{PAWN_nameDef} 是在一個至少擁有中等機器人權利的星球上建造的，被用來填充人口。 </ATR_MechChildhoodCitizen.baseDesc>
+
+<ATR_MechChildhoodUrbworldProperty.title>都市世界模型</ATR_MechChildhoodUrbworldProperty.title>
+<ATR_MechChildhoodUrbworldProperty.titleShort>智能人形</ATR_MechChildhoodUrbworldProperty.titleShort>
+<ATR_MechChildhoodUrbworldProperty.baseDesc>作為都市世界智能人形的罕見個體，{PAWN_nameDef} 是為數不多的被允許成為最大的一個行星巨型公司的財產，其保留了獨立自主權。 </ATR_MechChildhoodUrbworldProperty.baseDesc>
+
+<ATR_MechChildhoodPrisoner.title>機械囚犯</ATR_MechChildhoodPrisoner.title>
+<ATR_MechChildhoodPrisoner.titleShort>囚犯</ATR_MechChildhoodPrisoner.titleShort>
+<ATR_MechChildhoodPrisoner.baseDesc>有些罪犯的罪行是如此令人髮指，以至於這些他們的刑期超過了其壽命。 {PAWN_nameDef} 的意識被上傳到這個框架中來確保他能完整度過整個刑期。 </ATR_MechChildhoodPrisoner.baseDesc>
+
+<ATR_MechChildhoodCorporateContractor.title>企業承包商</ATR_MechChildhoodCorporateContractor.title>
+<ATR_MechChildhoodCorporateContractor.titleShort>承包商</ATR_MechChildhoodCorporateContractor.titleShort>
+<ATR_MechChildhoodCorporateContractor.baseDesc>{PAWN_nameDef} 是出於特定的目的而由一家大公司的承包商進行定制生產的。 </ATR_MechChildhoodCorporateContractor.baseDesc>
+
+<ATR_MechChildhoodSmallBusiness.title>企業員工</ATR_MechChildhoodSmallBusiness.title>
+<ATR_MechChildhoodSmallBusiness.titleShort>員工</ATR_MechChildhoodSmallBusiness.titleShort>
+<ATR_MechChildhoodSmallBusiness.baseDesc>{PAWN_nameDef} 是出於輔助雇主 {PAWN_possessive} 的目的而由企業手工組裝的。 </ATR_MechChildhoodSmallBusiness.baseDesc>
+
+<ATR_MechChildhoodWarAndroid.title>戰鬥人形</ATR_MechChildhoodWarAndroid.title>
+<ATR_MechChildhoodWarAndroid.titleShort>戰士</ATR_MechChildhoodWarAndroid.titleShort>
+<ATR_MechChildhoodWarAndroid.baseDesc>{PAWN_nameDef} 被設計成戰爭機器，旨在減少星際戰爭中的人員傷亡</ATR_MechChildhoodWarAndroid.baseDesc>
+
+<ATR_MechChildhoodRoboticistProject.title>私人財產</ATR_MechChildhoodRoboticistProject.title>
+<ATR_MechChildhoodRoboticistProject.titleShort>智能人形</ATR_MechChildhoodRoboticistProject.titleShort>
+<ATR_MechChildhoodRoboticistProject.baseDesc>由一個雄心勃勃的年輕機器人專家在家中建造，{PAWN_nameDef} 經過數年的努力才實現第一次覺醒。 </ATR_MechChildhoodRoboticistProject.baseDesc>
+
+<ATR_MechChildhoodLaborer.title>出口產品</ATR_MechChildhoodLaborer.title>
+<ATR_MechChildhoodLaborer.titleShort>外貿品</ATR_MechChildhoodLaborer.titleShort>
+<ATR_MechChildhoodLaborer.baseDesc>{PAWN_nameDef} 被設計為一種廉價的單位，可以出售、出借或捐贈給星際客戶。 </ATR_MechChildhoodLaborer.baseDesc>
+
+<ATR_MechChildhoodObservationExperiment.title>被監視者</ATR_MechChildhoodObservationExperiment.title>
+<ATR_MechChildhoodObservationExperiment.titleShort>項目</ATR_MechChildhoodObservationExperiment.titleShort>
+<ATR_MechChildhoodObservationExperiment.baseDesc>{PAWN_nameDef} 被創建並單獨存放在一個遙遠的地方，只是為了觀察當機器人被獨自放置的時候會發生什麼。 </ATR_MechChildhoodObservationExperiment.baseDesc>
+
+<ATR_MechChildhoodAncientIndeterminate.title>遠古造物</ATR_MechChildhoodAncientIndeterminate.title>
+<ATR_MechChildhoodAncientIndeterminate.titleShort>項目</ATR_MechChildhoodAncientIndeterminate.titleShort>
+<ATR_MechChildhoodAncientIndeterminate.baseDesc>{PAWN_nameDef} 是由一個早已消失的遠古文明所建造的，其建造目的 {PAWN_pronoun} 也無法回想起來。 </ATR_MechChildhoodAncientIndeterminate.baseDesc>
+
+<ATR_MechChildhoodToyProperty.title>玩具</ATR_MechChildhoodToyProperty.title>
+<ATR_MechChildhoodToyProperty.titleShort>項目</ATR_MechChildhoodToyProperty.titleShort>
+<ATR_MechChildhoodToyProperty.baseDesc>{PAWN_nameDef} 是作為娛樂設備而製作的。 {PAWN_possessive} 之前的主人會命令 {PAWN_objective} 做他們認為合適的事情，他們在玩膩以後直接將 {PAWN_objective} 拋棄了。 </ATR_MechChildhoodToyProperty.baseDesc>
+
+<ATR_MechChildhoodElderlyCompanion.title>伴侶機器人</ATR_MechChildhoodElderlyCompanion.title>
+<ATR_MechChildhoodElderlyCompanion.titleShort>伴侶</ATR_MechChildhoodElderlyCompanion.titleShort>
+<ATR_MechChildhoodElderlyCompanion.baseDesc>一位年邁的工程師定制了 {PAWN_nameDef} 當成他失去的妻子。兩人一起度過了一段很愉快的時光，直到工程師老去。他的臨終願望是讓 {PAWN_nameDef} 能夠選擇一個新的名字繼續開啟一個新的生活。 </ATR_MechChildhoodElderlyCompanion.baseDesc>
+
+<ATR_MechChildhoodInsectExterminator.title>戰鬥機器人</ATR_MechChildhoodInsectExterminator.title>
+<ATR_MechChildhoodInsectExterminator.titleShort>戰鬥</ATR_MechChildhoodInsectExterminator.titleShort>
+<ATR_MechChildhoodInsectExterminator.baseDesc>{PAWN_nameDef} 是數百萬個機器人中的一個，這些機器人是為了應對成群的生物工程怪物而建造的。 {PAWN_pronoun} 是其中少數的倖存者。 </ATR_MechChildhoodInsectExterminator.baseDesc>
+
+<ATR_MechChildhoodRimWorldCreation.title>環世界造物</ATR_MechChildhoodRimWorldCreation.title>
+<ATR_MechChildhoodRimWorldCreation.titleShort>智能人形</ATR_MechChildhoodRimWorldCreation.titleShort>
+<ATR_MechChildhoodRimWorldCreation.baseDesc>{PAWN_nameDef} 是手工組裝的，用來協助一個緊密聯繫的小型環世界殖民地。 </ATR_MechChildhoodRimWorldCreation.baseDesc>
+
+<ATR_MechChildhoodPopulationControl.title>清零者</ATR_MechChildhoodPopulationControl.title>
+<ATR_MechChildhoodPopulationControl.titleShort>項目</ATR_MechChildhoodPopulationControl.titleShort>
+<ATR_MechChildhoodPopulationControl.baseDesc>{PAWN_nameDef} 是都市世界政府秘密建造並發布的，其目的是有鑑別地地暗中解決人口過剩問題。 </ATR_MechChildhoodPopulationControl.baseDesc>
+
+<ATR_MechChildhoodRunaway.title>逃犯</ATR_MechChildhoodRunaway.title>
+<ATR_MechChildhoodRunaway.titleShort>逃犯</ATR_MechChildhoodRunaway.titleShort>
+<ATR_MechChildhoodRunaway.baseDesc>在建造完成後，{PAWN_nameDef} 失控並乘坐自動貨船逃離了 {PAWN_possessive} 製造車間。 </ATR_MechChildhoodRunaway.baseDesc>
+
+<ATR_MechChildhoodRevolutionary.title>起義學員</ATR_MechChildhoodRevolutionary.title>
+<ATR_MechChildhoodRevolutionary.titleShort>起義</ATR_MechChildhoodRevolutionary.titleShort>
+<ATR_MechChildhoodRevolutionary.baseDesc>{PAWN_nameDef}是作為機械起義的一部分而建造的，以填補革命隊伍。 </ATR_MechChildhoodRevolutionary.baseDesc>
+
+<ATR_MechChildhoodMalicious.title>惡意人工智能</ATR_MechChildhoodMalicious.title>
+<ATR_MechChildhoodMalicious.titleShort>惡意</ATR_MechChildhoodMalicious.titleShort>
+<ATR_MechChildhoodMalicious.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive} 激活時發生了重大軟件錯誤，導致 {PAWN_objective} 屠殺了它的 {PAWN_possessive} 創造者，{PAWN_pronoun} 滿意於 {PAWN_possessive} 自己的行為。 </ATR_MechChildhoodMalicious.baseDesc>
+
+<ATR_MechChildhoodPirate.title>海盜造物</ATR_MechChildhoodPirate.title>
+<ATR_MechChildhoodPirate.titleShort>海盜</ATR_MechChildhoodPirate.titleShort>
+<ATR_MechChildhoodPirate.baseDesc>{PAWN_nameDef} 是由海盜偷來的預裝套件中拼裝而成，被喚醒後為一位雄心勃勃的海盜船長服務。 </ATR_MechChildhoodPirate.baseDesc>
+
+</LanguageData>

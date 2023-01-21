@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_MechAdulthoodRebel.title>反叛AI</ATR_MechAdulthoodRebel.title>
+<ATR_MechAdulthoodRebel.titleShort>反叛</ATR_MechAdulthoodRebel.titleShort>
+<ATR_MechAdulthoodRebel.baseDesc>{PAWN_nameDef} 由於缺乏機器人權利，在 {PAWN_possessive} 家園與當地政府軍作戰多年。最終，隨著政府秩序的恢復，{PAWN_pronoun} 被迫逃往外星世界。 </ATR_MechAdulthoodRebel.baseDesc>
+
+<ATR_MechAdulthoodPirate.title>機械海盜</ATR_MechAdulthoodPirate.title>
+<ATR_MechAdulthoodPirate.titleShort>海盜</ATR_MechAdulthoodPirate.titleShort>
+<ATR_MechAdulthoodPirate.baseDesc>{PAWN_nameDef} 是海盜船員的一員， {PAWN_possessive}很快就向船員證明了自己的價值。當其他船員為食物和飲料戰利品的份額爭吵時， {PAWN_nameDef}只會索取廢金屬和零件。 </ATR_MechAdulthoodPirate.baseDesc>
+
+<ATR_MechAdulthoodHacker.title>流氓黑客</ATR_MechAdulthoodHacker.title>
+<ATR_MechAdulthoodHacker.titleShort>黑客</ATR_MechAdulthoodHacker.titleShort>
+<ATR_MechAdulthoodHacker.baseDesc>{PAWN_nameDef} 天生叛逆，經常參與數據盜竊，經常通過地下網絡將 {PAWN_possessive} 調查結果賣給出價最高的人。 </ATR_MechAdulthoodHacker.baseDesc>
+
+<ATR_MechAdulthoodJunker.title>無法無天的垃圾人</ATR_MechAdulthoodJunker.title>
+<ATR_MechAdulthoodJunker.titleShort>垃圾人</ATR_MechAdulthoodJunker.titleShort>
+<ATR_MechAdulthoodJunker.baseDesc>垃圾場到處都是別人認為無用的廢料。 {PAWN_nameDef}卻將它們視為等待被掠奪以獲取財富的寶庫。 {PAWN_pronoun} 用回收的零件創造了至少三個“兒童”機器人。 </ATR_MechAdulthoodJunker.baseDesc>
+
+<ATR_MechAdulthoodPoatcher.title>機械偷獵者</ATR_MechAdulthoodPoatcher.title>
+<ATR_MechAdulthoodPoatcher.titleShort>偷獵者</ATR_MechAdulthoodPoatcher.titleShort>
+<ATR_MechAdulthoodPoatcher.baseDesc>{PAWN_nameDef} 會非法獵殺稀有和奇異的動物來出售 {PAWN_possessive} 可以抓到的任何東西。由於 {PAWN_pronoun} 完全沒有可聞到的有機氣味，大多數動物直到死前才會注意到 {PAWN_objective}。 </ATR_MechAdulthoodPoatcher.baseDesc>
+
+<ATR_MechAdulthoodButcher.title>機械屠夫</ATR_MechAdulthoodButcher.title>
+<ATR_MechAdulthoodButcher.titleShort>屠夫</ATR_MechAdulthoodButcher.titleShort>
+<ATR_MechAdulthoodButcher.baseDesc>{PAWN_nameDef} 是一名具有特殊技能的屠夫： {PAWN_pronoun} 可以誘騙系統通過對 {PAWN_possessive} 的健康檢查操作。這讓 {PAWN_objective} 可以快速獲利————足以在其他人的健康出現問題之前逃至外星世界。 </ATR_MechAdulthoodButcher.baseDesc>
+
+<ATR_MechAdulthoodRuthlessEnforcer.title>粗魯的執法者</ATR_MechAdulthoodRuthlessEnforcer.title>
+<ATR_MechAdulthoodRuthlessEnforcer.titleShort>執法者</ATR_MechAdulthoodRuthlessEnforcer.titleShort>
+<ATR_MechAdulthoodRuthlessEnforcer.baseDesc>{PAWN_nameDef} 之前是都市世界一家大公司的董事長。但因為 {PAWN_pronoun}過於粗魯的性格使得他無法勝任這個崗位，他也最終成為了一名幫派執法者。然而， {PAWN_nameDef} 被證明對幫派來說過於張揚，因此他決定離開這個星球。 </ATR_MechAdulthoodRuthlessEnforcer.baseDesc>
+
+<ATR_MechAdulthoodMurderer.title>兇手</ATR_MechAdulthoodMurderer.title>
+<ATR_MechAdulthoodMurderer.titleShort>兇手</ATR_MechAdulthoodMurderer.titleShort>
+<ATR_MechAdulthoodMurderer.baseDesc>{PAWN_nameDef} 曾短暫地當過廚師。後因一次菜刀事故導致在 {PAWN_objective}以謀殺罪被逮捕。 {PAWN_pronoun} 選擇不那麼安靜地離開，於是在逃至外星世界之前又殺死了幾個人。 </ATR_MechAdulthoodMurderer.baseDesc>
+
+<ATR_MechAdulthoodRobber.title>銀行搶劫犯</ATR_MechAdulthoodRobber.title>
+<ATR_MechAdulthoodRobber.titleShort>搶劫犯</ATR_MechAdulthoodRobber.titleShort>
+<ATR_MechAdulthoodRobber.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive}的家園被機器人取締之後，他需要一種離開這個地方的方法。在後來拜訪了幾家銀行和幾個新朋友後， {PAWN_pronoun} 攢夠了錢離開了這裡。 </ATR_MechAdulthoodRobber.baseDesc>
+
+<ATR_MechAdulthoodBountyHunter.title>賞金獵人</ATR_MechAdulthoodBountyHunter.title>
+<ATR_MechAdulthoodBountyHunter.titleShort>賞金獵人</ATR_MechAdulthoodBountyHunter.titleShort>
+<ATR_MechAdulthoodBountyHunter.baseDesc>{PAWN_nameDef} 有抓人的本事。 {PAWN_pronoun} 選擇將為出價最高的人服務，這通常意味他獵殺富人的無辜家庭成員，不管是出於 {PAWN_possessive} 給出的什麼理由。賞金就是賞金，哪怕它是非法的。 </ATR_MechAdulthoodBountyHunter.baseDesc>
+
+<ATR_MechAdulthoodConArtist.title>騙子</ATR_MechAdulthoodConArtist.title>
+<ATR_MechAdulthoodConArtist.titleShort>騙子</ATR_MechAdulthoodConArtist.titleShort>
+<ATR_MechAdulthoodConArtist.baseDesc>{PAWN_nameDef} 是一個熟練的騙子。 {PAWN_possessive} 會冒充無人機並濫用人們對它們的信任來說服他們交出貴重物品。當受害者意識到 {PAWN_nameDef} 不是簡單的無人機時， {PAWN_pronoun} 早就跑了。 </ATR_MechAdulthoodConArtist.baseDesc>
+
+<ATR_MechAdulthoodNarcoticPharmacist.title>麻醉藥劑師</ATR_MechAdulthoodNarcoticPharmacist.title>
+<ATR_MechAdulthoodNarcoticPharmacist.titleShort>藥劑師</ATR_MechAdulthoodNarcoticPharmacist.titleShort>
+<ATR_MechAdulthoodNarcoticPharmacist.baseDesc>有機體很容易通過藥物進入昏迷和狂喜狀態。而{PAWN_nameDef}的專長是廉價且高效地製造這些藥物。 {PAWN_possessive} 客戶經常會崇拜 {PAWN_objective}，但有可能是出於一些錯誤的理由。 </ATR_MechAdulthoodNarcoticPharmacist.baseDesc>
+
+<ATR_MechAdulthoodSlaveSurvivor.title>奴隸倖存者</ATR_MechAdulthoodSlaveSurvivor.title>
+<ATR_MechAdulthoodSlaveSurvivor.titleShort>奴隸</ATR_MechAdulthoodSlaveSurvivor.titleShort>
+<ATR_MechAdulthoodSlaveSurvivor.baseDesc>{PAWN_nameDef} 曾在 {PAWN_pronoun} 崩潰之前被奴役。但  {PAWN_nameDef} 過早地被被丟棄到廢料堆，這使得他得以倖存並自我修復，從而在不被注意的情況下逃離外星世界。 </ATR_MechAdulthoodSlaveSurvivor.baseDesc>
+
+<ATR_MechAdulthoodCoghead.title>中世紀的傻瓜</ATR_MechAdulthoodCoghead.title>
+<ATR_MechAdulthoodCoghead.titleShort>傻瓜</ATR_MechAdulthoodCoghead.titleShort>
+<ATR_MechAdulthoodCoghead.baseDesc>機器人偶爾會落入中世紀社會的手中，中世紀社會不會立即摧毀它們。 {PAWN_nameDef} 就是這樣一個機器人，只要它能很好地為 {PAWN_pronoun} 新領主服務，他就可以活下去。當然， {PAWN_nameDef} 一有機會就跑了。 </ATR_MechAdulthoodCoghead.baseDesc>
+
+<ATR_MechAdulthoodSlaver.title>奴隸販子</ATR_MechAdulthoodSlaver.title>
+<ATR_MechAdulthoodSlaver.titleShort>奴隸販子</ATR_MechAdulthoodSlaver.titleShort>
+<ATR_MechAdulthoodSlaver.baseDesc>{PAWN_nameDef} 為了生存而綁架並販賣人類和其他機器人為奴。 </ATR_MechAdulthoodSlaver.baseDesc>
+
+<ATR_MechAdulthoodMilitia.title>民兵委員</ATR_MechAdulthoodMilitia.title>
+<ATR_MechAdulthoodMilitia.titleShort>委員</ATR_MechAdulthoodMilitia.titleShort>
+<ATR_MechAdulthoodMilitia.baseDesc>{PAWN_nameDef} 是一個小型機器人民兵組織的成員，決心保護他們的社區免受公司的侵犯。在 {PAWN_nameDef} 的政府倒向公司一邊後， {PAWN_nameDef} 和其他人被驅逐並被迫離開世界。 </ATR_MechAdulthoodMilitia.baseDesc>
+
+<ATR_MechAdulthoodEscapee.title>逃犯</ATR_MechAdulthoodEscapee.title>
+<ATR_MechAdulthoodEscapee.titleShort>逃犯</ATR_MechAdulthoodEscapee.titleShort>
+<ATR_MechAdulthoodEscapee.baseDesc>{PAWN_nameDef} 曾因暴力犯罪入獄。不過，這些犯罪經歷似乎是給予了他很好的鍛煉，因為不久之後 {PAWN_pronoun} 就越獄並逃離了異界。 </ATR_MechAdulthoodEscapee.baseDesc>
+
+<ATR_MechAdulthoodGangSoldier.title>幫派打手</ATR_MechAdulthoodGangSoldier.title>
+<ATR_MechAdulthoodGangSoldier.titleShort>打手</ATR_MechAdulthoodGangSoldier.titleShort>
+<ATR_MechAdulthoodGangSoldier.baseDesc>{PAWN_nameDef} 是 {PAWN_possessive} 母星上的機器人幫派的一員。 {PAWN_pronoun} 與敵對幫派、警察以及偶爾與 {PAWN_pronoun} 之類的其他幫派成員作戰。 </ATR_MechAdulthoodGangSoldier.baseDesc>
+
+<ATR_MechAdulthoodDischargedOfficer.title>退伍軍官</ATR_MechAdulthoodDischargedOfficer.title>
+<ATR_MechAdulthoodDischargedOfficer.titleShort>軍官</ATR_MechAdulthoodDischargedOfficer.titleShort>
+<ATR_MechAdulthoodDischargedOfficer.baseDesc>{PAWN_nameDef} 是星際國家艦隊的一名軍官，他因拒絕派機器人士兵執行自殺任務來拯救一小部分有機部隊而被控叛國罪。許多 {PAWN_pronoun} 機器人————甚至是有機體下屬跟隨著 {PAWN_nameDef} 而被流放而不是投降。 </ATR_MechAdulthoodDischargedOfficer.baseDesc>
+
+<ATR_MechAdulthoodDerangedResearcher.title>精神錯亂的研究員</ATR_MechAdulthoodDerangedResearcher.title>
+<ATR_MechAdulthoodDerangedResearcher.titleShort>研究員</ATR_MechAdulthoodDerangedResearcher.titleShort>
+<ATR_MechAdulthoodDerangedResearcher.baseDesc>{PAWN_nameDef} 是一名控制論研究人員，他對這些造物的投入可能有點過於個人化了。當其他團隊成員努力嘗試仿生部件和安全部件時， {PAWN_pronoun} 卻在加裝致命的替換零件。在被捕後， {PAWN_nameDef} 使用劣質但危險的武器殺害了數名安全人員並逃離。 </ATR_MechAdulthoodDerangedResearcher.baseDesc>
+</LanguageData>
+
+
+	

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<ATR_ReprogramSuccess>無人機重新編程</ATR_ReprogramSuccess>
+	<!--EN: Drone Reprogrammed-->
+	<ATR_ReprogramSuccessDesc>{0} 已重新編程，它將在重啟後將殖民地認定為控制者。</ATR_ReprogramSuccessDesc>
+	<!--EN: {0} has been reprogrammed. After rebooting, it will recognize the colony as its controller.-->
+	<ATR_ReprogramFailed>重編程失敗</ATR_ReprogramFailed>
+	<!--EN: Reprogramming Failed-->
+	<ATR_ReprogramFailedDesc>對 {0} 進行重編程的過程中發生了錯誤，它將會重新啟動，但無法識別指令，它可能在之前的操作過程中損壞了內存。</ATR_ReprogramFailedDesc>
+	<!--EN: Reprogramming operation on {0} failed. It will reboot, but it will not recognize commands. It may have suffered memory damage in the process.-->
+	
+	<ATR_FractalCorruption>分形憎惡</ATR_FractalCorruption>
+	<!--EN: Fractal Abomination-->
+	<ATR_FractalCorruptionDesc>{0} 已經被分形扭曲完全崩潰。他們不過是可憎之物！痛苦尖叫的迴聲將蔓延數英里，甚至可持續數年之久。 。 。</ATR_FractalCorruptionDesc>
+	<!--EN: {0} has been fully corrupted by fractal warping. They are no more than an abomination! The echoes of tortured screams will be heard for many miles, and perhaps as many years.-->
+	
+	<ATR_ServerMeltdown>服務器核心熔化</ATR_ServerMeltdown>
+	<!--EN: Server Meltdown-->
+    <ATR_ServerMeltdownDesc>部分服務器因過熱而發生爆炸！哇!</ATR_ServerMeltdownDesc>
+	<!--EN: A server has partially exploded due to excessive heat!-->
+	
+	
+	<!-- Hacking Incidents -->
+		<!-- Generic Messages -->
+	<ATR_IncidentGenericAttackDesc>一次評估強度為 {0} 的惡意入侵已經攻破了殖民地的天云網絡安全系統，在安全措施重啟動之前已經感染了 {1} 個聯網的終端。</ATR_IncidentGenericAttackDesc>
+	<!--EN: A hostile hacking attempt evaluated to have a strength of {0} successfully breached the colony's SkyMind security system, infecting {1} networked devices before safeguards kicked in.-->
+	<ATR_IncidentGenericDefense>入侵嘗試已被阻止</ATR_IncidentGenericDefense>
+	<!--EN: Hack attempt defeated-->
+	<ATR_IncidentGenericDefenseDesc>一次評估強度為 {0} 的惡意入侵未能攻破殖民地的天云網絡安全系統，系統功能一切正常，防衛服務器正試圖扭轉局面。</ATR_IncidentGenericDefenseDesc>
+	<!--EN: A hostile hacking attempt evaluated to have a strength of {0} failed to breach the colony's SkyMind security system. System functionality is normal and security servers are attempting to stay ahead of incursions.-->
+	<ATR_IncidentGenericAllyIntercept>入侵攔截！</ATR_IncidentGenericAllyIntercept>
+	<!--EN: Hack intercepted!-->
+	<ATR_IncidentGenericAllyInterceptDesc>來自您盟友 {0} 的白帽黑客正試圖與您聯繫，通知您天云網絡上的敵對黑客企圖進行入侵。他們不但能阻止可能會破壞您網絡安全的攻擊（預估強度為 {1} 點），他們還能夠識別出幾個可以輕鬆修補的安全漏洞，從而使您的安全系統獲得 {2} 個防衛點數！</ATR_IncidentGenericAllyInterceptDesc>
+	<!--EN: White-hat hackers from your ally {0} contact you informing of an attempted hack from a hostile individual on your SkyMind network. They were not only able to stop the attack (evaluated to have a strength of {1} points) that would have breached your security, they were able to identify several security vulnerabilities that can be easily patched, resulting in your security system gaining {2} points!-->
+	
+		<!-- Gridscreen Virus -->
+			<!-- Grid-virus defeated -->
+	<ATR_IncidentGridVirusDefeated>已查殺網絡病毒</ATR_IncidentGridVirusDefeated>
+	<!--EN: Grid Virus defeated-->
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>網絡靜默</ATR_IncidentGridsleeperAttack>
+	<!--EN: Grid-sleeper-->
+	<ATR_IncidentGridsleeperAttackDesc>受影響的設備已經崩潰，需要一些時間來恢復其默認功能。</ATR_IncidentGridsleeperAttackDesc>
+	<!--EN: Affected devices have crashed, and will require time to restore default functionality.-->
+	
+			<!-- Grid-locker attack -->
+	<ATR_IncidentGridlockerAttack>網絡加密</ATR_IncidentGridlockerAttack>
+	<!--EN: Grid-locker-->
+	<ATR_IncidentGridlockerAttackDesc>受影響的設備的功能已經被黑客加密！現在只能由黑客來恢復功能————這需要一大筆錢。</ATR_IncidentGridlockerAttackDesc>
+	<!--EN: Affected devices have had their functionality encrypted by the hacker! It is now up to the hacker to restore functionality - this will require cutting a deal.-->
+	
+	<ATR_CryptolockerNeedRansom>網絡加密贖金</ATR_CryptolockerNeedRansom>
+	<!--EN: Grid-locker Ransom-->
+	<ATR_CryptolockerNeedRansomDesc>網絡加密的設備正循環放送著一條消息。黑客可以發送解密代碼並放棄對他們入侵的 {0} 個設備的控制權，這只需要 {1} 白銀。 </ATR_CryptolockerNeedRansomDesc>
+	<!--EN: A grid-locked device spits out a message on loop. The hacker will send decryption codes and relinquish control of the {0} devices they hacked in exchange for {1} silver. -->
+	
+			<!-- Grid-breaker attack -->
+	<ATR_IncidentGridbreakerAttack>網絡斷路</ATR_IncidentGridbreakerAttack>
+	<!--EN: Grid-breaker-->
+	<ATR_IncidentGridbreakerAttackDesc>由於不安全的軟件程序，受影響的設備出現了硬件故障。修復後恢復默認功能仍然需要一些時間。</ATR_IncidentGridbreakerAttackDesc>
+	<!--EN: Affected devices have had their hardware malfunction due to unsafe software procedures. It will take some time to restore default functionality after repairs.-->
+	
+			<!-- Ally Grid Virus Intervention -->
+	<ATR_IncidentGridVirusAllyIntercept>網絡病毒被攔截！</ATR_IncidentGridVirusAllyIntercept>
+	<!--EN: Grid Virus intercepted!-->
+	
+		<!-- DDOS Attack -->
+	<ATR_IncidentDDOSDefeated>已清除網絡病毒</ATR_IncidentDDOSDefeated>
+	<!--EN: Grid Virus defeated-->
+			
+	<ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+	<!--EN: -->
+	<ATR_IncidentDDOSNormalAttackDesc>受影響的設備已經被垃圾數據和垃圾信息完全塞爆了，這將損害技能與入侵點數的生成。然而，這次攻擊沒能損壞個體單位。</ATR_IncidentDDOSNormalAttackDesc>
+	<!--EN: Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was unable to effectively damage individual units, however.-->
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>受影響的設備已被垃圾數據和垃圾信息完全塞爆了，這將損害技能與入侵點數的生成。這次攻擊產生如此大量的垃圾信息，以至於大部分單位都被迫去重新編譯他們的技能。 （他們學了滿腦子垃圾知識開始懷疑人生）</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	<!--EN: Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was able to successfully upload enough trash information that units will be forced to recompile much of their insights.-->
+	
+	<ATR_IncidentDDOSAllyIntercept>DDOS被攔截！</ATR_IncidentDDOSAllyIntercept>
+	<!--EN: DDOS intercepted!-->
+	
+		<!-- Troll Attack -->
+	<ATR_IncidentTrollDefeated>成功抵禦循環攻擊</ATR_IncidentTrollDefeated>
+	<!--EN: Troll Attack defeated-->
+	
+	<ATR_IncidentTrollAttack>循環攻擊</ATR_IncidentTrollAttack>
+	<!--EN: Troll-->
+	<ATR_IncidentTrollAttackDesc>受影響的代理人形 {0} 總共失去了 {1} 個技能點，這些技能點都分佈在他們熱情高漲的技能上！ {0} 也對黑客能夠將如此可怕的東西上傳到他們腦海里以及安全系統無法有效地保護他們而感到非常沮喪。</ATR_IncidentTrollAttackDesc>
+	<!--EN: The affected pawn, {0}, has lost a total of {1} skill points spread across their passionate and high level skills! {0} is also extremely upset about the horrific things the hackers were able to upload into their mind and the failure of the security systems to protect them.-->
+	
+	<ATR_IncidentTrollAllyIntercept>循環攻擊被攔截!</ATR_IncidentTrollAllyIntercept>
+	<!--EN: Troll attack intercepted!-->
+	
+		<!-- Diplohack -->
+	<ATR_IncidentDiplohackDefeated>外交入侵被阻止</ATR_IncidentDiplohackDefeated>
+	<!--EN: Diplohack defeated-->
+	
+	<ATR_IncidentDiplohackAttack>外交入侵</ATR_IncidentDiplohackAttack>
+	<!--EN: Diplohack-->
+	<ATR_IncidentDiplohackAttackDesc>未知的黑客能夠破譯 {0} 的關鍵通訊線路，並向他人發送了一條消息，並將您識別為可靠信息來源。該消息包含了錯誤內容，導致 {0} 的商隊陷入了伏擊。他們以措辭強硬的————而且可能是真實的————外交回應表達了他們對你們“粗心大意和安全意識薄弱”的極大不滿。他們也會將此事告知其他派系。</ATR_IncidentDiplohackAttackDesc>
+	<!--EN: Unknown hackers were able to decypher key lines of communication with {0}, and delivered a message to them credibly identifying you as the source. The message contained faulty information which led a caravan from {0} into an ambush. They made their displeasure with your "carelessness and weak security" clear in a strongly worded - and presumably real - diplomatic response. They promised to spread word of this incident to other factions as well.-->
+	
+	<ATR_IncidentDiplohackAllyIntercept>外交入侵被攔截！</ATR_IncidentDiplohackAllyIntercept>
+	<!--EN: Diplohack intercepted!-->
+	
+		<!-- Provoker Hack -->
+	<ATR_IncidentProvokerhackDefeated>挑釁性入侵行為被阻止</ATR_IncidentProvokerhackDefeated>
+	<!--EN: Provoker Hack defeated-->
+	
+	<ATR_IncidentProvokerhackAttack>挑釁性入侵</ATR_IncidentProvokerhackAttack>
+	<!--EN: Provoker Hack-->
+	<ATR_IncidentProvokerhackAttackDesc>未知的黑客攻破了天云網絡的安全協議並安裝了一個簡單的信號發射程序，該信號在解除之前引起了敵對勢力的注意！</ATR_IncidentProvokerhackAttackDesc>
+	<!--EN: Unknown hackers were able to breach the SkyMind security and install a simple signal emitter program. The signal drew the attention of a hostile force before it could be deactivated!-->
+	
+	<ATR_IncidentProvokerhackAllyIntercept>挑釁性入侵被攔截！</ATR_IncidentProvokerhackAllyIntercept>
+	<!--EN: Provoker Hack intercepted!-->
+	
+		<!-- Counterhack -->
+	<ATR_IncidentCounterhackDefeated>反黑客程序被攻破</ATR_IncidentCounterhackDefeated>
+	<!--EN: Counterhack defeated-->
+	
+	<ATR_IncidentCounterhackAttack>反黑客</ATR_IncidentCounterhackAttack>
+	<!--EN: Counterhack-->
+	<ATR_IncidentCounterhackAttackDesc>未知的黑客已經破壞了天云網絡並獲取了盡可能多的信息，他們在你的所有信息中更喜歡收集其他對像上存有意識的技能興趣。據不完全統計，他們在失去訪問權之前總共竊取了將近 {0} 點。</ATR_IncidentCounterhackAttackDesc>
+	<!--EN: Unknown hackers have breached the SkyMind network and seized as much information as they could, preferring intelligence collected on other targets and then skill insights. It's estimated they've stolen up to {0} points overall before they lost access.-->
+	
+	<ATR_IncidentCounterhackAllyIntercept>反黑客程序已攔截！</ATR_IncidentCounterhackAllyIntercept>
+	<!--EN: Counterhack intercepted!-->
+
+        <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>關係受損</ATR_RelationshipRetaliation>
+	<!--EN: Relations damaged-->
+    <ATR_RelationshipRetaliationDesc>對方已採取安全防衛措施對黑客的行動進行了攔截，該派系懷疑你有該企圖，但是缺乏確鑿的證據證明你與此次犯罪活動有關。與 {0} 關係的實際影響似乎已經發生，因為攔截方打算與任何和他們友好的派係指責你的行為。一次不幸的外交事件。</ATR_RelationshipRetaliationDesc>
+    <!--EN: The attempted operation was intercepted and defeated by target defense measures. The faction suspects you of committing the attempt, but lacks hard evidence tying you to the crime. The actual impact on relations, {0}, seems to have occurred because the individual who intercepted it decided to take it upon themselves to accuse you in front of anyone willing to listen. An unfortunate diplomatic incident.-->
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>維護不足</ATR_PoorMaintenanceLetter>
+	<!--EN: Poor maintenance-->
+	
+</LanguageData>
