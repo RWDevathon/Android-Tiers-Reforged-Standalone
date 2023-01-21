@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<ATR_ReprogramSuccess>드론 재프로그래밍</ATR_ReprogramSuccess>
+	<ATR_ReprogramSuccessDesc>{0} 재프로그래밍되었습니다. 재부팅 후 콜로니를 컨트롤러로 인식합니다.</ATR_ReprogramSuccessDesc>
+	<ATR_ReprogramFailed>재프로그래밍 실패</ATR_ReprogramFailed>
+	<ATR_ReprogramFailedDesc>{0}에 대한 재프로그래밍 작업이 실패했습니다. 재부팅되지만 명령을 인식하지 못합니다. 프로세스에서 메모리 손상이 발생했을 수 있습니다.</ATR_ReprogramFailedDesc>
+	
+	<ATR_FractalCorruption>프랙탈 혐오</ATR_FractalCorruption>
+	<ATR_FractalCorruptionDesc>{0}은(는) 프랙탈 뒤틀림으로 인해 완전히 손상되었습니다. 그들은 가증한 존재에 지나지 않습니다! 고통스러운 비명의 메아리는 수 마일, 아마도 수년 동안 들릴 것입니다.</ATR_FractalCorruptionDesc>
+	
+	<ATR_ServerMeltdown>서버 붕괴</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>과도한 열로 인해 서버가 부분적으로 폭발했습니다!</ATR_ServerMeltdownDesc>
+	
+	
+	<!-- Hacking Incidents -->
+		<!-- Generic Messages -->
+	<ATR_IncidentGenericAttackDesc>강도가 {0}인 것으로 평가된 적대적인 해킹 시도가 콜로니의 SkyMind 보안 시스템을 성공적으로 위반하여 보호 장치가 작동하기 전에 {1}개의 네트워크 장치를 감염시켰습니다.</ATR_IncidentGenericAttackDesc>
+	<ATR_IncidentGenericDefense>해킹 시도 실패</ATR_IncidentGenericDefense>
+	<ATR_IncidentGenericDefenseDesc>A강도가 {0}인 것으로 평가된 적대적인 해킹 시도가 식민지의 SkyMind 보안 시스템을 뚫지 못했습니다. 시스템 기능은 정상이며 보안 서버는 침입보다 앞서 나가려고 합니다.</ATR_IncidentGenericDefenseDesc>
+	<ATR_IncidentGenericAllyIntercept>해킹 차단!</ATR_IncidentGenericAllyIntercept>
+	<ATR_IncidentGenericAllyInterceptDesc>동맹 {0}의 화이트햇 해커가 SkyMind 네트워크에서 적대적인 개인의 해킹 시도를 알리기 위해 연락합니다. 그들은 귀하의 보안을 침해할 수 있는 공격({1} 포인트의 강점을 가진 것으로 평가됨)을 막을 수 있었을 뿐만 아니라 쉽게 패치할 수 있는 여러 보안 취약점을 식별할 수 있었기 때문에 귀하의 보안 시스템은 {2 } 포인트들!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		<!-- Gridscreen Virus -->
+			<!-- Grid-virus defeated -->
+	<ATR_IncidentGridVirusDefeated>그리드 바이러스 처치</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>그리드 슬리퍼</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>영향을 받는 장치가 충돌했으며 기본 기능을 복원하는 데 시간이 걸립니다.</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- Grid-locker attack -->
+	<ATR_IncidentGridlockerAttack>그리드 락커</ATR_IncidentGridlockerAttack>
+	<ATR_IncidentGridlockerAttackDesc>영향을 받는 장치는 해커에 의해 기능이 암호화되었습니다! 이제 기능을 복원하는 것은 해커에게 달려 있습니다. 이를 위해서는 거래를 중단해야 합니다.</ATR_IncidentGridlockerAttackDesc>
+	
+	<ATR_CryptolockerNeedRansom>그리드 락커 랜섬</ATR_CryptolockerNeedRansom>
+	<ATR_CryptolockerNeedRansomDesc>그리드 잠금 장치는 루프에서 메시지를 뱉어냅니다. 해커는 암호 해독 코드를 보내고 해킹한 {0} 기기의 제어 권한을 {1}은화와 교환합니다. </ATR_CryptolockerNeedRansomDesc>
+	
+			<!-- Grid-breaker attack -->
+	<ATR_IncidentGridbreakerAttack>그리드 브레이커</ATR_IncidentGridbreakerAttack>
+	<ATR_IncidentGridbreakerAttackDesc>영향을 받는 장치는 안전하지 않은 소프트웨어 절차로 인해 하드웨어 오작동을 일으켰습니다. 수리 후 기본 기능을 복원하는 데 약간의 시간이 걸립니다.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- Ally Grid Virus Intervention -->
+	<ATR_IncidentGridVirusAllyIntercept>그리드 바이러스 차단!</ATR_IncidentGridVirusAllyIntercept>
+	
+		<!-- DDOS Attack -->
+	<ATR_IncidentDDOSDefeated>그리드 바이러스 처치</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>디도스</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>영향을 받은 장치는 정크 데이터 및 쓰레기 정보로 넘쳐났습니다. 이것은 기술과 해킹 통찰력 생성을 손상시킬 것입니다. 그러나 공격은 개별 유닛을 효과적으로 손상시킬 수 없었습니다.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>영향을 받은 장치는 정크 데이터 및 쓰레기 정보로 넘쳐났습니다. 이것은 기술과 해킹 통찰력 생성을 손상시킬 것입니다. 공격은 유닛이 많은 통찰력을 재컴파일하도록 강제할 만큼 충분한 쓰레기 정보를 성공적으로 업로드할 수 있었습니다.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAllyIntercept>DDOS 차단!</ATR_IncidentDDOSAllyIntercept>
+	
+		<!-- Troll Attack -->
+	<ATR_IncidentTrollDefeated>트롤 공격 패배</ATR_IncidentTrollDefeated>
+	
+	<ATR_IncidentTrollAttack>트롤</ATR_IncidentTrollAttack>
+	<ATR_IncidentTrollAttackDesc>영향을 받은 폰 {0}은(는) 열정적이고 높은 수준의 기술에 걸쳐 총 {1}개의 기술 포인트를 잃었습니다! {0}은 또한 해커가 자신의 마음에 업로드할 수 있었던 끔찍한 일과 이를 보호하지 못하는 보안 시스템의 실패에 대해 극도로 화가 났습니다.</ATR_IncidentTrollAttackDesc>
+	
+	<ATR_IncidentTrollAllyIntercept>트롤 공격 차단!</ATR_IncidentTrollAllyIntercept>
+	
+		<!-- Diplohack -->
+	<ATR_IncidentDiplohackDefeated>Diplohack 패배</ATR_IncidentDiplohackDefeated>
+	
+	<ATR_IncidentDiplohackAttack>디플로핵</ATR_IncidentDiplohackAttack>
+	<ATR_IncidentDiplohackAttackDesc>알 수 없는 해커가 {0}와의 주요 통신 라인을 해독할 수 있었고 귀하를 출처로 확실하게 식별하는 메시지를 그들에게 전달했습니다. 메시지에는 {0}에서 온 캐러밴을 매복한 잘못된 정보가 포함되어 있습니다. 그들은 당신의 "부주의와 취약한 보안"에 대한 불만을 강한 말로, 그리고 아마도 실제적인 외교적 대응으로 분명히 밝혔습니다. 그들은 이 사건을 다른 파벌에도 퍼뜨릴 것을 약속했습니다.</ATR_IncidentDiplohackAttackDesc>
+	
+	<ATR_IncidentDiplohackAllyIntercept>Diplohack이 차단되었습니다!</ATR_IncidentDiplohackAllyIntercept>
+	
+		<!-- Provoker Hack -->
+	<ATR_IncidentProvokerhackDefeated>도발자 핵 처치</ATR_IncidentProvokerhackDefeated>
+	
+	<ATR_IncidentProvokerhackAttack>도발자 해킹</ATR_IncidentProvokerhackAttack>
+	<ATR_IncidentProvokerhackAttackDesc>알 수 없는 해커가 SkyMind 보안을 뚫고 간단한 신호 방출기 프로그램을 설치할 수 있었습니다. 신호가 비활성화되기 전에 적대 세력의 주의를 끌었습니다!</ATR_IncidentProvokerhackAttackDesc>
+	
+	<ATR_IncidentProvokerhackAllyIntercept>도발자 해킹 차단!</ATR_IncidentProvokerhackAllyIntercept>
+	
+		<!-- Counterhack -->
+	<ATR_IncidentCounterhackDefeated>카운터핵 패배</ATR_IncidentCounterhackDefeated>
+	
+	<ATR_IncidentCounterhackAttack>카운터핵</ATR_IncidentCounterhackAttack>
+	<ATR_IncidentCounterhackAttackDesc>알려지지 않은 해커들이 스카이마인드 네트워크를 뚫고 가능한 한 많은 정보를 압수했으며, 다른 대상에서 수집한 정보와 기술 통찰력을 선호했습니다. 액세스 권한을 잃기 전에 전체적으로 최대 {0}포인트를 훔친 것으로 추정됩니다.</ATR_IncidentCounterhackAttackDesc>
+	
+	<ATR_IncidentCounterhackAllyIntercept>카운터핵 차단!</ATR_IncidentCounterhackAllyIntercept>
+
+        <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>손상된 관계</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliationDesc>시도한 작전은 표적 방어 조치에 의해 차단되고 패배했습니다. 파벌은 당신이 시도를 저질렀다고 의심하지만 당신을 범죄와 연결시키는 확실한 증거가 부족합니다. 관계 {0}에 대한 실제 영향은 그것을 가로챈 개인이 듣고자 하는 사람 앞에서 당신을 고발하기로 결정했기 때문에 발생한 것 같습니다. 불행한 외교 사건.</ATR_RelationshipRetaliationDesc>
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>열악한 유지 보수</ATR_PoorMaintenanceLetter>
+	
+</LanguageData>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- General -->
+	<ATR_SkyMindConnectionFailed>SkyMind 연결을 설정할 수 없습니다. 네트워크 용량 및 가용성을 확인하십시오.</ATR_SkyMindConnectionFailed>
+	<ATR_SkyMindConnectionFailedNoNetwork>SkyMind 연결을 설정할 수 없습니다. 사용 가능한 네트워크가 없습니다.</ATR_SkyMindConnectionFailedNoNetwork>
+	
+	<ATR_GridlockerCleared>Grid-locker가 성공적으로 해독되고 비활성화되었습니다.</ATR_GridlockerCleared> 
+
+	<!-- Core -->
+	<ATR_RemoveCloudPawnSuccess>{0}의 신경망이 제거되었습니다.</ATR_RemoveCloudPawnSuccess>
+	
+	<ATR_ReplicateCloudPawnFailed>복제를 시작할 수 없습니다. 할당할 수 있는 SkyMind 공간이 부족합니다.</ATR_ReplicateCloudPawnFailed>
+
+    <!-- Player hacking -->
+    <ATR_HackOperationFailed>작전은 목표 진영의 보안 시스템을 뚫지 못했습니다. 어떠한 반발도 예상되지 않습니다.</ATR_HackOperationFailed>
+	<ATR_DisruptorHackSuccess>방해에 성공했습니다. 적대적인 유닛이 손상되었습니다.</ATR_DisruptorHackSuccess>
+
+    <ATR_NoArrival>진영이 안내 시스템을 재설정하기 전에 뒤섞인 좌표로 아무것도 전송되지 않았습니다. 이번에는 운이 좋았습니다.</ATR_NoArrival>
+
+    <!-- Android Interfaces -->
+    <ATR_NewbootAndroidCreated>안드로이드가 생성되었습니다. 수술을 통해 인터페이스를 설치하여 장치를 온라인 상태로 만듭니다.</ATR_NewbootAndroidCreated>
+    <ATR_InterfaceRemoved>안드로이드의 인터페이스가 제거되었습니다. 모든 성격 및 제어 데이터가 파괴되었습니다. 새 인터페이스를 설치하여 온라인 상태로 만드십시오.</ATR_InterfaceRemoved>
+
+	<!-- Link -->
+	<ATR_SurrogateControlled>{0}이(가) 새로운 서로게이트에 연결됨</ATR_SurrogateControlled>
+	<ATR_OperationInitiated>{0}의 요청에 의해 SkyMind 네트워크 링크가 설정되었습니다. 절차가 완료될 때까지 네트워크 연결을 비활성화하지 마십시오.</ATR_OperationInitiated>
+	<ATR_OperationCompleted>스카이마인드 작전 완료</ATR_OperationCompleted>
+	<ATR_OperationCompletedDesc>SkyMind 네트워크는 {0}에서 요청한 작업을 성공적으로 수행했습니다.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>스카이마인드 작전 실패!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>{0}은(는) 마인드 작업 중 SkyMind 링크 붕괴로 인해 치명적인 메모리 손상을 겪었습니다. 작업이 실패했으며 메모리에 심각한 손상이 발생했습니다.</ATR_OperationFailureDesc>
+
+	<MessageMedicalOperationFailureMinorAndroid>{0}이(가) 작동 중에 사소한 오류를 범하여 {1}에서 절차를 중단했습니다.</MessageMedicalOperationFailureMinorAndroid>
+	<MessageMedicalOperationFailureCatastrophicAndroid>{0}이(가) {1}에서 작업을 시도하는 동안 치명적으로 실패했습니다.</MessageMedicalOperationFailureCatastrophicAndroid>
+	<MessageMedicalOperationFailureRidiculousAndroid>{0}이(가) {1}에서 작업을 시도하는 동안 중대한 오류를 범했습니다.</MessageMedicalOperationFailureRidiculousAndroid>
+	<MessageMedicalOperationFailureFatalAndroid>{0}이(가) {1}에서 작업하는 동안 의도하지 않은 계단식 손상을 유발하는 치명적인 오류를 범했습니다. 이 절차는 중앙 프로세서에 돌이킬 수 없는 손상을 일으켜 기억과 의식을 완전히 상실하게 했습니다.</MessageMedicalOperationFailureFatalAndroid>
+	
+</LanguageData>

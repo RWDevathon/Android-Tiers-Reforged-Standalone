@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableSources>사용 가능한 소스:</ATR_ViableSources>
+	<ATR_ViableTargets>사용 가능한 대상:</ATR_ViableTargets>
+	<ATR_NoAvailableTarget>운영을 위한 대상이 없습니다.</ATR_NoAvailableTarget>
+
+	<!-- Charging -->
+	<ATR_ForceCharge>배터리 충전 강제</ATR_ForceCharge>
+	<ATR_NoAvailableChargingSpots>사용할 수 없으며 충전 장소가 예약되어 있습니다.</ATR_NoAvailableChargingSpots>
+	<ATR_NeedToAllowCharge>{0} 충전 기능이 활성화되어 있지 않습니다.</ATR_NeedToAllowCharge>
+	<ATR_MassiveNotAllowed>거대한 기계 장치는 이것을 사용할 수 없습니다.</ATR_MassiveNotAllowed>
+	<ATR_MassiveRequired>거대한 기계 유닛만이 이것을 사용할 수 있습니다.</ATR_MassiveRequired>
+	
+</LanguageData>

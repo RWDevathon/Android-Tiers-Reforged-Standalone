@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Computer -->
+    <ATR_SkillServersSynthesis>사용 가능한 기술 포인트: {0} / {1}</ATR_SkillServersSynthesis>
+    <ATR_SkillProducedPoints>생산 중인 기술 포인트: {0}</ATR_SkillProducedPoints>
+    <ATR_SkillSlotsAdded>추가된 기술 저장 공간: {0}</ATR_SkillSlotsAdded>
+
+    <ATR_SecurityServersSynthesis>사용 가능한 보안 포인트: {0} / {1}</ATR_SecurityServersSynthesis>
+    <ATR_SecurityProducedPoints>생산 중인 보안 포인트: {0}</ATR_SecurityProducedPoints>
+    <ATR_SecuritySlotsAdded>추가된 보안 저장 공간: {0}</ATR_SecuritySlotsAdded>
+
+    <ATR_HackingServersSynthesis>사용 가능한 해킹 포인트: {0} / {1}</ATR_HackingServersSynthesis>
+    <ATR_HackingProducedPoints>생산 중인 해킹 포인트: {0}</ATR_HackingProducedPoints>
+    <ATR_HackingSlotsAdded>추가된 해킹 저장 공간: {0}</ATR_HackingSlotsAdded>
+
+    <!-- Charging -->
+    <ATR_CurrentChargerPowerConsumption>현재 전력 소비량: {0} W</ATR_CurrentChargerPowerConsumption>
+
+    <!-- Heat -->
+    <ATR_CompHotSensitiveCriticalText>온도 임계치 초과: 손상 위험!</ATR_CompHotSensitiveCriticalText>
+    <ATR_CompHotSensitiveDangerText>온도 임계치 접근: 예방 조치 권유!</ATR_CompHotSensitiveDangerText>
+    <ATR_CompHotSensitiveWarningText>적절한 온도 임계치 초과: 조심 권유</ATR_CompHotSensitiveWarningText>
+    <ATR_CompHotSensitiveSafeText>안전 운영 임계치 안에 있음: 운영 정상.</ATR_CompHotSensitiveSafeText>
+
+	<!-- SkyMind -->
+    <ATR_HackedWithTimer>소프트웨어 재구성 완료: {0}.</ATR_HackedWithTimer>
+    <ATR_CryptoLocked>암호화됨, 액세스 거부.</ATR_CryptoLocked>
+    <ATR_SkyMindDetected>SkyMind에 연결됨</ATR_SkyMindDetected>
+
+    <!-- Core -->
+    <ATR_CloudIntelligenceSummary>SkyMind 지능: {0} / {1}</ATR_CloudIntelligenceSummary>
+    <ATR_AssistingIntelligenceSummary>유휴 지능: {0}</ATR_AssistingIntelligenceSummary>
+
+    <!-- Link -->
+    <ATR_SkyMindOperationInProgress>작업 완료까지 남은 시간: {0}</ATR_SkyMindOperationInProgress>
+    <ATR_SurrogateConnected>연결된 유저: {0} 명</ATR_SurrogateConnected>
+
+    <!-- Tower -->
+    <ATR_SkyMindNetworkSummary>연결된 사용자: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>

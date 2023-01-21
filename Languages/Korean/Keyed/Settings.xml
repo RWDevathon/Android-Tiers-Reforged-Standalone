@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- Miscellaneous Keys -->
+	<ATR_ModTitle>Android 등급 개편</ATR_ModTitle>
+	
+	<ATR_RestartRequired>다시 시작해야 합니다.</ATR_RestartRequired>
+	<ATR_RestartRequiredSectionDesc>이 섹션의 설정을 변경하려면 게임을 다시 시작해야 합니다.</ATR_RestartRequiredSectionDesc>
+	<ATR_RestartRequiredPostDesc>이 섹션의 설정을 변경하려면 게임을 다시 시작해야 합니다.</ATR_RestartRequiredPostDesc>
+
+
+    <ATR_ExpandMenu>펼치기/접기</ATR_ExpandMenu>
+	
+	<!-- Mod Settings Page Keys -->
+	<ATR_SettingsTabTitle>구성</ATR_SettingsTabTitle>
+	
+	<ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+	<ATR_SettingsTabOption_General>일반적인</ATR_SettingsTabOption_General>
+	<ATR_SettingsTabOption_Power>동력</ATR_SettingsTabOption_Power>
+	<ATR_SettingsTabOption_Security>보안</ATR_SettingsTabOption_Security>
+	<ATR_SettingsTabOption_Health>건강</ATR_SettingsTabOption_Health>
+	<ATR_SettingsTabOption_Connectivity>연결성</ATR_SettingsTabOption_Connectivity>
+	<ATR_SettingsTabOption_Stats>통계</ATR_SettingsTabOption_Stats>
+	
+	<!-- General Settings -->
+	<ATR_ApplyPreset>프리셋 적용</ATR_ApplyPreset>
+	
+		<!-- Gender Settings -->
+	<ATR_AndroidGenderNotice>변경 사항은 새로운 안드로이드에만 영향을 미칩니다.</ATR_AndroidGenderNotice>
+	<ATR_AndroidsHaveGenders>안드로이드에도 성별이 있다</ATR_AndroidsHaveGenders>
+	<ATR_AndroidsPickGenders>Android는 생성 시 성별을 선택합니다.</ATR_AndroidsPickGenders>
+	<ATR_AndroidsFixedGenderSelector>모든 안드로이드는 남성(false) 또는 여성(true)입니다.</ATR_AndroidsFixedGenderSelector>
+	<ATR_AndroidsGenderRatio>안드로이드가 남성 성별과 여성 성별을 선택할 기회</ATR_AndroidsGenderRatio>
+	
+		<!-- Commonality Settings -->
+	<ATR_PlayerOnlyNote>비활성화하면 안드로이드는 플레이어가 만들 때만 존재합니다.</ATR_PlayerOnlyNote>
+	<ATR_AndroidsAppearNaturally>안드로이드는 진영 또는 이벤트의 일부로 나타날 수 있습니다.</ATR_AndroidsAppearNaturally>
+	
+	<ATR_AndroidFactionSettings>안드로이드 진영은 어떤 역할을 하나요? 새 게임에만 영향을 미칩니다.</ATR_AndroidFactionSettings>
+	<ATR_AndroidSocietiesExist>안드로이드는 그들만의 진영을 가지고 있습니다.</ATR_AndroidSocietiesExist>
+	<ATR_AndroidRaidersExist>안드로이드는 그들만의 해적 집단을 결성했습니다</ATR_AndroidRaidersExist>
+	<ATR_AndroidRaidersDesc>바닐라의 해적 진영처럼 행동합니다.</ATR_AndroidRaidersDesc>
+	<ATR_AndroidUnionistsExist>집단 생존에 전념하는 안드로이드들이 뭉쳤다</ATR_AndroidUnionistsExist>
+	<ATR_AndroidUnionistsDesc>바닐라의 Outlander 진영처럼 행동합니다.</ATR_AndroidUnionistsDesc>
+	
+	<!-- Needs Settings -->
+	<ATR_AndroidOnlyNotice>참고: 안드로이드로 표시된 유닛만 영향을 받습니다. 드론은 그런 필요가 없습니다.</ATR_AndroidOnlyNotice>
+	<ATR_AndroidsNeedJoy>안드로이드는 기쁨의 욕구를 충족시켜야 합니다.</ATR_AndroidsNeedJoy>
+	<ATR_AndroidsNeedBeauty>Android는 아름다움에 대한 요구를 충족해야 합니다.</ATR_AndroidsNeedBeauty>
+	<ATR_AndroidsNeedComfort>안드로이드는 편안함 요구를 충족해야 합니다.</ATR_AndroidsNeedComfort>
+	<ATR_AndroidsNeedOutdoors>Android는 실외/실내 요구 사항을 충족해야 합니다.</ATR_AndroidsNeedOutdoors>
+	
+	<ATR_SettingsPresetDefault>기본</ATR_SettingsPresetDefault>
+	<ATR_SettingsPresetCustom>관습</ATR_SettingsPresetCustom>
+	
+	<ATR_SettingsConsideredAndroid>안드로이드</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>안드로이드 아님</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>드론</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>드론 아님</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>기계 동물</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>유기 동물</ATR_SettingsNotConsideredAnimals>
+	
+	<!-- Power Settings -->
+	<ATR_wattsConsumedPerBodySize>충전 시 신체 사이즈 1개당 전력사용량[디폴트: 500]</ATR_wattsConsumedPerBodySize>
+	<ATR_batteryPercentagePerRareTick>Rare Tick당 충전된 배터리 비율(~4초) [기본값: 7%]</ATR_batteryPercentagePerRareTick>
+	<ATR_batteryPercentagePerTick>배터리 충전 속도 [기본값: 1]</ATR_batteryPercentagePerTick>
+	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>기계 장치는 유기물과 다르게 영양을 처리합니다.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+	<ATR_mechanicalBioprocessingEfficiency>영양 효율 [기본: 50%]</ATR_mechanicalBioprocessingEfficiency>
+	
+	<!-- Security Settings -->
+        <!-- Hostile Hacking -->
+	<ATR_EnemyHacksOccur>적대적 해킹이 활성화되었습니다.</ATR_EnemyHacksOccur>
+	<ATR_ChanceAlliesInterceptHack>동맹 파벌별로 당신에 대한 해킹을 차단할 기회</ATR_ChanceAlliesInterceptHack>
+	<ATR_ChanceAlliesInterceptHackDesc>연합 진영이 성공적인 적 해킹으로부터 당신을 구해 피해를 방지하고 실제로 보안 포인트를 제공할 확률입니다. 이것은 PER ALLY입니다.</ATR_ChanceAlliesInterceptHackDesc>
+	<ATR_PointsGainedOnInterceptPercentage>아군이 공격의 비율로 가로채면 획득하는 점수</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_PointsGainedOnInterceptPercentageDesc>아군이 당신에 대한 공격을 가로채면 그들은 당신에게 보안 포인트를 기부합니다. 이것은 그들이 당신에게 제공하는 습격 포인트의 비율을 제어합니다.</ATR_PointsGainedOnInterceptPercentageDesc>
+	<ATR_EnemyHackAttackStrengthModifier>적 해킹 강도 수정자</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_EnemyHackAttackStrengthModifierDesc>적의 해킹 사건이 얼마나 많은 해킹 포인트를 갖게 될지에 대한 곱셈 수정자. 100% 미만이면 강도가 감소하고 100%를 초과하면 강도가 높아집니다.</ATR_EnemyHackAttackStrengthModifierDesc>
+	<ATR_PercentageOfValueUsedForRansoms>몸값 공격에서 요구되는 항목 가치의 비율</ATR_PercentageOfValueUsedForRansoms>
+	
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>플레이어 해킹이 활성화되었습니다.</ATR_PlayerCanHack>
+    <ATR_receiveFullHackingAlert>용량의 90%를 초과하는 해킹 포인트에 대해 경고합니다.</ATR_receiveFullHackingAlert>
+    <ATR_RetaliationChanceOnFailure>목표 팩션이 실패한 해킹에 대해 보복할 확률</ATR_RetaliationChanceOnFailure>
+    <ATR_MinHackSuccessChance>성공적인 해킹의 최소 기회</ATR_MinHackSuccessChance>
+    <ATR_MaxHackSuccessChance>성공적인 해킹의 최대 기회</ATR_MaxHackSuccessChance>
+
+    <!-- Health Settings -->
+        <!-- Medical -->
+    <ATR_medicinesAreInterchangeable>유기농/기계 의약품은 상호 교환이 가능합니다.</ATR_medicinesAreInterchangeable>
+    <ATR_showMechanicalSurgerySuccessChance>완료된 기계 수술의 성공 확률을 표시합니다.</ATR_showMechanicalSurgerySuccessChance>
+    <ATR_maxChanceMechanicOperationSuccess>기계적 수술의 최대 성공 변화</ATR_maxChanceMechanicOperationSuccess>
+    <ATR_chanceFailedOperationMinor>기계적 수술 실패 확률은 경미합니다[기본값 75%]</ATR_chanceFailedOperationMinor>
+    <ATR_chancePartSavedOnFailure>기계적 수술 실패로 인해 부품이 반환될 확률[기본값 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- Maintenance -->
+    <ATR_receiveMaintenanceFailureLetters>유지 관리 관련 건강 문제에 대한 편지를 받습니다.</ATR_receiveMaintenanceFailureLetters>
+
+    
+	<!-- Connectivity Settings -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>대리인이 허용됩니다.</ATR_surrogatesAllowed>
+    <ATR_otherFactionsAllowedSurrogates>다른 진영은 대리인을 사용할 수 있습니다.</ATR_otherFactionsAllowedSurrogates>
+    <ATR_minGroupSizeForSurrogates>대리자와 함께 생성할 파벌 그룹의 구성원 수</ATR_minGroupSizeForSurrogates>
+    <ATR_minSurrogatePercentagePerLegalGroup>법적 그룹의 대리인 최소 비율[기본값 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+    <ATR_maxSurrogatePercentagePerLegalGroup>법적 그룹의 최대 대리인 비율[기본값 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>페널티 전 컨트롤러당 대리인:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+        <!-- Skills -->
+    <ATR_receiveFullSkillAlert>용량의 90%를 초과하는 스킬 포인트에 대해 경고합니다.</ATR_receiveFullSkillAlert>
+	<ATR_skillPointConversionRate>스킬 포인트당 생성되는 기본 XP 양 [기본값: 0.5]</ATR_skillPointConversionRate>
+	<ATR_passionSoftCap>열정당 비용이 증가하기 전의 열정 소프트 캡[기본값: 8]</ATR_passionSoftCap>
+	<ATR_basePointsNeededForPassion>열정당 필요한 기본 스킬 포인트 [기본값: 5000]</ATR_basePointsNeededForPassion>
+
+        <!-- Cloud -->
+    <ATR_UploadingKills>SkyMind에 업로드하면 개시자의 몸이 공백으로 변합니다.</ATR_UploadingKills>
+    <ATR_UploadingPermakills>SkyMind에 업로드하면 개시자의 몸이 완전히 쓸모없고 죽게 됩니다.</ATR_UploadingPermakills>
+    <ATR_SkyMindOperationTimeRequired>SkyMind 작업을 완료하는 데 필요한 시간[기본값: 24]</ATR_SkyMindOperationTimeRequired>
+
+</LanguageData>

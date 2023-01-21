@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- AutoDoor -->
+	<ATR_AutoDoorOpen>열려 있는</ATR_AutoDoorOpen>
+	<ATR_AutoDoorOpenDescription>SkyCloud 코어를 통해 원격으로 엽니다.</ATR_AutoDoorOpenDescription>
+	<ATR_AutoDoorClose>닫다</ATR_AutoDoorClose>
+	<ATR_AutoDoorCloseDescription>SkyCloud 서버를 통해 원격으로 닫습니다.</ATR_AutoDoorCloseDescription>
+	
+	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>서버가 SkyMind 네트워크에 연결되지 않았습니다.</ATR_ServerNetworkConnectionNeeded>
+
+	<ATR_SkillMode>스킬 모드</ATR_SkillMode>
+	<ATR_SkillModeDesc>이 서버는 스킬 포인트 생성에 할당됩니다. 보안으로 전환하려면 클릭하세요.</ATR_SkillModeDesc>
+	
+	<ATR_SecurityMode>보안 모드</ATR_SecurityMode>
+	<ATR_SecurityModeDesc>이 서버는 보안 포인트 생성에 할당됩니다. 해킹으로 전환하려면 클릭하세요.</ATR_SecurityModeDesc>
+	
+	<ATR_HackingMode>해킹 모드</ATR_HackingMode>
+	<ATR_HackingModeDesc>해킹 포인트 생성을 담당하는 서버입니다. 클릭하면 스킬로 전환됩니다.</ATR_HackingModeDesc>
+
+    <ATR_HackingWindow>해킹 시도</ATR_HackingWindow>
+    <ATR_HackingWindowDesc>해킹 인터페이스를 열어 해킹 포인트를 사용하여 사악한 활동에 참여할 수 있도록 합니다.</ATR_HackingWindowDesc>
+
+	<ATR_SwitchToSkillMode>비활성!</ATR_SwitchToSkillMode>
+	<ATR_SwitchToSkillModeDesc>이 서버는 불법 상태입니다. 클릭하면 스킬로 전환됩니다.</ATR_SwitchToSkillModeDesc>
+	
+	<!-- SkyMind -->
+	<ATR_ConnectSkyMind>스카이마인드에 연결</ATR_ConnectSkyMind>
+	<ATR_ConnectSkyMindDesc>이 식민지 주민을 SkyMind 네트워크에 연결하여 마인드 운영 또는 대리 제어를 허용합니다.</ATR_ConnectSkyMindDesc>
+	
+	<!-- Core -->
+	<ATR_CloudPawnInfo>정보</ATR_CloudPawnInfo>
+	<ATR_CloudPawnInfoDesc>SkyMind 인텔리전스에 대한 정보를 얻으십시오.</ATR_CloudPawnInfoDesc>
+	
+	<ATR_RemoveCloudPawn>없애다</ATR_RemoveCloudPawn>
+	<ATR_RemoveCloudPawnDesc>SkyMind 인텔리전스 제거</ATR_RemoveCloudPawnDesc>
+	<ATR_RemoveCloudPawnConfirm>SkyMind 네트워크에서 {0}을 플러시하면 인텔리전스가 영구적으로 파괴됩니다. 이것은 살인으로 간주됩니다.</ATR_RemoveCloudPawnConfirm>
+	
+	<ATR_ReplicateCloudPawn>뒤로 젖히다</ATR_ReplicateCloudPawn>
+	<ATR_ReplicateCloudPawnDesc>SkyMind 인텔리전스를 복제합니다.</ATR_ReplicateCloudPawnDesc>
+	
+	<ATR_Skills>기술</ATR_Skills>
+	<ATR_SkillsDesc>오픈 스킬 워크숍, 서버 스킬 포인트를 경험과 열정으로 교환할 수 있습니다.</ATR_SkillsDesc>
+	
+	<ATR_ControlSurrogate>연결되다</ATR_ControlSurrogate>
+	<ATR_ControlSurrogateDesc>선택한 호스트리스 대리자를 제어합니다.</ATR_ControlSurrogateDesc>
+	
+	<ATR_ControlCaravanSurrogate>다시 덮다</ATR_ControlCaravanSurrogate>
+	<ATR_ControlCaravanSurrogateDesc>캐러밴에서 호스트리스 대리인을 구하십시오.</ATR_ControlCaravanSurrogateDesc>
+	
+	<!-- Link -->
+    <ATR_Surrogate>대리</ATR_Surrogate>
+	
+	<ATR_AbsorbExperience>마음 흡수</ATR_AbsorbExperience>
+	<ATR_AbsorbExperienceDesc>스킬과 해킹 포인트에 대한 죄수 지능의 경험을 흡수하십시오.</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceConfirm>이 작업은 수감자의 생명을 대가로 기술과 해킹에 대한 유용한 통찰력을 추출합니다. 이것은 살인으로 간주됩니다.</ATR_AbsorbExperienceConfirm>
+	
+	<ATR_DownloadCloudPawn>다운로드</ATR_DownloadCloudPawn>
+	<ATR_DownloadCloudPawnDesc>SkyMind 인텔리전스를 이 폰에 다운로드합니다.</ATR_DownloadCloudPawnDesc>
+	<ATR_DownloadCloudPawnConfirm>이 작업은 SkyMind 지능을 이 폰으로 완전히 전송합니다. 인텔리전스는 네트워크에서 지속되지 않습니다.</ATR_DownloadCloudPawnConfirm>
+	
+	<ATR_DisconnectSurrogate>연결 끊기</ATR_DisconnectSurrogate>
+	<ATR_DisconnectSurrogateDesc>모든 대리 링크의 연결을 끊습니다.</ATR_DisconnectSurrogateDesc>
+	
+	<ATR_ToggleControlMode>토글 컨트롤</ATR_ToggleControlMode>
+	<ATR_ToggleControlModeDesc>대리 제어 모드를 전환하여 대리 제어를 허용하지만 SkyMind 작업을 비활성화합니다.</ATR_ToggleControlModeDesc>
+	
+	<ATR_Permute>순열</ATR_Permute>
+	<ATR_PermuteDesc>현재 선택된 식민지 주민의 의식을 다른 식민지 주민으로 전환합니다.</ATR_PermuteDesc>
+	<ATR_PermuteConfirm>이 작업은 {0} 및 {1}의 인텔리전스를 교환합니다.</ATR_PermuteConfirm>
+	
+	<ATR_Transfer>옮기다</ATR_Transfer>
+	<ATR_TransferDesc>현재 선택된 식민지 주민의 의식을 유기적 대리자로 이전합니다.</ATR_TransferDesc>
+	<ATR_TransferConfirm>이 작업은 {0}를 대상 서로게이트의 본문으로 전송합니다. 이렇게 하면 {0}의 원래 몸이 무의미해집니다. SkyMind 수신기는 작업이 완료되면 소진됩니다.</ATR_TransferConfirm>
+	
+	<ATR_Upload>업로드</ATR_Upload>
+	<ATR_UploadDesc>이 인텔리전스를 SkyMind 네트워크에 업로드합니다. 남겨진 신체에 발생하는 일은 설정을 통해 제어됩니다(기본값은 신체가 뇌사 상태가 됨).</ATR_UploadDesc>
+	<ATR_UploadConfirm>이 작업은 이 인텔리전스를 SkyMind 네트워크로 전송하고 몸은 남겨 둡니다.</ATR_UploadConfirm>
+	
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>유지</ATR_MaintenanceGizmoLabel>
+    <ATR_MaintenanceDesc>유지 관리는 폰의 내부 프로세서 및 외부 부품 상태를 측정합니다. 유지 관리는 시간이 지남에 따라 저하되며 정기적인 유지 관리 주기로 구축해야 합니다. 부실한 유지 관리는 효율성을 떨어뜨리고 너무 오래 지속되면 부품 고장으로 이어질 수 있습니다.\n\n높은 수준의 유지 관리는 작은 이점을 제공하지만 유지 관리 손실을 크게 증가시킵니다.\n\n참고: 제공된 값은 기준 비율이며 실제 낙하율은 폰의 유지 효율에 따라 달라집니다(정보 탭에서).</ATR_MaintenanceDesc>
+    <ATR_MaintenanceTargetLabel>대상 유지</ATR_MaintenanceTargetLabel>
+    <ATR_MaintenanceTargetLabelDesc>원하는 유지 관리 수준을 설정하려면 클릭합니다.</ATR_MaintenanceTargetLabelDesc>
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+    <ATR_MaintenanceLevelInfoFallRate>유지보수 하락 {0} 하루에.</ATR_MaintenanceLevelInfoFallRate>
+
+</LanguageData>
