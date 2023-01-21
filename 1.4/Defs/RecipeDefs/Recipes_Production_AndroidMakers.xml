@@ -334,7 +334,7 @@
                         <li>Plasteel</li>
                     </thingDefs>
                 </filter>
-                <count>120</count>
+                <count>80</count>
             </li>
             <li>
                 <filter>
@@ -350,7 +350,7 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>12</count>
+                <count>6</count>
             </li>
         </ingredients>
         <products>
@@ -387,7 +387,7 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>12</count>
+                <count>6</count>
             </li>
         </ingredients>
         <products>
@@ -425,7 +425,7 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>16</count>
+                <count>8</count>
             </li>
         </ingredients>
         <products>
@@ -462,7 +462,7 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>12</count>
+                <count>6</count>
             </li>
         </ingredients>
         <products>
@@ -499,7 +499,7 @@
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
-                <count>8</count>
+                <count>4</count>
             </li>
         </ingredients>
         <products>

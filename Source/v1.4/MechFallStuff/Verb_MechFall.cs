@@ -1,9 +1,10 @@
-﻿using Verse;
+﻿using Verse.AI;
+using Verse;
 
 namespace ATReforged
 {
-    public class Verb_MechFall : Verb
-    {
+    public class Verb_MechFall : Verb_CastBase
+    {   
         protected override bool TryCastShot()
         {
             if (currentTarget.HasThing && currentTarget.Thing.Map != caster.Map)
@@ -15,6 +16,7 @@ namespace ATReforged
             mechfall.instigator = caster;
             mechfall.weaponDef = EquipmentSource?.def;
             mechfall.StartStrike();
+            ReloadableCompSource?.UsedOnce();
             if (EquipmentSource != null && !EquipmentSource.Destroyed)
             {
                 EquipmentSource.Destroy(DestroyMode.Vanish);

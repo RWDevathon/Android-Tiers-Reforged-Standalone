@@ -23,7 +23,7 @@
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal_south</uiIconPath>
 		<statBases>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1600</MarketValue>
 			<MoveSpeed>4.50</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
 			<ComfyTemperatureMax>40</ComfyTemperatureMax>
@@ -84,8 +84,6 @@
 		</tools>
 		<race>
 			<body>ATR_AndroidBody</body>
-			<baseHealthScale>0.8</baseHealthScale>
-			<baseHungerRate>1.25</baseHungerRate>
 			<baseBodySize>0.8</baseBodySize>
 		</race>
 		<modExtensions>

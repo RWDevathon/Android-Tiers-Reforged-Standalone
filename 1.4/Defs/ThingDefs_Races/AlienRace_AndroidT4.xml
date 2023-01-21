@@ -23,15 +23,15 @@
 		</alienRace>
         <uiIconPath>Things/Pawns/Humanlikes/Tier4/head/None_Average_Normal_south</uiIconPath>
 		<statBases>
-			<MarketValue>6000</MarketValue>
+			<MarketValue>4000</MarketValue>
 			<MoveSpeed>7.20</MoveSpeed>
 			<PsychicSensitivity>0.5</PsychicSensitivity>
 			<ComfyTemperatureMin>-70</ComfyTemperatureMin>
 			<ComfyTemperatureMax>70</ComfyTemperatureMax>
 			<MentalBreakThreshold>0.42</MentalBreakThreshold>
 			<GlobalLearningFactor>2</GlobalLearningFactor>
-			<WorkSpeedGlobal>1.5</WorkSpeedGlobal>
-			<SocialImpact>1.5</SocialImpact>
+			<WorkSpeedGlobal>1.6</WorkSpeedGlobal>
+			<SocialImpact>1.6</SocialImpact>
 			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
             <ATR_MaintenanceRetention>1.6</ATR_MaintenanceRetention>
@@ -86,8 +86,8 @@
 		</tools>
 		<race>
 			<body>ATR_AndroidBody</body>
-			<baseHealthScale>1.2</baseHealthScale>
-			<baseHungerRate>0.8</baseHungerRate>
+			<baseHealthScale>1.4</baseHealthScale>
+			<baseHungerRate>0.6</baseHungerRate>
 			<baseBodySize>1.1</baseBodySize>
 		</race>
 		<modExtensions>

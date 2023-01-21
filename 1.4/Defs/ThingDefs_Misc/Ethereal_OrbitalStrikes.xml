@@ -70,7 +70,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <warmupTime>3</warmupTime>
                 <ai_AvoidFriendlyFireRadius>12</ai_AvoidFriendlyFireRadius>
-                <range>84.9</range>
+                <range>44.9</range>
                 <burstShotCount>1</burstShotCount>
                 <soundAiming>OrbitalTargeter_Aiming</soundAiming>
                 <soundCast>OrbitalTargeter_Fire</soundCast>

@@ -22,6 +22,9 @@
     <ATR_NewbootAndroidCreated>Android created. Install an interface via surgery to bring the unit online.</ATR_NewbootAndroidCreated>
     <ATR_InterfaceRemoved>An android's interface was removed. All personality and control data has been destroyed. Install a new interface to bring it online.</ATR_InterfaceRemoved>
 
+    <!-- Mechfaller -->
+    <ATR_HostileMechFall>The mech has arrived, but is identifying everything as hostile! It has activated a delayed self-shutdown as well.</ATR_HostileMechFall>
+
 	<!-- Link -->
 	<ATR_SurrogateControlled>{0} connected to a new surrogate</ATR_SurrogateControlled>
 	<ATR_OperationInitiated>SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.</ATR_OperationInitiated>
@@ -30,6 +33,7 @@
     <ATR_OperationFailure>SkyMind operation failed!</ATR_OperationFailure>
     <ATR_OperationFailureDesc>{0} suffered a catastrophic memory corruption due to the collapse of the SkyMind link during a mind operation. The operation failed and severe damage to memory has occurred.</ATR_OperationFailureDesc>
 
+    <!-- Surgeries -->
 	<MessageMedicalOperationFailureMinorAndroid>{0} committed a minor error while operating and aborted the procedure on {1}.</MessageMedicalOperationFailureMinorAndroid>
 	<MessageMedicalOperationFailureCatastrophicAndroid>{0} has failed catastrophically while attempting an operation on {1}.</MessageMedicalOperationFailureCatastrophicAndroid>
 	<MessageMedicalOperationFailureRidiculousAndroid>{0} has committed a major error while attempting an operation on {1}.</MessageMedicalOperationFailureRidiculousAndroid>

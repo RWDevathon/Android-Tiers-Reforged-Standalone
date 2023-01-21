@@ -47,10 +47,10 @@ namespace ATReforged
 
         public void SpawnPawn()
         {
-            PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_M7MechPawn, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
+            PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_M7MechPawn, instigator.Faction, PawnGenerationContext.NonPlayer);
             Pawn pawn = PawnGenerator.GeneratePawn(request);
             FilthMaker.TryMakeFilth(Position, Map, ThingDefOf.Filth_RubbleBuilding, 30);
-
+            
             // There is a very small chance the unit will be permanently hostile and try to murder everything it can find.
             if (Rand.Chance(0.05f))
             {
@@ -60,9 +60,17 @@ namespace ATReforged
                 Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_RemainingCharge, pawn, null);
                 hediff.Severity = 1f;
                 pawn.health.AddHediff(hediff, null, null);
+
+                Messages.Message("ATR_HostileMechFall".Translate(), MessageTypeDefOf.ThreatBig);
             }
 
             GenSpawn.Spawn(pawn, Position, Map);
+
+            // Player controlled mechs should immediately draft for combat.
+            if (pawn.Faction == Faction.OfPlayer)
+            {
+                pawn.drafter.Drafted = true;
+            }
         }
     }
 }
