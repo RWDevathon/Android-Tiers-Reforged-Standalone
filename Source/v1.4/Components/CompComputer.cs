@@ -27,7 +27,13 @@ namespace ATReforged
         {
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
-            networkConnection = parent.TryGetComp<CompSkyMind>();
+            networkConnection = parent.GetComp<CompSkyMind>();
+            powerConnection = parent.GetComp<CompPowerTrader>();
+
+            if (networkConnection == null || powerConnection == null)
+            {
+                Log.Error("[ATR] " + parent + " is missing a SkyMind or PowerTrader Comp! This means the gizmos/inspect pane are going to break! Report which object is responsible for this to its mod author.");
+            }
 
             if (!respawningAfterLoad)
             {
@@ -37,11 +43,11 @@ namespace ATReforged
 
         public override void ReceiveCompSignal(string signal)
         {
-            if (signal == "ScheduledOff" || signal == "Breakdown" || signal == "PowerTurnedOff" || signal == "SkyMindNetworkUserDisconnected")
+            if (signal == "PowerTurnedOff" || signal == "SkyMindNetworkUserDisconnected")
             {
                 Utils.gameComp.RemoveServer(building, serverMode);
             }
-            else if ((signal == "SkyMindNetworkUserConnected" && parent.TryGetComp<CompPowerTrader>().PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected != false))
+            else if ((signal == "SkyMindNetworkUserConnected" && powerConnection.PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected != false))
             {
                 Utils.gameComp.AddServer(building, serverMode);
             }
@@ -49,7 +55,7 @@ namespace ATReforged
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn || networkConnection?.connected == false)
+            if (!powerConnection.PowerOn || networkConnection?.connected == false)
                 yield break;
 
             // Generate button to switch server mode based on which servermode the server is currently in.
@@ -129,7 +135,7 @@ namespace ATReforged
         public override string CompInspectStringExtra()
         {
             StringBuilder ret = new StringBuilder();
-            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn)
+            if (!powerConnection.PowerOn)
                 return "";
 
             if (networkConnection?.connected == false)
@@ -178,6 +184,7 @@ namespace ATReforged
         }
 
         private CompSkyMind networkConnection;
+        private CompPowerTrader powerConnection;
         private Building building;
         private ServerType serverMode = ServerType.SkillServer;
     }

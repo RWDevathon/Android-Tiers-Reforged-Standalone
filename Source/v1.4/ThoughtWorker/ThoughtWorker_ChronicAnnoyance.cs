@@ -7,21 +7,21 @@ namespace ATReforged
     {
         public static ThoughtState CurrentThoughtState(Pawn p)
         {
-            int rustedSeverity = 0;
+            int defectiveSeverity = 0;
             for (int i = p.health.hediffSet.hediffs.Count - 1; i >= 0; i--)
             {
                 if (p.health.hediffSet.hediffs[i].def.chronic)
-                    rustedSeverity++;
+                    defectiveSeverity++;
             }
 
-            switch (rustedSeverity)
+            switch (defectiveSeverity)
             {
                 case 0:
                     return ThoughtState.Inactive;
                 case 1:
                 case 2:
                 case 3:
-                    return ThoughtState.ActiveAtStage(rustedSeverity - 1);
+                    return ThoughtState.ActiveAtStage(defectiveSeverity - 1);
                 default:
                     return ThoughtState.ActiveAtStage(3);
             }

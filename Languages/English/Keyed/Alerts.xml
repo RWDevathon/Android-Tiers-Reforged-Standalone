@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<ATR_AlertServerHeatCritical>Computer Heat Critical</ATR_AlertServerHeatCritical>
-	<ATR_AlertServerHeatCriticalDesc>At least one computer is in danger of combusting due to surpassing its maximum safety heat threshold! Action is required to retain network integrity!</ATR_AlertServerHeatCriticalDesc>
+	<ATR_AlertServerHeatCritical>Heat Sensitive Device Critical</ATR_AlertServerHeatCritical>
+	<ATR_AlertServerHeatCriticalDesc>At least one heat sensitive device is in danger of combusting due to surpassing its maximum safety heat threshold! Action is required to retain network integrity!</ATR_AlertServerHeatCriticalDesc>
 	
 	<ATR_AlertFullSkillServers>Full Skill Servers</ATR_AlertFullSkillServers>
     <ATR_AlertFullSkillServersDesc>There is no more capacity for skill points. Consider using them, or expanding capacity.</ATR_AlertFullSkillServersDesc>

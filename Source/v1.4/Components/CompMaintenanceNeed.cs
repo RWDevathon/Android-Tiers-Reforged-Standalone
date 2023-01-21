@@ -11,8 +11,6 @@ namespace ATReforged
     {
         Pawn Pawn => (Pawn)parent;
 
-        private static readonly int LowMaintenanceTickCheckRate = 133;
-
         private static float ThresholdCritical => 0.1f;
 
         private static float ThresholdPoor => 0.3f;
@@ -21,52 +19,56 @@ namespace ATReforged
 
         public static readonly List<float> MaintenanceThresholdBandPercentages = new List<float> {0f, ThresholdCritical, ThresholdPoor, ThresholdSatisfactory, 1f};
 
+        private static readonly float TicksPerDay = 60000;
+
+        private static readonly float TicksPerRare = 250;
+
         private static readonly SimpleCurve PartDecayContractChance = new SimpleCurve
         {
             new CurvePoint(3f, 9999999f),
-            new CurvePoint(4f, 15f),
-            new CurvePoint(6f, 5f),
-            new CurvePoint(10f, 2f)
+            new CurvePoint(6f, 48f),
+            new CurvePoint(12f, 24f),
+            new CurvePoint(24f, 12f)
         };
 
         private static readonly SimpleCurve RustContractChance = new SimpleCurve
         {
             new CurvePoint(3f, 9999999f),
-            new CurvePoint(4f, 12f),
-            new CurvePoint(6f, 4f),
-            new CurvePoint(10f, 1.5f)
+            new CurvePoint(6f, 48f),
+            new CurvePoint(12f, 24f),
+            new CurvePoint(24f, 12f)
         };
 
         private static readonly SimpleCurve PowerLossContractChance = new SimpleCurve
         {
             new CurvePoint(3f, 9999999f),
-            new CurvePoint(4f, 20f),
-            new CurvePoint(6f, 8f),
-            new CurvePoint(10f, 4f)
+            new CurvePoint(6f, 60f),
+            new CurvePoint(12f, 30f),
+            new CurvePoint(24f, 15f)
         };
 
         private static readonly SimpleCurve CoreDamageContractChance = new SimpleCurve
         {
-            new CurvePoint(4f, 9999999f),
-            new CurvePoint(5f, 5000f),
-            new CurvePoint(7.5f, 2400f),
-            new CurvePoint(10f, 180f)
+            new CurvePoint(5f, 9999999f),
+            new CurvePoint(8f, 5000f),
+            new CurvePoint(16f, 2400f),
+            new CurvePoint(32f, 120f)
         };
 
         private static readonly SimpleCurve FailingValvesContractChance = new SimpleCurve
         {
-            new CurvePoint(4f, 9999999f),
-            new CurvePoint(5f, 2400f),
-            new CurvePoint(7.5f, 180f),
-            new CurvePoint(10f, 60f)
+            new CurvePoint(5f, 9999999f),
+            new CurvePoint(8f, 2400f),
+            new CurvePoint(16f, 160f),
+            new CurvePoint(32f, 80f)
         };
 
         private static readonly SimpleCurve RogueMechanitesContractChance = new SimpleCurve
         {
-            new CurvePoint(4f, 9999999f),
-            new CurvePoint(5f, 5000f),
-            new CurvePoint(7.5f, 2400f),
-            new CurvePoint(10f, 240f)
+            new CurvePoint(5f, 9999999f),
+            new CurvePoint(8f, 6400f),
+            new CurvePoint(16f, 3200f),
+            new CurvePoint(32f, 240f)
         };
 
         public enum MaintenanceStage
@@ -154,59 +156,27 @@ namespace ATReforged
             Scribe_Values.Look(ref maintenanceLevel, "ATR_maintenanceLevel", -1);
             Scribe_Values.Look(ref targetLevel, "ATR_targetLevel", -1);
             Scribe_Values.Look(ref cachedFallRatePerDay, "ATR_cachedFallRatePerDay", -1);
-            Scribe_Values.Look(ref ticksSincePoorMaintenance, "ATR_ticksSincePoorMaintenance", 0);
-        }
-
-        public override void CompTick()
-        {
-            base.CompTick();
-            CheckMaintenance(60000);
+            Scribe_Values.Look(ref maintenanceEffectTicks, "ATR_maintenanceEffectTicks", TicksPerDay);
         }
 
         public override void CompTickRare()
         {
             base.CompTickRare();
-            CheckMaintenance(240);
-        }
-
-        public override void CompTickLong()
-        {
-            base.CompTickLong();
-            CheckMaintenance(30);
-        }
-
-        public void CheckMaintenance(int tickRate)
-        {
-            if (!Pawn.Spawned)
+            if (!Pawn.Spawned || !ATReforged_Settings.maintenanceNeedExists)
             {
                 return;
             }
 
-            if (Pawn.IsHashIntervalTick(LowMaintenanceTickCheckRate) || tickRate < 60000)
+            cachedFallRatePerDay = MaintenanceFallPerDay();
+
+            // If maintenance has been low for at least 3 days (modified by settings), issues can begin manifesting.
+            if (maintenanceEffectTicks < (-180000 * ATReforged_Settings.maintenancePartFailureRateFactor))
             {
-                cachedFallRatePerDay = MaintenanceFallPerDay();
-
-                switch (Stage)
-                {
-                    case MaintenanceStage.Critical:
-                        ticksSincePoorMaintenance += 3 * (tickRate == 60000 ? LowMaintenanceTickCheckRate : tickRate);
-                        break;
-                    case MaintenanceStage.Poor:
-                        ticksSincePoorMaintenance += tickRate == 60000 ? LowMaintenanceTickCheckRate : tickRate;
-                        break;
-                    default:
-                        ticksSincePoorMaintenance = 0;
-                        break;
-                }
-
-                // If maintenance has been low for at least 3 days, issues can begin manifesting.
-                if (ticksSincePoorMaintenance > (180000 * ATReforged_Settings.maintenancePartFailureRateFactor))
-                {
-                    TryPoorMaintenanceCheck();
-                }
+                TryPoorMaintenanceCheck();
             }
 
-            ChangeMaintenanceLevel(-(Pawn.Downed ? cachedFallRatePerDay / 2 : cachedFallRatePerDay) / tickRate);
+            ChangeMaintenanceEffectTicks();
+            ChangeMaintenanceLevel(-cachedFallRatePerDay / TicksPerRare);
         }
 
         // Alter the maintenance level by the provided amount (decreases are assumed to be negative). Ensure the level never falls outside 0 - 1 range and handle stage changes appropriately.
@@ -236,6 +206,37 @@ namespace ATReforged
             }
         }
 
+        /// <summary>
+        /// Alter the maintenance effect ticks based on the provided tick rate. Actual effect is changed based on the pawn's maintenance level.
+        /// If less than 0.3 (poor maintenance), effect trends negatively, and if higher than 0.7, effect trends positively.
+        /// Between 0.3 and 0.7, effect trends toward -60000 or 60000 representing one full day of poor or high maintenance, and does not change if between -60000 and 60000 already.
+        /// </summary>
+        public void ChangeMaintenanceEffectTicks()
+        {
+            if (maintenanceLevel < 0.3f)
+            {
+                maintenanceEffectTicks -= TicksPerRare;
+
+                if (maintenanceEffectTicks > 0)
+                {
+                    maintenanceEffectTicks -= maintenanceEffectTicks * (0.1f / TicksPerRare);
+                }
+            }
+            else if (maintenanceLevel > 0.7f)
+            {
+                maintenanceEffectTicks += 250;
+
+                if (maintenanceEffectTicks < 0)
+                {
+                    maintenanceEffectTicks -= maintenanceEffectTicks * (0.1f / TicksPerRare);
+                }
+            }
+            else
+            {
+                maintenanceEffectTicks = Mathf.MoveTowards(maintenanceEffectTicks, 0, 1f * TicksPerRare);
+            }
+        }
+
         public void SendPartFailureLetter(Pawn pawn, Hediff cause)
         {
             if (PawnUtility.ShouldSendNotificationAbout(pawn) && ATReforged_Settings.receiveMaintenanceFailureLetters)
@@ -247,6 +248,11 @@ namespace ATReforged
         // Maintenance need has associated gizmos for displaying and controlling the maintenance level of pawns.
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
+            if (!ATReforged_Settings.maintenanceNeedExists)
+            {
+                yield break;
+            }
+
             if (Find.Selector.SingleSelectedThing == parent)
             {
                 Gizmo_MaintenanceStatus maintenanceStatusGizmo = new Gizmo_MaintenanceStatus
@@ -254,38 +260,16 @@ namespace ATReforged
                     maintenanceNeed = this
                 };
                 yield return maintenanceStatusGizmo;
+
+                Gizmo_MaintenanceEffect maintenanceEffectGizmo = new Gizmo_MaintenanceEffect
+                {
+                    maintenanceNeed = this
+                };
+                yield return maintenanceEffectGizmo;
             }
 
             if (DebugSettings.ShowDevGizmos)
             {
-                Command_Action setMaintenanceCritical = new Command_Action
-                {
-                    defaultLabel = "DEV: Set maintenance to 0",
-                    action = delegate
-                    {
-                        ChangeMaintenanceLevel(-1);
-                    }
-                };
-                yield return setMaintenanceCritical;
-                Command_Action setMaintenancePoor = new Command_Action
-                {
-                    defaultLabel = "DEV: Set maintenance to 0.15",
-                    action = delegate
-                    {
-                        ChangeMaintenanceLevel(-1f);
-                        ChangeMaintenanceLevel(0.15f);
-                    }
-                };
-                yield return setMaintenancePoor;
-                Command_Action setMaintenanceSatisfactory = new Command_Action
-                {
-                    defaultLabel = "DEV: Set maintenance to max",
-                    action = delegate
-                    {
-                        ChangeMaintenanceLevel(1);
-                    }
-                };
-                yield return setMaintenanceSatisfactory;
                 Command_Action subtract20PercentMaintenance = new Command_Action
                 {
                     defaultLabel = "DEV: Maintenance -20%",
@@ -304,6 +288,24 @@ namespace ATReforged
                     }
                 };
                 yield return add20PercentMaintenance;
+                Command_Action substract1DayMaintenanceEffect = new Command_Action
+                {
+                    defaultLabel = "DEV: Maintenance Effect -1 day",
+                    action = delegate
+                    {
+                        maintenanceEffectTicks -= TicksPerDay;
+                    }
+                };
+                yield return substract1DayMaintenanceEffect;
+                Command_Action add1DayMaintenanceEffect = new Command_Action
+                {
+                    defaultLabel = "DEV: Maintenance Effect +1 day",
+                    action = delegate
+                    {
+                        maintenanceEffectTicks += TicksPerDay;
+                    }
+                };
+                yield return add1DayMaintenanceEffect;
             }
             yield break;
         }
@@ -324,9 +326,9 @@ namespace ATReforged
         public void TryPoorMaintenanceCheck()
         {
             Pawn_HealthTracker healthTracker = Pawn.health;
-            float modifiedFailureTicks = ticksSincePoorMaintenance / ATReforged_Settings.maintenancePartFailureRateFactor;
+            float modifiedFailureTicks = Mathf.Abs(maintenanceEffectTicks) / ATReforged_Settings.maintenancePartFailureRateFactor;
             // Attempt to apply part decay.
-            if (Rand.MTBEventOccurs(PartDecayContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+            if (Rand.MTBEventOccurs(PartDecayContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts()?.RandomElement();
                 if (bodyPart == null)
@@ -341,7 +343,7 @@ namespace ATReforged
                 }
             }
             // Attempt to apply part rust.
-            if (Rand.MTBEventOccurs(RustContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+            if (Rand.MTBEventOccurs(RustContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts(depth: BodyPartDepth.Outside)?.RandomElement();
                 if (bodyPart == null)
@@ -356,7 +358,7 @@ namespace ATReforged
                 }
             }
             // Attempt to apply power loss.
-            if (Rand.MTBEventOccurs(PowerLossContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+            if (Rand.MTBEventOccurs(PowerLossContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
             {
                 BodyPartRecord bodyPart = healthTracker.hediffSet.GetNotMissingParts()?.Where(part => part != healthTracker.hediffSet.GetBrain())?.RandomElement();
                 if (bodyPart == null)
@@ -374,7 +376,7 @@ namespace ATReforged
             if (Stage == MaintenanceStage.Critical)
             {
                 // Attempt to apply core damage.
-                if (Rand.MTBEventOccurs(CoreDamageContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+                if (Rand.MTBEventOccurs(CoreDamageContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
                 {
                     BodyPartRecord bodyPart = healthTracker.hediffSet.GetBrain();
                     if (bodyPart != null && healthTracker.capacities.GetLevel(PawnCapacityDefOf.Consciousness) > 0.3f)
@@ -385,7 +387,7 @@ namespace ATReforged
                     }
                 }
                 // Attempt to apply failing valves.
-                if (Rand.MTBEventOccurs(FailingValvesContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+                if (Rand.MTBEventOccurs(FailingValvesContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
                 {
                     BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_InternalCorePump)?.RandomElement();
                     if (bodyPart == null)
@@ -400,7 +402,7 @@ namespace ATReforged
                     }
                 }
                 // Attempt to apply rogue mechanites.
-                if (Rand.MTBEventOccurs(RogueMechanitesContractChance.Evaluate(modifiedFailureTicks), 60000f, 60f))
+                if (Rand.MTBEventOccurs(RogueMechanitesContractChance.Evaluate(modifiedFailureTicks), TicksPerDay, 60f))
                 {
                     BodyPartRecord bodyPart = Pawn.RaceProps.body.GetPartsWithDef(ATR_BodyPartDefOf.ATR_MechaniteStorage)?.RandomElement();
                     if (bodyPart == null)
@@ -420,7 +422,7 @@ namespace ATReforged
         private float maintenanceLevel = -1;
         public float targetLevel = -1;
         private float cachedFallRatePerDay = -1;
-        private float ticksSincePoorMaintenance = 0;
+        public float maintenanceEffectTicks = TicksPerDay;
         public static string maintenanceLevelInfoCached;
     }
 }

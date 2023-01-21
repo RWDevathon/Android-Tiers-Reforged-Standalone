@@ -105,7 +105,7 @@ namespace ATReforged
             if (thingDef != null)
             {
                 num++;
-                num2 += thingDef.GetStatValueAbstract(RimWorld.StatDefOf.MedicalPotency);
+                num2 += thingDef.GetStatValueAbstract(StatDefOf.MedicalPotency);
             }
 
             for (int i = 0; i < ingredients.Count; i++)
@@ -114,7 +114,7 @@ namespace ATReforged
                 if (medicine != null)
                 {
                     num += medicine.stackCount;
-                    num2 += medicine.GetStatValue(RimWorld.StatDefOf.MedicalPotency) * medicine.stackCount;
+                    num2 += medicine.GetStatValue(StatDefOf.MedicalPotency) * medicine.stackCount;
                 }
             }
 

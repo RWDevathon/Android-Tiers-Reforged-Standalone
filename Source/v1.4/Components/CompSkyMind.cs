@@ -112,15 +112,17 @@ namespace ATReforged
                 integrityBreach = value;
                 // Device is no longer breached. Release restrictions and remove from the virus list.
                 if (integrityBreach == -1 && status != -1)
-                { 
+                {
+                    // Release hacked pawn. Remove Mind Operation hediff and reboot.
                     if (parent is Pawn pawn)
-                    { // Release hacked pawns. Surrogates are downed. All pawns undergo a full system reboot.
+                    { 
                         Hediff hediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
-                        hediff.Severity = 1f;
+                        hediff.Severity = 0.75f;
                         pawn.health.AddHediff(hediff, null, null);
-                        if (Utils.IsSurrogate(pawn))
+                        hediff = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation);
+                        if (hediff != null)
                         {
-                            pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
+                            pawn.health.RemoveHediff(hediff);
                         }
                     }
                     // Handle buildings that lost power.
@@ -146,6 +148,11 @@ namespace ATReforged
                             cf.SwitchIsOn = false;
                             parent.SetFaction(Faction.OfAncientsHostile);
                         }
+                    }
+                    // Breached pawn (surrogates). Hacking effect is that it is put offline via a forced Mind Operation hediff.
+                    else if (parent is Pawn pawn)
+                    {
+                        pawn.health.AddHediff(HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_MindOperation, pawn));
                     }
                 }
             }

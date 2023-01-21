@@ -44,7 +44,7 @@ namespace ATReforged
             }
             meditate.defaultCompleteMode = ToilCompleteMode.Delay;
             meditate.defaultDuration = JobEndInterval;
-            meditate.FailOn(() => !MeditationUtility.CanMeditateNow(pawn) || !MeditationUtility.SafeEnvironmentalConditions(pawn, TargetLocA, Map));
+            meditate.FailOn(() => !MeditationUtility.SafeEnvironmentalConditions(pawn, TargetLocA, Map));
             meditate.AddFinishAction(delegate
             {
                 pawn.GetComp<CompMaintenanceNeed>().ChangeMaintenanceLevel((Find.TickManager.TicksGame - startTick) * 0.00003f * ATReforged_Settings.maintenanceGainRateFactor);

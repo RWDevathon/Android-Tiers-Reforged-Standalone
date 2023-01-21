@@ -22,11 +22,13 @@ namespace ATReforged
             { 
                 return new FloatMenuOption("CannotUseNoPath".Translate(), null);
             }
+
             // Check if the building itself has power and is not broken down.
-            if (this.TryGetComp<CompPowerTrader>()?.PowerOn != true || this.IsBrokenDown())
+            if (GetComp<CompPowerTrader>()?.PowerOn != true)
             { 
                 return new FloatMenuOption("CannotUseNoPower".Translate(), null);
             }
+
             // Check if the pawn is allowed to use its battery by settings.
             if (!Utils.CanUseBattery(pawn) || pawn.needs?.food == null)
             { 

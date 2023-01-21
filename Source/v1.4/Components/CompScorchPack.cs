@@ -24,11 +24,11 @@ namespace ATReforged
                     if (targetValue == 20)
                         return 1f;
 
-                    if (thingList[j] is Pawn target && !target.HasAttachment(RimWorld.ThingDefOf.Fire))
+                    if (thingList[j] is Pawn target && !target.HasAttachment(ThingDefOf.Fire))
                     {
                         if (target.HostileTo(wearer))
                             targetValue += 1;
-                        else if (target.GetStatValue(RimWorld.StatDefOf.Flammability) > 0.2)
+                        else if (target.GetStatValue(StatDefOf.Flammability) > 0.2)
                             targetValue -= 1;
                     }
                 }
@@ -38,7 +38,7 @@ namespace ATReforged
 
         protected override void UsePack(Pawn wearer)
         {
-            Verb_FirefoamPop.Pop(wearer, parent.TryGetComp<CompExplosive>(), parent.TryGetComp<CompReloadable>());
+            Verb_FirefoamPop.Pop(wearer, parent.GetComp<CompExplosive>(), parent.GetComp<CompReloadable>());
         }
     }
 }

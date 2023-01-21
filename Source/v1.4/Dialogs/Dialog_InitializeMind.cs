@@ -34,8 +34,8 @@ namespace ATReforged
         public Dialog_InitializeMind(Pawn newIntelligence) : base("ATR_InitializeMindDesc".Translate(), "ATR_SkyMindInitialization".Translate(), null, "ATR_AutomaticInitialization".Translate(), null, "ATR_InitializeMindTitle".Translate(), false)
         {
             // If there is any idle intelligence in the SkyMind, then the new intelligence may download it. This is a standard download action.
-            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate());
-            IEnumerable<Thing> networkedPawns = Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.TryGetComp<CompSkyMindLink>()?.HasSurrogate() == false);
+            IEnumerable<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate());
+            IEnumerable<Thing> networkedPawns = Utils.gameComp.networkedDevices.Where(thing => thing is Pawn pawn && pawn.GetComp<CompSkyMindLink>()?.HasSurrogate() == false);
             if (cloudPawns.Count() + networkedPawns.Count() > 0 && Utils.gameComp.networkedDevices.Count < Utils.gameComp.GetSkyMindNetworkSlots())
             {
                 buttonAAction = delegate ()
@@ -47,7 +47,7 @@ namespace ATReforged
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
-                            newIntelligence.TryGetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
+                            newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
                     }
@@ -56,7 +56,7 @@ namespace ATReforged
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate ()
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
-                            newIntelligence.TryGetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
+                            newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
                             Close();
                         }));
                     }

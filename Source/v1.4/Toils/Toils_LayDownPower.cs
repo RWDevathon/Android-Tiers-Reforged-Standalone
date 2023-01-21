@@ -60,7 +60,7 @@ namespace ATReforged
                 curDriver.asleep = true;
                 if (actor.mindState.applyBedThoughtsTick == 0)
                 {
-                    actor.mindState.applyBedThoughtsTick = Find.TickManager.TicksGame + Rand.Range(2500, 10000);
+                    actor.mindState.applyBedThoughtsTick = Find.TickManager.TicksGame + Rand.Range(1500, 4000);
                     actor.mindState.applyBedThoughtsOnLeave = false;
                 }
 
@@ -114,7 +114,7 @@ namespace ATReforged
                 {
                     powerSource = targetBuilding.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading?.Find(thing => thing.TryGetComp<CompPawnCharger>() != null);
                 }
-                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true && lookForOtherJobs && !HealthAIUtility.ShouldHaveSurgeryDoneNow(actor))
+                if (!actor.Downed && powerSource?.TryGetComp<CompPowerTrader>()?.PowerOn != true && lookForOtherJobs && !HealthAIUtility.ShouldSeekMedicalRest(actor) && !HealthAIUtility.ShouldHaveSurgeryDoneNow(actor))
                 {
                     actor.jobs.EndCurrentJob(JobCondition.Incompletable, true);
                     return;
@@ -142,7 +142,7 @@ namespace ATReforged
                 // If the pawn can gain rest, then gain rest.
                 if (restNeed != null)
                 {
-                    float restEffectiveness = (bed == null || !bed.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness)) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : bed.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
+                    float restEffectiveness = (bed == null || !bed.def.statBases.StatListContains(StatDefOf.BedRestEffectiveness)) ? StatDefOf.BedRestEffectiveness.valueIfMissing : bed.GetStatValue(StatDefOf.BedRestEffectiveness);
                     restNeed.TickResting(restEffectiveness);
                 }
 
@@ -153,11 +153,11 @@ namespace ATReforged
                     // Beds get charging effectiveness from their BedRestEffectiveness stat.
                     if (bed != null)
                     {
-                        chargeEffectiveness = !bed.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : bed.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
+                        chargeEffectiveness = !bed.def.statBases.StatListContains(StatDefOf.BedRestEffectiveness) ? StatDefOf.BedRestEffectiveness.valueIfMissing : bed.GetStatValue(StatDefOf.BedRestEffectiveness);
                     }
                     else
                     {
-                        chargeEffectiveness = !station.def.statBases.StatListContains(RimWorld.StatDefOf.BedRestEffectiveness) ? RimWorld.StatDefOf.BedRestEffectiveness.valueIfMissing : station.GetStatValue(RimWorld.StatDefOf.BedRestEffectiveness);
+                        chargeEffectiveness = !station.def.statBases.StatListContains(StatDefOf.BedRestEffectiveness) ? StatDefOf.BedRestEffectiveness.valueIfMissing : station.GetStatValue(StatDefOf.BedRestEffectiveness);
                     }
                     foodNeed.CurLevelPercentage += 0.00028f * ATReforged_Settings.batteryChargeRate * chargeEffectiveness;
                 }
@@ -165,7 +165,7 @@ namespace ATReforged
                 // If the apply bed thought timer is up, set applyBedThoughtsOnLeave to true so that it will apply when done with the job.
                 if (actor.mindState.applyBedThoughtsTick != 0 && actor.mindState.applyBedThoughtsTick <= Find.TickManager.TicksGame)
                 {
-                    actor.mindState.applyBedThoughtsTick += 60000;
+                    actor.mindState.applyBedThoughtsTick += 20000;
                     actor.mindState.applyBedThoughtsOnLeave = true;
                 }
 
@@ -258,19 +258,15 @@ namespace ATReforged
             {
                 memThoughtHandler.TryGainMemory(ThoughtDefOf.SleptOutside);
             }
-            if (building_Bed == null || building_Bed.CostListAdjusted().Count == 0)
-            {
-                memThoughtHandler.TryGainMemory(ThoughtDefOf.SleptOnGround);
-            }
-            if (actor.AmbientTemperature < actor.def.GetStatValueAbstract(RimWorld.StatDefOf.ComfyTemperatureMin))
+            if (actor.AmbientTemperature < actor.def.GetStatValueAbstract(StatDefOf.ComfyTemperatureMin))
             {
                 memThoughtHandler.TryGainMemory(ThoughtDefOf.SleptInCold);
             }
-            if (actor.AmbientTemperature > actor.def.GetStatValueAbstract(RimWorld.StatDefOf.ComfyTemperatureMax))
+            if (actor.AmbientTemperature > actor.def.GetStatValueAbstract(StatDefOf.ComfyTemperatureMax))
             {
                 memThoughtHandler.TryGainMemory(ThoughtDefOf.SleptInHeat);
             }
-            if (building_Bed != null && building_Bed == actor.ownership.OwnedBed && !building_Bed.ForPrisoners && !actor.story.traits.HasTrait(RimWorld.TraitDefOf.Ascetic))
+            if (building_Bed != null && building_Bed == actor.ownership.OwnedBed && !building_Bed.ForPrisoners && !actor.story.traits.HasTrait(TraitDefOf.Ascetic))
             {
                 ThoughtDef thoughtDef = null;
                 if (building_Bed.GetRoom().Role == RoomRoleDefOf.Bedroom)

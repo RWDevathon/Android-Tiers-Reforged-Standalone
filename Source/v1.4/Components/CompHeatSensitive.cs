@@ -15,14 +15,6 @@ namespace ATReforged
             }
         }
 
-        public int HeatLevel
-        {
-            get
-            {
-                return heatLevel;
-            }
-        }
-
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -34,34 +26,35 @@ namespace ATReforged
         {
             Material iconMat = null;
 
-            if (heatLevel != 0)
+            if (heatLevel == 0)
             {
-                if (heatLevel == 1)
-                    iconMat = Tex.WarningHeat;
-                else if (heatLevel == 2)
-                    iconMat = Tex.DangerHeat;
-                else if (heatLevel == 3)
-                    iconMat = Tex.CriticalHeat;
-
-                Vector3 vector = parent.TrueCenter();
-                vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
-                vector.x += parent.def.size.x / 4;
-
-                vector.z -= 1;
-
-                var num = (Time.realtimeSinceStartup + 397f * (parent.thingIDNumber % 571)) * 4f;
-                var num2 = ((float)Math.Sin((double)num) + 1f) * 0.5f;
-                num2 = 0.3f + num2 * 0.7f;
-                var material = FadedMaterialPool.FadedVersionOf(iconMat, num2);
-                Graphics.DrawMesh(MeshPool.plane05, vector, Quaternion.identity, material, 0);
+                return;
             }
+
+            if (heatLevel == 1)
+                iconMat = Tex.WarningHeat;
+            else if (heatLevel == 2)
+                iconMat = Tex.DangerHeat;
+            else if (heatLevel == 3)
+                iconMat = Tex.CriticalHeat;
+
+            Vector3 vector = parent.TrueCenter();
+            vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
+            vector.x += parent.def.size.x / 4;
+
+            vector.z -= 1;
+
+            var num = (Time.realtimeSinceStartup + 397f * (parent.thingIDNumber % 571)) * 4f;
+            var num2 = ((float)Math.Sin((double)num) + 1f) * 0.5f;
+            num2 = 0.3f + num2 * 0.7f;
+            var material = FadedMaterialPool.FadedVersionOf(iconMat, num2);
+            Graphics.DrawMesh(MeshPool.plane05, vector, Quaternion.identity, material, 0);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
-            Utils.gameComp.PushHeatSensitiveDevice((Building)parent);
+            active = parent.GetComp<CompPowerTrader>()?.PowerOn != false; // If the Power Trader is on or null, heat sensitive device is active.
         }
 
         // Checker for heat on normal Ticks. 250x reduced impact to check heat damage.
@@ -91,16 +84,21 @@ namespace ATReforged
         public override void ReceiveCompSignal(string signal)
         {
             // Terminate heat level if the server is offline
-            if (signal == "FlickedOff" || signal == "Breakdown" || signal == "PowerTurnedOff")
+            if (signal == "PowerTurnedOff")
             {
+                active = false;
                 heatLevel = 0;
                 checksSinceCritical = 0;
+            }
+            else if (signal == "PowerTurnedOn")
+            {
+                active = true;
             }
         }
 
         private void CheckTemperature(int tickerType)
         {
-            if (!parent.TryGetComp<CompPowerTrader>().PowerOn || parent.IsBrokenDown())
+            if (!active)
             {
                 return;
             }
@@ -111,6 +109,13 @@ namespace ATReforged
             if (ambientTemperature >= Props.dangerHeat)
             {
                 heatLevel = 3;
+
+                if (lastTickSentCriticalHeat + 8000 < Find.TickManager.TicksGame)
+                {
+                    lastTickSentCriticalHeat = Find.TickManager.TicksGame;
+                    Messages.Message("ATR_AlertServerHeatCriticalDesc".Translate(), new LookTargets(parent), MessageTypeDefOf.NegativeEvent, false);
+                }
+
                 switch (tickerType)
                 {
                     case 0:
@@ -153,7 +158,7 @@ namespace ATReforged
 
         public void MakeExplosion()
         {
-            CompBreakdownable breakComp = parent.TryGetComp<CompBreakdownable>();
+            CompBreakdownable breakComp = parent.GetComp<CompBreakdownable>();
             if (breakComp != null)
                 breakComp.DoBreakdown();
 
@@ -163,14 +168,9 @@ namespace ATReforged
             GenExplosion.DoExplosion(parent.Position, parent.Map, 3, DamageDefOf.Flame, null);
         }
 
-        public override void PostDeSpawn(Map map)
-        {
-            Utils.gameComp.PopHeatSensitiveDevice((Building)parent);
-        }
-
         public override string CompInspectStringExtra()
         {
-            if (!parent.TryGetComp<CompPowerTrader>().PowerOn)
+            if (!active)
                 return "";
 
             if (heatLevel == 3)
@@ -183,8 +183,12 @@ namespace ATReforged
                 return "ATR_CompHotSensitiveSafeText".Translate();
         }
 
+        private bool active;
+
         private int heatLevel;
 
         private int checksSinceCritical = 0;
+
+        private static int lastTickSentCriticalHeat = 0;
     }
 }

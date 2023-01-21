@@ -9,7 +9,7 @@ namespace ATReforged
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            compPowerTrader = parent.TryGetComp<CompPowerTrader>();
+            compPowerTrader = parent.GetComp<CompPowerTrader>();
 
             if (!respawningAfterLoad)
             {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+    <ThoughtDef>
+        <defName>ATR_MaintenanceMood</defName>
+        <workerClass>ATReforged.ThoughtWorker_MaintenanceMood</workerClass>
+        <stages>
+            <li>
+                <label>abysmal maintenance</label>
+                <description>I have not been able to properly maintain my core memory and systems in far too long. My internals are encountering errors, there are critical components forced to run well past their limits, and essential systems are failing. Is this what organics feel when elderly and decrepit?</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>terrible maintenance</label>
+                <description>I have not been able to properly maintain my core memory and systems for a while. There are internal system errors, and my systems are overloaded. It will take a lot of time to fix this.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+            <li>
+                <label>poor maintenance</label>
+                <description>My core memory and systems could use a break for health checks. A full maintenance cycle would feel good right now.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+            <li>
+                <label>standard maintenance</label>
+                <visible>false</visible>
+                <description>All systems are reporting regular operational efficiency, with all errors falling well within standard expectations.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+            <li>
+                <label>decent maintenance</label>
+                <description>My core memory and systems have had sufficient breaks from service for destressing. My systems are running smoothly.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+            <li>
+                <label>excellent maintenance</label>
+                <description>I have had time to do a wide array of internal health checks and efficiency optimizations. My systems are running flawlessly, and all checks have been passed to the highest standards.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+            <li>
+                <label>immaculate maintenance</label>
+                <description>I have had the time to spare for even the most unnecessary health checks and optimizations for predicting issues before they can arise. My systems are running better than the day my core first turned on! This must be the feeling that organic youths have - indestructible and in perfect health!</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+	    <validWhileDespawned>true</validWhileDespawned>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    </ThoughtDef>
+  
+ </Defs>

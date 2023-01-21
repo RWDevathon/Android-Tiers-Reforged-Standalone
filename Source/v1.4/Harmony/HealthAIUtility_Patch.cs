@@ -33,17 +33,17 @@ namespace ATReforged
                 float medicalPotency = 0;
                 if(__result != null)
                 {
-                    medicalPotency = __result.def.GetStatValueAbstract(RimWorld.StatDefOf.MedicalPotency, null);
+                    medicalPotency = __result.def.GetStatValueAbstract(StatDefOf.MedicalPotency, null);
                 }
 
                 Predicate<Thing> validator;
                 if (Utils.IsConsideredMechanical(patient))
                 {
-                    validator = (Thing medicine) => Utils.IsMechanicalRepairStim(medicine.def) && medicine.def.GetStatValueAbstract(RimWorld.StatDefOf.MedicalPotency, null) <= medicalPotency && !medicine.IsForbidden(healer) && patient.playerSettings.medCare.AllowsMedicine(medicine.def) && healer.CanReserve(medicine, 10, 1);
+                    validator = (Thing medicine) => Utils.IsMechanicalRepairStim(medicine.def) && medicine.def.GetStatValueAbstract(StatDefOf.MedicalPotency, null) <= medicalPotency && !medicine.IsForbidden(healer) && patient.playerSettings.medCare.AllowsMedicine(medicine.def) && healer.CanReserve(medicine, 10, 1);
                 }
                 else
                 {
-                    validator = (Thing medicine) => !Utils.IsMechanicalRepairStim(medicine.def) && medicine.def.GetStatValueAbstract(RimWorld.StatDefOf.MedicalPotency, null) <= medicalPotency && !medicine.IsForbidden(healer) && patient.playerSettings.medCare.AllowsMedicine(medicine.def) && healer.CanReserve(medicine, 10, 1);
+                    validator = (Thing medicine) => !Utils.IsMechanicalRepairStim(medicine.def) && medicine.def.GetStatValueAbstract(StatDefOf.MedicalPotency, null) <= medicalPotency && !medicine.IsForbidden(healer) && patient.playerSettings.medCare.AllowsMedicine(medicine.def) && healer.CanReserve(medicine, 10, 1);
                 }
 
 
@@ -52,7 +52,7 @@ namespace ATReforged
                 List<Thing> searchSet = patient.Map.listerThings.ThingsInGroup(ThingRequestGroup.Medicine);
                 PathEndMode peMode = PathEndMode.ClosestTouch;
                 TraverseParms traverseParams = TraverseParms.For(healer, Danger.Deadly, TraverseMode.ByPawn, false);
-                __result = GenClosest.ClosestThing_Global_Reachable(position, map, searchSet, peMode, traverseParams, 9999f, validator, (Thing t) => t.def.GetStatValueAbstract(RimWorld.StatDefOf.MedicalPotency, null));
+                __result = GenClosest.ClosestThing_Global_Reachable(position, map, searchSet, peMode, traverseParams, 9999f, validator, (Thing t) => t.def.GetStatValueAbstract(StatDefOf.MedicalPotency, null));
             }
         }
     }

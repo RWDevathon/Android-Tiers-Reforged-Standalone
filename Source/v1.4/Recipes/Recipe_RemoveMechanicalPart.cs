@@ -10,6 +10,11 @@ namespace ATReforged
 
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         {
+            if (!Utils.IsConsideredMechanical(pawn))
+            {
+                yield break;
+            }
+
             IEnumerable<BodyPartRecord> notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
             foreach (BodyPartRecord part in notMissingParts)
             {

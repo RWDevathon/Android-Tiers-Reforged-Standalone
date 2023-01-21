@@ -35,7 +35,7 @@ namespace ATReforged
                 return false;
             }
             // If this particular bench is set to a server type that is full on its points, then no work can be done here.
-            CompInsightBench compInsightBench = bench.TryGetComp<CompInsightBench>();
+            CompInsightBench compInsightBench = bench.GetComp<CompInsightBench>();
             if (compInsightBench == null || Utils.gameComp.GetPointCapacity(compInsightBench.ServerType) <= Utils.gameComp.GetPoints(compInsightBench.ServerType))
             {
                 return false;

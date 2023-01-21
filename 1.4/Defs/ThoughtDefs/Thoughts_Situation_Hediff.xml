@@ -8,22 +8,22 @@
             <li>
                 <label>defective part</label>
                 <description>One of my parts is suffering from an extended inefficiency. How inconvenient.</description>
-                <baseMoodEffect>-4</baseMoodEffect>
+                <baseMoodEffect>-2</baseMoodEffect>
             </li>
             <li>
                 <label>two defective parts</label>
                 <description>Two of my parts are suffering from extended inefficiencies. How annoying.</description>
-                <baseMoodEffect>-8</baseMoodEffect>
+                <baseMoodEffect>-4</baseMoodEffect>
             </li>
             <li>
                 <label>three defective parts</label>
-                <description>Three of my parts are suffering from extended inefficies. This is absurd.</description>
-                <baseMoodEffect>-12</baseMoodEffect>
+                <description>Three of my parts are suffering from extended inefficiencies. This is absurd.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
             </li>
             <li>
                 <label>many defective parts</label>
                 <description>A vast number of my parts are dysfunctional! This is ridiculous - I need repairs!</description>
-                <baseMoodEffect>-18</baseMoodEffect>
+                <baseMoodEffect>-6</baseMoodEffect>
             </li>
         </stages>
 	    <validWhileDespawned>true</validWhileDespawned>
@@ -36,7 +36,7 @@
             <li>
                 <label>rusted part</label>
                 <description>There is rust on my chassis. This is humiliating and denigrating.</description>
-                <baseMoodEffect>-6</baseMoodEffect>
+                <baseMoodEffect>-4</baseMoodEffect>
             </li>
         </stages>
 	    <validWhileDespawned>true</validWhileDespawned>

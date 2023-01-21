@@ -840,9 +840,9 @@
 
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodStrategyPhilosopher</defName>
-		<title>Philosopher of strategy</title>
+		<title>Strategy philosopher</title>
 		<titleShort>Philosopher</titleShort>
-		<baseDesc>{PAWN_nameDef} was a prolific reader, writer, and philosopher of strategy in all its forms. War, politics, social movements, religion, civilization, genetics - it's all strategy to {PAWN_objective}. {PAWN_nameDef} has started multiple popular theoretical frameworks in universal strategies. {PAWN_possessive} is extremely snobbish about it.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was a prolific reader, writer, and philosopher of strategy in all its forms. War, politics, social movements, religion, civilization, genetics - it's all strategy to {PAWN_objective}. {PAWN_nameDef} has started multiple popular theoretical frameworks in universal strategies. {PAWN_pronoun} is extremely snobbish about it.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>

@@ -51,7 +51,6 @@ namespace ATReforged
             Scribe_Collections.Look(ref hackingServers, "ATR_hackingServers", LookMode.Reference);
             Scribe_Collections.Look(ref networkedDevices, "ATR_networkedDevices", LookMode.Reference);
             Scribe_Collections.Look(ref cloudPawns, "ATR_cloudPawns", LookMode.Deep);
-            Scribe_Collections.Look(ref heatSensitiveDevices, "ATR_heatSensitiveDevices", LookMode.Reference);
             Scribe_Collections.Look(ref virusedDevices, "ATR_virusedDevices", LookMode.Reference, LookMode.Value, ref thingKeyCopy, ref thingValueCopy);
             Scribe_Collections.Look(ref networkLinkedPawns, "ATR_networkLinkedPawns", LookMode.Reference, LookMode.Value, ref pawnKeyCopy, ref pawnValueCopy);
 
@@ -114,8 +113,9 @@ namespace ATReforged
                 if (csm == null)
                     continue;
 
+                // Timer has expired. Inform it that it is no longer virused. The CompSkyMind will handle the rest.
                 if (virusedDevice.Value != -1 && virusedDevice.Value <= GT )
-                { // Timer has expired. Inform it that it is no longer virused. The CompSkyMind will handle the rest.
+                {
                     csm.Breached = -1;
                 }
             }
@@ -129,11 +129,12 @@ namespace ATReforged
 
             int GT = Find.TickManager.TicksGame;
 
+
             // We make it into a list here so that it stores a copy. If we didn't, the list may change size as networkedLinkedPawns thins while it is still running, throwing an exception.
             foreach (KeyValuePair<Pawn, int> networkLinkedPawn in networkLinkedPawns.ToList())
             {
                 // If for whatever reason the device has no CompSkyMindLink, pass over it.
-                CompSkyMindLink cso = networkLinkedPawn.Key.TryGetComp<CompSkyMindLink>();
+                CompSkyMindLink cso = networkLinkedPawn.Key.GetComp<CompSkyMindLink>();
                 if (cso == null)
                     continue;
 
@@ -141,6 +142,7 @@ namespace ATReforged
                 if (networkLinkedPawn.Value != -1 && networkLinkedPawn.Value <= GT)
                 {
                     cso.Linked = -1;
+                    continue;
                 }
 
                 // Check to see if the operation has been interrupted for any reason.
@@ -167,23 +169,17 @@ namespace ATReforged
                     skillPointCapacity = 0;
                     cachedSkillGeneration = 0;
 
-                    // Calculate Skill server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
+                    // Calculate Skill server points using CompComputer or CompSuperComputer (or both if it has them). Cache results.
                     foreach (Building building in skillServers.ToList())
                     {
-                        compComputer = building.TryGetComp<CompComputer>();
-                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        compComputer = building.GetComp<CompComputer>();
+                        compSuperComputer = building.GetComp<CompSuperComputer>();
                         if (compComputer != null)
                         {
-                            // Check for illegal server status.
-                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
-                            {
-                                skillServers.Remove(building);
-                                continue;
-                            }
                             skillPointCapacity += compComputer.Props.pointStorage;
                             cachedSkillGeneration += compComputer.Props.passivePointGeneration;
                         }
-                        else if (compSuperComputer != null)
+                        if (compSuperComputer != null)
                         {
                             skillPointCapacity += compSuperComputer.Props.pointStorage;
                             cachedSkillGeneration += compSuperComputer.Props.passivePointGeneration;
@@ -194,23 +190,17 @@ namespace ATReforged
                     securityPointCapacity = 0;
                     cachedSecurityGeneration = 0;
 
-                    // Calculate Security server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
+                    // Calculate Security server points using CompComputer or CompSuperComputer (or both if it has them). Cache results.
                     foreach (Building building in securityServers.ToList())
                     {
-                        compComputer = building.TryGetComp<CompComputer>();
-                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        compComputer = building.GetComp<CompComputer>();
+                        compSuperComputer = building.GetComp<CompSuperComputer>();
                         if (compComputer != null)
                         {
-                            // Check for illegal server status.
-                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
-                            {
-                                securityServers.Remove(building);
-                                continue;
-                            }
                             securityPointCapacity += compComputer.Props.pointStorage;
                             cachedSecurityGeneration += compComputer.Props.passivePointGeneration;
                         }
-                        else if (compSuperComputer != null)
+                        if (compSuperComputer != null)
                         {
                             securityPointCapacity += compSuperComputer.Props.pointStorage;
                             cachedSecurityGeneration += compSuperComputer.Props.passivePointGeneration;
@@ -221,23 +211,17 @@ namespace ATReforged
                     hackingPointCapacity = 0;
                     cachedHackingGeneration = 0;
 
-                    // Calculate Hacking server points using CompComputer or CompSuperComputer (or both if it has them). Handle illegal cases and cache results.
-                    foreach (Building building in hackingServers.ToList())
+                    // Calculate Hacking server points using CompComputer or CompSuperComputer (or both if it has them). Cache results.
+                    foreach (Building building in hackingServers)
                     {
-                        compComputer = building.TryGetComp<CompComputer>();
-                        compSuperComputer = building.TryGetComp<CompSuperComputer>();
+                        compComputer = building.GetComp<CompComputer>();
+                        compSuperComputer = building.GetComp<CompSuperComputer>();
                         if (compComputer != null)
                         {
-                            // Check for illegal server status.
-                            if (building.IsBrokenDown() || !building.TryGetComp<CompPowerTrader>().PowerOn)
-                            {
-                                hackingServers.Remove(building);
-                                continue;
-                            }
                             hackingPointCapacity += compComputer.Props.pointStorage;
                             cachedHackingGeneration += compComputer.Props.passivePointGeneration;
                         }
-                        else if (compSuperComputer != null)
+                        if (compSuperComputer != null)
                         {
                             hackingPointCapacity += compSuperComputer.Props.pointStorage;
                             cachedHackingGeneration += compSuperComputer.Props.passivePointGeneration;
@@ -384,37 +368,6 @@ namespace ATReforged
         public int GetSkyMindCloudCapacity()
         {
             return SkyMindCloudCapacity;
-        }
-
-        // Add a heat sensitive device into the proper set. No errors are thrown if it was already in the set.
-        public void PushHeatSensitiveDevice(Building build)
-        {
-            heatSensitiveDevices.Add(build);
-        }
-
-        // Remove a heat sensitive device from the proper set. No errors are thrown if it was not in the set.
-        public void PopHeatSensitiveDevice(Building build)
-        {
-            heatSensitiveDevices.Remove(build);
-        }
-
-        // Return all heat sensitive devices on a given map. If a map isn't provided, return all heat sensitive devices across all maps.
-        public List<Thing> GetHeatSensitiveDevices(Map map = null)
-        {
-            if (map == null)
-            {
-                return heatSensitiveDevices;
-            }
-            else
-            {
-                List<Thing> devices = new List<Thing>();
-                foreach (Thing device in heatSensitiveDevices)
-                {
-                    if (device.MapHeld == map)
-                        devices.Add(device);
-                }
-                return devices;
-            }
         }
 
         // Add a server to the appropriate list based on serverMode
@@ -606,8 +559,6 @@ namespace ATReforged
         { 
             if (networkedDevices == null)
                 networkedDevices = new HashSet<Thing>();
-            if (heatSensitiveDevices == null)
-                heatSensitiveDevices = new List<Thing>();
             if (skillServers == null)
                 skillServers = new HashSet<Building>();
             if (securityServers == null)
@@ -653,9 +604,6 @@ namespace ATReforged
         private HashSet<Building> skillServers = new HashSet<Building>();
         private HashSet<Building> securityServers = new HashSet<Building>();
         private HashSet<Building> hackingServers = new HashSet<Building>();
-
-        // List of heat sensitive devices for easy checking of devices that may overheat and explode.
-        private List<Thing> heatSensitiveDevices = new List<Thing>();
 
         // Virused devices are things with their values being the tick at which to release them. This avoids the CompSkyMind having to store this information.
         private Dictionary<Thing, int> virusedDevices = new Dictionary<Thing, int>();

@@ -34,7 +34,7 @@ namespace ATReforged
                 }
                 foreach (Pawn pawn in ownedBed.OwnersForReading)
                 {
-                    if (!Utils.IsSurrogate(pawn) && pawn != p && !LovePartnerRelationUtility.LovePartnerRelationExists(p, pawn.TryGetComp<CompSkyMindLink>().GetSurrogates().FirstOrFallback()))
+                    if (!Utils.IsSurrogate(pawn) && pawn != p && !LovePartnerRelationUtility.LovePartnerRelationExists(p, pawn.GetComp<CompSkyMindLink>().GetSurrogates().FirstOrFallback()))
                     {
                         return false;
                     }

@@ -10,7 +10,7 @@ namespace ATReforged
         private const int JobEndInterval = 4000;
 
         private Building_ResearchBench ResearchBench => (Building_ResearchBench)TargetThingA;
-        private CompInsightBench CompInsightBench => ResearchBench.TryGetComp<CompInsightBench>();
+        private CompInsightBench CompInsightBench => ResearchBench.GetComp<CompInsightBench>();
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -34,13 +34,13 @@ namespace ATReforged
             {
                 Pawn actor = generateInsight.actor;
                 float pointsGenerated = 0.008f;
-                pointsGenerated *= actor.GetStatValue(RimWorld.StatDefOf.ResearchSpeed);
-                pointsGenerated *= TargetThingA.GetStatValue(RimWorld.StatDefOf.ResearchSpeedFactor);
+                pointsGenerated *= actor.GetStatValue(StatDefOf.ResearchSpeed);
+                pointsGenerated *= TargetThingA.GetStatValue(StatDefOf.ResearchSpeedFactor);
                 Utils.gameComp.ChangeServerPoints(pointsGenerated, CompInsightBench.ServerType);
                 actor.skills.Learn(SkillDefOf.Intellectual, 0.1f);
                 actor.GainComfortFromCellIfPossible(chairsOnly: true);
             };
-            generateInsight.FailOn(() => ResearchBench.TryGetComp<CompSkyMind>()?.connected != true);
+            generateInsight.FailOn(() => ResearchBench.GetComp<CompSkyMind>()?.connected != true);
             generateInsight.FailOn(() => CompInsightBench == null);
             generateInsight.FailOn(() => CompInsightBench.ServerType == ServerType.None);
             generateInsight.FailOn(() => Utils.gameComp.GetPointCapacity(CompInsightBench.ServerType) <= Utils.gameComp.GetPoints(CompInsightBench.ServerType));

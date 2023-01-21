@@ -49,7 +49,7 @@ namespace ATReforged
         {
             PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_M7MechPawn, Faction.OfPlayer, PawnGenerationContext.NonPlayer);
             Pawn pawn = PawnGenerator.GeneratePawn(request);
-            FilthMaker.TryMakeFilth(Position, Map, RimWorld.ThingDefOf.Filth_RubbleBuilding, 30);
+            FilthMaker.TryMakeFilth(Position, Map, ThingDefOf.Filth_RubbleBuilding, 30);
 
             // There is a very small chance the unit will be permanently hostile and try to murder everything it can find.
             if (Rand.Chance(0.05f))

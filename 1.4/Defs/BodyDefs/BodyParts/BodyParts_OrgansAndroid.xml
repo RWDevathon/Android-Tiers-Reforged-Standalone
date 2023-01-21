@@ -34,6 +34,9 @@
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
         <bleedRate>1</bleedRate>
+        <tags>
+            <li>MetabolismSource</li>
+        </tags>
         <canSuggestAmputation>false</canSuggestAmputation>
     </BodyPartDef>
 

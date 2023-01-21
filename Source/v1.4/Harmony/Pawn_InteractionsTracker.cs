@@ -18,7 +18,7 @@ namespace ATReforged
                     return;
 
                 // GetSurrogates returns all surrogates of a controller if the pawn is a controller, or the surrogate's controller if it is a surrogate.
-                CompSkyMindLink link = ___pawn.TryGetComp<CompSkyMindLink>();
+                CompSkyMindLink link = ___pawn.GetComp<CompSkyMindLink>();
                 if (link != null && link.HasSurrogate() && link.GetSurrogates().Contains(recipient))
                 {
                     __result = false;

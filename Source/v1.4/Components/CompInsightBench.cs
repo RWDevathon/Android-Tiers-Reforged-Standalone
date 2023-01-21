@@ -25,12 +25,12 @@ namespace ATReforged
         {
             base.PostSpawnSetup(respawningAfterLoad);
             building = (Building)parent;
-            networkConnection = parent.TryGetComp<CompSkyMind>();
+            networkConnection = parent.GetComp<CompSkyMind>();
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (building.IsBrokenDown() || !parent.TryGetComp<CompPowerTrader>().PowerOn || networkConnection?.connected == false)
+            if (!parent.GetComp<CompPowerTrader>().PowerOn || networkConnection?.connected == false)
                 yield break;
 
             // Generate button to switch server mode based on which servermode the server is currently in.

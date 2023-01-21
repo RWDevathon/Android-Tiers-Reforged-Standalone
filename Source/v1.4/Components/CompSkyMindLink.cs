@@ -29,6 +29,16 @@ namespace ATReforged
             {
                 Scribe_Collections.Look(ref surrogatePawns, "ATR_surrogatePawns", lookMode: LookMode.Reference);
             }
+
+            // Reduplicate the controller skills into tethered surrogates as it seems to desync after loading.
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && controlMode == true && HasSurrogate())
+            {
+                foreach (Pawn surrogate in surrogatePawns)
+                {
+                    Utils.DuplicateSkills(ThisPawn, surrogate, true);
+                    Utils.DuplicateRelations(ThisPawn, surrogate, true);
+                }
+            }
         }
 
         public override void PostDraw()
@@ -135,7 +145,7 @@ namespace ATReforged
                 {
                     Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
-                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && controller.TryGetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
+                    if (Utils.gameComp.GetCloudPawns().Contains(controller) && controller.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && controller.GetComp<CompSkyMindLink>().surrogatePawns.Count == 1)
                     {
                         yield return new Command_Action
                         {
@@ -290,7 +300,7 @@ namespace ATReforged
                                 {
                                     Find.WindowStack.Add(new Dialog_MessageBox("ATR_TransferConfirm".Translate(parent.LabelShortCap, "ATR_Surrogate".Translate()) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_Transfer".Translate(), buttonAAction: delegate
                                     {
-                                        surrogate.TryGetComp<CompSkyMindLink>().InitiateConnection(4, ThisPawn);
+                                        surrogate.GetComp<CompSkyMindLink>().InitiateConnection(4, ThisPawn);
                                     }));
                                 }
                             };
@@ -370,7 +380,7 @@ namespace ATReforged
                 if (networkOperationInProgress == -1 && status > -1)
                 { 
                     // If the status is resetting because of a failure, notify that a failure occurred. HandleInterrupt takes care of actual negative events.
-                    if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == ATR_HediffDefOf.ATR_MemoryCorruption || targetHediff.def == RimWorld.HediffDefOf.Dementia))
+                    if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == ATR_HediffDefOf.ATR_MemoryCorruption || targetHediff.def == HediffDefOf.Dementia))
                     {
                         Find.LetterStack.ReceiveLetter("ATR_OperationFailure".Translate(), "ATR_OperationFailureDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.NegativeEvent, ThisPawn);
                     }
@@ -455,13 +465,14 @@ namespace ATReforged
         {
             // Copy this pawn into the surrogate. Player surrogates are tethered to the controller.
             Utils.Duplicate(ThisPawn, surrogate, false, !external);
+            CompSkyMindLink surrogateLink = surrogate.GetComp<CompSkyMindLink>();
 
             // Foreign controllers aren't saved, so only handle linking the surrogate and controller together if it's a player pawn.
             if (!external)
             {
                 // Ensure both pawns link to one another in their surrogatePawns.
                 surrogatePawns.Add(surrogate);
-                surrogate.TryGetComp<CompSkyMindLink>().surrogatePawns.Add(ThisPawn);
+                surrogateLink.surrogatePawns.Add(ThisPawn);
 
                 // If this is not a cloud pawn, both the surrogate and controller should have Hediff_SplitConsciousness.
                 if (!Utils.gameComp.GetCloudPawns().Contains(ThisPawn))
@@ -478,13 +489,13 @@ namespace ATReforged
                 FleckMaker.ThrowDustPuffThick(surrogate.Position.ToVector3Shifted(), surrogate.Map, 4.0f, Color.blue);
                 Messages.Message("ATR_SurrogateControlled".Translate(ThisPawn.LabelShortCap), ThisPawn, MessageTypeDefOf.PositiveEvent);
                 Linked = -2;
-                surrogate.TryGetComp<CompSkyMindLink>().Linked = -2;
+                surrogateLink.Linked = -2;
             }
             else
             {
                 // Foreign controllers aren't saved, and are only needed to initialize the surrogate. Foreign surrogates operate independently until downed or killed.
                 isForeign = true;
-                surrogate.TryGetComp<CompSkyMindLink>().isForeign = true;
+                surrogateLink.isForeign = true;
             }
 
             // Remove the surrogate's NoHost hediff.
@@ -519,7 +530,7 @@ namespace ATReforged
             if (!isForeign)
             {
                 // Disconnect the surrogate from its controller.
-                surrogatePawns.FirstOrFallback().TryGetComp<CompSkyMindLink>().surrogatePawns.Remove(ThisPawn);
+                surrogatePawns.FirstOrFallback().GetComp<CompSkyMindLink>().surrogatePawns.Remove(ThisPawn);
                 surrogatePawns.Clear();
             }
 
@@ -568,7 +579,7 @@ namespace ATReforged
             }
             else
             {
-                corruption = HediffMaker.MakeHediff(RimWorld.HediffDefOf.Dementia, pawn, null);
+                corruption = HediffMaker.MakeHediff(HediffDefOf.Dementia, pawn, null);
                 corruption.Severity = Rand.Range(0.15f, 0.5f);
                 pawn.health.AddHediff(corruption, null, null);
             }
@@ -614,7 +625,7 @@ namespace ATReforged
             if (recipientPawn != null)
             {
                 ApplyCorruption(recipientPawn);
-                recipientPawn.TryGetComp<CompSkyMindLink>().Linked = -1;
+                recipientPawn.GetComp<CompSkyMindLink>().Linked = -1;
             }
             Utils.gameComp.PopNetworkLinkedPawn(ThisPawn);
             Linked = -1;
@@ -755,7 +766,7 @@ namespace ATReforged
             if (Linked > -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)
             {
                 // Check to see if the current pawn is no longer connected to the SkyMind network (or is dead).
-                if (ThisPawn.Dead || (!ThisPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
+                if (ThisPawn.Dead || (!ThisPawn.GetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(ThisPawn)))
                 {
                     HandleInterrupt();
                     return;
@@ -764,7 +775,7 @@ namespace ATReforged
                 // Check to see if the operation involves a recipient pawn and ensure their status is similarly acceptable if there is one.
                 if (recipientPawn != null)
                 {
-                    if (recipientPawn.Dead || (!recipientPawn.TryGetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(recipientPawn)))
+                    if (recipientPawn.Dead || (!recipientPawn.GetComp<CompSkyMind>().connected && !Utils.gameComp.GetCloudPawns().Contains(recipientPawn)))
                     {
                         HandleInterrupt();
                         return;

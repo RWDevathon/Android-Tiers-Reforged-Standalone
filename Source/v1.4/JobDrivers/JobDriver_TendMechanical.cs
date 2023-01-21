@@ -75,7 +75,7 @@ namespace ATReforged
                 waitToil = Toils_General.WaitWith(TargetIndex.A, ticks, useProgressBar: false, maintainPosture: true);
                 waitToil.AddFinishAction(delegate
                 {
-                    if (Deliveree != null && Deliveree != pawn && Deliveree.CurJob != null && (Deliveree.CurJob.def == RimWorld.JobDefOf.Wait || Deliveree.CurJob.def == RimWorld.JobDefOf.Wait_MaintainPosture))
+                    if (Deliveree != null && Deliveree != pawn && Deliveree.CurJob != null && (Deliveree.CurJob.def == JobDefOf.Wait || Deliveree.CurJob.def == JobDefOf.Wait_MaintainPosture))
                     {
                         Deliveree.jobs.EndCurrentJob(JobCondition.InterruptForced);
                     }

@@ -18,13 +18,13 @@ namespace ATReforged
                 bool isChargeCapable = false;
 
                 // Charging bed check (the building itself has a CompPawnCharger)
-                if (bed != null && bed.TryGetComp<CompPawnCharger>() != null && bed.TryGetComp<CompPowerTrader>()?.PowerOn == true)
+                if (bed != null && bed.GetComp<CompPawnCharger>() != null && bed.GetComp<CompPowerTrader>()?.PowerOn == true)
                 {
                     isChargeCapable = true;
                 }
 
                 // Normal bed with an attached bedside charger check (A linked building has a CompPawnCharger)
-                List<Thing> linkedBuildings = bed.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading;
+                List<Thing> linkedBuildings = bed.GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading;
                 if (linkedBuildings != null)
                 {
                     foreach (Thing linkedBuilding in linkedBuildings)

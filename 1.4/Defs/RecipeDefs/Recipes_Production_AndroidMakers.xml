@@ -9,7 +9,7 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(1,2.5)</drawSize>
         </graphicData>
-        <stuffCategories Inherit="false" />
+        <stuffCategories Inherit="False" />
     </ThingDef>
 
     <RecipeDef Name="ATR_AndroidMakerBase" Abstract="True">

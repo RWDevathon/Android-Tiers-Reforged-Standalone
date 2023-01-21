@@ -198,7 +198,6 @@
             <bed_showSleeperBody>True</bed_showSleeperBody>
             <bed_healPerDay>10</bed_healPerDay>
             <bed_defaultMedical>false</bed_defaultMedical>
-            <bed_maxBodySize>3</bed_maxBodySize>
             <buildingTags>
                 <li>Bed</li>
             </buildingTags>
@@ -227,8 +226,6 @@
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <building>
-            <bed_showSleeperBody>True</bed_showSleeperBody>
-            <bed_healPerDay>10</bed_healPerDay>
             <bed_maxBodySize>3</bed_maxBodySize>
         </building>
 	    <comps>
@@ -261,5 +258,29 @@
 	        </li>
         </comps>
     </ThingDef>
+
+    <!-- Minified Vanometric Power Cell for SkyMind Core needs -->
+    <ThingDef>
+		<defName>ATR_VanometricPowerCellMinified</defName>
+		<label>minified vanometric power cell</label>
+		<thingClass>MinifiedThing</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>14</pathCost>
+		<statBases>
+			<Mass>9</Mass>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<uiIconPath>Things/Building/Special/VanometricPowerCell_north</uiIconPath>
+	</ThingDef>
     
 </Defs>

@@ -7,8 +7,9 @@ namespace ATReforged
 {
     public class Recipe_InstallImplantAndroid : Recipe_SurgeryAndroids
     {
+        // Acquire a the list of viable body parts to attach the given recipe to, checking to ensure they are intact and ready for surgery.
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
-        { // Acquire a the list of viable body parts to attach the given recipe to, checking to ensure they are intact and ready for surgery.
+        {
             List<BodyPartRecord> pawnParts = pawn.RaceProps.body.AllParts;
             List<BodyPartDef> targetParts = recipe.appliedOnFixedBodyParts;
             foreach (BodyPartRecord part in pawnParts)
@@ -41,7 +42,7 @@ namespace ATReforged
 
         // Check if the surgery fails. If not, then apply the appropriate hediff.
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
-        { 
+        {
             if (billDoer != null)
             {
                 if (CheckSurgeryFailAndroid(billDoer, pawn, ingredients, part, bill))

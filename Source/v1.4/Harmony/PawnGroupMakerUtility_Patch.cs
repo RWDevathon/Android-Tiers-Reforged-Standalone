@@ -128,7 +128,7 @@ namespace ATReforged
                         }
 
                         // Connect the chosenCandidate to the surrogate as the controller. It is an external controller.
-                        chosenCandidate.TryGetComp<CompSkyMindLink>().ConnectSurrogate(surrogate, true);
+                        chosenCandidate.GetComp<CompSkyMindLink>().ConnectSurrogate(surrogate, true);
 
                         // The newly generated surrogate will take on the gear of its candidate - it must start with nothing first.
                         if (surrogate.inventory != null && surrogate.inventory.innerContainer != null)

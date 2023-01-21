@@ -32,7 +32,7 @@
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_SkyMindCore</defName>
         <label>SkyMind Core</label>
-        <description>A network of persona intelligences collectively forming a single supercomputer capable of processing, storing, and manipulating vast quantities of information - that which ultimately defines a consciousness. This device is capable of providing digital immortality, consciousness operations, and remote controls to properly outfitted organic and mechanical individuals alike. Its existence is proof of strength, willpower, and wealth. \n\nShould it lose power or critically overheat, its contents will be irrevocably lost. The ability to overcome death is not risk-free.</description>
+        <description>A network of persona intelligences collectively forming a single supercomputer capable of processing, storing, and manipulating vast quantities of information - that which ultimately defines a consciousness. This device is capable of providing digital immortality, consciousness operations, and remote controls to properly outfitted organic and mechanical individuals alike. Its existence is proof of strength, willpower, and wealth.\n\nInternalized vanometric power cells support the whole structure, and are judiciously managed by the networked personas to prevent any power disruption of any kind at an immense heat output cost.\n\nShould the device be destroyed or lost, all consciousnesses which can't be stored by other Cores will perish - immortality is not risk-free.</description>
         <statBases>
             <WorkToBuild>65000</WorkToBuild>
             <Mass>500</Mass>
@@ -53,37 +53,37 @@
         </graphicData>
         <size>(8,8)</size>
         <costList>
-            <Steel>2000</Steel>
+            <Steel>1600</Steel>
             <Plasteel>600</Plasteel>
-            <Gold>400</Gold>
+            <Gold>200</Gold>
             <ComponentIndustrial>48</ComponentIndustrial>
             <ComponentSpacer>24</ComponentSpacer>
             <AIPersonaCore>4</AIPersonaCore>
+            <ATR_VanometricPowerCellMinified>2</ATR_VanometricPowerCellMinified>
         </costList>
-        <comps>
+        <comps Inherit="False">
             <li Class="CompProperties_Glower">
                 <glowRadius>10</glowRadius>
                 <glowColor>(250, 250, 250)</glowColor>
             </li>
             <li Class="CompProperties_HeatPusher">
                 <compClass>CompHeatPusherPowered</compClass>
-                <heatPerSecond>60</heatPerSecond>
+                <heatPerSecond>100</heatPerSecond>
             </li>
             <li Class="ATReforged.CompProperties_SkyMindCore">
                 <cloudPawnCapacityProvided>20</cloudPawnCapacityProvided>
             </li>
-            <li Class="ATReforged.CompProperties_Computer">
-                <serverMode>SecurityServer</serverMode>
-                <passivePointGeneration>40</passivePointGeneration>
+            <li Class="ATReforged.CompProperties_SuperComputer">
+                <passivePointGeneration>30</passivePointGeneration>
                 <pointStorage>10000</pointStorage>
             </li>
             <li Class="ATReforged.CompProperties_SkyMindTower">
-                <SkyMindSlotsProvided>5</SkyMindSlotsProvided>
+                <SkyMindSlotsProvided>10</SkyMindSlotsProvided>
             </li>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>2500</basePowerConsumption>
+            <li Class="ATReforged.CompProperties_HeatSensitive">
+                <safeHeat>30</safeHeat>
+                <warningHeat>40</warningHeat>
+                <dangerHeat>50</dangerHeat>
             </li>
         </comps>
         <researchPrerequisites>

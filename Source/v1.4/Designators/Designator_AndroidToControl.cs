@@ -56,7 +56,7 @@ namespace ATReforged
             {
                 // Can only designate player (or blank) connected, unbreached, uncontrolled surrogates.
                 if ((pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn) 
-                    && pawn.TryGetComp<CompSkyMind>().Breached == -1 && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate())
+                    && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate())
                 {
                     target = pawn;
                     return true;
@@ -78,7 +78,7 @@ namespace ATReforged
                 return;
             }
 
-            controller.TryGetComp<CompSkyMindLink>().ConnectSurrogate((Pawn)target);
+            controller.GetComp<CompSkyMindLink>().ConnectSurrogate((Pawn)target);
             if (Utils.gameComp.GetSkyMindNetworkSlots() <= Utils.gameComp.networkedDevices.Count())
                 Find.DesignatorManager.Deselect();
         }

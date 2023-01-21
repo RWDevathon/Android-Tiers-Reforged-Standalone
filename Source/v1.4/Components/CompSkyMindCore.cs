@@ -25,7 +25,7 @@ namespace ATReforged
                 return;
 
             // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
-            if (parent.TryGetComp<CompPowerTrader>() == null)
+            if (parent.GetComp<CompPowerTrader>() == null)
             {
                 Utils.gameComp.AddCore(this);
             }
@@ -35,8 +35,8 @@ namespace ATReforged
         {
             base.PostDeSpawn(map);
 
-            // Buildings that provide core capacity lose it when they despawn if they are online.
-            if (parent is Building && parent.TryGetComp<CompPowerTrader>().PowerOn)
+            // Buildings that provide core capacity lose it when they despawn if they are online (whenever something either has no power trader or has an online power trader).
+            if (parent is Building && parent.GetComp<CompPowerTrader>()?.PowerOn != false)
             {
                 Utils.gameComp.RemoveCore(this);
             }
@@ -59,13 +59,6 @@ namespace ATReforged
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            // Don't show a button to interact with SkyMind intelligences on a broken core.
-            if (parent is Building)
-            {
-                if (parent.Destroyed || !parent.TryGetComp<CompPowerTrader>().PowerOn)
-                yield break;
-            }
-
             // No reason to show buttons to check on SkyMind intelligences if none exist.
             if (Utils.gameComp.GetCloudPawns().Count() == 0)
             {
@@ -108,7 +101,7 @@ namespace ATReforged
                 {
                     List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                     {
                         opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                         {
@@ -147,14 +140,13 @@ namespace ATReforged
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
                                 Find.WindowStack.Add(new Dialog_MessageBox("ATR_ReplicateCloudPawnDesc".Translate() + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_ReplicateCloudPawn".Translate(), buttonAAction: delegate
                                 {
-                                    pawn.TryGetComp<CompSkyMindLink>().InitiateConnection(6);
-                                    Utils.gameComp.PushNetworkLinkedPawn(pawn, Find.TickManager.TicksGame + ATReforged_Settings.timeToCompleteSkyMindOperations * 2500);
+                                    pawn.GetComp<CompSkyMindLink>().InitiateConnection(6);
                                 }));
                             }));
                             opts.SortBy((x) => x.Label);
@@ -207,7 +199,7 @@ namespace ATReforged
                 action = delegate ()
                 {
                     List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                     {
                         cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                         {
@@ -238,7 +230,7 @@ namespace ATReforged
             };
 
             // Allow disconnecting a particular SkyMind pawn from its surrogates.
-            if (Utils.gameComp.GetCloudPawns().Any(pawn => pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+            if (Utils.gameComp.GetCloudPawns().Any(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
             {
                 yield return new Command_Action
                 {
@@ -249,11 +241,11 @@ namespace ATReforged
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
 
-                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn pawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             opts.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
-                                pawn.TryGetComp<CompSkyMindLink>().DisconnectSurrogates();
+                                pawn.GetComp<CompSkyMindLink>().DisconnectSurrogates();
                             }));
                             opts.SortBy((x) => x.Label);
 
@@ -277,7 +269,7 @@ namespace ATReforged
                     action = delegate ()
                     {
                         List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                        foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate()))
+                        foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
                         {
                             cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                             {
@@ -289,7 +281,7 @@ namespace ATReforged
                                         if (!Utils.gameComp.AttemptSkyMindConnection(surrogate))
                                             Messages.Message("ATR_SkyMindConnectionFailed".Translate(), parent, MessageTypeDefOf.NegativeEvent);
                                         else
-                                            cloudPawn.TryGetComp<CompSkyMindLink>().ConnectSurrogate(surrogate);
+                                            cloudPawn.GetComp<CompSkyMindLink>().ConnectSurrogate(surrogate);
                                     }));
                                 }
                                 targetOpts.SortBy((x) => x.Label);

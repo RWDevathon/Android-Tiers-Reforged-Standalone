@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!-- Replace the vanometric power cell minified def with something we can use for the SkyMind Core -->
+	<Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="VanometricPowerCell"]/minifiedDef</xpath>
+        <value>
+            <minifiedDef>ATR_VanometricPowerCellMinified</minifiedDef>
+        </value>
+	</Operation>
+    
+</Patch>

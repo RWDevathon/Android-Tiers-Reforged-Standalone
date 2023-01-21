@@ -6,7 +6,7 @@ namespace ATReforged
     public class CompSpawnerMicroScyther : ThingComp
     {
 
-        public override void CompTick()
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             SpawnPawn();
             parent.Destroy();

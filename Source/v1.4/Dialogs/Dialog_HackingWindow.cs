@@ -120,7 +120,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     {
-                                        def = RimWorld.IncidentDefOf.OrbitalTraderArrival,
+                                        def = IncidentDefOf.OrbitalTraderArrival,
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.OrbitalVisitor, Find.CurrentMap)
                                     };
                                 }
@@ -138,7 +138,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     { 
-                                        def = RimWorld.IncidentDefOf.ShipChunkDrop, 
+                                        def = IncidentDefOf.ShipChunkDrop, 
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ShipChunkDrop, Find.CurrentMap) 
                                     };
                                 }
@@ -147,7 +147,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     { 
-                                        def = RimWorld.IncidentDefOf.RaidEnemy, 
+                                        def = IncidentDefOf.RaidEnemy, 
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.CurrentMap) 
                                     };
                                     incident.parms.points /= 2;
@@ -159,7 +159,7 @@ namespace ATReforged
                                 {
                                     incident = new FiringIncident
                                     { 
-                                        def = RimWorld.IncidentDefOf.MechCluster, 
+                                        def = IncidentDefOf.MechCluster, 
                                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.CurrentMap) 
                                     };
                                     incident.parms.points /= 2;
@@ -277,8 +277,8 @@ namespace ATReforged
                                 // Generate a ancient complex loot quest.
                                 if (randPick <= 0.15f && ModsConfig.IdeologyActive)
                                 {
-                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(RimWorld.QuestScriptDefOf.OpportunitySite_AncientComplex, StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
-                                    if (!quest.hidden && RimWorld.QuestScriptDefOf.OpportunitySite_AncientComplex.sendAvailableLetter)
+                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.OpportunitySite_AncientComplex, StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
+                                    if (!quest.hidden && QuestScriptDefOf.OpportunitySite_AncientComplex.sendAvailableLetter)
                                     {
                                         QuestUtility.SendLetterQuestAvailable(quest);
                                     }
@@ -286,8 +286,8 @@ namespace ATReforged
                                 // Generate a work site quest.
                                 else if (randPick <= 0.45f && ModsConfig.IdeologyActive)
                                 {
-                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(RimWorld.QuestScriptDefOf.OpportunitySite_WorkSite, 2 * StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
-                                    if (!quest.hidden && RimWorld.QuestScriptDefOf.OpportunitySite_WorkSite.sendAvailableLetter)
+                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.OpportunitySite_WorkSite, 2 * StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
+                                    if (!quest.hidden && QuestScriptDefOf.OpportunitySite_WorkSite.sendAvailableLetter)
                                     {
                                         QuestUtility.SendLetterQuestAvailable(quest);
                                     }
@@ -295,8 +295,8 @@ namespace ATReforged
                                 // Generate an item stash quest.
                                 else
                                 {
-                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(RimWorld.QuestScriptDefOf.OpportunitySite_ItemStash, 3 * StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
-                                    if (!quest.hidden && RimWorld.QuestScriptDefOf.OpportunitySite_ItemStash.sendAvailableLetter)
+                                    quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.OpportunitySite_ItemStash, 3 * StorytellerUtility.DefaultThreatPointsNow(Find.CurrentMap));
+                                    if (!quest.hidden && QuestScriptDefOf.OpportunitySite_ItemStash.sendAvailableLetter)
                                     {
                                         QuestUtility.SendLetterQuestAvailable(quest);
                                     }
@@ -430,7 +430,7 @@ namespace ATReforged
                     // Try to generate a raid with normal raid points.
                     FiringIncident incident = new FiringIncident
                     {
-                        def = RimWorld.IncidentDefOf.RaidEnemy,
+                        def = IncidentDefOf.RaidEnemy,
                         parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.CurrentMap)
                     };
                     if (!Find.Storyteller.TryFire(incident))

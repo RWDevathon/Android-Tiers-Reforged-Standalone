@@ -16,7 +16,7 @@ namespace ATReforged
                 return;
 
             // If there is a SkyMind Core of any kind and this turret is linked to the SkyMind, then it may have a forced target.
-            CompSkyMind compSkyMind = __instance.TryGetComp<CompSkyMind>();
+            CompSkyMind compSkyMind = __instance.GetComp<CompSkyMind>();
             if (compSkyMind != null && compSkyMind.connected && Utils.gameComp.GetSkyMindCloudCapacity() > 0)
                 __result = true;
         }

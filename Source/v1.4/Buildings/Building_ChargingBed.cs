@@ -17,7 +17,7 @@ namespace ATReforged
             }
 
             // Check if the building itself has power.
-            if (!this.TryGetComp<CompPowerTrader>().PowerOn)
+            if (!GetComp<CompPowerTrader>().PowerOn)
             { 
                 return new FloatMenuOption("CannotUseNoPower".Translate(), null);
             }
@@ -32,6 +32,12 @@ namespace ATReforged
             if (!AnyUnoccupiedSleepingSlot && pawn.ownership.OwnedBed != this)
             {
                 return new FloatMenuOption("ATR_NoAvailableChargingSpots".Translate(), null);
+            }
+
+            // Check if the pawn is too big for the bed.
+            if (def.building.bed_maxBodySize < pawn.BodySize)
+            {
+                return new FloatMenuOption("ATR_MassiveNotAllowed".Translate(), null);
             }
 
             // All checks passed, this pawn may be forced to charge. Return null.

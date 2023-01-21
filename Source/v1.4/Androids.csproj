@@ -184,7 +184,6 @@
     <Compile Include="Alerts\Alert_FullHackingServers.cs" />
     <Compile Include="Alerts\Alert_FullSkillServers.cs" />
     <Compile Include="Alerts\Alert_NeedMechanic.cs" />
-    <Compile Include="Alerts\Alert_ServerHeatCritical.cs" />
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
@@ -214,6 +213,7 @@
     <Compile Include="Enum\ServerType.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
+    <Compile Include="Gizmos\Gizmo_MaintenanceEffect.cs" />
     <Compile Include="Gizmos\Gizmo_MaintenanceStatus.cs" />
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
@@ -327,6 +327,7 @@
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
     <Compile Include="DefsOf\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_MaintenanceMood.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
     <Compile Include="JobDrivers\JobDriver_RechargeBattery.cs" />
     <Compile Include="Recipes\Recipe_InstallOrganicSkyMindInterface.cs" />

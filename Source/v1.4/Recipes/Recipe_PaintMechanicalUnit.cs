@@ -9,6 +9,11 @@ namespace ATReforged
         // This recipe always targets the core part, and is always applicable.
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         {
+            if (!Utils.IsConsideredMechanical(pawn))
+            {
+                yield break;
+            }
+
             yield return pawn.RaceProps.body.corePart;
         }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>	
+
 	<!-- Add the exterminator mental state think tree to the MentalStateCritical think tree so any pawn can use it -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
@@ -19,4 +20,5 @@
             </li>
 		</value>
 	</Operation>
+    
 </Patch>

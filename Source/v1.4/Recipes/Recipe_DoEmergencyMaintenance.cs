@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace ATReforged
@@ -13,7 +14,7 @@ namespace ATReforged
                 yield return pawn.RaceProps.body.corePart;
         }
 
-        // On completion, increase the maintenance level by 10% up to a max of 40% overall.
+        // On completion, increase the maintenance level by 10% up to a max of 40% overall. Increase the maintenance effect by 1 day (60000 ticks) up to positive 60000.
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
             CompMaintenanceNeed compMaintenanceNeed = pawn.GetComp<CompMaintenanceNeed>();
@@ -25,6 +26,8 @@ namespace ATReforged
             {
                 compMaintenanceNeed.ChangeMaintenanceLevel(0.1f);
             }
+
+            compMaintenanceNeed.maintenanceEffectTicks = Mathf.Clamp(compMaintenanceNeed.maintenanceEffectTicks + 60000, compMaintenanceNeed.maintenanceEffectTicks, 60000);
         }
     }
 }

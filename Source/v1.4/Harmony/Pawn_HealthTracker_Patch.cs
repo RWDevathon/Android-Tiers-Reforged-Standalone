@@ -76,7 +76,7 @@ namespace ATReforged
 
                 // Non-player surrogates must disconnect directly.
                 if (Utils.IsSurrogate(___pawn) && ___pawn.Faction != Faction.OfPlayer)
-                    ___pawn.TryGetComp<CompSkyMindLink>().DisconnectController();
+                    ___pawn.GetComp<CompSkyMindLink>().DisconnectController();
             }
         }
 

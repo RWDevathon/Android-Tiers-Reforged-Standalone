@@ -44,7 +44,7 @@ namespace ATReforged
             }
             meditate.defaultCompleteMode = ToilCompleteMode.Delay;
             meditate.defaultDuration = JobEndInterval;
-            meditate.FailOn(() => !MeditationUtility.CanMeditateNow(pawn) || !MeditationUtility.SafeEnvironmentalConditions(pawn, TargetLocA, Map));
+            meditate.FailOn(() => !MeditationUtility.SafeEnvironmentalConditions(pawn, TargetLocA, Map));
             meditate.FailOn(() => pawn.GetComp<CompMaintenanceNeed>().MaintenanceLevel >= pawn.GetComp<CompMaintenanceNeed>().TargetMaintenanceLevel);
             meditate.AddPreTickAction(delegate
             {

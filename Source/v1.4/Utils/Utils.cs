@@ -308,16 +308,16 @@ namespace ATReforged
                 // If Ideology dlc is active, duplicate pawn ideology into destination.
                 if (ModsConfig.IdeologyActive)
                 {
-                    DuplicateIdeology(ref source, ref dest, isTethered);
+                    DuplicateIdeology(source, dest, isTethered);
                 }
 
                 // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
                 if (ModsConfig.RoyaltyActive)
                 {
-                    DuplicateRoyalty(ref source, ref dest, isTethered);
+                    DuplicateRoyalty(source, dest, isTethered);
                 }
 
-                DuplicateSkills(ref source, ref dest, isTethered);
+                DuplicateSkills(source, dest, isTethered);
                 
                 // If this duplication is considered to be killing a sapient individual, then handle some relations before they're duplicated.
                 if (overwriteAsDeath)
@@ -336,19 +336,19 @@ namespace ATReforged
                 }
 
                 // Duplicate relations.
-                DuplicateRelations(ref source, ref dest, isTethered);
+                DuplicateRelations(source, dest, isTethered);
 
                 // Duplicate faction. No difference if tethered or not.
                 if (source.Faction != dest.Faction)
                     dest.SetFaction(source.Faction);
 
                 // Duplicate source needs into destination. This is not tetherable.
-                DuplicateNeeds(ref source, ref dest);
+                DuplicateNeeds(source, dest);
 
                 // Only duplicate source settings for player pawns as foreign pawns don't need them. Can not be tethered as otherwise pawns would be forced to have same work/time/role settings.
                 if (source.Faction != null && dest.Faction != null && source.Faction.IsPlayer && dest.Faction.IsPlayer)
                 {
-                    DuplicatePlayerSettings(ref source, ref dest);
+                    DuplicatePlayerSettings(source, dest);
                 }
 
                 // Duplicate source name into destination.
@@ -401,7 +401,7 @@ namespace ATReforged
         }
 
         // Duplicate ideology details from the source to the destination.
-        public static void DuplicateIdeology(ref Pawn source, ref Pawn dest, bool isTethered)
+        public static void DuplicateIdeology(Pawn source, Pawn dest, bool isTethered)
         {
             try
             {
@@ -431,7 +431,7 @@ namespace ATReforged
         }
 
         // Royalty status can not actually be duplicated, but duplicating a pawn should still handle cases around royal abilities/details.
-        public static void DuplicateRoyalty(ref Pawn source, ref Pawn dest, bool isTethered)
+        public static void DuplicateRoyalty(Pawn source, Pawn dest, bool isTethered)
         {
             try
             {
@@ -457,7 +457,7 @@ namespace ATReforged
         }
 
         // Duplicate all skill levels, xp gains, and passions into the destination.
-        public static void DuplicateSkills(ref Pawn source, ref Pawn dest, bool isTethered)
+        public static void DuplicateSkills(Pawn source, Pawn dest, bool isTethered)
         {
             try
             {
@@ -489,7 +489,7 @@ namespace ATReforged
         }
 
         // Duplicate relations from the source to the destination. This should also affect other pawn relations, and any animals involved.
-        public static void DuplicateRelations(ref Pawn source, ref Pawn dest, bool isTethered)
+        public static void DuplicateRelations(Pawn source, Pawn dest, bool isTethered)
         {
             try
             {
@@ -547,7 +547,7 @@ namespace ATReforged
         }
 
         // Duplicate applicable needs from the source to the destination. This includes mood thoughts, memories, and ensuring it updates its needs as appropriate.
-        public static void DuplicateNeeds(ref Pawn source, ref Pawn dest)
+        public static void DuplicateNeeds(Pawn source, Pawn dest)
         {
             try
             {
@@ -569,7 +569,7 @@ namespace ATReforged
             }
         }
 
-        public static void DuplicatePlayerSettings(ref Pawn source, ref Pawn dest)
+        public static void DuplicatePlayerSettings(Pawn source, Pawn dest)
         {
             try
             {
@@ -664,7 +664,7 @@ namespace ATReforged
         public static bool IsValidMindTransferTarget(Pawn pawn)
         {
             // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.TryGetComp<CompSkyMind>().Breached != -1 || pawn.TryGetComp<CompSkyMindLink>().Linked > -1)
+            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
             {
                 return false;
             }
@@ -696,7 +696,7 @@ namespace ATReforged
             {
                 foreach (Pawn pawn in caravan.pawns)
                 {
-                    if (IsSurrogate(pawn) && !pawn.TryGetComp<CompSkyMindLink>().HasSurrogate())
+                    if (IsSurrogate(pawn) && !pawn.GetComp<CompSkyMindLink>().HasSurrogate())
                     {
                         hostlessSurrogates.AddItem(pawn);
                     }
@@ -727,14 +727,10 @@ namespace ATReforged
             if (copy.genes?.GetMelaninGene() != null && pawn.genes?.GetMelaninGene() != null)
             {
                 copy.genes.GetMelaninGene().skinColorBase = pawn.genes.GetMelaninGene().skinColorBase;
-                pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
             }
-            else
-            {
-                copy.story.skinColorOverride = pawn.story?.skinColorOverride;
-                pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
-                copy.story.SkinColorBase = pawn.story.SkinColorBase;
-            }
+            copy.story.skinColorOverride = pawn.story?.skinColorOverride;
+            pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", pawn.story.SkinColorBase);
+            copy.story.SkinColorBase = pawn.story.SkinColorBase;
 
             // Get rid of any items it may have spawned with.
             copy.equipment?.DestroyAllEquipment();
@@ -793,7 +789,7 @@ namespace ATReforged
             {
                 try
                 {
-                    if (hediff.def != RimWorld.HediffDefOf.MissingBodyPart && hediff.def != ATR_HediffDefOf.ATR_MindOperation)
+                    if (hediff.def != HediffDefOf.MissingBodyPart && hediff.def != ATR_HediffDefOf.ATR_MindOperation)
                     {
                         hediff.pawn = copy;
                         copy.health.AddHediff(hediff, hediff.Part);

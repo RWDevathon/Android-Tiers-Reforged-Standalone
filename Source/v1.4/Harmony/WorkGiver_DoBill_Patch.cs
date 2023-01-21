@@ -51,7 +51,7 @@ namespace ATReforged
                 {
                     return;
                 }
-                else if (__instance.def.workType == RimWorld.WorkTypeDefOf.Doctor && thing is Pawn patient && Utils.IsConsideredMechanical(patient))
+                else if (__instance.def.workType == WorkTypeDefOf.Doctor && thing is Pawn patient && Utils.IsConsideredMechanical(patient))
                 {
                     __result = null;
                 }

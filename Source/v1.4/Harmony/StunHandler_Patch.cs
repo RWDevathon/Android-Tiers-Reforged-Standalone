@@ -13,12 +13,13 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(ref bool __result, Thing ___parent)
             {
-                if (___parent is Pawn pawn)
+                // No need to do any checks if it is already true.
+                if (__result)
+                    return;
+
+                if (___parent is Pawn pawn && Utils.IsConsideredMechanical(pawn))
                 {
-                    if (Utils.IsConsideredMechanical(pawn))
-                    {
-                        __result = true;
-                    }
+                    __result = true;
                 }
             }
         }

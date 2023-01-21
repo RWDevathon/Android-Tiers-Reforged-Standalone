@@ -1,4 +1,4 @@
-#	ATR 1.0 Changelog
+#	ATR 1.1 Changelog
 
 ## Medical
 - Mechanical implants, prosthetics, and Hediffs have been completely reworked across the board.
@@ -141,6 +141,7 @@
 - _The TX (Terminator Expansion) submod is currently incompatible. It's on their owner to make them compatible again._
 
 ## Known Issues:
+- Adding ATR mid-save seems to turn underground steel into blueprints for bedside chargers. It will not affect steel deposits discovered after the mod is installed. For this reason, adding this mod mid-save is not recommended - This will be fixed when the next update that is forced to break saves is released, as the only way to avoid this is to change the defName (which would break saves).
 - "Guards for me" guards apply a mood buff to nearby pawns, but drones do not have a mood need at all, so it will throw constant errors for them if a drone happens to be nearby a guard. The mod's functionality still works, but expect significant errors or performance drops if drones are nearby guards. The solution would be for Guards for me to only apply it to pawns with a mood need.
 - "No Random Relations" appears to have an incompatibility surrounding the use of surrogates. The exact source of this issue is unknown at this time.
 - Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.

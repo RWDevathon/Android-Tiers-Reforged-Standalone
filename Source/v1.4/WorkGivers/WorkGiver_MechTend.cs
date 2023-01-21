@@ -9,7 +9,7 @@ namespace ATReforged
     {
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is Pawn target) || !Utils.IsConsideredMechanical(t.def) || pawn.WorkTypeIsDisabled(ATR_WorkTypeDefOf.ATR_Mechanic) || (def.tendToHumanlikesOnly && !target.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !target.RaceProps.Animal) || !GoodLayingStatusForTend(target, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(target) || !pawn.CanReserve(target, 1, -1, null, forced) || (target.InAggroMentalState && !target.health.hediffSet.HasHediff(RimWorld.HediffDefOf.Scaria)))
+            if (!(t is Pawn target) || !Utils.IsConsideredMechanical(t.def) || pawn.WorkTypeIsDisabled(ATR_WorkTypeDefOf.ATR_Mechanic) || (def.tendToHumanlikesOnly && !target.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !target.RaceProps.Animal) || !GoodLayingStatusForTend(target, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(target) || !pawn.CanReserve(target, 1, -1, null, forced) || (target.InAggroMentalState && !target.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
             {
                 return false;
             }

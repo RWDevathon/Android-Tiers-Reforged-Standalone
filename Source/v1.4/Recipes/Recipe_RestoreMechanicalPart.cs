@@ -9,7 +9,12 @@ namespace ATReforged
     {
         // This surgery may be done on any missing, damaged, or defective part. Get the list of them and return it.
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
-        { 
+        {
+            if (!Utils.IsConsideredMechanical(pawn))
+            {
+                yield break;
+            }
+
             IEnumerable<BodyPartRecord> missingParts = GetMissingOrDamagedParts(pawn);
             foreach (BodyPartRecord part in missingParts)
             {
@@ -66,15 +71,20 @@ namespace ATReforged
             {
                 // If the Hediff has injuryProps, it's an injury whose severity matches the amount of lost HP.
                 // If it does not have injuryProps, it's a disease or other condition whose severity is likely between 0 - 1 and should be adjusted to not be insignificant compared to injuries.
-                float severity = hediff.Severity * (hediff.def.injuryProps == null ? 0 : 10);
+                float severity = hediff.Severity * (hediff.def.injuryProps == null ? 10 : 1);
 
                 if (HPLeftToRestoreChildren < severity)
                 {
                     insufficientToCoverSeverity = true;
+                    // On the last possible part fix, give it an extra 10% to get one last part fixed.
+                    if (HPLeftToRestoreChildren * 1.1 >= severity)
+                    {
+                        HPLeftToRestoreChildren -= severity;
+                        pawn.health.RemoveHediff(hediff);
+                    }
                 }
                 else
                 {
-                    Log.Message("[ATR DEBUG] part " + part + " had hediff " + hediff.def.defName + " removed. Remaining HP is " + HPLeftToRestoreChildren);
                     HPLeftToRestoreChildren -= severity;
                     pawn.health.RemoveHediff(hediff);
                 }

@@ -262,13 +262,6 @@
         <stackLimit>10</stackLimit>
         <intricate>true</intricate>
         <tradeNeverStack>true</tradeNeverStack>
-        <statBases>
-            <MarketValue>350</MarketValue>
-            <DeteriorationRate>2.0</DeteriorationRate>
-            <MaxHitPoints>80</MaxHitPoints>
-            <Mass>0.2</Mass>
-            <Flammability>0.2</Flammability>
-        </statBases>
 	    <thingCategories>
             <li>Items</li>
         </thingCategories>
@@ -309,6 +302,17 @@
             <texPath>Things/Items/Manufactured/AndroidResurrectionKit</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <statBases>
+            <MarketValue>300</MarketValue>
+            <DeteriorationRate>2.0</DeteriorationRate>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Mass>0.2</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <tradeability>Sellable</tradeability>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
     </ThingDef>
   
     <RecipeDef>
@@ -356,7 +360,7 @@
                         <li>ComponentSpacer</li>
                     </thingDefs>
                 </filter>
-                <count>6</count>
+                <count>2</count>
             </li>
         </ingredients>
         <products>
@@ -382,6 +386,13 @@
             <texPath>Things/Items/Manufactured/DroneResurrectionKit</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <statBases>
+            <MarketValue>200</MarketValue>
+            <DeteriorationRate>2.0</DeteriorationRate>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Mass>0.2</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
         <tradeability>Sellable</tradeability>
         <thingSetMakerTags>
             <li>RewardSpecial</li>
@@ -401,7 +412,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>60</count>
+                <count>40</count>
             </li>
             <li>
                 <filter>
@@ -426,14 +437,6 @@
                     </thingDefs>
                 </filter>
                 <count>6</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentSpacer</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
             </li>
         </ingredients>
         <products>

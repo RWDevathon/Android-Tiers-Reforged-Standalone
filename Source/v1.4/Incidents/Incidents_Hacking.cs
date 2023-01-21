@@ -81,11 +81,7 @@ namespace ATReforged
 
 
             HashSet<Thing> cryptolockedThings = new HashSet<Thing>();
-            HashSet<Thing> potentialVictims = new HashSet<Thing>(Utils.gameComp.GetSkyMindDevices());
-            foreach (Thing thing in Utils.gameComp.GetSkyMindDevices().Where(thing => thing is Pawn pawn && Utils.IsSurrogate(pawn)))
-            {
-                potentialVictims.Add(thing);
-            }
+            HashSet<Thing> potentialVictims = new HashSet<Thing>(Utils.gameComp.GetSkyMindDevices().Where(thing => !(thing is Pawn pawn) || Utils.IsSurrogate(pawn)));
             int targetDeviceCount = Rand.RangeInclusive(1, potentialVictims.Count);
 
             // Generate message for the hack and adding extra information depending on the attack type.
@@ -122,21 +118,9 @@ namespace ATReforged
                 Utils.gameComp.DisconnectFromSkyMind(victim);
                 victim.TryGetComp<CompSkyMind>().Breached = attackType;
 
-                if (victim is Pawn pawnVictim)
-                { // If the victim is a surrogate, clear any jobs it may have been holding.
-                    pawnVictim.mindState.canFleeIndividual = false;
-                    if (pawnVictim.jobs != null)
-                    {
-                        pawnVictim.jobs.StopAll();
-                        pawnVictim.jobs.ClearQueuedJobs();
-                    }
-                    if (pawnVictim.mindState != null)
-                        pawnVictim.mindState.Reset(true);
-                }
-
                 // Grid-sleeper and Grid-breaker time to repair
                 if (attackType != 2)
-                { // Set to randomly be somewhere in the range 1/2 day to 2 full days.
+                {
                     Utils.gameComp.PushVirusedThing(victim, Find.TickManager.TicksGame + Rand.RangeInclusive(30000, 120000));
                 }
 
@@ -354,7 +338,7 @@ namespace ATReforged
 
             // Try to generate a raid with normal raid points.
             FiringIncident incident = new FiringIncident();
-            incident.def = RimWorld.IncidentDefOf.RaidEnemy;
+            incident.def = IncidentDefOf.RaidEnemy;
             incident.parms = parms;
             // Incident was unable to fire.
             if (!Find.Storyteller.TryFire(incident))

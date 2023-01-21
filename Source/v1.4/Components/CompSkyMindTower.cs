@@ -27,7 +27,7 @@ namespace ATReforged
         { 
             base.PostDeSpawn(map);
             // If the tower has a power supply, then it will remove the tower capacity IF it was not offline to avoid double-reducing the tower capacity. This will not affect pawns so they can go caravanning.
-            CompPowerTrader cpt = parent.TryGetComp<CompPowerTrader>();
+            CompPowerTrader cpt = parent.GetComp<CompPowerTrader>();
             if (cpt != null && cpt.PowerOn)
             { 
                 Utils.gameComp.RemoveTower(this);
@@ -71,7 +71,7 @@ namespace ATReforged
                 return;
 
             // If there is no power supply to this server, it can't be turned on/off normally. Just add it in and handle removing it separately.
-            if (parent.TryGetComp<CompPowerTrader>() == null)
+            if (parent.GetComp<CompPowerTrader>() == null)
             { 
                 Utils.gameComp.AddTower(this);
             }

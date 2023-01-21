@@ -112,7 +112,7 @@ namespace ATReforged
                         }
                         else
                         {
-                            thingDef.statBases.Add(new StatModifier() { stat = RimWorld.StatDefOf.GlobalLearningFactor, value = 0 });
+                            thingDef.statBases.Add(new StatModifier() { stat = StatDefOf.GlobalLearningFactor, value = 0 });
                         }
                     }
                 }
