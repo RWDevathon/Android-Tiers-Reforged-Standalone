@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--Manufactured-->
+<ATR_PartPack.label>制作一个机械组件包</ATR_PartPack.label>
+<ATR_PartPack.description>制作一个机械组件包，可以帮助替换标准部件，从整条腿和手臂到复杂的电池和适配器。 编程过的机械单元改造自身以适应更复杂的任务。</ATR_PartPack.description>
+<ATR_MakeAIPersonaCore.label>制作一个人格核心</ATR_MakeAIPersonaCore.label>
+<ATR_MakeAIPersonaCore.description>制作一个具有感知能力的复杂 AI 核心。</ATR_MakeAIPersonaCore.description>
+<ATR_AndroidResurrectorKit.label>制作一个智能人形复活套件</ATR_AndroidResurrectorKit.label>
+<ATR_AndroidResurrectorKit.description>制作一个专门的工具包，能够将离线机械单元恢复到全部功能。由于恢复已故智能过程的重重困难，重新激活已故单位的代价可能非常昂贵。</ATR_AndroidResurrectorKit.description>
+<ATR_DroneResurrectorKit.label>制作一个无人机复活套件</ATR_DroneResurrectorKit.label>
+<ATR_DroneResurrectorKit.description>制作一套专门的工具，能够让死亡的简单机械无人机起死回生。这些工具足够先进，可以让像动物这样头脑简单的机械单位起死回生。复活的单元必须重新启动才能再次开始运行。</ATR_DroneResurrectorKit.description>
+<ATR_ApplicableKitBase.comps.0.useLabel>使用复活工具</ATR_ApplicableKitBase.comps.0.useLabel>
+
+<!--Stuff-->
+<ATR_Make_ChemfuelFromChemCapsule.label>利用化学胶囊合成化学燃料</ATR_Make_ChemfuelFromChemCapsule.label>
+<ATR_Make_ChemfuelFromChemCapsule.description>通过提炼化学胶囊中的原材料来制造一批化学燃料</ATR_Make_ChemfuelFromChemCapsule.description>
+<ATR_Make_NeutroamineFromChemCapsule.label>利用化学胶囊中合成中性胺</ATR_Make_NeutroamineFromChemCapsule.label>
+<ATR_Make_NeutroamineFromChemCapsule.description>通过提炼化学胶囊中的原材料来制造一批中性胺。</ATR_Make_NeutroamineFromChemCapsule.description>
+
+</LanguageData>

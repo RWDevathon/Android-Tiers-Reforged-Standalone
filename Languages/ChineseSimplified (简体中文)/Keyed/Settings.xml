@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- Miscellaneous Keys -->
+	<ATR_ModTitle>智能人形再造</ATR_ModTitle>
+	<!--EN: Android Tiers Reforged-->
+	
+	<ATR_RestartRequired>需要重新启动</ATR_RestartRequired>
+	<!--EN: Android Tiers Reforged-->
+	<ATR_RestartRequiredSectionDesc>对此部分设置的任何更改都需要重新启动游戏使其生效</ATR_RestartRequiredSectionDesc>
+	<!--EN: Any changes to settings in this section require restarting the game.-->
+	<ATR_RestartRequiredPostDesc>为了安全起见，更改一些设置后需要重新启动游戏</ATR_RestartRequiredPostDesc>
+	<!--EN: Some changed settings require restarting the game for safety.-->
+
+
+    <ATR_ExpandMenu>展开/折叠</ATR_ExpandMenu>
+	<!--EN: Expand/Collapse-->
+	
+	<!-- Mod Settings Page Keys -->
+	<ATR_SettingsTabTitle>配置</ATR_SettingsTabTitle>
+	<!--EN: Configurations-->
+	
+	<ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+	<ATR_SettingsTabOption_General>常规设置</ATR_SettingsTabOption_General>
+	<!--EN: General-->
+	<ATR_SettingsTabOption_Power>电力</ATR_SettingsTabOption_Power>
+	<!--EN: Power-->
+	<ATR_SettingsTabOption_Security>安全性</ATR_SettingsTabOption_Security>
+	<!--EN: Security-->
+	<ATR_SettingsTabOption_Health>健康度</ATR_SettingsTabOption_Health>
+	<!--EN: Health-->
+	<ATR_SettingsTabOption_Connectivity>连接性</ATR_SettingsTabOption_Connectivity>
+	<!--EN: Connectivity-->
+	<ATR_SettingsTabOption_Stats>统计数据</ATR_SettingsTabOption_Stats>
+	<!--EN: Stats-->
+	
+	<!-- General Settings -->
+	<ATR_ApplyPreset>应用预设</ATR_ApplyPreset>
+	<!--EN: Apply Preset-->
+	
+		<!-- Gender Settings -->
+	<ATR_AndroidGenderNotice>更改只会在新的智能人形上生效</ATR_AndroidGenderNotice>
+	<!--EN: Changes only affect NEW androids-->
+	<ATR_AndroidsHaveGenders>智能人形有性别差异</ATR_AndroidsHaveGenders>
+	<!--EN: Androids have genders-->
+	<ATR_AndroidsPickGenders>智能人形在制造时可选择性别</ATR_AndroidsPickGenders>
+	<!--EN: Androids pick gender upon creation-->
+	<ATR_AndroidsFixedGenderSelector>所有的智能人形都是男性或女性</ATR_AndroidsFixedGenderSelector>
+	<!--EN: All androids are male (false) or female (true)-->
+	<ATR_AndroidsGenderRatio>智能人形选择男性或女性的几率</ATR_AndroidsGenderRatio>
+	<!--EN: Chance for android to pick male gender vs female gender-->
+	
+		<!-- Commonality Settings -->
+	<ATR_PlayerOnlyNote>如果禁用，智能人形将只能由玩家使用</ATR_PlayerOnlyNote>
+	<!--EN: If disabled, androids will only exist when built by the player-->
+	<ATR_AndroidsAppearNaturally>智能人形可以存在于一些派系或事件中</ATR_AndroidsAppearNaturally>
+	<!--EN: Androids can appear as parts of factions or events-->
+	
+	<ATR_AndroidFactionSettings>智能人形派系所扮演的角色，只会在新档中生效</ATR_AndroidFactionSettings>
+	<!--EN: What role do android factions play? Only affects NEW games-->
+	<ATR_AndroidSocietiesExist>智能人形有他们自己的派系</ATR_AndroidSocietiesExist>
+	<!--EN: Androids have their own factions-->
+	<ATR_AndroidRaidersExist>智能人形已经组建了他们自己的海盗集团</ATR_AndroidRaidersExist>
+	<!--EN: Androids have formed their own pirate collective-->
+	<ATR_AndroidRaidersDesc>行为将模仿原版拓展模组的海盗派系</ATR_AndroidRaidersDesc>
+	<!--EN: Acts like vanilla's Pirate faction-->
+	<ATR_AndroidUnionistsExist>追求集体生存的智能人形已经实现了联合</ATR_AndroidUnionistsExist>
+	<!--EN: Androids dedicated to collective survival have unified-->
+	<ATR_AndroidUnionistsDesc>行为将模仿原版拓展模组的外来者派系</ATR_AndroidUnionistsDesc>
+	<!--EN: Acts like vanilla's Outlander faction-->
+	
+	<!-- Needs Settings -->
+	<ATR_AndroidOnlyNotice>注意：只有标记为智能人形的单位会受此影响，无人机则不会</ATR_AndroidOnlyNotice>
+	<!--EN: Note: Only units marked as androids are affected by this. Drones have no such needs.-->
+	<ATR_AndroidsNeedJoy>智能人形有娱乐的需求</ATR_AndroidsNeedJoy>
+	<!--EN: Androids need to fulfill joy needs-->
+	<ATR_AndroidsNeedBeauty>智能人形有美观度的需求</ATR_AndroidsNeedBeauty>
+	<!--EN: Androids need to fulfill beauty needs-->
+	<ATR_AndroidsNeedComfort>智能人形有舒适度的需求</ATR_AndroidsNeedComfort>
+	<!--EN: Androids need to fulfill comfort needs-->
+	<ATR_AndroidsNeedOutdoors>智能人形有室内/室外的需求</ATR_AndroidsNeedOutdoors>
+	<!--EN: Androids need to fulfill outdoors/indoors needs-->
+	
+	<ATR_SettingsPresetDefault>默认</ATR_SettingsPresetDefault>
+	<!--EN: Default-->
+	<ATR_SettingsPresetCustom>传统</ATR_SettingsPresetCustom>
+	<!--EN: Custom-->
+	
+	<ATR_SettingsConsideredAndroid>智能人形</ATR_SettingsConsideredAndroid>
+	<!--EN: Androids-->
+	<ATR_SettingsNotConsideredAndroid>非智能人形</ATR_SettingsNotConsideredAndroid>
+	<!--EN: Not Androids-->
+	<ATR_SettingsConsideredDrone>无人机</ATR_SettingsConsideredDrone>
+	<!--EN: Drones-->
+	<ATR_SettingsNotConsideredDrone>非无人机</ATR_SettingsNotConsideredDrone>
+	<!--EN: Not Drones-->
+	<ATR_SettingsConsideredAnimal>机械动物</ATR_SettingsConsideredAnimal>
+	<!--EN: Mechanical Animals-->
+	<ATR_SettingsNotConsideredAnimals>有机动物</ATR_SettingsNotConsideredAnimals>
+	<!--EN: Organic Animals-->
+	
+	<!-- Power Settings -->
+	<ATR_wattsConsumedPerBodySize>充电时每个机体的电量消耗</ATR_wattsConsumedPerBodySize>
+	<!--EN: Power use per 1 body size when charging [default: 500]-->
+	<ATR_batteryPercentagePerRareTick>每一个tick的电池充电百分比[大约四秒]</ATR_batteryPercentagePerRareTick>
+	<!--EN: Percentage of battery charged per Rare Tick (~4 seconds) [default: 7%]-->
+	<ATR_batteryPercentagePerTick>电池充电速率</ATR_batteryPercentagePerTick>
+	<!--EN: Battery charge rate [default: 1]-->
+	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>机械单位对营养的处理方式与有机体不同</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+	<!--EN: Mechanical units handle nutrition differently than organics.-->
+	<ATR_mechanicalBioprocessingEfficiency>营养吸收效率</ATR_mechanicalBioprocessingEfficiency>
+	<!--EN: Nutrition efficiency [default: 50%]-->
+	
+	<!-- Security Settings -->
+        <!-- Hostile Hacking -->
+	<ATR_EnemyHacksOccur>启用敌对黑客入侵</ATR_EnemyHacksOccur>
+	<!--EN: Hostile hacking is enabled.-->
+	<ATR_ChanceAlliesInterceptHack>每个与你结盟的派系拦截针对你的黑客入侵的几率</ATR_ChanceAlliesInterceptHack>
+	<!--EN: Chance to intercept hacks against you per allied faction-->
+	<ATR_ChanceAlliesInterceptHackDesc>已结盟派系对你被敌对黑客的一次入侵提供援助的百分比概率，他们可以让你预防损害的发生并为你提供防卫点数，此处仅指单个盟友</ATR_ChanceAlliesInterceptHackDesc>
+	<!--EN: Percent chance that allied factions will save you from a successful enemy hack, preventing damage and actually giving you security points. This is PER ALLY.-->
+	<ATR_PointsGainedOnInterceptPercentage>盟友拦截攻击后提供的防卫点数</ATR_PointsGainedOnInterceptPercentage>
+	<!--EN: Points gained when allies intercept as percentage of attack-->
+	<ATR_PointsGainedOnInterceptPercentageDesc>当盟友成功拦截针对你的入侵后，他们会向你提供防卫点数，这一条控制他们给你点数的概率</ATR_PointsGainedOnInterceptPercentageDesc>
+	<!--EN: When an ally intercepts an attack against you, they donate security points to you. This controls what percentage of the raid points they give you.-->
+	<ATR_EnemyHackAttackStrengthModifier>敌人入侵强度修正</ATR_EnemyHackAttackStrengthModifier>
+	<!--EN: Enemy hack strength modifier-->
+	<ATR_EnemyHackAttackStrengthModifierDesc>敌对黑客事件拥有的入侵点数的乘法修正，小于100%会降低强度</ATR_EnemyHackAttackStrengthModifierDesc>
+	<!--EN: Multiplicative modifier on how many hacking points enemy hacking incidents will have. Less than 100% reduces intensity, greater than 100% raises intensity.-->
+	<ATR_PercentageOfValueUsedForRansoms>有赎金要求的入侵中索要价值的百分比</ATR_PercentageOfValueUsedForRansoms>
+	<!--EN: Percentage of item value demanded in ransom attack-->
+	
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>玩家可使用入侵</ATR_PlayerCanHack>
+	<!--EN: Player hacking is enabled.-->
+    <ATR_receiveFullHackingAlert>入侵点数超过90%时进行提醒</ATR_receiveFullHackingAlert>
+	<!--EN: Alert for hacking points exceeding 90% of capacity.-->
+    <ATR_RetaliationChanceOnFailure>目标派系对失败的入侵行为进行报复的概率</ATR_RetaliationChanceOnFailure>
+	<!--EN: Chance the target faction will retaliate on a failed hack-->
+    <ATR_MinHackSuccessChance>成功入侵的概率下限</ATR_MinHackSuccessChance>
+	<!--EN: Minimum chance of a successful hack-->
+    <ATR_MaxHackSuccessChance>成功入侵的概率上限</ATR_MaxHackSuccessChance>
+	<!--EN: Maximum chance of a successful hack-->
+
+    <!-- Health Settings -->
+        <!-- Medical -->
+    <ATR_medicinesAreInterchangeable>有机/机械药物可以交叉使用</ATR_medicinesAreInterchangeable>
+	<!--EN: Organic/Mechanical medicines are interchangeable.-->
+    <ATR_showMechanicalSurgerySuccessChance>展示完成机械体手术的成功概率</ATR_showMechanicalSurgerySuccessChance>
+	<!--EN: Display success chance of completed mechanical surgeries.-->
+    <ATR_maxChanceMechanicOperationSuccess>机械体手术的最大成功概率</ATR_maxChanceMechanicOperationSuccess>
+	<!--EN: Max success change for mechanical surgeries-->
+    <ATR_chanceFailedOperationMinor>机械体手术失败率降低的程度</ATR_chanceFailedOperationMinor>
+	<!--EN: Chance failed mechanical surgeries are minor [default 75%]-->
+    <ATR_chancePartSavedOnFailure>从失败的机械体手术中回收到零件的概率</ATR_chancePartSavedOnFailure>
+	<!--EN: Chance that parts are returned from failed mechanical surgeries [default 75%]-->
+
+        <!-- Maintenance -->
+	<ATR_maintenanceNeedExists>机械单元需要进行维护</ATR_maintenanceNeedExists>
+	<!--EN: Mechanical units need maintenance.-->
+    <ATR_receiveMaintenanceFailureLetters>接收有关维护健康问题的消息</ATR_receiveMaintenanceFailureLetters>
+	<!--EN: Receive letters about maintenance-related health issues.-->
+	<ATR_maintenancePartFailureRateFactor>维护不当到出现运行异常之间的缓冲时间</ATR_maintenancePartFailureRateFactor>
+	<!--EN: How long before poor maintenance can result in part failures and the odds that no failure occurs-->
+    <ATR_maintenanceFallRateFactor>维护水平自然降低的速率</ATR_maintenanceFallRateFactor>
+    <!--EN: How quickly maintenance falls naturally-->
+	<ATR_maintenanceGainRateFactor>进行维护时维护水平增长的速率</ATR_maintenanceGainRateFactor>
+    <!--EN: How quickly maintenance is gained when doing maintenance-->
+
+    
+	<!-- Connectivity Settings -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>允许代理人形</ATR_surrogatesAllowed>
+	<!--EN: Surrogates are permitted.-->
+    <ATR_otherFactionsAllowedSurrogates>其他派系可能会使用代理人形</ATR_otherFactionsAllowedSurrogates>
+	<!--EN: Other factions may use surrogates.-->
+    <ATR_minGroupSizeForSurrogates>派系团体产生代理人形的数量</ATR_minGroupSizeForSurrogates>
+	<!--EN: Number of members for faction groups to spawn with surrogates-->
+    <ATR_minSurrogatePercentagePerLegalGroup>友好团体中代理人数量的最低百分比</ATR_minSurrogatePercentagePerLegalGroup>
+	<!--EN: Minimum percentage of surrogates in legal groups [default 20%]-->
+    <ATR_maxSurrogatePercentagePerLegalGroup>友好团体中代理人数量的最高百分比</ATR_maxSurrogatePercentagePerLegalGroup>
+	<!--EN: Maximum percentage of surrogates in legal groups [default 70%]-->
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>每个控制者的代理人数上限（超过限制会有惩罚）：</ATR_safeSurrogateConnectivityCountBeforePenalty>
+	<!--EN: Surrogates per controller before penalties:-->
+
+        <!-- Skills -->
+    <ATR_receiveFullSkillAlert>技能点数超过容量的90%时进行提醒</ATR_receiveFullSkillAlert>
+	<!--EN: Alert for skill points exceeding 90% of capacity.-->
+	<ATR_skillPointConversionRate>每个技能点数产生的基础经验点数</ATR_skillPointConversionRate>
+	<!--EN: Amount of base XP generated per skill point [default: 0.5]-->
+	<ATR_passionSoftCap>在成本增加之前的兴趣软上限</ATR_passionSoftCap>
+	<!--EN: Passion soft-cap before cost increases per passion [default: 8]-->
+	<ATR_basePointsNeededForPassion>每个兴趣增长所需的基本技能点数</ATR_basePointsNeededForPassion>
+	<!--EN: Base skill points needed per passion [default: 5000]-->
+
+        <!-- Cloud -->
+    <ATR_UploadingKills>上传到天云网络会让上传者的身体成为代理人形</ATR_UploadingKills>
+	<!--EN: Uploading to SkyMind turns the initiator's body into a blank.-->
+    <ATR_UploadingPermakills>上传天云网络会让上传者的身体完全无用和死亡</ATR_UploadingPermakills>
+	<!--EN: Uploading to SkyMind leaves the initiator's body completely useless and dead.-->
+    <ATR_SkyMindOperationTimeRequired>完成天云网络上传操作所需要的小时数</ATR_SkyMindOperationTimeRequired>
+	<!--EN: Hours required to complete SkyMind operations [default: 24]-->
+
+</LanguageData>

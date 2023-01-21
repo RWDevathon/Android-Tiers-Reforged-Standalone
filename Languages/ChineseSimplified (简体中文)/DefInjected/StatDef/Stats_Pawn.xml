@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MaintenanceRetention.label>维护水平维持效率</ATR_MaintenanceRetention.label>
+<ATR_MaintenanceRetention.description>随着时间的推移，该机械单元保持其维护水平的程度。 该统计数据会影响单元的维护降低速度，该指标主要受冷却剂过滤和冷却泵的影响。</ATR_MaintenanceRetention.description>
+<ATR_MechanicalSurgerySuccessChance.label>机械手术成功几率</ATR_MechanicalSurgerySuccessChance.label>
+<ATR_MechanicalSurgerySuccessChance.description>在机器人上执行操作时角色成功的基本概率。 实际成功率还受到设施、房间清洁度、所用药物、手术难度、灵感等因素的影响。 无论成功几率多高，任何操作失败的几率总是很小的。</ATR_MechanicalSurgerySuccessChance.description>
+<ATR_MechanicalOperationSpeed.label>机械手术速度</ATR_MechanicalOperationSpeed.label>
+<ATR_MechanicalOperationSpeed.description>机械师进行手术的速度</ATR_MechanicalOperationSpeed.description>
+<ATR_MechanicalTendQuality.label>机械体倾向质量</ATR_MechanicalTendQuality.label>
+<ATR_MechanicalTendQuality.description>修复机械体完整性损坏时给予的基础品质。\n\n实际品质也会受到使用的药物、设施、运气等因素的影响。</ATR_MechanicalTendQuality.description>
+<ATR_MechanicalTendSpeed.label>机械体倾向速度</ATR_MechanicalTendSpeed.label>
+<ATR_MechanicalTendSpeed.description>机械体趋于完整性损坏的速度。</ATR_MechanicalTendSpeed.description>
+</LanguageData>

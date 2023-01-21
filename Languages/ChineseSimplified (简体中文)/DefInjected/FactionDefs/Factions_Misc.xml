@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_PlayerAndroidFaction.label>外来智能人形</ATR_PlayerAndroidFaction.label>
+<ATR_PlayerAndroidFaction.description>你的智能人形殖民地</ATR_PlayerAndroidFaction.description>
+
+<ATR_MechanicalMarauders.label>机械掠夺者</ATR_MechanicalMarauders.label>
+<ATR_MechanicalMarauders.description>许多机械单位被人类社会抛弃、流放或逃离奴隶身份后，他们加入了一群恶毒的强盗。 出于对掠夺和侵略他人的热爱，这些掠夺者会选择恐吓他人而不是内部交战。\n\n这些机器人并不想外交，暴力是他们唯一的语言 。</ATR_MechanicalMarauders.description>
+<ATR_MechanicalMarauders.leaderTitle>掠夺者族长</ATR_MechanicalMarauders.leaderTitle>
+
+<ATR_AndroidUnion.label>智能联盟</ATR_AndroidUnion.label>
+<ATR_AndroidUnion.description>由于环世界中严重缺乏监管制度，这为智能人形社会的诞生提供了一个良好的环境。这些机器人选择组建一个半独立城市联盟，以实现共同防御与繁荣。他们通常愿意接受贸易和合作，他们只希望和平相处。 \n\n这个派系通常会出售一些高科技产品和基本的批发货物。</ATR_AndroidUnion.description>
+<ATR_AndroidUnion.leaderTitle>联盟领袖</ATR_AndroidUnion.leaderTitle>
+
+</LanguageData>

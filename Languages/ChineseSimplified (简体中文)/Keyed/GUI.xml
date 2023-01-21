@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Needs -->
+	
+	<ATR_EnergyNeed>电力</ATR_EnergyNeed>
+	<!--EN: Energy-->
+	<ATR_EnergyNeedDesc>电力是单位中存储的电量。如果它为零，该单位将进入低效的节能模式。如果不恢复充电，硬件最终将出现严重故障，单位将停止运行。</ATR_EnergyNeedDesc>
+	<!--EN: Energy is the amount of retained charge in the unit. If it is hits zero, the unit will enter an inefficient low-power mode. If charge is not restored, hardware will eventually critically malfunction, and the unit will cease functioning.-->
+	
+    <!-- Ritual Permissions -->
+    <ATR_DronesCannotSpectate>无人机无法参与仪式活动。</ATR_DronesCannotSpectate>
+	<!--EN: Drones can not spectate rituals.-->
+
+    <!-- Prisoner Tab -->
+    <ATR_PrisonerDroneWarning>无法与无人机互动。使用手术进行重新编程（需要研究T1人形制造）或关机。</ATR_PrisonerDroneWarning>
+	<!--EN: Drones can not be interacted with. Use surgeries to reprogram (T1 Research required) or shut down.-->
+    <ATR_SlaveDroneAlert>无人机不应该是奴隶！接下来的每个tick你都会遇到一个错误。请立即重新编程或者干掉这架无人机。</ATR_SlaveDroneAlert>
+	<!--EN: Drones should not be slaves! You are suffering a free error each tick. Immediately reprogram or eliminate this drone.-->
+
+</LanguageData>

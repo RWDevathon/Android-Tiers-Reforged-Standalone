@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_AndroidT2CollectiveTrader.label>T2 人形商人</ATR_AndroidT2CollectiveTrader.label>
+<ATR_AndroidT2CollectiveTrader.labelPlural>联盟商队</ATR_AndroidT2CollectiveTrader.labelPlural>
+<ATR_AndroidT1CollectiveSoldier.label>T1 人形战士</ATR_AndroidT1CollectiveSoldier.label>
+<ATR_AndroidT1CollectiveSoldier.labelPlural>T1 战斗小组</ATR_AndroidT1CollectiveSoldier.labelPlural>
+<ATR_AndroidT2CollectiveSoldier.label>T2 人形士兵</ATR_AndroidT2CollectiveSoldier.label>
+<ATR_AndroidT2CollectiveSoldier.labelPlural>T2 战斗小组</ATR_AndroidT2CollectiveSoldier.labelPlural>
+<ATR_AndroidT3CollectiveSoldier.label>T3 人形士兵</ATR_AndroidT3CollectiveSoldier.label>
+<ATR_AndroidT3CollectiveSoldier.labelPlural>联盟战士</ATR_AndroidT3CollectiveSoldier.labelPlural>
+<ATR_AndroidT4CollectiveSoldier.label>T4 人形士兵</ATR_AndroidT4CollectiveSoldier.label>
+<ATR_AndroidT4CollectiveSoldier.labelPlural>特殊小组</ATR_AndroidT4CollectiveSoldier.labelPlural>
+<ATR_AndroidT4CollectiveLeader.label>人形领袖</ATR_AndroidT4CollectiveLeader.label>
+<ATR_AndroidT4CollectiveLeader.labelPlural>联盟代表团</ATR_AndroidT4CollectiveLeader.labelPlural>
+</LanguageData>

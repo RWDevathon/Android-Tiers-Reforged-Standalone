@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--Manufactured-->
+<ATR_PartPack.label>机械组件包</ATR_PartPack.label>
+<ATR_PartPack.description>这个半组装的组件包旨在帮助替换标准部件，从整条腿和手臂到复杂的电池和适配器。 编程后的机械单元会进行自我改造以适应更复杂的任务。</ATR_PartPack.description>
+<ATR_RepairStimSimple.label>简易修复套装</ATR_RepairStimSimple.label>
+<ATR_RepairStimSimple.description>一个小型、组装简单的工业组件套装，通常用于辅助和刺激机械体进行修复的工具。 该工具包缺少一些对更严重的伤害或手术有帮助的组件，这使它更适合战场应急救援而不是专业救治。</ATR_RepairStimSimple.description>
+<ATR_RepairStimIntermediate.label>中等修复套装</ATR_RepairStimIntermediate.label>
+<ATR_RepairStimIntermediate.description>一套由工业部件、机械装置和工具组成的组装套装，用于辅助和刺激机械体进行修复。 像这样的修复套件是任何追求质量的机械师的核心工具。 它非常适合各种任务，功能强大且实用。</ATR_RepairStimIntermediate.description>
+<ATR_RepairStimAdvanced.label>高级修复套装</ATR_RepairStimAdvanced.label>
+<ATR_RepairStimAdvanced.description>一系列高科技机械和工具，用于辅助和刺激机械体进行修复。 在闪耀世界之外相对不常见，这样的工具包也受到了机械师和任何有自尊心的机器人的高度评价。 这样先进的套件可以让即使是最差的机械师看起来也很能干。</ATR_RepairStimAdvanced.description>
+<ATR_ApplicableKitBase.comps.0.useLabel>使用复活工具</ATR_ApplicableKitBase.comps.0.useLabel>
+<ATR_AndroidResurrectorKit.label>智能人形复活套件</ATR_AndroidResurrectorKit.label>
+<ATR_AndroidResurrectorKit.description>一套专门的工具，能够使损坏的机械装置起死回生。 这些工具足够先进，可以使任何此类单元恢复正常功能。 恢复的单元必须完全重新启动才能再次开始运行。</ATR_AndroidResurrectorKit.description>
+<ATR_DroneResurrectorKit.label>无人机复活套件</ATR_DroneResurrectorKit.label>
+<ATR_DroneResurrectorKit.description>一套专门的工具，能够让死亡的简单机械无人机起死回生。 这些工具足够先进，可以让像动物这样头脑简单的机械单位起死回生。 恢复的单元必须重新启动才能再次开始运行。</ATR_DroneResurrectorKit.description>
+
+<!--Shell-->
+<ATR_MicroscytherShell.label>蜂群弹头</ATR_MicroscytherShell.label>
+<ATR_MicroscytherShell.description>一种特殊弹头，包含数个预先编程的微型镰刀机器人，它们将在撞击时释放并攻击附近的所有目标。</ATR_MicroscytherShell.description>
+<ATR_MicroscytherShell_round.label>蜂群弹头</ATR_MicroscytherShell_round.label>
+
+<!--Stuff-->
+<ATR_ChemCapsule.label>化学胶囊</ATR_ChemCapsule.label>
+<ATR_ChemCapsule.description>一个小而致密的胶囊，里面装满了合成前体化学品，可以加工成中性胺或化学燃料。</ATR_ChemCapsule.description>
+<ATR_NutrientSolution.label>营养液</ATR_NutrientSolution.label>
+<ATR_NutrientSolution.description>一种浓稠、营养丰富的溶液，尝起来有点像牛奶，而且保质期极长。</ATR_NutrientSolution.description>
+
+</LanguageData>

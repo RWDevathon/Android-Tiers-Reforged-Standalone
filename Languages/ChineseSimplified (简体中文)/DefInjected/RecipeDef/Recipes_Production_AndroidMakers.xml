@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_CreateT1Android.label>制造 T1 智能人形</ATR_CreateT1Android.label>
+<ATR_CreateT1Android.description>利用玻璃钢和零部件创建一个空白的 T1 智能人形。</ATR_CreateT1Android.description>
+<ATR_CreateT2Android.label>制造 T2 智能人形</ATR_CreateT2Android.label>
+<ATR_CreateT2Android.description>利用玻璃钢、黄金和零部件创建一个空白的 T2 智能人形。</ATR_CreateT2Android.description>
+<ATR_CreateT3Android.label>制造 T3 智能人形</ATR_CreateT3Android.label>
+<ATR_CreateT3Android.description>利用玻璃钢、黄金和先进零部件创建一个空白的 T3 智能人形。</ATR_CreateT3Android.description>
+<ATR_CreateT4Android.label>制造 T4 智能人形</ATR_CreateT4Android.label>
+<ATR_CreateT4Android.description>利用玻璃钢、黄金和先进零部件创建一个空白的 T4 智能人形。</ATR_CreateT4Android.description>
+<ATR_CreateM1Warrior.label>制造 M1 战斗单元</ATR_CreateM1Warrior.label>
+<ATR_CreateM1Warrior.description>利用玻璃钢和零部件创建一个空白的 M1 战斗单元</ATR_CreateM1Warrior.description>
+<ATR_CreateWatchdog.label>制造犬类单元</ATR_CreateWatchdog.label>
+<ATR_CreateWatchdog.description>创建一个犬类单元，一个将杀伤力、智慧和友善完美结合的可陪伴的模拟机械狼。</ATR_CreateWatchdog.description>
+<ATR_CreateTORT.label>制造玄武单元</ATR_CreateTORT.label>
+<ATR_CreateTORT.description>为所有搬运和运输需求创建一个玄武单元。</ATR_CreateTORT.description>
+<ATR_CreateMineralUnit.label>制造矿物单位</ATR_CreateMineralUnit.label>
+<ATR_CreateMineralUnit.description>制造无人机矿物装置，这是一种简单的实用机器，可以大量消耗有机物来合成钢铁。</ATR_CreateMineralUnit.description>
+<ATR_CreateNutritionUnit.label>制造营养单位</ATR_CreateNutritionUnit.label>
+<ATR_CreateNutritionUnit.description>创造一个简单的机械装置，可以通过消耗有机物来合成一种营养价值极高的长效牛奶状食品。</ATR_CreateNutritionUnit.description>
+<ATR_CreateChemUnit.label>制造化学处理单元</ATR_CreateChemUnit.label>
+<ATR_CreateChemUnit.description>创建一个简单的机械装置，该装置消耗有机物以生产可加工成化学燃料或中性胺的合成化学胶囊。</ATR_CreateChemUnit.description>
+
+</LanguageData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechanicTendEmergency.label>修复有紧急需求的伤员</ATR_MechanicTendEmergency.label>
+<ATR_MechanicTendToHumanlikes.label>救治患者</ATR_MechanicTendToHumanlikes.label>
+<ATR_MechanicTendToSelf.label>自我修复</ATR_MechanicTendToSelf.label>
+<ATR_DoBillsMechanicalOperation.label>对人类进行手术</ATR_DoBillsMechanicalOperation.label>
+<ATR_MechanicRescue.label>营救倒下的盟友到床上</ATR_MechanicRescue.label>
+<ATR_MechanicTendToAnimals.label>修理动物</ATR_MechanicTendToAnimals.label>
+<ATR_DoBillsMechanicalAnimalOperation.label>对动物进行手术</ATR_DoBillsMechanicalAnimalOperation.label>
+<ATR_TakeMechanicalToBedToOperate.label>带患者上床做手术</ATR_TakeMechanicalToBedToOperate.label>
+<ATR_GenerateInsight.label>生成天云网络技能点</ATR_GenerateInsight.label>
+</LanguageData>

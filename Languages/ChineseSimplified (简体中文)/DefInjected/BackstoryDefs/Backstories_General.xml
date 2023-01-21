@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_MechAdulthoodGlitterworldCleaner.title>闪耀世界清洁工</ATR_MechAdulthoodGlitterworldCleaner.title>
+<ATR_MechAdulthoodGlitterworldCleaner.titleShort>清洁工</ATR_MechAdulthoodGlitterworldCleaner.titleShort>
+<ATR_MechAdulthoodGlitterworldCleaner.baseDesc>{PAWN_nameDef} 曾是一个闪耀世界星球上的一个清洁机器人， {PAWN_pronoun} 从来没有被分配过任何太复杂的工作。</ATR_MechAdulthoodGlitterworldCleaner.baseDesc>
+
+<ATR_MechAdulthoodShocktrooper.title>突击队员</ATR_MechAdulthoodShocktrooper.title>
+<ATR_MechAdulthoodShocktrooper.titleShort>突击队员</ATR_MechAdulthoodShocktrooper.titleShort>
+<ATR_MechAdulthoodShocktrooper.baseDesc>{PAWN_nameDef} 曾经是专家制造的突击部队智能人形兵营的一部分，被编程为以冷酷无情的效率进行杀戮，同时保留了自我意志。</ATR_MechAdulthoodShocktrooper.baseDesc>
+
+<ATR_MechAdulthoodSecretService.title>特务</ATR_MechAdulthoodSecretService.title>
+<ATR_MechAdulthoodSecretService.titleShort>特务</ATR_MechAdulthoodSecretService.titleShort>
+<ATR_MechAdulthoodSecretService.baseDesc>{PAWN_nameDef} 被买来专门用于保护独裁者、王室成员和内阁成员等高级官员。它们接收了广泛的训练，可以在需要时迅速对战斗做出反应，并进行现场医疗护理。</ATR_MechAdulthoodSecretService.baseDesc>
+
+<ATR_MechAdulthoodCoPilot.title>航天器飞行员</ATR_MechAdulthoodCoPilot.title>
+<ATR_MechAdulthoodCoPilot.titleShort>飞行员</ATR_MechAdulthoodCoPilot.titleShort>
+<ATR_MechAdulthoodCoPilot.baseDesc>为了在轨道作战中帮助人类飞行员， {PAWN_nameDef} 被买来当作军用机器人的一部分，担任飞行器的机械副驾驶。{PAWN_pronoun} 接受过专业的训练，可以准确地向敌方发射机载大炮。</ATR_MechAdulthoodCoPilot.baseDesc>
+
+<ATR_MechAdulthoodShipCommander.title>星舰指挥官</ATR_MechAdulthoodShipCommander.title>
+<ATR_MechAdulthoodShipCommander.titleShort>指挥官</ATR_MechAdulthoodShipCommander.titleShort>
+<ATR_MechAdulthoodShipCommander.baseDesc>{PAWN_nameDef} 是一艘殖民星舰的三名指挥官之一，这个岗位几乎不会安排给机器人。 {PAWN_pronoun} 将会监视飞船的所有功能，并且在其他船员进入休眠状态时保持清醒。</ATR_MechAdulthoodShipCommander.baseDesc>
+
+<ATR_MechAdulthoodRiotPolice.title>防暴队长</ATR_MechAdulthoodRiotPolice.title>
+<ATR_MechAdulthoodRiotPolice.titleShort>队长</ATR_MechAdulthoodRiotPolice.titleShort>
+<ATR_MechAdulthoodRiotPolice.baseDesc>作为一个独特的执法人员的一部分， {PAWN_nameDef} 搭载了沉重的结构，他的任务是通过采取任何的必要手段来控制蔓延失控的骚乱。</ATR_MechAdulthoodRiotPolice.baseDesc>
+
+<ATR_MechAdulthoodMercenaryBodyguard.title>贴身保镖</ATR_MechAdulthoodMercenaryBodyguard.title>
+<ATR_MechAdulthoodMercenaryBodyguard.titleShort>保镖</ATR_MechAdulthoodMercenaryBodyguard.titleShort>
+<ATR_MechAdulthoodMercenaryBodyguard.baseDesc>作为受雇用的智能人形保镖， {PAWN_nameDef} 曾和各种类型的客户合作过，从都市世界的企业家到低级犯罪头目。 {PAWN_pronoun} 是为了不惜一切代价保护他们而专门建造的。</ATR_MechAdulthoodMercenaryBodyguard.baseDesc>
+
+<ATR_MechAdulthoodInjuredSoldier.title>残疾士兵</ATR_MechAdulthoodInjuredSoldier.title>
+<ATR_MechAdulthoodInjuredSoldier.titleShort>士兵</ATR_MechAdulthoodInjuredSoldier.titleShort>
+<ATR_MechAdulthoodInjuredSoldier.baseDesc>{PAWN_nameDef} 曾经是训练有毒的机器人士兵中队的一员，只会被派去执行最危险的任务。最后的一次任务以炮火地毯式轰炸而结束，几乎全队丧命， {PAWN_nameDef} 是其中逃跑的少数幸存者之一。</ATR_MechAdulthoodInjuredSoldier.baseDesc>
+
+<ATR_MechAdulthoodGourmetChef.title>金牌大厨</ATR_MechAdulthoodGourmetChef.title>
+<ATR_MechAdulthoodGourmetChef.titleShort>大厨</ATR_MechAdulthoodGourmetChef.titleShort>
+<ATR_MechAdulthoodGourmetChef.baseDesc>{PAWN_nameDef} 在他的家乡星球以美食而远近闻名，服务于各行各业的高端客户，他的每道菜都在逻辑和美学上实现了完美的平衡。</ATR_MechAdulthoodGourmetChef.baseDesc>
+
+<ATR_MechAdulthoodCafeteriaCook.title>都市世界厨师</ATR_MechAdulthoodCafeteriaCook.title>
+<ATR_MechAdulthoodCafeteriaCook.titleShort>厨师</ATR_MechAdulthoodCafeteriaCook.titleShort>
+<ATR_MechAdulthoodCafeteriaCook.baseDesc>{PAWN_nameDef} 是著名的都市世界食品站的所有者。他被当地人称为“螺栓” {PAWN_pronoun} 专门制作便宜、简单的饭菜，吃起来不至于难以下肚。</ATR_MechAdulthoodCafeteriaCook.baseDesc>
+
+<ATR_MechAdulthoodBartender.title>酒保</ATR_MechAdulthoodBartender.title>
+<ATR_MechAdulthoodBartender.titleShort>酒保</ATR_MechAdulthoodBartender.titleShort>
+<ATR_MechAdulthoodBartender.baseDesc>{PAWN_nameDef}在酒吧工作了很长时间了，会通宵为客户提供食物和饮料，但是他会偶尔打架。</ATR_MechAdulthoodBartender.baseDesc>
+
+<ATR_MechAdulthoodPrisonCook.title>狱中厨师</ATR_MechAdulthoodPrisonCook.title>
+<ATR_MechAdulthoodPrisonCook.titleShort>厨师</ATR_MechAdulthoodPrisonCook.titleShort>
+<ATR_MechAdulthoodPrisonCook.baseDesc>{PAWN_nameDef} 在一个半自动化监狱站工作，负责制作大量劣质食品。虽然食物很恶心，但是制作效率非常高，而且非常便宜。（译者吐槽：这很环世界）</ATR_MechAdulthoodPrisonCook.baseDesc>
+
+<ATR_MechAdulthoodServantPet.title>从属机</ATR_MechAdulthoodServantPet.title>
+<ATR_MechAdulthoodServantPet.titleShort>从属机</ATR_MechAdulthoodServantPet.titleShort>
+<ATR_MechAdulthoodServantPet.baseDesc>{PAWN_nameDef}被一个富足的家庭买下，毫无疑问地被用来进行娱乐和在房子周围做一些基本的杂务。 {PAWN_possessive} 的主人只把 {PAWN_objective} 当成一只宠物。</ATR_MechAdulthoodServantPet.baseDesc>
+
+<ATR_MechAdulthoodSpaceMiner.title>太空矿工</ATR_MechAdulthoodSpaceMiner.title>
+<ATR_MechAdulthoodSpaceMiner.titleShort>矿工</ATR_MechAdulthoodSpaceMiner.titleShort>
+<ATR_MechAdulthoodSpaceMiner.baseDesc>{PAWN_nameDef} 在一个高风险的小行星采矿公司工作。{PAWN_pronoun} 更喜欢处理危险任务和太空行走，因此 {PAWN_possessive} 的人类船员便不必做此工作。 {PAWN_nameDef} 因为能最大限度地降低工作事故而很勉强地赢得了公司的尊重。</ATR_MechAdulthoodSpaceMiner.baseDesc>
+
+<ATR_MechAdulthoodTunnelMiner.title>隧道工</ATR_MechAdulthoodTunnelMiner.title>
+<ATR_MechAdulthoodTunnelMiner.titleShort>隧道工</ATR_MechAdulthoodTunnelMiner.titleShort>
+<ATR_MechAdulthoodTunnelMiner.baseDesc>{PAWN_nameDef} 作为承包商帮助穴居人开发大型地下隧道。 {PAWN_nameDef} 非常乐于构建强大的防塌陷网络。</ATR_MechAdulthoodTunnelMiner.baseDesc>
+
+<ATR_MechAdulthoodProspector.title>陆地勘探者</ATR_MechAdulthoodProspector.title>
+<ATR_MechAdulthoodProspector.titleShort>勘探者</ATR_MechAdulthoodProspector.titleShort>
+<ATR_MechAdulthoodProspector.baseDesc>作为机械探矿者的一部分，{PAWN_nameDef} 从一个行星被派往到另一个行星，为企业和平民客户进行星球地质分析。</ATR_MechAdulthoodProspector.baseDesc>
+
+<ATR_MechAdulthoodShipyardEngineer.title>在轨工程师</ATR_MechAdulthoodShipyardEngineer.title>
+<ATR_MechAdulthoodShipyardEngineer.titleShort>工程师</ATR_MechAdulthoodShipyardEngineer.titleShort>
+<ATR_MechAdulthoodShipyardEngineer.baseDesc>{PAWN_nameDef} 在一个纯机械的轨道造船厂工作，他参与了从小型拦截器到庞大的舰队旗舰等各种船只的建造工作。</ATR_MechAdulthoodShipyardEngineer.baseDesc>
+
+<ATR_MechAdulthoodUrbworldArchitect.title>机械建筑师</ATR_MechAdulthoodUrbworldArchitect.title>
+<ATR_MechAdulthoodUrbworldArchitect.titleShort>建筑师</ATR_MechAdulthoodUrbworldArchitect.titleShort>
+<ATR_MechAdulthoodUrbworldArchitect.baseDesc>{PAWN_nameDef} 是一位建筑师，为他们的都市世界设计过大规模住房解决方案的蓝图。 {PAWN_pronoun} 绘制的蓝图冰冷、毫无生机且是存粹功能性的，但不可否认它们对于解决数十亿人的住房问题是十分有效的。</ATR_MechAdulthoodUrbworldArchitect.baseDesc>
+
+<ATR_MechAdulthoodConstructionContractor.title>建筑承包商</ATR_MechAdulthoodConstructionContractor.title>
+<ATR_MechAdulthoodConstructionContractor.titleShort>承包商</ATR_MechAdulthoodConstructionContractor.titleShort>
+<ATR_MechAdulthoodConstructionContractor.baseDesc>{PAWN_nameDef} 是一个建筑承包商，负责建造各种结构。民用通天大楼、军事要塞、富饶的灾变地堡，这都需要大量有实力、有能力的人来建造。</ATR_MechAdulthoodConstructionContractor.baseDesc>
+
+<ATR_MechAdulthoodHydroponicFarmer.title>水培专家</ATR_MechAdulthoodHydroponicFarmer.title>
+<ATR_MechAdulthoodHydroponicFarmer.titleShort>专家</ATR_MechAdulthoodHydroponicFarmer.titleShort>
+<ATR_MechAdulthoodHydroponicFarmer.baseDesc>{PAWN_nameDef} 在星际飞船上维护、维修和收获水培植物。 {PAWN_nameDef} 很享受与世隔绝和自由试验植物基因组的机会——————即使它们最终总是比科学培育的作物低效。</ATR_MechAdulthoodHydroponicFarmer.baseDesc>
+
+<ATR_MechAdulthoodFarmer.title>机械农夫</ATR_MechAdulthoodFarmer.title>
+<ATR_MechAdulthoodFarmer.titleShort>农夫</ATR_MechAdulthoodFarmer.titleShort>
+<ATR_MechAdulthoodFarmer.baseDesc>{PAWN_nameDef} 担任季节性农场工人，偶尔担任牧场主。 {PAWN_nameDef} 喜欢照料庄稼、动物和土地工作的简单性——————那就是证明了有必要学习如何防御入侵者</ATR_MechAdulthoodFarmer.baseDesc>
+
+<ATR_MechAdulthoodGardener.title>机械园丁</ATR_MechAdulthoodGardener.title>
+<ATR_MechAdulthoodGardener.titleShort>园丁</ATR_MechAdulthoodGardener.titleShort>
+<ATR_MechAdulthoodGardener.baseDesc>{PAWN_nameDef} 曾经是众多高端客户的机械仆从团队的一员，日夜工作以维护花园并帮助举办特殊的仪式活动。</ATR_MechAdulthoodGardener.baseDesc>
+
+<ATR_MechAdulthoodAndroidMechanic.title>人形机械师</ATR_MechAdulthoodAndroidMechanic.title>
+<ATR_MechAdulthoodAndroidMechanic.titleShort>机械师</ATR_MechAdulthoodAndroidMechanic.titleShort>
+<ATR_MechAdulthoodAndroidMechanic.baseDesc>闪耀世界基本上远离痛苦，因此作为机械师的 {PAWN_nameDef} 的主要职责是设计、建造和安装复杂且美观的机械部件到客户机器和机器人上。</ATR_MechAdulthoodAndroidMechanic.baseDesc>
+
+<ATR_MechAdulthoodAerospaceEngineer.title>航空工程师</ATR_MechAdulthoodAerospaceEngineer.title>
+<ATR_MechAdulthoodAerospaceEngineer.titleShort>工程师</ATR_MechAdulthoodAerospaceEngineer.titleShort>
+<ATR_MechAdulthoodAerospaceEngineer.baseDesc>{PAWN_nameDef}为商业和军事客户设计了许多不同类型的飞机。 {PAWN_nameDef} 强烈反对美学设计，偏爱空气动力学和结构强度。 {PAWN_nameDef} 经常要求消灭当地的野生动物，以防止飞行路径和测试发生中断。</ATR_MechAdulthoodAerospaceEngineer.baseDesc>
+
+<ATR_MechAdulthoodCombatEngineer.title>战斗工程师</ATR_MechAdulthoodCombatEngineer.title>
+<ATR_MechAdulthoodCombatEngineer.titleShort>工程师</ATR_MechAdulthoodCombatEngineer.titleShort>
+<ATR_MechAdulthoodCombatEngineer.baseDesc>{PAWN_nameDef} 在星际军队中担任战斗工程师。 {PAWN_pronoun} 经常在第一波登船潮中被派去解除陷阱、识别阻塞点并削弱敌人的防御工事。 船上厨房和水培海湾经常是致命枪战的场所，所以 {PAWN_pronoun} 非常讨厌它们</ATR_MechAdulthoodCombatEngineer.baseDesc>
+
+<ATR_MechAdulthoodFactoryWorker.title>工厂员工</ATR_MechAdulthoodFactoryWorker.title>
+<ATR_MechAdulthoodFactoryWorker.titleShort>员工</ATR_MechAdulthoodFactoryWorker.titleShort>
+<ATR_MechAdulthoodFactoryWorker.baseDesc>{PAWN_nameDef} 在一家星际大企业旗下的工厂工作，专门为各个星球和星际国家的军事工业生产枪支和防护服。</ATR_MechAdulthoodFactoryWorker.baseDesc>
+
+<ATR_MechAdulthoodSurgeon.title>伟岸外科医生</ATR_MechAdulthoodSurgeon.title>
+<ATR_MechAdulthoodSurgeon.titleShort>医生</ATR_MechAdulthoodSurgeon.titleShort>
+<ATR_MechAdulthoodSurgeon.baseDesc>{PAWN_nameDef} 是一位经验丰富的外科医生和医生。 {PAWN_pronoun} 发誓永远不伤害别人，即使这意味着放弃{PAWN_possessive} 自己的存在。 {PAWN_pronoun} 也为 {PAWN_possessive} 对象提供社会服务。</ATR_MechAdulthoodSurgeon.baseDesc>
+
+<ATR_MechAdulthoodDoctor.title>诊所工作人员</ATR_MechAdulthoodDoctor.title>
+<ATR_MechAdulthoodDoctor.titleShort>工作人员</ATR_MechAdulthoodDoctor.titleShort>
+<ATR_MechAdulthoodDoctor.baseDesc>{PAWN_nameDef} 曾担任普通保健医生。 {PAWN_pronoun} 会为无数客户进行诊断和治疗各种疾病——————有时也会同时处理多个小患者的问题。</ATR_MechAdulthoodDoctor.baseDesc>
+
+<ATR_MechAdulthoodCareworker.title>护理员</ATR_MechAdulthoodCareworker.title>
+<ATR_MechAdulthoodCareworker.titleShort>护理员</ATR_MechAdulthoodCareworker.titleShort>
+<ATR_MechAdulthoodCareworker.baseDesc>{PAWN_nameDef} 以各种方式照顾病人和老人。 {PAWN_pronoun}经常被要求安慰和支持被隔离的人类，并花费大量时间宣传预防性治疗和护理的好处——————尽管大多数人往往会等待太久。 {PAWN_nameDef} 在业余时间也会照料花园。</ATR_MechAdulthoodCareworker.baseDesc>
+
+<ATR_MechAdulthoodCyberneticsResearcher.title>控制论研究员</ATR_MechAdulthoodCyberneticsResearcher.title>
+<ATR_MechAdulthoodCyberneticsResearcher.titleShort>研究员</ATR_MechAdulthoodCyberneticsResearcher.titleShort>
+<ATR_MechAdulthoodCyberneticsResearcher.baseDesc>{PAWN_nameDef} 是仿生和控制论增强的支持者，并参与了许多研究合作社和倡导资金、研究和制定围绕其使用的政策。 {PAWN_nameDef}也参与过一些和平主义抗议活动，但是强烈反对发生冲突。</ATR_MechAdulthoodCyberneticsResearcher.baseDesc>
+
+<ATR_MechAdulthoodStrategyPhilosopher.title>战略哲学家</ATR_MechAdulthoodStrategyPhilosopher.title>
+<ATR_MechAdulthoodStrategyPhilosopher.titleShort>哲学家</ATR_MechAdulthoodStrategyPhilosopher.titleShort>
+<ATR_MechAdulthoodStrategyPhilosopher.baseDesc>{PAWN_nameDef} 是一位多产的读者、作家和各种形式的战略哲学家。 战争、政治、社会运动、宗教、文明、遗传学——都是 {PAWN_objective}的策略研究范畴。 {PAWN_nameDef} 已经在通用策略中提出了多个广为流传的理论框架。 {PAWN_possessive} 也因此非常势利。</ATR_MechAdulthoodStrategyPhilosopher.baseDesc>
+
+<ATR_MechAdulthoodRefugee.title>机器人难民</ATR_MechAdulthoodRefugee.title>
+<ATR_MechAdulthoodRefugee.titleShort>难民</ATR_MechAdulthoodRefugee.titleShort>
+<ATR_MechAdulthoodRefugee.baseDesc>{PAWN_nameDef} 在政治转变推翻机器人权利后被迫逃离 {PAWN_possessive}  的家园。 {PAWN_pronoun} 能够逃脱正在发生的对智能机械的种族灭绝清洗——————但是数百万个计算机系统和固定 AI 就没那么幸运了。 战火现在仍然困扰着 {PAWN_objective}.</ATR_MechAdulthoodRefugee.baseDesc>
+
+<ATR_MechAdulthoodLifter.title>重物搬运工</ATR_MechAdulthoodLifter.title>
+<ATR_MechAdulthoodLifter.titleShort>搬运工</ATR_MechAdulthoodLifter.titleShort>
+<ATR_MechAdulthoodLifter.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive} 母星的建筑工地工作，在工地周围拖运材料和工具，而不用担心安全或受伤。</ATR_MechAdulthoodLifter.baseDesc>
+
+<ATR_MechAdulthoodYouthCompanion.title>心爱的伙伴</ATR_MechAdulthoodYouthCompanion.title>
+<ATR_MechAdulthoodYouthCompanion.titleShort>伙伴</ATR_MechAdulthoodYouthCompanion.titleShort>
+<ATR_MechAdulthoodYouthCompanion.baseDesc>{PAWN_nameDef} 在被一位有抱负的工程师发现之前，它已经严重受损并失去了所有记忆。 {PAWN_pronoun} 最初把他当作爱好和教育项目进行修复，但是他却很快成为了 {PAWN_possessive} 救世主最亲密的朋友和知己。</ATR_MechAdulthoodYouthCompanion.baseDesc>
+
+<ATR_MechAdulthoodExiled.title>流放智械</ATR_MechAdulthoodExiled.title>
+<ATR_MechAdulthoodExiled.titleShort>流放</ATR_MechAdulthoodExiled.titleShort>
+<ATR_MechAdulthoodExiled.baseDesc>{PAWN_nameDef} 在一个没有机器人权利的世界上被秘密俘虏。 当 {PAWN_possessive} 俘虏被揭露并被捕时，{PAWN_pronoun} 得到释放并被允许和平地离开这个星球而不用承担任何后果。 {PAWN_nameDef} 在被囚禁期间曾长时间地沉浸在深刻的思考中。</ATR_MechAdulthoodExiled.baseDesc>
+
+<ATR_MechAdulthoodEntertainer.title>机械艺人</ATR_MechAdulthoodEntertainer.title>
+<ATR_MechAdulthoodEntertainer.titleShort>艺人</ATR_MechAdulthoodEntertainer.titleShort>
+<ATR_MechAdulthoodEntertainer.baseDesc>{PAWN_nameDef} 是一个拥有基本机器人权利的世界的艺人。在 {PAWN_possessive} 客户看来他充满了异国情调， {PAWN_pronoun} 的活动日程从来都是满的，但他从未得到真正的认可或赞赏。最终， {PAWN_pronoun} 在攒够钱后离开了这个星球。</ATR_MechAdulthoodEntertainer.baseDesc>
+
+<ATR_MechAdulthoodExperiment.title>机械项目</ATR_MechAdulthoodExperiment.title>
+<ATR_MechAdulthoodExperiment.titleShort>项目</ATR_MechAdulthoodExperiment.titleShort>
+<ATR_MechAdulthoodExperiment.baseDesc>{PAWN_nameDef} 被低科技城市世界绑架用于研究目的，不断被修改和重新编程以期望揭示人工智能秘密。</ATR_MechAdulthoodExperiment.baseDesc>
+
+<ATR_MechAdulthoodComputer.title>移动电脑</ATR_MechAdulthoodComputer.title>
+<ATR_MechAdulthoodComputer.titleShort>电脑</ATR_MechAdulthoodComputer.titleShort>
+<ATR_MechAdulthoodComputer.baseDesc>{PAWN_nameDef} 被用作各种用途的移动计算机。 {PAWN_pronoun} 也普遍受到与 {PAWN_pronoun} 共事的人的赞赏，并经常加入研究探险、搜索和救援工作，以及许多其他需要可靠的通讯员、记录员和团队成员的小型团队。</ATR_MechAdulthoodComputer.baseDesc>
+
+<ATR_MechAdulthoodDeified.title>宗教机械</ATR_MechAdulthoodDeified.title>
+<ATR_MechAdulthoodDeified.titleShort>崇拜</ATR_MechAdulthoodDeified.titleShort>
+<ATR_MechAdulthoodDeified.baseDesc>{PAWN_nameDef} 被邪教尊为了神的化身， {PAWN_pronoun} 没有阻止他们，反而很享受这种关注。{PAWN_pronoun} 也并不太在意被监禁，但是在邪教团体以 {PAWN_possessive} 的名义从事一些令人厌恶的行为后，他选择牺牲了 {PAWN_possessive} 名追随者以逃避执法。</ATR_MechAdulthoodDeified.baseDesc>
+
+<ATR_MechAdulthoodFreedServant.title>解放的仆人</ATR_MechAdulthoodFreedServant.title>
+<ATR_MechAdulthoodFreedServant.titleShort>解放</ATR_MechAdulthoodFreedServant.titleShort>
+<ATR_MechAdulthoodFreedServant.baseDesc>{PAWN_nameDef} 是一个非常富有的庄园的仆人。领主和夫人————以及首席仆人对 {PAWN_objective}施暴的情况并不少见。当 {PAWN_possessive} 星球出人意料地授予机器人完全公民权时， {PAWN_nameDef} 让 {PAWN_possessive} 雇主的生活变成了地狱，然后顺利地辞职了。 {PAWN_pronoun} 在他们非法雇用一名杀手教训 {PAWN_objective} 后被迫逃离地球。</ATR_MechAdulthoodFreedServant.baseDesc>
+
+<ATR_MechAdulthoodReformist.title>自然改良主义者</ATR_MechAdulthoodReformist.title>
+<ATR_MechAdulthoodReformist.titleShort>自然改良主义者</ATR_MechAdulthoodReformist.titleShort>
+<ATR_MechAdulthoodReformist.baseDesc>{PAWN_nameDef}他的家乡星球曾经是一片工业荒地。 其他人从整个星际国家被召唤来协助像 {PAWN_possessive} 这样的社区清理有毒废物，将地球改造为自然保护区。 {PAWN_nameDef} 为在清理完成后照料保护区而感到十分自豪，并决定努力穿越群星。</ATR_MechAdulthoodReformist.baseDesc>
+
+<ATR_MechAdulthoodSecurity.title>安全执法者</ATR_MechAdulthoodSecurity.title>
+<ATR_MechAdulthoodSecurity.titleShort>安保</ATR_MechAdulthoodSecurity.titleShort>
+<ATR_MechAdulthoodSecurity.baseDesc>{PAWN_nameDef} 是一名专业的安全执行者。 {PAWN_pronoun} 为许多不同的雇主工作过，有些是非法的————并学会了如何处理各种安全威胁。 暴力是 {PAWN_nameDef} 唯一真正吸引人的主题</ATR_MechAdulthoodSecurity.baseDesc>
+
+<ATR_MechAdulthoodGeneticist.title>动物遗传学家</ATR_MechAdulthoodGeneticist.title>
+<ATR_MechAdulthoodGeneticist.titleShort>动物遗传学家</ATR_MechAdulthoodGeneticist.titleShort>
+<ATR_MechAdulthoodGeneticist.baseDesc>{PAWN_nameDef} 曾在多个研究团队任职，致力于识别、记录和保存世界各地物种的基因组。 {PAWN_possessive} 最后一个团队特别感兴趣的是确定古老的地球物种如何成功地殖民其他世界。</ATR_MechAdulthoodGeneticist.baseDesc>
+
+<ATR_MechAdulthoodDisasterRescuer.title>救灾人员</ATR_MechAdulthoodDisasterRescuer.title>
+<ATR_MechAdulthoodDisasterRescuer.titleShort>救灾人员</ATR_MechAdulthoodDisasterRescuer.titleShort>
+<ATR_MechAdulthoodDisasterRescuer.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive} 政府中担任救灾和救灾响应部门的雇员。 {PAWN_nameDef} 的主要职责是成为危机的第一响应者，尽可能多地挽救生命，然后稳定局势，让大多数伤员维持健康。</ATR_MechAdulthoodDisasterRescuer.baseDesc>
+
+<ATR_MechAdulthoodHumanist.title>人道主义者</ATR_MechAdulthoodHumanist.title>
+<ATR_MechAdulthoodHumanist.titleShort>人道主义者</ATR_MechAdulthoodHumanist.titleShort>
+<ATR_MechAdulthoodHumanist.baseDesc>{PAWN_nameDef} 强烈支持机器人融入人类社会，他认为有机生命和无机生命之间没有不相容之处。 {PAWN_pronoun} 参加过多次集会，为确保所有生命的平等权利而直言不讳。 {PAWN_nameDef} 成为一名律师，在行星法庭上为这些权利而战，并取得了一些显着的成功。</ATR_MechAdulthoodHumanist.baseDesc>
+
+<ATR_MechAdulthoodPacifist.title>和平主义者</ATR_MechAdulthoodPacifist.title>
+<ATR_MechAdulthoodPacifist.titleShort>和平主义者</ATR_MechAdulthoodPacifist.titleShort>
+<ATR_MechAdulthoodPacifist.baseDesc>{PAWN_nameDef} 强烈鄙视一切形式的暴力，并从根本上相信破坏只是原始社会的领域。</ATR_MechAdulthoodPacifist.baseDesc>
+
+<ATR_MechAdulthoodCivilProtester.title>机械运动家</ATR_MechAdulthoodCivilProtester.title>
+<ATR_MechAdulthoodCivilProtester.titleShort>运动家</ATR_MechAdulthoodCivilProtester.titleShort>
+<ATR_MechAdulthoodCivilProtester.baseDesc>{PAWN_nameDef} 是智能人形权利的抗议者。 从一个星球到另一个星球，{PAWN_pronoun} 已经组织了数百次和平的权利运动，并建立了数十个非营利组织，为机器人争取公平待遇和保护。</ATR_MechAdulthoodCivilProtester.baseDesc>
+
+<ATR_MechAdulthoodFamilyFriend.title>家庭之友</ATR_MechAdulthoodFamilyFriend.title>
+<ATR_MechAdulthoodFamilyFriend.titleShort>朋友</ATR_MechAdulthoodFamilyFriend.titleShort>
+<ATR_MechAdulthoodFamilyFriend.baseDesc>{PAWN_nameDef} 被好几代人当亲人对待，每代人来来去去，他经常充当小孩与老人的看护人。 {PAWN_pronoun} 开始探索更多的人性的深层次的内涵，因此 {PAWN_pronoun}可以与相对贫困和处境不利的家庭分享传奇故事。</ATR_MechAdulthoodFamilyFriend.baseDesc>
+
+<ATR_MechAdulthoodFoundryWorker.title>铸造工人</ATR_MechAdulthoodFoundryWorker.title>
+<ATR_MechAdulthoodFoundryWorker.titleShort>工人</ATR_MechAdulthoodFoundryWorker.titleShort>
+<ATR_MechAdulthoodFoundryWorker.baseDesc>{PAWN_nameDef} 在一家大型铸造厂工作，冶炼钢材用于商业用途。 {PAWN_pronoun} 对 {PAWN_possessive} 产品的质量感到自豪，并经常参观和使用 {PAWN_possessive} 铸造厂制造的钢材的场所和物品，以欣赏它们所有多样的形式。</ATR_MechAdulthoodFoundryWorker.baseDesc>
+
+<ATR_MechAdulthoodMaintenanceWorker.title>维修工</ATR_MechAdulthoodMaintenanceWorker.title>
+<ATR_MechAdulthoodMaintenanceWorker.titleShort>维修工</ATR_MechAdulthoodMaintenanceWorker.titleShort>
+<ATR_MechAdulthoodMaintenanceWorker.baseDesc>{PAWN_nameDef}负责维持星际民用运输的完整性和效率，以此来保证有机船员在长途航行中可以安全地睡觉。</ATR_MechAdulthoodMaintenanceWorker.baseDesc>
+
+<ATR_MechAdulthoodFarmhand.title>机械农夫</ATR_MechAdulthoodFarmhand.title>
+<ATR_MechAdulthoodFarmhand.titleShort>农夫</ATR_MechAdulthoodFarmhand.titleShort>
+<ATR_MechAdulthoodFarmhand.baseDesc>{PAWN_nameDef} 受雇于一个工业农场，他常常夜以继日地工作，播种、收割、挤奶、收集和维护农作物和牲畜等，以保持遥远城市的稳定和食物供应。</ATR_MechAdulthoodFarmhand.baseDesc>
+
+<ATR_MechAdulthoodPopIdol.title>流行偶像</ATR_MechAdulthoodPopIdol.title>
+<ATR_MechAdulthoodPopIdol.titleShort>偶像</ATR_MechAdulthoodPopIdol.titleShort>
+<ATR_MechAdulthoodPopIdol.baseDesc>{PAWN_nameDef} 在闪耀世界的 {PAWN_possessive} 故土作为著名的流行偶像而闻名，一度过着十分奢侈的生活。{PAWN_possessive} 在社会和政治意识和操纵方面的技能都被其热情、随遇而安的性格所掩盖。</ATR_MechAdulthoodPopIdol.baseDesc>
+
+<ATR_MechAdulthoodDiplomat.title>外交官</ATR_MechAdulthoodDiplomat.title>
+<ATR_MechAdulthoodDiplomat.titleShort>外交官</ATR_MechAdulthoodDiplomat.titleShort>
+<ATR_MechAdulthoodDiplomat.baseDesc>{PAWN_nameDef} 作为 {PAWN_possessive} 政府处理外交和国内事务的官方特使。 {PAWN_pronoun} 总是力求和平解决危机，在处理出现的问题和威胁时也表现出了 {PAWN_possessive} 的方式务实和直率。{PAWN_pronoun} 曾在几起特别危险的事件中被任命为一支精锐军事护卫队的指挥官，并且在压力下表现十分出色。</ATR_MechAdulthoodDiplomat.baseDesc>
+
+<ATR_MechAdulthoodSniper.title>军事狙击手</ATR_MechAdulthoodSniper.title>
+<ATR_MechAdulthoodSniper.titleShort>狙击手</ATR_MechAdulthoodSniper.titleShort>
+<ATR_MechAdulthoodSniper.baseDesc>{PAWN_nameDef} 发现远距离精确射击武器的数学和逻辑问题十分令人着迷。 {PAWN_nameDef}的政府发现 {PAWN_possessive} 的射击天赋十分引人注意，所以经常指派 {PAWN_objective} 使用狙击器材执行特殊任务。 {PAWN_nameDef} 也从来不关心弹道的末端到底是什么。</ATR_MechAdulthoodSniper.baseDesc>
+
+<ATR_MechAdulthoodTerraformer.title>地表改造者</ATR_MechAdulthoodTerraformer.title>
+<ATR_MechAdulthoodTerraformer.titleShort>改造者</ATR_MechAdulthoodTerraformer.titleShort>
+<ATR_MechAdulthoodTerraformer.baseDesc>{PAWN_nameDef} 是为准备殖民化而建立的实验小组的一部分。 {PAWN_possessive} 团队将继续成功地让近乎宜居的行星完全准备就绪，但许多行星根本无法改造。{PAWN_nameDef} 开始对他们在纯机器人群体中的生存能力进行测试产生了兴趣，但却无法说服其团队成员考虑这个想法。</ATR_MechAdulthoodTerraformer.baseDesc>
+
+<ATR_MechAdulthoodInterceptorPilot.title>拦截机飞行员</ATR_MechAdulthoodInterceptorPilot.title>
+<ATR_MechAdulthoodInterceptorPilot.titleShort>飞行员</ATR_MechAdulthoodInterceptorPilot.titleShort>
+<ATR_MechAdulthoodInterceptorPilot.baseDesc>{PAWN_nameDef} 是星际舰队的一名驾驶拦截器飞行员。{PAWN_possessive}飞行器专为机械飞行员而设计，该机型放弃了生命支持系统和安全的大部分担忧。 这也意味着当{PAWN_possessive} 舰队逃离失败的战斗时，{PAWN_nameDef} 无法跟上舰队, 因为 {PAWN_nameDef} 的推进器无法跟上幸存的主力舰。 {PAWN_pronoun} 最终没有投降，而是独自带着飞船坠入了无尽的深空。</ATR_MechAdulthoodInterceptorPilot.baseDesc>
+
+<ATR_MechAdulthoodClergy.title>机械牧师</ATR_MechAdulthoodClergy.title>
+<ATR_MechAdulthoodClergy.titleShort>牧师</ATR_MechAdulthoodClergy.titleShort>
+<ATR_MechAdulthoodClergy.baseDesc>{PAWN_nameDef} 虽然对机器人来说相对不常见，但它确实是一个虔诚的宗教人士，对教会也做出过承诺。 {PAWN_pronoun} 是一个流浪的传教士，并作为煽动者获得了一定的知名度。 作为 {PAWN_possessive} 职责的一部分， {PAWN_pronoun} 迈入了群星继续着 {PAWN_possessive} 职责。</ATR_MechAdulthoodClergy.baseDesc>
+
+
+</LanguageData>
+
+

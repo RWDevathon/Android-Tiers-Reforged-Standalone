@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_ConnectedSkyMindAttacked.stages.label>天云核心被入侵</ATR_ConnectedSkyMindAttacked.stages.label>
+<ATR_ConnectedSkyMindAttacked.stages.description>我连接的天云核心被入侵了！我没有安全感。</ATR_ConnectedSkyMindAttacked.stages.description>
+
+<ATR_AttackedViaSkyMind.stages.label>被直接入侵到个体</ATR_AttackedViaSkyMind.stages.label>
+<ATR_AttackedViaSkyMind.stages.description>我因为连接到的天云核心被攻破而被迫遭到精神攻击！我感到被侵犯了————我怎么能相信它是安全的呢？</ATR_AttackedViaSkyMind.stages.description>
+
+<ATR_TrolledViaSkyMind.stages.label>网络钓鱼</ATR_TrolledViaSkyMind.stages.label>
+<ATR_TrolledViaSkyMind.stages.description>黑客不遗余力地破坏天云网络居然只是为了伤害和羞辱我！它好大的胆子！为什么我们不能阻止它？</ATR_TrolledViaSkyMind.stages.description>
+
+<ATR_SurrogatePuppetThought.stages.label>被谋杀的傀儡</ATR_SurrogatePuppetThought.stages.label>
+<ATR_SurrogatePuppetThought.stages.description>一个有智慧的生物被殖民地变成了傀儡。 它们可能看起来没有变化，但它们没有思想。 我们杀了他们，把他们的尸体变成了没有灵魂的躯壳。</ATR_SurrogatePuppetThought.stages.description>
+
+</LanguageData>
