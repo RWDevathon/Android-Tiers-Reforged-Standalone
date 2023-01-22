@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- 一般 -->
+    <ATR_SkyMindConnectionFailed>SkyMind 接続を確立できませんでした。 ネットワーク容量と可用性を確認してください。</ATR_SkyMindConnectionFailed>
+    <ATR_SkyMindConnectionFailedNoNetwork>SkyMind 接続を確立できませんでした。 利用可能なネットワークがありません.</ATR_SkyMindConnectionFailedNoNetwork>
+
+    <ATR_GridlockerCleared>グリッドロッカーは正常に復号化され、無効化されました.</ATR_GridlockerCleared> 
+
+	<!-- コア -->
+    <ATR_RemoveCloudPawnSuccess>{0} のニューラル ネットワークが削除されました.</ATR_RemoveCloudPawnSuccess>
+
+    <ATR_ReplicateCloudPawnFailed>レプリケーションを開始できませんでした。 割り当てに使用できる SkyMind スペースが不十分です。</ATR_ReplicateCloudPawnFailed>
+
+    <!-- プレイヤーのハッキング -->
+     <ATR_HackOperationFailed>操作は、標的の派閥のセキュリティ システムを侵害できませんでした。 再帰は予想されません.</ATR_HackOperationFailed>
+<ATR_DisruptorHackSuccess>中断が成功しました。 敵ユニットが弱体化しました。</ATR_DisruptorHackSuccess>
+
+     <ATR_NoArrival>ファクションがガイダンス システムをリセットする前に、混乱した座標には何も送信されませんでした。 今回は幸運でした。</ATR_NoArrival>
+
+     <!-- Android インターフェイス -->
+     <ATR_NewbootAndroidCreated>Android が作成されました。 ユニットをオンラインにするための手術を介してインターフェイスをインストールします。</ATR_NewbootAndroidCreated>
+     <ATR_InterfaceRemoved>Android のインターフェイスが削除されました。 すべての人格と制御データが破壊されました。 新しいインターフェイスをインストールしてオンラインにします。</ATR_InterfaceRemoved>
+
+	<!-- リンク -->
+    <ATR_SurrogateControlled>{0}が新しいサロゲートに接続</ATR_SurrogateControlled>
+    <ATR_OperationInitiated>SkyMind ネットワーク リンクは {0} の要求によって確立されました。 手順が完了するまで、ネットワーク接続を無効にしないでください。</ATR_OperationInitiated>
+    <ATR_OperationCompleted>SkyMind 操作完了</ATR_OperationCompleted>
+    <ATR_OperationCompletedDesc>SkyMind ネットワークは、{0} の要求どおりに操作を正常に実行しました.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>SkyMind の操作に失敗しました!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>{0} は、マインド オペレーション中に SkyMind リンクが崩壊したため、壊滅的なメモリ破損に見舞われました。 操作が失敗し、メモリに重大な損傷が発生しました.</ATR_OperationFailureDesc>
+
+    <MessageMedicalOperationFailureMinorAndroid>{0} は操作中にマイナー エラーを犯し、{1} の手順を中止しました。</MessageMedicalOperationFailureMinorAndroid>
+    <MessageMedicalOperationFailureCatastrophicAndroid>{0} は、{1} で操作を試行中に壊滅的な失敗をしました.</MessageMedicalOperationFailureCatastrophicAndroid>
+    <MessageMedicalOperationFailureRidiculousAndroid>{0} は、{1} で操作を試行中に重大なエラーを犯しました.</MessageMedicalOperationFailureRidiculousAndroid>
+    <MessageMedicalOperationFailureFatalAndroid>{0} は、{1} の操作中に致命的なエラーを犯しました。これにより、意図しないカスケード ダメージが発生しました。 この処置は中央処理装置に不可逆的な損傷を引き起こし、記憶と意識を完全に失いました.</MessageMedicalOperationFailureFatalAndroid>
+	
+</LanguageData>

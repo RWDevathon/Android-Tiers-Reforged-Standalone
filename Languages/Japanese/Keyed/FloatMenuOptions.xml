@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- 一般 -->
+    <ATR_ViableSources>利用可能なソース:</ATR_ViableSources>
+    <ATR_ViableTargets>利用可能なターゲット:</ATR_ViableTargets>
+    <ATR_NoAvailableTarget>操作できるターゲットがありません.</ATR_NoAvailableTarget>
+	
+
+    <!-- 充電 -->
+    <ATR_ForceCharge>バッテリーの強制充電</ATR_ForceCharge>
+    <ATR_NoAvailableChargingSpots>使用できません。充電スポットは予約されています。</ATR_NoAvailableChargingSpots>
+    <ATR_NeedToAllowCharge>{0} は充電機能が有効になっていません.</ATR_NeedToAllowCharge>
+    <ATR_MassiveNotAllowed>大規模な機械ユニットはこれを使用できません.</ATR_MassiveNotAllowed>
+    <ATR_MassiveRequired>大規模な機械ユニットのみがこれを使用できます.</ATR_MassiveRequired>
+	
+</LanguageData>

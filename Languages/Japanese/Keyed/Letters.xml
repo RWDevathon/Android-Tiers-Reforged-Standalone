@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<!-- 一般 -->
+
+    <ATR_ReprogramSuccess>ドローンの再プログラム</ATR_ReprogramSuccess>
+    <ATR_ReprogramSuccessDesc>{0} が再プログラムされました。 再起動後、コロニーをコントローラーとして認識します。</ATR_ReprogramSuccessDesc>
+    <ATR_ReprogramFailed>再プログラミングに失敗しました</ATR_ReprogramFailed>
+    <ATR_ReprogramFailedDesc>{0} の再プログラミング操作が失敗しました。 再起動しますが、コマンドを認識しません。 処理中にメモリが損傷した可能性があります.</ATR_ReprogramFailedDesc>
+
+    <ATR_FractalCorruption>フラクタル・アボミネーション</ATR_FractalCorruption>
+    <ATR_FractalCorruptionDesc>{0} はフラクタル ワーピングによって完全に破損しています。 彼らは忌まわしきものにすぎません！ 拷問された悲鳴の反響は何マイルも、そしておそらく何年にもわたって聞こえるでしょう.</ATR_FractalCorruptionDesc>
+
+    <ATR_ServerMeltdown>サーバーメルトダウン</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>過熱によりサーバーが部分的に爆発しました!</ATR_ServerMeltdownDesc>
+	
+	
+	    <!-- ハッキング事件 -->
+            <!-- 一般的なメッセージ -->
+    <ATR_IncidentGenericAttackDesc>{0} の強度を持つと評価された敵対的なハッキングの試みは、コロニーの SkyMind セキュリティ システムの突破に成功し、セーフガードが作動する前に {1} 個のネットワーク デバイスに感染しました。</ATR_IncidentGenericAttackDesc>
+    <ATR_IncidentGenericDefense>ハッキング未遂</ATR_IncidentGenericDefense>
+    <ATR_IncidentGenericDefenseDesc>{0} の強度を持つと評価された敵対的なハッキングの試みは、コロニーの SkyMind セキュリティ システムを突破できませんでした。 システムの機能は正常で、セキュリティ サーバーは侵入の先を行こうとしています。</ATR_IncidentGenericDefenseDesc>
+    <ATR_IncidentGenericAllyIntercept>ハッキングを傍受!</ATR_IncidentGenericAllyIntercept>
+    <ATR_IncidentGenericAllyInterceptDesc>味方 {0} のホワイト ハット ハッカーがあなたに連絡し、SkyMind ネットワークで敵対的な個人からのハッキングが試みられたことを知らせます。 彼らは、セキュリティを侵害する可能性のある攻撃 ({1} ポイントの強度を持つと評価された) を阻止できただけでなく、簡単にパッチを適用できるいくつかのセキュリティの脆弱性を特定することができ、その結果、セキュリティ システムが {2 を獲得しました。 } ポイント!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		    <!-- Gridscreen ウィルス -->
+                <!-- グリッドウイルス撃破 -->
+    <ATR_IncidentGridVirusDefeated>グリッドウイルスを倒した</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>グリッドスリーパー</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>影響を受けるデバイスはクラッシュしており、デフォルトの機能を復元するには時間がかかります。</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- グリッドロッカー攻撃 -->
+    <ATR_IncidentGridlockerAttack>グリッドロッカー</ATR_IncidentGridlockerAttack>
+    <ATR_IncidentGridlockerAttackDesc>影響を受けるデバイスは、ハッカーによって機能が暗号化されています! 機能を復元するのはハッカー次第です - これには契約を切る必要があります.</ATR_IncidentGridlockerAttackDesc>
+
+    <ATR_CryptolockerNeedRansom>グリッドロッカー身代金</ATR_CryptolockerNeedRansom>
+    <ATR_CryptolockerNeedRansomDesc>グリッドロックされたデバイスがメッセージをループで吐き出します。 ハッカーは解読コードを送信し、ハッキングした {0} デバイスの制御を {1} シルバーと引き換えに放棄します。 </ATR_CryptolockerNeedRansomDesc>
+
+            <!-- グリッドブレーカー攻撃 -->
+    <ATR_IncidentGridbreakerAttack>グリッドブレーカー</ATR_IncidentGridbreakerAttack>
+    <ATR_IncidentGridbreakerAttackDesc>影響を受けるデバイスは、安全でないソフトウェア手順により、ハードウェアが誤動作しました。 修理後、デフォルトの機能を復元するにはしばらく時間がかかります.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- アリーグリッドウイルス介入 -->
+    <ATR_IncidentGridVirusAllyIntercept>グリッドウイルスを傍受!</ATR_IncidentGridVirusAllyIntercept>
+
+        <!-- DDOS 攻撃 -->
+    <ATR_IncidentDDOSDefeated>グリッドウイルス撃破</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was unable to effectively damage individual units, however.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>Affected devices have been inundated with junk data and garbage information. This will damage skill and hacking insight generation. The attack was able to successfully upload enough trash information that units will be forced to recompile much of their insights.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+    <ATR_IncidentDDOSNormalAttackDesc>影響を受けるデバイスには、ジャンク データと不要な情報が殺到しています。 これにより、スキルとハッキングの洞察の生成が損なわれます。 しかし、攻撃は個々のユニットに効果的にダメージを与えることができませんでした.</      ATR_IncidentDDOSNormalAttackDesc>
+    <ATR_IncidentDDOSOverwhelmingAttackDesc>影響を受けたデバイスには、ジャンク データと不要な情報が殺到しています。 これにより、スキルとハッキングの洞察の生成が損なわれます。 攻撃は、ユニットが洞察の多くを再コンパイルすることを余儀なくされるのに十分なゴミ情報を正常にアップロードすることができました.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+
+    <ATR_IncidentDDOSAllyIntercept>DDOS を傍受しました!</ATR_IncidentDDOSAllyIntercept>
+
+        <!-- トロール攻撃 -->
+    <ATR_IncidentTrollDefeated>トロールアタック撃破</ATR_IncidentTrollDefeated>
+
+    <ATR_IncidentTrollAttack>トロール</ATR_IncidentTrollAttack>
+    <ATR_IncidentTrollAttackDesc>影響を受けたポーン {0} は、情熱的で高レベルのスキル全体で合計 {1} のスキル ポイントを失いました! {0} はまた、ハッカーが自分たちの心にアップロードできた恐ろしいものと、それらを保護するためのセキュリティ システムの失敗に非常に動揺しています.</ATR_IncidentTrollAtackDesc>
+
+    <ATR_IncidentTrollAllyIntercept>トロールの攻撃を阻止!</ATR_IncidentTrollAllyIntercept>
+
+    <!-- ディプロハック -->
+    <ATR_IncidentDiplohackDefeated>ディプロハック敗北</ATR_IncidentDiplohackDefeated>
+
+    <ATR_IncidentDiplohackAttack>ディプロハック</ATR_IncidentDiplohackAttack>
+    <ATR_IncidentDiplohackAttackDesc>正体不明のハッカーが {0} との重要な通信回線を解読し、あなたが発信元であることを確実に特定するメッセージを配信しました。 メッセージには、{0} からのキャラバンを待ち伏せに導く誤った情報が含まれていました。 彼らは、あなたの「不注意と脆弱なセキュリティ」に対する不快感を、強い言葉遣いの、そしておそらく現実的な外交的対応で明らかにしました。 彼らはこの事件を他の派閥にも広めると約束した.</ATR_IncidentDiplohackAttackDesc>
+
+    <ATR_IncidentDiplohackAllyIntercept>ディプロハックを傍受しました!</ATR_IncidentDiplohackAllyIntercept>
+
+    <!-- 挑発者ハック -->
+    <ATR_IncidentProvokerhackDefeated>プローカー ハックの敗北</ATR_IncidentProvokerhackDefeated>
+
+    <ATR_IncidentProvokerhackAttack>挑発者ハック</ATR_IncidentProvokerhackAttack>
+    <ATR_IncidentProvokerhackAttackDesc>未知のハッカーが SkyMind のセキュリティを侵害し、単純な信号送信プログラムをインストールすることができました。 信号は、非アクティブ化される前に敵対勢力の注意を引きました!</ATR_IncidentProvokerhackAttackDesc>
+
+    <ATR_IncidentProvokerhackAllyIntercept>プローカー ハックを傍受しました!</ATR_IncidentProvokerhackAllyIntercept>
+
+    <!-- カウンターハック -->
+    <ATR_IncidentCounterhackDefeated>カウンターハックの敗北</ATR_IncidentCounterhackDefeated>
+
+    <ATR_IncidentCounterhackAttack>反撃</ATR_IncidentCounterhackAttack>
+    <ATR_IncidentCounterhackAttackDesc>未知のハッカーが SkyMind ネットワークに侵入し、可能な限り多くの情報を押収しました。他のターゲットで収集されたインテリジェンスとスキルの洞察を優先しています。 アクセスを失う前に、全体で最大 {0} ポイントを盗んだと推定されています.</ATR_IncidentCounterhackAttackDesc>
+
+    <ATR_IncidentCounterhackAllyIntercept>カウンターハックが傍受されました!</ATR_IncidentCounterhackAllyIntercept>
+
+         <!-- プレイヤーのハック失敗 -->
+     <ATR_RelationshipRetaliation>壊れた関係</ATR_RelationshipRetaliation>
+     <ATR_RelationshipRetaliationDesc>試みられた作戦は傍受され、標的防御手段によって打ち負かされました。 派閥はあなたがその試みを犯したと疑っていますが、あなたを犯罪に結びつける確固たる証拠はありません。 関係 {0} への実際の影響は、それを傍受した個人が、喜んで耳を傾ける人の前であなたを非難することに決めたため、発生したようです。 不幸な外交事件.</ATR_RelationshipRetaliationDesc>
+
+     <!-- メンテナンス -->
+     <ATR_PoorMaintenanceLetter>不十分なメンテナンス</ATR_PoorMaintenanceLetter>
+	
+</LanguageData>

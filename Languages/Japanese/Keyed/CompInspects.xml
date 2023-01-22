@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- コンピュータ -->
+	<ATR_SkillServersSynthesis>利用可能なスキル ポイント: {0} / {1}</ATR_SkillServersSynthesis>
+	<ATR_SkillProducedPoints>スキルポイント生産: {0}</ATR_SkillProducedPoints>
+	<ATR_SkillSlotsAdded>スキル ストレージが追加されました: {0}</ATR_SkillSlotsAdded>
+	
+	<ATR_SecurityServersSynthesis>利用可能なセキュリティ ポイント: {0} / {1}</ATR_SecurityServersSynthesis>
+    <ATR_SecurityProducedPoints>生成中のセキュリティ ポイント: {0}</ATR_SecurityProducedPoints>
+    <ATR_SecuritySlotsAdded>追加されたセキュリティ ストレージ: {0}</ATR_SecuritySlotsAdded>
+	
+	<ATR_HackingServersSynthesis>利用可能なハッキング ポイント: {0} / {1}</ATR_HackingServersSynthesis>
+    <ATR_HackingProducedPoints>ハッキング ポイントの生成: {0}</ATR_HackingProducedPoints>
+    <ATR_HackingSlotsAdded>ハッキング ストレージが追加されました: {0}</ATR_HackingSlotsAdded>
+
+    <!-- 充電 -->
+     <ATR_CurrentChargerPowerConsumption>現在の消費電力: {0} W</ATR_CurrentChargerPowerConsumption>
+	
+	<!-- 熱 -->
+    <ATR_CompHotSensitiveCriticalText>熱しきい値を超えました: 損傷が差し迫っています!</ATR_CompHotSensitiveCriticalText>
+    <ATR_CompHotSensitiveDangerText>熱のしきい値に近づいています: 予防措置をお勧めします!</ATR_CompHotSensitiveDangerText>
+    <ATR_CompHotSensitiveWarningText>理想的な熱しきい値を超えました: 注意が必要です.</ATR_CompHotSensitiveWarningText>
+    <ATR_CompHotSensitiveSafeText>安全な動作しきい値内: 通常の動作</ATR_CompHotSensitiveSafeText>
+
+	<!-- スカイマインド -->
+    <ATR_HackedWithTimer>ソフトウェアの再コンパイルが {0} で完了しました。</ATR_HackedWithTimer>
+    <ATR_CryptoLocked>クリプトロック、アクセス拒否</ATR_CryptoLocked>
+    <ATR_SkyMindDetected>SkyMind に接続</ATR_SkyMindDetected>
+	
+	<!-- コア -->
+    <ATR_CloudIntelligenceSummary>SkyMind インテリジェンス: {0} / {1}</ATR_CloudIntelligenceSummary>
+    <ATR_AssistingIntelligenceSummary>アイドル インテリジェンス: {0}</ATR_AssistingIntelligenceSummary>
+	
+	<!-- リンク -->
+    <ATR_SkyMindOperationInProgress>操作が完了するまでの時間: {0}</ATR_SkyMindOperationInProgress>
+    <ATR_SurrogateConnected>接続済み: {0} 他のポーン</ATR_SurrogateConnected>
+	
+	<!-- タワー -->
+    <ATR_SkyMindNetworkSummary>接続ユーザー: {0} / {1}</ATR_SkyMindNetworkSummary>
+   
+ </LanguageData>
+
