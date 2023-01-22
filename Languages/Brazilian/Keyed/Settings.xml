@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- Miscellaneous Keys -->
+	<ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
+	
+	<ATR_RestartRequired>Reinício necessário.</ATR_RestartRequired>
+	<ATR_RestartRequiredSectionDesc>Qualquer alteração nas configurações nesta seção exige o reinício do jogo.</ATR_RestartRequiredSectionDesc>
+	<ATR_RestartRequiredPostDesc>Algumas configurações alteradas exigem o reinício do jogo para segurança.</ATR_RestartRequiredPostDesc>
+
+
+    <ATR_ExpandMenu>Expandir/Recolher</ATR_ExpandMenu>
+	
+	
+	<!-- Mod Settings Page Keys -->
+	<ATR_SettingsTabTitle>Configurações</ATR_SettingsTabTitle>
+	
+	<ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+	<ATR_SettingsTabOption_General>Geral</ATR_SettingsTabOption_General>
+	<ATR_SettingsTabOption_Power>Potência</ATR_SettingsTabOption_Power>
+	<ATR_SettingsTabOption_Security>Segurança</ATR_SettingsTabOption_Security>
+	<ATR_SettingsTabOption_Health>Saúde</ATR_SettingsTabOption_Health>
+	<ATR_SettingsTabOption_Connectivity>Conectividade</ATR_SettingsTabOption_Connectivity>
+	<ATR_SettingsTabOption_Stats>Estatísticas</ATR_SettingsTabOption_Stats>
+	
+	<!-- General Settings -->
+	<ATR_ApplyPreset>Aplicar pré-definição</ATR_ApplyPreset>
+	
+		<!-- Gender Settings -->
+	<ATR_AndroidGenderNotice>As alterações afetam apenas os NOVOS androides</ATR_AndroidGenderNotice>
+	<ATR_AndroidsHaveGenders>Androids têm gêneros</ATR_AndroidsHaveGenders>
+	<ATR_AndroidsPickGenders>Androids escolhem o gênero na criação</ATR_AndroidsPickGenders>
+	<ATR_AndroidsFixedGenderSelector>Todos os androids são do sexo masculino (falso) ou feminino (verdadeiro)</ATR_AndroidsFixedGenderSelector>
+	<ATR_AndroidsGenderRatio>Chance de um android escolher o gênero masculino vs o feminino</ATR_AndroidsGenderRatio>
+	
+		<!-- Configurações de Comum -->
+	<ATR_PlayerOnlyNote>Se desativado, os andróides só existirão quando construídos pelo jogador</ATR_PlayerOnlyNote>
+	<ATR_AndroidsAppearNaturally>Os andróides podem aparecer como partes de facções ou eventos</ATR_AndroidsAppearNaturally>
+	
+	<ATR_AndroidFactionSettings>Qual papel as facções de andróides desempenham? Apenas afeta JOGOS NOVOS</ATR_AndroidFactionSettings>
+	<ATR_AndroidSocietiesExist>Os andróides têm suas próprias facções</ATR_AndroidSocietiesExist>
+	<ATR_AndroidRaidersExist>Os andróides formaram seu próprio coletivo de piratas</ATR_AndroidRaidersExist>
+	<ATR_AndroidRaidersDesc>Age como a facção de piratas do vanilla</ATR_AndroidRaidersDesc>
+	<ATR_AndroidUnionistsExist>Androids dedicados à sobrevivência coletiva se unificaram</ATR_AndroidUnionistsExist>
+	<ATR_AndroidUnionistsDesc>Age como a facção de estrangeiros do vanilla</ATR_AndroidUnionistsDesc>
+	
+	<!-- Configurações de Necessidades -->
+	<ATR_AndroidOnlyNotice>Nota: Apenas unidades marcadas como andróides são afetadas por isso. Os drones não têm necessidades assim.</ATR_AndroidOnlyNotice>
+	<ATR_AndroidsNeedJoy>Os andróides precisam cumprir as necessidades de alegria</ATR_AndroidsNeedJoy>
+	<ATR_AndroidsNeedBeauty>Os andróides precisam cumprir as necessidades de beleza</ATR_AndroidsNeedBeauty>
+	<ATR_AndroidsNeedComfort>Os andróides precisam cumprir as necessidades de conforto</ATR_AndroidsNeedComfort>
+	<ATR_AndroidsNeedOutdoors>Os andróides precisam cumprir necessidades de ao ar livre / dentro de casa</ATR_AndroidsNeedOutdoors>
+	
+	<ATR_SettingsPresetDefault>Padrão</ATR_SettingsPresetDefault>
+	<ATR_SettingsPresetCustom>Personalizado</ATR_SettingsPresetCustom>
+	
+	<ATR_SettingsConsideredAndroid>Andróides</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>Não são Andróides</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>Drones</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>Não são Drones</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>Animais Mecânicos</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Animais Orgânicos</ATR_SettingsNotConsideredAnimals>
+	
+	<!-- Configurações de Energia -->
+	<ATR_wattsConsumedPerBodySize>Uso de energia por 1 tamanho de corpo ao carregar [padrão: 500]</ATR_wattsConsumedPerBodySize>
+	<ATR_batteryPercentagePerRareTick>Porcentagem da bateria carregada por Rare Tick (~4 segundos) [padrão: 7%]</ATR_batteryPercentagePerRareTick>
+	<ATR_batteryPercentagePerTick>Taxa de carregamento da bateria [padrão: 1]</ATR_batteryPercentagePerTick>
+	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Unidades mecânicas lidam com nutrição de forma diferente que as orgânicas.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+	<ATR_mechanicalBioprocessingEfficiency>Eficiência nutricional [padrão: 50%]</ATR_mechanicalBioprocessingEfficiency>
+	
+	<!-- Configurações de Segurança -->
+        <!-- Hacking Hostil -->
+	<ATR_EnemyHacksOccur>Hacking hostil está ativado.</ATR_EnemyHacksOccur>
+	<ATR_ChanceAlliesInterceptHack>Chance de interceptar hacks contra você por facção aliada</ATR_ChanceAlliesInterceptHack>
+	<ATR_ChanceAlliesInterceptHackDesc>Percentual de chance de que facções aliadas salvem você de um hack inimigo bem-sucedido, evitando danos e, na verdade, lhe dando pontos de segurança. Isso é POR ALIADO.</ATR_ChanceAlliesInterceptHackDesc>
+	<ATR_PointsGainedOnInterceptPercentage>Pontos ganhos quando os aliados interceptam como porcentagem do ataque</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_PointsGainedOnInterceptPercentageDesc>Quando um aliado intercepta um ataque contra você, eles doam pontos de segurança a você. Isso controla qual porcentagem dos pontos de ataque eles lhe dão.</ATR_PointsGainedOnInterceptPercentageDesc>
+	<ATR_EnemyHackAttackStrengthModifier>Modificador de força de hack inimigo</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_EnemyHackAttackStrengthModifierDesc>Modificador multiplicativo na quantidade de pontos de hacking incidentes de hacking inimigo. Menos que 100% reduz a intensidade, maior que 100% aumenta a intensidade.</ATR_EnemyHackAttackStrengthModifierDesc>
+	<ATR_PercentageOfValueUsedForRansoms>Porcentagem do valor do item exigido em ataque de resgate</ATR_PercentageOfValueUsedForRansoms>
+	<ATR_PercentageOfValueUsedForRansomsDesc>Quando um ataque de resgate é usado, essa é a porcentagem do valor dos itens que é exigida.</ATR_PercentageOfValueUsedForRansomsDesc>
+	
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>Hackear jogador está habilitado.</ATR_PlayerCanHack>
+    <ATR_receiveFullHackingAlert>Alerta por pontos de hacking excedendo 90% da capacidade.</ATR_receiveFullHackingAlert>
+    <ATR_RetaliationChanceOnFailure>Chance de a facção alvo retaliar de um hack falhado.</ATR_RetaliationChanceOnFailure>
+    <ATR_MinHackSuccessChance>Chance mínima de um hack bem-sucedido.</ATR_MinHackSuccessChance>
+    <ATR_MaxHackSuccessChance>Chance máxima de um hack bem-sucedido.</ATR_MaxHackSuccessChance>
+
+    <!-- Configurações de saúde -->
+        <!-- Médico -->
+    <ATR_medicinesAreInterchangeable>Medicamentos orgânicos / mecânicos são intercambiáveis.</ATR_medicinesAreInterchangeable>
+    <ATR_showMechanicalSurgerySuccessChance>Mostrar a chance de sucesso de cirurgias mecânicas concluídas.</ATR_showMechanicalSurgerySuccessChance>
+    <ATR_maxChanceMechanicOperationSuccess>Máxima chance de sucesso para cirurgias mecânicas</ATR_maxChanceMechanicOperationSuccess>
+    <ATR_chanceFailedOperationMinor>Chance de falha nas cirurgias mecânicas serem menores [padrão 75%]</ATR_chanceFailedOperationMinor>
+    <ATR_chancePartSavedOnFailure>Chance de que as partes sejam retornadas de cirurgias mecânicas falhas [padrão 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- Tradução -->
+<ATR_receberCartasFalhaManutenção>Receber cartas sobre questões de saúde relacionadas à manutenção.</ATR_receberCartasFalhaManutenção>
+
+    
+	<!-- Configurações de conectividade -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>Surrogates são permitidos.</ATR_surrogatesAllowed>
+    <ATR_otherFactionsAllowedSurrogates>Outras facções podem usar surrogates.</ATR_otherFactionsAllowedSurrogates>
+    <ATR_minGroupSizeForSurrogates>Número de membros para grupos de facções spawnarem com surrogates</ATR_minGroupSizeForSurrogates>
+    <ATR_minSurrogatePercentagePerLegalGroup>Porcentagem mínima de surrogates em grupos legais [padrão 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+    <ATR_maxSurrogatePercentagePerLegalGroup>Porcentagem máxima de surrogates em grupos legais [padrão 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>Surrogates por controlador antes de penalidades:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+        <!-- Habilidades -->
+    <ATR_receiveFullSkillAlert>Alerta para pontos de habilidade excedendo 90% da capacidade.</ATR_receiveFullSkillAlert>
+<ATR_skillPointConversionRate>Quantidade de XP base gerada por ponto de habilidade [padrão: 0,5]</ATR_skillPointConversionRate>
+<ATR_passionSoftCap>Soft-cap de paixão antes do aumento de custo por paixão [padrão: 8]</ATR_passionSoftCap>
+<ATR_basePointsNeededForPassion>Pontos de habilidade básicos necessários por paixão [padrão: 5000]</ATR_basePointsNeededForPassion>
+
+<!-- Cloud -->
+<ATR_UploadingKills>Fazer upload para o SkyMind torna o corpo do iniciador em um espaço em branco.</ATR_UploadingKills>
+<ATR_UploadingPermakills>Fazer upload para o SkyMind deixa o corpo do iniciador completamente inútil e morto.</ATR_UploadingPermakills>
+<ATR_SkyMindOperationTimeRequired>Horas necessárias para concluir as operações do SkyMind [padrão: 24]</ATR_SkyMindOperationTimeRequired>
+
+</LanguageData>

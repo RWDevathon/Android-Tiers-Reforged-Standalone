@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- Tradução -->
+<ATR_AutoDoorOpen>Abrir</ATR_AutoDoorOpen>
+<ATR_AutoDoorOpenDescription>Abrir remotamente via um núcleo SkyCloud.</ATR_AutoDoorOpenDescription>
+<ATR_AutoDoorClose>Fechar</ATR_AutoDoorClose>
+<ATR_AutoDoorCloseDescription>Fechar remotamente via um servidor SkyCloud.</ATR_AutoDoorCloseDescription>
+	
+	<!-- Tradução -->
+<ATR_ServerNetworkConnectionNeeded>Servidor não conectado à rede SkyMind.</ATR_ServerNetworkConnectionNeeded>
+
+<ATR_SkillMode>Modo de habilidade</ATR_SkillMode>
+<ATR_SkillModeDesc>Este servidor está designado à geração de pontos de habilidade. Clique para alternar para segurança.</ATR_SkillModeDesc>
+
+<ATR_SecurityMode>Modo de segurança</ATR_SecurityMode>
+<ATR_SecurityModeDesc>Este servidor está designado à geração de pontos de segurança. Clique para alternar para hacking.</ATR_SecurityModeDesc>
+
+<ATR_HackingMode>Modo de hacking</ATR_HackingMode>
+<ATR_HackingModeDesc>Este servidor está designado à geração de pontos de hacking. Clique para alternar para habilidade.</ATR_HackingModeDesc>
+
+	
+	<!-- Tradução -->
+<ATR_ConnectSkyMind>Conectar a SkyMind</ATR_ConnectSkyMind>
+<ATR_ConnectSkyMindDesc>Conecte esse colonizador à rede SkyMind para permitir operações de mente ou controles sucedâneos.</ATR_ConnectSkyMindDesc>
+	
+	    <!-- Tradução -->
+    <ATR_CloudPawnInfo>Informações</ATR_CloudPawnInfo>
+    <ATR_CloudPawnInfoDesc>Obtenha informações sobre as inteligências da SkyMind.</ATR_CloudPawnInfoDesc>
+	
+	<ATR_RemoveCloudPawn>Remova</ATR_RemoveCloudPawn>
+    <ATR_RemoveCloudPawnDesc>Remova uma Inteligência SkyMind</ATR_RemoveCloudPawnDesc>
+    <ATR_RemoveCloudPawnConfirm>Descarregando {0} da rede SkyMind destruirá permanentemente a inteligência. Isso é considerado assassinato.
+	
+	<ATR_ReplicarCloudPawn>Replicar</ATR_ReplicarCloudPawn>
+	<ATR_ReplicarCloudPawnDesc>Replicar uma inteligência SkyMind.
+	
+	<ATR_Skills>Habilidades</ATR_Skills>
+<ATR_SkillsDesc>Oficina de habilidades aberta, permitindo o intercâmbio de pontos de habilidade do servidor por experiência e paixões.</ATR_SkillsDesc>
+
+<ATR_ControlSurrogate>Conectar</ATR_ControlSurrogate>
+<ATR_ControlSurrogateDesc>Tome controle do sucessor selecionado sem anfitrião.</ATR_ControlSurrogateDesc>
+
+<ATR_ControlCaravanSurrogate>Recuperar</ATR_ControlCaravanSurrogate>
+<ATR_ControlCaravanSurrogateDesc>Recupere um sucessor sem anfitrião em uma caravana.</ATR_ControlCaravanSurrogateDesc>
+	
+	<!-- Link -->
+    <ATR_Surrogate>substituto</ATR_Surrogate>
+    <ATR_AbsorbExperience>Absorção mental</ATR_AbsorbExperience>
+    <ATR_AbsorbExperienceDesc>Absorver a experiência da inteligência de um prisioneiro para pontos de habilidade e hacking.</ATR_AbsorbExperienceDesc>
+    <ATR_AbsorbExperienceConfirm>Esta operação extrai insights úteis em habilidades e hacking ao custo da vida do prisioneiro. Isso é considerado assassinato.</ATR_AbsorbExperienceConfirm>
+    <ATR_DownloadCloudPawn>Baixar</ATR_DownloadCloudPawn>
+    <ATR_DownloadCloudPawnDesc>Baixe uma inteligência SkyMind neste peão.</ATR_DownloadCloudPawnDesc>
+    <ATR_DownloadCloudPawnConfirm>Esta operação transfere completamente uma inteligência SkyMind para este peão. A inteligência não persistirá na rede.</ATR_DownloadCloudPawnConfirm>
+    <ATR_DisconnectSurrogate>Desconectar</ATR_DisconnectSurrogate>
+    <ATR_DisconnectSurrogateDesc>Desconectar todos os links de substituto.</ATR_DisconnectSurrogateDesc>
+    <ATR_ToggleControlMode>Alternar Controles</ATR_ToggleControlMode>
+    <ATR_ToggleControlModeDesc>Alternar o modo de controle de substituto, permitindo controles de substituto mas desabilitando operações SkyMind.</ATR_ToggleControlModeDesc>
+    <ATR_Permute>Permutar</ATR_Permute>
+    <ATR_PermuteDesc>Permutar a consciência do colonista selecionado atualmente com outro colonista.</ATR_PermuteDesc>
+    <ATR_PermuteConfirm>Esta operação trocará as inteligências de {0} e {1}.</ATR_PermuteConfirm>
+    <ATR_Transfer>Transferir</ATR_Transfer>
+    <ATR_TransferDesc>Transferir a consciência do colonista selecionado atualmente para um substituto orgânico.</ATR_TransferDesc>
+    <ATR_TransferConfirm>Esta operação transferirá {0} para o corpo do substituto-alvo. Isso deixará o corpo original de {0} sem mente. O receptor SkyMind queimará completamente após a operação.</ATR_TransferConfirm>
+    <ATR_Upload>Upload</ATR_Upload>
+    <ATR_UploadDesc>Fazer upload desta inteligência para a rede SkyMind. O que acontece com o corpo remanescente é controlado por configurações (padrão é o corpo se tornar cérebro morto).</ATR_UploadDesc>
+    <ATR_UploadConfirm>Esta operação transfere esta inteligência para a rede SkyMind, deixando o corpo para trás.</ATR_UploadConfirm>
+	
+	<!-- Manutenção -->
+    <ATR_MaintenanceGizmoLabel>Manutenção</ATR_MaintenanceGizmoLabel>
+    <ATR_MaintenanceDesc>A manutenção é uma medida da saúde do processador interno e das partes externas de um peão. A manutenção se degrada com o tempo e deve ser construída por ciclos de manutenção regulares. Uma manutenção inadequada degrada a eficiência e pode levar a falhas de partes se permitida persistir por muito tempo.\n\nUm alto nível de manutenção oferece pequenos benefícios, mas também aumenta significativamente a perda de manutenção.\n\nNota: os valores fornecidos são taxas de base, a taxa de queda real depende da eficiência de manutenção do peão (na guia de informações)</ATR_MaintenanceDesc>
+    <ATR_MaintenanceTargetLabel>Manutenção desejada</ATR_MaintenanceTargetLabel>
+    <ATR_MaintenanceTargetLabelDesc>Clique para definir o nível de manutenção desejado.</ATR_MaintenanceTargetLabelDesc>
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+    <ATR_MaintenanceLevelInfoFallRate>A manutenção cai {0} por dia.</ATR_MaintenanceLevelInfoFallRate>
+
+</LanguageData>

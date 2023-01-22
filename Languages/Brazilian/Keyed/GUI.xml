@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Necessidades -->
+	
+	<ATR_EnergyNeed>Energia</ATR_EnergyNeed>
+	<ATR_EnergyNeedDesc>A energia é a quantidade de carga armazenada na unidade. Se ela chegar a zero, a unidade entrará em um modo de baixo desempenho. Se a carga não for restaurada, o hardware eventualmente falhará criticamente e a unidade deixará de funcionar.</ATR_EnergyNeedDesc>
+	
+    <!-- Permissões de ritual -->
+    <ATR_DronesCannotSpectate>Os drones não podem assistir rituais.</ATR_DronesCannotSpectate>
+
+    <!-- Aba Prisioneiro -->
+    <ATR_PrisonerDroneWarning>Os drones não podem ser interagidos. Use cirurgias para reprogramar (Pesquisa T1 necessária) ou desativar.</ATR_PrisonerDroneWarning>
+    <ATR_SlaveDroneAlert>Os drones não devem ser escravos! Você está sofrendo um erro de liberdade a cada tick. Reprogramar ou eliminar imediatamente este drone.</ATR_SlaveDroneAlert>
+
+</LanguageData>

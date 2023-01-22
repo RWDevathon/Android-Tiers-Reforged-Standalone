@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATR_AlertServerHeatCritical>Temperatura crítica do computador</ATR_AlertServerHeatCritical>
+    <ATR_AlertServerHeatCriticalDesc>Pelo menos um computador está em perigo de combustão devido a ultrapassar seu limite de temperatura de segurança máxima! Ação é necessária para manter a integridade da rede!</ATR_AlertServerHeatCriticalDesc>
+	
+	<ATR_AlertFullSkillServers>Servidores de habilidade completos</ATR_AlertFullSkillServers>
+    <ATR_AlertFullSkillServersDesc>Não há mais capacidade para pontos de habilidade. Considere usá-los ou expandir a capacidade.</ATR_AlertFullSkillServersDesc>
+
+    <ATR_AlertFullHackingServers>Servidores de hacking completos</ATR_AlertFullHackingServers>
+    <ATR_AlertFullHackingServersDesc>Não há mais capacidade para pontos de hacking e não há penalidade de tempo atual. Considere usá-los ou expandir a capacidade.</ATR_AlertFullHackingServersDesc>
+
+    <ATR_AlertLowSecurity>Rede em risco</ATR_AlertLowSecurity>
+    <ATR_AlertLowSecurityDesc>O número de pontos de segurança disponíveis é excepcionalmente improvável de defender com sucesso contra tentativas de invasão! É aconselhável tomar cuidado para evitar danos.</ATR_AlertLowSecurityDesc>
+
+    <ATR_NeedMechanic>Precisa de mecânico</ATR_NeedMechanic>
+    <ATR_NeedMechanicDesc>Estas unidades mecânicas precisam de reparos, mas você não tem colonos saudáveis designados como mecânicos.\n\n{0}\nDesigne um colono saudável para o tipo de trabalho Mecânico. Enquanto a maioria dos danos será naturalmente mitigada com o tempo, os mecânicos aumentarão significativamente a velocidade de recuperação e reduzirão a chance de efeitos colaterais.</ATR_NeedMechanicDesc>
+
+  
+</LanguageData>
