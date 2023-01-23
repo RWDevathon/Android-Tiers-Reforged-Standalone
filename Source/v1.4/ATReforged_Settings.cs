@@ -22,6 +22,7 @@ namespace ATReforged
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
         public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
         public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+        public static bool bedRestrictionDefaultsToAll;
         
             // Settings for what is considered mechanical and massive
         public static HashSet<string> isConsideredMechanicalAnimal;
@@ -75,7 +76,7 @@ namespace ATReforged
         public static float maintenanceGainRateFactor = 1.0f;
 
         // CONNECTIVITY SETTINGS
-        // Settings for Surrogates
+            // Settings for Surrogates
         public static bool surrogatesAllowed = true;
         public static bool otherFactionsAllowedSurrogates = true;
         public static int minGroupSizeForSurrogates = 5;
@@ -149,7 +150,7 @@ namespace ATReforged
             Color colorSave = GUI.color;
             TextAnchor anchorSave = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-
+            
             var headerRect = inRect.TopPartPixels(50);
             var restOfRect = new Rect(inRect);
             restOfRect.y += 50;
@@ -197,7 +198,7 @@ namespace ATReforged
                         Find.WindowStack.Add(new FloatMenu(options));
                     }
                     listingStandard.GapLine();
-
+                        
                     // GENDER SETTINGS
                     listingStandard.CheckboxLabeled("ATR_AndroidsHaveGenders".Translate(), ref androidsHaveGenders, tooltip:"ATR_AndroidGenderNotice".Translate(), onChange: onChange);
 
@@ -219,8 +220,11 @@ namespace ATReforged
                     }
                     listingStandard.GapLine();
 
-                    // CONSIDERATION SETTINGS
-                    listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
+                    // PERMISSION SETTINGS
+                    listingStandard.CheckboxLabeled("ATR_bedRestrictionDefaultsToAll".Translate(), ref bedRestrictionDefaultsToAll, tooltip: "ATR_bedRestrictionDefaultsToAllDescription".Translate(), onChange: onChange);
+
+                        // CONSIDERATION SETTINGS
+                        listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                             cachedExpandFirst = !cachedExpandFirst;
@@ -381,6 +385,7 @@ namespace ATReforged
             thingsAllowedAsRepairStims = new HashSet<string> { };
             blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia" };
             blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+            bedRestrictionDefaultsToAll = false;
 
             // Needs Settings
             androidsHaveJoyNeed = true;
@@ -544,6 +549,7 @@ namespace ATReforged
             Scribe_Collections.Look(ref thingsAllowedAsRepairStims, "ATR_thingsAllowedAsRepairStims", LookMode.Value);
             Scribe_Collections.Look(ref blacklistedMechanicalHediffs, "ATR_blacklistedMechanicalHediffs", LookMode.Value);
             Scribe_Collections.Look(ref blacklistedMechanicalTraits, "ATR_blacklistedMechanicalTraits", LookMode.Value);
+            Scribe_Values.Look(ref bedRestrictionDefaultsToAll, "ATR_bedRestrictionDefaultsToAll", false);
 
             // Considerations
             try

@@ -309,6 +309,18 @@ namespace ATReforged
         {
             StringBuilder ret = new StringBuilder();
 
+            Dictionary<Pawn, int> linkedPawns = Utils.gameComp.GetAllLinkedPawns();
+            if (linkedPawns?.Count > 0)
+            {
+                HashSet<Pawn> cloudPawns = Utils.gameComp.GetCloudPawns();
+                foreach (var linkedPair in linkedPawns)
+                {
+                    if (cloudPawns.Contains(linkedPair.Key))
+                    {
+                        ret.AppendLine("ATR_SkyMindCoreOperationInProgress".Translate(linkedPair.Key, (linkedPair.Value - Find.TickManager.TicksGame).ToStringTicksToPeriodVerbose()));
+                    }
+                }
+            }
             ret.Append("ATR_CloudIntelligenceSummary".Translate(Utils.gameComp.GetCloudPawns().Count(), Utils.gameComp.GetSkyMindCloudCapacity()));
 
             return ret.Append(base.CompInspectStringExtra()).ToString();

@@ -117,53 +117,50 @@ namespace ATReforged
                     }
                 }
                 // Handle SkyMind-connectable buildings.
-                else if (thingDef.comps != null && !thingDef.HasComp(typeof(CompSkyMindCore)))
+                else if (thingDef.comps != null)
                 {
-                    bool powered = false;
-                    bool flickable = false;
-
                     foreach (CompProperties compProp in thingDef.comps)
                     {
-                        if (compProp.compClass == null)
-                            continue;
-
-                        if (compProp.compClass == typeof(CompFlickable))
-                            flickable = true;
-                        else if (compProp.compClass == typeof(CompPowerTrader) || (compProp.compClass == typeof(CompPowerPlant) || compProp.compClass.IsSubclassOf(typeof(CompPowerPlant))))
+                        // Add CompSkyMind if it can be powered.
+                        if (compProp.compClass == typeof(CompPowerTrader) || compProp.compClass.IsSubclassOf(typeof(CompPowerTrader)))
                         {
-                            powered = true;
+                            CompProperties cp = new CompProperties
+                            {
+                                compClass = typeof(CompSkyMind)
+                            };
+                            thingDef.comps.Add(cp);
+
+                            // Autodoors get a special comp to allow them to be opened/closed remotely.
+                            if (thingDef.IsDoor)
+                            {
+                                cp = new CompProperties
+                                {
+                                    compClass = typeof(CompAutoDoor)
+                                };
+                                thingDef.comps.Add(cp);
+                            }
+
+                            // Research benches get a special comp to control what server type it can be used to generate points for.
+                            if (typeof(Building_ResearchBench).IsAssignableFrom(thingDef.thingClass))
+                            {
+                                cp = new CompProperties
+                                {
+                                    compClass = typeof(CompInsightBench)
+                                };
+                                thingDef.comps.Add(cp);
+                            }
+                            break;
                         }
                     }
-
-                    // Add CompSkyMind if it was found to be powered and flickable.
-                    if (powered && flickable)
+                }
+                // All beds should have the Restrictable comp to restrict what pawn type may use it.
+                if (thingDef.IsBed)
+                {
+                    CompProperties cp = new CompProperties
                     {
-                        CompProperties cp = new CompProperties
-                        {
-                            compClass = typeof(CompSkyMind)
-                        };
-                        thingDef.comps.Add(cp);
-
-                        // Autodoors get a special comp to allow them to be opened/closed remotely.
-                        if (thingDef.IsDoor)
-                        {
-                            cp = new CompProperties
-                            {
-                                compClass = typeof(CompAutoDoor)
-                            };
-                            thingDef.comps.Add(cp);
-                        }
-
-                        // Research benches get a special comp to control what server type it can be used to generate points for.
-                        if (typeof(Building_ResearchBench).IsAssignableFrom(thingDef.thingClass))
-                        {
-                            cp = new CompProperties
-                            {
-                                compClass = typeof(CompInsightBench)
-                            };
-                            thingDef.comps.Add(cp);
-                        }
-                    }
+                        compClass = typeof(CompPawnTypeRestrictable)
+                    };
+                    thingDef.comps.Add(cp);
                 }
             }
 

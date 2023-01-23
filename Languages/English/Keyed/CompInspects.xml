@@ -34,6 +34,7 @@
 	
 	<!-- Link -->
 	<ATR_SkyMindOperationInProgress>Time until operation is complete: {0}</ATR_SkyMindOperationInProgress>
+	<ATR_SkyMindCoreOperationInProgress>Time until operation for {0} is complete: {1}</ATR_SkyMindCoreOperationInProgress>
 	<ATR_SurrogateConnected>Connected to: {0} other pawns</ATR_SurrogateConnected>
 	
 	<!-- Tower -->

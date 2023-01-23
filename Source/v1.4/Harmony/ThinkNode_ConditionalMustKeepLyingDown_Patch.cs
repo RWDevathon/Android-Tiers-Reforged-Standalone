@@ -5,7 +5,7 @@ using System.Reflection.Emit;
 
 namespace ATReforged
 {
-    // ThinkNode_ConditionalMustKeepLyingDown.Satisfied has a non-null checked rest conditional that will throw erors for mechanicals if not handled. This transpiler adds that null-check.
+    // ThinkNode_ConditionalMustKeepLyingDown.Satisfied has a non-null checked rest conditional that will throw errors for mechanicals if not handled. This transpiler adds that null-check.
     internal class ThinkNode_ConditionalMustKeepLyingDown_Patch
     {
         [HarmonyPatch(typeof(ThinkNode_ConditionalMustKeepLyingDown))]

@@ -725,7 +725,7 @@
 		<defName>ATR_MechAdulthoodSurgeon</defName>
 		<title>Stalwart surgeon</title>
 		<titleShort>Surgeon</titleShort>
-		<baseDesc>{PAWN_nameDef} was an experienced surgeon and medic. {PAWN_pronoun} swore to never do harm, even if it means surrendering {PAWN_possessive} own existence. {PAWN_pronoun} also provided social services to {PAWN_possessive} subjects.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was an experienced surgeon and medic. {PAWN_pronoun} swore to never do harm, even if it means surrendering {PAWN_possessive} own existence. {PAWN_pronoun} also provided social services to {PAWN_possessive} patients.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
@@ -735,11 +735,11 @@
 		<skillGains>
 			<li>
 				<key>Medicine</key>
-				<value>8</value>
+				<value>6</value>
 			</li>
 			<li>
 				<key>Social</key>
-				<value>6</value>
+				<value>4</value>
 			</li>
 		</skillGains>
 		<workDisables>

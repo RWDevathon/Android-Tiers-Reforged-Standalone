@@ -149,6 +149,7 @@
     <!-- Charging Pods -->
 
     <ThingDef Name="ATR_ChargingPodBase" ParentName="BedWithQualityBase" Abstract="True">
+        <thingClass>ATReforged.Building_ChargingBed</thingClass>
         <graphicData>
             <texPath>Things/Buildings/ChargingPod/ChargingPod</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -187,7 +188,6 @@
         <thingCategories>
             <li>BuildingsMisc</li>
         </thingCategories>
-        <thingClass>ATReforged.Building_ChargingBed</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <drawGUIOverlay>true</drawGUIOverlay>
         <canOverlapZones>false</canOverlapZones>

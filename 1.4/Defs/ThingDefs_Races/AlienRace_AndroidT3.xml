@@ -21,7 +21,7 @@
                 </alienPartGenerator>
             </generalSettings>
 		</alienRace>
-        <uiIconPath>Things/Pawns/Humanlikes/Tier3/head/None_Average_Normal_south</uiIconPath>
+        <uiIconPath>Things/Pawns/Humanlikes/Tier3/ATR_TierThreeExemplar</uiIconPath>
 		<statBases>
 			<MarketValue>2400</MarketValue>
 			<MoveSpeed>6.00</MoveSpeed>

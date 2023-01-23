@@ -17,10 +17,6 @@ namespace ATReforged
             mechfall.weaponDef = EquipmentSource?.def;
             mechfall.StartStrike();
             ReloadableCompSource?.UsedOnce();
-            if (EquipmentSource != null && !EquipmentSource.Destroyed)
-            {
-                EquipmentSource.Destroy(DestroyMode.Vanish);
-            }
             return true;
         }
         public override float HighlightFieldRadiusAroundTarget(out bool needLOSToCenter)

@@ -66,7 +66,6 @@ namespace ATReforged
             return ATReforged_Settings.isConsideredMechanicalAndroid.Contains(thingDef.defName);
         }
 
-        // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
         { 
             return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def.defName);
@@ -75,6 +74,22 @@ namespace ATReforged
         public static bool IsConsideredMechanicalDrone(ThingDef thingDef)
         {
             return ATReforged_Settings.isConsideredMechanicalDrone.Contains(thingDef.defName);
+        }
+
+        public static PawnType GetPawnType(Pawn pawn)
+        {
+            if (IsConsideredMechanicalAndroid(pawn))
+            {
+                return PawnType.Android;
+            }
+            else if (IsConsideredMechanicalDrone(pawn))
+            {
+                return PawnType.Drone;
+            }
+            else
+            {
+                return PawnType.Organic;
+            }
         }
 
         public static bool IsConsideredMassive(Pawn pawn)

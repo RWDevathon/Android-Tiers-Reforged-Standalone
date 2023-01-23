@@ -140,9 +140,6 @@
                         <postFactor>0.9</postFactor>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMax>5</ComfyTemperatureMax>
-                </statOffsets>
                 <hungerRateFactor>0.9</hungerRateFactor>
             </li>
             <li>
@@ -158,9 +155,6 @@
                         <offset>-0.1</offset>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMax>10</ComfyTemperatureMax>
-                </statOffsets>
                 <hungerRateFactor>0.8</hungerRateFactor>
             </li>
             <li>
@@ -232,9 +226,6 @@
                         <offset>0.05</offset>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMin>10</ComfyTemperatureMin>
-                </statOffsets>
                 <hungerRateFactor>1.1</hungerRateFactor>
             </li>
             <li>
@@ -254,9 +245,6 @@
                         <offset>0.1</offset>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMin>15</ComfyTemperatureMin>
-                </statOffsets>
                 <hungerRateFactor>1.25</hungerRateFactor>
             </li>
             <li>
@@ -276,17 +264,11 @@
                         <offset>0.05</offset>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMin>15</ComfyTemperatureMin>
-                </statOffsets>
                 <hungerRateFactor>1.75</hungerRateFactor>
             </li>
             <li>
                 <label>threatening</label>
-                <minSeverity>0.6</minSeverity>
-                <statOffsets>
-                    <ComfyTemperatureMin>15</ComfyTemperatureMin>
-                </statOffsets>
+                <minSeverity>0.5</minSeverity>
                 <hungerRateFactor>2</hungerRateFactor>
             </li>
             <li>
@@ -298,9 +280,6 @@
                         <setMax>0.1</setMax>
                     </li>
                 </capMods>
-                <statOffsets>
-                    <ComfyTemperatureMin>15</ComfyTemperatureMin>
-                </statOffsets>
                 <hungerRateFactor>3</hungerRateFactor>
             </li>
         </stages>

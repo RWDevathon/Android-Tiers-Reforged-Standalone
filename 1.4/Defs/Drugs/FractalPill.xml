@@ -56,7 +56,7 @@
         <initialSeverity>0.25</initialSeverity>
 		<maxSeverity>0.5</maxSeverity>
 		<isBad>true</isBad>
-		<stages>	
+		<stages>
 			<li>
 				<minSeverity>0.0</minSeverity>
 				<label>Transcendant</label>
@@ -263,7 +263,7 @@
 		<defName>ATR_FractalPillMechanical</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Fractal Integration</label>
-		<description>Fractal integration into the whole chassis. While the warping that occurs is harmless to the unit, this also means the effects are vastly reduced. Indeed, a larger and warped ego seems more overt than any physical change - although occasional memory defragmentations are necessary. Perhaps archotechs did not design fractal warping with machines in mind, and find its application to them uninteresting?</description>
+		<description>Fractal integration into the whole chassis. While the warping that occurs is harmless to the unit, the effects are decidedly double-edged. Indeed, an inflated ego and power consumption increase are the primary effects - although affected units inexplicably take less damage from the same blows, and have a stronger grasp on reality's true nature.\n\nPerhaps archotechs did not design fractal warping with machines in mind, and find its application to them uninteresting? Or, perhaps, fractal warping is a curse upon all things, not just organics?</description>
 		<defaultLabelColor>(0.9,0.9,1)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -292,8 +292,10 @@
 				<statOffsets>
 					<GlobalLearningFactor>0.25</GlobalLearningFactor>
 					<MentalBreakThreshold>0.04</MentalBreakThreshold>
-                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                </statFactors>
 			</li>
 			<li>
 				<minSeverity>0.5</minSeverity>
@@ -312,8 +314,10 @@
 				<statOffsets>
 					<GlobalLearningFactor>0.5</GlobalLearningFactor>
 					<MentalBreakThreshold>0.08</MentalBreakThreshold>
-                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </statFactors>
 			</li>
 			<li>
 				<minSeverity>0.7</minSeverity>
@@ -338,8 +342,10 @@
 				<statOffsets>
 					<GlobalLearningFactor>0.75</GlobalLearningFactor>
 					<MentalBreakThreshold>0.12</MentalBreakThreshold>
-                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.85</IncomingDamageFactor>
+                </statFactors>
 			</li>
 			<li>
 				<minSeverity>1</minSeverity>
@@ -364,8 +370,10 @@
 				<statOffsets>
 					<GlobalLearningFactor>1</GlobalLearningFactor>
 					<MentalBreakThreshold>0.16</MentalBreakThreshold>
-                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
 			</li>
 		</stages>
 	</HediffDef>
