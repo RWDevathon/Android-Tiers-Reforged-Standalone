@@ -49,19 +49,6 @@
 			<li>AnimalExotic</li>
             <li>ATR_MechanicalAnimal</li>
 		</tradeTags>
-		<recipes>
-			<li>ATR_RemoveBodyPartAndroid</li>
-			<li>ATR_ShutdownMechanical</li>
-            <li>ATR_RestoreBodyPartAndroid</li>
-            <li>ATR_Install_PlasteelPlating</li>
-            <li>ATR_Install_CompositePlating</li>
-            <li>ATR_Install_MobilityFrame</li>
-            <li>ATR_Install_MakeshiftReplacementArm</li>
-            <li>ATR_Install_MakeshiftReplacementLeg</li>
-            <li>ATR_Install_AdvancedLeg</li>
-            <li>ATR_Install_AdvancedVisualSensor</li>
-            <li>ATR_Install_MakeshiftReplacementArm</li>
-		</recipes>
 		<modExtensions>
 			<li Class="ATReforged.ATR_MechTweaker">
 			</li>

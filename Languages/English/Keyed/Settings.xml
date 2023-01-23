@@ -43,7 +43,7 @@
 	<ATR_AndroidUnionistsDesc>Acts like vanilla's Outlander faction</ATR_AndroidUnionistsDesc>
 
         <!-- Permission Settings-->
-    <ATR_bedRestrictionDefaultsToAll>Bed defaults to All pawns rather than Mechanical/Organic</bedRestrictionDefaultsToAll>
+    <ATR_bedRestrictionDefaultsToAll>Beds default to All pawns rather than Mechanical/Organic</ATR_bedRestrictionDefaultsToAll>
 	
         <!-- Consideration Settings -->
 	<ATR_SettingsConsideredAndroid>Androids</ATR_SettingsConsideredAndroid>

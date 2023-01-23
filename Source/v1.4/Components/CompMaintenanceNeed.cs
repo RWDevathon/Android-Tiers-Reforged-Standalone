@@ -235,6 +235,8 @@ namespace ATReforged
             {
                 maintenanceEffectTicks = Mathf.MoveTowards(maintenanceEffectTicks, 0, 1f * TicksPerRare);
             }
+            // Prevent the ticks from going outside a 60 day value positively or negatively.
+            maintenanceEffectTicks = Mathf.Clamp(maintenanceEffectTicks, -3600000, 3600000);
         }
 
         public void SendPartFailureLetter(Pawn pawn, Hediff cause)

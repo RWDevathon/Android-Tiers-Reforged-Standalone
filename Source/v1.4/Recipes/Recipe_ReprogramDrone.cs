@@ -11,7 +11,7 @@ namespace ATReforged
         {
 
             BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
-            if (targetBodyPart != null && Utils.IsConsideredMechanicalDrone(pawn))
+            if (targetBodyPart != null && (Utils.IsConsideredMechanicalDrone(pawn) || Utils.IsConsideredMechanicalAnimal(pawn)))
             {
                 yield return targetBodyPart;
             }

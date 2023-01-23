@@ -15,6 +15,11 @@
 			<li>ATR_Tier3Android</li>
 			<li>ATR_Tier4Android</li>
 			<li>ATR_Tier5Android</li>
+            <li>ATR_DroneChemUnit</li>
+            <li>ATR_DroneMineralUnit</li>
+            <li>ATR_DroneNutritionUnit</li>
+            <li>ATR_DroneTORT</li>
+            <li>ATR_DroneWatchdog</li>
             <!--<li>ATR_Mark1Warrior</li> Reserved for future content-->
 		</recipeUsers>
     </RecipeDef>
