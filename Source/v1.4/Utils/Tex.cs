@@ -9,6 +9,7 @@ namespace ATReforged
         static Tex()
         {
         }
+
         // Settings
         public static readonly Texture2D DrawPocket = ContentFinder<Texture2D>.Get("UI/Icons/Settings/DrawPocket");
 

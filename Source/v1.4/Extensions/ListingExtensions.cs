@@ -127,6 +127,7 @@ namespace ATReforged
             listing.Gap(listing.verticalSpacing);
             GUI.color = Color.white;
         }
+
         public static Listing_Standard BeginHiddenSection(this Listing_Standard instance, out float maxHeightAccumulator)
         {
             Rect rect = instance.GetRect(0);

@@ -1,4 +1,4 @@
-#	ATR 1.1.2 Changelog
+#	ATR 1.2.0 Changelog
 
 ## Medical
 - Mechanical implants, prosthetics, and Hediffs have been completely reworked across the board.
@@ -84,12 +84,21 @@
 - Most mechanics are visible via tooltip on the interface and act reasonably similarly to Royalty's Psyfocus.
 - Mechanical units will receive small penalties for poor maintenance and a small benefit for especially high maintenance.
 - Poor maintenance for an extended length of time (usually 3+ days) will result in various part breakdowns occurring.
+    - Poor maintenance causes progressive mood debuffs at 3, 6, and 10 days.
     - Minor issues like temporary part blackouts, rust development, and part decay occur frequently after this time.
     - Critical issues like corrupt memory, coolant pump failures, and rogue mechanites can occur if in critical maintenance.
+- Good maintenance offers progressive mood boosts at 3, 6, and 10 days.
 - Maintenance related issues are normally only fixable via the use of a part pack (see Medical).
 - Units will attempt to do urgent maintenance up to the target level prior to work (unless in the work time assignment) and prior to most other needs if in the meditation time assignment (Royalty required).
 - Units will always attempt to do idle maintenance if they have no other tasks to attend to (would wander).
 - Emergency maintenance with part packs can be used for disabled or injured units (up to 40%, 10% per pack) via surgery.
+
+## Factions:
+- The Android Union and Mechanical Marauder factions remain mostly untouched.
+- A new mechanic for factions to have mechanical colonists or organic colonists outlawed.
+    - Factions will declare war (if settings permit it) on the player if they possess an outlawed pawn as a colonist by setting relations to -100 and becoming a permanent enemy until the outlawed pawn type is no longer part of the faction.
+    - Mod settings give full control over which factions outlaw which pawn type (by default, Mechanical Marauders outlaw organics and the Empire outlaws mechanicals).
+    - Mechanical Marauders is no longer a permanent enemy by default.
 
 ## Balance:
 - Drones (by default, T1's) can not use the SkyMind Network, learn, have traits, or socially interact at all. They have no mood whatsoever, and are only recruitable via reprogramming surgery (unlocked via T1 android research).
@@ -145,7 +154,6 @@
 - "Guards for me" guards apply a mood buff to nearby pawns, but drones do not have a mood need at all, so it will throw constant errors for them if a drone happens to be nearby a guard. The mod's functionality still works, but expect significant errors or performance drops if drones are nearby guards. The solution would be for Guards for me to only apply it to pawns with a mood need.
 - "No Random Relations" appears to have an incompatibility surrounding the use of surrogates. The exact source of this issue is unknown at this time.
 - Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.
-- Having a drone in your colony will break the bed assignment menu if it can have more than 1 pawn assigned due to the drone's lack of an ideology and RimWorld's lack of null-checking this. This is a high priority bug to fix.
 - "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists. Smart medicine may still find a way to cause androids to be untendable.
 - Activating Self-Tend on a mechanical pawn will throw a message at you complaining that the Doctor work type is not assigned even if the pawn has the Mechanic work type assigned (It's harmless, mechanical pawns will self-tend based on Mechanic, not Doctor).
 - Blood Rot and Paralytic Abasia do not function on androids at the moment. Work is planned to add mechanical variants for them.

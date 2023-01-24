@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HistoryEventDef>
+        <defName>ATR_PossessesOrganicColonist</defName>
+        <label>allowed organic colonist</label>
+    </HistoryEventDef>
+
+    <HistoryEventDef>
+        <defName>ATR_PossessesMechanicalColonist</defName>
+        <label>allowed mechanical colonist</label>
+    </HistoryEventDef>
+
+</Defs>

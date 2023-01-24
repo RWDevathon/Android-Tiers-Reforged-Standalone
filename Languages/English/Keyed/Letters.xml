@@ -14,6 +14,11 @@
 	<ATR_ServerMeltdown>Server Meltdown</ATR_ServerMeltdown>
     <ATR_ServerMeltdownDesc>A server has partially exploded due to excessive heat!</ATR_ServerMeltdownDesc>
 	
+    <!-- Faction Rights Letters -->
+    <ATR_DeclarationOfWarRights>War of rights</ATR_DeclarationOfWarRights>
+    <ATR_DeclarationOfWarRightsDesc>{0} maintains a strict code against {1} rights, which you have violated. {2} is determined to wipe out all {1} intelligences - until the offending colonists are eliminated, there will be no peace.</ATR_DeclarationOfWarRightsDesc>
+    <ATR_CessationOfConflict>Rights conflict resolved</ATR_CessationOfConflict>
+    <ATR_CessationOfConflictDesc>{0} maintains a strict code against {1} rights, which you no longer violate. As tensions melt away and relations warm, peace is within the realm of possibility once again.</ATR_CessationOfConflictDesc>
 	
 	<!-- Hacking Incidents -->
 		<!-- Generic Messages -->

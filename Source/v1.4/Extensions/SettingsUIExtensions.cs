@@ -86,6 +86,56 @@ namespace ATReforged
             }
         }
 
+        public static void DefSelector(this Listing_Standard instance, IEnumerable<Def> options, ref HashSet<string> selectedDefs, string selectedLabel, string unselectedLabel, Action onChange = null)
+        {
+            GUI.color = Color.white;
+
+            float width = instance.ColumnWidth;
+
+            Text.Anchor = TextAnchor.LowerCenter;
+
+            List<Def> orderedUnselectedDefs = new List<Def>();
+            List<Def> orderedSelectedDefs = new List<Def>();
+
+            foreach (Def option in options)
+            {
+                if (selectedDefs.Contains(option.defName))
+                {
+                    orderedSelectedDefs.Add(option);
+                }
+                else
+                {
+                    orderedUnselectedDefs.Add(option);
+                }
+            }
+            orderedUnselectedDefs = orderedUnselectedDefs.OrderBy(def => def.label).ToList();
+            orderedSelectedDefs = orderedSelectedDefs.OrderBy(def => def.label).ToList();
+
+            Listing_Standard subsection = instance.BeginHiddenSection(out float subsectionHeight);
+            subsection.ColumnWidth = width / 2;
+            subsection.Label(selectedLabel);
+            for (int i = 0; i < orderedSelectedDefs.Count; i++)
+            {
+                if (subsection.ButtonText(orderedSelectedDefs[i].LabelCap))
+                {
+                    selectedDefs.Remove(orderedSelectedDefs[i].defName);
+                    onChange?.Invoke();
+                }
+            }
+
+            subsection.NewHiddenColumn(ref subsectionHeight);
+            subsection.Label(unselectedLabel);
+            for (int i = 0; i < orderedUnselectedDefs.Count; i++)
+            {
+                if (subsection.ButtonText(orderedUnselectedDefs[i].LabelCap))
+                {
+                    selectedDefs.Add(orderedUnselectedDefs[i].defName);
+                    onChange?.Invoke();
+                }
+            }
+            instance.EndHiddenSection(subsection, subsectionHeight);
+        }
+
         public static void AddChargeCapable(ThingDef pawn)
         {
             if (pawn.race.intelligence > Intelligence.Animal || pawn.race.trainability != TrainabilityDefOf.None)

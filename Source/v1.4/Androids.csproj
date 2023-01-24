@@ -202,6 +202,7 @@
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
+    <Compile Include="DefsOf\ATR_HistoryEventDefOf.cs" />
     <Compile Include="DefsOf\ATR_BodyPartDefOf.cs" />
     <Compile Include="DefsOf\ATR_BackstoryDefOf.cs" />
     <Compile Include="DefsOf\ATR_IncidentDefOf.cs" />
@@ -222,6 +223,7 @@
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
     <Compile Include="Harmony\Dialog_AssignBuildingOwner_Patch.cs" />
+    <Compile Include="Harmony\QuestGen_Pawns_Patch.cs" />
     <Compile Include="Harmony\HealthCardUtility_Patch.cs" />
     <Compile Include="Harmony\Trigger_PawnExperiencingDangerousTemperatures_Patch.cs" />
     <Compile Include="Harmony\ITab_Pawn_Visitor_Patch.cs" />

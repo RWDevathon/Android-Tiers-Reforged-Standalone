@@ -73,9 +73,10 @@ namespace ATReforged
                 CheckNetworkLinkedPawns();
                 CheckServers();
             }
-            else if (CGT % 6000 == 0)
+            if (CGT % 6000 == 0)
             {
                 CheckHackTimePenalty();
+                CheckRightlessFactions();
             }
         }
 
@@ -96,6 +97,134 @@ namespace ATReforged
                 }
             }
         }
+
+        // Check the factions to see if any of them should modify their relations with the player faction.
+        public void CheckRightlessFactions()
+        {
+            bool postLoad = false;
+            if (antiMechanicalRightsFactions == null || antiOrganicRightsFactions == null)
+            {
+                postLoad = true;
+                GenerateRightlessFactions();
+                Log.Warning("[ATR DEBUG] Rightless factions generated.");
+            }
+
+            if (!ATReforged_Settings.factionsWillDeclareRightsWars)
+            {
+                // If settings indicate that rights wars are disabled after loading the game, ensure that factions are not permanent enemies because of rights after loading a save.
+                if (postLoad)
+                {
+                    foreach (Faction faction in antiMechanicalRightsFactions)
+                    {
+                        faction.def.permanentEnemy = false;
+                    }
+                    foreach (Faction faction in antiOrganicRightsFactions)
+                    {
+                        faction.def.permanentEnemy = false;
+                    }
+                }
+                return;
+            }
+
+            bool playerFactionHasMechanicalColonists = false;
+            bool playerFactionHasOrganicColonists = false;
+            IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
+            foreach (Pawn pawn in playerPawns)
+            {
+                if (Utils.IsConsideredMechanical(pawn))
+                {
+                    playerFactionHasMechanicalColonists = true;
+                }
+                else
+                {
+                    playerFactionHasOrganicColonists = true;
+                }
+                if (playerFactionHasOrganicColonists && playerFactionHasMechanicalColonists)
+                {
+                    break;
+                }
+            }
+
+            // If the player has mechanical colonists, all factions which outlaw mechanical colonists become enemies.
+            if (playerFactionHasMechanicalColonists)
+            {
+                foreach (Faction faction in antiMechanicalRightsFactions)
+                {
+                    if (faction.def.permanentEnemy || faction.defeated)
+                    {
+                        continue;
+                    }
+
+                    faction.TryAffectGoodwillWith(Faction.OfPlayer, -500, reason: ATR_HistoryEventDefOf.ATR_PossessesMechanicalColonist);
+
+                    Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeMechanical".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
+                    faction.def.permanentEnemy = true;
+                }
+            }
+            // If the player has no mechanical colonists, all factions which outlaw mechanical colonists are no longer enemies (but will remain hostile).
+            else
+            {
+                foreach (Faction faction in antiMechanicalRightsFactions)
+                {
+                    if (!faction.def.permanentEnemy || faction.defeated)
+                    {
+                        continue;
+                    }
+
+                    faction.def.permanentEnemy = false;
+                    Find.LetterStack.ReceiveLetter("ATR_CessationOfConflict".Translate(), "ATR_CessationOfConflictDesc".Translate(faction.NameColored, "ATR_PawnTypeMechanical".Translate().ToLower()), LetterDefOf.PositiveEvent);
+                }
+            }
+
+            // If the player has organic colonists, all factions which outlaw organic colonists become enemies.
+            if (playerFactionHasOrganicColonists)
+            {
+                foreach (Faction faction in antiOrganicRightsFactions)
+                {
+                    if (faction.def.permanentEnemy || faction.defeated)
+                    {
+                        continue;
+                    }
+
+                    faction.TryAffectGoodwillWith(Faction.OfPlayer, -500, reason: ATR_HistoryEventDefOf.ATR_PossessesOrganicColonist);
+                    Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeOrganic".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
+                    faction.def.permanentEnemy = true;
+                }
+            }
+            // If the player has no organic colonists, all factions which outlaw organic colonists are no longer enemies (but will remain hostile).
+            else
+            {
+                foreach (Faction faction in antiOrganicRightsFactions)
+                {
+                    if (!faction.def.permanentEnemy || faction.defeated)
+                    {
+                        continue;
+                    }
+
+                    faction.def.permanentEnemy = false;
+                    Find.LetterStack.ReceiveLetter("ATR_CessationOfConflict".Translate(), "ATR_CessationOfConflictDesc".Translate(faction.NameColored, "ATR_PawnTypeOrganic".Translate().ToLower()), LetterDefOf.PositiveEvent);
+                }
+            }
+        }
+
+        // Generate the rightless factions for storage, to be stored until the game is deloaded or another save is loaded. Individual factions may be destroyed and therefore removed.
+        public void GenerateRightlessFactions()
+        {
+            antiMechanicalRightsFactions = new List<Faction>();
+            antiOrganicRightsFactions = new List<Faction>();
+            foreach (Faction faction in Find.FactionManager.AllFactionsListForReading)
+            {
+                if (ATReforged_Settings.antiMechanicalRightsFaction.Contains(faction.def.defName) && !faction.defeated)
+                {
+                    antiMechanicalRightsFactions.Add(faction);
+                }
+                if (ATReforged_Settings.antiOrganicRightsFaction.Contains(faction.def.defName) && !faction.defeated)
+                {
+                    antiOrganicRightsFactions.Add(faction);
+                }
+            }
+        }
+
 
         // Check to see if any virused things have elapsed their infected timers. Remove viruses that have elapsed.
         public void CheckVirusedThings()
@@ -616,5 +745,9 @@ namespace ATReforged
         private List<int> thingValueCopy = new List<int>();
         private List<Pawn> pawnKeyCopy = new List<Pawn>();
         private List<int> pawnValueCopy = new List<int>();
+
+        // Local containers for factions for being checked against. They are not saved, and are produced when needed;
+        private List<Faction> antiMechanicalRightsFactions = null;
+        private List<Faction> antiOrganicRightsFactions = null;
     }
 }

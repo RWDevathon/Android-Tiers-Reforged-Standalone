@@ -16,7 +16,7 @@ namespace ATReforged
             public static bool Prefix(ref bool __result, Lord lord, TriggerSignal signal)
             {
                 // Check all pawns belonging to the lord.
-                for (int i = lord.ownedPawns.Count; i >= 0; i--)
+                for (int i = lord.ownedPawns.Count - 1; i >= 0; i--)
                 {
                     Pawn pawn = lord.ownedPawns[i];
                     // Skip pawns who can not or should not report danger to their lord.

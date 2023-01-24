@@ -17,7 +17,7 @@ namespace ATReforged
                 ThingDef targetDef = request.KindDef?.race;
                 if (targetDef != null)
                 {
-                    if (Utils.IsConsideredMechanical(targetDef) && !Utils.HasSpecialStatus(targetDef) && !Utils.IsConsideredMechanicalAnimal(targetDef))
+                    if ((Utils.IsConsideredMechanicalAndroid(targetDef) || Utils.IsConsideredMechanicalDrone(targetDef)) && !Utils.HasSpecialStatus(targetDef))
                     {
                         request.FixedGender = Utils.GenerateGender(request.KindDef);
                     }

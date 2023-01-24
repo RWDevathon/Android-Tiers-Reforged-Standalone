@@ -52,6 +52,15 @@
 	<ATR_SettingsNotConsideredDrone>Not Drones</ATR_SettingsNotConsideredDrone>
 	<ATR_SettingsConsideredAnimal>Mechanical Animals</ATR_SettingsConsideredAnimal>
 	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
+
+        <!-- Rights Settings -->
+    <ATR_factionsWillDeclareRightsWars>Factions will declare war over rights disputes</ATR_factionsWillDeclareRightsWars>
+    <ATR_factionsWillDeclareRightsWarsDesc>Factions that are anti-mechanical or anti-organic will declare war on you if you have mechanical/organic colonists</ATR_factionsWillDeclareRightsWarsDesc>
+
+    <ATR_SettingsAntiMechanicalFaction>Factions without mechanical rights</ATR_SettingsAntiMechanicalFaction>
+    <ATR_SettingsTolerateMechanicalFaction>Factions tolerating mechanicals</ATR_SettingsTolerateMechanicalFaction>
+    <ATR_SettingsAntiOrganicFaction>Factions without organic rights</ATR_SettingsAntiOrganicFaction>
+    <ATR_SettingsTolerateOrganicFaction>Factions tolerating organics</ATR_SettingsTolerateOrganicFaction>
 	
 	<!-- Needs Settings -->
 	<ATR_AndroidOnlyNotice>Note: Only units marked as androids are affected by this. Drones have no such needs.</ATR_AndroidOnlyNotice>
