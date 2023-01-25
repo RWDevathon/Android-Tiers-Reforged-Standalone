@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ATR_SkyMindDisconnectionRisk>Desconectar da rede SkyMind enquanto a operação estiver em andamento resultará em consequências graves. Corrupção de memória de graus variados é garantida se o desligamento inadequado ocorrer.</ATR_SkyMindDisconnectionRisk>
+	
+	<ATR_ResurrectionSuccessful>A unidade mecânica {0} foi reiniciada com sucesso para capacidade mínima. A unidade deve reiniciar antes de retornar a plena funcionalidade.</ATR_ResurrectionSuccessful>
+	<ATR_ResurrectionFailedInvalidPawn>O alvo, {0}, não foi reativado, pois não é um alvo válido para a ressurreição desta forma. Os alvos devem ser mecânicos (configurações AT Reforged) e devem ter um núcleo intacto.</ATR_ResurrectionFailedInvalidPawn>
+	<ATR_ResurrectionFailedDroneOnly>O conjunto de ressurreição de drones só pode ser usado em drones ou animais, e {0} é considerado uma unidade mecânica totalmente autônoma!</ATR_ResurrectionFailedDroneOnly>
+	
+    <ATR_InsufficientPoints>Pelo menos {0} pontos são necessários para esta operação.</ATR_InsufficientPoints>
+
+	<!-- Skill Upgrades -->
+	<ATR_PawnBeingModified>Habilidades e paixões por: </ATR_PawnBeingModified>
+	<ATR_CurrentXP> XP necessário para o próximo nível: </ATR_CurrentXP>
+	<ATR_TodaysXP> XP de hoje: </ATR_TodaysXP>
+
+	<ATR_AddSkillPoints>Injetar pontos em {0}</ATR_AddSkillPoints>
+	<ATR_AvailableSkillPoints>Pontos disponíveis : {0}</ATR_AvailableSkillPoints>
+	<ATR_AvailableSkillPointsDesc>Nota: A injeção de insight está sujeita às capacidades de aprendizado de um indivíduo, bem como aos limites de compreensão diária. A injeção de paixão está sujeita à capacidade de aprendizado de um indivíduo, bem como às paixões pré-existentes. A sobre estimulação é ineficiente.</ATR_AvailableSkillPointsDesc>
+	
+    <!-- Hacking Interface -->
+    <ATR_HackInterfaceTitle>Aguardando diretiva de guerra cibernética.</ATR_HackInterfaceTitle>
+    <ATR_ConfirmHack>Autorizar operação de alvo?</ATR_ConfirmHack>
+    <ATR_ConfirmhackDesc>Todos os hacks têm riscos inerentes. O fracasso pode significar danos diplomáticos, ativação automática de contramedida ou alguma forma de retaliação.</ATR_ConfirmhackDesc>
+
+    <ATR_HackOpCost>Custo: {0}</ATR_HackOpCost>
+    <ATR_SuccessChance>Chance de sucesso estimada: {0}%</ATR_SuccessChance>
+
+    <ATR_AvailableHackingPoints>Pontos disponíveis: {0}. Penalidade de tempo: {1}.</ATR_AvailableHackingPoints>
+    <ATR_AvailableHackingPointsDesc>Nota: O custo de iniciar hacks é uma função do custo de operação básico multiplicado pelo tempo desde o último hack (penalidade para uso frequente).\nDedicar mais pontos aumenta a probabilidade de sucesso.</ATR_AvailableHackingPointsDesc>
+
+        <!-- Guidance Hack -->
+    <ATR_GuidanceHack>Forçar um redirecionamento do sistema de orientação de uma facção</ATR_GuidanceHack>
+    <ATR_GuidanceHackDesc>Tente realizar um hack no sistema de orientação de uma facção para redirecionar algo para este mapa. Não há garantia do conteúdo do que será enviado. Pode ser suprimentos, um navio de comércio, um prisioneiro - ou uma transferência de guarnição inimiga.</ATR_GuidanceHackDesc>
+
+        <!-- Propaganda Hack -->
+    <ATR_PropagandaHack>Implantar uma campanha de propaganda positiva direcionada</ATR_PropagandaHack>
+    <ATR_PropagandaHackDesc>Tente uma campanha dedicada e especificamente direcionada para influenciar membros chave de uma facção alvo em favor da colônia. Devido à natureza opaca da influência política, o resultado exato é desconhecido.</ATR_PropagandaHackDesc>
+
+        <!-- Espionage Hack -->
+    <ATR_EspionageHack>Iniciar uma campanha de espionagem para adquirir uma missão</ATR_EspionageHack>
+    <ATR_EspionageHackDesc>Tente usar o insight de inteligência adquirido para identificar uma missão promissora a partir da inteligência de fundo de uma facção. É garantido produzir insight em alguma forma de um armazém, mas não de uma facção ou grupo particular.</ATR_EspionageHackDesc>
+	
+        <!-- Disruptor Hack -->
+    <ATR_DisruptorHack>Lançar um ataque DDOS em todo o mapa para unidades hostis locais</ATR_DisruptorHack>
+    <ATR_DisruptorHackDesc>Tente um ataque DDOS localizado em párias capacitados da SkyMind de uma facção particular que estão presentes neste mapa.</ATR_DisruptorHackDesc>
+    
+    <!-- Initialize Mind Dialog/Keys -->
+	<ATR_InitializeMindTitle>Unidade mecânica precisa de inicialização</ATR_InitializeMindTitle>
+	<ATR_InitializeMindDesc>A interface de núcleo recém-conectada está pronta para conter uma inteligência, mas ainda não a inicializou. Uma inteligência pode ser transferida de qualquer pária ligada à SkyMind, se disponível, ou pode ser permitido que forme uma personalidade por conta própria.</ATR_InitializeMindDesc>
+	
+	<ATR_SkyMindInitialization>Inicializar da SkyMind</ATR_SkyMindInitialization>
+	<ATR_AutomaticInitialization>Inicializar automaticamente</ATR_AutomaticInitialization>
+
+    <!-- Maintenance Level Setter Dialog -->
+    <ATR_SetTargetMaintenanceLevel>Nível de manutenção desejado: {0}%</ATR_SetTargetMaintenanceLevel>
+	
+</LanguageData>

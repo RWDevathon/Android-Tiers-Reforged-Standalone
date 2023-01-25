@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- その他のキー -->
+    <ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
+
+    <ATR_RestartRequired>再起動が必要です.</ATR_RestartRequired>
+    <ATR_RestartRequiredSectionDesc>このセクションの設定を変更すると、ゲームを再起動する必要があります.</ATR_RestartRequiredSectionDesc>
+    <ATR_RestartRequiredPostDesc>一部の設定を変更すると、安全のためにゲームを再起動する必要があります.</ATR_RestartRequiredPostDesc>
+
+
+    <ATR_ExpandMenu>展開/折りたたむ</ATR_ExpandMenu>
+	
+	<!-- Mod 設定ページのキー -->
+	<ATR_SettingsTabTitle>構成</ATR_SettingsTabTitle>
+
+    <ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+    <ATR_SettingsTabOption_General>全般</ATR_SettingsTabOption_General>
+    <ATR_SettingsTabOption_Power>パワー</ATR_SettingsTabOption_Power>
+    <ATR_SettingsTabOption_Security>セキュリティ</ATR_SettingsTabOption_Security>
+    <ATR_SettingsTabOption_Health>ヘルス</ATR_SettingsTabOption_Health>
+    <ATR_SettingsTabOption_Connectivity>接続</ATR_SettingsTabOption_Connectivity>
+    <ATR_SettingsTabOption_Stats>統計</ATR_SettingsTabOption_Stats>
+	
+	<!-- 一般設定 -->
+    <ATR_ApplyPreset>プリセットを適用</ATR_ApplyPreset>
+	
+		<!-- 性別設定 -->
+    <ATR_AndroidGenderNotice>変更は新しいアンドロイドにのみ影響します</ATR_AndroidGenderNotice>
+    <ATR_AndroidsHaveGenders>アンドロイドには性別があります</ATR_AndroidsHaveGenders>
+    <ATR_AndroidsPickGenders>Android は作成時に性別を選択します</ATR_AndroidsPickGenders>
+    <ATR_AndroidsFixedGenderSelector>すべてのアンドロイドは男性 (false) または女性 (true) です</ATR_AndroidsFixedGenderSelector>
+    <ATR_AndroidsGenderRatio>アンドロイドが男性の性別と女性の性別を選択するチャンス</ATR_AndroidsGenderRatio>
+	
+		<!-- 共通設定 -->
+    <ATR_PlayerOnlyNote>無効にすると、アンドロイドはプレイヤーが作成した場合にのみ存在します</ATR_PlayerOnlyNote>
+    <ATR_AndroidsAppearNaturally>アンドロイドは派閥やイベントの一部として登場できます</ATR_AndroidsAppearNaturally>
+
+    <ATR_AndroidFactionSettings>アンドロイド派閥はどのような役割を果たしますか? 新しいゲームのみに影響</ATR_AndroidFactionSettings>
+    <ATR_AndroidSocietiesExist>Android には独自の派閥があります</ATR_AndroidSocietiesExist>
+    <ATR_AndroidRaidersExist>アンドロイドは独自の海賊集団を結成しました</ATR_AndroidRaidersExist>
+    <ATR_AndroidRaidersDesc>バニラの海賊派閥のように振る舞う</ATR_AndroidRaidersDesc>
+    <ATR_AndroidUnionistsExist>集団的生存に専念するAndroidが統合されました</ATR_AndroidUnionistsExist>
+    <ATR_AndroidUnionistsDesc>バニラのアウトランダー派閥のように振る舞う</ATR_AndroidUnionistsDesc>
+	
+	<!-- 設定が必要 -->
+    <ATR_AndroidOnlyNotice>注: アンドロイドとしてマークされたユニットのみが影響を受けます。 ドローンにはそのような必要はありません.</ATR_AndroidOnlyNotice>
+    <ATR_AndroidsNeedJoy>アンドロイドは喜びの欲求を満たす必要があります</ATR_AndroidsNeedJoy>
+    <ATR_AndroidsNeedBeauty>アンドロイドは美しさのニーズを満たす必要があります</ATR_AndroidsNeedBeauty>
+    <ATR_AndroidsNeedComfort>アンドロイドは快適さのニーズを満たす必要があります</ATR_AndroidsNeedComfort>
+    <ATR_AndroidsNeedOutdoors>Android は屋外/屋内のニーズを満たす必要があります</ATR_AndroidsNeedOutdoors>
+
+    <ATR_SettingsPresetDefault>デフォルト</ATR_SettingsPresetDefault>
+    <ATR_SettingsPresetCustom>カスタム</ATR_SettingsPresetCustom>
+
+    <ATR_SettingsConsideredAndroid>アンドロイド</ATR_SettingsConsideredAndroid>
+    <ATR_SettingsNotConsideredAndroid>Android ではありません</ATR_SettingsNotConsideredAndroid>
+    <ATR_SettingsConsideredDrone>ドローン</ATR_SettingsConsideredDrone>
+    <ATR_SettingsNotConsideredDrone>ドローンではない</ATR_SettingsNotConsideredDrone>
+    <ATR_SettingsConsideredAnimal>機械動物</ATR_SettingsConsideredAnimal>
+    <ATR_SettingsNotConsideredAnimals>有機動物</ATR_SettingsNotConsideredAnimals>
+	
+	<!-- 電源設定 -->
+    <ATR_wattsConsumedPerBodySize>充電時の本体1サイズあたりの消費電力[デフォルト: 500]</ATR_wattsConsumedPerBodySize>
+    <ATR_batteryPercentagePerRareTick>Rare Tick ごとに充電されたバッテリーの割合 (~4 秒) [デフォルト: 7%]</ATR_batteryPercentagePerRareTick>
+    <ATR_batteryPercentagePerTick>バッテリー充電率 [デフォルト: 1]</ATR_batteryPercentagePerTick>
+    <ATR_mechanicalsHaveDifferentBioprocessingEfficiency>機械ユニットは有機物とは異なる方法で栄養を処理します.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+    <ATR_mechanicalBioprocessingEfficiency>栄養効率 [デフォルト: 50%]</ATR_mechanicalBioprocessingEfficiency>
+	
+	<!-- セキュリティ設定 -->
+         <!-- 敵対的ハッキング -->
+    <ATR_EnemyHacksOccur>敵対的ハッキングが有効です.</ATR_EnemyHacksOccur>
+    <ATR_ChanceAlliesInterceptHack>味方派閥ごとにあなたに対するハッキングを傍受するチャンス</ATR_ChanceAlliesInterceptHack>
+    <ATR_ChanceAlliesInterceptHackDesc>味方の派閥が敵のハッキングの成功からあなたを救い、ダメージを防ぎ、実際にセキュリティポイントを与える確率。 これは PER ALLY です。</ATR_ChanceAlliesInterceptHackDesc>
+    <ATR_PointsGainedOnInterceptPercentage>味方が攻撃のパーセンテージとして傍受したときに獲得したポイント</ATR_PointsGainedOnInterceptPercentage>
+    <ATR_PointsGainedOnInterceptPercentageDesc>味方があなたへの攻撃を傍受すると、彼らはあなたにセキュリティ ポイントを寄付します。 これは、彼らがあなたに与える襲撃ポイントのパーセンテージを制御します.</ATR_PointsGainedOnInterceptPercentageDesc>
+    <ATR_EnemyHackAttackStrengthModifier>敵のハック強度修正</ATR_EnemyHackAttackStrengthModifier>
+    <ATR_EnemyHackAttackStrengthModifierDesc>敵のハッキング インシデントが持つハッキング ポイント数に対する乗数修飾子。 100% 未満では強度が低下し、100% を超えると強度が上昇します。</ATR_EnemyHackAttackStrengthModifierDesc>
+    <ATR_PercentageOfValueUsedForRansoms>身代金攻撃で要求されたアイテムの価値の割合</ATR_PercentageOfValueUsedForRansoms>
+	
+        <!-- プレイヤーのハッキング -->
+     <ATR_PlayerCanHack>プレーヤーのハッキングが有効です.</ATR_PlayerCanHack>
+     <ATR_receiveFullHackingAlert>容量の 90% を超えるハッキング ポイントに対するアラート</ATR_receiveFullHackingAlert>
+     <ATR_RetaliationChanceOnFailure>ハッキングに失敗した場合、ターゲット派閥が報復する可能性</ATR_RetaliationChanceOnFailure>
+     <ATR_MinHackSuccessChance>ハッキング成功の最小確率</ATR_MinHackSuccessChance>
+     <ATR_MaxHackSuccessChance>ハッキング成功の最大確率</ATR_MaxHackSuccessChance>
+
+    <!-- ヘルス設定 -->
+         <!-- 医療 -->
+     <ATR_medicinesAreInterchangeable>有機/機械薬品は交換可能です.</ATR_medicinesAreInterchangeable>
+     <ATR_showMechanicalSurgerySuccessChance>完了した機械手術の成功確率を表示します.</ATR_showMechanicalSurgerySuccessChance>
+     <ATR_maxChanceMechanicOperationSuccess>機械手術の最大成功率の変更</ATR_maxChanceMechanicOperationSuccess>
+     <ATR_chanceFailedOperationMinor>機械手術の失敗の可能性は軽微 [デフォルト 75%]</ATR_chanceFailedOperationMinor>
+     <ATR_chancePartSavedOnFailure>失敗した機械手術から部品が返される可能性 [デフォルト 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- メンテナンス -->
+     <ATR_receiveMaintenanceFailureLetters>メンテナンス関連の健康問題に関する手紙を受け取ります.</ATR_receiveMaintenanceFailureLetters>
+
+    
+	<!-- 接続設定 -->
+         <!-- サロゲート -->
+     <ATR_surrogatesAllowed>サロゲートは許可されています.</ATR_surrogatesAllowed>
+     <ATR_otherFactionsAllowedSurrogates>他の派閥はサロゲートを使用できます.</ATR_otherFactionsAllowedSurrogates>
+     <ATR_minGroupSizeForSurrogates>派閥グループがサロゲートと共にスポーンするメンバーの数</ATR_minGroupSizeForSurrogates>
+     <ATR_minSurrogatePercentagePerLegalGroup>正当なグループのサロゲートの最小割合 [デフォルト 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+     <ATR_maxSurrogatePercentagePerLegalGroup>正当なグループのサロゲートの最大割合 [デフォルト 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+     <ATR_safeSurrogateConnectivityCountBeforePenalty>ペナルティ前のコントローラごとのサロゲート:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+        <!-- スキル -->
+    <ATR_receiveFullSkillAlert>スキル ポイントが容量の 90% を超えていることを警告します。</ATR_receiveFullSkillAlert>
+    <ATR_skillPointConversionRate>スキル ポイントごとに生成される基本 XP の量 [デフォルト: 0.5]</ATR_skillPointConversionRate>
+    <ATR_passionSoftCap>情熱ごとにコストが増加する前の情熱のソフトキャップ [デフォルト: 8]</ATR_passionSoftCap>
+    <ATR_basePointsNeededForPassion>情熱ごとに必要な基本スキル ポイント [デフォルト: 5000]</ATR_basePointsNeededForPassion>
+
+        <!-- クラウド -->
+     <ATR_UploadingKills>SkyMind にアップロードすると、イニシエーターのボディが空白になります。</ATR_UploadingKills>
+     <ATR_UploadingPermakills>SkyMind にアップロードすると、開始者の体は完全に役に立たなくなり、死んでしまいます。</ATR_UploadingPermakills>
+     <ATR_SkyMindOperationTimeRequired>SkyMind の操作を完了するのに必要な時間 [デフォルト: 24]</ATR_SkyMindOperationTimeRequired>
+
+</LanguageData>

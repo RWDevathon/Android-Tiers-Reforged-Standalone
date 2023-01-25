@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATR_AlertServerHeatCritical>コンピューターの熱は重要です</ATR_AlertServerHeatCritical>
+	<ATR_AlertServerHeatCriticalDesc>少なくとも1台のコンピュータが、最大安全熱閾値を超えて燃える可能性があります！ ネットワークの整合性を維持するためには対応が必要です！</ATR_AlertServerHeatCriticalDesc>
+	
+	<ATR_AlertFullSkillServers>スキルポイント満タン</ATR_AlertFullSkillServers>
+    <ATR_AlertFullSkillServersDesc>スキルポイントにはもう余裕がありません。使用するか、容量を拡大してください。</ATR_AlertFullSkillServersDesc>
+    
+	<ATR_AlertFullHackingServers>ハッキングポイント満タン</ATR_AlertFullHackingServers>
+    <ATR_AlertFullHackingServersDesc>ハッキングポイントにはもう余裕があり、現在のタイムペナルティはありません。使用するか、容量を拡大してください。</ATR_AlertFullHackingServersDesc>
+    
+    <ATR_AlertLowSecurity>ネットワークが危険な状態です</ATR_AlertLowSecurity>
+	<ATR_AlertLowSecurityDesc>利用可能なセキュリティポイントの数は、ハッキング試行に対して成功する可能性が非常に低いです！ 損害を避けるためには注意が必要です。</ATR_AlertLowSecurityDesc>
+
+	<ATR_NeedMechanic>メカニックが必要です</ATR_NeedMechanic>
+	<ATR_NeedMechanicDesc>これらの機械装置は修理が必要ですが、健康なコロニストがメカニックの仕事に割り当てられていません。\n\n{0}\n健康なコロニストをメカニックの仕事に割り当ててください。ほとんどの損傷は自然に治癒しますが、メカニックは回復速度を大幅に上げ、副作用の発生を減らします。</ATR_NeedMechanicDesc>
+  
+</LanguageData>

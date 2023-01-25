@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- Geral -->
+	<ATR_SkyMindConnectionFailed>Não foi possível estabelecer a conexão SkyMind. Verifique a capacidade e disponibilidade da rede.</ATR_SkyMindConnectionFailed>
+	<ATR_SkyMindConnectionFailedNoNetwork>Não foi possível estabelecer a conexão SkyMind. Não há rede disponível.</ATR_SkyMindConnectionFailedNoNetwork>
+	
+	<ATR_GridlockerCleared>O Grid-locker foi descriptografado e desativado com sucesso.</ATR_GridlockerCleared> 
+
+	<!-- Núcleo -->
+	<ATR_RemoveCloudPawnSuccess>A rede neural de {0} foi removida.</ATR_RemoveCloudPawnSuccess>
+	
+	<ATR_ReplicateCloudPawnFailed>Não foi possível iniciar a replicação. Não há espaço SkyMind suficiente disponível para alocação.</ATR_ReplicateCloudPawnFailed>
+
+    <!-- Hackeamento de jogador -->
+    <ATR_HackOperationFailed>A operação falhou ao invadir o sistema de segurança da facção-alvo. Não são esperadas represálias.</ATR_HackOperationFailed>
+	<ATR_DisruptorHackSuccess>Interrupção bem-sucedida. Unidades hostis foram prejudicadas.</ATR_DisruptorHackSuccess>
+
+    <ATR_NoArrival>Nada foi enviado para as coordenadas misturadas antes que a facção redefinisse seu sistema de orientação. Eles tiveram sorte desta vez.</ATR_NoArrival>
+
+    <!-- Interfaces Android -->
+    <ATR_NewbootAndroidCreated>Android criado. Instale uma interface por cirurgia para ativar a unidade.</ATR_NewbootAndroidCreated>
+    <ATR_InterfaceRemoved>Uma interface de android foi removida. Todos os dados de personalidade e controle foram destruídos. Instale uma nova interface para ativá-la.</ATR_InterfaceRemoved>
+
+	<!-- Link -->
+	<ATR_SurrogateControlled>{0} conectado a um novo substituto</ATR_SurrogateControlled>
+	<ATR_OperationInitiated>Rede de SkyMind estabelecida a pedido de {0}. Não desative a conexão de rede até que o procedimento esteja concluído.</ATR_OperationInitiated>
+	<ATR_OperationCompleted>Operação SkyMind completa</ATR_OperationCompleted>
+	<ATR_OperationCompletedDesc>A rede SkyMind realizou com sucesso a operação, conforme solicitado por {0}.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>Operação SkyMind falhou!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>{0} sofreu uma corrupção catastrófica da memória devido à queda da ligação SkyMind durante uma operação mental. A operação falhou e ocorreu dano grave à memória.</ATR_OperationFailureDesc>
+
+	<MessageMedicalOperationFailureMinorAndroid>{0} cometeu um erro menor enquanto operava e abortou o procedimento em {1}.</MessageMedicalOperationFailureMinorAndroid>
+	<MessageMedicalOperationFailureCatastrophicAndroid>{0} falhou catastroficamente enquanto tentava uma operação em {1}.</MessageMedicalOperationFailureCatastrophicAndroid>
+	<MessageMedicalOperationFailureRidiculousAndroid>{0} cometeu um erro grave enquanto tentava uma operação em {1}.</MessageMedicalOperationFailureRidiculousAndroid>
+	<MessageMedicalOperationFailureFatalAndroid>{0} cometeu um erro fatal durante a operação em {1} que causou danos em cascata não intencionais. O procedimento causou danos irreversíveis ​​ao processador central, resultando na perda total de memória e consciência.</MessageMedicalOperationFailureFatalAndroid>
+	
+</LanguageData>

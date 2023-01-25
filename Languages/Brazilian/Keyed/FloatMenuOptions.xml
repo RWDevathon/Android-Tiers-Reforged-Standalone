@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableSources>Fontes disponíveis:</ATR_ViableSources>
+	<ATR_ViableTargets>Alvos disponíveis:</ATR_ViableTargets>
+	<ATR_NoAvailableTarget>Nenhum alvo disponível para operação.</ATR_NoAvailableTarget>
+
+	<!-- Charging -->
+	<ATR_ForceCharge>Forçar carregamento de bateria</ATR_ForceCharge>
+	<ATR_NoAvailableChargingSpots>Não pode usar, os pontos de carregamento estão reservados.</ATR_NoAvailableChargingSpots>
+	<ATR_NeedToAllowCharge>{0} não tem capacidades de carregamento habilitadas.</ATR_NeedToAllowCharge>
+	<ATR_MassiveNotAllowed>Unidades mecânicas massivas não podem usar isso.</ATR_MassiveNotAllowed>
+	<ATR_MassiveRequired>Somente unidades mecânicas massivas podem usar isso.</ATR_MassiveRequired>
+	
+</LanguageData>

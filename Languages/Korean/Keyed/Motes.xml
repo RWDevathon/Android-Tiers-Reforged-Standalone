@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoFlickering -->
+	<ATR_FlickEnable>SkyCloud를 통한 전원 켜기</ATR_FlickEnable>
+	<ATR_FlickDisable>SkyCloud를 통한 전원 끄기</ATR_FlickDisable>
+	<ATR_AutoDoorOpenMoteText>SkyCloud를 통해 열기</ATR_AutoDoorOpenMoteText>
+	<ATR_AutoDoorCloseMoteText>SkyCloud를 통한 종료</ATR_AutoDoorCloseMoteText>
+
+</LanguageData>

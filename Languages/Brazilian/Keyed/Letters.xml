@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Geral --> 
+	
+	<ATR_ReprogramSuccess>Drone Reprogramado</ATR_ReprogramSuccess>
+	<ATR_ReprogramSuccessDesc>{0} foi reprogramado. Após o reinício, ele reconhecerá a colônia como seu controlador.</ATR_ReprogramSuccessDesc>
+	<ATR_ReprogramFailed>Reprogramando Falhou</ATR_ReprogramFailed>
+	<ATR_ReprogramFailedDesc>A operação de reprogramação em {0} falhou. Ele reiniciará, mas não reconhecerá comandos. Pode ter sofrido danos na memória no processo.</ATR_ReprogramFailedDesc>
+	
+	<ATR_FractalCorruption>Abominação Fracional</ATR_FractalCorruption>
+	<ATR_FractalCorruptionDesc>{0} foi totalmente corrompido por uma distorção fracional. Eles não são mais que uma abominação! Os ecos de gritos torturados serão ouvidos por muitas milhas, e talvez por tantos anos.</ATR_FractalCorruptionDesc>
+	
+	<ATR_ServerMeltdown>Derretimento de servidor</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>Um servidor explodiu parcialmente devido ao calor excessivo!</ATR_ServerMeltdownDesc>
+	
+	
+	<!-- Incidentes de hacking -->
+		<!-- Mensagens genéricas -->
+	<ATR_IncidentGenericAttackDesc>Uma tentativa de hacking hostil avaliada com uma força de {0} conseguiu invadir o sistema de segurança SkyMind da colônia, infectando {1} dispositivos conectados antes que os mecanismos de segurança entrassem em ação.</ATR_IncidentGenericAttackDesc>
+	<ATR_IncidentGenericDefense>Tentativa de hack derrotada</ATR_IncidentGenericDefense>
+	<ATR_IncidentGenericDefenseDesc>Uma tentativa de hacking hostil avaliada com uma força de {0} falhou em invadir o sistema de segurança SkyMind da colônia. A funcionalidade do sistema está normal e os servidores de segurança estão tentando ficar à frente das incursões.</ATR_IncidentGenericDefenseDesc>
+	<ATR_IncidentGenericAllyIntercept>Hack interceptado!</ATR_IncidentGenericAllyIntercept>
+	<ATR_IncidentGenericAllyInterceptDesc>Hackers brancos do seu aliado {0} entram em contato com você informando sobre uma tentativa de hack de uma pessoa hostil em sua rede SkyMind. Eles não apenas conseguiram parar o ataque (avaliado com uma força de {1} pontos) que teria violado sua segurança, eles conseguiram identificar várias vulnerabilidades de segurança que podem ser facilmente corrigidas, resultando em um ganho de {2} pontos no seu sistema de segurança!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		<!-- Vírus Gridscreen -->
+			<!-- Grid-virus derrotado -->
+	<ATR_IncidentGridVirusDefeated>Vírus Grid derrotado</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Ataque Grid-sleeper -->
+	<ATR_IncidentGridsleeperAttack>Grid-sleeper</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>Os dispositivos afetados caíram e precisarão de tempo para restaurar a funcionalidade padrão.</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- Ataque Grid-locker -->
+	<ATR_IncidentGridlockerAttack>Grid-locker</ATR_IncidentGridlockerAttack>
+	<ATR_IncidentGridlockerAttackDesc>Os dispositivos afetados tiveram sua funcionalidade criptografada pelo hacker! Agora cabe ao hacker restaurar a funcionalidade - isso exigirá um acordo.</ATR_IncidentGridlockerAttackDesc>
+	
+	<ATR_CryptolockerNeedRansom>Grid-locker Ransom</ATR_CryptolockerNeedRansom>
+	<ATR_CryptolockerNeedRansomDesc>Um dispositivo grid-locked cuspiu uma mensagem em loop. O hacker enviará códigos de descriptografia e desistirá do controle dos {0} dispositivos que ele hackeou em troca de {1} prata.</ATR_CryptolockerNeedRansomDesc>
+	
+			<!-- Ataque Grid-breaker -->
+	<ATR_IncidentGridbreakerAttack>Grid-breaker</ATR_IncidentGridbreakerAttack>
+	<ATR_IncidentGridbreakerAttackDesc>Os dispositivos afetados sofreram falha no hardware devido a procedimentos de software não seguros. Levará algum tempo para restaurar a funcionalidade padrão após as reparações.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- Intervenção de vírus Grid Ally -->
+	<ATR_IncidentGridVirusAllyIntercept>Vírus Grid interceptado!</ATR_IncidentGridVirusAllyIntercept>
+	
+		<!-- Ataque DDOS -->
+	<ATR_IncidentDDOSDefeated>Vírus Grid derrotado</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>Os dispositivos afetados foram inundados com dados e informações lixo. Isso danificará a geração de insight de habilidade e hacking. O ataque não conseguiu danificar efetivamente unidades individuais, no entanto.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>Os dispositivos afetados foram inundados com dados e informações lixo. Isso danificará a geração de insight de habilidade e hacking. O ataque foi capaz de carregar com sucesso tanta lixo de informação que as unidades serão forçadas a recompilar grande parte de seus insights.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAllyIntercept>Interceptação de DDOS!</ATR_IncidentDDOSAllyIntercept>
+
+    <!-- Troll Attack -->
+    <ATR_IncidentTrollDefeated>Ataque de Troll derrotado!</ATR_IncidentTrollDefeated>
+
+    <ATR_IncidentTrollAttack>Troll</ATR_IncidentTrollAttack>
+    <ATR_IncidentTrollAttackDesc>O peão afetado, {0}, perdeu um total de {1} pontos de habilidade espalhados por suas habilidades passional e de alto nível! {0} também está extremamente chateado com as coisas horripilantes que os hackers conseguiram carregar em sua mente e com o fracasso dos sistemas de segurança em protegê-lo.</ATR_IncidentTrollAttackDesc>
+
+    <ATR_IncidentTrollAllyIntercept>Ataque de Troll interceptado!</ATR_IncidentTrollAllyIntercept>
+
+    <!-- Diplohack -->
+    <ATR_IncidentDiplohackDefeated>Diplohack derrotado!</ATR_IncidentDiplohackDefeated>
+
+    <ATR_IncidentDiplohackAttack>Diplohack</ATR_IncidentDiplohackAttack>
+    <ATR_IncidentDiplohackAttackDesc>Hackers desconhecidos conseguiram decifrar linhas-chave de comunicação com {0}, e entregaram uma mensagem que os credenciou como a fonte. A mensagem continha informações erradas que levaram uma caravana de {0} a uma emboscada. Eles deixaram claro o seu descontentamento com o que consideram o seu "descuido e fraqueza de segurança" em uma resposta diplomática forte - e presumivelmente real - e prometeram divulgar o incidente para outras facções também.</ATR_IncidentDiplohackAttackDesc>
+
+    <ATR_IncidentDiplohackAllyIntercept>Diplohack interceptado!</ATR_IncidentDiplohackAllyIntercept>
+
+    <!-- Provoker Hack -->
+    <ATR_IncidentProvokerhackDefeated>Provoker Hack derrotado!</ATR_IncidentProvokerhackDefeated>
+
+    <ATR_IncidentProvokerhackAttack>Provoker Hack</ATR_IncidentProvokerhackAttack>
+    <ATR_IncidentProvokerhackAttackDesc>Hackers desconhecidos conseguiram burlar a segurança do SkyMind e instalar um programa de emissor de sinal simples. O sinal chamou a atenção de uma força hostil antes que ele pudesse ser desativado!      </ATR_IncidentProvokerhackAttackDesc>
+
+    <ATR_IncidentProvokerhackAllyIntercept>Provoker Hack interceptado!</ATR_IncidentProvokerhackAllyIntercept>
+
+    <!-- Counterhack -->
+    <ATR_IncidentCounterhackDefeated>Counterhack derrotado!</ATR_IncidentCounterhackDefeated>
+
+    <ATR_IncidentCounterhackAttack>Counterhack</ATR_IncidentCounterhackAttack>
+    <ATR_IncidentCounterhackAttackDesc>Hackers desconhecidos conseguiram invadir a rede do SkyMind e sequestrar o máximo de informações que puderam, preferindo inteligência coletada sobre outros alvos e depois insights de habilidades. Estima-se que eles tenham roubado até {0} pontos no total antes de perderem o acesso.</ATR_IncidentCounterhackAttackDesc>
+
+    <ATR_IncidentCounterhackAllyIntercept>Counterhack interceptado!</ATR_IncidentCounterhackAllyIntercept>
+
+    <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>Relações danificadas</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliationDesc>A operação tentada foi interceptada e derrotada pelas medidas de defesa do alvo. A facção suspeita que você tenha cometido a tentativa, mas não possui evidências duras que liguem você ao crime. O impacto real nas relações, {0}, parece ter ocorrido porque a pessoa que interceptou decidiu acusar você na frente de qualquer um que estivesse disposto a ouvir. Um infeliz incidente diplomático.</ATR_RelationshipRetaliationDesc>
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>Manutenção ruim</ATR_PoorMaintenanceLetter>
+	
+</LanguageData>

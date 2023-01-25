@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>ループされた自動メッセージが、準備されたメッセージをゆっくりと巡回し、現時点ではコミュニケーションに関心がないことを示しています.</AndroidFactionGreetingHostileI>
+    <AndroidFactionGreetingHostileII>{0} は接続し、ファクションの多くの欠陥に対する長い非難を開始します。 {0} は、和解が必要な場合は貢物を要求します。</AndroidFactionGreetingHostileII>
+    <AndroidFactionGreetingHostileIII>あなたを迎えるのは、静電気に満ちた長い沈黙だけです.</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>{0} の深い機械的な声が {NEGOTIATOR_labelShort} に挨拶し、あらゆる提案を客観的かつ公正に聞いて検討する準備ができています.</AndroidFactionGreetingWaryI>
+    <AndroidFactionGreetingWaryII>自動応答は、{0} が占有されていることを示しており、必要に応じてシステムが {NEGOTIATOR_labelShort} のビジネスを自動的に転送します.</AndroidFactionGreetingWaryII>
+    <AndroidFactionGreetingWaryIII>{0} は {NEGOTIATOR_labelShort} への通信を開始し、慎重かつある程度の用心深さで通信を行ったと宣言しました。 {0} はビジネスを迅速に進めるよう求めています。</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0} は {NEGOTIATOR_labelShort} を高く評価し、相互利益と共通の大義の前進のために何ができるかを尋ねました。</AndroidFactionGreetingWarmI>
+    <AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} には、親切な自動メッセージが届きました。 これは、内部の考慮事項において、すべてのリクエストに高い優先度が与えられることを示しています。</AndroidFactionGreetingWarmII>
+    <AndroidFactionGreetingWarmIII>{0} は即座に接続し、{NEGOTIATOR_labelShort} に挨拶します。 {0} は、あらゆる提案を聞きたいという熱意を示し、潜在的な支援をすぐに提供します。</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>
