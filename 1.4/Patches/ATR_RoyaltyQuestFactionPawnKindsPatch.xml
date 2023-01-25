@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Copied and modified from HAR Royalty Compatibility Wiki page -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Guests -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <value>
+                        <li>
+                            <factionDef>ATR_MechanicalMarauders</factionDef>
+                            <pawnKinds>
+                                <li>ATR_RaiderSoldierT2</li>
+                            </pawnKinds>
+                        </li>
+                        <li>
+                            <factionDef>ATR_AndroidUnion</factionDef>
+                            <pawnKinds>
+                                <li>ATR_AndroidT2CollectiveSoldier</li>
+                            </pawnKinds>
+                        </li>  
+                    </value>
+                </li>
+                <!-- Mercenaries -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <value>
+                        <li>
+                            <factionDef>ATR_MechanicalMarauders</factionDef>
+                            <pawnKinds>
+                                <li>ATR_RaiderSoldierT2</li>
+                            </pawnKinds>
+                        </li>
+                        <li>
+                            <factionDef>ATR_AndroidUnion</factionDef>
+                            <pawnKinds>
+                                <li>ATR_AndroidT2CollectiveSoldier</li>
+                            </pawnKinds>
+                        </li>  
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

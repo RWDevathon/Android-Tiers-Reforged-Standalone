@@ -22,6 +22,7 @@ namespace ATReforged
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
         public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
         public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+        public static bool bedRestrictionDefaultsToAll;
         
             // Settings for what is considered mechanical and massive
         public static HashSet<string> isConsideredMechanicalAnimal;
@@ -29,6 +30,11 @@ namespace ATReforged
         public static HashSet<string> isConsideredMechanicalDrone;
         public static HashSet<string> isConsideredMechanical;
         public static HashSet<string> hasSpecialStatus;
+
+            // Settings for mechanical/organic rights
+        public static bool factionsWillDeclareRightsWars;
+        public static HashSet<string> antiMechanicalRightsFaction;
+        public static HashSet<string> antiOrganicRightsFaction;
         
             // Settings for what needs mechanical androids have
         public static bool androidsHaveJoyNeed;
@@ -75,7 +81,7 @@ namespace ATReforged
         public static float maintenanceGainRateFactor = 1.0f;
 
         // CONNECTIVITY SETTINGS
-        // Settings for Surrogates
+            // Settings for Surrogates
         public static bool surrogatesAllowed = true;
         public static bool otherFactionsAllowedSurrogates = true;
         public static int minGroupSizeForSurrogates = 5;
@@ -117,6 +123,10 @@ namespace ATReforged
                 isConsideredMechanical = new HashSet<string>();
             if (hasSpecialStatus == null)
                 hasSpecialStatus = new HashSet<string>();
+            if (antiMechanicalRightsFaction == null)
+                antiMechanicalRightsFaction = new HashSet<string>();
+            if (antiOrganicRightsFaction == null)
+                antiOrganicRightsFaction = new HashSet<string>();
             if (canUseBattery == null)
                 canUseBattery = new HashSet<string>();
             if (ActivePreset == SettingsPreset.None)
@@ -132,12 +142,14 @@ namespace ATReforged
         bool cachedExpandFirst = true;
         bool cachedExpandSecond = true;
         bool cachedExpandThird = true;
+        bool cachedExpandFourth = false;
 
         void ResetCachedExpand() 
         { 
             cachedExpandFirst = true; 
             cachedExpandSecond = true; 
             cachedExpandThird = true;
+            cachedExpandFourth = false;
         }
 
         internal void DoSettingsWindowContents(Rect inRect)
@@ -149,7 +161,7 @@ namespace ATReforged
             Color colorSave = GUI.color;
             TextAnchor anchorSave = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-
+            
             var headerRect = inRect.TopPartPixels(50);
             var restOfRect = new Rect(inRect);
             restOfRect.y += 50;
@@ -197,7 +209,7 @@ namespace ATReforged
                         Find.WindowStack.Add(new FloatMenu(options));
                     }
                     listingStandard.GapLine();
-
+                        
                     // GENDER SETTINGS
                     listingStandard.CheckboxLabeled("ATR_AndroidsHaveGenders".Translate(), ref androidsHaveGenders, tooltip:"ATR_AndroidGenderNotice".Translate(), onChange: onChange);
 
@@ -218,6 +230,9 @@ namespace ATReforged
                         listingStandard.SliderLabeled("ATR_AndroidsGenderRatio".Translate(), ref androidsGenderRatio, 0.0f, 1.0f, displayMult: 100, onChange: onChange);
                     }
                     listingStandard.GapLine();
+
+                    // PERMISSION SETTINGS
+                    listingStandard.CheckboxLabeled("ATR_bedRestrictionDefaultsToAll".Translate(), ref bedRestrictionDefaultsToAll, tooltip: "ATR_bedRestrictionDefaultsToAllDesc".Translate(), onChange: onChange);
 
                     // CONSIDERATION SETTINGS
                     listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
@@ -241,6 +256,19 @@ namespace ATReforged
                     }
                     if (cachedExpandThird)
                         listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onChange);
+
+                    // RIGHTS SETTINGS
+
+                    listingStandard.CheckboxLabeled("ATR_factionsWillDeclareRightsWars".Translate(), ref factionsWillDeclareRightsWars, tooltip: "ATR_factionsWillDeclareRightsWarsDesc".Translate(), onChange: onChange);
+                    if (factionsWillDeclareRightsWars && listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                        cachedExpandFourth = !cachedExpandFourth;
+                    }
+                    if (factionsWillDeclareRightsWars && cachedExpandFourth)
+                    {
+                        listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiMechanicalRightsFaction, "ATR_SettingsAntiMechanicalFaction".Translate(), "ATR_SettingsTolerateMechanicalFaction".Translate(), onChange);
+                        listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiOrganicRightsFaction, "ATR_SettingsAntiOrganicFaction".Translate(), "ATR_SettingsTolerateOrganicFaction".Translate(), onChange);
+                    }
                     
                     listingStandard.GapLine();
 
@@ -381,6 +409,12 @@ namespace ATReforged
             thingsAllowedAsRepairStims = new HashSet<string> { };
             blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia" };
             blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+            bedRestrictionDefaultsToAll = false;
+
+            // Rights
+            factionsWillDeclareRightsWars = true;
+            antiMechanicalRightsFaction = new HashSet<string> { "Empire" };
+            antiOrganicRightsFaction = new HashSet<string> { "ATR_MechanicalMarauders" };
 
             // Needs Settings
             androidsHaveJoyNeed = true;
@@ -544,6 +578,7 @@ namespace ATReforged
             Scribe_Collections.Look(ref thingsAllowedAsRepairStims, "ATR_thingsAllowedAsRepairStims", LookMode.Value);
             Scribe_Collections.Look(ref blacklistedMechanicalHediffs, "ATR_blacklistedMechanicalHediffs", LookMode.Value);
             Scribe_Collections.Look(ref blacklistedMechanicalTraits, "ATR_blacklistedMechanicalTraits", LookMode.Value);
+            Scribe_Values.Look(ref bedRestrictionDefaultsToAll, "ATR_bedRestrictionDefaultsToAll", false);
 
             // Considerations
             try
@@ -559,6 +594,11 @@ namespace ATReforged
                 Log.Warning("[ATR] Mod settings failed to load appropriately! Resetting to default to avoid further issues. " + ex.Message + " " + ex.StackTrace);
                 RebuildCaches();
             }
+
+            // Rights
+            Scribe_Values.Look(ref factionsWillDeclareRightsWars, "ATR_factionsWillDeclareRightsWars", true);
+            Scribe_Collections.Look(ref antiMechanicalRightsFaction, "ATR_antiMechanicalRightsFaction", LookMode.Value);
+            Scribe_Collections.Look(ref antiOrganicRightsFaction, "ATR_antiOrganicRightsFaction", LookMode.Value);
 
             // Needs
             Scribe_Values.Look(ref androidsHaveJoyNeed, "ATR_androidsHaveJoyNeed", true);

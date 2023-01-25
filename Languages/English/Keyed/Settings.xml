@@ -41,6 +41,26 @@
 	<ATR_AndroidRaidersDesc>Acts like vanilla's Pirate faction</ATR_AndroidRaidersDesc>
 	<ATR_AndroidUnionistsExist>Androids dedicated to collective survival have unified</ATR_AndroidUnionistsExist>
 	<ATR_AndroidUnionistsDesc>Acts like vanilla's Outlander faction</ATR_AndroidUnionistsDesc>
+
+        <!-- Permission Settings-->
+    <ATR_bedRestrictionDefaultsToAll>Beds default to All pawns rather than Mechanical/Organic</ATR_bedRestrictionDefaultsToAll>
+	
+        <!-- Consideration Settings -->
+	<ATR_SettingsConsideredAndroid>Androids</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>Not Androids</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>Drones</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>Not Drones</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>Mechanical Animals</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
+
+        <!-- Rights Settings -->
+    <ATR_factionsWillDeclareRightsWars>Factions will declare war over rights disputes</ATR_factionsWillDeclareRightsWars>
+    <ATR_factionsWillDeclareRightsWarsDesc>Factions that are anti-mechanical or anti-organic will declare war on you if you have mechanical/organic colonists</ATR_factionsWillDeclareRightsWarsDesc>
+
+    <ATR_SettingsAntiMechanicalFaction>Factions without mechanical rights</ATR_SettingsAntiMechanicalFaction>
+    <ATR_SettingsTolerateMechanicalFaction>Factions tolerating mechanicals</ATR_SettingsTolerateMechanicalFaction>
+    <ATR_SettingsAntiOrganicFaction>Factions without organic rights</ATR_SettingsAntiOrganicFaction>
+    <ATR_SettingsTolerateOrganicFaction>Factions tolerating organics</ATR_SettingsTolerateOrganicFaction>
 	
 	<!-- Needs Settings -->
 	<ATR_AndroidOnlyNotice>Note: Only units marked as androids are affected by this. Drones have no such needs.</ATR_AndroidOnlyNotice>
@@ -51,13 +71,6 @@
 	
 	<ATR_SettingsPresetDefault>Default</ATR_SettingsPresetDefault>
 	<ATR_SettingsPresetCustom>Custom</ATR_SettingsPresetCustom>
-	
-	<ATR_SettingsConsideredAndroid>Androids</ATR_SettingsConsideredAndroid>
-	<ATR_SettingsNotConsideredAndroid>Not Androids</ATR_SettingsNotConsideredAndroid>
-	<ATR_SettingsConsideredDrone>Drones</ATR_SettingsConsideredDrone>
-	<ATR_SettingsNotConsideredDrone>Not Drones</ATR_SettingsNotConsideredDrone>
-	<ATR_SettingsConsideredAnimal>Mechanical Animals</ATR_SettingsConsideredAnimal>
-	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
 	
 	<!-- Power Settings -->
 	<ATR_wattsConsumedPerBodySize>Power use per 1 body size when charging [default: 500]</ATR_wattsConsumedPerBodySize>

@@ -21,10 +21,10 @@ namespace ATReforged
                 if (__result != null)
                     return;
 
-                // Null roll means spectator, which drones are not allowed to be.
-                if (role == null && Utils.IsConsideredMechanicalDrone(p))
+                // Drones are not allowed to hold any roles in rituals.
+                if (Utils.IsConsideredMechanicalDrone(p))
                 {
-                    __result = "ATR_DronesCannotSpectate".Translate();
+                    __result = "ATR_DronesCannotParticipateInRituals".Translate();
                 }
             }
         }

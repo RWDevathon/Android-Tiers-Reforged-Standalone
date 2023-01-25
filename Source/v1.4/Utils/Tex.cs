@@ -9,6 +9,7 @@ namespace ATReforged
         static Tex()
         {
         }
+
         // Settings
         public static readonly Texture2D DrawPocket = ContentFinder<Texture2D>.Get("UI/Icons/Settings/DrawPocket");
 
@@ -29,6 +30,7 @@ namespace ATReforged
         public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
         public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");
         public static readonly Texture2D HackingWindowIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/HackingWindowIcon");
+        public static readonly Texture2D RestrictionGizmoIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ATR_RestrictionGizmo");
 
         // Dialogs
         public static readonly Texture2D SkillWorkshopHeader = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/SkillWorkshopHeader");
@@ -69,5 +71,15 @@ namespace ATReforged
         public static readonly Material DangerHeat = MaterialPool.MatFrom("UI/Icons/Temperature/DangerHeat", ShaderDatabase.MetaOverlay);
         public static readonly Material CriticalHeat = MaterialPool.MatFrom("UI/Icons/Temperature/CriticalHeat", ShaderDatabase.MetaOverlay);
 
+        // Race Exemplars
+        public static readonly Texture2D TierOneExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier1/ATR_TierOneExemplar");
+        public static readonly Texture2D TierTwoExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier2/ATR_TierTwoExemplar");
+        public static readonly Texture2D TierThreeExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier3/ATR_TierThreeExemplar");
+        public static readonly Texture2D TierFourExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier4/ATR_TierFourExemplar");
+        public static readonly Texture2D TierFiveExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier5/ATR_TierFiveExemplar");
+        public static readonly Texture2D BasicHumanExemplar = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+        public static readonly Texture2D DronePawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_DronePawnTypeRestricted");
+        public static readonly Texture2D AndroidPawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_AndroidPawnTypeRestricted");
+        public static readonly Texture2D OrganicPawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_OrganicPawnTypeRestricted");
     }
 }

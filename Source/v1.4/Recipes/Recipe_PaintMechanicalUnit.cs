@@ -6,10 +6,10 @@ namespace ATReforged
 {
     public class Recipe_PaintMechanicalUnit : Recipe_SurgeryAndroids
     {
-        // This recipe always targets the core part, and is always applicable.
+        // This recipe always targets the core part, and is always applicable to "alien" mechanical races, as it would throw errors if not using AlienRace.
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         {
-            if (!Utils.IsConsideredMechanical(pawn))
+            if (!Utils.IsConsideredMechanical(pawn) || !(pawn.def is AlienRace.ThingDef_AlienRace))
             {
                 yield break;
             }

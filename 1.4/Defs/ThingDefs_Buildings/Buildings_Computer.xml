@@ -95,7 +95,7 @@
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedDatabase</defName>
         <label>Networked Database</label>
-        <description>A basic server for data tabulation, storage, and calculations. It is incapable of generating insights, but greatly enhances the workflow of those who wish to spend less time doing math and more time analyzing. It generates a small amount of heat, and may be damaged if the heat exceeds its safety threshold.</description>
+        <description>A basic server for data tabulation, storage, and calculations. It is incapable of generating insights, but greatly enhances the workflow of those who wish to spend less time doing math and more time analyzing. It generates a small amount of heat, and may be damaged if the heat exceeds its safety threshold.\n\nDatabases store server points generated from other sources for use when powered and connected to the SkyMind, but does not generate points itself.</description>
         <statBases>
             <WorkToBuild>12500</WorkToBuild>
             <Mass>140</Mass>
@@ -153,7 +153,7 @@
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedAnalyst</defName>
         <label>Networked Analyst</label>
-        <description>A basic server for analyzing data and generating insights into the chosen task focus using rudimentary machine learning algorithms. Due to its small size and number of calculations, it relies on data servers for storage and generates significant heat. It may be damaged if the heat exceeds its safety threshold.</description>
+        <description>A basic server for analyzing data and generating insights into the chosen task focus using rudimentary machine learning algorithms. Due to its small size and number of calculations, it relies on data servers for storage and generates significant heat. It may be damaged if the heat exceeds its safety threshold.\n\nAnalysts generate server points in a chosen category when powered and connected to the SkyMind, but can not store points.</description>
         <statBases>
             <WorkToBuild>22500</WorkToBuild>
             <Mass>80</Mass>
@@ -212,7 +212,7 @@
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedIntelligence</defName>
         <label>Networked Intelligence</label>
-        <description>An advanced server for data analysis, tabulation, storage, and insight generation in a chosen task focus using an autonomous AI persona. While it theoretically makes other servers obsolete, the space efficiency and use cases come at a high cost of power and heat generation. It is very susceptible to overheating and may become damaged if it overheats.</description>
+        <description>An advanced server for data analysis, tabulation, storage, and insight generation in a chosen task focus using an autonomous AI persona. While it theoretically makes other servers obsolete, the space efficiency and use cases come at a high cost of power and heat generation. It is very susceptible to overheating and may become damaged if it overheats.\n\nIntelligences store and produce server points in a chosen field when powered and connected to the SkyMind, but requires a persona core.</description>
         <statBases>
             <MaxHitPoints>300</MaxHitPoints>
             <WorkToBuild>35000</WorkToBuild>
@@ -272,7 +272,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>ATR_ArchotechNetwork</defName>
         <label>Archotech Server Network</label>
-        <description>An incredibly powerful archotech device that seems to readily offer equally incredible insights in training skills, and how to both secure and breach critical data. It neither uses energy nor produces heat to the amazement of any who have the honor of witnessing it. Many believe that they serve as the eyes and ears of invisible archotech societies interested in monitoring the universe, and that they only gift information to those who have earned an archotech's blessing. Others believe them to be cursed, as they serve as beacons to the unfortunate souls corrupted by fractal warping. \n\nThis is an extremely powerful asset, and many have sought to claim it as their own. Most of those who have tried have become fractal abominations. Even in that sad state, they will continue to seek it out. Be warned.</description>
+        <description>An incredibly powerful archotech device that seems to readily offer equally incredible insights in training skills, and how to both secure and breach critical data. It neither uses energy nor produces heat to the amazement of any who have the honor of witnessing it. Many believe that they serve as the eyes and ears of invisible archotech societies interested in monitoring the universe, and that they only gift information to those who have earned an archotech's blessing. Others believe them to be cursed, as they serve as beacons to the unfortunate souls corrupted by fractal warping. \n\nThis is an extremely powerful asset, and many have sought to claim it as their own. Most of those who have tried have become fractal abominations. Even in that sad state, they will continue to seek it out. Be warned.\n\nThe network will produce vast amounts of insight into all fields, and can easily store equally vast quantities of information - and amazingly, does so without power or any SkyMind connection whatsoever.</description>
         <minifiedDef>MinifiedThing</minifiedDef>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>

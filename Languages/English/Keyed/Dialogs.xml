@@ -52,6 +52,26 @@
 	<ATR_SkyMindInitialization>Initialize from SkyMind</ATR_SkyMindInitialization>
 	<ATR_AutomaticInitialization>Initialize automatically</ATR_AutomaticInitialization>
 
+    <!-- PawnType Restriction Dialog -->
+    <ATR_RestrictedPawnTypes>Restriction settings</ATR_RestrictedPawnTypes>
+
+    <ATR_PawnTypeNone>None</ATR_PawnTypeNone>
+    <ATR_PawnTypeNoneTooltip>No pawns can use this</ATR_PawnTypeNoneTooltip>
+    <ATR_PawnTypeDrone>Drone</ATR_PawnTypeDrone>
+    <ATR_PawnTypeDroneTooltip>Only drones can use this</ATR_PawnTypeDroneTooltip>
+    <ATR_PawnTypeAndroid>Android</ATR_PawnTypeAndroid>
+    <ATR_PawnTypeAndroidTooltip>Only androids can use this</ATR_PawnTypeAndroidTooltip>
+    <ATR_PawnTypeMechanical>Mechanical</ATR_PawnTypeMechanical>
+    <ATR_PawnTypeMechanicalTooltip>Only androids and drones can use this</ATR_PawnTypeMechanicalTooltip>
+    <ATR_PawnTypeOrganic>Organic</ATR_PawnTypeOrganic>
+    <ATR_PawnTypeOrganicTooltip>Only organics can use this</ATR_PawnTypeOrganicTooltip>
+    <ATR_PawnTypeNonAI>Non-AI</ATR_PawnTypeNonAI>
+    <ATR_PawnTypeNonAITooltip>Only organics and drones can use this</ATR_PawnTypeNonAITooltip>
+    <ATR_PawnTypeAutonomous>Autonomous</ATR_PawnTypeAutonomous>
+    <ATR_PawnTypeAutonomousTooltip>Only androids and organics can use this</ATR_PawnTypeAutonomousTooltip>
+    <ATR_PawnTypeAll>All</ATR_PawnTypeAll>
+    <ATR_PawnTypeAllTooltip>All pawns can use this</ATR_PawnTypeAllTooltip>
+
     <!-- Maintenance Level Setter Dialog -->
     <ATR_SetTargetMaintenanceLevel>Desired maintenance level: {0}%</ATR_SetTargetMaintenanceLevel>
 	

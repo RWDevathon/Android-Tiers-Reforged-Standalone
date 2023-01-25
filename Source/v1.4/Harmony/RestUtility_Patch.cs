@@ -2,11 +2,33 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using Verse;
 
 namespace ATReforged
 {
     internal class RestUtility_Patch
     {
+        // If the bed has a CompRestrictable on it and the assigned pawn type does not match the pawn's type, then it is not a valid bed for this pawn.
+        [HarmonyPatch(typeof(RestUtility), "IsValidBedFor")]
+        public class IsValidBedFor_Patch
+        {
+            [HarmonyPostfix]
+            public static void Listener(Thing bedThing, Pawn sleeper, ref bool __result)
+            {
+                if (!__result)
+                {
+                    return;
+                }
+
+                PawnType assignedType = bedThing.TryGetComp<CompPawnTypeRestrictable>().assignedToType;
+                if ((Utils.GetPawnType(sleeper) | assignedType) != assignedType)
+                {
+                    //Log.Error("[ATR DEBUG] Pawn " + sleeper + " had pawn type of " + Utils.GetPawnType(sleeper) + " but the bed is assigned to " + assignedType);
+                    __result = false;
+                }
+            }
+        }
+
         // RestUtility.TimetablePreventsLayDown has a non-null checked rest need that will throw errors for mechanical units resting when assigned to work in the time table.
         [HarmonyPatch(typeof(RestUtility))]
         [HarmonyPatch("TimetablePreventsLayDown")]

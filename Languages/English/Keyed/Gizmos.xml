@@ -3,9 +3,9 @@
 	
 	<!-- AutoDoor -->
 	<ATR_AutoDoorOpen>Open</ATR_AutoDoorOpen>
-	<ATR_AutoDoorOpenDescription>Open remotely via a SkyCloud core.</ATR_AutoDoorOpenDescription>
+	<ATR_AutoDoorOpenDescription>Open remotely via a SkyMind connection.</ATR_AutoDoorOpenDescription>
 	<ATR_AutoDoorClose>Close</ATR_AutoDoorClose>
-	<ATR_AutoDoorCloseDescription>Close remotely via a SkyCloud server.</ATR_AutoDoorCloseDescription>
+	<ATR_AutoDoorCloseDescription>Close remotely via a SkyMind connection.</ATR_AutoDoorCloseDescription>
 	
 	<!-- Computer -->
     <ATR_ServerNetworkConnectionNeeded>Server not connected to SkyMind network.</ATR_ServerNetworkConnectionNeeded>
@@ -93,5 +93,9 @@
     <ATR_MaintenanceEffectGizmoLabelPositive>Positive</ATR_MaintenanceEffectGizmoLabelPositive>
     <ATR_MaintenanceEffectGizmoLabelNegative>Negative</ATR_MaintenanceEffectGizmoLabelNegative>
     <ATR_MaintenanceEffectDesc>Average maintenance is a measure of how well maintained this unit's core memory and internal systems have been over time, and changes based on the maintenance level of the pawn. High levels will improve mood, while low levels will degrade both mood and health. It rises if maintenance is above 70% and falls if below 30%, and otherwise slowly returns to a baseline.\n\nNote: maintenance is a personal, deeply introspective activity, and therefore can largely not be done by others for a pawn except in emergency situations with a part pack.</ATR_MaintenanceEffectDesc>
+
+    <!-- Pawn Type Restriction -->
+    <ATR_RestrictPawnType>Restrictions</ATR_RestrictPawnType>
+    <ATR_RestrictPawnTypeDescription>Open the pawn type restrictions to set controls over what type of pawn can use this.</ATR_RestrictPawnTypeDescription>
     
 </LanguageData>

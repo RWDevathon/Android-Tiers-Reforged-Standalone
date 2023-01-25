@@ -31,8 +31,8 @@ namespace ATReforged
         
         private void CreateExplosion()
         {
-            GenExplosion.DoExplosion(Position, Map, 20, DamageDefOf.EMP, instigator, 200, -1f, null, weaponDef, def);
-            GenExplosion.DoExplosion(Position, Map, 10, DamageDefOf.Bomb, instigator, 50, -1f, null, weaponDef, def, chanceToStartFire: 0.25f);
+            GenExplosion.DoExplosion(Position, Map, 20, DamageDefOf.EMP, instigator, 100, -1f, null, weaponDef, def);
+            GenExplosion.DoExplosion(Position, Map, 10, DamageDefOf.Bomb, instigator, 100, -1f, null, weaponDef, def, chanceToStartFire: 0.25f, damageFalloff: true, screenShakeFactor: 2);
         }
 
         private void CreatePod()
