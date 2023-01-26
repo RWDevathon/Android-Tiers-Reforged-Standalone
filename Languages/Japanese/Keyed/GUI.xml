@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- ニーズ -->
+
+    <ATR_EnergyNeed>エネルギー</ATR_EnergyNeed>
+    <ATR_EnergyNeedDesc>エネルギーは、ユニットに保持されている電荷の量です。 ゼロになると、ユニットは非効率的な低電力モードに入ります。 充電が回復しない場合、ハードウェアは最終的に重大な誤動作を起こし、ユニットは機能しなくなります.</ATR_EnergyNeedDesc>
+	
+    <!-- 儀式の許可 -->
+     <ATR_DronesCannotSpectate>ドローンは儀式を観戦できません.</ATR_DronesCannotSpectate>
+
+    <!-- 囚人タブ -->
+     <ATR_PrisonerDroneWarning>ドローンは操作できません。 手術を使用して再プログラム (T1 研究が必要) またはシャットダウンします。</ATR_PrisonerDroneWarning>
+     <ATR_SlaveDroneAlert>ドローンは奴隷であってはなりません! ティックごとに無料のエラーが発生しています。 すぐにこのドローンを再プログラムするか、排除してください。</ATR_SlaveDroneAlert>
+
+</LanguageData>

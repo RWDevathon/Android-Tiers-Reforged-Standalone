@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>이 시간에는 의사소통에 관심이 없다는 사전 준비된 메시지를 천천히 훑으며 반복되는 자동 메시지가 있습니다.</AndroidFactionGreetingHostileI>
+	<AndroidFactionGreetingHostileII>{0}이 연결하고 당신의 연합의 많은 한계에 대해 긴 설명을 시작합니다. {0}은 화해를 위해 선물을 요구합니다.</AndroidFactionGreetingHostileII>
+	<AndroidFactionGreetingHostileIII>너무 길고 정적으로 가득 찬 침묵이 당신을 환영합니다.</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>{0}의 깊은 기계적 음성이 {NEGOTIATOR_labelShort}을 환영하며, 어떤 제안도 객관적이고 공정하게 듣고 고려할 준비를 합니다.</AndroidFactionGreetingWaryI>
+	<AndroidFactionGreetingWaryII>"자동 응답은 {0}이 바쁜 상태라는 것을 나타냅니다. 시스템은 적절할 때 {NEGOTIATOR_labelShort}의 업무를 자동으로 전달합니다.</AndroidFactionGreetingWaryII>
+	<AndroidFactionGreetingWaryIII>{0}은 {NEGOTIATOR_labelShort}과 통신을 열어, 조심스럽게 했다는 것을 선언합니다. {0}은 업무를 빠르게 진행하라는 것을 요청합니다.</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0}은 {NEGOTIATOR_labelShort}을 높은 칭찬으로 환영하며, 공동 원인을 위한 상호 이익과 진보를 위해 할 수 있는 것이 무엇인지 묻습니다.</AndroidFactionGreetingWarmI>
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort}는 친절하게 작성된 자동 메시지로 맞아봅니다. 이는 어떤 요청도 내부 고려에서 높은 우선순위를 줄 것이라는 것을 나타냅니다.</AndroidFactionGreetingWarmII>
+	<AndroidFactionGreetingWarmIII>{0}는 바로 연결되어 {NEGOTIATOR_labelShort}을 환영합니다. {0}는 제안을 들어보는 것을 기다리는 기대와 함께 즉시 도움을 제공할 것을 제안합니다.</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>

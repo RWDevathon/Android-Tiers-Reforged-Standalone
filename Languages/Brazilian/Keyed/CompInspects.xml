@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ATR_SkillServersSynthesis>Pontos de habilidade disponíveis: {0} / {1}</ATR_SkillServersSynthesis>
+    <ATR_SkillProducedPoints>Pontos de habilidade produzindo: {0}</ATR_SkillProducedPoints>
+    <ATR_SkillSlotsAdded>Adicionado armazenamento de habilidade: {0}</ATR_SkillSlotsAdded>
+
+    <ATR_SecurityServersSynthesis>Pontos de segurança disponíveis: {0} / {1}</ATR_SecurityServersSynthesis>
+    <ATR_SecurityProducedPoints>Pontos de segurança produzindo: {0}</ATR_SecurityProducedPoints>
+    <ATR_SecuritySlotsAdded>Adicionado armazenamento de segurança: {0}</ATR_SecuritySlotsAdded>
+
+    <ATR_HackingServersSynthesis>Pontos de hacking disponíveis: {0} / {1}</ATR_HackingServersSynthesis>
+    <ATR_HackingProducedPoints>Pontos de hacking produzindo: {0}</ATR_HackingProducedPoints>
+    <ATR_HackingSlotsAdded>Adicionado armazenamento de hacking: {0}</ATR_HackingSlotsAdded>
+
+    <!-- Carregando -->
+    <ATR_CurrentChargerPowerConsumption>Consumo de energia atual: {0} W</ATR_CurrentChargerPowerConsumption>
+
+    <!-- Calor -->
+    <ATR_CompHotSensitiveCriticalText>Limite de calor ultrapassado: dano iminente!</ATR_CompHotSensitiveCriticalText>
+    <ATR_CompHotSensitiveDangerText>Aproximando-se do limite de calor: aconselhada ação preventiva!</ATR_CompHotSensitiveDangerText>
+    <ATR_CompHotSensitiveWarningText>Limite de calor ideal ultrapassado: aconselhável precaução.</ATR_CompHotSensitiveWarningText>
+    <ATR_CompHotSensitiveSafeText>Dentro do limite de operação segura: operações normais.</ATR_CompHotSensitiveSafeText>
+
+    <!-- SkyMind -->
+    <ATR_HackedWithTimer>Recompilação de software completa em {0}.</ATR_HackedWithTimer>
+    <ATR_CryptoLocked>Criptografado, acesso negado.</ATR_CryptoLocked>
+    <ATR_SkyMindDetected>Conectado ao SkyMind</ATR_SkyMindDetected>
+
+    <!-- Core -->
+    <ATR_CloudIntelligenceSummary>Inteligências SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
+    <ATR_AssistingIntelligenceSummary>Inteligências ociosas: {0}</ATR_AssistingIntelligenceSummary>
+
+	
+	<ATR_SkyMindOperationInProgress>Tempo até a conclusão da operação: {0}</ATR_SkyMindOperationInProgress>
+    <ATR_SurrogateConnected>Conectado a: {0} outros peões</ATR_SurrogateConnected>
+
+    <!-- Torre -->
+    <ATR_SkyMindNetworkSummary>Usuários conectados: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+
+</LanguageData>

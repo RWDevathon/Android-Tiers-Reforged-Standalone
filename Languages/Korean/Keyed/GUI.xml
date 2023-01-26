@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Needs -->
+	
+	<ATR_EnergyNeed>Energy</ATR_EnergyNeed>
+	<ATR_EnergyNeedDesc>에너지는 장치에 유지된 전하의 양입니다. 0이 되면 장치는 비효율적인 저전력 모드로 들어갑니다. 충전이 복원되지 않으면 결국 하드웨어가 심각한 오작동을 일으키고 장치가 작동을 멈춥니다.</ATR_EnergyNeedDesc>
+	
+    <!-- Ritual Permissions -->
+    <ATR_DronesCannotSpectate>드론은 의식을 관전할 수 없습니다.</ATR_DronesCannotSpectate>
+
+    <!-- Prisoner Tab -->
+    <ATR_PrisonerDroneWarning>드론은 상호작용할 수 없습니다. 수술을 사용하여 재프로그래밍(T1 연구 필요)하거나 종료합니다.</ATR_PrisonerDroneWarning>
+    <ATR_SlaveDroneAlert>드론은 노예가 되어서는 안됩니다! 매 틱마다 무료 오류가 발생합니다. 이 드론을 즉시 재프로그래밍하거나 제거하십시오.</ATR_SlaveDroneAlert>
+
+</LanguageData>

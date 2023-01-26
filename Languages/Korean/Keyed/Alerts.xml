@@ -1,0 +1,10 @@
+<LanguageData>
+<ATR_AlertServerHeatCritical>컴퓨터 열 위험</ATR_AlertServerHeatCritical>
+<ATR_AlertServerHeatCriticalDesc>적어도 하나의 컴퓨터가 최대 안전 열 임계값을 초과하여 발화할 위험이 있습니다! 네트워크 정상성을 유지하려면 조치가 필요합니다!</ATR_AlertServerHeatCriticalDesc>
+<ATR_AlertFullSkillServers>기술 포인트 가득 찬 서버</ATR_AlertFullSkillServers>
+<ATR_AlertFullSkillServersDesc>기술 포인트를 사용할 공간이 더 이상 없습니다. 사용하거나 확장하는 것을 고려하십시오.</ATR_AlertFullSkillServersDesc>
+<ATR_AlertFullHackingServers>해킹 포인트 가득 찬 서버</ATR_AlertFullHackingServers>
+<ATR_AlertFullHackingServersDesc>해킹 포인트를 사용할 공간이 더 이상 없으며 현재 시간 제한이 없습니다. 사용하거나 확장하는 것을 고려하십시오.</ATR_AlertFullHackingServersDesc>
+<ATR_AlertLowSecurity>네트워크 위험</ATR_AlertLowSecurity>
+<ATR_AlertLowSecurityDesc>사용 가능한 보안 포인트의 수는 시도되는 해킹에 대해 성공적으로 방어 할 가능성이 매우 낮습니다! 손상을 피하기 위해 조심을 기울여야 합니다.</ATR_AlertLowSecurityDesc>
+</LanguageData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>Uma mensagem automatizada repetida desliza lentamente através de uma mensagem preparada indicando falta de interesse em comunicação neste momento.</AndroidFactionGreetingHostileI>
+	<AndroidFactionGreetingHostileII>{0} se conecta e lança em um longo discurso contra muitas falhas de suas facções. {0} exige tributo se houver reconciliação.</AndroidFactionGreetingHostileII>
+	<AndroidFactionGreetingHostileIII>Um longo silêncio com muita estática é tudo que te recebe.</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>A profunda voz mecânica de {0} cumprimenta {NEGOTIATOR_labelShort}, preparado para ouvir e considerar qualquer proposta de maneira objetiva e justa.</AndroidFactionGreetingWaryI>
+	<AndroidFactionGreetingWaryII>Uma resposta automatizada indica que {0} está ocupado e que o sistema encaminhará automaticamente os negócios de {NEGOTIATOR_labelShort} quando apropriado.</AndroidFactionGreetingWaryII>
+	<AndroidFactionGreetingWaryIII>{0} abre comunicações para {NEGOTIATOR_labelShort}, proclamando que o faz com cautela e com um grau de cautela. {0} pede que os negócios prosseguam rapidamente.</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0} cumprimenta {NEGOTIATOR_labelShort} com altos elogios, perguntando o que pode ser feito para o benefício mútuo e o avanço da causa comum.</AndroidFactionGreetingWarmI>
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} é recebido com uma mensagem automatizada amavelmente palavreada. Indica que qualquer pedido terá alta prioridade nas considerações internas.</AndroidFactionGreetingWarmII>
+	<AndroidFactionGreetingWarmIII>{0} se conecta instantaneamente e cumprimenta {NEGOTIATOR_labelShort}. {0} indica prontidão para ouvir quaisquer propostas e oferece facilmente ajuda potencial.</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>

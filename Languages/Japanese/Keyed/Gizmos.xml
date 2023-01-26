@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- オートドア -->
+    <ATR_AutoDoorOpen>開く</ATR_AutoDoorOpen>
+    <ATR_AutoDoorOpenDescription>SkyCloud コア経由でリモートで開きます。</ATR_AutoDoorOpenDescription>
+    <ATR_AutoDoorClose>閉じる</ATR_AutoDoorClose>
+    <ATR_AutoDoorCloseDescription>SkyCloud サーバー経由でリモートで閉じます。</ATR_AutoDoorCloseDescription>
+	
+	<!-- コンピュータ -->
+     <ATR_ServerNetworkConnectionNeeded>サーバーが SkyMind ネットワークに接続されていません.</ATR_ServerNetworkConnectionNeeded>
+
+    <ATR_SkillMode>スキルモード</ATR_SkillMode>
+    <ATR_SkillModeDesc>このサーバーはスキル ポイントの生成に割り当てられています。 クリックしてセキュリティに切り替えます。</ATR_SkillModeDesc>
+
+    <ATR_SecurityMode>セキュリティ モード</ATR_SecurityMode>
+    <ATR_SecurityModeDesc>このサーバーは、セキュリティ ポイントの生成に割り当てられています。 クリックしてハッキングに切り替えます。</ATR_SecurityModeDesc>
+
+    <ATR_HackingMode>ハッキング モード</ATR_HackingMode>
+<ATR_HackingModeDesc>このサーバーは、ハッキング ポイントの生成に割り当てられています。 クリックしてスキルに切り替えます。</ATR_HackingModeDesc>
+
+     <ATR_HackingWindow>ハッキングを試みる</ATR_HackingWindow>
+     <ATR_HackingWindowDesc>ハッキング インターフェースを開き、ハッキング ポイントを使用して悪質な活動に関与できるようにします。</ATR_HackingWindowDesc>
+
+    <ATR_SwitchToSkillMode>非アクティブ!</ATR_SwitchToSkillMode>
+    <ATR_SwitchToSkillModeDesc>このサーバーは不正な状態です。 クリックしてスキルに切り替えます。</ATR_SwitchToSkillModeDesc>
+	
+	<!-- スカイマインド -->
+    <ATR_ConnectSkyMind>スカイマインドに接続</ATR_ConnectSkyMind>
+    <ATR_ConnectSkyMindDesc>この入植者を SkyMind ネットワークに接続して、精神操作または代理制御を可能にします。</ATR_ConnectSkyMindDesc>
+	
+	<!-- コア -->
+    <ATR_CloudPawnInfo>情報</ATR_CloudPawnInfo>
+    <ATR_CloudPawnInfoDesc>SkyMind インテリジェンスに関する情報を入手してください。</ATR_CloudPawnInfoDesc>
+
+    <ATR_RemoveCloudPawn>削除</ATR_RemoveCloudPawn>
+    <ATR_RemoveCloudPawnDesc>SkyMind インテリジェンスを削除します</ATR_RemoveCloudPawnDesc>
+    <ATR_RemoveCloudPawnConfirm>SkyMind ネットワークから {0} をフラッシュすると、インテリジェンスが永久に破壊されます。 これは殺人と見なされます。</ATR_RemoveCloudPawnConfirm>
+
+    <ATR_ReplicateCloudPawn>複製</ATR_ReplicateCloudPawn>
+    <ATR_ReplicateCloudPawnDesc>SkyMind インテリジェンスを複製します。</ATR_ReplicateCloudPawnDesc>
+
+    <ATR_Skills>スキル</ATR_Skills>
+    <ATR_SkillsDesc>サーバースキルポイントを経験と情熱と交換できるオープンスキルワークショップ.</ATR_SkillsDesc>
+
+    <ATR_ControlSurrogate>接続</ATR_ControlSurrogate>
+    <ATR_ControlSurrogateDesc>選択したホストレス サロゲートを制御します。</ATR_ControlSurrogateDesc>
+
+    <ATR_ControlCaravanSurrogate>回復</ATR_ControlCaravanSurrogate>
+    <ATR_ControlCaravanSurrogateDesc>キャラバンでホストレス サロゲートを回復する.</ATR_ControlCaravanSurrogateDesc>
+	
+	<!-- リンク -->
+     <ATR_Surrogate>サロゲート</ATR_Surrogate>
+
+    <ATR_AbsorbExperience>精神吸収</ATR_AbsorbExperience>
+    <ATR_AbsorbExperienceDesc>スキルとハッキングポイントのために囚人の知性の経験を吸収してください.</ATR_AbsorbExperienceDesc>
+    <ATR_AbsorbExperienceConfirm>この操作は、囚人の命を犠牲にしてスキルとハッキングに関する有用な洞察を抽出します。 これは殺人と見なされます。</ATR_AbsorbExperienceConfirm>
+
+    <ATR_DownloadCloudPawn>ダウンロード</ATR_DownloadCloudPawn>
+    <ATR_DownloadCloudPawnDesc>SkyMind インテリジェンスをこのポーンにダウンロードします。</ATR_DownloadCloudPawnDesc>
+    <ATR_DownloadCloudPawnConfirm>この操作は、SkyMind インテリジェンスをこのポーンに完全に転送します。 インテリジェンスはネットワーク内に保持されません。</ATR_DownloadCloudPawnConfirm>
+
+    <ATR_DisconnectSurrogate>切断</ATR_DisconnectSurrogate>
+    <ATR_DisconnectSurrogateDesc>すべてのサロゲート リンクを切断します。</ATR_DisconnectSurrogateDesc>
+
+    <ATR_ToggleControlMode>コントロールの切り替え</ATR_ToggleControlMode>
+    <ATR_ToggleControlModeDesc>代理制御モードを切り替えて、代理制御を許可しますが、SkyMind 操作を無効にします。</ATR_ToggleControlModeDesc>
+
+    <ATR_Permute>順列</ATR_Permute>
+    <ATR_PermuteDesc>現在選択されている入植者の意識を別の入植者に置き換えます。</ATR_PermuteDesc>
+    <ATR_PermuteConfirm>この操作は {0} と {1} のインテリジェンスを交換します.</ATR_PermuteConfirm>
+
+    <ATR_Transfer>転送</ATR_Transfer>
+    <ATR_TransferDesc>現在選択されている入植者の意識を有機的な代理人に移します.</ATR_TransferDesc>
+    <ATR_TransferConfirm>この操作は、{0} をターゲット サロゲートのボディに転送します。 これにより、{0} の元の体は無意味になります。 操作が完了すると、SkyMind 受信機は燃え尽きます。</ATR_TransferConfirm>
+
+    <ATR_Upload>アップロード</ATR_Upload>
+    <ATR_UploadDesc>このインテリジェンスを SkyMind ネットワークにアップロードしてください。 置き去りにされた身体に何が起こるかは、設定によって制御されます (デフォルトでは、身体は脳死状態になります)。</ATR_UploadDesc>
+    <ATR_UploadConfirm>この操作は、身体を置き去りにして、この情報を SkyMind ネットワークに転送します。</ATR_UploadConfirm>
+	
+	<!-- メンテナンス -->
+     <ATR_MaintenanceGizmoLabel>メンテナンス</ATR_MaintenanceGizmoLabel>
+     <ATR_MaintenanceDesc>メンテナンスは、ポーンの内部プロセッサと外部パーツの健全性の尺度です。 メンテナンスは時間の経過とともに低下するため、定期的なメンテナンス サイクルによって構築する必要があります。 メンテナンスが不十分であると効率が低下し、長時間放置すると部品の故障につながる可能性があります。\n\nメンテナンスのレベルが高いとメリットは小さくなりますが、メンテナンスの損失が大幅に増加します。\n\n注: 提供される値はベースライン レートであり、実際の値です。 落下率は、ポーンのメンテナンス効率 (情報タブ) に依存します</ATR_MaintenanceDesc>
+     <ATR_MaintenanceTargetLabel>目標メンテナンス</ATR_MaintenanceTargetLabel>
+     <ATR_MaintenanceTargetLabelDesc>クリックして、必要なメンテナンス レベルを設定します。</ATR_MaintenanceTargetLabelDesc>
+     <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+     <ATR_MaintenanceLevelInfoFallRate>メンテナンスは 1 日あたり {0} 減少します。</ATR_MaintenanceLevelInfoFallRate>
+
+</LanguageData>

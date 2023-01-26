@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- 自動ちらつき -->
+    <ATR_FlickEnable>SkyCloud経由でパワーオン</ATR_FlickEnable>
+    <ATR_FlickDisable>SkyCloud経由で電源オフ</ATR_FlickDisable>
+    <ATR_AutoDoorOpenMoteText>SkyCloud 経由で開く</ATR_AutoDoorOpenMoteText>
+    <ATR_AutoDoorCloseMoteText>スカイクラウド経由で閉鎖中</ATR_AutoDoorCloseMoteText>
+
+</LanguageData>
