@@ -18,6 +18,7 @@
             <explosiveDamageType>Smoke</explosiveDamageType>
             <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
             <postExplosionSpawnThingDef>ATR_MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnChance>1</postExplosionSpawnChance>
             <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>ExtinguisherExplosion</explosionEffect>

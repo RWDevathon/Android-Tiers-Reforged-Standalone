@@ -13,8 +13,14 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn pawn, ref bool __result)
             {
-                if (Utils.IsConsideredMechanical(pawn))
+                if (!__result)
+                    return;
+
+                if (pawn.ageTracker.CurLifeStage.defName == "MechanoidFullyFormed")
+                {
                     __result = false;
+                    return;
+                }
             }
         }
     }

@@ -122,6 +122,7 @@
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
+        <minGenerationAge>100</minGenerationAge>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<weaponMoney>

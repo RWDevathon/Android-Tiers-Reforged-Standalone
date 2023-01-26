@@ -106,7 +106,6 @@ namespace ATReforged
             {
                 postLoad = true;
                 GenerateRightlessFactions();
-                Log.Warning("[ATR DEBUG] Rightless factions generated.");
             }
 
             if (!ATReforged_Settings.factionsWillDeclareRightsWars)

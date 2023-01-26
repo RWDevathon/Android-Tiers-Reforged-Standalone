@@ -17,17 +17,18 @@
         </statBases>
         <comps>
             <li Class="CompProperties_Explosive">
-                <explosiveRadius>2</explosiveRadius>
+                <explosiveRadius>1.9</explosiveRadius>
                 <explosiveDamageType>Smoke</explosiveDamageType>
                 <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
                 <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
-                <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+                <postExplosionSpawnThingDef>ATR_MicroScytherGenerator</postExplosionSpawnThingDef>
+                <postExplosionSpawnChance>1</postExplosionSpawnChance>
                 <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
                 <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
                 <explosionEffect>ExtinguisherExplosion</explosionEffect>
                 <wickTicks>
-                <min>10</min>
-                <max>30</max>
+                    <min>10</min>
+                    <max>30</max>
                 </wickTicks>
             </li>
         </comps>
@@ -70,6 +71,7 @@
             <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
             <soundAmbient>MortarRound_Ambient</soundAmbient>
             <postExplosionSpawnThingDef>ATR_MicroScytherGenerator</postExplosionSpawnThingDef>
+            <postExplosionSpawnChance>1</postExplosionSpawnChance>
             <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>ExtinguisherExplosion</explosionEffect>

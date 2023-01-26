@@ -13,7 +13,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(Pawn p, ref bool __result)
             {
-                if (__result && Utils.IsConsideredMechanical(p) && p.CurJob.def == ATR_JobDefOf.ATR_RechargeBattery)
+                if (__result && Utils.CanUseBattery(p) && p.CurJob.def == ATR_JobDefOf.ATR_RechargeBattery)
                     __result = false;
             }
         }

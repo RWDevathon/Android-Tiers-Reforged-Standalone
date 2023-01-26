@@ -14,17 +14,7 @@ namespace ATReforged
             [HarmonyPostfix]
             public static void Listener(ref Pawn ___pawn, ref bool __result)
             {
-                try
-                {
-                    if (__result && Utils.IsConsideredMechanical(___pawn)) 
-                    {
-                        __result = false;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning("[ATR] ATReforged.JobDriver_Vomit_Patch Encountered an error while attempting to check if a pawn should vomit." + ex.Message + " " + ex.StackTrace);
-                }
+                __result = __result && !Utils.IsConsideredMechanical(___pawn);
             }
         }
     }

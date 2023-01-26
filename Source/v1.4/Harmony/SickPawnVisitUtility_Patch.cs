@@ -12,21 +12,22 @@ namespace ATReforged
         [HarmonyPrefix]
         public static bool Prefix(Pawn pawn, Pawn sick, JoyCategory maxPatientJoy, ref bool __result)
         {
-            if (Utils.IsConsideredMechanical(sick))
+            if (pawn.needs?.rest != null)
             {
-                // Run a shorter modified version of the default one to avoid 
-                if (sick.IsColonist && !sick.IsSlave && !pawn.IsSlave && pawn.RaceProps.Humanlike && !sick.Dead && pawn != sick && sick.InBed() && !sick.IsForbidden(pawn) && sick.needs.joy != null && (int)sick.needs.joy.CurCategory <= (int)maxPatientJoy && InteractionUtility.CanReceiveInteraction(sick) && pawn.CanReserveAndReach(sick, PathEndMode.InteractionCell, Danger.None))
-                {
-                    __result = !MechAboutToRecover(sick);
-                    return false;
-                }
-                __result = false;
+                return true;
+            }
+
+            // Run a shorter modified version of the default one to avoid the rest need.
+            if (sick.IsColonist && !sick.IsSlave && !pawn.IsSlave && pawn.RaceProps.Humanlike && !sick.Dead && pawn != sick && sick.InBed() && !sick.IsForbidden(pawn) && sick.needs.joy != null && (int)sick.needs.joy.CurCategory <= (int)maxPatientJoy && InteractionUtility.CanReceiveInteraction(sick) && pawn.CanReserveAndReach(sick, PathEndMode.InteractionCell, Danger.None))
+            {
+                __result = !AboutToRecover(sick);
                 return false;
             }
-            return true;
+            __result = false;
+            return false;
         }
 
-        private static bool MechAboutToRecover(Pawn pawn)
+        private static bool AboutToRecover(Pawn pawn)
         {
             if (pawn.Downed)
             {

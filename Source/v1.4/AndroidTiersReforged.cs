@@ -122,7 +122,7 @@ namespace ATReforged
                     foreach (CompProperties compProp in thingDef.comps)
                     {
                         // Add CompSkyMind if it can be powered.
-                        if (compProp.compClass == typeof(CompPowerTrader) || compProp.compClass.IsSubclassOf(typeof(CompPowerTrader)))
+                        if (compProp.compClass.IsAssignableFrom(typeof(CompPowerTrader)))
                         {
                             CompProperties cp = new CompProperties
                             {

@@ -16,7 +16,7 @@ namespace ATReforged
                 if (!__result)
                     return;
 
-                if (Utils.IsConsideredMechanical(p))
+                if (Utils.IsConsideredMechanicalAndroid(p))
                 {
                     __result = false;
                 }

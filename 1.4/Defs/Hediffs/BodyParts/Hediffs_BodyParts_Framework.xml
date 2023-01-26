@@ -102,8 +102,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
         <addsHediff>ATR_PlatingPlasteel</addsHediff>
     </RecipeDef>
@@ -162,8 +160,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
         <addsHediff>ATR_CompositePlating</addsHediff>
     </RecipeDef>
@@ -276,8 +272,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
 		<addsHediff>ATR_RefinedFrame</addsHediff>
 	</RecipeDef>
@@ -338,8 +332,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
 		<addsHediff>ATR_SanitaryFrame</addsHediff>
 	</RecipeDef>
@@ -397,8 +389,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
 		<addsHediff>ATR_MobilityFrame</addsHediff>
 	</RecipeDef>
@@ -513,8 +503,6 @@
         <recipeUsers>
             <li>ATR_M7Mech</li>
             <!--<li>ATR_M8Mech</li>-->
-            <li>ATR_DroneWatchdog</li>
-            <li>ATR_DroneTORT</li>
         </recipeUsers>
 		<addsHediff>ATR_GuardianFrame</addsHediff>
 	</RecipeDef>

@@ -29,7 +29,7 @@ namespace ATReforged
 
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (ThoughtUtility.ThoughtNullified(p, def) || !Utils.IsConsideredMechanical(p))
+            if (ThoughtUtility.ThoughtNullified(p, def) || !Utils.IsConsideredMechanicalAndroid(p))
             {
                 return ThoughtState.Inactive;
             }

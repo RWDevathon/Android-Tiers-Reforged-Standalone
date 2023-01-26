@@ -33,15 +33,15 @@
 								<options>
 									<li>
 										<weight>10</weight>
-										<only>RGBA(0.94,0.94,0.94,1)</only>
+										<only>RGBA(0.94, 0.94, 0.94, 1)</only>
 									</li>
 									<li>
 										<weight>10</weight>
-										<only>RGBA(0.74,0.74,0.74,1)</only>
+										<only>RGBA(0.74, 0.74, 0.74, 1)</only>
 									</li>
 									<li>
 										<weight>5</weight>
-										<only>RGBA(0.80,0.80,0.8,1)</only>
+										<only>RGBA(0.80, 0.80, 0.8, 1)</only>
 									</li>
 								</options>
 							</first>
@@ -49,8 +49,8 @@
 								<options>
 									<li>
 										<weight>10</weight>
-										<min>RGBA(0,0.1,0.1,1)</min>
-										<max>RGBA(0.4,0.6,0.6,1)</max>
+										<min>RGBA(0, 0.1, 0.1, 1)</min>
+										<max>RGBA(0.4, 0.6, 0.6, 1)</max>
 									</li>
 								</options>
 							</second>

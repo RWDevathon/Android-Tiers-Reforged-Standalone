@@ -303,7 +303,6 @@
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
     <Compile Include="Harmony\Apparel_Patch.cs" />
     <Compile Include="Harmony\Building_TurretGun_Patch.cs" />
-    <Compile Include="Harmony\Caravan_Patch.cs" />
     <Compile Include="Harmony\Corpse_Patch.cs" />
     <Compile Include="Harmony\FlickUtility_Patch.cs" />
     <Compile Include="Harmony\Thing_Patch.cs" />

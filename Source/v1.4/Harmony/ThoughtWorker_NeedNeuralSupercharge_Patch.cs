@@ -17,7 +17,7 @@ namespace ATReforged
                 if (!__result.Active)
                     return;
 
-                if (Utils.IsConsideredMechanical(p))
+                if (Utils.IsConsideredMechanicalAndroid(p))
                 {
                     __result = ThoughtState.Inactive;
                 }

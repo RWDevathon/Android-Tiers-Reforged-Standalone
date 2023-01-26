@@ -21,7 +21,7 @@ namespace ATReforged
 
         private static readonly float TicksPerDay = 60000;
 
-        private static readonly float TicksPerRare = 250;
+        private static readonly float TicksPerLong = 2000;
 
         private static readonly SimpleCurve PartDecayContractChance = new SimpleCurve
         {
@@ -162,7 +162,7 @@ namespace ATReforged
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if (!Pawn.Spawned || !ATReforged_Settings.maintenanceNeedExists)
+            if (!Pawn.Spawned || !ATReforged_Settings.maintenanceNeedExists || Find.TickManager.TicksGame % 2000 != 0)
             {
                 return;
             }
@@ -176,7 +176,7 @@ namespace ATReforged
             }
 
             ChangeMaintenanceEffectTicks();
-            ChangeMaintenanceLevel(-cachedFallRatePerDay / TicksPerRare);
+            ChangeMaintenanceLevel(-cachedFallRatePerDay * TicksPerLong / TicksPerDay);
         }
 
         // Alter the maintenance level by the provided amount (decreases are assumed to be negative). Ensure the level never falls outside 0 - 1 range and handle stage changes appropriately.
@@ -215,25 +215,25 @@ namespace ATReforged
         {
             if (maintenanceLevel < 0.3f)
             {
-                maintenanceEffectTicks -= TicksPerRare;
+                maintenanceEffectTicks -= TicksPerLong;
 
                 if (maintenanceEffectTicks > 0)
                 {
-                    maintenanceEffectTicks -= maintenanceEffectTicks * (0.1f / TicksPerRare);
+                    maintenanceEffectTicks -= maintenanceEffectTicks * 0.001f;
                 }
             }
             else if (maintenanceLevel > 0.7f)
             {
-                maintenanceEffectTicks += 250;
+                maintenanceEffectTicks += TicksPerLong;
 
                 if (maintenanceEffectTicks < 0)
                 {
-                    maintenanceEffectTicks -= maintenanceEffectTicks * (0.1f / TicksPerRare);
+                    maintenanceEffectTicks -= maintenanceEffectTicks * 0.001f;
                 }
             }
             else
             {
-                maintenanceEffectTicks = Mathf.MoveTowards(maintenanceEffectTicks, 0, 1f * TicksPerRare);
+                maintenanceEffectTicks = Mathf.MoveTowards(maintenanceEffectTicks, 0, 1f * TicksPerLong);
             }
             // Prevent the ticks from going outside a 60 day value positively or negatively.
             maintenanceEffectTicks = Mathf.Clamp(maintenanceEffectTicks, -3600000, 3600000);

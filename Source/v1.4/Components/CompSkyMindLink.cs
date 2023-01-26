@@ -141,7 +141,7 @@ namespace ATReforged
             if (Utils.IsSurrogate(ThisPawn))
             {
                 //Organic surrogates may receive downloads from the pawn they are connected to in the SkyMind network.
-                if (!Utils.IsConsideredMechanical(ThisPawn) && HasSurrogate())
+                if (!Utils.IsConsideredMechanicalAndroid(ThisPawn) && HasSurrogate())
                 {
                     Pawn controller = surrogatePawns.FirstOrFallback();
                     // Ensure only cloud pawn controllers that aren't busy controlling other surrogates or that are in a mind operation already are eligible for downloading from.
@@ -289,7 +289,7 @@ namespace ATReforged
                     if (surrogatePawns.Count == 1)
                     {
                         Pawn surrogate = surrogatePawns.FirstOrFallback();
-                        if (!Utils.IsConsideredMechanical(surrogate))
+                        if (!Utils.IsConsideredMechanicalAndroid(surrogate))
                         {
                             yield return new Command_Action
                             {
@@ -742,7 +742,7 @@ namespace ATReforged
                 clone.health.RemoveAllHediffs();
 
                 // It should however have an Autonomous Core or Transceiver hediff, as this allows it to be SkyMind capable (which it definitely is).
-                if (Utils.IsConsideredMechanical(ThisPawn))
+                if (Utils.IsConsideredMechanicalAndroid(ThisPawn))
                 {
                     clone.health.AddHediff(ATR_HediffDefOf.ATR_AutonomousCore, clone.health.hediffSet.GetBrain());
                 }
