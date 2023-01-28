@@ -25,8 +25,8 @@
 		<statBases>
 			<MarketValue>2400</MarketValue>
 			<MoveSpeed>6.00</MoveSpeed>
-			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
-			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>40</ComfyTemperatureMax>
 			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
 			<MentalBreakThreshold>0.35</MentalBreakThreshold>
 			<GlobalLearningFactor>1.4</GlobalLearningFactor>

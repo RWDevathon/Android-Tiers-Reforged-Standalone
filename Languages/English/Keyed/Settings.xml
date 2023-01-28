@@ -44,8 +44,12 @@
 
         <!-- Permission Settings-->
     <ATR_bedRestrictionDefaultsToAll>Beds default to All pawns rather than Mechanical/Organic</ATR_bedRestrictionDefaultsToAll>
+    <ATR_bedRestrictionDefaultsToAllDesc>By default, charging beds from this mod default to mechanical only, and all other beds default to organic only.</ATR_bedRestrictionDefaultsToAllDesc>
 	
         <!-- Consideration Settings -->
+    <ATR_isUsingCustomConsiderations>Using custom config and will not reset: {0}</ATR_isUsingCustomConsiderations>
+    <ATR_isUsingCustomConsiderationsDesc>If false, ATR will automatically regenerate what is/isn't mechanical at game startup so that it can catch new modded races for you.</ATR_isUsingCustomConsiderationsDesc>
+    <ATR_resetCustomConsiderations>Reset considerations</ATR_resetCustomConsiderations>
 	<ATR_SettingsConsideredAndroid>Androids</ATR_SettingsConsideredAndroid>
 	<ATR_SettingsNotConsideredAndroid>Not Androids</ATR_SettingsNotConsideredAndroid>
 	<ATR_SettingsConsideredDrone>Drones</ATR_SettingsConsideredDrone>

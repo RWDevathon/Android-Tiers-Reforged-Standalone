@@ -20,7 +20,6 @@
             <li>ATR_DroneNutritionUnit</li>
             <li>ATR_DroneTORT</li>
             <li>ATR_DroneWatchdog</li>
-            <!--<li>ATR_Mark1Warrior</li> Reserved for future content-->
 		</recipeUsers>
     </RecipeDef>
  

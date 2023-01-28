@@ -67,14 +67,6 @@
 		<race>ATR_Tier1Android</race>
 	</PawnKindDef>
 
-    <!-- Reserved for future content. Go find the other M1 code if you want it and uncomment all of it.
-	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
-		<defName>ATR_M1WarriorColony</defName>
-		<label>M1 Newboot Warrior</label>
-		<race>ATR_Mark1Warrior</race>
-	</PawnKindDef>
-    -->
-
 	<!--Androids With Real Backstories-->
 
     <PawnKindDef Name="ATR_BaseMechPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">

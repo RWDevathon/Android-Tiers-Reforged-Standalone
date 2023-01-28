@@ -23,8 +23,9 @@ namespace ATReforged
         public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
         public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
         public static bool bedRestrictionDefaultsToAll;
-        
+
             // Settings for what is considered mechanical and massive
+        public static bool isUsingCustomConsiderations;
         public static HashSet<string> isConsideredMechanicalAnimal;
         public static HashSet<string> isConsideredMechanicalAndroid;
         public static HashSet<string> isConsideredMechanicalDrone;
@@ -134,6 +135,10 @@ namespace ATReforged
                 settingsEverOpened = false;
                 ApplyPreset(SettingsPreset.Default);
             }
+            if (!isUsingCustomConsiderations)
+            {
+                RebuildCaches();
+            }
         }
 
         Vector2 scrollPosition = Vector2.zero;
@@ -157,6 +162,11 @@ namespace ATReforged
             settingsEverOpened = true;
             bool hasChanged = false;
             void onChange() { hasChanged = true; }
+            void onConsiderationChange()
+            {
+                onChange();
+                isUsingCustomConsiderations = true;
+            }
 
             Color colorSave = GUI.color;
             TextAnchor anchorSave = Text.Anchor;
@@ -233,29 +243,38 @@ namespace ATReforged
 
                     // PERMISSION SETTINGS
                     listingStandard.CheckboxLabeled("ATR_bedRestrictionDefaultsToAll".Translate(), ref bedRestrictionDefaultsToAll, tooltip: "ATR_bedRestrictionDefaultsToAllDesc".Translate(), onChange: onChange);
+                    listingStandard.GapLine();
 
                     // CONSIDERATION SETTINGS
                     listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
+                    if (listingStandard.ButtonTextLabeled("ATR_isUsingCustomConsiderations".Translate(isUsingCustomConsiderations.ToString()), "ATR_resetCustomConsiderations".Translate(), tooltip: "ATR_isUsingCustomConsiderationsDesc".Translate()))
+                    {
+                            RebuildCaches();
+                            isUsingCustomConsiderations = false;
+                    }
+
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                             cachedExpandFirst = !cachedExpandFirst;
                     }
                     if (cachedExpandFirst)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalAndroid, "ATR_SettingsConsideredAndroid".Translate(), "ATR_SettingsNotConsideredAndroid".Translate(), onChange);
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalAndroid, "ATR_SettingsConsideredAndroid".Translate(), "ATR_SettingsNotConsideredAndroid".Translate(), onConsiderationChange);
                     
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                         cachedExpandSecond = !cachedExpandSecond;
                     }
                     if (cachedExpandSecond)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalDrone, "ATR_SettingsConsideredDrone".Translate(), "ATR_SettingsNotConsideredDrone".Translate(), onChange);
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalDrone, "ATR_SettingsConsideredDrone".Translate(), "ATR_SettingsNotConsideredDrone".Translate(), onConsiderationChange);
                     
                     if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
                     {
                         cachedExpandThird = !cachedExpandThird;
                     }
                     if (cachedExpandThird)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onChange);
+                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onConsiderationChange);
+                    
+                    listingStandard.GapLine();
 
                     // RIGHTS SETTINGS
 
@@ -287,7 +306,7 @@ namespace ATReforged
 
                     listingStandard.CheckboxLabeled("ATR_mechanicalsHaveDifferentBioprocessingEfficiency".Translate(), ref chargeCapableMeansDifferentBioEfficiency, onChange: onChange);
                     if (chargeCapableMeansDifferentBioEfficiency)
-                        {
+                    {
                         listingStandard.SliderLabeled("ATR_mechanicalBioprocessingEfficiency".Translate(), ref chargeCapableBioEfficiency, 0.1f, 2.0f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
                     break;
@@ -411,6 +430,9 @@ namespace ATReforged
             blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
             bedRestrictionDefaultsToAll = false;
 
+            // Considerations
+            isUsingCustomConsiderations = false;
+
             // Rights
             factionsWillDeclareRightsWars = true;
             antiMechanicalRightsFaction = new HashSet<string> { "Empire" };
@@ -512,12 +534,13 @@ namespace ATReforged
             HashSet<string> matchingChargers = new HashSet<string>();
             foreach (ThingDef validHumanlike in FilteredGetters.FilterByIntelligence(validPawns, Intelligence.Humanlike).Where(thingDef => thingDef.HasModExtension<ATR_MechTweaker>()))
             {
+                ATR_MechTweaker modExt = validHumanlike.GetModExtension<ATR_MechTweaker>();
                 // Mechanical Androids are humanlikes with global learning factor >= 0.5 that have the ModExtension. Or are simply marked as canBeAndroid and not canBeDrone.
-                if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone))
+                if (modExt.canBeAndroid && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) >= 0.5f || !modExt.canBeDrone))
                 {
                     matchingAndroids.Add(validHumanlike.defName);
                     // A special bool in the mod extension marks this as a special android.
-                    if (validHumanlike.GetModExtension<ATR_MechTweaker>().isSpecialMechanical)
+                    if (modExt.isSpecialMechanical)
                         matchingSpecials.Add(validHumanlike.defName);
 
                     // All mechanical humanlikes may charge inherently.
@@ -525,7 +548,7 @@ namespace ATReforged
                     matchingMechanicals.Add(validHumanlike.defName);
                 }
                 // Mechanical Drones are humanlikes with global learning factor < 0.5 that have the ModExtension. Or are simply marked as canBeDrone and not canBeAndroid.
-                else if (validHumanlike.GetModExtension<ATR_MechTweaker>().canBeDrone && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) < 0.5f || !validHumanlike.GetModExtension<ATR_MechTweaker>().canBeAndroid))
+                else if (modExt.canBeDrone && (validHumanlike.statBases?.GetStatValueFromList(StatDefOf.GlobalLearningFactor, 0.5f) < 0.5f || !modExt.canBeAndroid))
                 {
                     matchingDrones.Add(validHumanlike.defName);
                     // All mechanical humanlikes may charge inherently.
@@ -581,6 +604,7 @@ namespace ATReforged
             Scribe_Values.Look(ref bedRestrictionDefaultsToAll, "ATR_bedRestrictionDefaultsToAll", false);
 
             // Considerations
+            Scribe_Values.Look(ref isUsingCustomConsiderations, "ATR_isUsingCustomConsiderations", true); // TODO: after a critical save-break update, set this to false for the future.
             try
             {
                 Scribe_Collections.Look(ref isConsideredMechanicalAnimal, "ATR_isConsideredMechanicalAnimal", LookMode.Value);

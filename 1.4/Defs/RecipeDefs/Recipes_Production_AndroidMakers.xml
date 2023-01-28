@@ -257,61 +257,6 @@
         <workAmount>25000</workAmount>
     </RecipeDef>
 
-    <!-- Reserved code for future expansion. Uncommenting will do nothing productive without the Race Def, Body Def, and Generator Def.
-    <RecipeDef ParentName="ATR_AndroidMakerBase">
-        <defName>ATR_CreateM1Warrior</defName>
-        <label>Create M1 Warrior</label>
-        <description>Create a blank M1 Warrior from Plasteel and components.</description>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Steel</li>
-                    </thingDefs>
-                </filter>
-                <count>80</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Plasteel</li>
-                    </thingDefs>
-                </filter>
-                <count>40</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Gold</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentIndustrial</li>
-                    </thingDefs>
-                </filter>
-                <count>10</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentSpacer</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <products>
-            <M1WarriorGenerator>1</M1WarriorGenerator>
-        </products>
-        <researchPrerequisite>ATR_T1Androids</researchPrerequisite>
-        <workAmount>16500</workAmount>
-    </RecipeDef>
-	-->
-
     <RecipeDef ParentName="ATR_AndroidMakerBase">
         <defName>ATR_CreateWatchdog</defName>
         <label>Create drone watchdog</label>

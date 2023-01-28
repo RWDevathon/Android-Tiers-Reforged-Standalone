@@ -53,7 +53,7 @@
         <initialResistanceRange>7~12</initialResistanceRange>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="ATR_AndroidRaiderBase">
+    <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
         <defName>ATR_AndroidT1CollectiveSoldier</defName>
 		<label>T1 Android Soldier</label>
 		<labelPlural>Android soldiers</labelPlural>

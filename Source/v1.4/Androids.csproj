@@ -301,7 +301,6 @@
     <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
-    <Compile Include="Harmony\Apparel_Patch.cs" />
     <Compile Include="Harmony\Building_TurretGun_Patch.cs" />
     <Compile Include="Harmony\Corpse_Patch.cs" />
     <Compile Include="Harmony\FlickUtility_Patch.cs" />
@@ -332,6 +331,7 @@
     <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
     <Compile Include="DefsOf\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_PaintedColor_Favorite.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_MaintenanceMood.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
     <Compile Include="JobDrivers\JobDriver_RechargeBattery.cs" />

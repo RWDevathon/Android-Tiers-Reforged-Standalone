@@ -59,7 +59,7 @@
             </li>
             <li>
                 <minSeverity>0.6</minSeverity>
-                <label>trheatening</label>
+                <label>threatening</label>
                 <lifeThreatening>true</lifeThreatening>
                 <statOffsets>
                     <ComfyTemperatureMax>-45</ComfyTemperatureMax>

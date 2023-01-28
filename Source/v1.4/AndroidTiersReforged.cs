@@ -117,12 +117,12 @@ namespace ATReforged
                     }
                 }
                 // Handle SkyMind-connectable buildings.
-                else if (thingDef.comps != null)
+                else if (typeof(Building).IsAssignableFrom(thingDef.thingClass) && thingDef.comps != null)
                 {
                     foreach (CompProperties compProp in thingDef.comps)
                     {
                         // Add CompSkyMind if it can be powered.
-                        if (compProp.compClass.IsAssignableFrom(typeof(CompPowerTrader)))
+                        if (compProp.compClass?.IsAssignableFrom(typeof(CompPowerTrader)) == true)
                         {
                             CompProperties cp = new CompProperties
                             {
