@@ -89,6 +89,12 @@
                 </statFactors>
             </li>
         </stages>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_TetheredMoteSustainer">
+                <moteDef>ATR_SurrogateAttachedMote</moteDef>
+                <scale>0.8</scale>
+            </li>
+        </comps>
     </HediffDef>
   
     <HediffDef ParentName="ATR_SkyMindHediffBase">
@@ -107,6 +113,12 @@
                 </capMods>
             </li>
         </stages>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_TetheredMoteSustainer">
+                <moteDef>ATR_MindOperationAttachedMote</moteDef>
+                <scale>0.8</scale>
+            </li>
+        </comps>
     </HediffDef>
   
     <HediffDef ParentName="ATR_SkyMindHediffBase">

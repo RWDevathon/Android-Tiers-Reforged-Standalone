@@ -209,9 +209,21 @@ namespace ATReforged
                                 targetOpts.Add(new FloatMenuOption(map.Parent.Label, delegate
                                 {
                                     Current.Game.CurrentMap = map;
-                                    Designator_AndroidToControl target = new Designator_AndroidToControl(cloudPawn);
-                                    Find.DesignatorManager.Select(target);
-
+                                    TargetingParameters targetParameters = new TargetingParameters()
+                                    {
+                                        canTargetPawns = true,
+                                        canTargetBuildings = false,
+                                        canTargetAnimals = false,
+                                        canTargetMechs = false,
+                                        mapObjectTargetsMustBeAutoAttackable = false,
+                                        onlyTargetIncapacitatedPawns = true,
+                                        validator = delegate (TargetInfo targetInfo)
+                                        {
+                                            return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                                    && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
+                                        }
+                                    };
+                                    Find.Targeter.BeginTargeting(targetParameters, (LocalTargetInfo target) => cloudPawn.GetComp<CompSkyMindLink>().ConnectSurrogate((Pawn)target.Thing));
                                 }));
                             }
                             if (targetOpts.Count != 0)

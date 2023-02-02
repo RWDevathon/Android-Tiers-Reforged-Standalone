@@ -48,7 +48,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <Beauty>-1</Beauty>
+                    <PawnBeauty>-1</PawnBeauty>
                 </statOffsets>
             </li>
         </stages>
@@ -321,7 +321,7 @@
             <li>
                 <hungerRateFactor>0.95</hungerRateFactor>
                 <statOffsets>
-                    <Beauty>1</Beauty>
+                    <PawnBeauty>1</PawnBeauty>
                 </statOffsets>
                 <statFactors>
                     <IncomingDamageFactor>0.95</IncomingDamageFactor>

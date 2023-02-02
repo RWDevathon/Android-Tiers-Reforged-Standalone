@@ -29,7 +29,7 @@
             <wildness>0</wildness>
 			<manhunterOnDamageChance>0</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-			<!-- <needsRest>false</needsRest> All mechanical pawns don't need rest via C# Run-time patching -->
+			<needsRest>false</needsRest>
 			<useMeatFrom>Alpaca</useMeatFrom>
 			<leatherDef>Leather_Human</leatherDef>
             <lifeExpectancy>40</lifeExpectancy>

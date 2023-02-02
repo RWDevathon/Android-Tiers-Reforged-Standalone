@@ -34,6 +34,13 @@ namespace ATReforged
             {
                 return false;
             }
+
+            // If this particular bench has no SkyMind connection (because it can't have one, or it isn't active), then no work can be done here.
+            if (bench.GetComp<CompSkyMind>()?.connected != true)
+            {
+                return false;
+            }
+
             // If this particular bench is set to a server type that is full on its points, then no work can be done here.
             CompInsightBench compInsightBench = bench.GetComp<CompInsightBench>();
             if (compInsightBench == null || Utils.gameComp.GetPointCapacity(compInsightBench.ServerType) <= Utils.gameComp.GetPoints(compInsightBench.ServerType))

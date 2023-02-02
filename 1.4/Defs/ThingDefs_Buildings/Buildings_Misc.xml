@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ATR_MaintenanceSpot</defName>
+        <label>maintenance spot</label>
+        <description>Designates a spot for maintenance. Mechanical pawns will prefer to do maintenance here, and can be assigned to specific units.</description>
+        <graphicData>
+            <texPath>Things/Building/Misc/PartySpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+        </statBases>
+        <rotatable>false</rotatable>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>False</useHitPoints>
+        <designationCategory>ATR_AndroidTiersDesignation</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <passability>Standable</passability>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <building>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+            <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+            <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+        </building>
+        <comps>
+            <li Class="CompProperties_AssignableToPawn">
+                <drawUnownedAssignmentOverlay>false</drawUnownedAssignmentOverlay>
+                <compClass>ATReforged.CompAssignableToPawn_MaintenanceSpot</compClass>
+            </li>
+        </comps>
+        <designationHotKey>Misc12</designationHotKey>
+    </ThingDef>
+
+</Defs>

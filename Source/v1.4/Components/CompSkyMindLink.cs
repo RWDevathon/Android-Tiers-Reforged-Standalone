@@ -4,6 +4,7 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using Verse.Noise;
 
 namespace ATReforged
 {
@@ -40,30 +41,6 @@ namespace ATReforged
                 }
             }
         }
-
-        public override void PostDraw()
-        {
-            Material avatar = null;
-            Vector3 vector;
-
-            if (Linked > -1)
-                avatar = Tex.MindOperation;
-            else if (HasSurrogate() || isForeign)
-                avatar = Tex.RemotelyControlledNode;
-            else if (Find.DesignatorManager.SelectedDesignator is Designator_AndroidToControl && Utils.IsSurrogate(ThisPawn) && !HasSurrogate())
-                avatar = Tex.AvailableSurrogateIcon;
-
-            if (avatar != null)
-            {
-                vector = parent.TrueCenter();
-                vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
-                vector.z += 1.4f;
-                vector.x += parent.def.size.x / 2;
-
-                Graphics.DrawMesh(MeshPool.plane08, vector, Quaternion.identity, avatar, 0);
-            }
-        }
-
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
@@ -224,15 +201,40 @@ namespace ATReforged
                             opts.Add(new FloatMenuOption(map.Parent.Label, delegate
                             {
                                 Current.Game.CurrentMap = map;
-                                Designator_AndroidToControl x = new Designator_AndroidToControl((Pawn)parent);
-                                Find.DesignatorManager.Select(x);
-
+                                TargetingParameters targetParameters = new TargetingParameters()
+                                {
+                                    canTargetPawns = true,
+                                    canTargetBuildings = false,
+                                    canTargetAnimals = false,
+                                    canTargetMechs = false,
+                                    mapObjectTargetsMustBeAutoAttackable = false,
+                                    onlyTargetIncapacitatedPawns = true,
+                                    validator = delegate (TargetInfo targetInfo)
+                                    {
+                                        return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                                && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
+                                    }
+                                };
+                                Find.Targeter.BeginTargeting(targetParameters, (LocalTargetInfo target) => ConnectSurrogate((Pawn)target.Thing));
                             }));
                         }
                         if (opts.Count == 1)
                         {
-                            Designator_AndroidToControl x = new Designator_AndroidToControl((Pawn)parent);
-                            Find.DesignatorManager.Select(x);
+                            TargetingParameters targetParameters = new TargetingParameters()
+                            {
+                                canTargetPawns = true,
+                                canTargetBuildings = false,
+                                canTargetAnimals = false,
+                                canTargetMechs = false,
+                                mapObjectTargetsMustBeAutoAttackable = false,
+                                onlyTargetIncapacitatedPawns = true,
+                                validator = delegate (TargetInfo targetInfo)
+                                {
+                                    return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                            && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
+                                }
+                            };
+                            Find.Targeter.BeginTargeting(targetParameters, (LocalTargetInfo target) => ConnectSurrogate((Pawn)target.Thing));
                         }
                         else if (opts.Count > 1)
                         {
@@ -496,6 +498,8 @@ namespace ATReforged
                 // Foreign controllers aren't saved, and are only needed to initialize the surrogate. Foreign surrogates operate independently until downed or killed.
                 isForeign = true;
                 surrogateLink.isForeign = true;
+                Hediff splitConsciousness = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_SplitConsciousness, surrogate);
+                surrogate.health.AddHediff(splitConsciousness);
             }
 
             // Remove the surrogate's NoHost hediff.

@@ -130,11 +130,11 @@ namespace ATReforged
             IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
             foreach (Pawn pawn in playerPawns)
             {
-                if (Utils.IsConsideredMechanical(pawn))
+                if (Utils.IsConsideredMechanicalAndroid(pawn))
                 {
                     playerFactionHasMechanicalColonists = true;
                 }
-                else
+                else if (!Utils.IsConsideredMechanical(pawn))
                 {
                     playerFactionHasOrganicColonists = true;
                 }

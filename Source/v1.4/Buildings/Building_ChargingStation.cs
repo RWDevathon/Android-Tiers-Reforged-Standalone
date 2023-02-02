@@ -96,7 +96,8 @@ namespace ATReforged
             }
             else
             {
-                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate(){
+                 yield return new FloatMenuOption("ATR_ForceCharge".Translate(), delegate() 
+                 {
                      // Attempt to assign all pawns that can reach to the station a spot. If a pawn takes the last slot, then abort the process. Left-over pawns won't charge.
                      foreach (Pawn pawn in pawnsCanReach) {
                          IntVec3 chargingSpot = GetOpenRechargeSpot(pawn);

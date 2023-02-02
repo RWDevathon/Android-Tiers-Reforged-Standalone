@@ -55,17 +55,11 @@ namespace ATReforged
                 return null;
             }
 
-            // If this pawn's current position is legal for meditation, use it.
-            if (ReservationUtility.CanReserve(pawn, pawn.Position) && MeditationUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
-            {
-                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceUrgent, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
-            }
-
             // FindMeditationSpot will find a place that is valid and will allow this job to continue. If it is invalid, then there is nowhere to do maintenance and no job is given.
-            MeditationSpotAndFocus meditationSpot = MeditationUtility.FindMeditationSpot(pawn);
-            if (meditationSpot.IsValid)
+            LocalTargetInfo maintenanceSpot = MaintenanceUtility.FindMaintenanceSpot(pawn);
+            if (maintenanceSpot.IsValid)
             {
-                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceUrgent, meditationSpot.spot, new LocalTargetInfo(meditationSpot.spot.Cell));
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceUrgent, maintenanceSpot, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
             return null;
         }

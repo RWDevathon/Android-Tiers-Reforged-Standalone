@@ -188,6 +188,7 @@
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
     <Compile Include="Commands\Command_SetTargetMaintenanceLevel.cs" />
+    <Compile Include="Components\CompAssignableToPawn_MaintenanceSpot.cs" />
     <Compile Include="Components\CompPawnTypeRestrictable.cs" />
     <Compile Include="Components\CompInsightBench.cs" />
     <Compile Include="Components\CompMaintenanceNeed.cs" />
@@ -267,7 +268,9 @@
     <Compile Include="Harmony\StatPart_Age_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_PatientGoToBedTreatment_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_TetheredMoteSustainer.cs" />
     <Compile Include="Hediffs\HediffCompProperties_SkyMindEffecter.cs" />
+    <Compile Include="Hediffs\HediffComp_TetheredMoteSustainer.cs" />
     <Compile Include="Hediffs\HediffComp_SkyMindEffecter.cs" />
     <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
     <Compile Include="Hediffs\HediffComp_MaintenanceStageEffect.cs" />
@@ -297,7 +300,6 @@
     <Compile Include="DefsOf\ATR_StatDefOf.cs" />
     <Compile Include="DefsOf\ATR_ThingDefOf.cs" />
     <Compile Include="DefsOf\ATR_TraitDefOf.cs" />
-    <Compile Include="Designators\Designator_AndroidToControl.cs" />
     <Compile Include="Dialogs\Dialog_HackingWindow.cs" />
     <Compile Include="Dialogs\Dialog_SkillUp.cs" />
     <Compile Include="Harmony\Alert_ColonistLeftUnburied_Patch.cs" />
@@ -341,6 +343,7 @@
     <Compile Include="Recipes\Recipe_RemoveMechanicalPart.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_RustedPart.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_ChronicAnnoyance.cs" />
+    <Compile Include="Utils\MaintenanceUtility.cs" />
     <Compile Include="WorkGivers\JobGiver_DoMaintenanceIdle.cs" />
     <Compile Include="WorkGivers\JobGiver_DoMaintenanceUrgent.cs" />
     <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />

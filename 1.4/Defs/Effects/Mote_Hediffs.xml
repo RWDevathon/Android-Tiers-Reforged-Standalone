@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Attached motes for hediffs -->
+
+    <ThingDef Name="ATR_AttachedHediffMoteBase" ParentName="MoteBase" Abstract="True">
+        <thingClass>MoteAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.25</fadeInTime>
+            <fadeOutTime>0.25</fadeOutTime>
+            <solidTime>999999</solidTime>
+        </mote>
+        <isSaveable>true</isSaveable>
+    </ThingDef>
+    
+    <ThingDef ParentName="ATR_AttachedHediffMoteBase">
+        <defName>ATR_MindOperationAttachedMote</defName>
+        <graphicData>
+            <texPath>UI/Avatars/MindOperation</texPath>
+            <renderInstanced>true</renderInstanced>
+        </graphicData>
+    </ThingDef>
+    
+    <ThingDef ParentName="ATR_AttachedHediffMoteBase">
+        <defName>ATR_SurrogateAttachedMote</defName>
+        <graphicData>
+            <texPath>UI/Avatars/SkyMindNode</texPath>
+            <renderInstanced>true</renderInstanced>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

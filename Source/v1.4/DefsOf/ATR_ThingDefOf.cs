@@ -17,6 +17,10 @@ namespace ATReforged
         public static ThingDef HospitalBed;
 
         public static ThingDef ATR_FractalPill;
+
+        public static ThingDef ATR_MaintenanceSpot;
+
+        public static ThingDef ATR_MindOperationAttachedMote;
     }
 
 }

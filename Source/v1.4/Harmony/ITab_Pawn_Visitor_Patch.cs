@@ -23,7 +23,7 @@ namespace ATReforged
                     return true;
 
                 // Send a message occasionally about the illegality of drones being prisoners.
-                if (pawn.IsHashIntervalTick(732))
+                if (pawn.IsHashIntervalTick(312))
                 {
                     if (pawn.IsPrisoner)
                     {

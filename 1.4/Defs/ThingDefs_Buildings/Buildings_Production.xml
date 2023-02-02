@@ -3,9 +3,9 @@
   
     <ThingDef ParentName="BenchBase">
         <defName>ATR_MechanicalAssemblyPod</defName>
-        <label>Robotics production casket</label>
+        <label>Mechanical assembly casket</label>
         <thingClass>Building_WorkTable</thingClass>
-        <description>A casket that creates androids and android parts when given materials and a moderate level of human involvement.</description>
+        <description>A casket designed to shape itself to form the chassis and assemble all necessary parts for androids and mechanical animals.</description>
         <graphicData>
             <texPath>Things/Buildings/AssemblyPod/AssemblyPod</texPath>
         <graphicClass>Graphic_Multi</graphicClass>

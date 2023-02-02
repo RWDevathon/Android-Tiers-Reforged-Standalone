@@ -89,6 +89,7 @@ namespace ATReforged
         public static float minSurrogatePercentagePerLegalGroup = 0.2f;
         public static float maxSurrogatePercentagePerLegalGroup = 0.7f;
 
+        public static bool displaySurrogateControlIcon = true;
         public static int safeSurrogateConnectivityCountBeforePenalty = 1;
 
             // Settings for Skill Points
@@ -369,6 +370,7 @@ namespace ATReforged
                             listingStandard.SliderLabeled("ATR_minSurrogatePercentagePerLegalGroup".Translate(), ref minSurrogatePercentagePerLegalGroup, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                             listingStandard.SliderLabeled("ATR_maxSurrogatePercentagePerLegalGroup".Translate(), ref maxSurrogatePercentagePerLegalGroup, 0.01f, 1f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                         }
+                        listingStandard.CheckboxLabeled("ATR_displaySurrogateControlIcon".Translate(), ref displaySurrogateControlIcon, onChange: onChange);
                         string safeSurrogateConnectivityCountBeforePenaltyBuffer = safeSurrogateConnectivityCountBeforePenalty.ToString();
                         listingStandard.TextFieldNumericLabeled("ATR_safeSurrogateConnectivityCountBeforePenalty".Translate(), ref safeSurrogateConnectivityCountBeforePenalty, ref safeSurrogateConnectivityCountBeforePenaltyBuffer, 1, 40);
                     }
@@ -485,6 +487,7 @@ namespace ATReforged
             minGroupSizeForSurrogates = 5;
             minSurrogatePercentagePerLegalGroup = 0.2f;
             maxSurrogatePercentagePerLegalGroup = 0.7f;
+            displaySurrogateControlIcon = true;
             safeSurrogateConnectivityCountBeforePenalty = 1;
 
             // Skills
@@ -685,6 +688,7 @@ namespace ATReforged
             Scribe_Values.Look(ref minGroupSizeForSurrogates, "ATR_minGroupSizeForSurrogates", 5);
             Scribe_Values.Look(ref minSurrogatePercentagePerLegalGroup, "ATR_minSurrogatePercentagePerLegalGroup", 0.2f);
             Scribe_Values.Look(ref maxSurrogatePercentagePerLegalGroup, "ATR_maxSurrogatePercentagePerLegalGroup", 0.7f);
+            Scribe_Values.Look(ref displaySurrogateControlIcon, "ATR_displaySurrogateControlIcon", true);
             Scribe_Values.Look(ref safeSurrogateConnectivityCountBeforePenalty, "ATR_safeSurrogateConnectivityCountBeforePenalty", 1);
 
             // Skills

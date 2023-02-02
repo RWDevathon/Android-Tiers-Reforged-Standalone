@@ -252,6 +252,7 @@
 			<baseHungerRate>4</baseHungerRate>
 			<baseHealthScale>7.5</baseHealthScale>
 			<baseBodySize>5</baseBodySize>
+			<needsRest>false</needsRest>
 			<ageGenerationCurve>
 				<points>
                     <li>(0,0)</li>

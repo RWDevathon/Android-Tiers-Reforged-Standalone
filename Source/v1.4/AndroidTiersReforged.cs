@@ -90,7 +90,6 @@ namespace ATReforged
                         {
                             ingestibleProps.preferability = FoodPreferability.Undefined;
                         }
-                        thingDef.race.needsRest = false;
 
                         if (thingDef.GetModExtension<ATR_MechTweaker>()?.needsMaintenance == true && ATReforged_Settings.maintenanceNeedExists)
                         {
