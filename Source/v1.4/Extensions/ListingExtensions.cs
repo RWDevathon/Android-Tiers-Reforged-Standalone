@@ -131,7 +131,7 @@ namespace ATReforged
         public static Listing_Standard BeginHiddenSection(this Listing_Standard instance, out float maxHeightAccumulator)
         {
             Rect rect = instance.GetRect(0);
-            rect.height = 10000f;
+            rect.height = 30000f;
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(rect);
             maxHeightAccumulator = 0f;

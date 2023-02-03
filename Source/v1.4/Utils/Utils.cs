@@ -679,7 +679,7 @@ namespace ATReforged
         public static bool IsValidMindTransferTarget(Pawn pawn)
         {
             // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
+            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer && !pawn.IsPrisonerOfColony) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
             {
                 return false;
             }
@@ -934,6 +934,53 @@ namespace ATReforged
                 pawn.story.Adulthood = pawnExtension?.droneAdulthoodBackstoryDef ?? ATR_BackstoryDefOf.ATR_MechAdulthoodDrone;
                 pawn.workSettings.Notify_DisabledWorkTypesChanged();
                 pawn.skills.Notify_SkillDisablesChanged();
+            }
+        }
+
+        // Remove all illegal traits for a given pawn, and replace them if the appropriate bool is true.
+        public static void ReconfigureIllegalTraits(Pawn pawn, HashSet<string> illegalTraitDefNames, bool shouldReplace)
+        {
+            TraitSet traits = pawn.story?.traits;
+            if (traits == null || traits.allTraits.Count == 0 || illegalTraitDefNames == null || illegalTraitDefNames.Count == 0)
+            {
+                return;
+            }
+
+            // Identify illegal traits and remove them.
+            List<Trait> illegalTraits = new List<Trait>();
+            for (int i = traits.allTraits.Count - 1; i >= 0; i--)
+            {
+                Trait trait = traits.allTraits[i];
+                if (trait.sourceGene == null && illegalTraitDefNames.Contains(trait.def.defName))
+                {
+                    illegalTraits.Add(trait);
+                    traits.RemoveTrait(trait);
+                }
+            }
+
+            if (!shouldReplace)
+            {
+                return;
+            }
+
+            // Generate new traits.
+            int iteration = 0;
+            while (illegalTraits.Count > 0 && iteration++ < 5)
+            {
+                illegalTraits = new List<Trait>();
+                List<Trait> newTraits = PawnGenerator.GenerateTraitsFor(pawn, illegalTraits.Count);
+                for (int i = newTraits.Count - 1; i >= 0; i--)
+                {
+                    Trait trait = newTraits[i];
+                    if (illegalTraitDefNames.Contains(trait.def.defName))
+                    {
+                        illegalTraits.Add(trait);
+                    }
+                    else
+                    {
+                        traits.GainTrait(trait);
+                    }
+                }
             }
         }
     }

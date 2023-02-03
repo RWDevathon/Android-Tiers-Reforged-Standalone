@@ -27,7 +27,7 @@ namespace ATReforged
             if (cachedPawnMaintenanceSpots.ContainsKey(pawn.thingIDNumber))
             {
                 Pair<IntVec3, int> cachedMaintenanceTimedSpot = cachedPawnMaintenanceSpots[pawn.thingIDNumber];
-                if (cachedMaintenanceTimedSpot != null && cachedMaintenanceTimedSpot.First == pawn.Position && Find.TickManager.TicksGame - cachedMaintenanceTimedSpot.Second < 30000 && MaintenanceUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map))
+                if (cachedMaintenanceTimedSpot != null && cachedMaintenanceTimedSpot.First == pawn.Position && Find.TickManager.TicksGame - cachedMaintenanceTimedSpot.Second < 30000 && MaintenanceUtility.SafeEnvironmentalConditions(pawn, pawn.Position, pawn.Map) && pawn.CanReserveAndReach(pawn.Position, PathEndMode.OnCell, Danger.None))
                 {
                     cachedPawnMaintenanceSpots[pawn.thingIDNumber] = new Pair<IntVec3, int>(pawn.Position, Find.TickManager.TicksGame);
                     return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceIdle, pawn.Position, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
@@ -39,7 +39,7 @@ namespace ATReforged
             if (maintenanceSpot.IsValid)
             {
                 cachedPawnMaintenanceSpots[pawn.thingIDNumber] = new Pair<IntVec3, int>(maintenanceSpot.Cell, Find.TickManager.TicksGame);
-                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceIdle, maintenanceSpot, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceIdle, maintenanceSpot.Cell, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
             return null;
         }

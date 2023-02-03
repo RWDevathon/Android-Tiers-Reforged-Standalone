@@ -29,6 +29,7 @@
         </building>
         <comps>
             <li Class="CompProperties_AssignableToPawn">
+                <maxAssignedPawnsCount>999</maxAssignedPawnsCount>
                 <drawUnownedAssignmentOverlay>false</drawUnownedAssignmentOverlay>
                 <compClass>ATReforged.CompAssignableToPawn_MaintenanceSpot</compClass>
             </li>

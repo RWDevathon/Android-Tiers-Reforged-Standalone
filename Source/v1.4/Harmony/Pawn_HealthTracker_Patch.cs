@@ -16,12 +16,6 @@ namespace ATReforged
             [HarmonyPrefix]
             public static bool Listener(ref Pawn ___pawn, ref Hediff hediff, BodyPartRecord part)
             {
-                // No reason to check here if the pawn or hediff is null.
-                if (___pawn == null || hediff == null)
-                {
-                    return true;
-                }
-
                 // If this is a mechanical pawn and this particular hediff is forbidden for mechanicals to have, then abort trying to add it.
                 if (Utils.IsConsideredMechanical(___pawn) && ATReforged_Settings.blacklistedMechanicalHediffs.Contains(hediff.def.defName))
                 {

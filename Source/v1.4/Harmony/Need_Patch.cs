@@ -34,18 +34,8 @@ namespace ATReforged
                 {
                     if (Utils.CanUseBattery(___pawn))
                     {
-                        __result = string.Concat(new string[]
-                            {
-                                "ATR_EnergyNeed".Translate(),
-                                ": ",
-                                __instance.CurLevelPercentage.ToStringPercent(),
-                                " (",
-                                __instance.CurLevel.ToString("0.##"),
-                                " / ",
-                                __instance.MaxLevel.ToString("0.##"),
-                                ")\n",
-                                "ATR_EnergyNeedDesc".Translate()
-                            });
+                        __result = $"{"ATR_EnergyNeed".Translate()}: {__instance.CurLevelPercentage.ToStringPercent()} ({__instance.CurLevel:0.##}/{__instance.MaxLevel:0.##})\n{"ATR_EnergyNeedDesc".Translate()}";
+                        return;
                     }
                 }
             }

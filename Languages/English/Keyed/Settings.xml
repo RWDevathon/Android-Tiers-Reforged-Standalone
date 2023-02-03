@@ -116,6 +116,10 @@
     <ATR_maintenanceFallRateFactor>How quickly maintenance falls naturally</ATR_maintenanceFallRateFactor>
     <ATR_maintenanceGainRateFactor>How quickly maintenance is gained when doing maintenance</ATR_maintenanceGainRateFactor>
 
+        <!-- Hediffs -->
+    <ATR_hediffBlacklistWarning>Warning: The longer the list of blacklisted hediffs is, the more performance impact on the game it will have.</ATR_hediffBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalHediffs>Blacklisted Mechanical Hediffs</ATR_settingsBlacklistedMechanicalHediffs>
+    <ATR_settingsAllowedMechanicalHediffs>Allowed Mechanical Hediffs</ATR_settingsAllowedMechanicalHediffs>
     
 	<!-- Connectivity Settings -->
         <!-- Surrogates -->
@@ -136,5 +140,11 @@
     <ATR_UploadingKills>Uploading to SkyMind turns the initiator's body into a blank.</ATR_UploadingKills>
     <ATR_UploadingPermakills>Uploading to SkyMind leaves the initiator's body completely useless and dead.</ATR_UploadingPermakills>
     <ATR_SkyMindOperationTimeRequired>Hours required to complete SkyMind operations [default: 24]</ATR_SkyMindOperationTimeRequired>
+
+    <!-- Stats Settings -->
+        <!-- Traits -->
+    <ATR_traitBlacklistWarning>Warning: The longer the list of blacklisted traits is, the more performance impact on the game it will have.</ATR_traitBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalTraits>Blacklisted Mechanical Traits</ATR_settingsBlacklistedMechanicalTraits>
+    <ATR_settingsAllowedMechanicalTraits>Allowed Mechanical Traits</ATR_settingsAllowedMechanicalTraits>
 
 </LanguageData>

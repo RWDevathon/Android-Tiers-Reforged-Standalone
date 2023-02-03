@@ -36,14 +36,22 @@ namespace ATReforged
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            // Infected or enemy devices don't get buttons to interact with the SkyMind. 
-            if (integrityBreach != -1 || parent.Faction != Faction.OfPlayer)
+            // Infected don't get buttons to interact with the SkyMind. 
+            if (integrityBreach != -1)
                 yield break;
 
-            // If this unit can't use the SkyMind, then it doesn't get any buttons to interact with it.
+            // If this pawn can't use the SkyMind or is not a colonist or prisoner, then it doesn't get any buttons to interact with it.
             if (parent is Pawn pawn)
             {
-                if (!Utils.HasCloudCapableImplant(pawn))
+                if (!Utils.HasCloudCapableImplant(pawn) || (pawn.Faction != Faction.OfPlayer && !pawn.IsPrisonerOfColony))
+                {
+                    yield break;
+                }
+            }
+            // Non-pawns (buildings) must belong to the player to connect to the SkyMind network.
+            else
+            {
+                if (parent.Faction != Faction.OfPlayer)
                 {
                     yield break;
                 }

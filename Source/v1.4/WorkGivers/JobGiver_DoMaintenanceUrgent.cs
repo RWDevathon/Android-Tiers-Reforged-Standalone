@@ -59,7 +59,7 @@ namespace ATReforged
             LocalTargetInfo maintenanceSpot = MaintenanceUtility.FindMaintenanceSpot(pawn);
             if (maintenanceSpot.IsValid)
             {
-                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceUrgent, maintenanceSpot, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
+                return JobMaker.MakeJob(ATR_JobDefOf.ATR_DoMaintenanceUrgent, maintenanceSpot.Cell, pawn.InBed() ? ((LocalTargetInfo)pawn.CurrentBed()) : new LocalTargetInfo(pawn.Position));
             }
             return null;
         }

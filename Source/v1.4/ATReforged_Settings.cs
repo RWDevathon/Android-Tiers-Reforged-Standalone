@@ -20,8 +20,8 @@ namespace ATReforged
 
             // Settings for Permissions
         public static HashSet<string> thingsAllowedAsRepairStims = new HashSet<string> { };
-        public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia", "ClinicalDeathAsphyxiation", "ClinicalDeathNoHeartbeat", "FatalRad", "RimatomicsRadiation", "RadiationIncurable" };
-        public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+        public static HashSet<string> blacklistedMechanicalHediffs = new HashSet<string> { };
+        public static HashSet<string> blacklistedMechanicalTraits = new HashSet<string> { };
         public static bool bedRestrictionDefaultsToAll;
 
             // Settings for what is considered mechanical and massive
@@ -354,6 +354,20 @@ namespace ATReforged
                         listingStandard.SliderLabeled("ATR_maintenanceFallRateFactor".Translate(), ref maintenanceFallRateFactor, 0.5f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                         listingStandard.SliderLabeled("ATR_maintenanceGainRateFactor".Translate(), ref maintenanceGainRateFactor, 0.5f, 5f, displayMult: 100, valueSuffix: "%", onChange: onChange);
                     }
+                    listingStandard.GapLine();
+
+                    // HEDIFFS
+                    listingStandard.Label("ATR_hediffBlacklistWarning".Translate());
+                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                        cachedExpandFirst = !cachedExpandFirst;
+                    }
+                    if (!cachedExpandFirst)
+                    {
+                        listingStandard.DefSelector(DefDatabase<HediffDef>.AllDefsListForReading, ref blacklistedMechanicalHediffs, "ATR_settingsBlacklistedMechanicalHediffs".Translate(), "ATR_settingsAllowedMechanicalHediffs".Translate(), onChange);
+                    }
+                    listingStandard.GapLine();
+
                     break;
                 }
                 case OptionsTab.Connectivity:
@@ -395,6 +409,20 @@ namespace ATReforged
 
                     break;
                 }
+                case OptionsTab.Stats:
+                {
+                    // Traits
+                    listingStandard.Label("ATR_traitBlacklistWarning".Translate());
+                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    {
+                        cachedExpandFirst = !cachedExpandFirst;
+                    }
+                    if (!cachedExpandFirst)
+                    {
+                        listingStandard.DefSelector(DefDatabase<TraitDef>.AllDefsListForReading, ref blacklistedMechanicalTraits, "ATR_settingsBlacklistedMechanicalTraits".Translate(), "ATR_settingsAllowedMechanicalTraits".Translate(), onChange);
+                    }
+                    break;
+                }
                 default:
                 {
                     break;
@@ -428,8 +456,8 @@ namespace ATReforged
 
             // Permissions
             thingsAllowedAsRepairStims = new HashSet<string> { };
-            blacklistedMechanicalHediffs = new HashSet<string> { "ZeroGSickness", "SpaceHypoxia" };
-            blacklistedMechanicalTraits = new HashSet<string> { "Insomniac", "Codependent", "HeavySleeper", "Polygamous", "Beauty", "Immunity" };
+            blacklistedMechanicalHediffs = new HashSet<string> { };
+            blacklistedMechanicalTraits = new HashSet<string> { };
             bedRestrictionDefaultsToAll = false;
 
             // Considerations

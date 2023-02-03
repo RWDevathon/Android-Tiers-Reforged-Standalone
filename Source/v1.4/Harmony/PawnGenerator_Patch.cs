@@ -4,7 +4,7 @@ using System;
 
 namespace ATReforged
 {
-    internal class PawnGenerator_Patch
+    public class PawnGenerator_Patch
     {
         // Prefix pawn generation for mechanical units so they have the appropriate gender. This will allow vanilla pawn gen to handle various details like name and body type automatically.
         [HarmonyPatch(typeof(PawnGenerator), "GeneratePawn")]
@@ -53,6 +53,7 @@ namespace ATReforged
                         __result.ideo = null;
                         __result.apparel.DestroyAll();
                     }
+                    Utils.ReconfigureIllegalTraits(__result, ATReforged_Settings.blacklistedMechanicalTraits, true);
                 }
                 catch(Exception ex)
                 {

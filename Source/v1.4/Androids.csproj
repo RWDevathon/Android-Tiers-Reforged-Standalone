@@ -187,7 +187,6 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
-    <Compile Include="Commands\Command_SetTargetMaintenanceLevel.cs" />
     <Compile Include="Components\CompAssignableToPawn_MaintenanceSpot.cs" />
     <Compile Include="Components\CompPawnTypeRestrictable.cs" />
     <Compile Include="Components\CompInsightBench.cs" />

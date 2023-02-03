@@ -13,14 +13,6 @@ namespace ATReforged
                 return (CompProperties_SkyMindTower)props;
             }
         }
-
-        public override void Notify_KilledPawn(Pawn pawn)
-        {
-            base.Notify_KilledPawn(pawn);
-
-            // Dead pawns that were acting as towers can no longer do so. Buildings do not call this function.
-            Utils.gameComp.RemoveTower(this);
-        }
         
         // After despawning remove the tower.
         public override void PostDeSpawn(Map map)

@@ -116,7 +116,12 @@ namespace ATReforged
             subsection.Label(selectedLabel);
             for (int i = 0; i < orderedSelectedDefs.Count; i++)
             {
-                if (subsection.ButtonText(orderedSelectedDefs[i].LabelCap))
+                string label = orderedSelectedDefs[i].LabelCap;
+                if (label == null)
+                {
+                    label = orderedSelectedDefs[i].defName;
+                }
+                if (subsection.ButtonText(label))
                 {
                     selectedDefs.Remove(orderedSelectedDefs[i].defName);
                     onChange?.Invoke();
@@ -127,7 +132,12 @@ namespace ATReforged
             subsection.Label(unselectedLabel);
             for (int i = 0; i < orderedUnselectedDefs.Count; i++)
             {
-                if (subsection.ButtonText(orderedUnselectedDefs[i].LabelCap))
+                string label = orderedUnselectedDefs[i].LabelCap;
+                if (label == null)
+                {
+                    label = orderedUnselectedDefs[i].defName;
+                }
+                if (subsection.ButtonText(label))
                 {
                     selectedDefs.Add(orderedUnselectedDefs[i].defName);
                     onChange?.Invoke();

@@ -15,7 +15,8 @@ namespace ATReforged
             float highestPreferability = float.MinValue;
             LocalTargetInfo spot = LocalTargetInfo.Invalid;
             Room ownedRoom = pawn.ownership.OwnedRoom;
-            foreach (LocalTargetInfo item in AllMaintenanceSpotCandidates(pawn))
+            var tmep = AllMaintenanceSpotCandidates(pawn);
+            foreach (LocalTargetInfo item in tmep)
             {
                 // If this spot is illegal for the pawn, skip.
                 if (!SafeEnvironmentalConditions(pawn, item.Cell, pawn.Map) || !item.Cell.Standable(pawn.Map) || item.Cell.IsForbidden(pawn) || !pawn.CanReserveAndReach(item.Cell, PathEndMode.OnCell, Danger.None))
@@ -81,6 +82,7 @@ namespace ATReforged
         // Generates and returns an enumerable of all viable maintenance spot candidates in the order of preferability.
         public static IEnumerable<LocalTargetInfo> AllMaintenanceSpotCandidates(Pawn pawn)
         {
+            List<Room> checkedRooms = new List<Room>();
             // Maintenance spots are always (and only) candidates for units of the player faction.
             if (pawn.Faction == Faction.OfPlayer)
             {
@@ -95,28 +97,36 @@ namespace ATReforged
             IntVec3 location;
             if (ownedRoom != null && !ownedRoom.PsychologicallyOutdoors && pawn.CanReserveAndReach(bed, PathEndMode.OnCell, pawn.NormalMaxDanger()))
             {
-                foreach (LocalTargetInfo spot in MaintenanceSpotsInTheRoom(pawn, ownedRoom))
+                checkedRooms.Add(ownedRoom);
+                for (int i = 0; i < 3; i++)
                 {
-                    yield return spot;
-                }
-                location = RCellFinder.RandomWanderDestFor(pawn, bed.Position, 10f, (Pawn p, IntVec3 c, IntVec3 r) => c.Standable(p.Map) && c.GetDoor(p.Map) == null && WanderRoomUtility.IsValidWanderDest(p, c, r), pawn.NormalMaxDanger());
-                if (location.IsValid)
-                {
-                    yield return location;
+                    location = RCellFinder.RandomWanderDestFor(pawn, bed.Position, 3f, (Pawn p, IntVec3 c, IntVec3 r) => c.Standable(p.Map) && c.GetDoor(p.Map) == null && WanderRoomUtility.IsValidWanderDest(p, c, r), pawn.NormalMaxDanger());
+                    if (location.IsValid)
+                    {
+                        yield return location;
+                    }
                 }
             }
-            // Prisoners may only use the room their owned bed is in, or the spot they happen to be standing.
+            // Prisoners may only use the room their owned bed is in.
             if (pawn.IsPrisonerOfColony)
             {
-                yield return pawn.Position;
                 yield break;
             }
-            // Charging station rooms can be used for maintenance.
+            // Charging station rooms can be used for maintenance if the room has not been checked already.
             foreach (Building_ChargingStation station in pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_ChargingStation>())
             {
-                foreach (LocalTargetInfo spot in MaintenanceSpotsInTheRoom(pawn, station.GetRoom()))
+                Room chargingRoom = station.GetRoom();
+                if (!checkedRooms.Contains(chargingRoom) && !chargingRoom.PsychologicallyOutdoors && pawn.CanReserveAndReach(station, PathEndMode.Touch, pawn.NormalMaxDanger()))
                 {
-                    yield return spot;
+                    checkedRooms.Add(chargingRoom);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        location = RCellFinder.RandomWanderDestFor(pawn, station.Position, 3f, (Pawn p, IntVec3 c, IntVec3 r) => c.Standable(p.Map) && c.GetDoor(p.Map) == null && WanderRoomUtility.IsValidWanderDest(p, c, r), pawn.NormalMaxDanger());
+                        if (location.IsValid)
+                        {
+                            yield return location;
+                        }
+                    }
                 }
             }
             // Locate three random colony positions that are valid and yield them.
@@ -130,7 +140,12 @@ namespace ATReforged
                         return false;
                     }
                     Room randomRoom = c.GetRoom(p.Map);
-                    return randomRoom != null && CanUseRoomForMaintenance(randomRoom, pawn);
+                    if (randomRoom != null && CanUseRoomForMaintenance(randomRoom, pawn) && !checkedRooms.Contains(randomRoom))
+                    {
+                        checkedRooms.Add(randomRoom);
+                        return true;
+                    }
+                    return false;
                 }, pawn.NormalMaxDanger());
                 if (location.IsValid)
                 {
