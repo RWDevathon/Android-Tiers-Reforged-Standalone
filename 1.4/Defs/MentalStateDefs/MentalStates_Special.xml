@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <MentalStateDef ParentName="BaseMentalState" Name="ATR_MentalState_Exterminator">
+    <MentalStateDef ParentName="BaseMentalState">
         <defName>ATR_MentalState_Exterminator</defName>
         <stateClass>ATReforged.MentalState_Exterminator</stateClass>
         <label>seeking targets</label>

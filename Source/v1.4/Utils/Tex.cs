@@ -25,7 +25,6 @@ namespace ATReforged
         public static readonly Texture2D Duplicate = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/DuplicateIcon");
         public static readonly Texture2D SkyMindUpload = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindUploadIcon");
         public static readonly Texture2D DownloadFromSkyCloud = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindDownloadIcon");
-        public static readonly Texture2D MindAbsorption = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/MindAbsorptionIcon");
         public static readonly Texture2D ControlModeIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ControlModeIcon");
         public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
         public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");
@@ -77,7 +76,7 @@ namespace ATReforged
         public static readonly Texture2D TierThreeExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier3/ATR_TierThreeExemplar");
         public static readonly Texture2D TierFourExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier4/ATR_TierFourExemplar");
         public static readonly Texture2D TierFiveExemplar = ContentFinder<Texture2D>.Get("Things/Pawns/Humanlikes/Tier5/ATR_TierFiveExemplar");
-        public static readonly Texture2D BasicHumanExemplar = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+        public static readonly Texture2D BasicHumanExemplar = ContentFinder<Texture2D>.Get("UI/Commands/ForColonists");
         public static readonly Texture2D DronePawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_DronePawnTypeRestricted");
         public static readonly Texture2D AndroidPawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_AndroidPawnTypeRestricted");
         public static readonly Texture2D OrganicPawnTypeRestricted = ContentFinder<Texture2D>.Get("UI/Icons/Dialogs/ATR_OrganicPawnTypeRestricted");

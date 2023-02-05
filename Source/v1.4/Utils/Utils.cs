@@ -67,7 +67,7 @@ namespace ATReforged
         }
 
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
-        { 
+        {
             return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def.defName);
         }
 
@@ -85,6 +85,10 @@ namespace ATReforged
             else if (IsConsideredMechanicalDrone(pawn))
             {
                 return PawnType.Drone;
+            }
+            else if (IsConsideredMechanicalAnimal(pawn))
+            {
+                return PawnType.Mechanical;
             }
             else
             {
@@ -122,7 +126,7 @@ namespace ATReforged
         {
             return ATReforged_Settings.canUseBattery.Contains(thingDef.defName);
         }
-        
+
         // Locate the nearest available charging bed for the given pawn user, as carried by the given pawn carrier. Pawns may carry themselves here, if they are not downed.
         public static Building_Bed GetChargingBed(Pawn user, Pawn carrier)
         {
@@ -144,7 +148,7 @@ namespace ATReforged
 
         // If a pawn's Def Extension allows it to use the SkyMind network or it has a hediff that allows it (via a comp bool), return true.
         public static bool HasCloudCapableImplant(Pawn pawn)
-        { 
+        {
             if (pawn.def.GetModExtension<ATR_MechTweaker>()?.canInherentlyUseSkyMind == true)
             {
                 return true;
@@ -184,7 +188,7 @@ namespace ATReforged
             {
                 // Victims were directly attacked by a hack and get a worse mood debuff
                 if (victims != null && victims.Count() > 0)
-                { 
+                {
                     foreach (Pawn pawn in victims)
                     {
                         pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forVictim ?? SkyMindAttackVictimDef);
@@ -208,7 +212,7 @@ namespace ATReforged
 
         // Remove viruses from the provided things. While they are assumed to have viruses, no errors will occur if non-virused things are provided.
         public static void RemoveViruses(IEnumerable<Thing> virusedThings)
-        { 
+        {
             if (virusedThings == null)
             {
                 return;
@@ -216,7 +220,7 @@ namespace ATReforged
 
             // Remove the viruses from each provided thing. No errors will occur if the thing does not have a SkyMind comp or does not have a virus.
             foreach (Thing virusedThing in virusedThings)
-            { 
+            {
                 CompSkyMind csm = virusedThing.TryGetComp<CompSkyMind>();
 
                 if (csm == null)
@@ -233,7 +237,7 @@ namespace ATReforged
             {
                 return gameComp.blankPawn;
             }
-            
+
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
             PawnGenerationRequest request = new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, forceBaselinerChance: 1, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
@@ -274,7 +278,7 @@ namespace ATReforged
             gameComp.blankPawn = blankMechanical;
             return gameComp.blankPawn;
         }
-        
+
         // RESERVED UTILITIES, INTERNAL USE ONLY
         public static HashSet<string> ReservedBlacklistedDiseases = new HashSet<string> { "WoundInfection" };
 
@@ -333,7 +337,7 @@ namespace ATReforged
                 }
 
                 DuplicateSkills(source, dest, isTethered);
-                
+
                 // If this duplication is considered to be killing a sapient individual, then handle some relations before they're duplicated.
                 if (overwriteAsDeath)
                 {
@@ -644,7 +648,7 @@ namespace ATReforged
                 Duplicate(secondPawn, firstPawn, false, false);
                 Duplicate(tempCopy, secondPawn, false, false);
 
-                
+
                 // Swap all log entries between the two pawns as appropriate.
                 foreach (LogEntry log in Find.PlayLog.AllEntries)
                 {
@@ -679,7 +683,7 @@ namespace ATReforged
         public static bool IsValidMindTransferTarget(Pawn pawn)
         {
             // Only player pawns that are connected to the SkyMind, not suffering from a security breach, and not currently in a SkyMind operation are legal targets.
-            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer && !pawn.IsPrisonerOfColony) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
+            if ((pawn.Faction != null && pawn.Faction != Faction.OfPlayer && pawn.HostFaction != Faction.OfPlayer) || !gameComp.HasSkyMindConnection(pawn) || pawn.GetComp<CompSkyMind>().Breached != -1 || pawn.GetComp<CompSkyMindLink>().Linked > -1)
             {
                 return false;
             }
@@ -689,7 +693,7 @@ namespace ATReforged
             for (int i = targetHediffs.Count - 1; i >= 0; i--)
             {
                 Hediff hediff = targetHediffs[i];
-                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true || hediff.def == ATR_HediffDefOf.ATR_MindOperation)
+                if (hediff.TryGetComp<HediffComp_SkyMindEffecter>()?.BlocksSkyMindConnection == true)
                 {
                     return false;
                 }
@@ -719,7 +723,7 @@ namespace ATReforged
             }
             return hostlessSurrogates.Count == 0 ? null : hostlessSurrogates;
         }
-        
+
         // Create as close to a perfect copy of the provided pawn as possible. If kill is true, then we're trying to make a corpse copy of it.
         public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
         {
@@ -848,7 +852,7 @@ namespace ATReforged
             if (passionCount > ATReforged_Settings.passionSoftCap)
             { // If over the soft cap for number of passions, each additional passion adds 25% cost to buying another passion.
                 result *= (float) Math.Pow(1.25, passionCount - ATReforged_Settings.passionSoftCap);
-            } 
+            }
 
             // Return the end result as an integer for nice display numbers and costs.
             return (int) result;
@@ -916,7 +920,7 @@ namespace ATReforged
 
             // Drones don't have ideos.
             pawn.ideo = null;
-                
+
             // Drones have a set skill, which is taken from their mod extension if it exists. If not, it defaults to 8 (which is the default value for the extension).
             // Since drones are incapable of learning, their passions and xp does not matter. Set it to 0 for consistency's sake.
             int skillLevel = pawnExtension?.droneSkillLevel ?? 8;

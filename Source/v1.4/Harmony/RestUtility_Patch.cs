@@ -23,7 +23,6 @@ namespace ATReforged
                 PawnType assignedType = bedThing.TryGetComp<CompPawnTypeRestrictable>().assignedToType;
                 if ((Utils.GetPawnType(sleeper) | assignedType) != assignedType)
                 {
-                    //Log.Error("[ATR DEBUG] Pawn " + sleeper + " had pawn type of " + Utils.GetPawnType(sleeper) + " but the bed is assigned to " + assignedType);
                     __result = false;
                 }
             }

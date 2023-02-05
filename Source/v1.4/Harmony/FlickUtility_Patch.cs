@@ -9,10 +9,10 @@ namespace ATReforged
     {
         // Ensure the SkyMind auto-flicks things when requested and connected.
         [HarmonyPatch(typeof(FlickUtility), "UpdateFlickDesignation")]
-        public class UpdateFlickDesignation
+        public class UpdateFlickDesignation_Patch
         {
             [HarmonyPrefix]
-            public static bool UpdateFlickDesignation_Prefix(Thing t)
+            public static bool Prefix(Thing t)
             {
                 if (t.TryGetComp<CompSkyMind>()?.connected == true && Utils.gameComp.GetSkyMindCloudCapacity() > 0)
                 {

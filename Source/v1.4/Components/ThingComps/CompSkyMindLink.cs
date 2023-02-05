@@ -89,28 +89,9 @@ namespace ATReforged
             if (!Utils.IsValidMindTransferTarget(ThisPawn))
                 yield break;
 
-            // Prisoners may have their mind absorbed for server points. No other operations are legal on them.
-            if (ThisPawn.IsPrisonerOfColony)
+            // Only pawns belonging explicitly to the the player may have these actions used.
+            if (ThisPawn.Faction != Faction.OfPlayer)
             {
-                if (Linked == -1 && (Utils.gameComp.GetPointCapacity(ServerType.SkillServer) > 0 || Utils.gameComp.GetPointCapacity(ServerType.HackingServer) > 0))
-                {
-                    Texture2D tex = Tex.MindAbsorption;
-                    yield return new Command_Action
-                    {
-                        icon = tex,
-                        defaultLabel = "ATR_AbsorbExperience".Translate(),
-                        defaultDesc = "ATR_AbsorbExperienceDesc".Translate(),
-                        action = delegate ()
-                        {
-                            Find.WindowStack.Add(new Dialog_MessageBox("ATR_AbsorbExperienceConfirm".Translate(parent.LabelShortCap) + "\n" + "ATR_SkyMindDisconnectionRisk".Translate(), "Confirm".Translate(), buttonBText: "Cancel".Translate(), title: "ATR_AbsorbExperience".Translate(), buttonAAction: delegate
-                            {
-                                InitiateConnection(3);
-                            }));
-                        }
-                    };
-                }
-
-                // Skip all other operations. They are illegal on prisoners.
                 yield break;
             }
 

@@ -2,7 +2,7 @@
 <Defs>
 
   	<!-- Base Core Assistant -->
-  
+
 	<HediffDef Name="ATR_AddedBodyPartCoreAssistantBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
 		<defaultLabelColor>(0.7, 0.6, 0.7)</defaultLabelColor>
 	</HediffDef>
@@ -20,6 +20,7 @@
 			<li>Advanced</li>
 		</techHediffsTags>
 		<statBases>
+            <MarketValue>600</MarketValue>
 			<WorkToMake>16000</WorkToMake>
 			<Mass>1</Mass>
 		</statBases>
@@ -61,7 +62,7 @@
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_InsightAssistant</defName>
     	<label>Insight assistant</label>
-	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core interest handles. It is also capable of independently generating new theories, assisting with research.</description>
+	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core intelligence handles. It is also capable of independently generating new theories and assisting with research.</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -75,11 +76,11 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_InsightAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_InsightAssistant</defName>
     	<label>Insight assistant chip</label>
-	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core interest handles. It is also capable of independently generating new theories, assisting with research.</description>
+	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized in the identification, categorization, and application of new insights and opportunities for learning in whatever field the core intelligence handles. It is also capable of independently generating new theories and assisting with research.</description>
 		<costList>
 			<Plasteel>20</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>
@@ -111,7 +112,7 @@
 	</RecipeDef>
 
   	<!-- General Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_GeneralAssistant</defName>
 		<label>General assistant</label>
@@ -136,7 +137,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_GeneralAssistant</defName>
@@ -162,7 +163,7 @@
 	</RecipeDef>
 
   	<!-- Combat Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant</label>
@@ -185,7 +186,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_CombatAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant chip</label>
@@ -221,7 +222,7 @@
 	</RecipeDef>
 
   	<!-- Mechanic Assistant -->
-  
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MechanicAssistant</defName>
 		<label>Mechanic assistant</label>
@@ -241,7 +242,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_MechanicAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_MechanicAssistant</defName>
     	<label>Mechanic assistant chip</label>
@@ -251,7 +252,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_MechanicAssistant</defName>
@@ -277,7 +278,7 @@
 	</RecipeDef>
 
   	<!-- Construction Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_ConstructionAssistant</defName>
     	<label>Construction assistant</label>
@@ -296,7 +297,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_ConstructionAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_ConstructionAssistant</defName>
     	<label>Construction assistant chip</label>
@@ -332,7 +333,7 @@
 	</RecipeDef>
 
   	<!-- Excavation Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_ExcavationAssistant</defName>
 		<label>Excavation assistant</label>
@@ -350,7 +351,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_ExcavationAssistant</spawnThingOnRemoved>
   	</HediffDef>
-  
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_ExcavationAssistant</defName>
     	<label>Excavation assistant chip</label>
@@ -360,7 +361,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_ExcavationAssistant</defName>
@@ -386,7 +387,7 @@
 	</RecipeDef>
 
   	<!-- Victual Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_VictualAssistant</defName>
 		<label>Victual assistant</label>
@@ -405,7 +406,7 @@
 		</stages>
    		<spawnThingOnRemoved>ATR_VictualAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_VictualAssistant</defName>
 		<label>Victual assistant chip</label>
@@ -415,7 +416,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_VictualAssistant</defName>
@@ -441,7 +442,7 @@
 	</RecipeDef>
 
   	<!-- Cultivation Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_CultivationAssistant</defName>
 		<label>Cultivation assistant</label>
@@ -464,7 +465,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_CultivationAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_CultivationAssistant</defName>
 		<label>Cultivation assistant</label>
@@ -474,7 +475,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_CultivationAssistant</defName>
@@ -500,7 +501,7 @@
 	</RecipeDef>
 
   	<!-- Medicine Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MedicineAssistant</defName>
 		<label>Medicine assistant</label>
@@ -519,7 +520,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_MedicineAssistant</spawnThingOnRemoved>
   	</HediffDef>
- 
+
    	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_MedicineAssistant</defName>
 		<label>Medicine assistant chip</label>
@@ -529,7 +530,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_MedicineAssistant</defName>
@@ -555,7 +556,7 @@
 	</RecipeDef>
 
   	<!-- Social Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_SocialAssistant</defName>
     	<label>Social assistant</label>
@@ -577,7 +578,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_SocialAssistant</spawnThingOnRemoved>
   	</HediffDef>
-  
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_SocialAssistant</defName>
 		<label>Social assistant</label>
@@ -587,7 +588,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_SocialAssistant</defName>
@@ -613,7 +614,7 @@
 	</RecipeDef>
 
   	<!-- Mental Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_MentalAssistant</defName>
 		<label>Mental assistant</label>
@@ -631,7 +632,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_MentalAssistant</spawnThingOnRemoved>
   	</HediffDef>
-  
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_MentalAssistant</defName>
 		<label>Mental assistant</label>
@@ -641,7 +642,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_MentalAssistant</defName>
@@ -667,7 +668,7 @@
 	</RecipeDef>
 
   	<!-- Psychic Assistant -->
- 
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
 		<label>Psychic assistant</label>
@@ -682,7 +683,7 @@
 		</stages>
     	<spawnThingOnRemoved>ATR_PsychicAssistant</spawnThingOnRemoved>
   	</HediffDef>
-  
+
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
 		<defName>ATR_PsychicAssistant</defName>
 		<label>Psychic assistant</label>
@@ -692,7 +693,7 @@
 			<Meat_Human>40</Meat_Human>
 			<ComponentSpacer>4</ComponentSpacer>
     	</costList>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_PsychicAssistant</defName>
@@ -718,7 +719,7 @@
 	</RecipeDef>
 
   	<!-- Sapient Assistant -->
-  
+
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_SapientAssistant</defName>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -828,7 +829,7 @@
     	<techHediffsTags>
       		<li>Archotech</li>
     	</techHediffsTags>
-  	</ThingDef> 
+  	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">
 		<defName>ATR_Install_SapientAssistant</defName>

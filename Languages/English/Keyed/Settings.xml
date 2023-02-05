@@ -128,6 +128,7 @@
     <ATR_minGroupSizeForSurrogates>Number of members for faction groups to spawn with surrogates</ATR_minGroupSizeForSurrogates>
     <ATR_minSurrogatePercentagePerLegalGroup>Minimum percentage of surrogates in legal groups [default 20%]</ATR_minSurrogatePercentagePerLegalGroup>
     <ATR_maxSurrogatePercentagePerLegalGroup>Maximum percentage of surrogates in legal groups [default 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_displaySurrogateControlIcon>Display floating icon above controlled surrogates.</ATR_displaySurrogateControlIcon>
     <ATR_safeSurrogateConnectivityCountBeforePenalty>Surrogates per controller before penalties:</ATR_safeSurrogateConnectivityCountBeforePenalty>
 
         <!-- Skills -->

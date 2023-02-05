@@ -206,7 +206,7 @@ namespace ATReforged
             }
         }
 
-        // Generate the rightless factions for storage, to be stored until the game is deloaded or another save is loaded. Individual factions may be destroyed and therefore removed.
+        // Generate the rightless factions for storage, to be stored until the game is deloaded or another save is loaded. Individual factions may be destroyed or set to not care and therefore should be removed.
         public void GenerateRightlessFactions()
         {
             antiMechanicalRightsFactions = new List<Faction>();

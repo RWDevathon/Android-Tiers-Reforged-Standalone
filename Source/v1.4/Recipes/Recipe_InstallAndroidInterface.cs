@@ -12,7 +12,7 @@ namespace ATReforged
         { 
 
             BodyPartRecord targetBodyPart = pawn.health.hediffSet.GetBrain();
-            if (targetBodyPart != null && pawn.health.hediffSet.hediffs.Where(hediff => hediff.def == ATR_HediffDefOf.ATR_IsolatedCore).Any())
+            if (targetBodyPart != null && pawn.health.hediffSet.HasHediff(ATR_HediffDefOf.ATR_IsolatedCore))
             {
                 yield return targetBodyPart;
             }

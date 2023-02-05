@@ -16,13 +16,14 @@
             <solid>true</solid>
         </addedPartProps>
 	</HediffDef>
-    
+
     <!-- Base Brain Implant ThingDef -->
-    
+
     <ThingDef Name="ATR_BodyPartCoreBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<WorkToMake>4000</WorkToMake>
+            <MarketValue>500</MarketValue>
 			<Mass>1</Mass>
 		</statBases>
 		<recipeMaker>

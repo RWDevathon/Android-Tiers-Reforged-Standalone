@@ -7,7 +7,7 @@
 			<li Class="HediffGiver_Bleeding">
 				<hediff>ATR_CoolantLoss</hediff>
 			</li>
-			<li Class="HediffGiver_Hypothermia">
+			<li Class="ATReforged.HediffGiver_HypothermiaNoFrostbite">
 				<hediff>ATR_MechanicalHypothermia</hediff>
 			</li>
 			<li Class="HediffGiver_Heat">

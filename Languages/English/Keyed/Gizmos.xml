@@ -56,8 +56,8 @@
     <ATR_Surrogate>surrogate</ATR_Surrogate>
 	
 	<ATR_AbsorbExperience>Mind absorption</ATR_AbsorbExperience>
-	<ATR_AbsorbExperienceDesc>Absorb the experience of a prisoner's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>
-	<ATR_AbsorbExperienceConfirm>This operation extracts useful insights in skills and hacking at the cost of the prisoner's life. This is considered murder.</ATR_AbsorbExperienceConfirm>
+	<ATR_AbsorbExperienceDesc>Absorb the experience of a pawn's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceConfirm>This operation extracts useful insights in skills and hacking at the cost of the pawn's life. This is considered murder.</ATR_AbsorbExperienceConfirm>
 	
 	<ATR_DownloadCloudPawn>Download</ATR_DownloadCloudPawn>
 	<ATR_DownloadCloudPawnDesc>Download a SkyMind intelligence into this pawn.</ATR_DownloadCloudPawnDesc>
@@ -80,6 +80,10 @@
 	<ATR_Upload>Upload</ATR_Upload>
 	<ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>
 	<ATR_UploadConfirm>This operation transfers this intelligence into the SkyMind network, leaving the body behind.</ATR_UploadConfirm>
+
+	<!-- Link -->
+    <ATR_RampageState>Rampage</ATR_RampageState>
+    <ATR_RampageStateDesc>Toggle the SkyMind manipulator's functionality to enforce a suicidal rampage state, causing the pawn to attack all others with reckless abandon. A quirk in the control scheme makes them not attack other rampaging pawns.</ATR_RampageStateDesc>
 	
 	<!-- Maintenance -->
     <ATR_MaintenanceGizmoLabel>Maintenance</ATR_MaintenanceGizmoLabel>

@@ -206,7 +206,7 @@
     <HediffDef>
         <defName>ATR_MechanicalHypothermia</defName>
         <label>hypothermic reaction</label>
-        <description>Mechanical units do not suffer severe damage like many organics do from severe cold. At critical levels, the unit must focus all heat generation to internal systems - effectively immobilizing it - but at moderate levels can actually benefit from the cold by using the environmental cooling to permit greater functionality. Cold conditions do drain battery life, however.</description>
+        <description>While mechanical parts do not suffer from frostbite like organic flesh does, cold is an existential threat to machinery. At critical levels, the unit must focus all heat generation to internal systems - effectively immobilizing it - and batteries drain at an alarming rate when chilled.</description>
         <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
         <stages>
             <li>
@@ -216,52 +216,26 @@
             <li>
                 <label>minor</label>
                 <minSeverity>0.04</minSeverity>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <offset>0.08</offset>
-                    </li>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <offset>0.05</offset>
-                    </li>
-                </capMods>
-                <hungerRateFactor>1.1</hungerRateFactor>
+                <hungerRateFactor>1.25</hungerRateFactor>
             </li>
             <li>
                 <label>moderate</label>
                 <minSeverity>0.2</minSeverity>
                 <capMods>
                     <li>
-                        <capacity>Moving</capacity>
-                        <offset>0.2</offset>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <offset>0.2</offset>
-                    </li>
-                    <li>
                         <capacity>Consciousness</capacity>
-                        <offset>0.1</offset>
+                        <postFactor>0.9</postFactor>
                     </li>
                 </capMods>
-                <hungerRateFactor>1.25</hungerRateFactor>
+                <hungerRateFactor>1.5</hungerRateFactor>
             </li>
             <li>
                 <label>significant</label>
                 <minSeverity>0.35</minSeverity>
                 <capMods>
                     <li>
-                        <capacity>Moving</capacity>
-                        <offset>0.1</offset>
-                    </li>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <offset>0.1</offset>
-                    </li>
-                    <li>
                         <capacity>Consciousness</capacity>
-                        <offset>0.05</offset>
+                        <postFactor>0.75</postFactor>
                     </li>
                 </capMods>
                 <hungerRateFactor>1.75</hungerRateFactor>
@@ -269,7 +243,13 @@
             <li>
                 <label>threatening</label>
                 <minSeverity>0.5</minSeverity>
-                <hungerRateFactor>2</hungerRateFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.5</postFactor>
+                    </li>
+                </capMods>
+                <hungerRateFactor>2.5</hungerRateFactor>
             </li>
             <li>
                 <label>critical</label>
@@ -280,7 +260,7 @@
                         <setMax>0.1</setMax>
                     </li>
                 </capMods>
-                <hungerRateFactor>3</hungerRateFactor>
+                <hungerRateFactor>4</hungerRateFactor>
             </li>
         </stages>
     </HediffDef>

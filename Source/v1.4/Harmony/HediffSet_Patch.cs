@@ -5,7 +5,7 @@ using RimWorld;
 
 namespace ATReforged
 {
-    internal class HediffSet_Patch
+    public class HediffSet_Patch
     {
         // Mechanical units feel no pain.
         [HarmonyPatch(typeof(HediffSet), "CalculatePain")]
@@ -35,32 +35,43 @@ namespace ATReforged
                     return true;
                 }
 
-                // Identify all hediffs that have a HediffGiver_Heat or HediffGiver_Hypothermia as their class - these are temperature hediffs.
-                List<HediffGiverSetDef> hediffGiverSetDefs = __instance.pawn.RaceProps.hediffGiverSets;
-                List<HediffDef> targetHediffs = new List<HediffDef>();
-                foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
+                // Identify all hediffs that have a HediffGiver_Heat or HediffGiver_Hypothermia as their class (or is a sub-class of either) - these are temperature hediffs.
+                if (!cachedTemperatureHediffs.ContainsKey(__instance.pawn.RaceProps))
                 {
-                    foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
+                    List<HediffGiverSetDef> hediffGiverSetDefs = __instance.pawn.RaceProps.hediffGiverSets;
+                    List<HediffDef> targetHediffs = new List<HediffDef>();
+                    foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
                     {
-                        if (hediffGiver.GetType() == typeof(HediffGiver_Heat) || hediffGiver.GetType() == typeof(HediffGiver_Hypothermia))
+                        foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
                         {
-                            targetHediffs.Add(hediffGiver.hediff);
+                            if (typeof(HediffGiver_Heat).IsAssignableFrom(hediffGiver.GetType()) || typeof(HediffGiver_Hypothermia).IsAssignableFrom(hediffGiver.GetType()))
+                            {
+                                targetHediffs.Add(hediffGiver.hediff);
+                            }
                         }
                     }
+                    cachedTemperatureHediffs[__instance.pawn.RaceProps] = targetHediffs;
                 }
 
-                // The targetHediffs taken in the last step are all hediffs which are temperature related and need to be checked against the hediffs present on this pawn.
-                foreach (Hediff hediff in __instance.hediffs)
+                // The targetHediffs cached are all hediffs which are temperature related and need to be checked against the hediffs present on this pawn.
+                List<HediffDef> targetHediffDefs = cachedTemperatureHediffs[__instance.pawn.RaceProps];
+                if (targetHediffDefs.Count > 0)
                 {
-                    if (targetHediffs.Contains(hediff.def) && hediff.CurStageIndex > (int)minStage)
+                    foreach (Hediff hediff in __instance.hediffs)
                     {
-                        __result = true;
-                        return false;
+                        if (targetHediffDefs.Contains(hediff.def) && hediff.CurStageIndex > (int)minStage)
+                        {
+                            __result = true;
+                            return false;
+                        }
                     }
                 }
                 __result = false;
                 return false;
             }
         }
+
+        // Cached Hediffs for a particular pawn's race that count as temperature hediffs to avoid constant recalculation, cached when needed.
+        static Dictionary<RaceProperties, List<HediffDef>> cachedTemperatureHediffs = new Dictionary<RaceProperties, List<HediffDef>> ();
     }
 }

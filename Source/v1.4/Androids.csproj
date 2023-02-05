@@ -27,14 +27,6 @@
     <DocumentationFile>
     </DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\1.0\Assemblies</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
@@ -187,18 +179,18 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
-    <Compile Include="Components\CompAssignableToPawn_MaintenanceSpot.cs" />
-    <Compile Include="Components\CompPawnTypeRestrictable.cs" />
-    <Compile Include="Components\CompInsightBench.cs" />
-    <Compile Include="Components\CompMaintenanceNeed.cs" />
-    <Compile Include="Components\CompPawnCharger.cs" />
-    <Compile Include="Components\CompHeatSensitive.cs" />
-    <Compile Include="Components\CompProperties_SkyMindCore.cs" />
-    <Compile Include="Components\CompProperties_SkyMindTower.cs" />
-    <Compile Include="Components\CompProperties_HeatSensitive.cs" />
-    <Compile Include="Components\CompProperties_SuperComputer.cs" />
-    <Compile Include="Components\CompScorchPack.cs" />
-    <Compile Include="Components\CompSuperComputer.cs" />
+    <Compile Include="Components\ThingComps\CompAssignableToPawn_MaintenanceSpot.cs" />
+    <Compile Include="Components\ThingComps\CompPawnTypeRestrictable.cs" />
+    <Compile Include="Components\ThingComps\CompInsightBench.cs" />
+    <Compile Include="Components\ThingComps\CompMaintenanceNeed.cs" />
+    <Compile Include="Components\ThingComps\CompPawnCharger.cs" />
+    <Compile Include="Components\ThingComps\CompHeatSensitive.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_SkyMindCore.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_SkyMindTower.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_HeatSensitive.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_SuperComputer.cs" />
+    <Compile Include="Components\ThingComps\CompScorchPack.cs" />
+    <Compile Include="Components\ThingComps\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_SurgeonSuccessChance.cs" />
@@ -223,6 +215,7 @@
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
     <Compile Include="Harmony\Dialog_AssignBuildingOwner_Patch.cs" />
+    <Compile Include="Harmony\SpouseRelationUtility_Patch.cs" />
     <Compile Include="Harmony\QuestGen_Pawns_Patch.cs" />
     <Compile Include="Harmony\HealthCardUtility_Patch.cs" />
     <Compile Include="Harmony\Trigger_PawnExperiencingDangerousTemperatures_Patch.cs" />
@@ -267,14 +260,15 @@
     <Compile Include="Harmony\StatPart_Age_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_PatientGoToBedTreatment_Patch.cs" />
     <Compile Include="Harmony\WorkGiver_Tend_Patch.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_TetheredMoteSustainer.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_SkyMindEffecter.cs" />
-    <Compile Include="Hediffs\HediffComp_TetheredMoteSustainer.cs" />
-    <Compile Include="Hediffs\HediffComp_SkyMindEffecter.cs" />
-    <Compile Include="Hediffs\HediffComp_ChargeCapable.cs" />
-    <Compile Include="Hediffs\HediffComp_MaintenanceStageEffect.cs" />
-    <Compile Include="Hediffs\HediffComp_Warper.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_MaintenanceStageEffect.cs" />
+    <Compile Include="Components\HediffComps\HediffCompProperties_TetheredMoteSustainer.cs" />
+    <Compile Include="Components\HediffComps\HediffCompProperties_SkyMindEffecter.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_TetheredMoteSustainer.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_SkyMindEffecter.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_ChargeCapable.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_MaintenanceStageEffect.cs" />
+    <Compile Include="Components\HediffComps\HediffComp_Warper.cs" />
+    <Compile Include="Components\HediffComps\HediffCompProperties_MaintenanceStageEffect.cs" />
+    <Compile Include="Hediffs\HediffGiver_MechHypothermia.cs" />
     <Compile Include="Hediffs\Hediff_SplitConsciousness.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
     <Compile Include="JobDrivers\JobDriver_DoMaintenanceIdle.cs" />
@@ -286,15 +280,15 @@
     <Compile Include="AndroidTiersReforged.cs" />
     <Compile Include="Buildings\Building_ChargingStation.cs" />
     <Compile Include="ChoiceLetter\ChoiceLetter_RansomDemand.cs" />
-    <Compile Include="Components\CompAutoDoor.cs" />
-    <Compile Include="Components\CompSkyMindTower.cs" />
-    <Compile Include="Components\CompComputer.cs" />
-    <Compile Include="Components\CompProperties_Computer.cs" />
-    <Compile Include="Components\CompSkyMindCore.cs" />
-    <Compile Include="Components\CompSkyMind.cs" />
-    <Compile Include="Components\CompSkyMindLink.cs" />
-    <Compile Include="Components\CompProperties_GenericSpawner.cs" />
-    <Compile Include="Components\CompSpawnerGeneric.cs" />
+    <Compile Include="Components\ThingComps\CompAutoDoor.cs" />
+    <Compile Include="Components\ThingComps\CompSkyMindTower.cs" />
+    <Compile Include="Components\ThingComps\CompComputer.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_Computer.cs" />
+    <Compile Include="Components\ThingComps\CompSkyMindCore.cs" />
+    <Compile Include="Components\ThingComps\CompSkyMind.cs" />
+    <Compile Include="Components\ThingComps\CompSkyMindLink.cs" />
+    <Compile Include="Components\ThingComps\CompProperties_GenericSpawner.cs" />
+    <Compile Include="Components\ThingComps\CompSpawnerGeneric.cs" />
     <Compile Include="DefsOf\ATR_JobDefOf.cs" />
     <Compile Include="DefsOf\ATR_StatDefOf.cs" />
     <Compile Include="DefsOf\ATR_ThingDefOf.cs" />
@@ -358,7 +352,7 @@
     <Compile Include="DefsOf\ATR_PawnKindDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ATReforged_Settings.cs" />
-    <Compile Include="Components\CompSpawnerMicroscyther.cs" />
+    <Compile Include="Components\ThingComps\CompSpawnerMicroscyther.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
     <Compile Include="Toils\Toils_LayDownPower.cs" />

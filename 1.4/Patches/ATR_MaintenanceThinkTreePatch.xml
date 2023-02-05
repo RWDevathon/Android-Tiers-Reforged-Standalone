@@ -10,7 +10,16 @@
         </value>
     </Operation>
 
-    <!-- Humanlike colonists should idly do self-maintenance when resting instead of simply lying there. -->
+    <!-- Humanlike prisoners should idly do self-maintenance instead of wandering if possible. -->
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalPrisoner"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="JobGiver_WanderCurrentRoom"]</xpath>
+        <order>Prepend</order>
+        <value>
+            <li Class="ATReforged.JobGiver_DoMaintenanceIdle"/>
+        </value>
+    </Operation>
+
+    <!-- Humanlikes should idly do self-maintenance instead of wandering if possible (colonists short circuit this). -->
     <Operation Class="PatchOperationInsert">
         <xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalColonist"]/subNodes/li[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="JobGiver_WanderColony"]</xpath>
         <order>Prepend</order>
@@ -19,7 +28,7 @@
         </value>
     </Operation>
 
-    <!-- Humanlikes should idly do self-maintenance instead of wandering if possible (colonists short circuit this). -->
+    <!-- Humanlike colonists should idly do self-maintenance when resting instead of simply lying there. -->
     <Operation Class="PatchOperationInsert">
         <xpath>Defs/ThinkTreeDef[defName="Humanlike"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalMustKeepLyingDown"]/subNodes/li[@Class="JobGiver_KeepLyingDown"]</xpath>
         <order>Prepend</order>
