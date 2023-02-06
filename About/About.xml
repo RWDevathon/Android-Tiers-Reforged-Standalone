@@ -62,6 +62,7 @@
     </loadAfter>
 	<loadBefore>
 		<li>avilmask.CommonSense</li><!-- I'd prefer putting this under incompatibleWith, but I don't have a valid reason, unfortunately... If you're reading this, put it at the end of your list, but before any performance mods. -FG -->
+		<li>Uuugggg.SmartMedicine</li><!-- Same as CommonSense. -->
 	</loadBefore>
     <description><![CDATA[  
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
