@@ -37,7 +37,7 @@
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
 	</ResearchProjectDef>
-  
+
     <ResearchProjectDef>
         <defName>ATR_SurrogateOptimization</defName>
         <label>Optimized surrogate protocols</label>
@@ -56,7 +56,7 @@
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
     </ResearchProjectDef>
-  
+
     <ResearchProjectDef>
         <defName>ATR_CommunicationOptimization</defName>
         <label>Optimized communication</label>
@@ -90,7 +90,7 @@
 		<researchViewX>6</researchViewX>
 		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
-  
+
     <ResearchProjectDef>
         <defName>ATR_ServerOptimization</defName>
         <label>Server optimization</label>
@@ -141,7 +141,7 @@
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
     </ResearchProjectDef>
-  
+
     <ResearchProjectDef>
         <defName>ATR_RepairOptimization</defName>
         <label>Repair Optimization</label>
@@ -159,10 +159,10 @@
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
     </ResearchProjectDef>
-  
+
     <ResearchProjectDef>
         <defName>ATR_SkyMindCore</defName>
-        <label>SkyMind</label>
+        <label>SkyMind Core</label>
         <tab>ATR_MechResearch</tab>
         <description>The pinnacle of mechanical and consciousness research, a theoretical supercomputer core capable of permanently storing, saving, replicating, and allowing the full use of consciousnesses is within reach. It is incredibly expensive, but it offers a glimpse of immortality. Acquiring and coaxing so many AI personas to play babysitter and host will be difficult. Finding the vanometric power cells necessary to keep the superstructure secure and isolated may be equally difficult.</description>
         <baseCost>10000</baseCost>

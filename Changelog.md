@@ -1,4 +1,4 @@
-#	ATR 1.2.4 Changelog
+#	ATR 1.2.6 Changelog
 
 ## Medical
 - Mechanical implants, prosthetics, and Hediffs have been completely reworked across the board.
@@ -38,7 +38,7 @@
 - Drones can not use the SkyMind, and do not possess Cores like androids do - they can not be blanks, and start pre-initialized.
 - Drones are completely thoughtless, and have no related needs, and no ideology.
 - Drones can neither start nor receive social interactions, making them ineligible for various relationship statuses.
-    - Drones can not be recruited, converted, or otherwise interacted with as prisoners. The tab is blank and will not allow access. 
+    - Drones can not be recruited, converted, or otherwise interacted with as prisoners. The tab is blank and will not allow access.
     - Use the drone reprogramming surgery (unlocked by T1 android research) to "recruit" them, or handle various other details.
 - Drones will not incur usual penalties for death or loss.
 
@@ -52,7 +52,7 @@
 
 ## Network:
 - VX chips have been removed and replaced by a different system:
-    - Androids have an Autonomous Core that allows SkyMind network access while acting as the consciousness of the pawn. 
+    - Androids have an Autonomous Core that allows SkyMind network access while acting as the consciousness of the pawn.
     - Organics can have a Transceiver Implant that allows SkyMind network access.
 - SkyMind Network access can now be blocked by certain effects like Dementia or Corrupted Memory.
 - Duplication of a pawn's consciousness can now only be achieved via the use of a SkyMind Core.
@@ -145,7 +145,7 @@
 - ~~M7 overhaul~~
 	- Due to a miscommunication this submod will be added in the next update.
 	- The Mech Blade has been replaced with a pole-axe
-- Shiny Androids 
+- Shiny Androids
 
 - _The TX (Terminator Expansion) submod is currently incompatible. It's on their owner to make them compatible again._
 

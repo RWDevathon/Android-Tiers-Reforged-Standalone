@@ -63,12 +63,12 @@
 	<loadBefore>
 		<li>avilmask.CommonSense</li><!-- I'd prefer putting this under incompatibleWith, but I don't have a valid reason, unfortunately... If you're reading this, put it at the end of your list, but before any performance mods. -FG -->
 	</loadBefore>
-    <description><![CDATA[  
+    <description><![CDATA[
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
-Reworked for maximal flexibility and dynamic controls in settings and compatibility. 
+Reworked for maximal flexibility and dynamic controls in settings and compatibility.
 Redesigned with balance and rationality in mind.
 Reforged because I wanted it done.
 
-Version <color=#FFD800>1.2.4</color> with more to come.
+Version <color=#FFD800>1.2.6</color> with more to come.
     ]]></description>
 </ModMetaData>

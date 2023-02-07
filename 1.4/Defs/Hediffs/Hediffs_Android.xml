@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    
+
     <!-- Added body parts -->
- 
+
     <HediffDef>
         <defName>ATR_ShutdownMechanical</defName>
         <label>decommissioned</label>
@@ -12,7 +12,7 @@
         <defaultLabelColor>(0.4, 0.4, 0.4)</defaultLabelColor>
         <scenarioCanAdd>false</scenarioCanAdd>
     </HediffDef>
-    
+
     <HediffDef>
         <defName>ATR_ShortReboot</defName>
         <label>Rebooting</label>
@@ -25,56 +25,17 @@
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-24</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
             </li>
         </comps>
         <stages>
             <li>
-                <minSeverity>0.02</minSeverity>
-                <label>100%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.25</minSeverity>
-                <label>75%</label>
                 <hungerRateFactor>0.4</hungerRateFactor>
                 <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-                <label>50%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.75</minSeverity>
-                <label>25%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.9</minSeverity>
-                <label>0%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
                 </capMods>
             </li>
         </stages>
@@ -92,61 +53,22 @@
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-1</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
             </li>
         </comps>
         <stages>
             <li>
-                <minSeverity>0.02</minSeverity>
-                <label>100%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-            </li>
-            <li>
-                <minSeverity>0.25</minSeverity>
-                <label>75%</label>
                 <hungerRateFactor>0.4</hungerRateFactor>
                 <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-                <label>50%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.75</minSeverity>
-                <label>25%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.9</minSeverity>
-                <label>0%</label>
-                <hungerRateFactor>0.4</hungerRateFactor>
-                <capMods>
-                <li>
-                    <capacity>Consciousness</capacity>
-                    <setMax>0.1</setMax>
-                </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
                 </capMods>
             </li>
         </stages>
     </HediffDef>
-  
+
     <HediffDef>
         <defName>ATR_RecoveringFromDDOS</defName>
         <label>DDOS Recovery</label>
@@ -176,7 +98,7 @@
             </li>
         </stages>
     </HediffDef>
-  
+
     <HediffDef>
         <defName>ATR_MemoryCorruption</defName>
         <label>Memory corruption</label>
@@ -186,6 +108,7 @@
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.01</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
             </li>
             <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
                 <blocksConnection>true</blocksConnection>
@@ -340,5 +263,5 @@
             </li>
         </stages>
     </HediffDef>
- 
+
 </Defs>

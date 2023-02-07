@@ -32,9 +32,6 @@ namespace ATReforged
             // Initializing a new android. Create the new intelligence.
             if (recipe.addsHediff == ATR_HediffDefOf.ATR_AutonomousCore)
             {
-                Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, pawn, null);
-                rebootHediff.Severity = 1;
-                pawn.health.AddHediff(rebootHediff);
                 Find.WindowStack.Add(new Dialog_InitializeMind(pawn));
             }
             // Initializing a surrogate. Ensure surrogate details are initialized properly.
