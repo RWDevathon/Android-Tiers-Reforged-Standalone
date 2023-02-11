@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- General -->
+	<ATR_SkyMindConnectionFailed>Verbindungsversuch gescheitert. Überprüfe die Kapazität deiner Antennentürme und deren Stromversorgung.</ATR_SkyMindConnectionFailed>
+	<ATR_SkyMindConnectionFailedNoNetwork>Verbindungsversuch gescheitert. Baue Antennentürme und versorge sie mit ausreicehnd Strom.</ATR_SkyMindConnectionFailedNoNetwork>
+	
+	<ATR_GridlockerCleared>Die Verschlüsselung wurde Aufgehoben. Alle Einheiten sind wieder funktionstüchtig.</ATR_GridlockerCleared> 
+
+	<!-- Core -->
+	<ATR_RemoveCloudPawnSuccess>{0} wurde efolgreich gelöscht.</ATR_RemoveCloudPawnSuccess>
+	
+	<ATR_ReplicateCloudPawnFailed>Kopieren fehlgeschlagen - Kein freier Platz.</ATR_ReplicateCloudPawnFailed>
+
+    <!-- Player hacking -->
+    <ATR_HackOperationFailed>Angriff gescheitert. Es sind keine negativen Auswirkungen zu erwarten.</ATR_HackOperationFailed>
+	<ATR_DisruptorHackSuccess>Störung erfolgreich. Gegnerische Einheiten wurden geschwächt.</ATR_DisruptorHackSuccess>
+
+    <ATR_NoArrival>Sie haben den Fehler gefunden bevor etwas losgeschickt werden konnte. Vielleicht hast du mehr Glück beim nächsten Mal...</ATR_NoArrival>
+
+    <!-- Android Interfaces -->
+    <ATR_NewbootAndroidCreated>Einheit fertiggestellt. Setzte einen Kern ein um sie in Betrieb zu nehmen.</ATR_NewbootAndroidCreated>
+    <ATR_InterfaceRemoved>Kern entfernt. Alle personenbezogenen Daten wurden gelöscht. Installiere einen neuen Kern um die Einheit zu reaktivieren.</ATR_InterfaceRemoved>
+
+    <!-- Mechfaller -->
+    <ATR_HostileMechFall>Mech ist erfolgreich eingetroffen, aber erkennt alles und jeden als Feind! Neustart eingeleitet - Bitte warten.</ATR_HostileMechFall>
+
+	<!-- Link -->
+	<ATR_SurrogateControlled>{0} hat eine neue Marionette übernoommen.</ATR_SurrogateControlled>
+	<ATR_OperationInitiated>Verbindung durch {0} eingeleitet. Verbindung nicht trennen bis Vorgang abgeschlossen!</ATR_OperationInitiated>
+	<ATR_OperationCompleted>Vorgang abgeschlossen.</ATR_OperationCompleted>
+	<ATR_OperationCompletedDesc>Vorgang abgeschlossen, wie von {0} erwünscht.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>Vorgang gescheitert!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>{0} hat gewaltigen Schaden erlitten, da die Verbindung vorzeitig beendet wurde.</ATR_OperationFailureDesc>
+
+    <!-- Surgeries -->
+	<MessageMedicalOperationFailureMinorAndroid>{0} hat einen kleinen Fehler gemacht und die Operation an {1} abgebrochen.</MessageMedicalOperationFailureMinorAndroid>
+	<MessageMedicalOperationFailureCatastrophicAndroid>{0} hat bei der Operation von {1} einen katastrophalen Fehler gemacht.</MessageMedicalOperationFailureCatastrophicAndroid>
+	<MessageMedicalOperationFailureRidiculousAndroid>{0} hat bei der Operation von {1} trotz guter Erfolgsaussichten einen großen Fehler gemacht.</MessageMedicalOperationFailureRidiculousAndroid>
+	<MessageMedicalOperationFailureFatalAndroid>{0} hat bei der Operation von {1} einen fatalen Fehler gemacht, wodurch ein Kaskadeneffekt ausgelöst wurde. {1} ist daran verstorben.</MessageMedicalOperationFailureFatalAndroid>
+	
+</LanguageData>

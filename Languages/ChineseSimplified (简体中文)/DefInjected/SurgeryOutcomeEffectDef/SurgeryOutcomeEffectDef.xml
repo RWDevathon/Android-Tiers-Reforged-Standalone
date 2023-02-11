@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterLabel>对 {PATIENT_labelShort} 的手术失败了</ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterLabel>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterText>由于面临{RECIPE_label}的特殊挑战，{SURGEON_labelShort} 在操作 {PATIENT_labelShort} 时产生了致命的错误。</ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterText>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterLabel>对 {PATIENT_labelShort} 的手术失败了</ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterLabel>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterText>{SURGEON_labelShort} 在 {PATIENT_labelShort} ({RECIPE_label})上手术时发生灾难性失败。</ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterText>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterLabel>对 {PATIENT_labelShort} 的手术失败了</ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterLabel>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterText>{SURGEON_labelShort} 在操作 {PATIENT_labelShort} ({RECIPE_label})时以一种荒谬的方式失败了</ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterText>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterLabel>对 {PATIENT_labelShort} 的手术失败了</ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterLabel>
+<ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterText>{SURGEON_labelShort} 在 {PATIENT_labelShort} ({RECIPE_label}) 上操作时出现轻微故障</ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterText>
+</LanguageData>

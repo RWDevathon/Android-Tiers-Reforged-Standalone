@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<ATR_ReprogramSuccess>Drone umprogrammiert</ATR_ReprogramSuccess>
+	<ATR_ReprogramSuccessDesc>{0} wurde umprogrammiert. Nach dem Neustart wird {Pawn_pronoun} dir gehorchen.</ATR_ReprogramSuccessDesc>
+	<ATR_ReprogramFailed>Umprogrammieren gescheitert</ATR_ReprogramFailed>
+	<ATR_ReprogramFailedDesc>Das Umprogrammieren von {0} ist gescheitert. Nach dem Neustart wird {Pawn_pronoun} dir nicht gehorchen. Es könnten Schäden entstanden sein.</ATR_ReprogramFailedDesc>
+	
+	<ATR_FractalCorruption>Fraktaler Mutant</ATR_FractalCorruption>
+	<ATR_FractalCorruptionDesc>{0} wurde vollständig korrumpiert. {Pawn_pronoun} ist nun nicht mehr als eine mutierte Bestie. Das Echo {Pawn_possessive}er Schreie wird kilometerweit zu hören sein - und das vermutlich viele Jahre lang.</ATR_FractalCorruptionDesc>
+	
+	<ATR_ServerMeltdown>Serverschmelze</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>Ein Server ist aufgrund von Überhitzung explodiert!</ATR_ServerMeltdownDesc>
+	
+	
+	<!-- Hacking Incidents -->
+		<!-- Generic Messages -->
+	<ATR_IncidentGenericAttackDesc>Ein Cyberangriff mit der Stärke von {0} Punkten hat erfolgreich eure Firewall geknackt und {1} Netzwerkgerät(e) infiziert bevor Verteidigungsmaßahmen ergriffen werden konnten.</ATR_IncidentGenericAttackDesc>
+	<ATR_IncidentGenericDefense>Cyberangriff vereitelt!</ATR_IncidentGenericDefense>
+	<ATR_IncidentGenericDefenseDesc>Ein Cyberangriff mit der Stärke von {0} Punkten ist an eurer Firewall gescheitert. Alle Geräte arbeiten normal und deine Sicherheitsserver arbeiten daran das Leck zu stopfen.</ATR_IncidentGenericDefenseDesc>
+	<ATR_IncidentGenericAllyIntercept>Cyberangriff abgefangen!</ATR_IncidentGenericAllyIntercept>
+	<ATR_IncidentGenericAllyInterceptDesc>White-hat hacker der Fraktion {0} haben dich darüber informiert dass jemand versucht hat dein Netzwerk anzugreifen. Nicht nur haben sie den Angriff, im Wert von {1} Punkten vereitelt, sie haben auch Lecks im Wert von {2} Sicherheitspunkten gefunden und geschlossen!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		<!-- Gridscreen Virus -->
+			<!-- Grid-virus defeated -->
+	<ATR_IncidentGridVirusDefeated>Netzinfektion überwunden</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>Netz-Schläferangriff</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>Betroffene Geräte sind abgestürzt und werden Zeit brauchen um Neuzustarten.</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- Grid-locker attack -->
+	<ATR_IncidentGridlockerAttack>Netz-Kryptoangriff</ATR_IncidentGridlockerAttack>
+	<ATR_IncidentGridlockerAttackDesc>Betroffene Geräte sind verschlüsselt worden und werden erst wieder funktionieren wenn das Lösegeld bezahlt wurde - Hoffentlich...</ATR_IncidentGridlockerAttackDesc>
+	
+	<ATR_CryptolockerNeedRansom>Netz-Lösegeldforderung</ATR_CryptolockerNeedRansom>
+	<ATR_CryptolockerNeedRansomDesc>Durch eines der {0} betroffenen Geräte erfärst du dass man bereit ist dir die Kontrolle über sie im Austausch für {1} Silber zurückzugeben.</ATR_CryptolockerNeedRansomDesc>
+	
+			<!-- Grid-breaker attack -->
+	<ATR_IncidentGridbreakerAttack>Netz-Überlastungsangriff</ATR_IncidentGridbreakerAttack>
+	<ATR_IncidentGridbreakerAttackDesc>Die betroffenen Geräte wurden überlastet und müssen repariert werden. Es scheint jedoch keine Hintertür zurückgeblieben zu sein.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- Ally Grid Virus Intervention -->
+	<ATR_IncidentGridVirusAllyIntercept>Cyberangriff abgefangen (Netz)!</ATR_IncidentGridVirusAllyIntercept>
+	
+		<!-- DDOS Attack -->
+	<ATR_IncidentDDOSDefeated>Cyberangriff vereitelt(Netz)!</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>DDOS-Angriff</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>Betroffene Geräte wurden mit nutzlosen Informationen überflutet. Das führt zu einer Reduktion der Punktegenerierung, hat aber sonst keinen Schaden hinterlassen.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>Betroffene Geräte wurden mit nutzlosen Informationen überflutet. Das führt zu einer Reduktion der Punktegenerierung. Der Angriff war so stark, dass ein Teil der bisher gesammelten Punkte unbrauchbar geworden ist.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAllyIntercept>Cyberangriff abgefangen (DDOS)!</ATR_IncidentDDOSAllyIntercept>
+	
+		<!-- Troll Attack -->
+	<ATR_IncidentTrollDefeated>Troll Attack defeated</ATR_IncidentTrollDefeated>
+	
+	<ATR_IncidentTrollAttack>Trollingangriff</ATR_IncidentTrollAttack>
+	<ATR_IncidentTrollAttackDesc>{0} hat {1} Fähigkeitsstufen verloren! Zudem hat {Pawn_pronoun} durch die Dinge die {Pawn_pronoun} sehen musste ein leichtes Trauma erlitten.</ATR_IncidentTrollAttackDesc>
+	
+	<ATR_IncidentTrollAllyIntercept>Cyberangriff abgefangen (Troll)!</ATR_IncidentTrollAllyIntercept>
+	
+		<!-- Diplohack -->
+	<ATR_IncidentDiplohackDefeated>Cyberangriff vereitelt(Diplo)!</ATR_IncidentDiplohackDefeated>
+	
+	<ATR_IncidentDiplohackAttack>Diplohack</ATR_IncidentDiplohackAttack>
+	<ATR_IncidentDiplohackAttackDesc>Hackern ist es gelungen deine Kommunikation mit {0} abzuhören und daraus eine überzeugende Immitation zu basteln, weleche genutzt wurde um eine Karavane von {0} in einen Hinterhalt zu locken. Als Antwort darauf folgte eine (vermutlich echte) Nachricht von {0} in der eure törichte Leichtsinnigkeit im Umgang mit Cybersicherheit angeprangert wurde. Anderen Fraktionen werde geraten werden, euch in nächster Zeit nicht zu viel Vertrauen entgegenzubringen.</ATR_IncidentDiplohackAttackDesc>
+	
+	<ATR_IncidentDiplohackAllyIntercept>Cyberangriff vereitelt (Diplo)!</ATR_IncidentDiplohackAllyIntercept>
+	
+		<!-- Provoker Hack -->
+	<ATR_IncidentProvokerhackDefeated>Cyberangriff vereitelt (Provokation)!</ATR_IncidentProvokerhackDefeated>
+	
+	<ATR_IncidentProvokerhackAttack>Provokationshack</ATR_IncidentProvokerhackAttack>
+	<ATR_IncidentProvokerhackAttackDesc>Hackern ist es gelungen dir eine feindliche Fraktion auf den Hals zu hetzen indem sie es für einen Moment so aussehen ließen als wärest du im Begriff ein Schiff zu starten!</ATR_IncidentProvokerhackAttackDesc>
+	
+	<ATR_IncidentProvokerhackAllyIntercept>Cyberangriff abgefangen (Provokation)!</ATR_IncidentProvokerhackAllyIntercept>
+	
+		<!-- Counterhack -->
+	<ATR_IncidentCounterhackDefeated>Cyberangriff vereitelt (Trojaner)!</ATR_IncidentCounterhackDefeated>
+	
+	<ATR_IncidentCounterhackAttack>Trojaner!</ATR_IncidentCounterhackAttack>
+	<ATR_IncidentCounterhackAttackDesc>Hackern ist es gelungen kritische Informationen von euren Servern zu stehlen. Dabei wurden zudem {0} Punkte erbeutet.</ATR_IncidentCounterhackAttackDesc>
+	
+	<ATR_IncidentCounterhackAllyIntercept>Cyberangriff abgefangen (Trojaner)!</ATR_IncidentCounterhackAllyIntercept>
+
+        <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>Angriff gescheitert (Beziehungsverschlechterung)</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliationDesc>Dein Angriff blieb erfolglos und wenngleich man dir nichts nachweisen kann verdächtigt man dich trotzdem. Der Beziehungsschaden beläuft sich auf {0}, da der Abfänger eine Vendetta gegen dich zu haben scheint. Ein unglücklicher diplomatischer Zwischenfall.</ATR_RelationshipRetaliationDesc>
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>Instandhaltungsverfall</ATR_PoorMaintenanceLetter>
+	
+</LanguageData>

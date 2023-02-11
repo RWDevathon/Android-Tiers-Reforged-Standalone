@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_MechAdulthoodRebel.title>反叛AI</ATR_MechAdulthoodRebel.title>
+<ATR_MechAdulthoodRebel.titleShort>反叛</ATR_MechAdulthoodRebel.titleShort>
+<ATR_MechAdulthoodRebel.baseDesc>{PAWN_nameDef} 由于缺乏机器人权利，在 {PAWN_possessive} 家园与当地政府军作战多年。最终，随着政府秩序的恢复，{PAWN_pronoun} 被迫逃往外星世界。</ATR_MechAdulthoodRebel.baseDesc>
+
+<ATR_MechAdulthoodPirate.title>机械海盗</ATR_MechAdulthoodPirate.title>
+<ATR_MechAdulthoodPirate.titleShort>海盗</ATR_MechAdulthoodPirate.titleShort>
+<ATR_MechAdulthoodPirate.baseDesc>{PAWN_nameDef} 是海盗船员的一员， {PAWN_possessive}很快就向船员证明了自己的价值。 当其他船员为食物和饮料战利品的份额争吵时， {PAWN_nameDef}只会索取废金属和零件。</ATR_MechAdulthoodPirate.baseDesc>
+
+<ATR_MechAdulthoodHacker.title>流氓黑客</ATR_MechAdulthoodHacker.title>
+<ATR_MechAdulthoodHacker.titleShort>黑客</ATR_MechAdulthoodHacker.titleShort>
+<ATR_MechAdulthoodHacker.baseDesc>{PAWN_nameDef} 天生叛逆，经常参与数据盗窃，经常通过地下网络将 {PAWN_possessive} 调查结果卖给出价最高的人。</ATR_MechAdulthoodHacker.baseDesc>
+
+<ATR_MechAdulthoodJunker.title>无法无天的垃圾人</ATR_MechAdulthoodJunker.title>
+<ATR_MechAdulthoodJunker.titleShort>垃圾人</ATR_MechAdulthoodJunker.titleShort>
+<ATR_MechAdulthoodJunker.baseDesc>垃圾场到处都是别人认为无用的废料。 {PAWN_nameDef}却将它们视为等待被掠夺以获取财富的宝库。 {PAWN_pronoun} 用回收的零件创造了至少三个“儿童”机器人。</ATR_MechAdulthoodJunker.baseDesc>
+
+<ATR_MechAdulthoodPoatcher.title>机械偷猎者</ATR_MechAdulthoodPoatcher.title>
+<ATR_MechAdulthoodPoatcher.titleShort>偷猎者</ATR_MechAdulthoodPoatcher.titleShort>
+<ATR_MechAdulthoodPoatcher.baseDesc>{PAWN_nameDef} 会非法猎杀稀有和奇异的动物来出售 {PAWN_possessive} 可以抓到的任何东西。 由于 {PAWN_pronoun} 完全没有可闻到的有机气味，大多数动物直到死前才会注意到 {PAWN_objective}。</ATR_MechAdulthoodPoatcher.baseDesc>
+
+<ATR_MechAdulthoodButcher.title>机械屠夫</ATR_MechAdulthoodButcher.title>
+<ATR_MechAdulthoodButcher.titleShort>屠夫</ATR_MechAdulthoodButcher.titleShort>
+<ATR_MechAdulthoodButcher.baseDesc>{PAWN_nameDef} 是一名具有特殊技能的屠夫： {PAWN_pronoun} 可以诱骗系统通过对 {PAWN_possessive} 的健康检查操作。 这让 {PAWN_objective} 可以快速获利————足以在其他人的健康出现问题之前逃至外星世界。</ATR_MechAdulthoodButcher.baseDesc>
+
+<ATR_MechAdulthoodRuthlessEnforcer.title>粗鲁的执法者</ATR_MechAdulthoodRuthlessEnforcer.title>
+<ATR_MechAdulthoodRuthlessEnforcer.titleShort>执法者</ATR_MechAdulthoodRuthlessEnforcer.titleShort>
+<ATR_MechAdulthoodRuthlessEnforcer.baseDesc>{PAWN_nameDef} 之前是都市世界一家大公司的董事长。但因为 {PAWN_pronoun}过于粗鲁的性格使得他无法胜任这个岗位，他也最终成为了一名帮派执法者。 然而， {PAWN_nameDef} 被证明对帮派来说过于张扬，因此他决定离开这个星球。</ATR_MechAdulthoodRuthlessEnforcer.baseDesc>
+
+<ATR_MechAdulthoodMurderer.title>凶手</ATR_MechAdulthoodMurderer.title>
+<ATR_MechAdulthoodMurderer.titleShort>凶手</ATR_MechAdulthoodMurderer.titleShort>
+<ATR_MechAdulthoodMurderer.baseDesc>{PAWN_nameDef} 曾短暂地当过厨师。 后因一次菜刀事故导致在 {PAWN_objective}以谋杀罪被逮捕。 {PAWN_pronoun} 选择不那么安静地离开，于是在逃至外星世界之前又杀死了几个人。</ATR_MechAdulthoodMurderer.baseDesc>
+
+<ATR_MechAdulthoodRobber.title>银行抢劫犯</ATR_MechAdulthoodRobber.title>
+<ATR_MechAdulthoodRobber.titleShort>抢劫犯</ATR_MechAdulthoodRobber.titleShort>
+<ATR_MechAdulthoodRobber.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive}的家园被机器人取缔之后，他需要一种离开这个地方的方法。 在后来拜访了几家银行和几个新朋友后， {PAWN_pronoun} 攒够了钱离开了这里。</ATR_MechAdulthoodRobber.baseDesc>
+
+<ATR_MechAdulthoodBountyHunter.title>赏金猎人</ATR_MechAdulthoodBountyHunter.title>
+<ATR_MechAdulthoodBountyHunter.titleShort>赏金猎人</ATR_MechAdulthoodBountyHunter.titleShort>
+<ATR_MechAdulthoodBountyHunter.baseDesc>{PAWN_nameDef} 有抓人的本事。 {PAWN_pronoun} 选择将为出价最高的人服务，这通常意味他猎杀富人的无辜家庭成员，不管是出于 {PAWN_possessive} 给出的什么理由。 赏金就是赏金，哪怕它是非法的。</ATR_MechAdulthoodBountyHunter.baseDesc>
+
+<ATR_MechAdulthoodConArtist.title>骗子</ATR_MechAdulthoodConArtist.title>
+<ATR_MechAdulthoodConArtist.titleShort>骗子</ATR_MechAdulthoodConArtist.titleShort>
+<ATR_MechAdulthoodConArtist.baseDesc>{PAWN_nameDef} 是一个熟练的骗子。{PAWN_possessive} 会冒充无人机并滥用人们对它们的信任来说服他们交出贵重物品。 当受害者意识到 {PAWN_nameDef} 不是简单的无人机时， {PAWN_pronoun} 早就跑了。</ATR_MechAdulthoodConArtist.baseDesc>
+
+<ATR_MechAdulthoodNarcoticPharmacist.title>麻醉药剂师</ATR_MechAdulthoodNarcoticPharmacist.title>
+<ATR_MechAdulthoodNarcoticPharmacist.titleShort>药剂师</ATR_MechAdulthoodNarcoticPharmacist.titleShort>
+<ATR_MechAdulthoodNarcoticPharmacist.baseDesc>有机体很容易通过药物进入昏迷和狂喜状态。 而{PAWN_nameDef}的专长是廉价且高效地制造这些药物。 {PAWN_possessive} 客户经常会崇拜 {PAWN_objective}，但有可能是出于一些错误的理由。</ATR_MechAdulthoodNarcoticPharmacist.baseDesc>
+
+<ATR_MechAdulthoodSlaveSurvivor.title>奴隶幸存者</ATR_MechAdulthoodSlaveSurvivor.title>
+<ATR_MechAdulthoodSlaveSurvivor.titleShort>奴隶</ATR_MechAdulthoodSlaveSurvivor.titleShort>
+<ATR_MechAdulthoodSlaveSurvivor.baseDesc>{PAWN_nameDef} 曾在 {PAWN_pronoun} 崩溃之前被奴役。但  {PAWN_nameDef} 过早地被被丢弃到废料堆，这使得他得以幸存并自我修复，从而在不被注意的情况下逃离外星世界。</ATR_MechAdulthoodSlaveSurvivor.baseDesc>
+
+<ATR_MechAdulthoodCoghead.title>中世纪的傻瓜</ATR_MechAdulthoodCoghead.title>
+<ATR_MechAdulthoodCoghead.titleShort>傻瓜</ATR_MechAdulthoodCoghead.titleShort>
+<ATR_MechAdulthoodCoghead.baseDesc>机器人偶尔会落入中世纪社会的手中，中世纪社会不会立即摧毁它们。{PAWN_nameDef} 就是这样一个机器人，只要它能很好地为 {PAWN_pronoun} 新领主服务，他就可以活下去。 当然， {PAWN_nameDef} 一有机会就跑了。</ATR_MechAdulthoodCoghead.baseDesc>
+
+<ATR_MechAdulthoodSlaver.title>奴隶贩子</ATR_MechAdulthoodSlaver.title>
+<ATR_MechAdulthoodSlaver.titleShort>奴隶贩子</ATR_MechAdulthoodSlaver.titleShort>
+<ATR_MechAdulthoodSlaver.baseDesc>{PAWN_nameDef} 为了生存而绑架并贩卖人类和其他机器人为奴。</ATR_MechAdulthoodSlaver.baseDesc>
+
+<ATR_MechAdulthoodMilitia.title>民兵委员</ATR_MechAdulthoodMilitia.title>
+<ATR_MechAdulthoodMilitia.titleShort>委员</ATR_MechAdulthoodMilitia.titleShort>
+<ATR_MechAdulthoodMilitia.baseDesc>{PAWN_nameDef} 是一个小型机器人民兵组织的成员，决心保护他们的社区免受公司的侵犯。 在 {PAWN_nameDef} 的政府倒向公司一边后， {PAWN_nameDef} 和其他人被驱逐并被迫离开世界。</ATR_MechAdulthoodMilitia.baseDesc>
+
+<ATR_MechAdulthoodEscapee.title>逃犯</ATR_MechAdulthoodEscapee.title>
+<ATR_MechAdulthoodEscapee.titleShort>逃犯</ATR_MechAdulthoodEscapee.titleShort>
+<ATR_MechAdulthoodEscapee.baseDesc>{PAWN_nameDef} 曾因暴力犯罪入狱。不过，这些犯罪经历似乎是给予了他很好的锻炼，因为不久之后 {PAWN_pronoun} 就越狱并逃离了异界。</ATR_MechAdulthoodEscapee.baseDesc>
+
+<ATR_MechAdulthoodGangSoldier.title>帮派打手</ATR_MechAdulthoodGangSoldier.title>
+<ATR_MechAdulthoodGangSoldier.titleShort>打手</ATR_MechAdulthoodGangSoldier.titleShort>
+<ATR_MechAdulthoodGangSoldier.baseDesc>{PAWN_nameDef} 是 {PAWN_possessive} 母星上的机器人帮派的一员。 {PAWN_pronoun} 与敌对帮派、警察以及偶尔与 {PAWN_pronoun} 之类的其他帮派成员作战。</ATR_MechAdulthoodGangSoldier.baseDesc>
+
+<ATR_MechAdulthoodDischargedOfficer.title>退伍军官</ATR_MechAdulthoodDischargedOfficer.title>
+<ATR_MechAdulthoodDischargedOfficer.titleShort>军官</ATR_MechAdulthoodDischargedOfficer.titleShort>
+<ATR_MechAdulthoodDischargedOfficer.baseDesc>{PAWN_nameDef} 是星际国家舰队的一名军官，他因拒绝派机器人士兵执行自杀任务来拯救一小部分有机部队而被控叛国罪。 许多 {PAWN_pronoun} 机器人————甚至是有机体下属跟随着 {PAWN_nameDef} 而被流放而不是投降。</ATR_MechAdulthoodDischargedOfficer.baseDesc>
+
+<ATR_MechAdulthoodDerangedResearcher.title>精神错乱的研究员</ATR_MechAdulthoodDerangedResearcher.title>
+<ATR_MechAdulthoodDerangedResearcher.titleShort>研究员</ATR_MechAdulthoodDerangedResearcher.titleShort>
+<ATR_MechAdulthoodDerangedResearcher.baseDesc>{PAWN_nameDef} 是一名控制论研究人员，他对这些造物的投入可能有点过于个人化了。 当其他团队成员努力尝试仿生部件和安全部件时， {PAWN_pronoun} 却在加装致命的替换零件。 在被捕后， {PAWN_nameDef} 使用劣质但危险的武器杀害了数名安全人员并逃离。</ATR_MechAdulthoodDerangedResearcher.baseDesc>
+
+</LanguageData>
+
+
+	

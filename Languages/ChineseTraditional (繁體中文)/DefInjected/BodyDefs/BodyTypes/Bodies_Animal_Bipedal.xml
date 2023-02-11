@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechBipedal.label>雙足無人機</ATR_MechBipedal.label>
+<ATR_MechBipedal.corePart.parts.3.customLabel>左散熱器</ATR_MechBipedal.corePart.parts.3.customLabel>
+<ATR_MechBipedal.corePart.parts.4.customLabel>右散熱器</ATR_MechBipedal.corePart.parts.4.customLabel>
+<ATR_MechBipedal.corePart.parts.7.parts.parts.1.customLabel>左視覺傳感器</ATR_MechBipedal.corePart.parts.7.parts.parts.1.customLabel>
+<ATR_MechBipedal.corePart.parts.7.parts.parts.2.customLabel>右視覺傳感器</ATR_MechBipedal.corePart.parts.7.parts.parts.2.customLabel>
+<ATR_MechBipedal.corePart.parts.7.parts.parts.3.customLabel>左聽力傳感器</ATR_MechBipedal.corePart.parts.7.parts.parts.3.customLabel>
+<ATR_MechBipedal.corePart.parts.7.parts.parts.4.customLabel>右聽力傳感器</ATR_MechBipedal.corePart.parts.7.parts.parts.4.customLabel>
+<ATR_MechBipedal.corePart.parts.8.customLabel>左腿</ATR_MechBipedal.corePart.parts.8.customLabel>
+<ATR_MechBipedal.corePart.parts.8.parts.ATR_MechanicalFoot.customLabel>左腳</ATR_MechBipedal.corePart.parts.8.parts.ATR_MechanicalFoot.customLabel>
+<ATR_MechBipedal.corePart.parts.9.customLabel>右腿</ATR_MechBipedal.corePart.parts.9.customLabel>
+<ATR_MechBipedal.corePart.parts.9.parts.ATR_MechanicalFoot.customLabel>右腳</ATR_MechBipedal.corePart.parts.9.parts.ATR_MechanicalFoot.customLabel>
+</LanguageData>

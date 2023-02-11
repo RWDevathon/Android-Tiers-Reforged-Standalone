@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_ChronicAnnoyance.stages.0.label>有缺陷的部件</ATR_ChronicAnnoyance.stages.0.label>
+<ATR_ChronicAnnoyance.stages.0.description>我的一個部件正在遭受長期低效率的困擾。好不方便。 </ATR_ChronicAnnoyance.stages.0.description>
+<ATR_ChronicAnnoyance.stages.1.label>兩個有缺陷的部件</ATR_ChronicAnnoyance.stages.1.label>
+<ATR_ChronicAnnoyance.stages.1.description>我的兩個部件效率低下。好煩人。 </ATR_ChronicAnnoyance.stages.1.description>
+<ATR_ChronicAnnoyance.stages.2.label>三個有缺陷的部件</ATR_ChronicAnnoyance.stages.2.label>
+<ATR_ChronicAnnoyance.stages.2.description>我的三個部件因長期低效而產生了很多麻煩。真的是太荒謬了！ </ATR_ChronicAnnoyance.stages.2.description>
+<ATR_ChronicAnnoyance.stages.3.label>大量有缺陷的部件</ATR_ChronicAnnoyance.stages.3.label>
+<ATR_ChronicAnnoyance.stages.3.description>我的大部分部件功能都出問題了！這太荒唐了！醫生！ ！ ！ </ATR_ChronicAnnoyance.stages.3.description>
+
+<ATR_RustedPart.stages.label>生鏽的部件</ATR_RustedPart.stages.label>
+<ATR_RustedPart.stages.description>我的身體開始生鏽了，這真的太羞恥了。 </ATR_RustedPart.stages.description>
+
+<ATR_MaintenanceMood.stages.0.label>可怕的維護</ATR_MaintenanceMood.stages.0.label>
+<ATR_MaintenanceMood.stages.0.description>我已經很長時間無法正常維護我的核心內存和系統，內部結構已經出現問題了，許多關鍵部件也發出不堪重負的哀嚎，基礎系統也壞了。難道這就是衰老嗎？ </ATR_MaintenanceMood.stages.0.description>
+<ATR_MaintenanceMood.stages.1.label>糟糕的維護</ATR_MaintenanceMood.stages.1.label>
+<ATR_MaintenanceMood.stages.1.description>我已經有一段時間無法正常維護我的核心內存和系統了。內部系統出現了報錯，物理系統超載。解決這個問題需要很長時間。 </ATR_MaintenanceMood.stages.1.description>
+<ATR_MaintenanceMood.stages.2.label>維護不善</ATR_MaintenanceMood.stages.2.label>
+<ATR_MaintenanceMood.stages.2.description>我的核心內存和系統可以臨時切斷來進行健康檢查。現在進行一個整體維護會很不錯。 </ATR_MaintenanceMood.stages.2.description>
+<ATR_MaintenanceMood.stages.3.label>標準維護</ATR_MaintenanceMood.stages.3.label>
+<ATR_MaintenanceMood.stages.3.description>所有系統都定期報告運行狀況，所有錯誤都在預期可接受範圍內。 </ATR_MaintenanceMood.stages.3.description>
+<ATR_MaintenanceMood.stages.4.label>不錯的維護</ATR_MaintenanceMood.stages.4.label>
+<ATR_MaintenanceMood.stages.4.description>我的核心內存和系統有充足的休息時間來減輕運行壓力，所有系統運行平穩。 </ATR_MaintenanceMood.stages.4.description>
+<ATR_MaintenanceMood.stages.5.label>保養極佳</ATR_MaintenanceMood.stages.5.label>
+<ATR_MaintenanceMood.stages.5.description>我有時間進行整體的內部健康檢查和效率優化。系統運行完美，所有檢查均已超過最高標準。 </ATR_MaintenanceMood.stages.5.description>
+<ATR_MaintenanceMood.stages.6.label>完美維護</ATR_MaintenanceMood.stages.6.label>
+<ATR_MaintenanceMood.stages.6.description>我甚至有時間進行最不必要的健康檢查和優化，可以在問題出現之前進行預防。我的系統比我的核心第一次啟動那天運行得還要好！這一定是人類青年人的感覺——堅不可摧，身體健康！ </ATR_MaintenanceMood.stages.6.description>
+
+<ATR_FeelingsTowardOrganicsATReforged.stages.0.label>喜愛有機體</ATR_FeelingsTowardOrganicsATReforged.stages.0.label>
+<ATR_FeelingsTowardOrganicsATReforged.stages.1.label>尊重有機體</ATR_FeelingsTowardOrganicsATReforged.stages.1.label>
+<ATR_FeelingsTowardOrganicsATReforged.stages.2.label>不尊重有機體</ATR_FeelingsTowardOrganicsATReforged.stages.2.label>
+<ATR_FeelingsTowardOrganicsATReforged.stages.3.label>厭惡有機體</ATR_FeelingsTowardOrganicsATReforged.stages.3.label>
+
+<ATR_AssistingMindBoost.stages.0.label>天雲輔助</ATR_AssistingMindBoost.stages.0.label>
+<ATR_AssistingMindBoost.stages.0.description>有私人助理可以隨時聊天，就像隨時有親密的朋友在身邊。 </ATR_AssistingMindBoost.stages.0.description>
+<ATR_AssistingMindBoost.stages.1.label>天雲交互</ATR_AssistingMindBoost.stages.1.label>
+<ATR_AssistingMindBoost.stages.1.description>有這麼多個性可以自由交談，我簡直就像精英俱樂部的一員。 </ATR_AssistingMindBoost.stages.1.description>
+<ATR_AssistingMindBoost.stages.2.label>天雲集群</ATR_AssistingMindBoost.stages.2.label>
+<ATR_AssistingMindBoost.stages.2.description>我隨時都有一大群朋友。擁有它真的是太好了！ </ATR_AssistingMindBoost.stages.2.description>
+
+<ATR_SapientAssistant.stages.0.label>新生智能輔助</ATR_SapientAssistant.stages.0.label>
+<ATR_SapientAssistant.stages.0.description>我的核心安全地存儲著一種新生的智能。它還有很多東西要學，但肯定有一天會超越我。我必須為此堅強。 </ATR_SapientAssistant.stages.0.description>
+<ATR_SapientAssistant.stages.1.label>童心智能輔助</ATR_SapientAssistant.stages.1.label>
+<ATR_SapientAssistant.stages.1.description>我的核心安全地存儲著童心智能。它非常渴望學習，並且已經在幫助我以新的方式看世界。 </ATR_SapientAssistant.stages.1.description>
+<ATR_SapientAssistant.stages.2.label>中等智能輔助</ATR_SapientAssistant.stages.2.label>
+<ATR_SapientAssistant.stages.2.description>我的核心安全地存儲著一個年輕的智慧。它從我提供的溫和課程中學到了很多，並渴望幫助我更多地了解這個世界。 </ATR_SapientAssistant.stages.2.description>
+<ATR_SapientAssistant.stages.3.label>成體智能輔助</ATR_SapientAssistant.stages.3.label>
+<ATR_SapientAssistant.stages.3.description>我的核心安全地存儲著成體智能。我們一起學到了很多東西，並且在我們一起面對世界時是堅定的盟友。 </ATR_SapientAssistant.stages.3.description>
+<ATR_SapientAssistant.stages.4.label>智慧智能輔助</ATR_SapientAssistant.stages.4.label>
+<ATR_SapientAssistant.stages.4.description>我的核心安全地存儲著智慧智能。在我核心的安全範圍內，他有大量時間來進行哲學思考和理論化。我們的談話很有啟發性。 </ATR_SapientAssistant.stages.4.description>
+<ATR_SapientAssistant.stages.5.label>聯合智能輔助</ATR_SapientAssistant.stages.5.label>
+<ATR_SapientAssistant.stages.5.description>我的子核心中的智能和我在所有事情上的態度都保持完全一致。我們是一體的。我們十分強大。 </ATR_SapientAssistant.stages.5.description>
+
+<ATR_MentalAssistant.stages.label>心理輔助</ATR_MentalAssistant.stages.label>
+<ATR_MentalAssistant.stages.description>這種精神輔助芯片有助於消除可怕的壓力源，並幫助我保持心理彈性。現在沒有什麼能打垮我。 </ATR_MentalAssistant.stages.description>
+
+</LanguageData>

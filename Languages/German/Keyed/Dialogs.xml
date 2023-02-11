@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ATR_SkyMindDisconnectionRisk>Das Trennen der Netzwerkverbindung würde schwerwiegende Folgen haben. Speicherschäden sind zu erwarten.</ATR_SkyMindDisconnectionRisk>
+	
+	<ATR_ResurrectionSuccessful>Alle phyisischen Schäden von {0} wurden behoben und der Neustart wurde eingeleitet.</ATR_ResurrectionSuccessful>
+	<ATR_ResurrectionFailedInvalidPawn>{0} wurde nicht repariert. Nur mechanische Lebensformen mit intaktem Hauptspeicherkern können auf diese Weise repariert werden.</ATR_ResurrectionFailedInvalidPawn>
+	<ATR_ResurrectionFailedDroneOnly>{0} ist zu komplex um damit repariert zu werden. Verwende einen Androidenreperatursatz!</ATR_ResurrectionFailedDroneOnly>
+	
+    <ATR_InsufficientPoints>Mindestens {0} Punkte sind für diesen Vorgang vonnöten.</ATR_InsufficientPoints>
+
+	<!-- Skill Upgrades -->
+	<ATR_PawnBeingModified>Ziel: </ATR_PawnBeingModified>
+	<ATR_CurrentXP>Verbleibende Erfahrung: </ATR_CurrentXP>
+	<ATR_TodaysXP>Erfahrung heute: </ATR_TodaysXP>
+
+	<ATR_AddSkillPoints>Punkte für {0} einsetzen</ATR_AddSkillPoints>
+	<ATR_AvailableSkillPoints>Verfügbare Punkte: {0}</ATR_AvailableSkillPoints>
+	<ATR_AvailableSkillPointsDesc>Hinweis: Die Effektivität der Punktevergabe basiert auf der Lernfähigkeit des Ziels sowie der täglichen Verständnisgrenze. Die Hingabevergabekosten beruhen auf bereits existierenden Hingaben, sowie der Lernfähigkeit des Ziels. Überstimulation ist ineffizient - Die Hingabevergabekosten steigen exponentiell.</ATR_AvailableSkillPointsDesc>
+	
+    <!-- Hacking Interface -->
+    <ATR_HackInterfaceTitle>Direktive auswählen:</ATR_HackInterfaceTitle>
+    <ATR_ConfirmHack>Angriff ausführen?</ATR_ConfirmHack>
+    <ATR_ConfirmhackDesc>Hacking ist grundsätzlich risikobehaftet. Ein Fehlschlag kann es zu einem diplomatischen Zwischenfall, einem automatischen Gegenschlag oder anderer Konsequenzen führen.</ATR_ConfirmhackDesc>
+
+    <ATR_HackOpCost>Punktekosten für Angriff: {0}</ATR_HackOpCost>
+    <ATR_SuccessChance>Erfolgschance: {0}%</ATR_SuccessChance>
+
+    <ATR_AvailableHackingPoints>Verfügbare Punkte: {0}. Malus für wiederholten Angriff: {1}.</ATR_AvailableHackingPoints>
+    <ATR_AvailableHackingPointsDesc>Hinweis: Die Hackingkosten bestehen aus dem Grundwert für den gewählten Angriff plus einem Malus für wiederholten Angriff (Verfällt mit der Zeit).\nMehr Punkte einzusetzten erhöht die Erfolgsaussichten.</ATR_AvailableHackingPointsDesc>
+
+        <!-- Guidance Hack -->
+    <ATR_GuidanceHack>Zielsystemhack</ATR_GuidanceHack>
+    <ATR_GuidanceHackDesc>Führe einen Angriff auf die Zielsysteme einer Fraktion aus um ihre Transportkapseln abzufangen. Beim Inhalt kann es sich um Güter, den Wocheneinkauf, einen Gefangenen oder die Wachablösung handeln...</ATR_GuidanceHackDesc>
+
+        <!-- Propaganda Hack -->
+    <ATR_PropagandaHack>Propagandakampagne</ATR_PropagandaHack>
+    <ATR_PropagandaHackDesc>Mache Werbung für deine Fraktion um eure Beziehungen zu verbessern. Aufrund der Undurchsichtigkeit der inneren Angelegenheiten einer Fraktion ist der Ausgang ungewiss.</ATR_PropagandaHackDesc>
+
+        <!-- Espionage Hack -->
+    <ATR_EspionageHack>Spionagekampagne</ATR_EspionageHack>
+    <ATR_EspionageHackDesc>Fange eine Quest ab die dich zu einem Warenlager führt. Ort und Besitzerfraktion sind ungewiss.</ATR_EspionageHackDesc>
+	
+        <!-- Disruptor Hack -->
+    <ATR_DisruptorHack>Überwältigung (DDoS)</ATR_DisruptorHack>
+    <ATR_DisruptorHackDesc>Überwältige netzwerkfähige Ziele auf der Karte mit nutzlosen Daten.</ATR_DisruptorHackDesc>
+    
+    <!-- Initialize Mind Dialog/Keys -->
+	<ATR_InitializeMindTitle>Initalisierung</ATR_InitializeMindTitle>
+	<ATR_InitializeMindDesc>Der neu verbundene Hauptspeicherkern kann ein Bewusstsein halten, hat aber noch keines entwickelt. Es kann entweder ein Bewusstsein aus dem Netzwerk übertragen oder ein völlig Neues geschaffen werden.</ATR_InitializeMindDesc>
+	
+	<ATR_SkyMindInitialization>Aus dem Netzwerk hochladen</ATR_SkyMindInitialization>
+	<ATR_AutomaticInitialization>Automatisch entwickeln</ATR_AutomaticInitialization>
+
+    <!-- Maintenance Level Setter Dialog -->
+    <ATR_SetTargetMaintenanceLevel>Instandhaltungsziel: {0}%</ATR_SetTargetMaintenanceLevel>
+	
+</LanguageData>

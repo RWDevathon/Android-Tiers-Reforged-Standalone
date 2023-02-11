@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableSources>Verfügbare Quellen:</ATR_ViableSources>
+	<ATR_ViableTargets>Verfügbare Ziele:</ATR_ViableTargets>
+	<ATR_NoAvailableTarget>Keine verfügbaren Ziele für diesen Vorgang.</ATR_NoAvailableTarget>
+
+	<!-- Charging -->
+	<ATR_ForceCharge>Erzwinge Ladevorgang</ATR_ForceCharge>
+	<ATR_NoAvailableChargingSpots>Keine freien Ladeplätze</ATR_NoAvailableChargingSpots>
+	<ATR_NeedToAllowCharge>{0} ist nicht in der Lage Strom vom Stromnetz zu beziehen.</ATR_NeedToAllowCharge>
+	<ATR_MassiveNotAllowed>Diese Einheit ist zu groß dafür.</ATR_MassiveNotAllowed>
+	<ATR_MassiveRequired>Für Starkstromrezipienten reserviert.</ATR_MassiveRequired>
+	
+</LanguageData>

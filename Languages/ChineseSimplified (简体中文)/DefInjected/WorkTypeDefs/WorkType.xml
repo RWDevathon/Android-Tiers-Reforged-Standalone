@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_Mechanic.labelShort>机械师</ATR_Mechanic.labelShort>
+<ATR_Mechanic.pawnLabel>机械师</ATR_Mechanic.pawnLabel>
+<ATR_Mechanic.gerundLabel>修理</ATR_Mechanic.gerundLabel>
+<ATR_Mechanic.description>修理受伤的机械单位，处理机械手术，营救伤残单位。 机械师会照顾殖民者和囚犯。</ATR_Mechanic.description>
+</LanguageData>

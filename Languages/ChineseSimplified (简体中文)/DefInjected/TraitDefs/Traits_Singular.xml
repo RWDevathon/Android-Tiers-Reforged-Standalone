@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_FeelingsTowardOrganics.degreeDatas.0.label>喜爱有机体</ATR_FeelingsTowardOrganics.degreeDatas.0.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.0.description>{PAWN_nameDef} 对所有有机生命有着深深的喜爱，并将它们视为文化和存在的顶峰。 {PAWN_nameDef} 渴望尽可能有机，无论这对他们意味着什么。</ATR_FeelingsTowardOrganics.degreeDatas.0.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.1.label>尊重有机体</ATR_FeelingsTowardOrganics.degreeDatas.1.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.1.description>{PAWN_nameDef} 自然而然地尊重并愿意信任有机生命，理解并支持它们的本性。</ATR_FeelingsTowardOrganics.degreeDatas.1.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.2.label>不尊重有机体</ATR_FeelingsTowardOrganics.degreeDatas.2.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.2.description>{PAWN_nameDef} 不明白为什么有人会想要成为有机体，并尽可能避免与有机体打交道。</ATR_FeelingsTowardOrganics.degreeDatas.2.description>
+<ATR_FeelingsTowardOrganics.degreeDatas.3.label>厌恶有机体</ATR_FeelingsTowardOrganics.degreeDatas.3.label>
+<ATR_FeelingsTowardOrganics.degreeDatas.3.description>{PAWN_nameDef} 鄙视所有有机生命，几乎不愿意容忍它们的存在。几乎。</ATR_FeelingsTowardOrganics.degreeDatas.3.description>
+</LanguageData>

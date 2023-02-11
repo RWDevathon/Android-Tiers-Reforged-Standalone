@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_Apparel_ScorchPack.label>燃油背包</ATR_Apparel_ScorchPack.label>
+<ATR_Apparel_ScorchPack.description>一種可重複使用的背包，內含高度易燃的化學混合物，具有引發惰性混合物爆炸性釋放所必需的結構。當佩戴者激活背包時，它會猛烈地噴出超高溫火焰。 \n\n燃油耗儘後，必須重新加載化學燃料才能再次使用。 \n\n燃油背包通常被鄙視有機生命的人形烈士使用，或者被用於防火小隊清除虫族巢穴。 </ATR_Apparel_ScorchPack.description>
+<ATR_Apparel_ScorchPack.verbs.label>部署燃油背包</ATR_Apparel_ScorchPack.verbs.label>
+</LanguageData>

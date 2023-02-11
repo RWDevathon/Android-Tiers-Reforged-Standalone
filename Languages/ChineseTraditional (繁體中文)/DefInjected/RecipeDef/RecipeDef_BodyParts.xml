@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData><!--Rec-->
+
+<!-- archtech -->
+<ATR_Install_CybertechArm.label>安裝超凡科技臂</ATR_Install_CybertechArm.label>
+<ATR_Install_CybertechArm.description>安裝一個超凡科技手臂</ATR_Install_CybertechArm.description>
+<ATR_Install_CybertechLeg.label>安裝超凡科技腿</ATR_Install_CybertechLeg.label>
+<ATR_Install_CybertechLeg.description>安裝一個超凡科技腿</ATR_Install_CybertechLeg.description>
+<ATR_Install_CybertechVisualSensor.label>安裝超凡科技眼</ATR_Install_CybertechVisualSensor.label>
+<ATR_Install_CybertechVisualSensor.description>安裝一個超凡科技眼</ATR_Install_CybertechVisualSensor.description>
+<ATR_Install_CybertechAudioSensor.label>安裝超凡聽力傳感器</ATR_Install_CybertechAudioSensor.label>
+<ATR_Install_CybertechAudioSensor.description>安裝一個超凡聽力傳感器</ATR_Install_CybertechAudioSensor.description>
+<ATR_Install_CybertechHeatsink.label>安裝超凡散熱器</ATR_Install_CybertechHeatsink.label>
+<ATR_Install_CybertechHeatsink.description>安裝一個超凡散熱器</ATR_Install_CybertechHeatsink.description>
+<ATR_Install_CybertechCoolantPump.label>安裝超凡冷卻泵</ATR_Install_CybertechCoolantPump.label>
+<ATR_Install_CybertechCoolantPump.description>安裝一個超凡冷卻泵</ATR_Install_CybertechCoolantPump.description>
+<ATR_Install_CybertechBattery.label>安裝超凡電池組</ATR_Install_CybertechBattery.label>
+<ATR_Install_CybertechBattery.description>安裝一個超凡電池組</ATR_Install_CybertechBattery.description>
+<ATR_Install_CybertechMechaniteStorage.label>安裝超凡機械存儲</ATR_Install_CybertechMechaniteStorage.label>
+<ATR_Install_CybertechMechaniteStorage.description>安裝一個超凡機械存儲</ATR_Install_CybertechMechaniteStorage.description>
+<ATR_Install_CybertechReactor.label>安裝超凡生物反應器</ATR_Install_CybertechReactor.label>
+<ATR_Install_CybertechReactor.description>安裝一個超凡生物反應器</ATR_Install_CybertechReactor.description>
+
+<!--assistance-->
+<ATR_Install_InsightAssistant.label>安裝技能輔助</ATR_Install_InsightAssistant.label>
+<ATR_Install_InsightAssistant.description>將技能輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_InsightAssistant.description>
+<ATR_Install_GeneralAssistant.label>安裝總核心輔助</ATR_Install_GeneralAssistant.label>
+<ATR_Install_GeneralAssistant.description>將總核心輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_GeneralAssistant.description>
+<ATR_Install_CombatAssistant.label>安裝戰鬥輔助</ATR_Install_CombatAssistant.label>
+<ATR_Install_CombatAssistant.description>將戰鬥輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_CombatAssistant.description>
+<ATR_Install_MechanicAssistant.label>安裝機械輔助</ATR_Install_MechanicAssistant.label>
+<ATR_Install_MechanicAssistant.description>將機械輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_MechanicAssistant.description>
+<ATR_Install_ConstructionAssistant.label>安裝建造輔助</ATR_Install_ConstructionAssistant.label>
+<ATR_Install_ConstructionAssistant.description>將建造輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_ConstructionAssistant.description>
+<ATR_Install_ExcavationAssistant.label>安裝採礦輔助</ATR_Install_ExcavationAssistant.label>
+<ATR_Install_ExcavationAssistant.description>將採礦輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_ExcavationAssistant.description>
+<ATR_Install_VictualAssistant.label>安裝廚藝輔助</ATR_Install_VictualAssistant.label>
+<ATR_Install_VictualAssistant.description>將廚藝輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_VictualAssistant.description>
+<ATR_Install_CultivationAssistant.label>安裝種植輔助</ATR_Install_CultivationAssistant.label>
+<ATR_Install_CultivationAssistant.description>將種植輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_CultivationAssistant.description>
+<ATR_Install_MedicineAssistant.label>安裝醫療輔助</ATR_Install_MedicineAssistant.label>
+<ATR_Install_MedicineAssistant.description>將醫療輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_MedicineAssistant.description>
+<ATR_Install_SocialAssistant.label>安裝社交輔助</ATR_Install_SocialAssistant.label>
+<ATR_Install_SocialAssistant.description>將醫療輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_SocialAssistant.description>
+<ATR_Install_MentalAssistant.label>安裝心理輔助</ATR_Install_MentalAssistant.label>
+<ATR_Install_MentalAssistant.description>將心理輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_MentalAssistant.description>
+<ATR_Install_PsychicAssistant.label>安裝通靈輔助</ATR_Install_PsychicAssistant.label>
+<ATR_Install_PsychicAssistant.description>將通靈輔助安裝到智能人形的子核心輔助插槽中。 </ATR_Install_PsychicAssistant.description>
+<ATR_Install_SapientAssistant.label>安裝遠古科技智能輔助</ATR_Install_SapientAssistant.label>
+<ATR_Install_SapientAssistant.description>將一個遠古科技智能輔助安裝到一個個體的副核心助手槽中。這個古老的設備似乎只有在植入到機械單元時才具有智能。卸載後它去了哪裡？ </ATR_Install_SapientAssistant.description>
+
+<!--brain-->
+<ATR_Install_AutonomousCore.label>安裝獨立核心</ATR_Install_AutonomousCore.label>
+<ATR_Install_AutonomousCore.description>安裝並連接獨立核心。完成後，核心將能夠存儲智能————從天云網絡複製而來或新生成的智能。 </ATR_Install_AutonomousCore.description>
+<Install_ReceiverCore.label>安裝代理人核心</Install_ReceiverCore.label>
+<Install_ReceiverCore.description>安裝和連接代理人核心。完成後，其核心將能夠將所有功能託管給遠程控制器並充當代理人。然而，它本身沒有任何智能或功能。 </Install_ReceiverCore.description>
+<ATR_Install_SkyMindReceiver.label>安裝天雲接收器</ATR_Install_SkyMindReceiver.label>
+<ATR_Install_SkyMindReceiver.description>在受試者大腦中安裝並初始化接收器。大腦中可能儲存的任何智能都會消亡，受試者將成為代理人。 </ATR_Install_SkyMindReceiver.description>
+<ATR_RemoveSkyMindReceiver.label>移除天雲接收器</ATR_RemoveSkyMindReceiver.label>
+<ATR_RemoveSkyMindReceiver.description>移除天雲接收器插件</ATR_RemoveSkyMindReceiver.description>
+<ATR_Install_SkyMindTransceiver.label>安裝天雲交互器</ATR_Install_SkyMindTransceiver.label>
+<ATR_Install_SkyMindTransceiver.description>在受試者大腦中安裝並初始化天雲交互器。受試者將能夠自由訪問天云網絡。 </ATR_Install_SkyMindTransceiver.description>
+<ATR_RemoveOrganicSkyMindTransceiver.label>移除天雲交互器</ATR_RemoveOrganicSkyMindTransceiver.label>
+<ATR_RemoveOrganicSkyMindTransceiver.description>移除天雲交互器插件</ATR_RemoveOrganicSkyMindTransceiver.description>
+
+<!--framework-->
+<ATR_Install_PlasteelPlating.label>安裝玻璃鋼框架</ATR_Install_PlasteelPlating.label>
+<ATR_Install_PlasteelPlating.description>將本機的機體框架替換為經過回火處理的玻璃鋼框架，增強了其戰鬥生存能力。 </ATR_Install_PlasteelPlating.description>
+<ATR_Install_CompositePlating.label>安裝複合框架</ATR_Install_CompositePlating.label>
+<ATR_Install_CompositePlating.description>將本機機體框架更換為機械-玻璃鋼複合框架，大幅提升戰鬥生存能力。 </ATR_Install_CompositePlating.description>
+<ATR_Install_HydraulicFrame.label>安裝液壓框架</ATR_Install_HydraulicFrame.label>
+<ATR_Install_HydraulicFrame.description>將本機機體框架更換為液壓框架，大大提高承重能力和綜合勞動效率。 </ATR_Install_HydraulicFrame.description>
+<ATR_Install_RefinedFrame.label>安裝精緻的框架</ATR_Install_RefinedFrame.label>
+<ATR_Install_RefinedFrame.description>將本機的機體框架替換為精緻的框架，突出社交性並賦予明顯高貴和醒目的外觀。安裝的框架品質既取決於組件，也取決於安裝人員的藝術技巧，因為無法將復雜設計的美感標準化。 </ATR_Install_RefinedFrame.description>
+<ATR_Install_SanitaryFrame.label>安裝無菌框架</ATR_Install_SanitaryFrame.label>
+<ATR_Install_SanitaryFrame.description>用無菌框架替換該機體的框架，確保它完全沒有污物並完全消毒。 </ATR_Install_SanitaryFrame.description>
+<ATR_Install_MobilityFrame.label>安裝高速框架</ATR_Install_MobilityFrame.label>
+<ATR_Install_MobilityFrame.description>將本機的框架替換為高速框架，大幅提昇機動能力和敏捷性。 </ATR_Install_MobilityFrame.description>
+<ATR_Install_SuppressorFrame.label>安裝抑制框架</ATR_Install_SuppressorFrame.label>
+<ATR_Install_SuppressorFrame.description>將本機機體框架更換為抑制框架，大大降低其戰鬥威脅。 </ATR_Install_SuppressorFrame.description>
+<ATR_Install_GuardianFrame.label>安裝守護者框架</ATR_Install_GuardianFrame.label>
+<ATR_Install_GuardianFrame.description>將本機機體框架更換為守護者框架，大大增強了其環境生存能力和威懾力。 </ATR_Install_GuardianFrame.description>
+
+<!--industrial-->
+<ATR_Install_MiningArm.label>安裝採礦臂</ATR_Install_MiningArm.label>
+<ATR_Install_MiningArm.description>安裝一個採礦臂</ATR_Install_MiningArm.description>
+<ATR_Install_AgriArm.label>安裝農用臂</ATR_Install_AgriArm.label>
+<ATR_Install_AgriArm.description>安裝一個農用臂</ATR_Install_AgriArm.description>
+<ATR_Install_MakeshiftReplacementLeg.label>安裝臨時機械腿</ATR_Install_MakeshiftReplacementLeg.label>
+<ATR_Install_MakeshiftReplacementLeg.description>安裝一個臨時機械腿</ATR_Install_MakeshiftReplacementLeg.description>
+<ATR_Install_MakeshiftReplacementArm.label>安裝臨時機械臂</ATR_Install_MakeshiftReplacementArm.label>
+<ATR_Install_MakeshiftReplacementArm.description>安裝一個臨時機械臂</ATR_Install_MakeshiftReplacementArm.description>
+
+<!--spacer-->
+<ATR_Install_AdvancedArm.label>安裝先進臂</ATR_Install_AdvancedArm.label>
+<ATR_Install_AdvancedArm.description>安裝一個先進臂</ATR_Install_AdvancedArm.description>
+<ATR_Install_AdvancedLeg.label>安裝先進腿</ATR_Install_AdvancedLeg.label>
+<ATR_Install_AdvancedLeg.description>更多的玻璃鋼部件和更高效率的組件使該腿比標準部件有著顯著優勢。 </ATR_Install_AdvancedLeg.description>
+<ATR_Install_AdvancedVisualSensor.label>安裝先進視覺傳感器</ATR_Install_AdvancedVisualSensor.label>
+<ATR_Install_AdvancedVisualSensor.description>安裝一個先進視覺傳感器</ATR_Install_AdvancedVisualSensor.description>
+<ATR_Install_AdvancedAudioSensor.label>安裝先進聽力傳感器</ATR_Install_AdvancedAudioSensor.label>
+<ATR_Install_AdvancedAudioSensor.description>安裝一個先進聽力傳感器</ATR_Install_AdvancedAudioSensor.description>
+<ATR_Install_AdvancedHeatsink.label>安裝先進散熱器</ATR_Install_AdvancedHeatsink.label>
+<ATR_Install_AdvancedHeatsink.description>安裝一個先進散熱器</ATR_Install_AdvancedHeatsink.description>
+<ATR_Install_AdvancedCoolantPump.label>安裝先進冷卻泵</ATR_Install_AdvancedCoolantPump.label>
+<ATR_Install_AdvancedCoolantPump.description>安裝一個先進冷卻泵</ATR_Install_AdvancedCoolantPump.description>
+<ATR_Install_AdvancedBattery.label>安裝先進電池組</ATR_Install_AdvancedBattery.label>
+<ATR_Install_AdvancedBattery.description>安裝一個先進電池組</ATR_Install_AdvancedBattery.description>
+<ATR_Install_AdvancedMechaniteStorage.label>安裝先進機械存儲</ATR_Install_AdvancedMechaniteStorage.label>
+<ATR_Install_AdvancedMechaniteStorage.description>安裝一個先進機械存儲</ATR_Install_AdvancedMechaniteStorage.description>
+<ATR_Install_AdvancedReactor.label>安裝先進生物反應器</ATR_Install_AdvancedReactor.label>
+<ATR_Install_AdvancedReactor.description>安裝一個先進生物反應器</ATR_Install_AdvancedReactor.description>
+<ATR_Install_OrganicCharger.label>安裝有機充電器</ATR_Install_OrganicCharger.label>
+<ATR_Install_OrganicCharger.description>安裝一個有機充電器</ATR_Install_OrganicCharger.description>
+
+</LanguageData>

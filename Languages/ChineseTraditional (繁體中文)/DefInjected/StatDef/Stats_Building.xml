@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechanicalSurgerySuccessChanceFactor.label>機械手術成功機會的因素</ATR_MechanicalSurgerySuccessChanceFactor.label>
+<ATR_MechanicalSurgerySuccessChanceFactor.description>在這裡執行機械單元手術成功機率的乘數。機械手術的成功機會還受到許多其他因素的影響，包括機械師的能力。 </ATR_MechanicalSurgerySuccessChanceFactor.description>
+<ATR_MechanicalTendQualityOffset.label>機械體傾向質量偏移</ATR_MechanicalTendQualityOffset.label>
+<ATR_MechanicalTendQualityOffset.description>機械體傾向質量被該值抵消。 </ATR_MechanicalTendQualityOffset.description>
+</LanguageData>

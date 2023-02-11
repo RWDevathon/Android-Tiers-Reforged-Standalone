@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MineralUnitGenerator.label>矿物单元</ATR_MineralUnitGenerator.label>
+<ATR_MineralUnitGenerator.description>一种未初始化的机械绵羊模拟体，设计用于生产钢铁。本机需要有机物消耗，无法进行充电。</ATR_MineralUnitGenerator.description>
+</LanguageData>

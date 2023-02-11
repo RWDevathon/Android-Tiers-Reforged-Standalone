@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoFlickering -->
+	<ATR_FlickEnable>通过天云网络开机</ATR_FlickEnable>
+	<!--EN: PowerOn via SkyCloud-->
+	<ATR_FlickDisable>通过天云网络关机</ATR_FlickDisable>
+	<!--EN: PowerOff via SkyCloud-->
+	<ATR_AutoDoorOpenMoteText>通过天云网络打开</ATR_AutoDoorOpenMoteText>
+	<!--EN: Opening via SkyCloud-->
+	<ATR_AutoDoorCloseMoteText>通过天云网络关闭</ATR_AutoDoorCloseMoteText>
+	<!--EN: Closing via SkyCloud-->
+
+</LanguageData>

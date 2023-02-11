@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_InternalCorePump.label>內置冷卻泵</ATR_InternalCorePump.label>
+<ATR_MechanicalHeatsink.label>機械散熱器</ATR_MechanicalHeatsink.label>
+<ATR_InternalBattery.label>內置電池組</ATR_InternalBattery.label>
+<ATR_MechaniteStorage.label>機械存儲設備</ATR_MechaniteStorage.label>
+<ATR_InternalGenerator.label>內置發電機</ATR_InternalGenerator.label>
+</LanguageData>
+
+

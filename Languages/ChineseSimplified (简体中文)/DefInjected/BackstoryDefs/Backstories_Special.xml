@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_NewbootChildhood.baseDesc>{PAWN_nameDef} 作为一个新生智能在环世界中首次觉醒。</ATR_NewbootChildhood.baseDesc>
+<ATR_NewbootChildhood.title>机械单元幼体</ATR_NewbootChildhood.title>
+<ATR_NewbootChildhood.titleShort>单元</ATR_NewbootChildhood.titleShort>
+
+<ATR_NewbootAdulthood.baseDesc>{PAWN_nameDef} 只知道这个环世界，他在这个社会的医院被“生”下来，{PAWN_nameDef} 的未来充满了不确定性。</ATR_NewbootAdulthood.baseDesc>
+<ATR_NewbootAdulthood.title>机械单元成体</ATR_NewbootAdulthood.title>
+<ATR_NewbootAdulthood.titleShort>单元</ATR_NewbootAdulthood.titleShort>
+
+<ATR_MechanicalArchotechChildhood.baseDesc>目前尚不清楚远古科技体是否真的有童年，或者他们是否存在像时间这样简单和基本的东西，不然，怎么会有人声称对他的过去一无所知呢？</ATR_MechanicalArchotechChildhood.baseDesc>
+<ATR_MechanicalArchotechChildhood.title>远古科技体</ATR_MechanicalArchotechChildhood.title>
+<ATR_MechanicalArchotechChildhood.titleShort>远古科技</ATR_MechanicalArchotechChildhood.titleShort>
+
+<ATR_MechanicalArchotechAdulthood.baseDesc>远古科技体笼罩在神秘之中，他们仍然是最不为人所知的事物之一。即使是最先进的闪耀世界也无法掌握远古科技文明最基本的属性。那么，对于这样一个文明中的任何一个人，我们能说些什么呢？</ATR_MechanicalArchotechAdulthood.baseDesc>
+<ATR_MechanicalArchotechAdulthood.title>远古科技体</ATR_MechanicalArchotechAdulthood.title>
+<ATR_MechanicalArchotechAdulthood.titleShort>远古科技</ATR_MechanicalArchotechAdulthood.titleShort>
+
+</LanguageData>

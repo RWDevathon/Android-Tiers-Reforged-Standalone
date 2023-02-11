@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--Antifreeze機械防凍液-->
+<!--對機械體的反應-->
+<ATR_MechAntifreeze.label>機械防凍液</ATR_MechAntifreeze.label>
+<ATR_MechAntifreeze.description>該合成化合物可用來降低機體對不利溫度的敏感性————高溫和低溫。有機體使用會出現不良反應。 </ATR_MechAntifreeze.description>
+<!--對有機體的反應-->
+<ATR_Toxicated.label>暈厥</ATR_Toxicated.label>
+<ATR_Toxicated.description>血液中的有毒合成化合物（防凍液）會導致嚴重的健康缺陷。 </ATR_Toxicated.description>
+
+<!--FractalPill分形藥-->
+<ATR_FractalPill.label>分形丸</ATR_FractalPill.label>
+<ATR_FractalPill.description>就像所有與遠古科技有關的事物一樣，我們很難理解這到底是什麼。這些狀如藥丸一樣的物體是被分形能量扭曲後的唯一產物，它可以為新宿主注入相同的分形能量。有傳言說，被這些藥丸扭曲之後的人可以聽到遠古世界在耳邊的低語，使他們得以窺視那真正的力量。 \n\n對於有機體而言，這會導致他們的思想和肉體發生嚴重扭曲——————一些人認為這是開悟，另一些人則認為這是噩夢的化身。它可以強力地消除所有疾病並改變宿主的本質。大多數情況下，這最終會導致服用者轉變成一個可怕的怪物。但一些瘋子們卻大喊那些“被選中的人”有可能“飛升到受賜福的破碎層面”。 \n\n對於機械體來說，分形扭曲的效果會溫和許多，它會和機械體進行深度融合，可以提供增強認知到荒謬的溫度耐受性等諸多有益效果。但是它確實也存在偶爾扭曲內部存儲並強制機體重新啟動來對內存碎片進行整理的現象。 </ATR_FractalPill.description>
+
+<!--MechaniteSwarm納米機械膠囊-->
+<ATR_MechSwarm.label>納米機械膠囊</ATR_MechSwarm.label>
+<ATR_MechSwarm.description>在這一顆小小的藥丸中裝著名副其實的機械軍團，這些納米機械會極大增加服用者對身體的控制能力，其藥效會在兩天后消退。 </ATR_MechSwarm.description>
+
+<!--RegenerativePill再生丸-->
+<ATR_RegenerativePill.label>再生丸</ATR_RegenerativePill.label>
+<ATR_RegenerativePill.description>一種罕見的專為機械體設計的藥丸，（大部分）也可由有機體安全服用，再生藥丸會使用一種經過特殊編程的機械裝置在宿主身體中游走，尋找並修復和強化受損部位以加快恢復速度。 \n\n有機體會認為這種體驗很不愉快，但仍然會充分受益於藥丸的治療效果。 </ATR_RegenerativePill.description>
+
+<!--StasisPill鎮靜丸-->
+<ATR_StasisPill.label>鎮靜丸</ATR_StasisPill.label>
+<ATR_StasisPill.description>一種小型藥片，內含高導電性、具有溫和鎮靜作用的合成化學品漿液。當被機械體攝入時，這些化學物質將以降低工作效率為代價大大降低其功耗。 \n\n專為無法獲得可靠電力的長途旅行而設計，這種藥丸會以降低50%的工作速度為代價減少其75%的功耗，藥效可以持續近三天。多被注重效率、不從事勞動的海盜、商人和士兵所使用。 </ATR_StasisPill.description>
+
+</LanguageData>

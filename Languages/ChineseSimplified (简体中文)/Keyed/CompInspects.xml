@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Computer -->
+	<ATR_SkillServersSynthesis>可用技能点数： {0} / {1}</ATR_SkillServersSynthesis>
+	<!--EN: Skill Points available: {0} / {1}-->
+	<ATR_SkillProducedPoints>生成技能点数： {0}</ATR_SkillProducedPoints>
+	<!--EN: Skill Points producing: {0}-->
+	<ATR_SkillSlotsAdded>技能点数容量增长： {0}</ATR_SkillSlotsAdded>
+	<!--EN: Skill Storage added: {0}-->
+	
+	<ATR_SecurityServersSynthesis>可用安全点数： {0} / {1}</ATR_SecurityServersSynthesis>
+	<!--EN: Security Points available: {0} / {1}-->
+	<ATR_SecurityProducedPoints>生成安全点数： {0}</ATR_SecurityProducedPoints>
+	<!--EN: Security Points producing: {0}-->
+	<ATR_SecuritySlotsAdded>安全点数容量增长： {0}</ATR_SecuritySlotsAdded>
+	<!--EN: Security Storage added: {0}-->
+	
+	<ATR_HackingServersSynthesis>可用入侵点数： {0} / {1}</ATR_HackingServersSynthesis>
+	<!--EN: Hacking Points available: {0} / {1}-->
+	<ATR_HackingProducedPoints>生成入侵点数： {0}</ATR_HackingProducedPoints>
+	<!--EN: Hacking Points producing: {0}-->
+	<ATR_HackingSlotsAdded>入侵点数容量增长： {0}</ATR_HackingSlotsAdded>
+	<!--EN: Hacking Storage added: {0}-->
+
+    <!-- Charging -->
+    <ATR_CurrentChargerPowerConsumption>当前功耗： {0} W</ATR_CurrentChargerPowerConsumption>
+	<!--EN: Current power draw: {0} W-->
+	
+	<!-- Heat -->
+	<ATR_CompHotSensitiveCriticalText>超过热阈值：即将损毁！</ATR_CompHotSensitiveCriticalText>
+	<!--EN: Heat threshold surpassed: damage imminent!-->
+	<ATR_CompHotSensitiveDangerText>接近热阈值：建议采取预防措施！</ATR_CompHotSensitiveDangerText>
+	<!--EN: Approaching heat threshold: preventative action advised!-->
+	<ATR_CompHotSensitiveWarningText>高于理想工作温度：建议谨慎。</ATR_CompHotSensitiveWarningText>
+	<!--EN: Ideal heat threshold surpassed: caution advised.-->
+	<ATR_CompHotSensitiveSafeText>处于理想温度：操作一切正常。</ATR_CompHotSensitiveSafeText>
+	<!--EN: Within safe operating threshold: operations normal.-->
+
+	<!-- SkyMind -->
+	<ATR_HackedWithTimer>软件重编译在 {0} 中完成.</ATR_HackedWithTimer>
+	<!--EN: Software recompilation complete in {0}.-->
+	<ATR_CryptoLocked>密码锁定，拒绝访问</ATR_CryptoLocked>
+	<!--EN: Cryptolocked, access denied.-->
+	<ATR_SkyMindDetected>已连接至天云网络</ATR_SkyMindDetected>
+	<!--EN: Connected to SkyMind-->
+	
+	<!-- Core -->
+	<ATR_CloudIntelligenceSummary>已存储的天云核心意识： {0} / {1}</ATR_CloudIntelligenceSummary>
+	<!--EN: SkyMind intelligences: {0} / {1}-->
+	<ATR_AssistingIntelligenceSummary>剩余可用意识容量： {0}</ATR_AssistingIntelligenceSummary>
+	<!--EN: Idle intelligences: {0}-->
+	
+	<!-- Link -->
+	<ATR_SkyMindOperationInProgress>完成操作的剩余时间： {0}</ATR_SkyMindOperationInProgress>
+	<!--EN: Time until operation is complete: {0}-->
+	<ATR_SurrogateConnected>已连接至 {0} 个用户</ATR_SurrogateConnected>
+	<!--EN: Connected to: {0} other pawns-->
+	
+	<!-- Tower -->
+	<ATR_SkyMindNetworkSummary>已连接用户： {0} / {1}</ATR_SkyMindNetworkSummary>
+	<!--EN: Connected users: {0} / {1}-->
+
+</LanguageData>

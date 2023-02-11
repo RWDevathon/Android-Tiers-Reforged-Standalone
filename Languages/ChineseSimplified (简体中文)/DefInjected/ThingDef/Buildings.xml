@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--Computer-->
+<ATR_SkyMindCore.label>天云核心</ATR_SkyMindCore.label>
+<ATR_SkyMindCore.description>人格智能网络的高度集成形成一台能够处理、存储和操纵大量信息的超级计算机————这些信息最终定义了意识。 该设备能够为有恰当插件的有机体和机械个体提供数字永生、意识操作和远程控制。 它的存在就是力量、意志力和财富的证明。\n\n其内部的虚空电池可以支持整个结构，并由内部自动智能进行精确的调整，以防止设备巨大的输出热量导致任何形式的电力中断。\n\n如果设备被损毁或丢失，所有无法被其他核心存储的内容将不可挽回地消失。 永生也伴随着风险。</ATR_SkyMindCore.description>
+<ATR_NetworkedDatabase.label>数据服务器</ATR_NetworkedDatabase.label>
+<ATR_NetworkedDatabase.description>用于数据制表、存储和计算的基本服务器。 它无法产生技能点，但可以大大提高那些希望少花时间做数学，多花时间分析的人的工作速度。 它会产生少量热量，如果热量超过其安全阈值可能会损坏。</ATR_NetworkedDatabase.description>
+<ATR_NetworkedAnalyst.label>分析服务器</ATR_NetworkedAnalyst.label>
+<ATR_NetworkedAnalyst.description>一个基本的服务器，用于分析数据并使用基本的机器学习算法生成对解决所选任务相关的技能点。 其体积小，计算量大，但发热量大，它也依赖数据服务器进行存储数据。 如果热量超过其安全阈值，它可能会损坏。</ATR_NetworkedAnalyst.description>
+<ATR_NetworkedIntelligence.label>智能服务器</ATR_NetworkedIntelligence.label>
+<ATR_NetworkedIntelligence.description>一个高级服务器，使用其内部的自主 AI 智能在选定的任务重点中进行数据分析、制表、存储和技能点生成。 虽然它在理论上优于其他服务器，但代价是空间效率低、大量的电力和热量产生。 它非常容易过热，如果过热可能会损坏。</ATR_NetworkedIntelligence.description>
+<ATR_ArchotechNetwork.label>远古科技终端</ATR_ArchotechNetwork.label>
+<ATR_ArchotechNetwork.description>一个非常强大的远古科技设备，似乎很容易在培养技能以及如何保护和破坏关键数据方面提供同样令人难以置信的见解。 它既不消耗电力也不产生热量，这让任何有幸目睹它的人感到难以理解。 许多人认为，他们是无形的远古科技社会的外延，会对监测宇宙感兴趣，并且他们只向那些获得远古科技祝福的人提供信息。 而其他人则认为它们受到了诅咒，因为它们充当了被分形能量扭曲腐蚀的不幸灵魂的灯塔。\n\n这是一项极其强大的设备，许多人都试图将其据为己有，但大多数尝试过的人都变成了分形怪物。 即使在那种令人悲伤的状态下，他们仍然会继续寻找它。要小心。</ATR_ArchotechNetwork.description>
+
+<!--Furniture-->
+<ATR_MechanicBed.label>机械手术舱</ATR_MechanicBed.label>
+<ATR_MechanicBed.description>用于机械师处理机械单元操作的医院病床模拟设备。单位可以在使用这张床时充电，并且拥有许多内置功能，在进行手术时可给予机械师一定的帮助。</ATR_MechanicBed.description>
+<ATR_MechanicCabinet.label>机械手术柜</ATR_MechanicCabinet.label>
+<ATR_MechanicCabinet.description>可以与机械手术舱一起使用的小柜子。 它包含许多有用的工具，可进一步增强机械手术。</ATR_MechanicCabinet.description>
+
+<!--Power-->
+<ATR_ChargingStation.label>智能人形充电站</ATR_ChargingStation.label>
+<ATR_ChargingStation.description>一个可同时为 8 个相邻的机器人充电的充电站。</ATR_ChargingStation.description>
+<ATR_BedsideCharger.label>床头充电器</ATR_BedsideCharger.label>
+<ATR_BedsideCharger.description>允许居住者在已连接的床上进行充电的床边设备。 它可以在普通床上提供能量，但这样做会消耗很多电力。 它必须直接放在床头附近并面向床头。</ATR_BedsideCharger.description>
+<ATR_ChargingPod.label>充电舱</ATR_ChargingPod.label>
+<ATR_ChargingPod.description>一个简单的充电柜，可以为机械单元充电。 它并不是为舒适而设计的。</ATR_ChargingPod.description>
+<ATR_ChargingPodMech.label>大型充电舱</ATR_ChargingPodMech.label>
+<ATR_ChargingPodMech.description>一个巨大的充电舱，能够容纳任何较小的充电舱都装不下的大部分战争机甲。</ATR_ChargingPodMech.description>
+
+<!--Production-->
+<ATR_MechanicalAssemblyPod.label>智能人形组装台</ATR_MechanicalAssemblyPod.label>
+<ATR_MechanicalAssemblyPod.description>一个组装台，可在给定材料和有合适技能的人类参与的情况下创造机器人和机器人部件。</ATR_MechanicalAssemblyPod.description>
+<ATR_MechPartWorkbench.label>智能组件工作台</ATR_MechPartWorkbench.label>
+<ATR_MechPartWorkbench.description>一个工作台，拥有制作各种机器人替换零件所需的所有设备。</ATR_MechPartWorkbench.description>
+
+<!--RelayTowers-->
+<ATR_SkyMindRelay.label>天云中继塔</ATR_SkyMindRelay.label>
+<ATR_SkyMindRelay.description>该塔充当与天云网络连接设备的交互和操作的中继。这样的信号塔是进行代理或天云网络操作所必需的————它可同时连接三个设备。</ATR_SkyMindRelay.description>
+<ATR_SkyMindNetwork.label>天云网路站</ATR_SkyMindNetwork.label>
+<ATR_SkyMindNetwork.description>该站点的强大网络主机可支持与天云网络所连接的设备之间进行交互和操作。 这样的站点是进行代理或天云网络操作所必需的————可以同时连接十五个设备。</ATR_SkyMindNetwork.description>
+
+<!--Security-->
+<ATR_TrapIED_Microscyther.label>微型镰刀陷阱</ATR_TrapIED_Microscyther.label>
+<ATR_TrapIED_Microscyther.description>一对蜂群弹头，带有一个简单的压力/接触触发器，可以释放其中的单位。 由于它隐藏在周围地形中，因此不能与其他陷阱相邻放置。 动物在非狂暴状态下可以感知到它们。</ATR_TrapIED_Microscyther.description>
+
+</LanguageData>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_AutocannonShell.label>机炮炮弹</ATR_AutocannonShell.label>
+<ATR_RotaryAutocannon.label>旋转自动炮</ATR_RotaryAutocannon.label>
+<ATR_RotaryAutocannon.description>这种巨型的武器甚至比整个人都大，旨在将最大的对手击倒在一连串的直射炮弹之下。 旋转枪管与高速自动装填弹匣相结合，可确保稳定而致命的射击速度。\n\n像这样的武器，只能安装在大型战争装置上，但却由此产生了一个问题：发明这种武器是为了打败机甲，还是发明机甲是为了使用它？</ATR_RotaryAutocannon.description>
+<ATR_RotaryAutocannon.tools.0.label>弹箱</ATR_RotaryAutocannon.tools.0.label>
+<ATR_RotaryAutocannon.tools.1.label>后备弹箱</ATR_RotaryAutocannon.tools.1.label>
+<ATR_RotaryAutocannon.tools.2.label>握把</ATR_RotaryAutocannon.tools.2.label>
+
+<ATR_ShrapnelcannonChunk.label>弹片块</ATR_ShrapnelcannonChunk.label>
+<ATR_RotaryShrapnelcannon.label>密集阵弹片炮</ATR_RotaryShrapnelcannon.label>
+<ATR_RotaryShrapnelcannon.description>这种巨型的武器甚至比整个人都大，可以用密不透风的长凳大小的弹片来粉碎密集的目标。 旋转枪管与超高速自动装填弹匣相结合，可确保稳定而致命的射击速度。\n\n像这样的武器，只能安装在大型战争装置上，但却由此产生了一个问题：发明这种武器是为了打败机甲，还是发明机甲是为了使用它？</ATR_RotaryShrapnelcannon.description>
+<ATR_RotaryShrapnelcannon.tools.0.label>弹箱</ATR_RotaryShrapnelcannon.tools.0.label>
+<ATR_RotaryShrapnelcannon.tools.1.label>后备弹箱</ATR_RotaryShrapnelcannon.tools.1.label>
+<ATR_RotaryShrapnelcannon.tools.2.label>握把</ATR_RotaryShrapnelcannon.tools.2.label>
+
+<ATR_HeadhunterCannon.label>猎头加农炮</ATR_HeadhunterCannon.label>
+<ATR_HeadhunterCannon.description>这种大型的武器的大小与成年人类相当，旨在发射远程直射炮弹，精确度高，可以凭借其内部大量的自动校正组件在关键目标进行报复之前将其消灭。这种武器本质上是一种反坦克装备。\n\n像这样的武器，只能安装在大型战争装置上，但却由此产生了一个问题：发明这种武器是为了打败机甲，还是发明机甲是为了使用它？</ATR_HeadhunterCannon.description>
+<ATR_HeadhunterCannon.tools.0.label>弹箱</ATR_HeadhunterCannon.tools.0.label>
+<ATR_HeadhunterCannon.tools.1.label>后备弹箱</ATR_HeadhunterCannon.tools.1.label>
+<ATR_HeadhunterCannon.tools.2.label>握把</ATR_HeadhunterCannon.tools.2.label>
+
+<ATR_MechPoleaxe.label>巨型战斧</ATR_MechPoleaxe.label>
+<ATR_MechPoleaxe.description>这种大型的武器的大小与成年人类相当，其目的与它的几个小老弟完全相同：接近敌人并将他们撕成碎片。当然，这个工具比它的祖先更擅长于此————它由优质的闪耀世界级材料制成，并经过精心打磨……而且足够大，甚至可以在不进行接触的情况下而割伤贴近它的敌人。 \n\n像这样的武器，只能安装在大型战争装置上，但却由此产生了一个问题：发明这种武器是为了打败机甲，还是发明机甲是为了使用它？</ATR_MechPoleaxe.description>
+<ATR_MechPoleaxe.tools.0.label>长钉</ATR_MechPoleaxe.tools.0.label>
+<ATR_MechPoleaxe.tools.1.label>斧头</ATR_MechPoleaxe.tools.1.label>
+<ATR_MechPoleaxe.tools.2.label>重锤</ATR_MechPoleaxe.tools.2.label>
+
+</LanguageData>

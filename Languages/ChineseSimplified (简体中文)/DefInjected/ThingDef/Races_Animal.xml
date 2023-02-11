@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_DroneChemUnit.label>化学处理单元</ATR_DroneChemUnit.label>
+<ATR_DroneChemUnit.description>一种高度特化的复杂自主无人机，能够识别、寻找和吸收生物物质，以加工成中性胺或化学燃料的合成化学前体。 该过程的操作顺序非常适合将机器塑造成一只小鸡的形状，产品输出为一个自我储存的蛋状胶囊。 翅膀纯粹是装饰性的。</ATR_DroneChemUnit.description>
+<ATR_DroneChemUnit.tools.label>头部</ATR_DroneChemUnit.tools.label>
+
+<ATR_FractalAbomination.label>分形憎恶</ATR_FractalAbomination.label>
+<ATR_FractalAbomination.description>完全成熟的分形扭曲的会蠕动和可怕的产物，分形憎恶是无情的杀手和噩梦般的生物。 有能力也愿意追逐任何穿过它路径的生物，它们回荡的诅咒尖叫甚至是闪耀世界恐怖媒体的常见素材。\n\n那些无所畏惧的人或者对于远古科技的研究人员来说，这些生物非常有趣。 它们可以产生所谓的分形药丸，这些令人憎恶的东西会被被吸引到远古科技的设备周围——尤其是特别强大的远古造物。 出于这个原因，一些没有道德的研究远古科技的研究员会跟踪这些可憎之物，以便跟随他们寻找远古科技遗址，他们会在抵达时将其杀死。</ATR_FractalAbomination.description>
+<ATR_FractalAbomination.tools.1.label>右拳</ATR_FractalAbomination.tools.1.label>
+<ATR_FractalAbomination.tools.2.label>左拳</ATR_FractalAbomination.tools.2.label>
+<ATR_FractalAbomination.tools.3.label>头部</ATR_FractalAbomination.tools.3.label>
+<ATR_FractalAbomination.tools.4.label>分形长矛</ATR_FractalAbomination.tools.4.label>
+
+<ATR_MicroScyther.label>微型镰刀机器人</ATR_MicroScyther.label>
+<ATR_MicroScyther.description>一个带有两个侧面安装的塑料刀片的小型飞行无人机。 单独行动时并不特别危险，也很少有人会注意到单个无人机。 但是蜂群可以迅速将目标撕成碎片。\n\n这些无人机具有准系统的 IFF 传感器，并且会攻击任何非微型机器人。</ATR_MicroScyther.description>
+<ATR_MicroScyther.tools.0.label>头部</ATR_MicroScyther.tools.0.label>
+<ATR_MicroScyther.tools.1.label>左翼</ATR_MicroScyther.tools.1.label>
+<ATR_MicroScyther.tools.2.label>右翼</ATR_MicroScyther.tools.2.label>
+
+<ATR_DroneMineralUnit.label>矿物单位</ATR_DroneMineralUnit.label>
+<ATR_DroneMineralUnit.description>这些无人机在有生命承载世界的机器人社会中无处不在，这要归功于它们能够从有机材料中提取矿物质以精炼和锻造钢铁。 他们对有机物的贪婪消耗导致许多世界在全球范围内被禁止————许多世界被漫游的机器人“放牧”后变得几乎没有生命，之后他们会将这些生物的“畜群”从一个星球带到另一个星球。</ATR_DroneMineralUnit.description>
+<ATR_DroneMineralUnit.tools.label>头部</ATR_DroneMineralUnit.tools.label>
+
+<ATR_DroneNutritionUnit.label>营养单元</ATR_DroneNutritionUnit.label>
+<ATR_DroneNutritionUnit.description>一个笨重的无人机单元，专门优化从有机物质中产生营养以供人类食用。它与其他机械无人机不同，鉴于其用途，该装置在机器人社会中非常罕见。 凭借几乎令人不安的超长保质期和极高的营养成分，这样的单位已经导致许多世界的人口激增————怪异的是，由此却引发过许多战争。</ATR_DroneNutritionUnit.description>
+<ATR_DroneNutritionUnit.tools.label>头部</ATR_DroneNutritionUnit.tools.label>
+
+<ATR_DroneTORT.label>玄武单元</ATR_DroneTORT.label>
+<ATR_DroneTORT.description>基于古老的履带式多地形车辆制造成功的乌龟生物物种，它是一种重型装甲的镂空机械无人机，被编程为类似于古代叉车来搬运货物或用作远程运输。\n\n该装置的尺寸和空心特性使其能够运送人员和标准货物，并多次用于搜救和走私行动。</ATR_DroneTORT.description>
+<ATR_DroneTORT.tools.label>头部</ATR_DroneTORT.tools.label>
+
+<ATR_DroneWatchdog.label>犬类单元</ATR_DroneWatchdog.label>
+<ATR_DroneWatchdog.description>这些无人机单元在许多方面都是独一无二的————可编程用于各种任务，包括军事和民用性质，虽全副武装但又非常亲切，具有充电能力和命令响应能力——因此可以在大量不同的书籍当中见到它们的身影。 许多单位扮演了同伴、可怕的侦察员、移动监视员等角色，甚至可以充当防暴警察。\n\n他们的杀伤力和暴力能力无疑为他们赢得了声誉——他们似乎很想保持这种声誉。</ATR_DroneWatchdog.description>
+<ATR_DroneWatchdog.tools.0.label>左爪</ATR_DroneWatchdog.tools.0.label>
+<ATR_DroneWatchdog.tools.1.label>右爪</ATR_DroneWatchdog.tools.1.label>
+<ATR_DroneWatchdog.tools.3.abel>头部</ATR_DroneWatchdog.tools.3.abel>
+
+</LanguageData>

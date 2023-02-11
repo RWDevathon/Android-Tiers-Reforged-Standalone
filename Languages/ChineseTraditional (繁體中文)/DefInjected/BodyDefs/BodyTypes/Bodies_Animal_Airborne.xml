@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechAirborne.label>空中無人機</ATR_MechAirborne.label>
+<ATR_MechAirborne.corePart.parts.2.customLabel>左散熱器</ATR_MechAirborne.corePart.parts.2.customLabel>
+<ATR_MechAirborne.corePart.parts.3.customLabel>右散熱器</ATR_MechAirborne.corePart.parts.3.customLabel>
+<ATR_MechAirborne.corePart.parts.4.parts.ATR_MechanicalHead.parts.1.customLabel>左視覺傳感器</ATR_MechAirborne.corePart.parts.4.parts.ATR_MechanicalHead.parts.1.customLabel>
+<ATR_MechAirborne.corePart.parts.4.parts.ATR_MechanicalHead.parts.2.customLabel>右視覺傳感器</ATR_MechAirborne.corePart.parts.4.parts.ATR_MechanicalHead.parts.2.customLabel>
+<ATR_MechAirborne.corePart.parts.5.customLabel>左翼</ATR_MechAirborne.corePart.parts.5.customLabel>
+<ATR_MechAirborne.corePart.parts.6.customLabel>右翼</ATR_MechAirborne.corePart.parts.6.customLabel>
+</LanguageData>

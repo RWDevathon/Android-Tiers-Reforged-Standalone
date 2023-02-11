@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<ATR_MechanicalInsight.label>机械精通</ATR_MechanicalInsight.label>
+<ATR_MechanicalInsight.description>开始研究创造机械生物的可能性——以及相关的机会</ATR_MechanicalInsight.description>
+
+<ATR_UtilityBiomimetics.label>实用仿生学</ATR_UtilityBiomimetics.label>
+<ATR_UtilityBiomimetics.description>仿生学是创造生物的机械版本的理论领域。 其中最早成功的机械原型的总是在重复生物体已实现的功能。 我们对该领域进行研究可以在机械体中仿照人类的选择性育种方法进行培育特定对象。</ATR_UtilityBiomimetics.description>
+
+<ATR_MechanicalStandardization.label>标准化机械</ATR_MechanicalStandardization.label>
+<ATR_MechanicalStandardization.description>我们必须要建立生产与维护的标准来同时兼顾制造质量和实现规模制造，以此来降低成本。由于智能人形具有极其大量的款式与设计，对每一个智能人形进行单个维护会产生高昂的成本，所以如何实现对殖民者部件的标准化对于机械领域的进步至关重要。</ATR_MechanicalStandardization.description>
+
+<ATR_MassCharging.label>充电站</ATR_MassCharging.label>
+<ATR_MassCharging.description>为了最大限度地提高充电和空间效率，我们必须要开发一种能同时为多个机械单元充电的有效方法。一次可以为 8 个机械单元充电的小型充电站可能被证明是一种必要拓展。</ATR_MassCharging.description>
+
+<ATR_MechanicalFrameworks.label>机体框架升级</ATR_MechanicalFrameworks.label>
+<ATR_MechanicalFrameworks.description>机械单元的框架是他们最直观的特征，因为它将整个机体的所有部件同时固定在该框架中。框架的替换可能在各种特定任务中带来显著的增益————但需要其装载对应的一个特定框架。</ATR_MechanicalFrameworks.description>
+
+<ATR_T1Androids.label>T1 人形制造</ATR_T1Androids.label>
+<ATR_T1Androids.description>一级机器人的特征是与人相似，但它们仍然不过是个机器。 它们的相似性和能力令人印象深刻，它们也代表了都市世界创造力和中世纪世界梦想的更高层次。 这是我们发展中的美好成就，也是我们未来前景中的曙光。</ATR_T1Androids.description>
+
+<ATR_MechanicalStimulators.label>机械兴奋剂</ATR_MechanicalStimulators.label>
+<ATR_MechanicalStimulators.description>虽然机械单元在大多是情况下并不关心时间的流逝，因此也不关心其使用效率，但不可否认的是，有时特定时刻的效率提升显得至关重要。 可消耗的短期兴奋剂在这些时刻可能有帮助。</ATR_MechanicalStimulators.description>
+
+<ATR_AdvancedMechParts.label>先进机械部件</ATR_AdvancedMechParts.label>
+<ATR_AdvancedMechParts.description>随着优秀的制造水平和强大的标准化方案的提出，机械部件质量的大幅提升如今是可以实现的。 这些部件的功能将明显优于工厂车间的标准同类产品，同时也能将成本保持在合理的范畴内。</ATR_AdvancedMechParts.description>
+
+<ATR_T2Androids.label>T2 人形制造</ATR_T2Androids.label>
+<ATR_T2Androids.description>二级机器人以完全智能所需的最低规格为标志。 它们是最常见的智能人形产品，它们也被广泛视为区别于人类的新物种。 有了这项技术，殖民地将会迈入机械自治的门槛——我们准备好迎接接下来的事情了吗？</ATR_T2Androids.description>
+
+<ATR_StandardizedCommunications.label>标准化通信协议</ATR_StandardizedCommunications.label>
+<ATR_StandardizedCommunications.description>如果能够实现物理标准化，那么同样也应该有一种方法来实现沟通、思想和哲学的标准化。 这样的一个连接意识的虚拟云环境的出现有望在许多领域取得巨大进步。一个可以支持机械体进行内网通信的简单中继塔将会是一个良好的开端。</ATR_StandardizedCommunications.description>
+
+<ATR_RemoteControlProtocols.label>远程控制协议</ATR_RemoteControlProtocols.label>
+<ATR_RemoteControlProtocols.description>通过对跨主机的标准化通信方法经验的总结，我们理论上可以开发一个架构来远程控制所谓的“代理人形”。 由于有机体普遍缺乏效率和有机应用，所以技术上并不支持有机体使用该服务，但这对于机械单元来说却是革命性的进步。</ATR_RemoteControlProtocols.description>
+
+<ATR_MechanicalOptimization.label>机械体优化</ATR_MechanicalOptimization.label>
+<ATR_MechanicalOptimization.description>单靠标准化并不能解决所有问题——————更深层次的进步将需要一场效率和精度的革命，其中包括了制定新的优化、准确性和能力标准。 一旦实现，人类更疯狂的想法将会触手可及。</ATR_MechanicalOptimization.description>
+
+<ATR_T3Androids.label>T3 人形制造</ATR_T3Androids.label>
+<ATR_T3Androids.description>三级机器人以其体型和绝对能力为标志。 因其体内必须要紧密容纳大量必要的操作单元，其平均 2.1-2.7 米的身高使得人类相形见绌，它们在力量和敏锐方面的高度也令人生畏。这些单位显然是人类在设计领域的一项巨大进步。</ATR_T3Androids.description>
+
+<ATR_SurrogateOptimization.label>代理人协议优化</ATR_SurrogateOptimization.label>
+<ATR_SurrogateOptimization.description>随着制造能力和协议优化方面的巨大进步，我们很有可能开发出一种将有机体转变成受控代理人的方法。 这是一种革命性的能力，但充满了道德和伦理问题。 这是一条不应该越过的线吗？</ATR_SurrogateOptimization.description>
+
+<ATR_CommunicationOptimization.label>通信协议优化</ATR_CommunicationOptimization.label>
+<ATR_CommunicationOptimization.description>为了扩展通信网络的功率，并为集中式主机系统做准备，我们必须要对通信中继器及其控制系统的优化方案进行进一步开发。</ATR_CommunicationOptimization.description>
+
+<ATR_MilitaryBiomimetics.label>军用仿生学</ATR_MilitaryBiomimetics.label>
+<ATR_MilitaryBiomimetics.description>这项研究以实用仿生学为基础，进一步深入研究其军事应用。 军事化比复制单纯的家养农场动物要复杂得多，完成它之后可以实现对微型镰刀无人机、机械猎犬或更多的实验性改造体的制造。</ATR_MilitaryBiomimetics.description>
+
+<ATR_ServerOptimization.label>服务器优化</ATR_ServerOptimization.label>
+<ATR_ServerOptimization.description>为了压缩空间和提高实用性而优化服务器是昂贵的，但有望为殖民地的技能升级带来革命性的扩展。综合评估其存储和反应水平，这些服务器完全可以淘汰旧型号。</ATR_ServerOptimization.description>
+
+<ATR_T4Androids.label>T4 人形制造</ATR_T4Androids.label>
+<ATR_T4Androids.description>四级机器人的标志是拥有远古人格核心。这样的东西大大减少了其体内部件对空间的需求，从而减少了其尺寸和重量。 虽然它的能力本身并没有超过三级，但它的人格核心确实带来了好处。</ATR_T4Androids.description>
+
+<ATR_CoreAssistants.label>核心辅助</ATR_CoreAssistants.label>
+<ATR_CoreAssistants.description>随着精密的制造水平和强大的标准化方案的获得，机械部件质量的升级现在指日可待。 所有智能人形的头部都有备用空间，大多填充了保护性材料————先进的专用芯片可能会占用这些空间的一部分。(目前一个机体只有一个插槽）</ATR_CoreAssistants.description>
+
+<ATR_RepairOptimization.label>修复优化</ATR_RepairOptimization.label>
+<ATR_RepairOptimization.description>修复类兴奋剂的进一步优化应着重去提高机械装置的恢复速度和操作成功机会。 这些兴奋剂的质量可与闪耀世界的兴奋剂相媲美————即使对他们而言，该领域的技术也只是点到为止。</ATR_RepairOptimization.description>
+
+<ATR_SkyMindCore.label>天云核心</ATR_SkyMindCore.label>
+<ATR_SkyMindCore.description>机械和意识研究的巅峰之作，一个能够永久存储、保护、复制并对意识进行充分利用的理论性超级计算机核心已经触手可及。 它极其昂贵，但它最终通往的是不朽的道路。 以后如果要哄骗这么多 AI 单元扮演保姆和主人估计会很困难。找到保持高级设施安全和与外界环境隔离所需的虚空电池的难度也不容忽视。</ATR_SkyMindCore.description>
+
+<!--远古科技-->
+<ATR_ArchotechInsight.label>远古科技解读</ATR_ArchotechInsight.label>
+<ATR_ArchotechInsight.description>这只是对真正的远古科技无限力量的一瞥，但它却有望改变殖民地能力的基本规则。 只有远古科技人形（T5）才能理解如此复杂的技术，而且即便如此，也需要保持高度专注、大量简化技术细节和沉稳的耐心。</ATR_ArchotechInsight.description>
+
+</LanguageData>

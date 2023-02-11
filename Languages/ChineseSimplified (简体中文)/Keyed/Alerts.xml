@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATR_AlertServerHeatCritical>设备严重过热</ATR_AlertServerHeatCritical>
+	<!--EN: Computer Heat Critical-->
+	<ATR_AlertServerHeatCriticalDesc>至少有一台对温度敏感的设备面临过热故障的风险！需要尽快降温来保持网络正常运行！</ATR_AlertServerHeatCriticalDesc>
+	<!--EN: At least one computer is in danger of combusting due to surpassing its maximum safety heat threshold! Action is required to retain network integrity!-->
+	
+	<ATR_AlertFullSkillServers>技能服务器点数已满</ATR_AlertFullSkillServers>
+	<!--EN: Full Skill Servers-->
+    <ATR_AlertFullSkillServersDesc>技能点数容量不足，可以考虑使用它们或扩大容量。</ATR_AlertFullSkillServersDesc>
+    <!--EN: There is no more capacity for skill points. Consider using them, or expanding capacity.-->
+	
+	<ATR_AlertFullHackingServers>入侵服务器点数已满</ATR_AlertFullHackingServers>
+	<!--EN: Full Hacking Servers-->
+    <ATR_AlertFullHackingServersDesc>入侵点数可用容量不足，但不会有惩罚，可以考虑使用它们或扩大容量。</ATR_AlertFullHackingServersDesc>
+	<!--EN: There is no more capacity for hacking points and there is no current time penalty. Consider using them, or expanding capacity.-->
+    
+    <ATR_AlertLowSecurity>网络有风险！</ATR_AlertLowSecurity>
+	<!--EN: Network At Risk-->
+	<ATR_AlertLowSecurityDesc> 可用的安全点数几乎无法抵御任何黑客攻击！目前需要额外的服务器安全点数，此时建议谨慎使用网络</ATR_AlertLowSecurityDesc>
+    <!--EN: The number of available security points is exceedingly unlikely to successfully defend against attempted hacks! Caution is advised to avoid suffering damage.-->
+
+	<ATR_NeedMechanic> 需要机械师</ATR_NeedMechanic>
+	<!--EN: Need mechanic-->
+	<ATR_NeedMechanicDesc>这些机械单位需要维修，但您并没有健康的殖民者被指定为机械师。\n\n{0}\n请指派一个健康的殖民者为机械师工作类型。虽然机械体大多数损伤会随着时间消退，但机械师可以显著提高其恢复速度并减少产生后遗症的可能性。</ATR_NeedMechanicDesc>
+    <!--EN: These mechanical units need repairs, but you have no healthy colonists assigned as mechanics.\n\n{0}\nAssign a healthy colonist to the Mechanic work type. While most damage will naturally be mitigated over time, mechanics will significantly increase recovery speed and reduce the chance of side-effects.-->
+  
+</LanguageData>

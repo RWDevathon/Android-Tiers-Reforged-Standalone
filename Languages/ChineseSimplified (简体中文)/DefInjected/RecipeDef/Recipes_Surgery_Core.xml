@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_ShutdownMechanical.label>临时关闭核心</ATR_ShutdownMechanical.label>
+<ATR_ShutdownMechanical.description>通过断开核心硬件来关闭机械单元。 这不会永久破坏设备的内存。</ATR_ShutdownMechanical.description>
+<ATR_RemoveBodyPartAndroid.label>移除部件</ATR_RemoveBodyPartAndroid.label>
+<ATR_RemoveBodyPartAndroid.description>移除身体部件</ATR_RemoveBodyPartAndroid.description>
+<ATR_RestoreBodyPartAndroid.label>修复部件</ATR_RestoreBodyPartAndroid.label>
+<ATR_RestoreBodyPartAndroid.description>修复身体的特定部件</ATR_RestoreBodyPartAndroid.description>
+<ATR_RepaintMechanical.label>喷漆</ATR_RepaintMechanical.label>
+<ATR_RepaintMechanical.description>修改机械单元的颜色外观</ATR_RepaintMechanical.description>
+<ATR_DoEmergencyMaintenance.label>进行临时维护</ATR_DoEmergencyMaintenance.label>
+<ATR_DoEmergencyMaintenance.description>使用零件修复严重的维护缺陷。 由于该维护主要是对自身的操作，因此这只能使其达到 40%。</ATR_DoEmergencyMaintenance.description>
+<ATR_ReprogramDrone.label>重新编程无人机</ATR_ReprogramDrone.label>
+<ATR_ReprogramDrone.description>一项简单而又微妙的操作，重新编程无人机以适应殖民地是增强能力的绝佳方法。 然而，该无人机以前的所有者可能已经安装了阻止此类操作的预防措施，因此如果失败，死亡风险很高。</ATR_ReprogramDrone.description>
+
+</LanguageData>

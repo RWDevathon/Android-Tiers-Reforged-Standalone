@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- General -->
+	<ATR_SkyMindConnectionFailed>无法连接至天云网络，请检查网络容量与可用性。</ATR_SkyMindConnectionFailed>
+	<!--EN: Could not establish SkyMind connection. Check network capacity and availability.-->
+	<ATR_SkyMindConnectionFailedNoNetwork>无法连接至天云网络，当前没有可用网络。</ATR_SkyMindConnectionFailedNoNetwork>
+	<!--EN: Could not establish SkyMind connection. There is no network available.-->
+	
+	<ATR_GridlockerCleared>网络加密已成功解密并取消</ATR_GridlockerCleared> 
+	<!--EN: The Grid-locker has successfully been decrypted and disabled.-->
+
+	<!-- Core -->
+	<ATR_RemoveCloudPawnSuccess> {0} 的生物意识已被删除。</ATR_RemoveCloudPawnSuccess>
+	<!--EN: The neural network of {0} has been removed.-->
+	
+	<ATR_ReplicateCloudPawnFailed>无法启动复制，当前可分配的天云网络空间不足。</ATR_ReplicateCloudPawnFailed>
+	<!--EN: Could not initiate replication. Insufficient SkyMind space available for allocation.-->
+
+    <!-- Player hacking -->
+    <ATR_HackOperationFailed>该行动未能破坏对方派系的安全系统，预计不会有任何结果。</ATR_HackOperationFailed>
+	<!--EN: The operation failed to breach the target faction's security system. No reprecussions are anticipated.-->
+	<ATR_DisruptorHackSuccess>干扰成功，敌方单位已被削弱。</ATR_DisruptorHackSuccess>
+	<!--EN: Disruption successful. Hostile units have been impaired.-->
+
+    <ATR_NoArrival>在该派系重置他们的导航系统之前，没有任何东西被发送到伪造的坐标，他们这次很走运。</ATR_NoArrival>
+	<!--EN: Nothing was sent to the mixed up coordinates before the faction reset their guidance system. They got lucky, this time.-->
+
+    <!-- Android Interfaces -->
+    <ATR_NewbootAndroidCreated>已创建一个智能人形，可以通过手术来安装一个接口使其联网。</ATR_NewbootAndroidCreated>
+	<!--EN: Android created. Install an interface via surgery to bring the unit online.-->
+    <ATR_InterfaceRemoved>移除了一个智能人形的接口。 所有人格和控制数据已被销毁。 安装一个新的接口以使其联网。</ATR_InterfaceRemoved>
+	<!--EN: An android's interface was removed. All personality and control data has been destroyed. Install a new interface to bring it online.-->
+
+	<!-- Link -->
+	<ATR_SurrogateControlled>{0} 已连接到新的代理人形</ATR_SurrogateControlled>
+	<!--EN: {0} connected to a new surrogate-->
+	<ATR_OperationInitiated> {0} 请求建立与天云网络进行连接，在操作完成之前请不要禁用网络连接。</ATR_OperationInitiated>
+	<!--EN: SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.-->
+	<ATR_OperationCompleted>天云网络操作完成</ATR_OperationCompleted>
+	<!--EN: SkyMind operation complete-->
+	<ATR_OperationCompletedDesc>天云网络已成功执行了 {0} 请求的操作。</ATR_OperationCompletedDesc>
+	<!--EN: The SkyMind network has successfully carried out the operation as requested by {0}.-->
+    <ATR_OperationFailure>天云网络操作失败！</ATR_OperationFailure>
+	<!--EN: SkyMind operation failed!-->
+    <ATR_OperationFailureDesc>由于天云网络链接在意识操作过程中出现错误， {0} 的内存遭到了灾难性的损伤。操作失败，内存严重损坏。</ATR_OperationFailureDesc>
+	<!--EN: {0} suffered a catastrophic memory corruption due to the collapse of the SkyMind link during a mind operation. The operation failed and severe damage to memory has occurred.-->
+
+	<MessageMedicalOperationFailureMinorAndroid>{0} 在手术中犯了一个小错误，终止了对 {1} 的手术。</MessageMedicalOperationFailureMinorAndroid>
+	<!--EN: {0} committed a minor error while operating and aborted the procedure on {1}.-->
+	<MessageMedicalOperationFailureCatastrophicAndroid>{0} 在尝试对 {1} 手术时产生了严重的错误。</MessageMedicalOperationFailureCatastrophicAndroid>
+	<!--EN: {0} has failed catastrophically while attempting an operation on {1}.-->
+	<MessageMedicalOperationFailureRidiculousAndroid>{0} 对 {1} 进行手术时发生了一个灾难性的错误</MessageMedicalOperationFailureRidiculousAndroid>
+	<!--EN: {0} has committed a major error while attempting an operation on {1}.-->
+	<MessageMedicalOperationFailureFatalAndroid>{0} 在对 {1} 手术期间发生了一个致命的错误，导致了意外的级联损毁。该结果对其中央处理器造成了不可逆的损毁，使其记忆和意识完全丧失。</MessageMedicalOperationFailureFatalAndroid>
+	<!--EN: {0} has committed a fatal error while operating on {1} that caused unintentional cascading damage. The procedure caused irreversible damage to the central processor, resulting in total loss of memory and consciousness.-->
+	
+</LanguageData>

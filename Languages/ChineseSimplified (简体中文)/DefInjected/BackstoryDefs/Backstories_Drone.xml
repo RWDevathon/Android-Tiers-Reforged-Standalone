@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_MechChildhoodAncientDroneSoldier.title>M系列无人机</ATR_MechChildhoodAncientDroneSoldier.title>
+<ATR_MechChildhoodAncientDroneSoldier.titleShort>机械</ATR_MechChildhoodAncientDroneSoldier.titleShort>
+<ATR_MechChildhoodAncientDroneSoldier.baseDesc>是在很久之前用远古科技组装而成，我们对 {PAWN_possessive} 的过去也一无所知。 {PAWN_pronoun} 当然是只为战争而建造，但是远古科技能用 {PAWN_objective} 来干什么?</ATR_MechChildhoodAncientDroneSoldier.baseDesc>
+
+<ATR_MechChildhoodDrone.title>Ⅰ型无人机</ATR_MechChildhoodDrone.title>
+<ATR_MechChildhoodDrone.titleShort>无人机</ATR_MechChildhoodDrone.titleShort>
+<ATR_MechChildhoodDrone.baseDesc>无人机的起源一样很无趣，因为经常会被遗忘。许多创作者也不会费心去标记它们的觉醒时刻，所以也没有无人机知道自己的历史。</ATR_MechChildhoodDrone.baseDesc>
+
+<ATR_MechChildhoodFreshBlank.title>全新白板</ATR_MechChildhoodFreshBlank.title>
+<ATR_MechChildhoodFreshBlank.titleShort>单元</ATR_MechChildhoodFreshBlank.titleShort>
+<ATR_MechChildhoodFreshBlank.baseDesc>{PAWN_nameDef} 被建造为一个完全空白的框架，为它的下一个所有者，也就是第一个，准备好形成它的第一个记忆。</ATR_MechChildhoodFreshBlank.baseDesc>
+
+<ATR_MechAdulthoodAncientDroneSoldier.title>战争无人机</ATR_MechAdulthoodAncientDroneSoldier.title>
+<ATR_MechAdulthoodAncientDroneSoldier.titleShort>机械</ATR_MechAdulthoodAncientDroneSoldier.titleShort>
+<ATR_MechAdulthoodAncientDroneSoldier.baseDesc>{PAWN_nameDef} 是一种只能用于作战的无人机。虫族、机械体、反叛者、帝国，这些都不重要。无人机不在乎它们与谁发生战斗，也不记得它们曾杀死过谁。</ATR_MechAdulthoodAncientDroneSoldier.baseDesc>
+
+<ATR_MechAdulthoodDrone.title>Ⅰ型无人机</ATR_MechAdulthoodDrone.title>
+<ATR_MechAdulthoodDrone.titleShort>无人机</ATR_MechAdulthoodDrone.titleShort>
+<ATR_MechAdulthoodDrone.baseDesc>{PAWN_nameDef} 是一个基于 {PAWN_possessive} 编程而继续服务的无人机。它的程序已经不知道更改过多少次了，但是它似乎并不介意。</ATR_MechAdulthoodDrone.baseDesc>
+
+<ATR_MechAdulthoodBlank.title>成年体白板</ATR_MechAdulthoodBlank.title>
+<ATR_MechAdulthoodBlank.titleShort>单元</ATR_MechAdulthoodBlank.titleShort>
+<ATR_MechAdulthoodBlank.baseDesc>这个单位既没有智力也没有记忆，它完全没有个性和实用性。</ATR_MechAdulthoodBlank.baseDesc>
+
+
+
+</LanguageData>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_SplitConsciousness.label>意识分裂</ATR_SplitConsciousness.label>
+<ATR_SplitConsciousness.labelNoun>意识分裂</ATR_SplitConsciousness.labelNoun>
+<ATR_SplitConsciousness.description>控制这个身体的意识是分裂的，因为该意识也控制其他身体。 这有效地降低了对这个身体进行精细控制的能力。 更多的控制对象意味着更严厉的惩罚</ATR_SplitConsciousness.description>
+   <ATR_SplitConsciousness.stages.0.label>安全水平</ATR_SplitConsciousness.stages.0.label>
+   <ATR_SplitConsciousness.stages.1.label>略微分心</ATR_SplitConsciousness.stages.1.label>
+   <ATR_SplitConsciousness.stages.2.label>可管理水平</ATR_SplitConsciousness.stages.2.label>
+   <ATR_SplitConsciousness.stages.3.label>有些困难</ATR_SplitConsciousness.stages.3.label>
+   <ATR_SplitConsciousness.stages.4.label>紧张</ATR_SplitConsciousness.stages.4.label>
+   <ATR_SplitConsciousness.stages.5.label>焦头烂额</ATR_SplitConsciousness.stages.5.label>
+<ATR_MindOperation.label>正在进行天云网络操作</ATR_MindOperation.label>
+<ATR_MindOperation.labelNoun>正在进行天云网络操作</ATR_MindOperation.labelNoun>
+<ATR_MindOperation.description>该单元目前正在进行天云网络操作。为了保持连接和完整性，意识当前失去了这个身体的控制权</ATR_MindOperation.description>
+<ATR_NoController.label>无思维连接</ATR_NoController.label>
+<ATR_NoController.labelNoun>无思维连接</ATR_NoController.labelNoun>
+<ATR_NoController.description>该代理人没有控制者，因此无法自主行动</ATR_NoController.description>
+
+</LanguageData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoFlickering -->
+	<ATR_FlickEnable>Von SkyCloud aktiviert!</ATR_FlickEnable>
+	<ATR_FlickDisable>Von SkyCloud deaktiviert!</ATR_FlickDisable>
+	<ATR_AutoDoorOpenMoteText>Von SkyCloud geöffnet!</ATR_AutoDoorOpenMoteText>
+	<ATR_AutoDoorCloseMoteText>Von SkyCloud geschlossen!</ATR_AutoDoorCloseMoteText>
+
+</LanguageData>

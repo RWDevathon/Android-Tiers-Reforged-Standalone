@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<ATR_Tier1Android.label>T1 智能人形</ATR_Tier1Android.label>
+<ATR_Tier1Android.description>一级机器人只是类人机器，旨在模仿人类的一般外观和最低限度的能力。 由于缺乏真正的智慧，许多人将它们视为非常聪明且反应灵敏的动物。 这常常导致它们被当作无用之人或被贬低为宠物，而尽职尽责的机器人对此并不在意。 他们的存在是为了服务，他们为此毫无怨言。</ATR_Tier1Android.description>
+<ATR_Tier1Android.tools.0.label>右拳</ATR_Tier1Android.tools.0.label>
+<ATR_Tier1Android.tools.1.label>左拳</ATR_Tier1Android.tools.1.label>
+<ATR_Tier1Android.tools.2.label>头部</ATR_Tier1Android.tools.2.label>
+
+<ATR_Tier2Android.label>T2 智能人形</ATR_Tier2Android.label>
+<ATR_Tier2Android.description>最常见的机器人等级，二级机器人被认为是完全自主智能所需的最低规格。 当穿着整齐或从远处看时，他们很容易被误认为是更矮、更瘦的人。 事实上，二级智能往往最像人类，也最有可能寻求融入人类社会。</ATR_Tier2Android.description>
+<ATR_Tier2Android.tools.0.label>右拳</ATR_Tier2Android.tools.0.label>
+<ATR_Tier2Android.tools.1.label>左拳</ATR_Tier2Android.tools.1.label>
+<ATR_Tier2Android.tools.2.label>头部</ATR_Tier2Android.tools.2.label>
+
+<ATR_Tier3Android.label>T3 智能人形</ATR_Tier3Android.label>
+<ATR_Tier3Android.description>被归类为第三层的机器人通常以其高大的身材（站立的高度从2.1~2.7米不等）和令人印象深刻的能力而为人们所熟知。 它们非常耐用、模块化且功能强大。 制造它们需要大量的稀有资源，通常只能在闪耀世界上进行批量生产。</ATR_Tier3Android.description>
+<ATR_Tier3Android.tools.0.label>右拳</ATR_Tier3Android.tools.0.label>
+<ATR_Tier3Android.tools.1.label>左拳</ATR_Tier3Android.tools.1.label>
+<ATR_Tier3Android.tools.2.label>头部</ATR_Tier3Android.tools.2.label>
+
+<ATR_Tier4Android.label>T4 智能人形</ATR_Tier4Android.label>
+<ATR_Tier4Android.description>作为已知机器人理论和实践的巅峰之作，四级机器人的标志是拥有一个特殊的人格核心。 虽然这些核心是远古科技的技术，但其机体和内部部件都是闪耀世界的科技（因为没有已知的方法来创建远古科技的完整机体）。\n\n四级机器人比其他机器人高出一截，他们也知道这一点————这使得自负和对低级机器人产生蔑视在他们中间颇为常见。</ATR_Tier4Android.description>
+<ATR_Tier4Android.tools.0.label>右拳</ATR_Tier4Android.tools.0.label>
+<ATR_Tier4Android.tools.1.label>左拳</ATR_Tier4Android.tools.1.label>
+<ATR_Tier4Android.tools.2.label>头部</ATR_Tier4Android.tools.2.label>
+
+<ATR_Tier5Android.label>T5 智能人形</ATR_Tier5Android.label>
+<ATR_Tier5Android.description>不可否认的是，这是一个机械人形样式的远古科技单元。 然而，这并不是真正的远古科技的技术。 它也曾神秘地透露过：“我自己就是所有人对远古科技产物的一种误解”，并拒绝对此进行详细说明————它还承认谎报了它的出生日期。 由于他完全是异界思维，这导致他无法连入天云核心。 像他们这样的存在并没有说明他们在边缘世界的起源、目的或原因是什么。 它想要什么，为什么它似乎满足于融入正常社会？ \n\n我们并不清楚为什么衣服是他唯一强烈拒绝的东西，并且他看起来对此十分恼火————可能是因为某种神秘的远古科技代码所致？</ATR_Tier5Android.description>
+<ATR_Tier5Android.tools.0.label>右拳</ATR_Tier5Android.tools.0.label>
+<ATR_Tier5Android.tools.1.label>左拳</ATR_Tier5Android.tools.1.label>
+<ATR_Tier5Android.tools.2.label>头部</ATR_Tier5Android.tools.2.label>
+
+<ATR_M7Mech.label>M7 机械化步兵</ATR_M7Mech.label>
+<ATR_M7Mech.description>一种机械化步兵，在这个边缘世界的远古时期产生。 这些单位是非常强大的战争机器，但移动速度较慢并且电池容量有限。</ATR_M7Mech.description>
+<ATR_M7Mech.tools.0.label>右拳</ATR_M7Mech.tools.0.label>
+<ATR_M7Mech.tools.1.label>左拳</ATR_M7Mech.tools.1.label>
+
+<ATR_M8Mech.label>M8 机械化步兵</ATR_M8Mech.label>
+<ATR_M8Mech.description>M8 机械化步兵原型，配备有限的天云核心单元和天云中继塔。 这些单位是非常强大的战争机器，可以携带数字意识在战场上移动，但移动速度较慢，而且内部智能存储容量有限。</ATR_M8Mech.description>
+<ATR_M8Mech.tools.0.label>右拳</ATR_M8Mech.tools.0.label>
+<ATR_M8Mech.tools.1.label>左拳</ATR_M8Mech.tools.1.label>
+
+<ATR_Mark1Warrior.label>M1 战斗单元</ATR_Mark1Warrior.label>
+<ATR_Mark1Warrior.description>一代战斗单元放弃了人形的外观，在生存能力、力量和功率效率方面高于一级机器人。 他们缺乏智慧，通常被认为不如 T1，在思想上仅比机器人略高级。 这些是专为战争和反恐而打造的单位，而且它们的制造成本非常高。\n\n由于其小巧的立方形状，它通常被称为“战斗箱”或“爆能枪桶”。</ATR_Mark1Warrior.description>
+<ATR_Mark1Warrior.tools.0.label>右拳</ATR_Mark1Warrior.tools.0.label>
+<ATR_Mark1Warrior.tools.1.label>左拳</ATR_Mark1Warrior.tools.1.label>
+<ATR_Mark1Warrior.tools.2.label>头部</ATR_Mark1Warrior.tools.2.label>
+
+</LanguageData>

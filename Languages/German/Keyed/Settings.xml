@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- Miscellaneous Keys -->
+	<ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
+	
+	<ATR_RestartRequired>Spielneustart erforderlich.</ATR_RestartRequired>
+	<ATR_RestartRequiredSectionDesc>Änderungen in diesem Abschnitt erfordern einen Spielneustart.</ATR_RestartRequiredSectionDesc>
+	<ATR_RestartRequiredPostDesc>Sicherhaltshalber erforern einige Änderungen in diesem Abschnitt einen Spielneustart.</ATR_RestartRequiredPostDesc>
+
+
+    <ATR_ExpandMenu>Auf-/Zuklappen</ATR_ExpandMenu>
+	
+	<!-- Mod Settings Page Keys -->
+	<ATR_SettingsTabTitle>Einstellungen</ATR_SettingsTabTitle>
+	
+	<ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+	<ATR_SettingsTabOption_General>General</ATR_SettingsTabOption_General>
+	<ATR_SettingsTabOption_Power>Strom</ATR_SettingsTabOption_Power>
+	<ATR_SettingsTabOption_Security>Sicherheit</ATR_SettingsTabOption_Security>
+	<ATR_SettingsTabOption_Health>Gesundheit</ATR_SettingsTabOption_Health>
+	<ATR_SettingsTabOption_Connectivity>Netzwerk</ATR_SettingsTabOption_Connectivity>
+	<ATR_SettingsTabOption_Stats>Stats</ATR_SettingsTabOption_Stats>
+	
+	<!-- General Settings -->
+	<ATR_ApplyPreset>Vorlage anwenden</ATR_ApplyPreset>
+	
+		<!-- Gender Settings -->
+	<ATR_AndroidGenderNotice>Existierende Einheiten sind nicht betroffen.</ATR_AndroidGenderNotice>
+	<ATR_AndroidsHaveGenders>Geschlechter aktiviert</ATR_AndroidsHaveGenders>
+	<ATR_AndroidsPickGenders>Geschlecht wird beim Bau festgelegt</ATR_AndroidsPickGenders>
+	<ATR_AndroidsFixedGenderSelector>Immer männlich (aus) oder Immer Weiblich (an)</ATR_AndroidsFixedGenderSelector>
+	<ATR_AndroidsGenderRatio>Chance für Geschlechtsverteilung</ATR_AndroidsGenderRatio>
+	
+		<!-- Commonality Settings -->
+	<ATR_PlayerOnlyNote>Wird diese Einstellung aktiviert wird nur der Spieler in der Lage sein mechanische Lebensformen zu bauen.</ATR_PlayerOnlyNote>
+	<ATR_AndroidsAppearNaturally>Mechanische Lebensformen können anderen Fraktionen angehören oder durch Ereignisse erscheinen</ATR_AndroidsAppearNaturally>
+	
+	<ATR_AndroidFactionSettings>Welche Rolle spielen mechanische Lebensformen für andere Fraktionen? Bereits existierende Fraktionen sind nicht betroffen.</ATR_AndroidFactionSettings>
+	<ATR_AndroidSocietiesExist>Mechanische Lebensformen haben eigene Fraktionen</ATR_AndroidSocietiesExist>
+	<ATR_AndroidRaidersExist>Mechanische Piraten</ATR_AndroidRaidersExist>
+	<ATR_AndroidRaidersDesc>Fungiert genau wie die Außenweltlerpiraten</ATR_AndroidRaidersDesc>
+	<ATR_AndroidUnionistsExist>Friedliche Androiden</ATR_AndroidUnionistsExist>
+	<ATR_AndroidUnionistsDesc>Fungiert genau wie die friedliche Außenweltlerfraktion</ATR_AndroidUnionistsDesc>
+	
+	<!-- Needs Settings -->
+	<ATR_AndroidOnlyNotice>Hinweis: Dies betrifft nur höhere mechanische Lebensformen. Dronen haben keinerlei Bedürfnisse außer Wartung und Energie.</ATR_AndroidOnlyNotice>
+	<ATR_AndroidsNeedJoy>Androiden haben ein Bedürfnis nach Entspannung</ATR_AndroidsNeedJoy>
+	<ATR_AndroidsNeedBeauty>Androiden haben ein Bedürfnis nach Schönheit</ATR_AndroidsNeedBeauty>
+	<ATR_AndroidsNeedComfort>Androiden haben ein Bedürfnis nach Komfort</ATR_AndroidsNeedComfort>
+	<ATR_AndroidsNeedOutdoors>Androiden haben ein Bedürfnis sich Drinnen/Draußen aufzuhalten</ATR_AndroidsNeedOutdoors>
+	
+	<ATR_SettingsPresetDefault>Standard</ATR_SettingsPresetDefault>
+	<ATR_SettingsPresetCustom>Geändert</ATR_SettingsPresetCustom>
+	
+	<ATR_SettingsConsideredAndroid>Höhere mechanische Lebensformen (Androiden)</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>Keine Androiden</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>Niedere mechanische Lebensformen (Dronen)</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>Keine Dronen</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>Mechanische Tiere (Dronen)</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Organische Tiere</ATR_SettingsNotConsideredAnimals>
+	
+	<!-- Power Settings -->
+	<ATR_wattsConsumedPerBodySize>Stromverbrauch pro Einheiten Körpergröße [Standard: 500W]</ATR_wattsConsumedPerBodySize>
+	<ATR_batteryPercentagePerRareTick>Ladeprozent alle ~4 Sekunden [Standard: 7%]</ATR_batteryPercentagePerRareTick>
+	<ATR_batteryPercentagePerTick>Aufladegeschwindigkeit [Standard: 1]</ATR_batteryPercentagePerTick>
+	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Effizienz von organischer Nahrung für mechanische Lebensformen.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+	<ATR_mechanicalBioprocessingEfficiency>Nährwert [Standard: 50%]</ATR_mechanicalBioprocessingEfficiency>
+	
+	<!-- Security Settings -->
+        <!-- Hostile Hacking -->
+	<ATR_EnemyHacksOccur>Feindliche Cyberangriffe aktivieren</ATR_EnemyHacksOccur>
+	<ATR_ChanceAlliesInterceptHack>Chance pro Verbündetem einen Cyberangriff auf dich abzufangen (in %)</ATR_ChanceAlliesInterceptHack>
+	<ATR_ChanceAlliesInterceptHackDesc>Die Chance dass eine Verbündete Fraktion einen Cyberangriff auf dich abfängt in Prozent pro Fraktion.</ATR_ChanceAlliesInterceptHackDesc>
+	<ATR_PointsGainedOnInterceptPercentage>Punktegewinn pro von Verbündeten abgefangenem Cyberangriff (in %)</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_PointsGainedOnInterceptPercentageDesc>Verbündete schenken dir beim Abfangen Sicherheitspunkte als Bruchteil der für den Angriff verwendeten Gefahrenpunkte.</ATR_PointsGainedOnInterceptPercentageDesc>
+	<ATR_EnemyHackAttackStrengthModifier>Stärkefaktor für gegnerische Cyberangriffe</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_EnemyHackAttackStrengthModifierDesc>Faktor auf die Punkte die Angreifern zur Verfügung stehen. [Standard: 100%]</ATR_EnemyHackAttackStrengthModifierDesc>
+	<ATR_PercentageOfValueUsedForRansoms>Wertfaktor von Lösegeldforderungen</ATR_PercentageOfValueUsedForRansoms>
+	
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>Eigene Cyberangriffe aktivieren</ATR_PlayerCanHack>
+    <ATR_receiveFullHackingAlert>Warnung für Überschreiten von 90% der Hackingpunktekapazität</ATR_receiveFullHackingAlert>
+    <ATR_RetaliationChanceOnFailure>Chance auf Gegenschlag bei gescheitertem Cyberangriff (in %)</ATR_RetaliationChanceOnFailure>
+    <ATR_MinHackSuccessChance>Minimalerfolgschance für eigene Cyberangriffe</ATR_MinHackSuccessChance>
+    <ATR_MaxHackSuccessChance>Maximalerfolgschance für eigene Cyberangriffe</ATR_MaxHackSuccessChance>
+
+    <!-- Health Settings -->
+        <!-- Medical -->
+    <ATR_medicinesAreInterchangeable>Reperaturpakete funktionieren auch für Organische Lebensformen und umgekehrt.</ATR_medicinesAreInterchangeable>
+    <ATR_showMechanicalSurgerySuccessChance>Zeige Erfolgschancen für Operationen von mechanischen Lebensformen.</ATR_showMechanicalSurgerySuccessChance>
+    <ATR_maxChanceMechanicOperationSuccess>Maximalerfolgschance für mechanische Operationen</ATR_maxChanceMechanicOperationSuccess>
+    <ATR_chanceFailedOperationMinor>Chance für kleine Fehler bei Misserfolg (sonst große Fehler) [Standard: 75%]</ATR_chanceFailedOperationMinor>
+    <ATR_chancePartSavedOnFailure>Chance auf Rückgewinnung von Resourcen bei Misserfolg [Standard: 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- Maintenance -->
+    <ATR_maintenanceNeedExists>Instandhaltung aktivieren</ATR_maintenanceNeedExists>
+    <ATR_receiveMaintenanceFailureLetters>Aktiviere Nachrichten für Verschleißerscheinungen</ATR_receiveMaintenanceFailureLetters>
+    <ATR_maintenancePartFailureRateFactor>Zeit bis Verschleißerscheinungen bei schlechter Instandhaltung auftreten</ATR_maintenancePartFailureRateFactor>
+    <ATR_maintenanceFallRateFactor>Natürlicher Wartungsverfallfaktor</ATR_maintenanceFallRateFactor>
+    <ATR_maintenanceGainRateFactor>Wartungsgeschwindigkeit</ATR_maintenanceGainRateFactor>
+
+    
+	<!-- Connectivity Settings -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>Marionetten aktivieren</ATR_surrogatesAllowed>
+    <ATR_otherFactionsAllowedSurrogates>Andere Fraktionen können Marionetten verwenden</ATR_otherFactionsAllowedSurrogates>
+    <ATR_minGroupSizeForSurrogates>Mindestgröße für Gruppen um Marionetten zu verwenden</ATR_minGroupSizeForSurrogates>
+    <ATR_minSurrogatePercentagePerLegalGroup>Mindestanteil von Marionetten [Standard: 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+    <ATR_maxSurrogatePercentagePerLegalGroup>Maximalanteil von Marionetten [Standard: 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>Marionetten pro Person (ohne Einschränkungen)[Standard: 4]:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+        <!-- Skills -->
+    <ATR_receiveFullSkillAlert>Warnung für Überschreiten von 90% der Skillpunktekapazität</ATR_receiveFullSkillAlert>
+	<ATR_skillPointConversionRate>Erfahrung pro Skillpunkt [Standard: 0,5]</ATR_skillPointConversionRate>
+	<ATR_passionSoftCap>Erlaubte Hingaben vor exponentiellem Kostenanstieg [Standard: 8]</ATR_passionSoftCap>
+	<ATR_basePointsNeededForPassion>Kosten für Hingabesteigerung [Standard: 5000]</ATR_basePointsNeededForPassion>
+
+        <!-- Cloud -->
+    <ATR_UploadingKills>Beim Hochladen in den Kern wird das Bewusstsein verschoben anstatt kopiert.</ATR_UploadingKills>
+    <ATR_UploadingPermakills>Beim Hochladen in den Kern stirbt der Körper</ATR_UploadingPermakills>
+    <ATR_SkyMindOperationTimeRequired>Dauer des Uploads (in Stunden)[Standard: 24h]</ATR_SkyMindOperationTimeRequired>
+
+</LanguageData>

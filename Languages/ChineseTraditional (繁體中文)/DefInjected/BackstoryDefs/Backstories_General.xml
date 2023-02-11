@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<ATR_MechAdulthoodGlitterworldCleaner.title>閃耀世界清潔工</ATR_MechAdulthoodGlitterworldCleaner.title>
+<ATR_MechAdulthoodGlitterworldCleaner.titleShort>清潔工</ATR_MechAdulthoodGlitterworldCleaner.titleShort>
+<ATR_MechAdulthoodGlitterworldCleaner.baseDesc>{PAWN_nameDef} 曾是一個閃耀世界星球上的一個清潔機器人， {PAWN_pronoun} 從來沒有被分配過任何太複雜的工作。 </ATR_MechAdulthoodGlitterworldCleaner.baseDesc>
+
+<ATR_MechAdulthoodShocktrooper.title>突擊隊員</ATR_MechAdulthoodShocktrooper.title>
+<ATR_MechAdulthoodShocktrooper.titleShort>突擊隊員</ATR_MechAdulthoodShocktrooper.titleShort>
+<ATR_MechAdulthoodShocktrooper.baseDesc>{PAWN_nameDef} 曾經是專家製造的突擊部隊智能人形兵營的一部分，被編程為以冷酷無情的效率進行殺戮，同時保留了自我意志。 </ATR_MechAdulthoodShocktrooper.baseDesc>
+
+<ATR_MechAdulthoodSecretService.title>特務</ATR_MechAdulthoodSecretService.title>
+<ATR_MechAdulthoodSecretService.titleShort>特務</ATR_MechAdulthoodSecretService.titleShort>
+<ATR_MechAdulthoodSecretService.baseDesc>{PAWN_nameDef} 被買來專門用於保護獨裁者、王室成員和內閣成員等高級官員。它們接收了廣泛的訓練，可以在需要時迅速對戰鬥做出反應，並進行現場醫療護理。 </ATR_MechAdulthoodSecretService.baseDesc>
+
+<ATR_MechAdulthoodCoPilot.title>航天器飛行員</ATR_MechAdulthoodCoPilot.title>
+<ATR_MechAdulthoodCoPilot.titleShort>飛行員</ATR_MechAdulthoodCoPilot.titleShort>
+<ATR_MechAdulthoodCoPilot.baseDesc>為了在軌道作戰中幫助人類飛行員， {PAWN_nameDef} 被買來當作軍用機器人的一部分，擔任飛行器的機械副駕駛。 {PAWN_pronoun} 接受過專業的訓練，可以準確地向敵方發射機載大砲。 </ATR_MechAdulthoodCoPilot.baseDesc>
+
+<ATR_MechAdulthoodShipCommander.title>星艦指揮官</ATR_MechAdulthoodShipCommander.title>
+<ATR_MechAdulthoodShipCommander.titleShort>指揮官</ATR_MechAdulthoodShipCommander.titleShort>
+<ATR_MechAdulthoodShipCommander.baseDesc>{PAWN_nameDef} 是一艘殖民星艦的三名指揮官之一，這個崗位幾乎不會安排給機器人。 {PAWN_pronoun} 將會監視飛船的所有功能，並且在其他船員進入休眠狀態時保持清醒。 </ATR_MechAdulthoodShipCommander.baseDesc>
+
+<ATR_MechAdulthoodRiotPolice.title>防暴隊長</ATR_MechAdulthoodRiotPolice.title>
+<ATR_MechAdulthoodRiotPolice.titleShort>隊長</ATR_MechAdulthoodRiotPolice.titleShort>
+<ATR_MechAdulthoodRiotPolice.baseDesc>作為一個獨特的執法人員的一部分， {PAWN_nameDef} 搭載了沉重的結構，他的任務是通過採取任何的必要手段來控制蔓延失控的騷亂。 </ATR_MechAdulthoodRiotPolice.baseDesc>
+
+<ATR_MechAdulthoodMercenaryBodyguard.title>貼身保鏢</ATR_MechAdulthoodMercenaryBodyguard.title>
+<ATR_MechAdulthoodMercenaryBodyguard.titleShort>保鏢</ATR_MechAdulthoodMercenaryBodyguard.titleShort>
+<ATR_MechAdulthoodMercenaryBodyguard.baseDesc>作為受僱用的智能人形保鏢， {PAWN_nameDef} 曾和各種類型的客戶合作過，從都市世界的企業家到低級犯罪頭目。 {PAWN_pronoun} 是為了不惜一切代價保護他們而專門建造的。 </ATR_MechAdulthoodMercenaryBodyguard.baseDesc>
+
+<ATR_MechAdulthoodInjuredSoldier.title>殘疾士兵</ATR_MechAdulthoodInjuredSoldier.title>
+<ATR_MechAdulthoodInjuredSoldier.titleShort>士兵</ATR_MechAdulthoodInjuredSoldier.titleShort>
+<ATR_MechAdulthoodInjuredSoldier.baseDesc>{PAWN_nameDef} 曾經是訓練有毒的機器人士兵中隊的一員，只會被派去執行最危險的任務。最後的一次任務以炮火地毯式轟炸而結束，幾乎全隊喪命， {PAWN_nameDef} 是其中逃跑的少數倖存者之一。 </ATR_MechAdulthoodInjuredSoldier.baseDesc>
+
+<ATR_MechAdulthoodGourmetChef.title>金牌大廚</ATR_MechAdulthoodGourmetChef.title>
+<ATR_MechAdulthoodGourmetChef.titleShort>大廚</ATR_MechAdulthoodGourmetChef.titleShort>
+<ATR_MechAdulthoodGourmetChef.baseDesc>{PAWN_nameDef} 在他的家鄉星球以美食而遠近聞名，服務於各行各業的高端客戶，他的每道菜都在邏輯和美學上實現了完美的平衡。 </ATR_MechAdulthoodGourmetChef.baseDesc>
+
+<ATR_MechAdulthoodCafeteriaCook.title>都市世界廚師</ATR_MechAdulthoodCafeteriaCook.title>
+<ATR_MechAdulthoodCafeteriaCook.titleShort>廚師</ATR_MechAdulthoodCafeteriaCook.titleShort>
+<ATR_MechAdulthoodCafeteriaCook.baseDesc>{PAWN_nameDef} 是著名的都市世界食品站的所有者。他被當地人稱為“螺栓” {PAWN_pronoun} 專門製作便宜、簡單的飯菜，吃起來不至於難以下肚。 </ATR_MechAdulthoodCafeteriaCook.baseDesc>
+
+<ATR_MechAdulthoodBartender.title>酒保</ATR_MechAdulthoodBartender.title>
+<ATR_MechAdulthoodBartender.titleShort>酒保</ATR_MechAdulthoodBartender.titleShort>
+<ATR_MechAdulthoodBartender.baseDesc>{PAWN_nameDef}在酒吧工作了很長時間了，會通宵為客戶提供食物和飲料，但是他會偶爾打架。 </ATR_MechAdulthoodBartender.baseDesc>
+
+<ATR_MechAdulthoodPrisonCook.title>獄中廚師</ATR_MechAdulthoodPrisonCook.title>
+<ATR_MechAdulthoodPrisonCook.titleShort>廚師</ATR_MechAdulthoodPrisonCook.titleShort>
+<ATR_MechAdulthoodPrisonCook.baseDesc>{PAWN_nameDef} 在一個半自動化監獄站工作，負責製作大量劣質食品。雖然食物很噁心，但是製作效率非常高，而且非常便宜。 （譯者吐槽：這很環世界）</ATR_MechAdulthoodPrisonCook.baseDesc>
+
+<ATR_MechAdulthoodServantPet.title>從屬機</ATR_MechAdulthoodServantPet.title>
+<ATR_MechAdulthoodServantPet.titleShort>從屬機</ATR_MechAdulthoodServantPet.titleShort>
+<ATR_MechAdulthoodServantPet.baseDesc>{PAWN_nameDef}被一個富足的家庭買下，毫無疑問地被用來進行娛樂和在房子周圍做一些基本的雜務。 {PAWN_possessive} 的主人只把 {PAWN_objective} 當成一隻寵物。 </ATR_MechAdulthoodServantPet.baseDesc>
+
+<ATR_MechAdulthoodSpaceMiner.title>太空礦工</ATR_MechAdulthoodSpaceMiner.title>
+<ATR_MechAdulthoodSpaceMiner.titleShort>礦工</ATR_MechAdulthoodSpaceMiner.titleShort>
+<ATR_MechAdulthoodSpaceMiner.baseDesc>{PAWN_nameDef} 在一個高風險的小行星採礦公司工作。 {PAWN_pronoun} 更喜歡處理危險任務和太空行走，因此 {PAWN_possessive} 的人類船員便不必做此工作。 {PAWN_nameDef} 因為能最大限度地降低工作事故而很勉強地贏得了公司的尊重。 </ATR_MechAdulthoodSpaceMiner.baseDesc>
+
+<ATR_MechAdulthoodTunnelMiner.title>隧道工</ATR_MechAdulthoodTunnelMiner.title>
+<ATR_MechAdulthoodTunnelMiner.titleShort>隧道工</ATR_MechAdulthoodTunnelMiner.titleShort>
+<ATR_MechAdulthoodTunnelMiner.baseDesc>{PAWN_nameDef} 作為承包商幫助穴居人開發大型地下隧道。 {PAWN_nameDef} 非常樂於構建強大的防塌陷網絡。 </ATR_MechAdulthoodTunnelMiner.baseDesc>
+
+<ATR_MechAdulthoodProspector.title>陸地勘探者</ATR_MechAdulthoodProspector.title>
+<ATR_MechAdulthoodProspector.titleShort>勘探者</ATR_MechAdulthoodProspector.titleShort>
+<ATR_MechAdulthoodProspector.baseDesc>作為機械探礦者的一部分，{PAWN_nameDef} 從一個行星被派往到另一個行星，為企業和平民客戶進行星球地質分析。 </ATR_MechAdulthoodProspector.baseDesc>
+
+<ATR_MechAdulthoodShipyardEngineer.title>在軌工程師</ATR_MechAdulthoodShipyardEngineer.title>
+<ATR_MechAdulthoodShipyardEngineer.titleShort>工程師</ATR_MechAdulthoodShipyardEngineer.titleShort>
+<ATR_MechAdulthoodShipyardEngineer.baseDesc>{PAWN_nameDef} 在一個純機械的軌道造船廠工作，他參與了從小型攔截器到龐大的艦隊旗艦等各種船隻的建造工作。 </ATR_MechAdulthoodShipyardEngineer.baseDesc>
+
+<ATR_MechAdulthoodUrbworldArchitect.title>機械建築師</ATR_MechAdulthoodUrbworldArchitect.title>
+<ATR_MechAdulthoodUrbworldArchitect.titleShort>建築師</ATR_MechAdulthoodUrbworldArchitect.titleShort>
+<ATR_MechAdulthoodUrbworldArchitect.baseDesc>{PAWN_nameDef} 是一位建築師，為他們的都市世界設計過大規模住房解決方案的藍圖。 {PAWN_pronoun} 繪製的藍圖冰冷、毫無生機且是存粹功能性的，但不可否認它們對於解決數十億人的住房問題是十分有效的。 </ATR_MechAdulthoodUrbworldArchitect.baseDesc>
+
+<ATR_MechAdulthoodConstructionContractor.title>建築承包商</ATR_MechAdulthoodConstructionContractor.title>
+<ATR_MechAdulthoodConstructionContractor.titleShort>承包商</ATR_MechAdulthoodConstructionContractor.titleShort>
+<ATR_MechAdulthoodConstructionContractor.baseDesc>{PAWN_nameDef} 是一個建築承包商，負責建造各種結構。民用通天大樓、軍事要塞、富饒的災變地堡，這都需要大量有實力、有能力的人來建造。 </ATR_MechAdulthoodConstructionContractor.baseDesc>
+
+<ATR_MechAdulthoodHydroponicFarmer.title>水培專家</ATR_MechAdulthoodHydroponicFarmer.title>
+<ATR_MechAdulthoodHydroponicFarmer.titleShort>專家</ATR_MechAdulthoodHydroponicFarmer.titleShort>
+<ATR_MechAdulthoodHydroponicFarmer.baseDesc>{PAWN_nameDef} 在星際飛船上維護、維修和收穫水培植物。 {PAWN_nameDef} 很享受與世隔絕和自由試驗植物基因組的機會——————即使它們最終總是比科學培育的作物低效。 </ATR_MechAdulthoodHydroponicFarmer.baseDesc>
+
+<ATR_MechAdulthoodFarmer.title>機械農夫</ATR_MechAdulthoodFarmer.title>
+<ATR_MechAdulthoodFarmer.titleShort>農夫</ATR_MechAdulthoodFarmer.titleShort>
+<ATR_MechAdulthoodFarmer.baseDesc>{PAWN_nameDef} 擔任季節性農場工人，偶爾擔任牧場主。 {PAWN_nameDef} 喜歡照料莊稼、動物和土地工作的簡單性——————那就是證明了有必要學習如何防禦入侵者</ATR_MechAdulthoodFarmer.baseDesc>
+
+<ATR_MechAdulthoodGardener.title>機械園丁</ATR_MechAdulthoodGardener.title>
+<ATR_MechAdulthoodGardener.titleShort>園丁</ATR_MechAdulthoodGardener.titleShort>
+<ATR_MechAdulthoodGardener.baseDesc>{PAWN_nameDef} 曾經是眾多高端客戶的機械僕從團隊的一員，日夜工作以維護花園並幫助舉辦特殊的儀式活動。 </ATR_MechAdulthoodGardener.baseDesc>
+
+<ATR_MechAdulthoodAndroidMechanic.title>人形機械師</ATR_MechAdulthoodAndroidMechanic.title>
+<ATR_MechAdulthoodAndroidMechanic.titleShort>機械師</ATR_MechAdulthoodAndroidMechanic.titleShort>
+<ATR_MechAdulthoodAndroidMechanic.baseDesc>閃耀世界基本上遠離痛苦，因此作為機械師的 {PAWN_nameDef} 的主要職責是設計、建造和安裝複雜且美觀的機械部件到客戶機器和機器人上。 </ATR_MechAdulthoodAndroidMechanic.baseDesc>
+
+<ATR_MechAdulthoodAerospaceEngineer.title>航空工程師</ATR_MechAdulthoodAerospaceEngineer.title>
+<ATR_MechAdulthoodAerospaceEngineer.titleShort>工程師</ATR_MechAdulthoodAerospaceEngineer.titleShort>
+<ATR_MechAdulthoodAerospaceEngineer.baseDesc>{PAWN_nameDef}為商業和軍事客戶設計了許多不同類型的飛機。 {PAWN_nameDef} 強烈反對美學設計，偏愛空氣動力學和結構強度。 {PAWN_nameDef} 經常要求消滅當地的野生動物，以防止飛行路徑和測試發生中斷。 </ATR_MechAdulthoodAerospaceEngineer.baseDesc>
+
+<ATR_MechAdulthoodCombatEngineer.title>戰鬥工程師</ATR_MechAdulthoodCombatEngineer.title>
+<ATR_MechAdulthoodCombatEngineer.titleShort>工程師</ATR_MechAdulthoodCombatEngineer.titleShort>
+<ATR_MechAdulthoodCombatEngineer.baseDesc>{PAWN_nameDef} 在星際軍隊中擔任戰鬥工程師。 {PAWN_pronoun} 經常在第一波登船潮中被派去解除陷阱、識別阻塞點並削弱敵人的防禦工事。船上廚房和水培海灣經常是致命槍戰的場所，所以 {PAWN_pronoun} 非常討厭它們</ATR_MechAdulthoodCombatEngineer.baseDesc>
+
+<ATR_MechAdulthoodFactoryWorker.title>工廠員工</ATR_MechAdulthoodFactoryWorker.title>
+<ATR_MechAdulthoodFactoryWorker.titleShort>員工</ATR_MechAdulthoodFactoryWorker.titleShort>
+<ATR_MechAdulthoodFactoryWorker.baseDesc>{PAWN_nameDef} 在一家星際大企業旗下的工廠工作，專門為各個星球和星際國家的軍事工業生產槍支和防護服。 </ATR_MechAdulthoodFactoryWorker.baseDesc>
+
+<ATR_MechAdulthoodSurgeon.title>偉岸外科醫生</ATR_MechAdulthoodSurgeon.title>
+<ATR_MechAdulthoodSurgeon.titleShort>醫生</ATR_MechAdulthoodSurgeon.titleShort>
+<ATR_MechAdulthoodSurgeon.baseDesc>{PAWN_nameDef} 是一位經驗豐富的外科醫生和醫生。 {PAWN_pronoun} 發誓永遠不傷害別人，即使這意味著放棄{PAWN_possessive} 自己的存在。 {PAWN_pronoun} 也為 {PAWN_possessive} 對象提供社會服務。 </ATR_MechAdulthoodSurgeon.baseDesc>
+
+<ATR_MechAdulthoodDoctor.title>診所工作人員</ATR_MechAdulthoodDoctor.title>
+<ATR_MechAdulthoodDoctor.titleShort>工作人員</ATR_MechAdulthoodDoctor.titleShort>
+<ATR_MechAdulthoodDoctor.baseDesc>{PAWN_nameDef} 曾擔任普通保健醫生。 {PAWN_pronoun} 會為無數客戶進行診斷和治療各種疾病——————有時也會同時處理多個小患者的問題。 </ATR_MechAdulthoodDoctor.baseDesc>
+
+<ATR_MechAdulthoodCareworker.title>護理員</ATR_MechAdulthoodCareworker.title>
+<ATR_MechAdulthoodCareworker.titleShort>護理員</ATR_MechAdulthoodCareworker.titleShort>
+<ATR_MechAdulthoodCareworker.baseDesc>{PAWN_nameDef} 以各種方式照顧病人和老人。 {PAWN_pronoun}經常被要求安慰和支持被隔離的人類，並花費大量時間宣傳預防性治療和護理的好處——————儘管大多數人往往會等待太久。 {PAWN_nameDef} 在業餘時間也會照料花園。 </ATR_MechAdulthoodCareworker.baseDesc>
+
+<ATR_MechAdulthoodCyberneticsResearcher.title>控制論研究員</ATR_MechAdulthoodCyberneticsResearcher.title>
+<ATR_MechAdulthoodCyberneticsResearcher.titleShort>研究員</ATR_MechAdulthoodCyberneticsResearcher.titleShort>
+<ATR_MechAdulthoodCyberneticsResearcher.baseDesc>{PAWN_nameDef} 是仿生和控制論增強的支持者，並參與了許多研究合作社和倡導資金、研究和製定圍繞其使用的政策。 {PAWN_nameDef}也參與過一些和平主義抗議活動，但是強烈反對發生衝突。 </ATR_MechAdulthoodCyberneticsResearcher.baseDesc>
+
+<ATR_MechAdulthoodStrategyPhilosopher.title>戰略哲學家</ATR_MechAdulthoodStrategyPhilosopher.title>
+<ATR_MechAdulthoodStrategyPhilosopher.titleShort>哲學家</ATR_MechAdulthoodStrategyPhilosopher.titleShort>
+<ATR_MechAdulthoodStrategyPhilosopher.baseDesc>{PAWN_nameDef} 是一位多產的讀者、作家和各種形式的戰略哲學家。戰爭、政治、社會運動、宗教、文明、遺傳學——都是 {PAWN_objective}的策略研究範疇。 {PAWN_nameDef} 已經在通用策略中提出了多個廣為流傳的理論框架。 {PAWN_possessive} 也因此非常勢利。 </ATR_MechAdulthoodStrategyPhilosopher.baseDesc>
+
+<ATR_MechAdulthoodRefugee.title>機器人難民</ATR_MechAdulthoodRefugee.title>
+<ATR_MechAdulthoodRefugee.titleShort>難民</ATR_MechAdulthoodRefugee.titleShort>
+<ATR_MechAdulthoodRefugee.baseDesc>{PAWN_nameDef} 在政治轉變推翻機器人權利後被迫逃離 {PAWN_possessive}  的家園。 {PAWN_pronoun} 能夠逃脫正在發生的對智能機械的種族滅絕清洗——————但是數百萬個計算機系統和固定 AI 就沒那麼幸運了。戰火現在仍然困擾著 {PAWN_objective}.</ATR_MechAdulthoodRefugee.baseDesc>
+
+<ATR_MechAdulthoodLifter.title>重物搬運工</ATR_MechAdulthoodLifter.title>
+<ATR_MechAdulthoodLifter.titleShort>搬運工</ATR_MechAdulthoodLifter.titleShort>
+<ATR_MechAdulthoodLifter.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive} 母星的建築工地工作，在工地周圍拖運材料和工具，而不用擔心安全或受傷。 </ATR_MechAdulthoodLifter.baseDesc>
+
+<ATR_MechAdulthoodYouthCompanion.title>心愛的伙伴</ATR_MechAdulthoodYouthCompanion.title>
+<ATR_MechAdulthoodYouthCompanion.titleShort>夥伴</ATR_MechAdulthoodYouthCompanion.titleShort>
+<ATR_MechAdulthoodYouthCompanion.baseDesc>{PAWN_nameDef} 在被一位有抱負的工程師發現之前，它已經嚴重受損並失去了所有記憶。 {PAWN_pronoun} 最初把他當作愛好和教育項目進行修復，但是他卻很快成為了 {PAWN_possessive} 救世主最親密的朋友和知己。 </ATR_MechAdulthoodYouthCompanion.baseDesc>
+
+<ATR_MechAdulthoodExiled.title>流放智械</ATR_MechAdulthoodExiled.title>
+<ATR_MechAdulthoodExiled.titleShort>流放</ATR_MechAdulthoodExiled.titleShort>
+<ATR_MechAdulthoodExiled.baseDesc>{PAWN_nameDef} 在一個沒有機器人權利的世界上被秘密俘虜。當 {PAWN_possessive} 俘虜被揭露並被捕時，{PAWN_pronoun} 得到釋放並被允許和平地離開這個星球而不用承擔任何後果。 {PAWN_nameDef} 在被囚禁期間曾長時間地沉浸在深刻的思考中。 </ATR_MechAdulthoodExiled.baseDesc>
+
+<ATR_MechAdulthoodEntertainer.title>機械藝人</ATR_MechAdulthoodEntertainer.title>
+<ATR_MechAdulthoodEntertainer.titleShort>藝人</ATR_MechAdulthoodEntertainer.titleShort>
+<ATR_MechAdulthoodEntertainer.baseDesc>{PAWN_nameDef} 是一個擁有基本機器人權利的世界的藝人。在 {PAWN_possessive} 客戶看來他充滿了異國情調， {PAWN_pronoun} 的活動日程從來都是滿的，但他從未得到真正的認可或讚賞。最終， {PAWN_pronoun} 在攢夠錢後離開了這個星球。 </ATR_MechAdulthoodEntertainer.baseDesc>
+
+<ATR_MechAdulthoodExperiment.title>機械項目</ATR_MechAdulthoodExperiment.title>
+<ATR_MechAdulthoodExperiment.titleShort>項目</ATR_MechAdulthoodExperiment.titleShort>
+<ATR_MechAdulthoodExperiment.baseDesc>{PAWN_nameDef} 被低科技城市世界綁架用於研究目的，不斷被修改和重新編程以期望揭示人工智能秘密。 </ATR_MechAdulthoodExperiment.baseDesc>
+
+<ATR_MechAdulthoodComputer.title>移動電腦</ATR_MechAdulthoodComputer.title>
+<ATR_MechAdulthoodComputer.titleShort>電腦</ATR_MechAdulthoodComputer.titleShort>
+<ATR_MechAdulthoodComputer.baseDesc>{PAWN_nameDef} 被用作各種用途的移動計算機。 {PAWN_pronoun} 也普遍受到與 {PAWN_pronoun} 共事的人的讚賞，並經常加入研究探險、搜索和救援工作，以及許多其他需要可靠的通訊員、記錄員和團隊成員的小型團隊。 </ATR_MechAdulthoodComputer.baseDesc>
+
+<ATR_MechAdulthoodDeified.title>宗教機械</ATR_MechAdulthoodDeified.title>
+<ATR_MechAdulthoodDeified.titleShort>崇拜</ATR_MechAdulthoodDeified.titleShort>
+<ATR_MechAdulthoodDeified.baseDesc>{PAWN_nameDef} 被邪教尊為了神的化身， {PAWN_pronoun} 沒有阻止他們，反而很享受這種關注。 {PAWN_pronoun} 也並不太在意被監禁，但是在邪教團體以 {PAWN_possessive} 的名義從事一些令人厭惡的行為後，他選擇犧牲了 {PAWN_possessive} 名追隨者以逃避執法。 </ATR_MechAdulthoodDeified.baseDesc>
+
+<ATR_MechAdulthoodFreedServant.title>解放的僕人</ATR_MechAdulthoodFreedServant.title>
+<ATR_MechAdulthoodFreedServant.titleShort>解放</ATR_MechAdulthoodFreedServant.titleShort>
+<ATR_MechAdulthoodFreedServant.baseDesc>{PAWN_nameDef} 是一個非常富有的莊園的僕人。領主和夫人————以及首席僕人對 {PAWN_objective}施暴的情況並不少見。當 {PAWN_possessive} 星球出人意料地授予機器人完全公民權時， {PAWN_nameDef} 讓 {PAWN_possessive} 雇主的生活變成了地獄，然後順利地辭職了。 {PAWN_pronoun} 在他們非法僱用一名殺手教訓 {PAWN_objective} 後被迫逃離地球。 </ATR_MechAdulthoodFreedServant.baseDesc>
+
+<ATR_MechAdulthoodReformist.title>自然改良主義者</ATR_MechAdulthoodReformist.title>
+<ATR_MechAdulthoodReformist.titleShort>自然改良主義者</ATR_MechAdulthoodReformist.titleShort>
+<ATR_MechAdulthoodReformist.baseDesc>{PAWN_nameDef}他的家鄉星球曾經是一片工業荒地。其他人從整個星際國家被召喚來協助像 {PAWN_possessive} 這樣的社區清理有毒廢物，將地球改造為自然保護區。 {PAWN_nameDef} 為在清理完成後照料保護區而感到十分自豪，並決定努力穿越群星。 </ATR_MechAdulthoodReformist.baseDesc>
+
+<ATR_MechAdulthoodSecurity.title>安全執法者</ATR_MechAdulthoodSecurity.title>
+<ATR_MechAdulthoodSecurity.titleShort>安保</ATR_MechAdulthoodSecurity.titleShort>
+<ATR_MechAdulthoodSecurity.baseDesc>{PAWN_nameDef} 是一名專業的安全執行者。 {PAWN_pronoun} 為許多不同的雇主工作過，有些是非法的————並學會瞭如何處理各種安全威脅。暴力是 {PAWN_nameDef} 唯一真正吸引人的主題</ATR_MechAdulthoodSecurity.baseDesc>
+
+<ATR_MechAdulthoodGeneticist.title>動物遺傳學家</ATR_MechAdulthoodGeneticist.title>
+<ATR_MechAdulthoodGeneticist.titleShort>動物遺傳學家</ATR_MechAdulthoodGeneticist.titleShort>
+<ATR_MechAdulthoodGeneticist.baseDesc>{PAWN_nameDef} 曾在多個研究團隊任職，致力於識別、記錄和保存世界各地物種的基因組。 {PAWN_possessive} 最後一個團隊特別感興趣的是確定古老的地球物種如何成功地殖民其他世界。 </ATR_MechAdulthoodGeneticist.baseDesc>
+
+<ATR_MechAdulthoodDisasterRescuer.title>救災人員</ATR_MechAdulthoodDisasterRescuer.title>
+<ATR_MechAdulthoodDisasterRescuer.titleShort>救災人員</ATR_MechAdulthoodDisasterRescuer.titleShort>
+<ATR_MechAdulthoodDisasterRescuer.baseDesc>{PAWN_nameDef} 在 {PAWN_possessive} 政府中擔任救災和救災響應部門的僱員。 {PAWN_nameDef} 的主要職責是成為危機的第一響應者，盡可能多地挽救生命，然後穩定局勢，讓大多數傷員維持健康。 </ATR_MechAdulthoodDisasterRescuer.baseDesc>
+
+<ATR_MechAdulthoodHumanist.title>人道主義者</ATR_MechAdulthoodHumanist.title>
+<ATR_MechAdulthoodHumanist.titleShort>人道主義者</ATR_MechAdulthoodHumanist.titleShort>
+<ATR_MechAdulthoodHumanist.baseDesc>{PAWN_nameDef} 強烈支持機器人融入人類社會，他認為有機生命和無機生命之間沒有不相容之處。 {PAWN_pronoun} 參加過多次集會，為確保所有生命的平等權利而直言不諱。 {PAWN_nameDef} 成為一名律師，在行星法庭上為這些權利而戰，並取得了一些顯著的成功。 </ATR_MechAdulthoodHumanist.baseDesc>
+
+<ATR_MechAdulthoodPacifist.title>和平主義者</ATR_MechAdulthoodPacifist.title>
+<ATR_MechAdulthoodPacifist.titleShort>和平主義者</ATR_MechAdulthoodPacifist.titleShort>
+<ATR_MechAdulthoodPacifist.baseDesc>{PAWN_nameDef} 強烈鄙視一切形式的暴力，並從根本上相信破壞只是原始社會的領域。 </ATR_MechAdulthoodPacifist.baseDesc>
+
+<ATR_MechAdulthoodCivilProtester.title>機械運動家</ATR_MechAdulthoodCivilProtester.title>
+<ATR_MechAdulthoodCivilProtester.titleShort>運動家</ATR_MechAdulthoodCivilProtester.titleShort>
+<ATR_MechAdulthoodCivilProtester.baseDesc>{PAWN_nameDef} 是智能人形權利的抗議者。從一個星球到另一個星球，{PAWN_pronoun} 已經組織了數百次和平的權利運動，並建立了數十個非營利組織，為機器人爭取公平待遇和保護。 </ATR_MechAdulthoodCivilProtester.baseDesc>
+
+<ATR_MechAdulthoodFamilyFriend.title>家庭之友</ATR_MechAdulthoodFamilyFriend.title>
+<ATR_MechAdulthoodFamilyFriend.titleShort>朋友</ATR_MechAdulthoodFamilyFriend.titleShort>
+<ATR_MechAdulthoodFamilyFriend.baseDesc>{PAWN_nameDef} 被好幾代人當親人對待，每代人來來去去，他經常充當小孩與老人的看護人。 {PAWN_pronoun} 開始探索更多的人性的深層次的內涵，因此 {PAWN_pronoun}可以與相對貧困和處境不利的家庭分享傳奇故事。 </ATR_MechAdulthoodFamilyFriend.baseDesc>
+
+<ATR_MechAdulthoodFoundryWorker.title>鑄造工人</ATR_MechAdulthoodFoundryWorker.title>
+<ATR_MechAdulthoodFoundryWorker.titleShort>工人</ATR_MechAdulthoodFoundryWorker.titleShort>
+<ATR_MechAdulthoodFoundryWorker.baseDesc>{PAWN_nameDef} 在一家大型鑄造廠工作，冶煉鋼材用於商業用途。 {PAWN_pronoun} 對 {PAWN_possessive} 產品的質量感到自豪，並經常參觀和使用 {PAWN_possessive} 鑄造廠製造的鋼材的場所和物品，以欣賞它們所有多樣的形式。 </ATR_MechAdulthoodFoundryWorker.baseDesc>
+
+<ATR_MechAdulthoodMaintenanceWorker.title>維修工</ATR_MechAdulthoodMaintenanceWorker.title>
+<ATR_MechAdulthoodMaintenanceWorker.titleShort>維修工</ATR_MechAdulthoodMaintenanceWorker.titleShort>
+<ATR_MechAdulthoodMaintenanceWorker.baseDesc>{PAWN_nameDef}負責維持星際民用運輸的完整性和效率，以此來保證有機船員在長途航行中可以安全地睡覺。 </ATR_MechAdulthoodMaintenanceWorker.baseDesc>
+
+<ATR_MechAdulthoodFarmhand.title>機械農夫</ATR_MechAdulthoodFarmhand.title>
+<ATR_MechAdulthoodFarmhand.titleShort>農夫</ATR_MechAdulthoodFarmhand.titleShort>
+<ATR_MechAdulthoodFarmhand.baseDesc>{PAWN_nameDef} 受僱於一個工業農場，他常常夜以繼日地工作，播種、收割、擠奶、收集和維護農作物和牲畜等，以保持遙遠城市的穩定和食物供應。 </ATR_MechAdulthoodFarmhand.baseDesc>
+
+<ATR_MechAdulthoodPopIdol.title>流行偶像</ATR_MechAdulthoodPopIdol.title>
+<ATR_MechAdulthoodPopIdol.titleShort>偶像</ATR_MechAdulthoodPopIdol.titleShort>
+<ATR_MechAdulthoodPopIdol.baseDesc>{PAWN_nameDef} 在閃耀世界的 {PAWN_possessive} 故土作為著名的流行偶像而聞名，一度過著十分奢侈的生活。 {PAWN_possessive} 在社會和政治意識和操縱方面的技能都被其熱情、隨遇而安的性格所掩蓋。 </ATR_MechAdulthoodPopIdol.baseDesc>
+
+<ATR_MechAdulthoodDiplomat.title>外交官</ATR_MechAdulthoodDiplomat.title>
+<ATR_MechAdulthoodDiplomat.titleShort>外交官</ATR_MechAdulthoodDiplomat.titleShort>
+<ATR_MechAdulthoodDiplomat.baseDesc>{PAWN_nameDef} 作為 {PAWN_possessive} 政府處理外交和國內事務的官方特使。 {PAWN_pronoun} 總是力求和平解決危機，在處理出現的問題和威脅時也表現出了 {PAWN_possessive} 的方式務實和直率。 {PAWN_pronoun} 曾在幾起特別危險的事件中被任命為一支精銳軍事護衛隊的指揮官，並且在壓力下表現十分出色。 </ATR_MechAdulthoodDiplomat.baseDesc>
+
+<ATR_MechAdulthoodSniper.title>軍事狙擊手</ATR_MechAdulthoodSniper.title>
+<ATR_MechAdulthoodSniper.titleShort>狙擊手</ATR_MechAdulthoodSniper.titleShort>
+<ATR_MechAdulthoodSniper.baseDesc>{PAWN_nameDef} 發現遠距離精確射擊武器的數學和邏輯問題十分令人著迷。 {PAWN_nameDef}的政府發現 {PAWN_possessive} 的射擊天賦十分引人注意，所以經常指派 {PAWN_objective} 使用狙擊器材執行特殊任務。 {PAWN_nameDef} 也從來不關心彈道的末端到底是什麼。 </ATR_MechAdulthoodSniper.baseDesc>
+
+<ATR_MechAdulthoodTerraformer.title>地表改造者</ATR_MechAdulthoodTerraformer.title>
+<ATR_MechAdulthoodTerraformer.titleShort>改造者</ATR_MechAdulthoodTerraformer.titleShort>
+<ATR_MechAdulthoodTerraformer.baseDesc>{PAWN_nameDef} 是為準備殖民化而建立的實驗小組的一部分。 {PAWN_possessive} 團隊將繼續成功地讓近乎宜居的行星完全準備就緒，但許多行星根本無法改造。 {PAWN_nameDef} 開始對他們在純機器人群體中的生存能力進行測試產生了興趣，但卻無法說服其團隊成員考慮這個想法。 </ATR_MechAdulthoodTerraformer.baseDesc>
+
+<ATR_MechAdulthoodInterceptorPilot.title>攔截機飛行員</ATR_MechAdulthoodInterceptorPilot.title>
+<ATR_MechAdulthoodInterceptorPilot.titleShort>飛行員</ATR_MechAdulthoodInterceptorPilot.titleShort>
+<ATR_MechAdulthoodInterceptorPilot.baseDesc>{PAWN_nameDef} 是星際艦隊的一名駕駛攔截器飛行員。 {PAWN_possessive}飛行器專為機械飛行員而設計，該機型放棄了生命支持系統和安全的大部分擔憂。這也意味著當{PAWN_possessive} 艦隊逃離失敗的戰鬥時，{PAWN_nameDef} 無法跟上艦隊, 因為 {PAWN_nameDef} 的推進器無法跟上倖存的主力艦。 {PAWN_pronoun} 最終沒有投降，而是獨自帶著飛船墜入了無盡的深空。 </ATR_MechAdulthoodInterceptorPilot.baseDesc>
+
+<ATR_MechAdulthoodClergy.title>機械牧師</ATR_MechAdulthoodClergy.title>
+<ATR_MechAdulthoodClergy.titleShort>牧師</ATR_MechAdulthoodClergy.titleShort>
+<ATR_MechAdulthoodClergy.baseDesc>{PAWN_nameDef} 雖然對機器人來說相對不常見，但它確實是一個虔誠的宗教人士，對教會也做出過承諾。 {PAWN_pronoun} 是一個流浪的傳教士，並作為煽動者獲得了一定的知名度。作為 {PAWN_possessive} 職責的一部分， {PAWN_pronoun} 邁入了群星繼續著 {PAWN_possessive} 職責。 </ATR_MechAdulthoodClergy.baseDesc>
+
+</LanguageData>
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ATR_SkyMindDisconnectionRisk>在操作過程中斷開與天雲核心網絡的連接將會導致嚴重的後果。如果突然斷開連接，則勢必會產生不同程度的內存損壞。</ATR_SkyMindDisconnectionRisk>
+	<!--EN: Disconnection from the SkyMind network while the operation is in progress will result in severe consequences. Memory corruption of varying degree is guaranteed if improper disconnection occurs.-->
+	
+	<ATR_ResurrectionSuccessful>機械單元 {0} 已成功激活至最小容量。該單元必須重新啟動才能恢復其全部功能。</ATR_ResurrectionSuccessful>
+	<!--EN: Mechanical unit {0} was successfully reactivated to minimal capacity. The unit must reboot before returning to full functionality.-->
+	<ATR_ResurrectionFailedInvalidPawn>目標 {0}激活失敗，因為它並不是以該方法激活的有效目標。目標必須是機械體(AT Reforged 設置) 且必須要擁有完整的核心。</ATR_ResurrectionFailedInvalidPawn>
+	<!--EN: The target, {0}, was not reactivated as it is not a valid target for resurrection in this manner. Targets must be mechanical (AT Reforged settings) and must have an intact core.-->
+	<ATR_ResurrectionFailedDroneOnly>無人機復活套件只能用於無人機或動物，但 {0} 是一個完全自主的智能人形！</ATR_ResurrectionFailedDroneOnly>
+	<!--EN: The drone resurrection kit may only be used on drones or animals, and {0} is considered a fully autonomous mechanical unit!-->
+	
+    <ATR_InsufficientPoints>當前操作至少需要 {0} 個點數。</ATR_InsufficientPoints>
+	<!--EN: At least {0} points are required for this operation.-->
+
+	<!-- Skill Upgrades -->
+	<ATR_PawnBeingModified>技能與興趣： </ATR_PawnBeingModified>
+	<!--EN: Skills and passions for: -->
+	<ATR_CurrentXP> 到達下一等級所需經驗值： </ATR_CurrentXP>
+	<!--EN: XP required for next level: -->
+	<ATR_TodaysXP> 當前經驗值： </ATR_TodaysXP>
+	<!--EN: XP today: -->
+
+	<ATR_AddSkillPoints>傳輸點數到 {0}</ATR_AddSkillPoints>
+	<!--EN: Inject points into {0} -->
+	<ATR_AvailableSkillPoints>可用點數： {0}</ATR_AvailableSkillPoints>
+	<!--EN: Available points : {0}-->
+	<ATR_AvailableSkillPointsDesc>注意：技能點數傳輸額度受限於個人的學習能力和日常理解極限。興趣點傳輸額度則取決於個人的學習能力和預先存在的興趣。進行超額傳輸是低效的。</ATR_AvailableSkillPointsDesc>
+	<!--EN: Note: Insight injection is subject to an individual's learning capabilities as well as daily comprehension limits. Passion injection is subject to individual learning capability as well as pre-existing passions. Overstimulation is inefficient.-->
+	
+    <!-- Hacking Interface -->
+    <ATR_HackInterfaceTitle>網絡攻防指令等待中</ATR_HackInterfaceTitle>
+	<!--EN: Awaiting cyberwarfare directive.-->
+    <ATR_ConfirmHack>是否授權目標操作?</ATR_ConfirmHack>
+	<!--EN: Authorize target operation?-->
+    <ATR_ConfirmhackDesc>所有的入侵攻擊都有一定的風險。失敗可能意味著外交損害、自動反制措施激活或者是受到某種形式的報復。</ATR_ConfirmhackDesc>
+	<!--EN: All hacks have inherent risks. Failure could mean diplomatic damage, an automatic countermeasure activation, or some form of retaliation.-->
+
+    <ATR_HackOpCost>花費： {0}</ATR_HackOpCost>
+	<!--EN: Cost: {0}-->
+    <ATR_SuccessChance>預估的成功機率： {0}%</ATR_SuccessChance>
+	<!--EN: Estimated success chance: {0}%-->
+
+    <ATR_AvailableHackingPoints>可用點數： {0}。時間懲罰： {1}。</ATR_AvailableHackingPoints>
+	<!--EN: Available points: {0}. Time penalty: {1}.-->
+    <ATR_AvailableHackingPointsDesc>注意：啟動入侵的成本是基本操作成本乘以自上次入侵以來的時間（對於頻繁使用的懲罰）的函數。 \n投入更多的點數會增加成功的機率。</ATR_AvailableHackingPointsDesc>
+	<!--EN: Note: The cost of initiating hacks is a function of base operation cost multiplied by time since the last hack (penalty for frequent usage).\nDedicating more points increases success likelihood.-->
+
+        <!-- Guidance Hack -->
+    <ATR_GuidanceHack>強制對一個派系的導航系統進行重定位</ATR_GuidanceHack>
+	<!--EN: Force a redirect of a faction's guidance system-->
+    <ATR_GuidanceHackDesc>嘗試破解一個派系的導航系統，以將某些內容重定位到當前地圖，但是無法保證你將會收到什麼，它可能是補給品、一艘貿易船、一名囚犯————或者是敵方駐軍的調度。</ATR_GuidanceHackDesc>
+	<!--EN: Attempt a hack of a faction's guidance system in an attempt to redirect something to this map. There is no guarantee what the contents of what will be sent. It could be supplies, a trade ship, a prisoner - or an enemy garrison transfer.-->
+
+        <!-- Propaganda Hack -->
+    <ATR_PropagandaHack>開展有針對性的正面宣傳活動</ATR_PropagandaHack>
+	<!--EN: Deploy a targetted positive-propaganda campaign-->
+    <ATR_PropagandaHackDesc>嘗試進行專門且有針對性的宣傳活動來以影響目標派系的主要成員，使其有利於我方殖民地。但由於政治影響的不透明性，我們無法得知其確切的結果。</ATR_PropagandaHackDesc>
+	<!--EN: Attempt a dedicated and specifically targetted campaign to influence key members of a target faction in favor of the colony. Due to the opaque nature of political influence, the exact outcome is unknown.-->
+
+        <!-- Espionage Hack -->
+    <ATR_EspionageHack>開展間諜活動以獲取任務</ATR_EspionageHack>
+	<!--EN: Initiate an espionage campaign to acquire a quest-->
+    <ATR_EspionageHackDesc>通過對所獲取的情報進行分析，從而在派系的背景情報中識別出有價值的任務。這些情報可以確定某種類型的藏匿處，但它們並不來自於特定的派系或團體。</ATR_EspionageHackDesc>
+	<!--EN: Attempt to use acquired intelligence insight to identify a promising quest from the background intelligence from a faction. It is guaranteed to produce insight into some form of a stash, but not from a particular faction or group.-->
+	
+        <!-- Disruptor Hack -->
+    <ATR_DisruptorHack>對本地敵對單位發動全圖DDOS攻擊</ATR_DisruptorHack>
+	<!--EN: Launch a map-wide DDOS attack on local hostile units-->
+    <ATR_DisruptorHackDesc>嘗試對該地圖上指定派系的具有具有天云網絡意識的對象進行本地DDOS攻擊。</ATR_DisruptorHackDesc>
+	<!--EN: Attempt a localized DDOS attack on SkyMind-capable pawns of a particular faction that are present on this map.-->
+    
+    <!-- Initialize Mind Dialog/Keys -->
+	<ATR_InitializeMindTitle>機械單元需要進行初始化</ATR_InitializeMindTitle>
+	<!--EN: Mechanical unit needs initialization-->
+	<ATR_InitializeMindDesc>新連接的核心接口已經準備好存儲意識，但尚未初始化。如果可用，它可以與任何已連接天云網絡的對象進行意識轉移，或者也可以允許它自己生成意識。</ATR_InitializeMindDesc>
+	<!--EN: The newly connected core interface is ready to contain an intelligence, but has not yet initialized one. An intelligence may be transferred from any SkyMind-linked pawns if available or it may be permitted to form a personality on its own.-->
+	
+	<ATR_SkyMindInitialization>在天云網絡中進行初始化</ATR_SkyMindInitialization>
+	<!--EN: Initialize from SkyMind-->
+	<ATR_AutomaticInitialization>自動初始化</ATR_AutomaticInitialization>
+	<!--EN: Initialize automatically-->
+
+    <!-- Maintenance Level Setter Dialog -->
+    <ATR_SetTargetMaintenanceLevel>所需維護級別： {0}%</ATR_SetTargetMaintenanceLevel>
+	<!--EN: Desired maintenance level: {0}%-->
+	
+</LanguageData>

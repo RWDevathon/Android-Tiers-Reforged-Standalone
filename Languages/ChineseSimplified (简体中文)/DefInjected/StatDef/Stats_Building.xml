@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechanicalSurgerySuccessChanceFactor.label>机械手术成功机会的因素</ATR_MechanicalSurgerySuccessChanceFactor.label>
+<ATR_MechanicalSurgerySuccessChanceFactor.description>在这里执行机械单元手术成功几率的乘数。 机械手术的成功机会还受到许多其他因素的影响，包括机械师的能力。</ATR_MechanicalSurgerySuccessChanceFactor.description>
+<ATR_MechanicalTendQualityOffset.label>机械体倾向质量偏移</ATR_MechanicalTendQualityOffset.label>
+<ATR_MechanicalTendQualityOffset.description>机械体倾向质量被该值抵消。</ATR_MechanicalTendQualityOffset.description>
+</LanguageData>

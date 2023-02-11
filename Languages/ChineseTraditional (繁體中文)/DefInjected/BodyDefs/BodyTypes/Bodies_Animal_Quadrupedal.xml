@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<ATR_MechQuadrupedal.label>四足無人機</ATR_MechQuadrupedal.label>
+<ATR_MechQuadrupedal.corePart.parts.4.customLabel>左散熱器</ATR_MechQuadrupedal.corePart.parts.4.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.5.customLabel>右散熱器</ATR_MechQuadrupedal.corePart.parts.5.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.1.customLabel>左視覺傳感器</ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.1.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.2.customLabel>右視覺傳感器</ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.2.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.3.customLabel>左聽力傳感器</ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.3.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.4.customLabel>右聽力傳感器</ATR_MechQuadrupedal.corePart.parts.8.parts.ATR_MechanicalHead.parts.4.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.9.customLabel>前端左腿</ATR_MechQuadrupedal.corePart.parts.9.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.9.parts.ATR_MechanicalFoot.customLabel>左前爪</ATR_MechQuadrupedal.corePart.parts.9.parts.ATR_MechanicalFoot.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.10.customLabel>前端右腿</ATR_MechQuadrupedal.corePart.parts.10.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.10.parts.ATR_MechanicalFoot.customLabel>右前爪</ATR_MechQuadrupedal.corePart.parts.10.parts.ATR_MechanicalFoot.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.11.customLabel>後端左腿</ATR_MechQuadrupedal.corePart.parts.11.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.11.parts.ATR_MechanicalFoot.customLabel>左後爪</ATR_MechQuadrupedal.corePart.parts.11.parts.ATR_MechanicalFoot.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.12.customLabel>後端右腿</ATR_MechQuadrupedal.corePart.parts.12.customLabel>
+<ATR_MechQuadrupedal.corePart.parts.12.parts.ATR_MechanicalFoot.customLabel>右後爪</ATR_MechQuadrupedal.corePart.parts.12.parts.ATR_MechanicalFoot.customLabel>
+</LanguageData>

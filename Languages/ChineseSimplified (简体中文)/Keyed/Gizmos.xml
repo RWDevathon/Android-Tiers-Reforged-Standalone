@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- AutoDoor -->
+	<ATR_AutoDoorOpen>打开</ATR_AutoDoorOpen>
+	<!--EN: Open-->
+	<ATR_AutoDoorOpenDescription>通过天云核心远程开启。</ATR_AutoDoorOpenDescription>
+	<!--EN: Open remotely via a SkyCloud core.-->
+	<ATR_AutoDoorClose>关闭</ATR_AutoDoorClose>
+	<!--EN: Close-->
+	<ATR_AutoDoorCloseDescription>通过天云服务器远程关闭。</ATR_AutoDoorCloseDescription>
+	<!--EN: Close remotely via a SkyCloud server.-->
+	
+	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>服务器未连接至天云网络</ATR_ServerNetworkConnectionNeeded>
+	<!--EN: Server not connected to SkyMind network.-->
+
+	<ATR_SkillMode>技能模式</ATR_SkillMode>
+	<!--EN: Skill Mode-->
+	<ATR_SkillModeDesc>此服务器已经分配给了技能点生成，单击切换至防卫。</ATR_SkillModeDesc>
+	<!--EN: This server is assigned to skill point generation. Click to switch to security.-->
+	
+	<ATR_SecurityMode>防卫模式</ATR_SecurityMode>
+	<!--EN: Security Mode-->
+	<ATR_SecurityModeDesc>此服务器已经分配给了防卫点生成，单击切换至入侵。</ATR_SecurityModeDesc>
+	<!--EN: This server is assigned to security point generation. Click to switch to hacking.-->
+	
+	<ATR_HackingMode>入侵模式</ATR_HackingMode>
+	<!--EN: Hacking Mode-->
+	<ATR_HackingModeDesc>此服务器已经分配给了入侵点生成，单击切换至技能。</ATR_HackingModeDesc>
+	<!--EN: This server is assigned to hacking point generation. Click to switch to skill.-->
+
+    <ATR_HackingWindow>尝试入侵</ATR_HackingWindow>
+	<!--EN: Attempt Hack-->
+    <ATR_HackingWindowDesc>开放入侵接口，允许使用入侵点数进行非法活动。</ATR_HackingWindowDesc>
+	<!--EN: Open the hacking interface, allowing for the usage of hacking points to engage in nefarious activity.-->
+
+	<ATR_SwitchToSkillMode>无效！</ATR_SwitchToSkillMode>
+	<!--EN: Inactive!-->
+	<ATR_SwitchToSkillModeDesc>当前服务器处于非法状态，单击切换至技能。</ATR_SwitchToSkillModeDesc>
+	<!--EN: This server is in an illegal state. Click to switch to skill.-->
+	
+	<!-- SkyMind -->
+	<ATR_ConnectSkyMind>连接至天云网络</ATR_ConnectSkyMind>
+	<!--EN: Connect to SkyMind-->
+	<ATR_ConnectSkyMindDesc>将该殖民者连接到天云网络来允许其进行思维操作或代理控制。</ATR_ConnectSkyMindDesc>
+	<!--EN: Connect this colonist to the SkyMind network to allow mind operations or surrogate controls.-->
+	
+	<!-- Core -->
+	<ATR_CloudPawnInfo>信息</ATR_CloudPawnInfo>
+	<!--EN: Infos-->
+	<ATR_CloudPawnInfoDesc>获取有关天云核心意识的信息。</ATR_CloudPawnInfoDesc>
+	<!--EN: Get information about SkyMind intelligences.-->
+	
+	<ATR_RemoveCloudPawn>删除</ATR_RemoveCloudPawn>
+	<!--EN: Remove-->
+	<ATR_RemoveCloudPawnDesc>删除天云网络意识体。</ATR_RemoveCloudPawnDesc>
+	<!--EN: Remove a SkyMind intelligence-->
+	<ATR_RemoveCloudPawnConfirm>从天云网络中删除 {0} 将会永久破坏该意识，这被认为是谋杀。</ATR_RemoveCloudPawnConfirm>
+	<!--EN: Flushing {0} from the SkyMind network will permanently destroy the intelligence. This is considered murder.-->
+	
+	<ATR_ReplicateCloudPawn>复制</ATR_ReplicateCloudPawn>
+	<!--EN: Replicate-->
+	<ATR_ReplicateCloudPawnDesc>复制天云网络意识。</ATR_ReplicateCloudPawnDesc>
+	<!--EN: Replicate a SkyMind intelligence.-->
+	
+	<ATR_Skills>技能</ATR_Skills>
+	<!--EN: Skills-->
+	<ATR_SkillsDesc>打开技能清单，允许使用服务器技能点数来兑换经验和兴趣点。</ATR_SkillsDesc>
+	<!--EN: Open skill workshop, allowing exchange of server skill points for experience and passions.-->
+	
+	<ATR_ControlSurrogate>连接</ATR_ControlSurrogate>
+	<!--EN: Connect-->
+	<ATR_ControlSurrogateDesc>控制选定的无主机代理人形</ATR_ControlSurrogateDesc>
+	<!--EN: Take control of the selected hostless surrogate.-->
+	
+	<ATR_DisconnectCloudPawn>断开连接</ATR_DisconnectCloudPawn>
+	<!--EN: Disconnect-->
+	<ATR_DisconnectCloudPawnDesc>断开天云网络意识与代理人的连接</ATR_DisconnectCloudPawnDesc>
+	<!--EN: Disconnect a SkyMind consciousness from its surrogates.-->
+	
+	<ATR_ControlCaravanSurrogate>恢复</ATR_ControlCaravanSurrogate>
+	<!--EN: Recover-->
+	<ATR_ControlCaravanSurrogateDesc>在远征队中恢复无主的代理人形的连接</ATR_ControlCaravanSurrogateDesc>
+	<!--EN: Recover a hostless surrogate in a caravan.-->
+	
+	<!-- Link -->
+    <ATR_Surrogate>代理人形</ATR_Surrogate>
+	<!--EN: surrogate-->
+	
+	<ATR_AbsorbExperience>思维同化</ATR_AbsorbExperience>
+	<!--EN: Mind absorption-->
+	<ATR_AbsorbExperienceDesc>吸收囚犯思维中过往的经验来获取技能和入侵点数</ATR_AbsorbExperienceDesc>
+	<!--EN: Absorb the experience of a prisoner's intelligence for skill and hacking points.-->
+	<ATR_AbsorbExperienceConfirm>这样的操作是以囚犯的生命为代价来抽取其有用的技能和入侵知识，这被认为是谋杀。</ATR_AbsorbExperienceConfirm>
+	<!--EN: This operation extracts useful insights in skills and hacking at the cost of the prisoner's life. This is considered murder.-->
+	
+	<ATR_DownloadCloudPawn>下载</ATR_DownloadCloudPawn>
+	<!--EN: Download-->
+	<ATR_DownloadCloudPawnDesc>下载天云核心储存的一个意识到当前对象</ATR_DownloadCloudPawnDesc>
+	<!--EN: Download a SkyMind intelligence into this pawn.-->
+	<ATR_DownloadCloudPawnConfirm>这项操作会将天云核心的该意识完全转移到此对象中，其意识也将从天云核心中消失</ATR_DownloadCloudPawnConfirm>
+	<!--EN: This operation fully transfers a SkyMind intelligence into this pawn. The intelligence will not persist in the network.-->
+	
+	<ATR_DisconnectSurrogate>断开</ATR_DisconnectSurrogate>
+	<!--EN: Disconnect-->
+	<ATR_DisconnectSurrogateDesc>断开所有代理链接。</ATR_DisconnectSurrogateDesc>
+	<!--EN: Disconnect all surrogate links.-->
+	
+	<ATR_ToggleControlMode>切换控件</ATR_ToggleControlMode>
+	<!--EN: Toggle Controls-->
+	<ATR_ToggleControlModeDesc>切换代理控制模式，允许进行代理控制但禁用天云核心对其操作。</ATR_ToggleControlModeDesc>
+	<!--EN: Toggle surrogate control mode, allowing for surrogate controls but disabling SkyMind operations.-->
+	
+	<ATR_Permute>置换</ATR_Permute>
+	<!--EN: Permute-->
+	<ATR_PermuteDesc>将当前选定的殖民者的意识与另一位殖民者置换。</ATR_PermuteDesc>
+	<!--EN: Permute the consciousness of the currently selected colonist with another colonist.-->
+	<ATR_PermuteConfirm>这项置换将会交换 {0} 和 {1} 的意识。</ATR_PermuteConfirm>
+	<!--EN: This operation will swap the intelligences of {0} and {1}.-->
+	
+	<ATR_Transfer>转移</ATR_Transfer>
+	<!--EN: Transfer-->
+	<ATR_TransferDesc>将当前选定的殖民者的意识转移到有机代理人中。</ATR_TransferDesc>
+	<!--EN: Transfer the consciousness of the currently selected colonist into an organic surrogate.-->
+	<ATR_TransferConfirm>这项操作会将 {0} 的意识转移到目标代理人的身体中， {0} 原先的机体会失去控制，天云接收器也会在操作完成后烧毁。</ATR_TransferConfirm>
+	<!--EN: This operation will transfer {0} into the target surrogate's body. This will leave {0}'s original body mindless. The SkyMind receiver will burn out once the operation is complete.-->
+	
+	<ATR_Upload>上传</ATR_Upload>
+	<!--EN: Upload-->
+	<ATR_UploadDesc>将此意识上传至天云网络，留下的机体如何处置可进行设置（默认变成脑死亡）。</ATR_UploadDesc>
+	<!--EN: Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).-->
+	<ATR_UploadConfirm>这项操作会将其意识传输至天云网络中，抛弃躯壳变成数字化意识。</ATR_UploadConfirm>
+	<!--EN: This operation transfers this intelligence into the SkyMind network, leaving the body behind.-->
+	
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>维护</ATR_MaintenanceGizmoLabel>
+	<!--EN: Maintenance-->
+    <ATR_MaintenanceDesc>维护水平是对代理人形内部处理器和外部部件的健康状况的一种衡量，它与组件健康状况无直接关联，可以通过类似冥想的方式提高维护水平。该数值会随着时间的推移而降低，所以必须给予他们足够的空余时间来进行维护。维护不当会降低效率，如果持续时间过长，可能会导致零件故障。\n\n高水平的维护带来的好处很小，并且也会增加维护成本，这也导致大多数机器人会追求中等的维护水平。\n\n注意：提供的数值是基准率，实际值的降低速度取决于对象的维护效率（在信息选项卡中可见）</ATR_MaintenanceDesc>
+	<!--EN: Maintenance is a measure of a pawn's internal processor and external part health. Maintenance degrades over time, and must be built by regular maintenance cycling. Poor maintenance degrades efficiency, and may lead to part failures if allowed to persist for too long.\n\nA high level of maintenance provides small benefits, but also greatly increase maintenance loss.\n\nNote: provided values are baseline rates, actual fall rate depends on the pawn's maintenance efficiency (in info tab)-->
+    <ATR_MaintenanceTargetLabel>预期维护水平</ATR_MaintenanceTargetLabel>
+	<!--EN: Target maintenance-->
+    <ATR_MaintenanceTargetLabelDesc>单击以设置所需要的维护级别。</ATR_MaintenanceTargetLabelDesc>
+	<!--EN: Click to set desired maintenance level.-->
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+	<!--EN: -->
+    <ATR_MaintenanceLevelInfoFallRate>维护水平每日下降 {0} 。</ATR_MaintenanceLevelInfoFallRate>
+	<!--EN: Maintenance falls {0} per day.-->
+	
+	<!--新增内容-->
+	<!--EN: Average Maintenance, {0}: {1} day(s)-->
+	<ATR_MaintenanceEffectGizmoLabel>平均维护水平 {0}: {1} 天)</ATR_MaintenanceEffectGizmoLabel>
+	<!--EN: Positive-->
+	<ATR_MaintenanceEffectGizmoLabelPositive>良好</ATR_MaintenanceEffectGizmoLabelPositive>
+	<!--EN: Negative-->
+	<ATR_MaintenanceEffectGizmoLabelNegative>糟糕</ATR_MaintenanceEffectGizmoLabelNegative>
+	<!--EN: Average maintenance is a measure of how well maintained this unit's core memory and internal systems have been over time, and changes based on the maintenance level of the pawn. High levels will improve mood, while low levels will degrade both mood and health. It rises if maintenance is above 70% and falls if below 30%, and otherwise slowly returns to a baseline.\n\nNote: maintenance is a personal, deeply introspective activity, and therefore can largely not be done by others for a pawn except in emergency situations with a part pack.-->
+	<ATR_MaintenanceEffectDesc>平均维护水平是对这个单位的核心记忆与内部系统在长期维护后整体状态的一种评价，会随着单位所选的维护水平而发生变化。高水平会改善情绪，而低水平会降低情绪和健康。如果维护水平高于70%，它会上升；如果低于30%，它会下降，否则会慢慢回到基准线。n\n注意：维护是一种个人的、深刻的内省活动，因此很大程度上不能由他人协助完成，除非是在紧急状况下使用部件包。</ATR_MaintenanceEffectDesc>
+	
+
+</LanguageData>

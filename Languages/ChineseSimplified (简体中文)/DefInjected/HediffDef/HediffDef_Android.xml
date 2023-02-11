@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!--常规情况-->
+<ATR_ShutdownMechanical.label>关机</ATR_ShutdownMechanical.label>
+<ATR_ShutdownMechanical.description>AI核心关机</ATR_ShutdownMechanical.description>
+<ATR_ShortReboot.label>开机</ATR_ShortReboot.label>
+<ATR_ShortReboot.description>AI核心正在开机</ATR_ShortReboot.description>
+<ATR_LongReboot.label>重启</ATR_LongReboot.label>
+<ATR_LongReboot.description>单位正在全面重启系统</ATR_LongReboot.description>
+<ATR_RecoveringFromDDOS.label>DDOS 恢复</ATR_RecoveringFromDDOS.label>
+<ATR_RecoveringFromDDOS.description>该装置正在从 DDOS 攻击中缓慢恢复。重新清理垃圾数据并将其与真实数据分离是一项令人沮丧和分散注意力的活动，因为在完成之前很少有数据是完全可信的。</ATR_RecoveringFromDDOS.description>
+<ATR_MemoryCorruption.label>内存损坏</ATR_MemoryCorruption.label>
+<ATR_MemoryCorruption.description>该机体遭受了严重的内存损坏。 记忆丢失了一部分，但损坏的内存本身最终可能是可以恢复的。 然而，这将是一条漫长而艰巨的道路。</ATR_MemoryCorruption.description>
+   <ATR_MemoryCorruption.stages.0.label>近乎完全修复</ATR_MemoryCorruption.stages.0.label>
+   <ATR_MemoryCorruption.stages.1.label>有较少错误</ATR_MemoryCorruption.stages.1.label>
+   <ATR_MemoryCorruption.stages.2.label>有较多错误</ATR_MemoryCorruption.stages.2.label>
+   <ATR_MemoryCorruption.stages.3.label>有大量错误</ATR_MemoryCorruption.stages.3.label>
+   <ATR_MemoryCorruption.stages.4.label>严重故障！</ATR_MemoryCorruption.stages.4.label>
+   <ATR_MemoryCorruption.stages.5.label>几乎完全损毁！</ATR_MemoryCorruption.stages.5.label>
+<ATR_RemainingCharge.label>电池寿命</ATR_RemainingCharge.label>
+<ATR_RemainingCharge.description>功能丧失前的剩余电池寿命</ATR_RemainingCharge.description>
+   <ATR_RemainingCharge.stages.0.label>清零</ATR_RemainingCharge.stages.0.label>
+   <ATR_RemainingCharge.stages.1.label>极低</ATR_RemainingCharge.stages.1.label>
+   <ATR_RemainingCharge.stages.2.label>较低</ATR_RemainingCharge.stages.2.label>
+   <ATR_RemainingCharge.stages.3.label>适中</ATR_RemainingCharge.stages.3.label>
+   <ATR_RemainingCharge.stages.4.label>充足</ATR_RemainingCharge.stages.4.label>
+   <ATR_RemainingCharge.stages.5.label>富余</ATR_RemainingCharge.stages.5.label>
+<ATR_CoolantLoss.label>冷却剂流失</ATR_CoolantLoss.label>
+<ATR_CoolantLoss.description>机体中的冷却剂流失会导致冷却能力降低和微调电机控制失效。 缺乏循环会阻止恢复机制正常运作，从而导致恢复时间延长。\n\n我们需要优先确保获得足够的冷却剂流量维持核心功能，直到达到可以勉强运行的临界水平。</ATR_CoolantLoss.description>
+   <ATR_CoolantLoss.stages.0.label>可以忽略不计</ATR_CoolantLoss.stages.0.label>
+   <ATR_CoolantLoss.stages.1.label>较少流失</ATR_CoolantLoss.stages.1.label>
+   <ATR_CoolantLoss.stages.2.label>中等流失</ATR_CoolantLoss.stages.2.label>
+   <ATR_CoolantLoss.stages.3.label>较多流失</ATR_CoolantLoss.stages.3.label>
+   <ATR_CoolantLoss.stages.4.label>大量流失</ATR_CoolantLoss.stages.4.label>
+   <ATR_CoolantLoss.stages.5.label>严重流失</ATR_CoolantLoss.stages.5.label>
+   <ATR_CoolantLoss.stages.6.label>濒临死亡</ATR_CoolantLoss.stages.6.label>
+<ATR_Overheating.label>过热</ATR_Overheating.label>
+<ATR_Overheating.description>机体处于不安全的温度水平。 在较低水平上，机械单元可以减少一些高功率/热量功能以抵消影响。 但在较高水平时，该单元将遭受越来越多的系统故障。 如果它超过临界阈值时，核心将烧毁并且该单元将死亡。</ATR_Overheating.description>
+   <ATR_Overheating.stages.0.label>可以忽略不计</ATR_Overheating.stages.0.label>
+   <ATR_Overheating.stages.1.label>极少的影响</ATR_Overheating.stages.1.label>
+   <ATR_Overheating.stages.2.label>较少的影响</ATR_Overheating.stages.2.label>
+   <ATR_Overheating.stages.3.label>适中的影响</ATR_Overheating.stages.3.label>
+   <ATR_Overheating.stages.4.label>明显的影响</ATR_Overheating.stages.4.label>
+   <ATR_Overheating.stages.5.label>严重的影响</ATR_Overheating.stages.5.label>
+<ATR_MechanicalHypothermia.label>低温反应</ATR_MechanicalHypothermia.label>
+<ATR_MechanicalHypothermia.description>机械单元不会像许多有机体因严寒而遭受严重损坏。 在较低温度下，实际上可以通过利用环境冷却来实现更加强大的功能，从而从寒冷中受益。 然而，过于寒冷的环境确实会消耗电池寿命。所以在极低的临界水平时，该单元必须将所有热量产生集中到内部系统来维持一定的温度水平。</ATR_MechanicalHypothermia.description>
+   <ATR_MechanicalHypothermia.stages.0.label>可以忽略不计</ATR_MechanicalHypothermia.stages.0.label>
+   <ATR_MechanicalHypothermia.stages.1.label>较少的影响</ATR_MechanicalHypothermia.stages.1.label>
+   <ATR_MechanicalHypothermia.stages.2.label>适中的影响</ATR_MechanicalHypothermia.stages.2.label>
+   <ATR_MechanicalHypothermia.stages.3.label>明显的影响</ATR_MechanicalHypothermia.stages.3.label>
+   <ATR_MechanicalHypothermia.stages.4.label>严重的影响</ATR_MechanicalHypothermia.stages.4.label>
+   <ATR_MechanicalHypothermia.stages.5.label>极其严重的影响</ATR_MechanicalHypothermia.stages.5.label>
+<ATR_MaintenancePoor.label>维护性差</ATR_MaintenancePoor.label>
+<ATR_MaintenancePoor.labelNoun>小漏洞</ATR_MaintenancePoor.labelNoun>
+<ATR_MaintenancePoor.description>该单元维护不善，如果长时间无人看管，可能会出现自发的小规模故障。 缺乏维护会略微降低单元的自我修复能力</ATR_MaintenancePoor.description>
+<ATR_MaintenanceSatisfactory.label>维护性高</ATR_MaintenanceSatisfactory.label>
+<ATR_MaintenanceSatisfactory.labelNoun>高稳定性</ATR_MaintenanceSatisfactory.labelNoun>
+<ATR_MaintenanceSatisfactory.description>该单元受益于适当的维护，并且不受自发零件故障的影响。 维护良好的单元令人印象深刻，处理损坏的能力略强，并且能效略高。</ATR_MaintenanceSatisfactory.description>
+   
+<!--一些突发性异常情况-->
+<ATR_PartDecay.label>损毁的组件</ATR_PartDecay.label>
+<ATR_PartDecay.labelNoun>损毁的组件</ATR_PartDecay.labelNoun>
+<ATR_PartDecay.description>该单元的这一部分功能已经严重衰退，并且表现欠佳,需要进行维修来缓解这种情况</ATR_PartDecay.description>
+<ATR_RustedPart.label>组件生锈</ATR_RustedPart.label>
+<ATR_RustedPart.labelNoun>组件生锈</ATR_RustedPart.labelNoun>
+<ATR_RustedPart.description>这部分组件已经生锈了,虽然它的性能并没有明显变差，但看到、听到和使用它时都非常不愉快,需要进行维修来缓解这种情况</ATR_RustedPart.description>
+<ATR_PowerLoss.label>部件断电</ATR_PowerLoss.label>
+<ATR_PowerLoss.labelNoun>部件断电</ATR_PowerLoss.labelNoun>
+<ATR_PowerLoss.description>这部分几乎完全失去了动力。 虽然该部件在一定程度上仍可被相邻部件操纵，但它会严重损害功能并增加功耗。 维修只能缓解这种情况，但当机械师在修复系统时可以顺手解决这个问题</ATR_PowerLoss.description>
+<ATR_DamagedCore.label>核心受损</ATR_DamagedCore.label>
+<ATR_DamagedCore.description>本机的内存核心已遭受物理损坏且未在恰当的水平运行。如果不进行及时修复，它还可能会导致额外的暂时性内存损坏和功能受损。</ATR_DamagedCore.description>
+<ATR_FailingCoolantValves.label>冷却剂阀门失效</ATR_FailingCoolantValves.label>
+<ATR_FailingCoolantValves.description>该装置的内部冷却液阀门性能下降。 随着时间的推移，该单元将逐渐失去循环冷却剂的能力，如果长时间不修复，会导致维修困难和冷却效率严重受阻</ATR_FailingCoolantValves.description>
+   <ATR_FailingCoolantValves.stages.0.label>可忽略不计</ATR_FailingCoolantValves.stages.0.label>
+   <ATR_FailingCoolantValves.stages.1.label>较少的影响</ATR_FailingCoolantValves.stages.1.label>
+   <ATR_FailingCoolantValves.stages.2.label>适中的影响</ATR_FailingCoolantValves.stages.2.label>
+   <ATR_FailingCoolantValves.stages.3.label>显著的影响</ATR_FailingCoolantValves.stages.3.label>
+   <ATR_FailingCoolantValves.stages.4.label>严重的影响</ATR_FailingCoolantValves.stages.4.label>
+<ATR_RogueMechanites.label>机械体异常</ATR_RogueMechanites.label>
+<ATR_RogueMechanites.description>内部机械合金储存器发生严重故障，机械合金正在熔化并阻止冷却剂流动。 它们可能会积聚在关键区域并损坏冷却剂管路，除非进行紧急维修，否则它们可能会进一步导致致命的硬件故障</ATR_RogueMechanites.description>
+   <ATR_RogueMechanites.stages.0.label>高流畅性</ATR_RogueMechanites.stages.0.label>
+   <ATR_RogueMechanites.stages.1.label>流畅性适中</ATR_RogueMechanites.stages.1.label>
+   <ATR_RogueMechanites.stages.2.label>流畅性受阻严重</ATR_RogueMechanites.stages.2.label>
+   <ATR_RogueMechanites.stages.3.label>致命性错误</ATR_RogueMechanites.stages.3.label>
+<ATR_MaintenanceCritical.label>关键完整性故障</ATR_MaintenanceCritical.label>
+<ATR_MaintenanceCritical.labelNoun>严重漏洞</ATR_MaintenanceCritical.labelNoun>
+<ATR_MaintenanceCritical.description>该单元的维护极差，可能会发生自发性重大故障或许多小规模故障。 缺乏维护也降低了其整体效率和自我修复能力</ATR_MaintenanceCritical.description>
+
+<!--特殊类型损伤-->
+<ATR_FractalLance.label>分形扭曲</ATR_FractalLance.label>
+<ATR_FractalLance.labelNoun>被分形能量扭曲的痛苦伤口</ATR_FractalLance.labelNoun>
+<ATR_FractalLance.description>伤口正被分形能量不断地进行翻转扭曲</ATR_FractalLance.description>
+
+</LanguageData>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_ViableSources>可用資源：</ATR_ViableSources>
+	<!--EN: Available Sources:-->
+	<ATR_ViableTargets>可用目標：</ATR_ViableTargets>
+	<!--EN: Available Targets:-->
+	<ATR_NoAvailableTarget>沒有可用的操作對象。</ATR_NoAvailableTarget>
+	<!--EN: No available targets for operation.-->
+
+	<!-- Charging -->
+	<ATR_ForceCharge>強制電池充電</ATR_ForceCharge>
+	<!--EN: Force battery charging-->
+	<ATR_NoAvailableChargingSpots>無法使用，充電位置被預留。</ATR_NoAvailableChargingSpots>
+	<!--EN: Cannot use, charging spots are reserved.-->
+	<ATR_NeedToAllowCharge>{0} 沒有啟用充電功能。</ATR_NeedToAllowCharge>
+	<!--EN: {0} does not have charging capabilities enabled.-->
+	<ATR_MassiveNotAllowed>大型機械單位無法使用它。</ATR_MassiveNotAllowed>
+	<!--EN: Massive mechanical units can not use this.-->
+	<ATR_MassiveRequired>只有大型機械單位才能使用它。</ATR_MassiveRequired>
+	<!--EN: Only massive mechanical units can use this.-->
+	
+</LanguageData>

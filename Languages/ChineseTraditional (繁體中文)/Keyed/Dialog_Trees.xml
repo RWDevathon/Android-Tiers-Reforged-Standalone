@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>終端上緩慢地滾動著預先準備的自動循環信息，暗示了他們對此刻的交流並不感興趣</AndroidFactionGreetingHostileI>
+	<!--EN: A looped automated message slowly trawls through a prepared message indicating a lack of interest in communication at this time.-->
+	<AndroidFactionGreetingHostileII>{0} 開始對您派系的諸多缺點進行著漫長的羞辱，如果想和他們和解， {0} 要求進貢。</AndroidFactionGreetingHostileII>
+	<!--EN: {0} connects and launches into a long diatribe against your factions' many flaws. {0} demands tribute if there is to be reconciliation.-->
+	<AndroidFactionGreetingHostileIII>迎接你的只有漫長的、充滿白噪聲的沉默。。。。。。</AndroidFactionGreetingHostileIII>
+	<!--EN: A long, static-filled silence is all that greets you.-->
+	
+	<AndroidFactionGreetingWaryI> {0} 用沉穩的合成語音向 {NEGOTIATOR_labelShort} 致敬，並準備客觀公正地聽取和考慮任何提議。</AndroidFactionGreetingWaryI>
+	<!--EN: The deep mechanical voice of {0} greets {NEGOTIATOR_labelShort}, prepared to hear and consider any proposals objectively and fairly.-->
+	<AndroidFactionGreetingWaryII>一項自動回复表明 {0} 的通信已佔線，系統將會在空餘時間自動發送 {NEGOTIATOR_labelShort} 的提議。</AndroidFactionGreetingWaryII>
+	<!--EN: An automated response indicates {0} is occupied and that the system will automatically forward {NEGOTIATOR_labelShort}'s business when appropriate.-->
+	<AndroidFactionGreetingWaryIII>{0} 打開了對 {NEGOTIATOR_labelShort} 的通信頻道，警惕地詢問了您的來意， {0} 也希望此次溝通能盡快結束。</AndroidFactionGreetingWaryIII>
+	<!--EN: {0} opens communications to {NEGOTIATOR_labelShort}, proclaiming it did so cautiously and with a degree of wariness. {0} asks for business to proceed swiftly.-->
+	
+	<AndroidFactionGreetingWarmI>{0} 高度讚揚了 {NEGOTIATOR_labelShort} ，並熱情地詢問能為雙方共同事務的互利與發展做些什麼。</AndroidFactionGreetingWarmI>
+	<!--EN: {0} greets {NEGOTIATOR_labelShort} with high praise, asking what can be done for the mutual benefit and advancement of the common cause.-->
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} 收到了一條言辭頗為友善的自動回复。其中表明了他們將會在所有請求中優先考慮您的任何請求。</AndroidFactionGreetingWarmII>
+	<!--EN: {NEGOTIATOR_labelShort} is met with a kindly worded automated message. It indicates that any request will be given high priority in internal considerations.-->
+	<AndroidFactionGreetingWarmIII>{0} 立即接通並問候了 {NEGOTIATOR_labelShort}。 {0} 表示渴望能聽取您的任何提議並隨時準備提供可能的幫助。</AndroidFactionGreetingWarmIII>
+	<!--EN: {0} instantly connects and greets {NEGOTIATOR_labelShort}. {0} indicates eagerness to hear out any proposals and readily offers potential aid.-->
+	
+</LanguageData>

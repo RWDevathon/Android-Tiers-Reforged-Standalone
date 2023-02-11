@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- AutoDoor -->
+	<ATR_AutoDoorOpen>Öffnen</ATR_AutoDoorOpen>
+	<ATR_AutoDoorOpenDescription>Tür ferngesteuert öffnen.</ATR_AutoDoorOpenDescription>
+	<ATR_AutoDoorClose>Schließen</ATR_AutoDoorClose>
+	<ATR_AutoDoorCloseDescription>Tür ferngesteuert schließen.</ATR_AutoDoorCloseDescription>
+	
+	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>Server nicht verbunden - Netzwerkkarte überprüfen.</ATR_ServerNetworkConnectionNeeded>
+
+	<ATR_SkillMode>Skillmodus</ATR_SkillMode>
+	<ATR_SkillModeDesc>Server ist auf Produktion von Skillpunkten eingestellt. Klicke zum Wechsel auf Sicherheitsmodus.</ATR_SkillModeDesc>
+	
+	<ATR_SecurityMode>Sicherheitsmodus</ATR_SecurityMode>
+	<ATR_SecurityModeDesc>Server ist auf Produktion von Sicherheitspunkten eingestellt. Klicke zum Wechsel auf Hackingmodus.</ATR_SecurityModeDesc>
+	
+	<ATR_HackingMode>Hackingmodus</ATR_HackingMode>
+	<ATR_HackingModeDesc>Server ist auf Produktion von Hackingpunkten eingestellt. Klicke zum Wechsel auf Skillmodus.</ATR_HackingModeDesc>
+
+    <ATR_HackingWindow>Hacken...</ATR_HackingWindow>
+    <ATR_HackingWindowDesc>Öffne die Oberfläche für Cyberkriegsführung.</ATR_HackingWindowDesc>
+
+	<ATR_SwitchToSkillMode>Modus nicht gesetzt</ATR_SwitchToSkillMode>
+	<ATR_SwitchToSkillModeDesc>Es ist kein Modus festgelegt. Klicke zum Wechsel auf Skillmodus.</ATR_SwitchToSkillModeDesc>
+	
+	<!-- SkyMind -->
+	<ATR_ConnectSkyMind>Netzwerkverbindung etablieren</ATR_ConnectSkyMind>
+	<ATR_ConnectSkyMindDesc>Aktiviere Transmitter zur Nutzung des SkyMind Netzwerks.</ATR_ConnectSkyMindDesc>
+	
+	<!-- Core -->
+	<ATR_CloudPawnInfo>Infos...</ATR_CloudPawnInfo>
+	<ATR_CloudPawnInfoDesc>Rufe die Eigenschaften der im Kern gesicherten Bewusstseine ab.</ATR_CloudPawnInfoDesc>
+	
+	<ATR_RemoveCloudPawn>Löschen...</ATR_RemoveCloudPawn>
+	<ATR_RemoveCloudPawnDesc>Lösche eines der im Kern gesicherten Bewusstseine.</ATR_RemoveCloudPawnDesc>
+	<ATR_RemoveCloudPawnConfirm>Hinweis: {0} zu löschen würde als Mord betrachtet. Soll {0} wirklich unwiderruflich gelöscht werden?</ATR_RemoveCloudPawnConfirm>
+	
+	<ATR_ReplicateCloudPawn>Kopieren...</ATR_ReplicateCloudPawn>
+	<ATR_ReplicateCloudPawnDesc>Kopiere ein Bewusstsein in einen freien Platz.</ATR_ReplicateCloudPawnDesc>
+	
+	<ATR_Skills>Skills</ATR_Skills>
+	<ATR_SkillsDesc>Öffne die Oberfläche zu Skillpunktvergabe.</ATR_SkillsDesc>
+	
+	<ATR_ControlSurrogate>Verbinden...</ATR_ControlSurrogate>
+	<ATR_ControlSurrogateDesc>Eine getrennte Marionette verbinden.</ATR_ControlSurrogateDesc>
+
+	<ATR_DisconnectCloudPawn>Trennen...</ATR_DisconnectCloudPawn>
+	<ATR_DisconnectCloudPawnDesc>Ein Bewusstsein im Kern von seiner Marionette trennen.</ATR_DisconnectCloudPawnDesc>
+	
+	<ATR_ControlCaravanSurrogate>Neu verbinden...</ATR_ControlCaravanSurrogate>
+	<ATR_ControlCaravanSurrogateDesc>Eine vom Netzwerk getrennte Marionette in einer Karavane neu verbinden.</ATR_ControlCaravanSurrogateDesc>
+	
+	<!-- Link -->
+    <ATR_Surrogate>Marionette</ATR_Surrogate>
+	
+	<ATR_AbsorbExperience>Bewusstseinsauflösung</ATR_AbsorbExperience>
+	<ATR_AbsorbExperienceDesc>Absorbiere die Errinnerungen und Fähigheiten zur Nutzung als Punkten.</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceConfirm>Hinweis: Das Auflösen eines Bewusstseins wir als Mord betrachtet. Soll {0} wirklich unwiederbringlich geopfert werden?</ATR_AbsorbExperienceConfirm>
+	
+	<ATR_DownloadCloudPawn>Download</ATR_DownloadCloudPawn>
+	<ATR_DownloadCloudPawnDesc>Speichere ein Bewusstsein aus dem Kern in diesem Körper.</ATR_DownloadCloudPawnDesc>
+	<ATR_DownloadCloudPawnConfirm>Dieser Vorgang verschiebt ein Bewusstsein aus dem Kern in diesen Körper. Sollte der Körper bereits ein Bewusstsein besitzen wird dieses sterben. Soll {0} wirklich heruntergeladen werden?</ATR_DownloadCloudPawnConfirm>
+	
+	<ATR_DisconnectSurrogate>Trennen</ATR_DisconnectSurrogate>
+	<ATR_DisconnectSurrogateDesc>Trenne die Verbindung aller mit dem Kern verbundenen Marionetten.</ATR_DisconnectSurrogateDesc>
+	
+	<ATR_ToggleControlMode>Fernsteuermodus</ATR_ToggleControlMode>
+	<ATR_ToggleControlModeDesc>Wechsle in den Fernsteuermodus um Marionetten zu kontrollieren. Dies deaktiviert andere Netzwerkvorgänge.</ATR_ToggleControlModeDesc>
+	
+	<ATR_Permute>Tauschen...</ATR_Permute>
+	<ATR_PermuteDesc>Tausche das Bewusstsein dieses Körpers mit dem eines Anderen. Dabei geht nichts verloren.</ATR_PermuteDesc>
+	<ATR_PermuteConfirm>Dieser Vorgang tauscht das Bewusstsein von {0} mit dem von {1}. Sollte es währenddessen zu einer Unterbrechung der Stromversorgung kommen, könnten Beide sterben. Vorgang einleiten?</ATR_PermuteConfirm>
+	
+	<ATR_Transfer>Übertragen...</ATR_Transfer>
+	<ATR_TransferDesc>Verlasse deinen derzeitigen Körper und übernehme eine organische Marionette.</ATR_TransferDesc>
+	<ATR_TransferConfirm>Dieser Vorgang wird {0} in den Körper einer Marionette übertragen und {Pawn_possessive} eigenen zurücklassen. Der Transmitter wird dabei durchbrennen. Vorgang einleiten?</ATR_TransferConfirm>
+	
+	<ATR_Upload>Upload</ATR_Upload>
+	<ATR_UploadDesc>Lade dieses Bewusstsein in den Kern hoch. Wirf vor Beginn mal einen Blick auf die Modeinstellungen um zu entscheiden was mit dem Körper passieren soll. (Standardmäßig ist dieser Vorgang tödlich für den Körper!)</ATR_UploadDesc>
+	<ATR_UploadConfirm>Dieser Vorgang lädt dieses Bewusstsein in den Kern hoch. Wirf vor Beginn mal einen Blick auf die Modeinstellungen um zu entscheiden was mit dem Körper passieren soll. (Standardmäßig ist dieser Vorgang tödlich für den Körper!) Vorgang einleiten?</ATR_UploadConfirm>
+	
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>Instandhaltung</ATR_MaintenanceGizmoLabel>
+    <ATR_MaintenanceDesc>Instandhaltung bezieht sich sowohl auf die innere wie äußere Beschaffenheit des Körpers - Das nähchstgelegene organische Äquivalent wäre vermutlich Meditation. Instandhaltung fält mit der Zeit und benötigt Zeit um wiederhergestellt zu werden. Ein niedriger Instandhaltungsgrad wirkt sich negativ auf die Effizienz aus und kann zu Ausfällen führen.\n\nDem gegenüber erhöht ein hoher Instandhaltungsgrad die Effizienz ein wenig, wenngleich es lange dauert diesen Zustand aufrecht zu erhalten. Aufgrund dessen ziehen die Meisten es vor sich diesbezüglich im Mittelfeld aufzuhalten.\n\nHinweis: Die gegebenen Werte sind Standardwerte. Genaueres findest du im Infotab der jeweiligen Einheit.</ATR_MaintenanceDesc>
+    <ATR_MaintenanceTargetLabel>Instandhaltungsziel</ATR_MaintenanceTargetLabel>
+    <ATR_MaintenanceTargetLabelDesc>Klicke zu einstellen des Instandhaltungsziels.</ATR_MaintenanceTargetLabelDesc>
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+    <ATR_MaintenanceLevelInfoFallRate>Instandhaltung fällt um {0} pro Tag.</ATR_MaintenanceLevelInfoFallRate>
+
+    <ATR_MaintenanceEffectGizmoLabel>Durchschnittlich Instandhaltung, {0}: {1} Tag(e)</ATR_MaintenanceEffectGizmoLabel>
+    <ATR_MaintenanceEffectGizmoLabelPositive>Positiv</ATR_MaintenanceEffectGizmoLabelPositive>
+    <ATR_MaintenanceEffectGizmoLabelNegative>Negativ</ATR_MaintenanceEffectGizmoLabelNegative>
+    <ATR_MaintenanceEffectDesc>Durchschnittliche Instandhaltung gibt den Trend im Zeitverlauf wieder. Ein hoher Wert wirkt sich positiv auf die Stimmung aus - ein Negativer negativ. Oberhalb von 70% steigt sie und fällt unterhalb von 30% Instandhaltung. Dazwischen kehrt sie zum Normalwert zurück.\n\nHinweis: Wartung und Instandhaltung sind sehr persönlich für mechanische Lebensformen. Nur im Fall von kritischen Fehlern sind sie bereit Hilfe in Anspruch zu nehmen.</ATR_MaintenanceEffectDesc>
+    
+</LanguageData>
