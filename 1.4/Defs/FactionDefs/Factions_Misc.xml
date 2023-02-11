@@ -30,7 +30,7 @@
 			</thingDefs>
 		</apparelStuffFilter>
 	</FactionDef>
-	
+
 	<FactionDef ParentName="FactionBase">
 		<defName>ATR_MechanicalMarauders</defName>
 		<label>Mechanical Marauders</label>
@@ -211,17 +211,17 @@
 				<options>
 					<ATR_AndroidT1CollectiveSoldier>6</ATR_AndroidT1CollectiveSoldier>
 					<ATR_AndroidT2CollectiveSoldier>8</ATR_AndroidT2CollectiveSoldier>
-					<ATR_AndroidT3CollectiveSoldier>6</ATR_AndroidT3CollectiveSoldier>
-					<ATR_AndroidT4CollectiveSoldier>2</ATR_AndroidT4CollectiveSoldier>
-					<ATR_AndroidT4CollectiveLeader>4.5</ATR_AndroidT4CollectiveLeader>
+					<ATR_AndroidT3CollectiveSoldier>4</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveSoldier>1</ATR_AndroidT4CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>0.5</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<ATR_AndroidT2CollectiveSoldier>50</ATR_AndroidT2CollectiveSoldier>
-					<ATR_AndroidT3CollectiveSoldier>10</ATR_AndroidT3CollectiveSoldier>
-					<ATR_AndroidT4CollectiveLeader>2.5</ATR_AndroidT4CollectiveLeader>
+					<ATR_AndroidT2CollectiveSoldier>5</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>1</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>0.5</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 			<li>
@@ -233,18 +233,18 @@
 					<ATR_DroneTORT>6</ATR_DroneTORT>
 				</carriers>
 				<guards>
-					<ATR_AndroidT2CollectiveSoldier>50</ATR_AndroidT2CollectiveSoldier>
-					<ATR_AndroidT3CollectiveSoldier>10</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT2CollectiveSoldier>5</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>1</ATR_AndroidT3CollectiveSoldier>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<ATR_AndroidT1CollectiveSoldier>8</ATR_AndroidT1CollectiveSoldier>
-					<ATR_AndroidT2CollectiveSoldier>24</ATR_AndroidT2CollectiveSoldier>
-					<ATR_AndroidT3CollectiveSoldier>6</ATR_AndroidT3CollectiveSoldier>
-					<ATR_AndroidT4CollectiveSoldier>2</ATR_AndroidT4CollectiveSoldier>
-					<ATR_AndroidT4CollectiveLeader>4</ATR_AndroidT4CollectiveLeader>
+					<ATR_AndroidT1CollectiveSoldier>5</ATR_AndroidT1CollectiveSoldier>
+					<ATR_AndroidT2CollectiveSoldier>8</ATR_AndroidT2CollectiveSoldier>
+					<ATR_AndroidT3CollectiveSoldier>3</ATR_AndroidT3CollectiveSoldier>
+					<ATR_AndroidT4CollectiveSoldier>1</ATR_AndroidT4CollectiveSoldier>
+					<ATR_AndroidT4CollectiveLeader>1</ATR_AndroidT4CollectiveLeader>
 				</options>
 			</li>
 		</pawnGroupMakers>

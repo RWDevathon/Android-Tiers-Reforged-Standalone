@@ -4,12 +4,13 @@
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
 		<defName>ATR_DroneWatchdog</defName>
 		<label>Watchdog unit</label>
-		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and have thus can be found in a vast number of different contexts. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as riot police.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
+		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and have thus can be found in a vast number of different contexts. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as war mounts for mechanized cavalry brigades.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
 		<statBases>
 			<MarketValue>700</MarketValue>
-			<MoveSpeed>9.0</MoveSpeed>
+			<MoveSpeed>8.0</MoveSpeed>
 			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+            <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
 		</statBases>
 		<tools>
 			<li>
@@ -75,6 +76,7 @@
 		</tools>
 		<race>
 			<body>ATR_MechQuadrupedal</body>
+			<packAnimal>true</packAnimal>
 			<predator>true</predator>
 			<baseBodySize>1.0</baseBodySize>
 			<baseHealthScale>1.2</baseHealthScale>
@@ -125,7 +127,5 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
-
 
 </Defs>

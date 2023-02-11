@@ -12,7 +12,10 @@ namespace ATReforged
         public override void CompPostMake()
         {
             base.CompPostMake();
-            AssignAttachedMote();
+            if (Pawn.Spawned)
+            {
+                AssignAttachedMote();
+            }
         }
 
         public override void CompPostPostRemoved()
@@ -24,7 +27,7 @@ namespace ATReforged
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
-            if (attachedMote == null)
+            if (attachedMote == null && Pawn.Spawned)
             {
                 AssignAttachedMote();
             }

@@ -96,7 +96,29 @@
             </li>
         </comps>
     </HediffDef>
-  
+
+    <HediffDef ParentName="ATR_SkyMindHediffBase">
+        <defName>ATR_ForeignConsciousness</defName>
+		<hediffClass>ATReforged.Hediff_ForeignConsciousness</hediffClass>
+        <label>Foreign consciousness</label>
+        <description>The consciousness controlling this body belongs to another faction. The controller will disconnect upon it being downed, and will likely trigger a core self-destruct.</description>
+        <labelNoun>a foreign consciousness</labelNoun>
+        <defaultLabelColor>(0.9, 0.0, 0.3)</defaultLabelColor>
+        <initialSeverity>0.01</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="ATReforged.HediffCompProperties_TetheredMoteSustainer">
+                <moteDef>ATR_SurrogateAttachedMote</moteDef>
+                <scale>0.8</scale>
+            </li>
+        </comps>
+    </HediffDef>
+
     <HediffDef ParentName="ATR_SkyMindHediffBase">
         <defName>ATR_MindOperation</defName>
         <label>SkyMind operation in progress</label>
@@ -120,7 +142,7 @@
             </li>
         </comps>
     </HediffDef>
-  
+
     <HediffDef ParentName="ATR_SkyMindHediffBase">
         <defName>ATR_NoController</defName>
         <label>No controller connected</label>

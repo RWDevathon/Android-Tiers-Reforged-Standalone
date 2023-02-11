@@ -94,6 +94,7 @@ namespace ATReforged
 
             // Settings for Skill Points
         public static bool receiveSkillAlert = true;
+        public static int skillPointInsertionRate = 100;
         public static float skillPointConversionRate = 0.5f;
         public static int passionSoftCap = 8;
         public static float basePointsNeededForPassion = 5000f;
@@ -389,12 +390,14 @@ namespace ATReforged
                         listingStandard.TextFieldNumericLabeled("ATR_safeSurrogateConnectivityCountBeforePenalty".Translate(), ref safeSurrogateConnectivityCountBeforePenalty, ref safeSurrogateConnectivityCountBeforePenaltyBuffer, 1, 40);
                     }
                     listingStandard.GapLine();
-                        
+
                     // SKILL POINTS
+                    string skillPointInsertionRateBuffer = skillPointInsertionRate.ToString();
                     string skillPointConversionRateBuffer = skillPointConversionRate.ToString();
                     string passionSoftCapBuffer = passionSoftCap.ToString();
                     string basePointsNeededForPassionBuffer = basePointsNeededForPassion.ToString();
                     listingStandard.CheckboxLabeled("ATR_receiveFullSkillAlert".Translate(), ref receiveSkillAlert, onChange: onChange);
+                    listingStandard.TextFieldNumericLabeled("ATR_skillPointInsertionRate".Translate(), ref skillPointInsertionRate, ref skillPointInsertionRateBuffer, 1f);
                     listingStandard.TextFieldNumericLabeled("ATR_skillPointConversionRate".Translate(), ref skillPointConversionRate, ref skillPointConversionRateBuffer, 0.01f, 10);
                     listingStandard.TextFieldNumericLabeled("ATR_passionSoftCap".Translate(), ref passionSoftCap, ref passionSoftCapBuffer, 0, 50);
                     listingStandard.TextFieldNumericLabeled("ATR_basePointsNeededForPassion".Translate(), ref basePointsNeededForPassion, ref basePointsNeededForPassionBuffer, 10, 10000);
@@ -519,6 +522,7 @@ namespace ATReforged
             safeSurrogateConnectivityCountBeforePenalty = 1;
 
             // Skills
+            skillPointInsertionRate = 100;
             skillPointConversionRate = 0.5f;
             passionSoftCap = 8;
             basePointsNeededForPassion = 5000f;
@@ -721,6 +725,7 @@ namespace ATReforged
 
             // Skills
             Scribe_Values.Look(ref receiveSkillAlert, "ATR_receiveSkillAlert", true);
+            Scribe_Values.Look(ref skillPointInsertionRate, "ATR_skillPointInsertionRate", 100);
             Scribe_Values.Look(ref skillPointConversionRate, "ATR_skillPointConversionRate", 0.5f);
             Scribe_Values.Look(ref passionSoftCap, "ATR_passionSoftCap", 8);
             Scribe_Values.Look(ref basePointsNeededForPassion, "ATR_basePointsNeededForPassion", 5000f);

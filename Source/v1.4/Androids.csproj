@@ -190,6 +190,7 @@
     <Compile Include="Components\ThingComps\CompProperties_HeatSensitive.cs" />
     <Compile Include="Components\ThingComps\CompProperties_SuperComputer.cs" />
     <Compile Include="Components\ThingComps\CompScorchPack.cs" />
+    <Compile Include="Components\ThingComps\CompRemotelyTriggered.cs" />
     <Compile Include="Components\ThingComps\CompSuperComputer.cs" />
     <Compile Include="Components\CompTargetEffect_ResurrectMechanical.cs" />
     <Compile Include="Components\SurgeryOutcomeComp_BedAndRoomMechQuality.cs" />
@@ -269,6 +270,7 @@
     <Compile Include="Components\HediffComps\HediffComp_Warper.cs" />
     <Compile Include="Components\HediffComps\HediffCompProperties_MaintenanceStageEffect.cs" />
     <Compile Include="Hediffs\HediffGiver_MechHypothermia.cs" />
+    <Compile Include="Hediffs\Hediff_ForeignConsciousness.cs" />
     <Compile Include="Hediffs\Hediff_SplitConsciousness.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
     <Compile Include="JobDrivers\JobDriver_DoMaintenanceIdle.cs" />

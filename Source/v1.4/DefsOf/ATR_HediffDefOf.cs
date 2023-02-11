@@ -28,6 +28,8 @@ namespace ATReforged
 
         public static HediffDef ATR_SplitConsciousness;
 
+        public static HediffDef ATR_ForeignConsciousness;
+
         public static HediffDef ATR_MindOperation;
 
         public static HediffDef ATR_IsolatedCore;

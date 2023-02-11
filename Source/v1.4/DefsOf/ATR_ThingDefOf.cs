@@ -14,6 +14,8 @@ namespace ATReforged
 
         public static ThingDef ATR_MechFallTargetterBeam;
 
+        public static ThingDef ATR_BedsideCharger;
+
         public static ThingDef HospitalBed;
 
         public static ThingDef ATR_FractalPill;

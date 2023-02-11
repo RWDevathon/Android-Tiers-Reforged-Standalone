@@ -479,8 +479,7 @@ namespace ATReforged
                 // Foreign controllers aren't saved, and are only needed to initialize the surrogate. Foreign surrogates operate independently until downed or killed.
                 isForeign = true;
                 surrogateLink.isForeign = true;
-                Hediff splitConsciousness = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_SplitConsciousness, surrogate);
-                surrogate.health.AddHediff(splitConsciousness);
+                surrogate.health.AddHediff(HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_ForeignConsciousness, surrogate));
             }
 
             // Remove the surrogate's NoHost hediff.

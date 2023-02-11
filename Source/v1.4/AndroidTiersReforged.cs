@@ -151,6 +151,27 @@ namespace ATReforged
                             break;
                         }
                     }
+                    // Explosive traps may be connected to the SkyMind network for remote triggering
+                    if (typeof(Building_TrapExplosive).IsAssignableFrom(thingDef.thingClass))
+                    {
+                        CompProperties cp;
+
+                        // If it didn't get a CompSkyMind from the previous step because it has no CompPowerTrader, add one now.
+                        if (!thingDef.HasComp(typeof(CompPowerTrader)))
+                        {
+                            cp = new CompProperties
+                            {
+                                compClass = typeof(CompSkyMind)
+                            };
+                            thingDef.comps.Add(cp);
+                        }
+
+                        cp = new CompProperties
+                        {
+                            compClass = typeof(CompRemotelyTriggered)
+                        };
+                        thingDef.comps.Add(cp);
+                    }
                 }
                 // All beds should have the Restrictable comp to restrict what pawn type may use it.
                 if (thingDef.IsBed)
@@ -160,6 +181,13 @@ namespace ATReforged
                         compClass = typeof(CompPawnTypeRestrictable)
                     };
                     thingDef.comps.Add(cp);
+
+                    // Non-charging beds also should have the bedside charger as a linkable building.
+                    CompProperties_AffectedByFacilities linkable = thingDef.GetCompProperties<CompProperties_AffectedByFacilities>();
+                    if (linkable != null && !typeof(Building_ChargingBed).IsAssignableFrom(thingDef.thingClass))
+                    {
+                        linkable.linkableFacilities.Add(ATR_ThingDefOf.ATR_BedsideCharger);
+                    }
                 }
             }
 

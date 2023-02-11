@@ -128,14 +128,15 @@ namespace ATReforged
                 var subsection = listingStandard.BeginHiddenSection(out float subsectionHeight);
                 subsection.ColumnWidth = (maxWidth - ColumnGap) / 2;
 
-                // Section for purchasing raw xp, 100 skill points for 100 * Settings modifier. Affected by vanilla (or patched by mod) learning speed effects.
+                // Section for purchasing raw xp, a number of skill points for that number of points * Settings modifier. Affected by vanilla (or patched by mod) learning speed effects.
                 if (subsection.ButtonText("ATR_AddSkillPoints".Translate(skillDefTranslationList[i])))
                 {
-                    if (availableSkillPoints >= 100)
+                    int insertionRate = ATReforged_Settings.skillPointInsertionRate;
+                    if (availableSkillPoints >= insertionRate)
                     { // Use vanilla stat learning to maximize compatibility. Remove skill points on complete.
-                        skillRecord.Learn(100 * ATReforged_Settings.skillPointConversionRate);
-                        Utils.gameComp.ChangeServerPoints(-100, ServerType.SkillServer);
-                        availableSkillPoints -= 100;
+                        skillRecord.Learn(insertionRate * ATReforged_Settings.skillPointConversionRate);
+                        Utils.gameComp.ChangeServerPoints(-insertionRate, ServerType.SkillServer);
+                        availableSkillPoints -= insertionRate;
                     }
                     else
                         Messages.Message("ATR_InsufficientPoints".Translate("100"), MessageTypeDefOf.NeutralEvent);

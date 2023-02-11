@@ -16,7 +16,7 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
-        <defName>ATR_AndroidT2CollectiveTrader</defName>		
+        <defName>ATR_AndroidT2CollectiveTrader</defName>
         <label>T2 Android Trader</label>
         <labelPlural>Union traders</labelPlural>
         <race>ATR_Tier2Android</race>
@@ -96,7 +96,7 @@
 		<labelPlural>Android Soldiers</labelPlural>
         <race>ATR_Tier2Android</race>
         <invNutrition>3.2</invNutrition>
-        <combatPower>40</combatPower>
+        <combatPower>110</combatPower>
         <minGenerationAge>20</minGenerationAge>
         <gearHealthRange>0.7~2.3</gearHealthRange>
         <apparelMoney>400~1000</apparelMoney>
@@ -145,7 +145,7 @@
         </apparelTags>
         <apparelMoney>1000~1500</apparelMoney>
         <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
-        <weaponMoney>330~650</weaponMoney>
+        <weaponMoney>400~650</weaponMoney>
         <weaponTags>
             <li>Gun</li>
         </weaponTags>
@@ -172,7 +172,7 @@
             </li>
         </skills>
     </PawnKindDef>
-    
+
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
         <defName>ATR_AndroidT4CollectiveSoldier</defName>
 		<label>T4 Android Soldier</label>
@@ -222,7 +222,7 @@
             </li>
         </skills>
     </PawnKindDef>
-    
+
     <PawnKindDef ParentName="ATR_AndroidCollectivePawnKindBase">
         <defName>ATR_AndroidT4CollectiveLeader</defName>
 		<label>Android leader</label>
