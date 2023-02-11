@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Computer -->
+	<ATR_SkillServersSynthesis>Skillpunkte verfügbar: {0} / {1}</ATR_SkillServersSynthesis>
+	<ATR_SkillProducedPoints>Skillpunkteproduktion: {0}</ATR_SkillProducedPoints>
+	<ATR_SkillSlotsAdded>Skillpunktekapazität: {0}</ATR_SkillSlotsAdded>
+	
+	<ATR_SecurityServersSynthesis>Sicherheitspunkte verfügbar: {0} / {1}</ATR_SecurityServersSynthesis>
+	<ATR_SecurityProducedPoints>Sicherheitspunkteproduktion: {0}</ATR_SecurityProducedPoints>
+	<ATR_SecuritySlotsAdded>Sicherheitspunktekapazität: {0}</ATR_SecuritySlotsAdded>
+	
+	<ATR_HackingServersSynthesis>Hackingpunkte verfügbar: {0} / {1}</ATR_HackingServersSynthesis>
+	<ATR_HackingProducedPoints>Hackingpunkteproduktion: {0}</ATR_HackingProducedPoints>
+	<ATR_HackingSlotsAdded>Hackingpunktekapazität: {0}</ATR_HackingSlotsAdded>
+
+    <!-- Charging -->
+    <ATR_CurrentChargerPowerConsumption>Derzeitiger Stromverbrauch: {0} W</ATR_CurrentChargerPowerConsumption>
+	
+	<!-- Heat -->
+	<ATR_CompHotSensitiveCriticalText>Kühlungskapazität überschritten: Auf Schaden gefasst machen!</ATR_CompHotSensitiveCriticalText>
+	<ATR_CompHotSensitiveDangerText>Kühlungskapazität fast erreicht: Maßnahmen erforderlich!</ATR_CompHotSensitiveDangerText>
+	<ATR_CompHotSensitiveWarningText>Kühlungskapazität unzureichend: Vorsicht ist geboten.</ATR_CompHotSensitiveWarningText>
+	<ATR_CompHotSensitiveSafeText>Kühlungskapazität ausreichend: Alles innerhalb normaler Parameter.</ATR_CompHotSensitiveSafeText>
+
+	<!-- SkyMind -->
+	<ATR_HackedWithTimer>Systemwiederherstellung vollendet in {0}.</ATR_HackedWithTimer>
+	<ATR_CryptoLocked>Zugriff verweigert - Genehmigung ungültig.</ATR_CryptoLocked>
+	<ATR_SkyMindDetected>Mit SkyMind verbunden</ATR_SkyMindDetected>
+	
+	<!-- Core -->
+	<ATR_CloudIntelligenceSummary>Bewusstseinskapazität: {0} / {1}</ATR_CloudIntelligenceSummary>
+	<ATR_AssistingIntelligenceSummary>Bewusstseine ohne Aufgabe: {0}</ATR_AssistingIntelligenceSummary>
+	
+	<!-- Link -->
+	<ATR_SkyMindOperationInProgress>Vorgang vollständig in: {0}</ATR_SkyMindOperationInProgress>
+	<ATR_SurrogateConnected>Verbunden mit {0} anderen Körpern</ATR_SurrogateConnected>
+	
+	<!-- Tower -->
+	<ATR_SkyMindNetworkSummary>Verbundene Geräte: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>

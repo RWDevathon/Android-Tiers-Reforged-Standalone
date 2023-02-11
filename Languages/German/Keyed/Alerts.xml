@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATR_AlertServerHeatCritical>Überhitzungswarnung</ATR_AlertServerHeatCritical>
+	<ATR_AlertServerHeatCriticalDesc>Ein oder mehrere Netzwerkgeräte stehen kurz vor dem Überhitzen! Dringende Maßnahmen erforderlich!</ATR_AlertServerHeatCriticalDesc>
+	
+	<ATR_AlertFullSkillServers>Skillserver voll</ATR_AlertFullSkillServers>
+    <ATR_AlertFullSkillServersDesc>Alle Skillserver haben ihre Kapazitätgrenze erreicht. Baue Neue, oder nutze die Punkte!</ATR_AlertFullSkillServersDesc>
+    
+	<ATR_AlertFullHackingServers>Hackingserver voll</ATR_AlertFullHackingServers>
+    <ATR_AlertFullHackingServersDesc>Alle Hackingserver haben ihre Kapazitätgrenze erreicht. Baue Neue, oder nutze die Punkte!</ATR_AlertFullHackingServersDesc>
+    
+    <ATR_AlertLowSecurity>Netzwerk ungeschützt</ATR_AlertLowSecurity>
+	<ATR_AlertLowSecurityDesc>Die Menge aun Sicherheitsservern ist unzureichend um Angreifer aufzuhalten. Baue Neue, oder trenne alle nicht notwendigen Geräte vom Netzwerk.</ATR_AlertLowSecurityDesc>
+
+	<ATR_NeedMechanic>Kein Mechaniker</ATR_NeedMechanic>
+	<ATR_NeedMechanicDesc>Diese Einheiten benötigen Reparaturen, aber niemand Fähiges ist als Mechaniker eingetragen.\n\n{0}\nÜberlege jemanden als Mechaniker einzutragen. Wenngleich die meisten Schäden von allein heilen, können Mechaniker die Zeit reduzieren und unerwünschte Nebeneffekte vermeiden.</ATR_NeedMechanicDesc>
+  
+</LanguageData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>Eine sich wiederholende automatische Ansage bekundet Desinterresse.</AndroidFactionGreetingHostileI>
+	<AndroidFactionGreetingHostileII>{0} beginnt sofort damit die vielen Fehler eurer Fraktion aufzuzählen und fordert Tribut im Austausch für sein Gehör.</AndroidFactionGreetingHostileII>
+	<AndroidFactionGreetingHostileIII>Statisches Rauschen ist alles was auszumachen ist. Trotzdem hat {NEGOTIATOR_labelShort} das Gefühl dass auf der anderen Seite Jemand oder Etwas zuhört...</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>Die tiefe künstliche Stimme von {0} begrüßt {NEGOTIATOR_labelShort}, bereit jeden Vorschlag objektiv und fair in Erwägung zu ziehen.</AndroidFactionGreetingWaryI>
+	<AndroidFactionGreetingWaryII>{0} ist derzeit beschäftigt. Sprechen Sie Ihre Nachricht nach dem PIEP:</AndroidFactionGreetingWaryII>
+	<AndroidFactionGreetingWaryIII>{0} öffnet den Kommunikationskanal mit {NEGOTIATOR_labelShort} vorsichtig und mit der Bitte sich kurz zu fassen.</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0} begrüßt {NEGOTIATOR_labelShort} wohlwollend und bereit Vorschläge im gemeinsamen Interesse zu erörtern.</AndroidFactionGreetingWarmI>
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} wird von einer wohlwollenden automatischen Ansage begrüßt, die verlauten lässt, dass die Begehren deiner Fraktion mit Vorrang bearbeitet werden.</AndroidFactionGreetingWarmII>
+	<AndroidFactionGreetingWarmIII>{0} ist sofort zur Stelle und begrüßt {NEGOTIATOR_labelShort} herzlich. {0} hört aufmerksam zu und stellt bereitwillig Unterstützung in Aussicht.</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>
