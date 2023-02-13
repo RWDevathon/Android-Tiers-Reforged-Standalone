@@ -66,7 +66,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<GlobalLearningFactor>2</GlobalLearningFactor>
+					<GlobalLearningFactor>1</GlobalLearningFactor>
 				</statOffsets>
                 <statFactors>
                     <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">1.6</HackingSpeed>
@@ -167,7 +167,7 @@
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant</label>
-	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete. \n\nThe assistant's constant tactical analysis can lead to paranoia and reduced work focus.</description>
+	  	<description>Installed assistant that assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.\n\nThe assistant's constant tactical analysis drains work efficiency, however.</description>
 		<stages>
 			<li>
 				<statOffsets>
@@ -190,7 +190,7 @@
   	<ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
     	<defName>ATR_CombatAssistant</defName>
     	<label>Combat assistant chip</label>
-	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.</description>
+	  	<description>This sub-core chip assists the core intelligence with a number of tasks. This assistant is specialized for combat and threat analysis scenarios. Capable of autonomously identifying tactical opportunities and suggesting real-time responses to incoming fire on the battlefield, this chip is widely considered to be responsible for stories of mechanical combat units making tactical analysts and commanders look obsolete.\n\nThe assistant's constant tactical analysis drains work efficiency, however.</description>
     	<costList>
 			<Plasteel>20</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>

@@ -987,5 +987,30 @@ namespace ATReforged
                 }
             }
         }
+
+        // Caches and returns the HediffDefs contained in the HediffGiver of a given RaceProperties.
+        public static HashSet<HediffDef> GetTemperatureHediffDefsForRace(RaceProperties raceProperties)
+        {
+            if (!cachedTemperatureHediffs.ContainsKey(raceProperties))
+            {
+                List<HediffGiverSetDef> hediffGiverSetDefs = raceProperties.hediffGiverSets;
+                HashSet<HediffDef> targetHediffs = new HashSet<HediffDef>();
+                foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
+                {
+                    foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
+                    {
+                        if (typeof(HediffGiver_Heat).IsAssignableFrom(hediffGiver.GetType()) || typeof(HediffGiver_Hypothermia).IsAssignableFrom(hediffGiver.GetType()))
+                        {
+                            targetHediffs.Add(hediffGiver.hediff);
+                        }
+                    }
+                }
+                cachedTemperatureHediffs[raceProperties] = targetHediffs;
+            }
+            return cachedTemperatureHediffs[raceProperties];
+        }
+
+        // Cached Hediffs for a particular pawn's race that count as temperature hediffs to avoid recalculation, cached when needed.
+        private static Dictionary<RaceProperties, HashSet<HediffDef>> cachedTemperatureHediffs = new Dictionary<RaceProperties, HashSet<HediffDef>>();
     }
 }

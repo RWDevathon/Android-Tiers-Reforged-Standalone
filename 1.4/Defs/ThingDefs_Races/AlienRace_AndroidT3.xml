@@ -27,11 +27,11 @@
 			<MoveSpeed>6.00</MoveSpeed>
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 			<ComfyTemperatureMax>40</ComfyTemperatureMax>
-			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
+			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
 			<MentalBreakThreshold>0.35</MentalBreakThreshold>
-			<GlobalLearningFactor>1.4</GlobalLearningFactor>
-			<SocialImpact>1.4</SocialImpact>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<GlobalLearningFactor>1.2</GlobalLearningFactor>
+			<SocialImpact>1.2</SocialImpact>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
             <ATR_MaintenanceRetention>1.4</ATR_MaintenanceRetention>
 			<Mass>92.5</Mass>
@@ -101,5 +101,5 @@
             <ComponentSpacer>2</ComponentSpacer>
 		</butcherProducts>
 	</AlienRace.ThingDef_AlienRace>
-    
+
 </Defs>

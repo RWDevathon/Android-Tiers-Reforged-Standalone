@@ -29,12 +29,12 @@
 			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
 			<ComfyTemperatureMax>45</ComfyTemperatureMax>
 			<MentalBreakThreshold>0.42</MentalBreakThreshold>
-			<GlobalLearningFactor>2</GlobalLearningFactor>
-			<WorkSpeedGlobal>1.6</WorkSpeedGlobal>
+			<GlobalLearningFactor>1.6</GlobalLearningFactor>
+			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
 			<SocialImpact>1.6</SocialImpact>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-            <ATR_MaintenanceRetention>1.6</ATR_MaintenanceRetention>
+            <ATR_MaintenanceRetention>1.8</ATR_MaintenanceRetention>
 			<Mass>72.5</Mass>
 		</statBases>
 		<tools>

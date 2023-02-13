@@ -1,7 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
 using System.Collections.Generic;
-using RimWorld;
 using Verse.AI.Group;
 
 namespace ATReforged
@@ -25,24 +24,11 @@ namespace ATReforged
                         continue;
                     }
 
-                    // Identify all hediffs that have a HediffGiver_Heat or HediffGiver_Hypothermia as their class - these are temperature hediffs.
-                    List<HediffGiverSetDef> hediffGiverSetDefs = pawn.RaceProps.hediffGiverSets;
-                    List<HediffDef> targetHediffs = new List<HediffDef>();
-                    foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
-                    {
-                        foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
-                        {
-                            if (hediffGiver.GetType() == typeof(HediffGiver_Heat) || hediffGiver.GetType() == typeof(HediffGiver_Hypothermia))
-                            {
-                                targetHediffs.Add(hediffGiver.hediff);
-                            }
-                        }
-                    }
-
                     // The targetHediffs taken in the last step are all hediffs which are temperature related and need to be checked against the hediffs present on this pawn.
+                    HashSet<HediffDef> targetHediffDefs = Utils.GetTemperatureHediffDefsForRace(pawn.RaceProps);
                     foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
                     {
-                        if (targetHediffs.Contains(hediff.def) && hediff.Severity > 0.15f)
+                        if (targetHediffDefs.Contains(hediff.def) && hediff.Severity > 0.15f)
                         {
                             __result = true;
                             return false;

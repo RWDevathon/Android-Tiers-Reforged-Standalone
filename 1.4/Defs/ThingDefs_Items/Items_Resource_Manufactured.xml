@@ -30,12 +30,12 @@
             <li>RewardSpecial</li>
         </thingSetMakerTags>
     </ThingDef>
-  
+
     <RecipeDef>
         <defName>ATR_PartPack</defName>
         <label>Make a mechanical part pack</label>
         <description>Create a pack of half-assembled parts designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Programmed mechanites shape themselves to fit more complicated tasks.</description>
-        <jobString>Making part pack</jobString>  
+        <jobString>Making part pack</jobString>
         <allowMixingIngredients>false</allowMixingIngredients>
         <ingredients>
             <li>
@@ -81,7 +81,7 @@
         <defName>ATR_MakeAIPersonaCore</defName>
         <label>Make an AI persona core</label>
         <description>Create a complexe AI core capable of sentience.</description>
-        <jobString>Making AI Core</jobString>  
+        <jobString>Making AI Core</jobString>
         <allowMixingIngredients>false</allowMixingIngredients>
         <ingredients>
             <li>
@@ -314,12 +314,12 @@
             <li>RewardSpecial</li>
         </thingSetMakerTags>
     </ThingDef>
-  
+
     <RecipeDef>
         <defName>ATR_AndroidResurrectorKit</defName>
         <label>Make an android resurrector kit</label>
         <description>Create a specialized kit of tools capable of reviving offline mechanical units to full functionality. The process of reactivating a deceased unit can be exceedingly expensive due to the inherent difficulties of restoring a deceased intelligence.</description>
-        <jobString>Making android resurrector kit</jobString>  
+        <jobString>Making android resurrector kit</jobString>
         <allowMixingIngredients>false</allowMixingIngredients>
         <ingredients>
             <li>
@@ -398,7 +398,7 @@
             <li>RewardSpecial</li>
         </thingSetMakerTags>
     </ThingDef>
-  
+
     <RecipeDef>
         <defName>ATR_DroneResurrectorKit</defName>
         <label>Make a drone resurrector kit</label>
@@ -421,14 +421,6 @@
                     </thingDefs>
                 </filter>
                 <count>20</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Gold</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
             </li>
             <li>
                 <filter>
