@@ -24,7 +24,7 @@
         <uiIconPath>Things/Pawns/Humanlikes/Tier4/ATR_TierFourExemplar</uiIconPath>
 		<statBases>
 			<MarketValue>4000</MarketValue>
-			<MoveSpeed>7.20</MoveSpeed>
+			<MoveSpeed>5.60</MoveSpeed>
 			<PsychicSensitivity>0.5</PsychicSensitivity>
 			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
 			<ComfyTemperatureMax>45</ComfyTemperatureMax>
@@ -43,8 +43,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>20</power>
-				<cooldownTime>1.2</cooldownTime>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -60,8 +60,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>20</power>
-				<cooldownTime>1.2</cooldownTime>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -77,8 +77,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>15</power>
-				<cooldownTime>1.2</cooldownTime>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<chanceFactor>0.2</chanceFactor>

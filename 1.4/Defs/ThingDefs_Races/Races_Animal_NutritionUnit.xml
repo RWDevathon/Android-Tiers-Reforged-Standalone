@@ -49,11 +49,11 @@
             <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
         </race>
 		<butcherProducts>
-			<Plasteel>20</Plasteel>
+			<Steel>40</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
     </ThingDef>
- 
+
     <PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
         <defName>ATR_DroneNutritionUnit</defName>
         <label>Nutrition unit</label>
@@ -79,5 +79,5 @@
             </li>
         </lifeStages>
     </PawnKindDef>
-    
+
 </Defs>

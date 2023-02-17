@@ -24,7 +24,7 @@
         <uiIconPath>Things/Pawns/Humanlikes/Tier1/ATR_TierOneExemplar</uiIconPath>
 		<statBases>
 			<MarketValue>1000</MarketValue>
-			<MoveSpeed>3.00</MoveSpeed>
+			<MoveSpeed>3.60</MoveSpeed>
 			<ComfyTemperatureMin>0</ComfyTemperatureMin>
 			<ComfyTemperatureMax>30</ComfyTemperatureMax>
 			<MentalBreakThreshold>0.16</MentalBreakThreshold>
@@ -43,13 +43,13 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>3</power>
-				<cooldownTime>1.2</cooldownTime>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
 						<li>
 							<def>Stun</def>
-							<amount>22</amount>
+							<amount>7</amount>
 						</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
@@ -60,13 +60,13 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>3</power>
-				<cooldownTime>1.2</cooldownTime>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
 						<li>
 							<def>Stun</def>
-							<amount>22</amount>
+							<amount>7</amount>
 						</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
@@ -76,8 +76,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>3</power>
-				<cooldownTime>1.2</cooldownTime>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<chanceFactor>0.2</chanceFactor>

@@ -3,6 +3,7 @@ using Verse;
 
 namespace ATReforged
 {
+    /*
     // Post ThingDef creation check for Mechanical CorpseDefs.
     [StaticConstructorOnStartup]
     public static class PostInitializationTweaker
@@ -24,4 +25,5 @@ namespace ATReforged
             }
         }
     }
+    */
 }

@@ -44,7 +44,8 @@
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
-			<Plasteel>20</Plasteel>
+			<Steel>40</Steel>
+			<Plasteel>10</Plasteel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>

@@ -50,7 +50,7 @@
 			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
-			<Plasteel>10</Plasteel>
+			<Steel>20</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>

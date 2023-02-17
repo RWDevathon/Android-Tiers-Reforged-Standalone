@@ -60,7 +60,7 @@ namespace ATReforged
             foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
             {
                 // Check race to see if the thingDef is for a Pawn.
-                if (thingDef != null && thingDef.race != null)
+                if (thingDef.race != null)
                 {
                     // Humanlikes get specific comps for SkyMind related things.
                     if (thingDef.race.intelligence == Intelligence.Humanlike)
@@ -82,13 +82,23 @@ namespace ATReforged
                     // Mechanical pawns do not need rest or get butchered like organics do. Mechanical pawns get the maintenance need unless they have a mod extension that prevents it.
                     if (Utils.IsConsideredMechanical(thingDef))
                     {
-                        androidDisassembly.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
-                        androidSmashing.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, true);
-                        butcherFlesh.fixedIngredientFilter.SetAllow(thingDef.race.corpseDef, false);
-                        IngestibleProperties ingestibleProps = thingDef.race?.corpseDef?.ingestible;
-                        if (ingestibleProps != null)
+                        ThingDef corpseDef = thingDef.race?.corpseDef;
+                        if (corpseDef != null)
                         {
-                            ingestibleProps.preferability = FoodPreferability.Undefined;
+                            // Eliminate rottable and spawnerFilth comps from mechanical corpses.
+                            corpseDef.comps.RemoveAll(compProperties => compProperties is CompProperties_Rottable || compProperties is CompProperties_SpawnerFilth);
+
+                            // Put android disassembly in the machining table and crafting spot (smashing) and remove from the butcher table.
+                            androidDisassembly.fixedIngredientFilter.SetAllow(corpseDef, true);
+                            androidSmashing.fixedIngredientFilter.SetAllow(corpseDef, true);
+                            butcherFlesh.fixedIngredientFilter.SetAllow(corpseDef, false);
+
+                            // Make android corpses not edible.
+                            IngestibleProperties ingestibleProps = corpseDef.ingestible;
+                            if (ingestibleProps != null)
+                            {
+                                ingestibleProps.preferability = FoodPreferability.Undefined;
+                            }
                         }
 
                         if (thingDef.GetModExtension<ATR_MechTweaker>()?.needsMaintenance == true && ATReforged_Settings.maintenanceNeedExists)

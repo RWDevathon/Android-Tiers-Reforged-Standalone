@@ -4,13 +4,12 @@
 	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
 		<defName>ATR_DroneWatchdog</defName>
 		<label>Watchdog unit</label>
-		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and have thus can be found in a vast number of different contexts. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as war mounts for mechanized cavalry brigades.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
+		<description>These drone units are unique in many ways - programmable for a wide range of tasks both military and civilian in nature, heavily armed and yet disarmingly affectionate, charge-capable and command-responsive - and are thus a well known line of mechanical biomimetics. Many serve as companions, as fearsome scouts, as mobile surveillance, or even as sappers.\n\nTheir lethality and violent capabilities have certainly earned them a reputation - a reputation they almost seem keen to keep.</description>
 		<statBases>
 			<MarketValue>700</MarketValue>
-			<MoveSpeed>8.0</MoveSpeed>
-			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-            <CaravanRidingSpeedFactor>1.6</CaravanRidingSpeedFactor>
+			<MoveSpeed>6.0</MoveSpeed>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 		</statBases>
 		<tools>
 			<li>
@@ -18,8 +17,8 @@
 				<capacities>
 					<li>Scratch</li>
 				</capacities>
-				<power>20</power>
-				<cooldownTime>1.0</cooldownTime>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -35,8 +34,8 @@
 				<capacities>
 					<li>Scratch</li>
 				</capacities>
-				<power>20</power>
-				<cooldownTime>1.0</cooldownTime>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -51,14 +50,14 @@
 				<capacities>
 					<li>Bite</li>
 				</capacities>
-				<power>30</power>
-				<cooldownTime>1.5</cooldownTime>
+				<power>20</power>
+				<cooldownTime>2.6</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
 						<li>
 							<def>Stun</def>
-							<amount>40</amount>
+							<amount>32</amount>
 						</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
@@ -68,8 +67,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>15</power>
-				<cooldownTime>1.2</cooldownTime>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<chanceFactor>0.2</chanceFactor>
 			</li>
@@ -79,11 +78,12 @@
 			<packAnimal>true</packAnimal>
 			<predator>true</predator>
 			<baseBodySize>1.0</baseBodySize>
+            <baseHungerRate>0.2</baseHungerRate>
 			<baseHealthScale>1.2</baseHealthScale>
 			<nameOnTameChance>1</nameOnTameChance>
 			<leatherDef>Leather_Patch</leatherDef>
 			<trainability>Advanced</trainability>
-			<nuzzleMtbHours>36</nuzzleMtbHours>
+			<nuzzleMtbHours>12</nuzzleMtbHours>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
@@ -97,8 +97,9 @@
 			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
-			<Plasteel>30</Plasteel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>20</Steel>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
 

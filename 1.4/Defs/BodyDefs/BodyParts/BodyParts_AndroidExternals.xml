@@ -4,7 +4,7 @@
     <BodyPartDef>
         <defName>ATR_Framework</defName>
         <label>framework</label>
-        <hitPoints>60</hitPoints>
+        <hitPoints>30</hitPoints>
         <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
         <bleedRate>0</bleedRate>
@@ -219,7 +219,7 @@
         <bleedRate>0</bleedRate>
         <solid>true</solid>
     </BodyPartDef>
-  
+
     <BodyPartDef>
         <defName>ATR_CounterWeightTail</defName>
         <label>counterweight</label>
@@ -245,7 +245,7 @@
         </tags>
         <bleedRate>0</bleedRate>
     </BodyPartDef>
-  
+
     <BodyPartDef>
         <defName>ATR_MechanicalWing</defName>
         <label>wing</label>
@@ -257,7 +257,7 @@
         </tags>
         <bleedRate>0</bleedRate>
     </BodyPartDef>
-  
+
     <BodyPartDef>
         <defName>ATR_MechanicalPropeller</defName>
         <label>propeller</label>
@@ -271,7 +271,7 @@
         <bleedRate>0</bleedRate>
         <solid>true</solid>
     </BodyPartDef>
-  
+
     <BodyPartDef>
         <defName>ATR_CounterWeightTop</defName>
         <label>small counterweight</label>

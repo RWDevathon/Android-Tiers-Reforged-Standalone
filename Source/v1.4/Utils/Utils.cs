@@ -870,8 +870,8 @@ namespace ATReforged
                 pawn.Destroy();
             }
 
-            // Androids that become blanks should also lose their interface so that they're ready for a new intelligence.
-            if (IsConsideredMechanicalAndroid(pawn))
+            // Androids that become blanks should also lose their interface (if they have them) so that they're ready for a new intelligence.
+            if (IsConsideredMechanicalAndroid(pawn) && pawn.def.GetModExtension<ATR_MechTweaker>()?.needsCoreAsAndroid == true)
             {
                 pawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, pawn.health.hediffSet.GetBrain());
                 Hediff target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
@@ -888,7 +888,7 @@ namespace ATReforged
                 if (pawn.playerSettings != null)
                     pawn.playerSettings.medCare = MedicalCareCategory.Best;
             }
-            // Non androids can not truly become blanks as they have no Core Hediff to affect. Instead, make them into a simple new pawn.
+            // Pawns that aren't core-using androids can not truly become blanks as they have no Core Hediff to affect. Instead, make them into a simple new pawn.
             else
             {
                 // Ensure the pawn has a proper name.

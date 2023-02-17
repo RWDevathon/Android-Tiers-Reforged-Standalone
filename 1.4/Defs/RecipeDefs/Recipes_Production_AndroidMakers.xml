@@ -194,7 +194,7 @@
         <defName>ATR_CreateT4Android</defName>
         <label>Create T4 Android</label>
         <description>Create a blank T4 Android from Plasteel, Gold and advanced components.</description>
-        <jobString>Making Android</jobString>  
+        <jobString>Making Android</jobString>
         <allowMixingIngredients>false</allowMixingIngredients>
         <skillRequirements>
             <Crafting>12</Crafting>
@@ -271,7 +271,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>100</count>
+                <count>40</count>
             </li>
             <li>
                 <filter>
@@ -279,7 +279,7 @@
                         <li>Plasteel</li>
                     </thingDefs>
                 </filter>
-                <count>80</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -287,7 +287,7 @@
                         <li>Uranium</li>
                     </thingDefs>
                 </filter>
-                <count>40</count>
+                <count>10</count>
             </li>
             <li>
                 <filter>
@@ -324,7 +324,7 @@
                     <li>Plasteel</li>
                 </thingDefs>
                 </filter>
-                <count>40</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -342,7 +342,7 @@
         <workAmount>16500</workAmount>
 	</RecipeDef>
 
-	
+
     <RecipeDef ParentName="ATR_AndroidMakerBase">
         <defName>ATR_CreateMineralUnit</defName>
         <label>Create drone mineral unit</label>
@@ -354,7 +354,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>80</count>
+                <count>100</count>
             </li>
             <li>
                 <filter>
@@ -362,7 +362,7 @@
                         <li>Plasteel</li>
                     </thingDefs>
                 </filter>
-                <count>60</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -396,14 +396,6 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Plasteel</li>
-                    </thingDefs>
-                </filter>
-                <count>60</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
@@ -433,14 +425,6 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Plasteel</li>
-                    </thingDefs>
-                </filter>
-                <count>10</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
                         <li>ComponentIndustrial</li>
                     </thingDefs>
                 </filter>
@@ -453,5 +437,5 @@
         <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
         <workAmount>12500</workAmount>
 	</RecipeDef>
-    
+
 </Defs>

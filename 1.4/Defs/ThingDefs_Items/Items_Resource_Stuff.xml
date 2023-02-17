@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
 	<RecipeDef>
 		<defName>ATR_Make_ChemfuelFromChemCapsule</defName>
 		<label>synthesize chemfuel from chemical capsules</label>
@@ -33,7 +33,7 @@
             <li>DrugLab</li>
         </recipeUsers>
 	</RecipeDef>
-	
+
 	<RecipeDef>
 		<defName>ATR_Make_NeutroamineFromChemCapsule</defName>
 		<label>synthesize neutroamine from chemical capsules</label>
@@ -91,37 +91,107 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-  
+
     <ThingDef ParentName="OrganicProductBase">
         <defName>ATR_NutrientSolution</defName>
         <label>nutrient solution</label>
-        <description>A thick, nutrient rich solution that vaguely tastes like milk and has an incredibly long shelf-life.</description>
+        <description>A thick slurry of high protein and high calorie substances which has a vaguely honey-like consistency, albeit with a blander taste that is neither offensive nor sweet. This solution is unstabilized, and must be treated with chemical capsules to achieve its notoriously non-spoiling state.</description>
         <graphicData>
             <texPath>Things/Items/AnimalProducts/NutrientSolution</texPath>
         </graphicData>
-        <stackLimit>150</stackLimit>
         <socialPropernessMatters>true</socialPropernessMatters>
         <statBases>
-            <MarketValue>8</MarketValue>
-            <Mass>0.04</Mass>
+            <MarketValue>2.2</MarketValue>
+            <Mass>0.045</Mass>
             <MaxHitPoints>60</MaxHitPoints>
             <Flammability>0.1</Flammability>
-            <Nutrition>0.15</Nutrition>
-            <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+            <Nutrition>0.1</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>60</daysToRotStart>
+                <daysToRotStart>6</daysToRotStart>
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
         <ingestible>
             <preferability>RawTasty</preferability>
             <foodType>AnimalProduct, Fluid</foodType>
+            <babiesCanIngest>true</babiesCanIngest>
+        </ingestible>
+        <thingCategories>
+            <li>AnimalProductRaw</li>
+        </thingCategories>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>ATR_NutritionBlock</defName>
+        <label>nutrition block</label>
+        <description>A dense, nutrition rich block created by stabilizing nutrient solution with chemical capsules. Akin to a crumbly form of cheese, this substance will never expire and is full of essential nutrients for sustenance.</description>
+        <graphicData>
+            <texPath>Things/Items/AnimalProducts/NutritionBlock</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <color>(80,125,80)</color>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <Mass>0.045</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.05</Flammability>
+            <Nutrition>0.2</Nutrition>
+            <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <ingestible>
+            <preferability>RawTasty</preferability>
+            <foodType>AnimalProduct</foodType>
         </ingestible>
         <thingCategories>
             <li>AnimalProductRaw</li>
         </thingCategories>
     </ThingDef>
+
+	<RecipeDef>
+		<defName>ATR_Make_NutritionBlockFromSolutionAndCapsules</defName>
+		<label>stabilize nutrient solution with chemical capsules</label>
+		<description>Make a batch of stabilized nutrition blocks by refining nutrient solution with chemical capsules. This is a time-intensive task.</description>
+		<jobString>Stabilizing nutrient solution with capsules.</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>1200</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_NutrientSolution</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ChemCapsule</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_ChemCapsule</li>
+                <li>ATR_NutrientSolution</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ATR_NutritionBlock>7</ATR_NutritionBlock>
+		</products>
+	    <recipeUsers>
+            <li>BiofuelRefinery</li>
+            <li>DrugLab</li>
+        </recipeUsers>
+	</RecipeDef>
 
 </Defs>

@@ -50,7 +50,7 @@
 		</appliedOnFixedBodyParts>
 		<anesthetize>false</anesthetize>
 	</RecipeDef>
- 
+
     <!-- Plasteel Plating -->
 
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
@@ -105,7 +105,7 @@
         </recipeUsers>
         <addsHediff>ATR_PlatingPlasteel</addsHediff>
     </RecipeDef>
- 
+
     <!-- Composite Plating -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>ATR_CompositePlating</defName>
@@ -123,7 +123,7 @@
 			</li>
 		</stages>
     </HediffDef>
-  
+
     <ThingDef ParentName="ATR_BodyPartFrameworkBase">
         <defName>ATR_CompositePlating</defName>
         <label>Composite Frame</label>
@@ -193,7 +193,7 @@
             <ComponentSpacer>4</ComponentSpacer>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_HydraulicFrame</defName>
 		<label>Install Hydraulic Frame</label>
@@ -221,6 +221,7 @@
         <defName>ATR_RefinedFrame</defName>
         <label>Refined Frame</label>
         <description>A chassis framework exquisitely and precisely etched, carved, and designed to look as refined and eminently noble as possible. The frame may not enhance any explicit purpose, but it certainly affects perception of its bearer.</description>
+        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
         <stages>
             <li>
                 <statOffsets>
@@ -245,7 +246,7 @@
             <Gold>12</Gold>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_RefinedFrame</defName>
 		<label>Install Refined Frame</label>
@@ -309,7 +310,7 @@
             <ComponentSpacer>4</ComponentSpacer>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_SanitaryFrame</defName>
 		<label>Install Sanitary Frame</label>
@@ -366,7 +367,7 @@
             <ComponentSpacer>6</ComponentSpacer>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_MobilityFrame</defName>
 		<label>Install Mobility Frame</label>
@@ -398,6 +399,7 @@
         <defName>ATR_SuppressorFrame</defName>
         <label>Suppressor Frame</label>
         <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
         <stages>
             <li>
                 <statOffsets>
@@ -424,7 +426,7 @@
             <ComponentSpacer>4</ComponentSpacer>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_SuppressorFrame</defName>
 		<label>Install Suppressor Frame</label>
@@ -480,7 +482,7 @@
             <ComponentSpacer>4</ComponentSpacer>
         </costList>
     </ThingDef>
-	
+
     <RecipeDef ParentName="ATR_SurgeryFramework">
 		<defName>ATR_Install_GuardianFrame</defName>
 		<label>Install Guardian Frame</label>
