@@ -20,43 +20,6 @@
         </requiredResearchFacilities>
     </ResearchProjectDef>
 
-	<ResearchProjectDef>
-		<defName>ATR_T3Androids</defName>
-		<label>T3 androids</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Tier three androids are marked by their scale and sheer capabilities. Dwarfing humans at an average height of 7-9 feet - necessary to contain the vast requisite resources for operation - and intimidating in both strength and acuity, these units are clear evolutions of human design.</description>
-		<baseCost>2000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-            <li>ATR_MechanicalOptimization</li>
-            <li>ATR_T2Androids</li>
-        </prerequisites>
-		<researchViewX>6</researchViewX>
-		<researchViewY>3</researchViewY>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-	</ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>ATR_SurrogateOptimization</defName>
-        <label>Optimized surrogate protocols</label>
-        <tab>ATR_MechResearch</tab>
-        <description>With a great deal of advancement in both fabrication capabilities and protocol optimization, it may very well be possible to develop a method for organics to both become and utilize surrogates. This is a revolutionary capability, but one fraught with moral and ethical concerns. Is this a line that shouldn't be crossed?</description>
-        <baseCost>2000</baseCost>
-        <techLevel>Spacer</techLevel>
-        <prerequisites>
-            <li>ATR_MechanicalOptimization</li>
-            <li>ATR_RemoteControlProtocols</li>
-        </prerequisites>
-        <researchViewX>6</researchViewX>
-        <researchViewY>0</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchFacilities>
-            <li>MultiAnalyzer</li>
-        </requiredResearchFacilities>
-    </ResearchProjectDef>
-
     <ResearchProjectDef>
         <defName>ATR_CommunicationOptimization</defName>
         <label>Optimized communication</label>
@@ -70,6 +33,25 @@
         </prerequisites>
         <researchViewX>6</researchViewX>
         <researchViewY>1</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_SurrogateOptimization</defName>
+        <label>Optimized surrogate protocols</label>
+        <tab>ATR_MechResearch</tab>
+        <description>With a great deal of advancement in both fabrication capabilities and protocol optimization, it may very well be possible to develop a method for organics to both become and utilize surrogates. This is a revolutionary capability, but one fraught with moral and ethical concerns. Is this a line that shouldn't be crossed?</description>
+        <baseCost>2000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_CommunicationOptimization</li>
+            <li>ATR_RemoteControlProtocols</li>
+        </prerequisites>
+        <researchViewX>6</researchViewX>
+        <researchViewY>0</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -91,33 +73,19 @@
 		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>ATR_ServerOptimization</defName>
-        <label>Server optimization</label>
-        <tab>ATR_MechResearch</tab>
-        <description>Optimizing servers for space and utility is expensive, but promises to bring revolutionary expansion to the colony's insight generation. Combining storage and generation, these servers could make older models obsolete.</description>
-        <baseCost>1000</baseCost>
-        <techLevel>Spacer</techLevel>
-        <prerequisites>
-            <li>ATR_MechanicalOptimization</li>
-        </prerequisites>
-        <researchViewX>7</researchViewX>
-        <researchViewY>0</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchFacilities>
-            <li>MultiAnalyzer</li>
-        </requiredResearchFacilities>
-    </ResearchProjectDef>
-
 	<ResearchProjectDef>
-		<defName>ATR_T4Androids</defName>
-		<label>T4 androids</label>
+		<defName>ATR_T3Androids</defName>
+		<label>T3 androids</label>
 		<tab>ATR_MechResearch</tab>
-		<description>Tier four androids are marked by their possession of an archotech AI persona core. The possession of such a thing greatly reduces the need for space and therefore size and weight. While its capabilities do not inherently exceed that of a tier three, its persona core does undeniably confer benefits.</description>
-		<baseCost>3000</baseCost>
+		<description>Tier three androids are marked by their scale and sheer capabilities. Dwarfing humans at an average height of 7-9 feet - necessary to contain the vast requisite resources for operation - and intimidating in both strength and acuity, these units are clear evolutions of human design.</description>
+		<baseCost>2000</baseCost>
 		<techLevel>Spacer</techLevel>
-		<prerequisites><li>ATR_T3Androids</li></prerequisites>
-		<researchViewX>7</researchViewX>
+		<prerequisites>
+            <li>ATR_MilitaryBiomimetics</li>
+            <li>ATR_T2Androids</li>
+			<li>ATR_AdvancedMechParts</li>
+        </prerequisites>
+		<researchViewX>6</researchViewX>
 		<researchViewY>3</researchViewY>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
@@ -143,6 +111,25 @@
     </ResearchProjectDef>
 
     <ResearchProjectDef>
+        <defName>ATR_ServerOptimization</defName>
+        <label>Server optimization</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Optimizing servers for space and utility is expensive, but promises to bring revolutionary expansion to the colony's insight generation. Combining storage and generation, these servers could make older models obsolete.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ATR_CommunicationOptimization</li>
+			<li>ATR_CoreAssistants</li>
+        </prerequisites>
+        <researchViewX>7</researchViewX>
+        <researchViewY>0</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
         <defName>ATR_RepairOptimization</defName>
         <label>Repair Optimization</label>
         <tab>ATR_MechResearch</tab>
@@ -151,6 +138,7 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>ATR_MechanicalOptimization</li>
+			<li>ATR_MechaniteAssistedRecovery</li>
         </prerequisites>
         <researchViewX>9</researchViewX>
         <researchViewY>0</researchViewY>
@@ -160,6 +148,25 @@
         </requiredResearchFacilities>
     </ResearchProjectDef>
 
+	<ResearchProjectDef>
+		<defName>ATR_T4Androids</defName>
+		<label>T4 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier four androids are marked by their possession of an archotech AI persona core. The possession of such a thing greatly reduces the need for space and therefore size and weight. While its capabilities do not inherently exceed that of a tier three, its persona core does undeniably confer benefits.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ATR_T3Androids</li>
+			<li>ATR_CoreAssistants</li>
+			<li>ATR_RepairOptimization</li>
+		</prerequisites>
+		<researchViewX>7</researchViewX>
+		<researchViewY>3</researchViewY>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+
     <ResearchProjectDef>
         <defName>ATR_SkyMindCore</defName>
         <label>SkyMind Core</label>
@@ -168,7 +175,7 @@
         <baseCost>10000</baseCost>
         <techLevel>Ultra</techLevel>
         <prerequisites>
-            <li>ATR_CommunicationOptimization</li>
+            <li>ATR_ServerOptimization</li>
             <li>ShipComputerCore</li>
         </prerequisites>
         <researchViewX>9</researchViewX>

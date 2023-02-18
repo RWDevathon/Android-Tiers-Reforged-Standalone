@@ -187,7 +187,7 @@
                 <Crafting>4</Crafting>
                 <Intellectual>4</Intellectual>
             </skillRequirements>
-            <researchPrerequisite>Electricity</researchPrerequisite>
+            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -214,7 +214,7 @@
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <recipeMaker>
-            <researchPrerequisite>ATR_MechanicalStandardization</researchPrerequisite>
+            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
             <skillRequirements>
                 <Crafting>6</Crafting>
                 <Intellectual>6</Intellectual>

@@ -89,6 +89,7 @@
             <Plasteel>10</Plasteel>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
+		<researchPrerequisite>ATR_AutonomousIndustrialization</researchPrerequisite>
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
@@ -159,6 +160,7 @@
             <Plasteel>10</Plasteel>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
+		<researchPrerequisite>ATR_AutonomousIndustrialization</researchPrerequisite>
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">

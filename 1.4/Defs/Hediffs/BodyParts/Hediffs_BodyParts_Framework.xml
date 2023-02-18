@@ -136,6 +136,7 @@
             <ComponentSpacer>2</ComponentSpacer>
             <Luciferium>5</Luciferium>
         </costList>
+		<recipeMaker><researchPrerequisite>ATR_MilitaryFrameworks</researchPrerequisite></recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryFramework">
@@ -163,58 +164,6 @@
         </recipeUsers>
         <addsHediff>ATR_CompositePlating</addsHediff>
     </RecipeDef>
-
-    <!-- Hydraulic -->
-    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>ATR_HydraulicFrame</defName>
-        <label>Hydraulic Frame</label>
-	    <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
-		<stages>
-			<li>
-				<statOffsets>
-					<CarryingCapacity>80</CarryingCapacity>
-                    <GeneralLaborSpeed>1</GeneralLaborSpeed>
-                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-				</statOffsets>
-			</li>
-		</stages>
-    </HediffDef>
-
-    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>ATR_HydraulicFrame</defName>
-        <label>Hydraulic Frame</label>
-        <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
-        <statBases>
-            <MarketValue>1000</MarketValue>
-        </statBases>
-        <costList>
-            <Steel>120</Steel>
-            <Plasteel>20</Plasteel>
-            <ComponentSpacer>4</ComponentSpacer>
-        </costList>
-    </ThingDef>
-
-    <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>ATR_Install_HydraulicFrame</defName>
-		<label>Install Hydraulic Frame</label>
-		<description>Replaces the chassis frame of this unit with a hydraulic frame, greatly enhancing weight capacity and general labor efficiency.</description>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ATR_HydraulicFrame</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>ATR_HydraulicFrame</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<addsHediff>ATR_HydraulicFrame</addsHediff>
-	</RecipeDef>
 
     <!-- Refined -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
@@ -394,61 +343,6 @@
 		<addsHediff>ATR_MobilityFrame</addsHediff>
 	</RecipeDef>
 
-    <!-- Suppressor -->
-    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
-        <defName>ATR_SuppressorFrame</defName>
-        <label>Suppressor Frame</label>
-        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
-        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
-        <stages>
-            <li>
-                <statOffsets>
-                    <MeleeDodgeChance>-10</MeleeDodgeChance>
-                </statOffsets>
-                <statFactors>
-                    <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
-                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
-                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
-                </statFactors>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
-        <defName>ATR_SuppressorFrame</defName>
-        <label>Suppressor Frame</label>
-        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
-        <statBases>
-            <MarketValue>400</MarketValue>
-        </statBases>
-        <costList>
-            <Plasteel>20</Plasteel>
-            <ComponentSpacer>4</ComponentSpacer>
-        </costList>
-    </ThingDef>
-
-    <RecipeDef ParentName="ATR_SurgeryFramework">
-		<defName>ATR_Install_SuppressorFrame</defName>
-		<label>Install Suppressor Frame</label>
-		<description>Replaces the chassis frame of this unit with a suppressor frame, greatly reducing the combat threat of this unit.</description>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>ATR_SuppressorFrame</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>ATR_SuppressorFrame</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<addsHediff>ATR_SuppressorFrame</addsHediff>
-	</RecipeDef>
-
     <!-- Guardian -->
     <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
         <defName>ATR_GuardianFrame</defName>
@@ -508,5 +402,117 @@
         </recipeUsers>
 		<addsHediff>ATR_GuardianFrame</addsHediff>
 	</RecipeDef>
+
+
+    <!-- Hydraulic -->
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
+        <defName>ATR_HydraulicFrame</defName>
+        <label>Hydraulic Frame</label>
+	    <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<CarryingCapacity>80</CarryingCapacity>
+                    <GeneralLaborSpeed>1</GeneralLaborSpeed>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
+        <defName>ATR_HydraulicFrame</defName>
+        <label>Hydraulic Frame</label>
+        <description>A chassis framework designed to maximize the amount of weight the frame can safely handle for short and long term needs. The redesigned frame also lends itself to greater efficiency in a wide range of tasks.</description>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
+        <costList>
+            <Steel>120</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+		<researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryFramework">
+		<defName>ATR_Install_HydraulicFrame</defName>
+		<label>Install Hydraulic Frame</label>
+		<description>Replaces the chassis frame of this unit with a hydraulic frame, greatly enhancing weight capacity and general labor efficiency.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_HydraulicFrame</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_HydraulicFrame</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeMaker><addsHediff>ATR_HydraulicFrame</addsHediff></recipeMaker>
+	</RecipeDef>
+
+
+    <!-- Suppressor -->
+    <HediffDef ParentName="ATR_AddedBodyPartFrameworkBase">
+        <defName>ATR_SuppressorFrame</defName>
+        <label>Suppressor Frame</label>
+        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeDodgeChance>-10</MeleeDodgeChance>
+                </statOffsets>
+                <statFactors>
+                    <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
+                    <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartFrameworkBase">
+        <defName>ATR_SuppressorFrame</defName>
+        <label>Suppressor Frame</label>
+        <description>A chassis framework designed to selectively suppress combative capabilities. This framework uses internal, separate software to impede the unit's body when attempting to utilize weaponry, and is intentionally more fragile than standard frames to reduce combat performance without impairing work capabilities.</description>
+        <statBases>
+            <MarketValue>400</MarketValue>
+        </statBases>
+        <costList>
+            <Plasteel>20</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+		<recipeMaker><researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite></recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryFramework">
+		<defName>ATR_Install_SuppressorFrame</defName>
+		<label>Install Suppressor Frame</label>
+		<description>Replaces the chassis frame of this unit with a suppressor frame, greatly reducing the combat threat of this unit.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_SuppressorFrame</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_SuppressorFrame</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<addsHediff>ATR_SuppressorFrame</addsHediff>
+	</RecipeDef>
+
 
 </Defs>
