@@ -27,7 +27,7 @@
 
 	<!-- SkyMind -->
 	<ATR_ConnectSkyMind>Connect to SkyMind</ATR_ConnectSkyMind>
-	<ATR_ConnectSkyMindDesc>Connect this colonist to the SkyMind network to allow mind operations or surrogate controls.</ATR_ConnectSkyMindDesc>
+	<ATR_ConnectSkyMindDesc>Connect this device to the SkyMind network for remote interaction.</ATR_ConnectSkyMindDesc>
 
 	<!-- Core -->
 	<ATR_CloudPawnInfo>Infos</ATR_CloudPawnInfo>

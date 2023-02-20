@@ -7,18 +7,37 @@ namespace ATReforged
 {
     internal class ThingSetMaker_RefugeePod_Patch
     {
-        // Mechanicals coming in refugee pods will likely not be downed appropriately. Apply the long reset hediff to them so that they may be properly rescued or captured safely.
+        // Factionless refugees for androids or refugees for android factions should be androids. Android refugees should do a full restart on crash.
         [HarmonyPatch(typeof(ThingSetMaker_RefugeePod), "Generate")]
         public class Generate_Patch
         {
             [HarmonyPostfix]
-            public static void Listener(ThingSetMakerParams parms, List<Thing> outThings)
+            public static void Listener(ThingSetMakerParams parms, ref List<Thing> outThings)
             {
-                foreach (Thing thing in outThings)
+                for (int i = outThings.Count - 1; i >= 0; i--)
                 {
-                    if (thing is Pawn pawn && Utils.IsConsideredMechanical(pawn))
+                    Thing thing = outThings[i];
+                    if (thing is Pawn pawn)
                     {
-                        pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        if (!Utils.IsConsideredMechanical(pawn) && (pawn.Faction != null && Utils.ReservedAndroidFactions.Contains(pawn.Faction.def.defName) || pawn.Faction == null && Utils.ReservedAndroidFactions.Contains(Faction.OfPlayer.def.defName)))
+                        {
+                            if (pawn.Faction != null)
+                            {
+                                pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawn.Faction.def.basicMemberKind, pawn.Faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowFood: true));
+
+                            }
+                            else
+                            {
+                                pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Faction.OfPlayer.def.basicMemberKind, null, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true, canGeneratePawnRelations: false, allowFood: true));
+                            }
+                            HealthUtility.DamageUntilDowned(pawn);
+                            outThings.Replace(thing, pawn);
+                        }
+
+                        if (Utils.IsConsideredMechanical(pawn))
+                        {
+                            pawn.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                        }
                     }
                 }
             }

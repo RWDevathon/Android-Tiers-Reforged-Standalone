@@ -41,9 +41,10 @@ namespace ATReforged
                     return;
                 }
                 // Mechanical drones never have gender. Generate a new name with the None name maker, ignoring xml tags.
-                else if (Utils.IsConsideredMechanicalDrone(pawn))
+                else if (Utils.IsConsideredMechanicalDrone(pawn) && pawn.def.GetModExtension<ATR_MechTweaker>()?.letPawnKindHandleDroneBackstories == false)
                 {
                     __result = PawnBioAndNameGenerator.GenerateFullPawnName(pawn.def, ATR_RulePackDefOf.ATR_DroneNoneNames, pawn.story, null, null, pawn.Faction?.ideos?.PrimaryCulture, pawn.gender, pawn.RaceProps.nameCategory, forcedLastName);
+                    
                 }
             }
         }

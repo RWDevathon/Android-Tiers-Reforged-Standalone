@@ -12,16 +12,6 @@
     </BodyPartDef>
 
     <BodyPartDef>
-        <defName>ATR_CoreIntegrityCage</defName>
-        <label>core cage</label>
-        <hitPoints>50</hitPoints>
-        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-        <skinCovered>false</skinCovered>
-        <bleedRate>0</bleedRate>
-        <solid>true</solid>
-    </BodyPartDef>
-
-    <BodyPartDef>
         <defName>ATR_MechanicalThorax</defName>
         <label>thorax</label>
         <hitPoints>40</hitPoints>

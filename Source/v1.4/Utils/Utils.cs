@@ -483,17 +483,16 @@ namespace ATReforged
                 // If untethered, create a copy of the source SkillTracker for the destination to use.
                 if (!isTethered)
                 {
-                    Pawn_SkillTracker newSkills = new Pawn_SkillTracker(dest);
+                    Pawn_SkillTracker destSkills = dest.skills;
                     foreach (SkillDef skillDef in DefDatabase<SkillDef>.AllDefsListForReading)
                     {
-                        SkillRecord newSkill = newSkills.GetSkill(skillDef);
+                        SkillRecord newSkill = destSkills.GetSkill(skillDef);
                         SkillRecord sourceSkill = source.skills.GetSkill(skillDef);
                         newSkill.Level = sourceSkill.Level;
                         newSkill.passion = sourceSkill.passion;
                         newSkill.xpSinceLastLevel = sourceSkill.xpSinceLastLevel;
                         newSkill.xpSinceMidnight = sourceSkill.xpSinceMidnight;
                     }
-                    dest.skills = newSkills;
                 }
                 // If tethered, the destination and source will share their skill tracker directly.
                 else
@@ -515,7 +514,8 @@ namespace ATReforged
                 // If untethered, copy all relations that involve the source pawn and apply them to the destination. As animals may have only one master, assign it to the destination.
                 if (!isTethered)
                 {
-                    Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
+                    Pawn_RelationsTracker destRelations = dest.relations;
+                    destRelations.ClearAllRelations();
 
                     List<Pawn> checkedOtherPawns = new List<Pawn>();
                     // Duplicate all of the source's relations. Ensure that other pawns with relations to the source also have them to the destination.
@@ -529,7 +529,7 @@ namespace ATReforged
                             {
                                 if (otherPawnRelation.otherPawn == source)
                                 {
-                                    pawnRelation.otherPawn.relations.AddDirectRelation(otherPawnRelation.def, dest);
+                                    otherPawnRelation.otherPawn = dest;
                                 }
                             }
                             checkedOtherPawns.Add(pawnRelation.otherPawn);
@@ -544,14 +544,13 @@ namespace ATReforged
                     {
                         foreach (Pawn animal in map.mapPawns.SpawnedColonyAnimals)
                         {
-                            if (animal.playerSettings == null || animal == source || animal == dest)
+                            if (animal.playerSettings == null)
                                 continue;
 
                             if (animal.playerSettings.Master != null && animal.playerSettings.Master == source)
                                 animal.playerSettings.Master = dest;
                         }
                     }
-                    dest.relations = destRelations;
                 }
                 // Tether destination relations to the source.
                 else
@@ -920,6 +919,12 @@ namespace ATReforged
 
             // Drones don't have ideos.
             pawn.ideo = null;
+
+            // Drones always take their last name (ID #) as their nickname.
+            if (pawn.Name is NameTriple name)
+            {
+                pawn.Name = new NameTriple(name.First, name.Last, name.Last);
+            }
 
             // Drones have a set skill, which is taken from their mod extension if it exists. If not, it defaults to 8 (which is the default value for the extension).
             // Since drones are incapable of learning, their passions and xp does not matter. Set it to 0 for consistency's sake.

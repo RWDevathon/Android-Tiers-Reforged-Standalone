@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Surrogate Limit Bonus -->
+    <StatDef>
+        <defName>ATR_SurrogateLimitBonus</defName>
+        <label>surrogate limit bonus</label>
+        <description>How many additional surrogates this pawn may control at once without suffering a consciousness or learning rate penalty.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <hideAtValue>0</hideAtValue>
+        <toStringStyle>Integer</toStringStyle>
+        <minValue>0</minValue>
+    </StatDef>
+
+</Defs>
