@@ -60,10 +60,13 @@
 		<li>CarnySenpai.EnableOversizedWeapons</li><!-- Dependency -->
         <li>Dubwise.DubsBadHygiene</li><!-- We both patch the same function, so the order is important. -->
         <li>Dubwise.DubsBadHygiene.Lite</li><!-- We both patch the same function, so the order is important. -->
+		<li>Orion.Hospitality</li><!-- We both patch the same function, so the order is important. -->
     </loadAfter>
 	<loadBefore>
 		<li>avilmask.CommonSense</li><!-- I'd prefer putting this under incompatibleWith, but I don't have a valid reason, unfortunately... If you're reading this, put it at the end of your list, but before any performance mods. -FG -->
 		<li>Uuugggg.SmartMedicine</li><!-- Same as CommonSense. -->
+		<li>Krkr.RocketMan</li><!-- *Don't even think about it.* -->
+		<li>majorhoff.rimthreaded</li><!-- *Don't even think about it.* -->
 	</loadBefore>
     <description><![CDATA[
 Reconstituted code of work done primarily by Atlas and aRandomKiwi with support from many others.
