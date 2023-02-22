@@ -127,17 +127,83 @@ namespace ATReforged
 
             bool playerFactionHasMechanicalColonists = false;
             bool playerFactionHasOrganicColonists = false;
-            IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
+            IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonistsAndPrisoners;
             foreach (Pawn pawn in playerPawns)
             {
-                if (Utils.IsConsideredMechanicalAndroid(pawn) && !Utils.IsSurrogate(pawn))
+                // Drone check (only for mechanical)
+                if (Utils.IsConsideredMechanicalDrone(pawn))
                 {
+                    if (!ATReforged_Settings.dronesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
                     playerFactionHasMechanicalColonists = true;
                 }
-                else if (!Utils.IsConsideredMechanical(pawn) && !Utils.IsSurrogate(pawn))
+                // Prisoner check (can be either mechanical or organic)
+                else if (pawn.IsPrisonerOfColony)
                 {
-                    playerFactionHasOrganicColonists = true;
+                    if (!ATReforged_Settings.prisonersTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
+                    if (Utils.IsConsideredMechanical(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
                 }
+                // Slave check (can be either mechanical androids or organic, only available with Ideology DLC)
+                else if (ModsConfig.IdeologyActive && pawn.IsSlaveOfColony)
+                {
+                    if (!ATReforged_Settings.slavesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+                // Surrogate check (can be mechanical androids or organic)
+                else if (Utils.IsSurrogate(pawn))
+                {
+                    if (!ATReforged_Settings.surrogatesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+                // Colonists
+                else
+                {
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+
+                // If both are true, terminate early to avoid unnecessary checks.
                 if (playerFactionHasOrganicColonists && playerFactionHasMechanicalColonists)
                 {
                     break;

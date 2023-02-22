@@ -481,9 +481,10 @@ namespace ATReforged
             try
             {
                 // If untethered, create a copy of the source SkillTracker for the destination to use.
+                // Explicitly create a new skill tracker to avoid any issues with tethered skill trackers.
                 if (!isTethered)
                 {
-                    Pawn_SkillTracker destSkills = dest.skills;
+                    Pawn_SkillTracker destSkills = new Pawn_SkillTracker(dest);
                     foreach (SkillDef skillDef in DefDatabase<SkillDef>.AllDefsListForReading)
                     {
                         SkillRecord newSkill = destSkills.GetSkill(skillDef);
@@ -493,6 +494,7 @@ namespace ATReforged
                         newSkill.xpSinceLastLevel = sourceSkill.xpSinceLastLevel;
                         newSkill.xpSinceMidnight = sourceSkill.xpSinceMidnight;
                     }
+                    dest.skills = destSkills;
                 }
                 // If tethered, the destination and source will share their skill tracker directly.
                 else
