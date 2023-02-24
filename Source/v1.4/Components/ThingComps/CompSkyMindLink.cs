@@ -76,6 +76,16 @@ namespace ATReforged
         public void ToggleControlMode()
         {
             controlMode = !controlMode;
+            // Set to controller mode
+            if (controlMode && Linked == -1)
+            {
+                Linked = -2;
+            }
+            // Return to default mode
+            else if (!controlMode && Linked == -2)
+            {
+                Linked = -1;
+            }
             if (!controlMode && HasSurrogate())
             {
                 DisconnectSurrogates();
@@ -176,44 +186,30 @@ namespace ATReforged
                     action = delegate ()
                     {
                         List<FloatMenuOption> opts = new List<FloatMenuOption>();
+                        TargetingParameters targetParameters = new TargetingParameters()
+                        {
+                            canTargetPawns = true,
+                            canTargetBuildings = false,
+                            canTargetAnimals = false,
+                            canTargetMechs = false,
+                            mapObjectTargetsMustBeAutoAttackable = false,
+                            onlyTargetIncapacitatedPawns = true,
+                            validator = delegate (TargetInfo targetInfo)
+                            {
+                                return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
+                                        && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
+                            }
+                        };
                         foreach (Map map in Find.Maps)
                         {
                             opts.Add(new FloatMenuOption(map.Parent.Label, delegate
                             {
                                 Current.Game.CurrentMap = map;
-                                TargetingParameters targetParameters = new TargetingParameters()
-                                {
-                                    canTargetPawns = true,
-                                    canTargetBuildings = false,
-                                    canTargetAnimals = false,
-                                    canTargetMechs = false,
-                                    mapObjectTargetsMustBeAutoAttackable = false,
-                                    onlyTargetIncapacitatedPawns = true,
-                                    validator = delegate (TargetInfo targetInfo)
-                                    {
-                                        return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
-                                                && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
-                                    }
-                                };
                                 Find.Targeter.BeginTargeting(targetParameters, (LocalTargetInfo target) => ConnectSurrogate((Pawn)target.Thing));
                             }));
                         }
                         if (opts.Count == 1)
                         {
-                            TargetingParameters targetParameters = new TargetingParameters()
-                            {
-                                canTargetPawns = true,
-                                canTargetBuildings = false,
-                                canTargetAnimals = false,
-                                canTargetMechs = false,
-                                mapObjectTargetsMustBeAutoAttackable = false,
-                                onlyTargetIncapacitatedPawns = true,
-                                validator = delegate (TargetInfo targetInfo)
-                                {
-                                    return targetInfo.Thing is Pawn pawn && (pawn.Faction == null || pawn.Faction.IsPlayer) && Utils.IsSurrogate(pawn)
-                                            && pawn.GetComp<CompSkyMind>().Breached == -1 && !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
-                                }
-                            };
                             Find.Targeter.BeginTargeting(targetParameters, (LocalTargetInfo target) => ConnectSurrogate((Pawn)target.Thing));
                         }
                         else if (opts.Count > 1)
@@ -445,6 +441,12 @@ namespace ATReforged
         // Connect to the provided surrogate, with this pawn as the controller.
         public void ConnectSurrogate(Pawn surrogate, bool external = false)
         {
+            // Ensure the surrogate is connected to the SkyMind network. Abort if it can't. This step only occurs for player pawns.
+            if (!external && !Utils.gameComp.AttemptSkyMindConnection(surrogate))
+            {
+                Messages.Message("ATR_CannotConnect".Translate(), surrogate, MessageTypeDefOf.RejectInput, false);
+            }
+
             // Copy this pawn into the surrogate. Player surrogates are tethered to the controller.
             Utils.Duplicate(ThisPawn, surrogate, false, !external);
             CompSkyMindLink surrogateLink = surrogate.GetComp<CompSkyMindLink>();
