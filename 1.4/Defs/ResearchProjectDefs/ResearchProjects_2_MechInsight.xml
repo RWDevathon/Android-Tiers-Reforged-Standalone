@@ -38,7 +38,6 @@
 		<baseCost>1600</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-            <li>Fabrication</li>
 			<li>ATR_MechanicalInsight</li>
         </prerequisites>
 		<researchViewX>2</researchViewX>

@@ -37,7 +37,7 @@
         <techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>ATR_MechanicalFrameworks</li>
-			<li>ATR_T1Androids</li>
+			<li>ATR_AutonomousIndustrialization</li>
 		</prerequisites>
 		<researchViewX>2</researchViewX>
 		<researchViewY>1</researchViewY>
