@@ -156,6 +156,7 @@
 		<baseCost>2000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
+            <li>Fabrication</li>
             <li>ATR_MechanicalFrameworks</li>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
