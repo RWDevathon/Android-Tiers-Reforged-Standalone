@@ -1,6 +1,0 @@
-<loadFolders>
-	<v1.4>
-    <li>/</li>
-		<li IfModActive="nals.facialanimation">1.4/FacialAnim</li>
-	</v1.4>
-</loadFolders>
