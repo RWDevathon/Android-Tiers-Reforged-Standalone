@@ -432,7 +432,7 @@
             <Plasteel>20</Plasteel>
             <ComponentSpacer>4</ComponentSpacer>
         </costList>
-		<researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite>
+		<recipeMaker><researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite></recipeMaker>
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryFramework">
