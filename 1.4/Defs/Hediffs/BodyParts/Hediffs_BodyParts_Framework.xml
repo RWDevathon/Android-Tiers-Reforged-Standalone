@@ -454,7 +454,7 @@
 				<li>ATR_HydraulicFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<recipeMaker><addsHediff>ATR_HydraulicFrame</addsHediff></recipeMaker>
+		<addsHediff>ATR_HydraulicFrame</addsHediff>
 	</RecipeDef>
 
 

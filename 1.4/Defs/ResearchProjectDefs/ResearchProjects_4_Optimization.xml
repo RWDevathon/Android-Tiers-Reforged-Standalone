@@ -32,7 +32,7 @@
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
         <researchViewX>7</researchViewX>
-        <researchViewY>2</researchViewY>
+        <researchViewY>4</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -51,7 +51,7 @@
             <li>ATR_RemoteControlProtocols</li>
         </prerequisites>
         <researchViewX>8</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewY>4.8</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -70,7 +70,7 @@
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
 		<researchViewX>7</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewY>3.2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -86,7 +86,7 @@
 			<li>ATR_AdvancedMechParts</li>
         </prerequisites>
 		<researchViewX>8</researchViewX>
-		<researchViewY>3.5</researchViewY>
+		<researchViewY>0.5</researchViewY>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
@@ -103,7 +103,7 @@
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
 		<researchViewX>7</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>2.5</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -121,7 +121,7 @@
             <li>ATR_CommunicationOptimization</li>
         </prerequisites>
         <researchViewX>8</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewY>4</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -140,7 +140,7 @@
 			<li>ATR_MechaniteAssistedRecovery</li>
         </prerequisites>
         <researchViewX>7</researchViewX>
-        <researchViewY>4</researchViewY>
+        <researchViewY>2</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -158,7 +158,7 @@
 			<li>ATR_T3Androids</li>
 		</prerequisites>
 		<researchViewX>9</researchViewX>
-		<researchViewY>3.5</researchViewY>
+		<researchViewY>0.5</researchViewY>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
@@ -176,7 +176,7 @@
             <li>ShipComputerCore</li>
         </prerequisites>
         <researchViewX>9</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewY>4</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
