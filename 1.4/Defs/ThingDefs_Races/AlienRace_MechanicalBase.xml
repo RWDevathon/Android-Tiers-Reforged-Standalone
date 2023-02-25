@@ -234,9 +234,11 @@
 			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
 			<ArmorRating_Blunt>1.00</ArmorRating_Blunt>
             <ArmorRating_Heat>1.00</ArmorRating_Heat>
+            <InjuryHealingFactor>0.2</InjuryHealingFactor>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
 			<GlobalLearningFactor>0.4</GlobalLearningFactor>
             <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0</StaggerDurationFactor>
+            <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance>
             <ATR_MaintenanceRetention>0.8</ATR_MaintenanceRetention>
 			<Mass>450</Mass>
 		</statBases>
@@ -269,8 +271,6 @@
 		</modExtensions>
         <recipes>
             <li>ATR_ShutdownMechanical</li>
-            <li>ATR_RemoveBodyPartAndroid</li>
-            <li>ATR_RestoreBodyPartAndroid</li>
         </recipes>
 	</AlienRace.ThingDef_AlienRace>
 

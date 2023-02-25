@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch>	
+<Patch>
 
 	<!-- Add the exterminator mental state think tree to the MentalStateCritical think tree so any pawn can use it -->
 	<Operation Class="PatchOperationAdd">
@@ -10,7 +10,8 @@
                 <subNodes>
                     <li Class="ThinkNode_Priority">
                         <subNodes>
-                            <li Class="JobGiver_AIFightEnemies" />
+                            <li Class="ATReforged.JobGiver_AIExterminatorFight" />
+                            <li Class="ATReforged.JobGiver_AIExterminatorSap" />
                             <li Class="JobGiver_WanderAnywhere">
                                 <maxDanger>Deadly</maxDanger>
                             </li>
@@ -20,5 +21,5 @@
             </li>
 		</value>
 	</Operation>
-    
+
 </Patch>

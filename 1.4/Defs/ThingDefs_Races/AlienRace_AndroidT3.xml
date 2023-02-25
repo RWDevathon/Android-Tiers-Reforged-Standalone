@@ -7,8 +7,22 @@
 		<description>Androids classified as tier three are often qualified by their large stature - standing at a height ranging from seven to nine feet - and impressive capabilities. They are incredibly durable, modular, and capable. Requiring extensive amounts of rare resources, they are generally only mass-produced on glitterworlds.</description>
 		<alienRace>
 			<graphicPaths>
-                <body>Things/Pawns/Humanlikes/Tier3/body/</body>
-                <head>Things/Pawns/Humanlikes/Tier3/head/</head>
+                <body>
+                    <path>Things/Pawns/Humanlikes/Tier3/body/Naked_None</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier3/body/Naked_Male</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier3/body/Naked_Female</Female>
+                        <None>Things/Pawns/Humanlikes/Tier3/body/Naked_None</None>
+                    </genderGraphics>
+                </body>
+                <head>
+                    <path>Things/Pawns/Humanlikes/Tier3/head/None_Average_Normal</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier3/head/Male_Average_Normal</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier3/head/Female_Average_Normal</Female>
+                        <None>Things/Pawns/Humanlikes/Tier3/head/None_Average_Normal</None>
+                    </genderGraphics>
+                </head>
                 <skinShader>Cutout</skinShader>
             </graphicPaths>
             <generalSettings>

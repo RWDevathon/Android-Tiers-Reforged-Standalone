@@ -7,8 +7,22 @@
 		<description>The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>
 		<alienRace>
 			<graphicPaths>
-                <body>Things/Pawns/Humanlikes/Tier2/body/</body>
-                <head>Things/Pawns/Humanlikes/Tier2/head/</head>
+                <body>
+                    <path>Things/Pawns/Humanlikes/Tier2/body/Naked_None</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier2/body/Naked_Male</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier2/body/Naked_Female</Female>
+                        <None>Things/Pawns/Humanlikes/Tier2/body/Naked_None</None>
+                    </genderGraphics>
+                </body>
+                <head>
+                    <path>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier2/head/Male_Average_Normal</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier2/head/Female_Average_Normal</Female>
+                        <None>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal</None>
+                    </genderGraphics>
+                </head>
                 <skinShader>Cutout</skinShader>
 			</graphicPaths>
             <generalSettings>

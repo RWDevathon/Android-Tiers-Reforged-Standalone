@@ -58,9 +58,10 @@ Special thanks to:
 * lazycooken - Jumpstarter and eager supporter
 * Winterbloom - Graphic and xml supporter
 * Kitty Of Pathos - Gynoid textures
-* JGH - Donated graphics for simplified buildings
+* JGH - Donated graphics for simplified buildings, icons, and many other graphics
+* RedMattis - Newly updated and refined gynoid textures
 * Android Tiers Discord - The endless whirlpool of ideas, assistance, and the home domain
-* RimWorld Mod Development Discord - Incredible amounts of support and assistance
+* RimWorld and HAR Discords - Incredible amounts of support and assistance
 
 ## Contributions
 

@@ -38,7 +38,7 @@ namespace ATReforged
         {
             CompMaintenanceNeed compMaintenanceNeed = pawn.GetComp<CompMaintenanceNeed>();
 
-            if (compMaintenanceNeed == null || pawn.InAggroMentalState || !pawn.Spawned)
+            if (compMaintenanceNeed == null || pawn.InAggroMentalState || !pawn.Spawned || pawn.Downed)
             {
                 return null;
             }

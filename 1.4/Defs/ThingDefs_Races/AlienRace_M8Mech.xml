@@ -60,7 +60,7 @@
 			<li>
 				<label>right fist</label>
 				<capacities>
-					<li>Blunt</li>
+                    <li>Demolish</li>
 				</capacities>
 				<power>65</power>
 				<cooldownTime>3.2</cooldownTime>
@@ -77,7 +77,7 @@
 			<li>
 				<label>left fist</label>
 				<capacities>
-					<li>Blunt</li>
+                    <li>Demolish</li>
 				</capacities>
 				<power>65</power>
 				<cooldownTime>3.2</cooldownTime>

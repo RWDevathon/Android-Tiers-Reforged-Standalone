@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    
+
 	<AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMSeriesPawn">
 		<defName>ATR_M7Mech</defName>
 		<label>M7 Mechanised infantry</label>
@@ -67,7 +67,7 @@
 			<li>
 				<label>right fist</label>
 				<capacities>
-					<li>Blunt</li>
+                    <li>Demolish</li>
 				</capacities>
 				<power>60</power>
 				<cooldownTime>2.8</cooldownTime>
@@ -84,7 +84,7 @@
 			<li>
 				<label>left fist</label>
 				<capacities>
-					<li>Blunt</li>
+                    <li>Demolish</li>
 				</capacities>
 				<power>60</power>
 				<cooldownTime>2.8</cooldownTime>

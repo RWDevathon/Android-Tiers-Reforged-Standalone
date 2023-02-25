@@ -9,7 +9,7 @@
         </graphicData>
         <tickerType>Normal</tickerType>
     </ThingDef>
-	  
+
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_T1AndroidGenerator</defName>
         <label>T1 Android</label>
@@ -28,7 +28,7 @@
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_T2AndroidGenerator</defName>
         <label>T2 Android</label>
-        <description>An uninitialized Tier 2 android. The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>  
+        <description>An uninitialized Tier 2 android. The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>
         <graphicData>
             <texPath>Things/Pawns/Humanlikes/Tier2/head/None_Average_Normal_south</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -102,7 +102,7 @@
 
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_ChemUnitGenerator</defName>
-        <label>Chemical processing unit</label>		
+        <label>Chemical processing unit</label>
         <description>An uninitialized mechanical hen-analogue designed for producing neutroamine or chemfuel precursors. This unit necessitates organic matter consumption, and can not charge.</description>
         <graphicData>
             <texPath>Things/Pawns/Animals/DroneChemUnit/DroneChemUnit_east</texPath>
@@ -117,7 +117,7 @@
 
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_MineralUnitGenerator</defName>
-        <label>Mineral Unit</label>        
+        <label>Mineral Unit</label>
         <description>An uninitialized mechanical sheep-analogue designed for producing steel. This unit necessitates organic matter consumption, and can not charge.</description>
         <graphicData>
             <texPath>Things/Pawns/Animals/DroneMineralUnit/DroneMineralUnit_east</texPath>
@@ -132,7 +132,7 @@
 
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_NutritionUnitGenerator</defName>
-        <label>Nutrition Unit</label>        
+        <label>Nutrition Unit</label>
         <description>An uninitialized mechanical cow-analogue designed for producing high-grade high-efficiency milk. This unit necessitates organic matter consumption, and can not charge.</description>
         <graphicData>
             <texPath>Things/Pawns/Animals/DroneNutritionUnit/DroneNutritionUnit_east</texPath>
@@ -144,7 +144,7 @@
             </li>
         </comps>
     </ThingDef>
-	
+
     <ThingDef ParentName="ATR_GeneratorBase">
         <defName>ATR_MicroScytherGenerator</defName>
         <label>MicroScyther</label>
@@ -155,5 +155,5 @@
             </li>
         </comps>
     </ThingDef>
-    
+
 </Defs>

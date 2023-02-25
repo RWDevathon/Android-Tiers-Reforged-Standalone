@@ -7,8 +7,22 @@
 		<description>Tier one androids are simply humanlike-machines, designed to mimic the general image and minimal capabilities of humanity. Lacking true sapience, many view them like very intelligent and responsive animals. Their existence is to serve, and they do so uncomplainingly.\n\nDue to minimal investment and design, tier one androids suffer from maintenance and efficiency flaws, leaving them relatively obsoleted by later, more durable, iterations - except for jobs where minimal specifications and resources is explicitly required or desired.</description>
 		<alienRace>
 			<graphicPaths>
-                <body>Things/Pawns/Humanlikes/Tier1/body/</body>
-                <head>Things/Pawns/Humanlikes/Tier1/head/</head>
+                <body>
+                    <path>Things/Pawns/Humanlikes/Tier1/body/Naked_None</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier1/body/Naked_Male</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier1/body/Naked_Female</Female>
+                        <None>Things/Pawns/Humanlikes/Tier1/body/Naked_None</None>
+                    </genderGraphics>
+                </body>
+                <head>
+                    <path>Things/Pawns/Humanlikes/Tier1/head/None_Average_Normal</path>
+                    <genderGraphics>
+                        <Male>Things/Pawns/Humanlikes/Tier1/head/Male_Average_Normal</Male>
+                        <Female>Things/Pawns/Humanlikes/Tier1/head/Female_Average_Normal</Female>
+                        <None>Things/Pawns/Humanlikes/Tier1/head/None_Average_Normal</None>
+                    </genderGraphics>
+                </head>
                 <skinShader>Cutout</skinShader>
             </graphicPaths>
             <generalSettings>
