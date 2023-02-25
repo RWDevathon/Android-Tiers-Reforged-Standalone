@@ -99,6 +99,7 @@
 			<wildness>1</wildness>
 			<hasGenders>false</hasGenders>
 			<leatherDef>Leather_Patch</leatherDef>
+            <trainability>None</trainability>
 			<foodType>None</foodType>
 			<lifeExpectancy>1000</lifeExpectancy>
 			<baseBodySize>2.4</baseBodySize>
