@@ -40,8 +40,8 @@
 		<prerequisites>
 			<li>ATR_MechanicalInsight</li>
         </prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -55,7 +55,7 @@
             <li>ATR_T1Androids</li>
         </prerequisites>
 		<researchViewX>2</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

@@ -12,7 +12,7 @@
             <li>ATR_UtilityBiomimetics</li>
 			<li>ATR_T1Androids</li>
         </prerequisites>
-        <researchViewX>1</researchViewX>
+        <researchViewX>2</researchViewX>
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
@@ -24,7 +24,7 @@
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
 		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>3</researchViewX>
 		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
@@ -39,8 +39,8 @@
 			<li>ATR_MechanicalFrameworks</li>
 			<li>ATR_AutonomousIndustrialization</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>4</researchViewX>
+		<researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -52,8 +52,9 @@
         <techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>ATR_MechanicalFrameworks</li>
+			<li>ATR_MechanicalStimulators</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>5</researchViewX>
 		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
@@ -67,7 +68,7 @@
         <prerequisites>
             <li>ATR_IndustrialUtilityFrameworks</li>
         </prerequisites>
-        <researchViewX>2</researchViewX>
+        <researchViewX>5</researchViewX>
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
@@ -80,7 +81,7 @@
 		<techLevel>Industrial</techLevel>
 		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
 		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -91,8 +92,8 @@
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites><li>ATR_MechaniteAssistedRecovery</li></prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewX>4</researchViewX>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -106,8 +107,8 @@
             <li>ATR_MechanicalStandardization</li>
             <li>Fabrication</li>
         </prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>6</researchViewX>
+		<researchViewY>3</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -125,8 +126,8 @@
             <li>ATR_MechanicalFrameworks</li>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewX>6</researchViewX>
+		<researchViewY>2</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -143,8 +144,8 @@
         <prerequisites>
             <li>ATR_MechanicalStandardization</li>
         </prerequisites>
-        <researchViewX>4</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewX>5</researchViewX>
+        <researchViewY>2</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -161,7 +162,7 @@
         <prerequisites>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
-        <researchViewX>5</researchViewX>
+        <researchViewX>6</researchViewX>
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
