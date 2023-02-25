@@ -85,8 +85,8 @@
             <li>ATR_T2Androids</li>
 			<li>ATR_AdvancedMechParts</li>
         </prerequisites>
-		<researchViewX>9</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewX>8</researchViewX>
+		<researchViewY>3.5</researchViewY>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
@@ -102,8 +102,8 @@
         <prerequisites>
             <li>ATR_MechanicalOptimization</li>
         </prerequisites>
-		<researchViewX>8</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewX>7</researchViewX>
+		<researchViewY>3</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -119,7 +119,6 @@
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>ATR_CommunicationOptimization</li>
-			<li>ATR_CoreAssistants</li>
         </prerequisites>
         <researchViewX>8</researchViewX>
         <researchViewY>1</researchViewY>
@@ -157,11 +156,9 @@
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>ATR_T3Androids</li>
-			<li>ATR_CoreAssistants</li>
-			<li>ATR_RepairOptimization</li>
 		</prerequisites>
-		<researchViewX>10</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewX>9</researchViewX>
+		<researchViewY>3.5</researchViewY>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
