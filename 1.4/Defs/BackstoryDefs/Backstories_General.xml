@@ -12,7 +12,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -42,7 +41,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -75,7 +73,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -105,7 +102,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -128,7 +124,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -145,7 +140,7 @@
 			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
-	
+
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodRiotPolice</defName>
 		<title>Riot officer</title>
@@ -155,7 +150,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -183,7 +177,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -206,7 +199,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -238,7 +230,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -265,7 +256,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -288,7 +278,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -315,7 +304,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -338,7 +326,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -366,7 +353,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -393,7 +379,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -426,7 +411,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -449,7 +433,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -472,7 +455,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -499,7 +481,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 			<li>ATR_ViolentAndroids</li>
 		</spawnCategories>
 		<skillGains>
@@ -530,7 +511,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -557,7 +537,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -584,7 +563,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -610,7 +588,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -633,7 +610,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -668,7 +644,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -699,7 +674,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -730,7 +704,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -756,7 +729,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -786,7 +758,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -817,7 +788,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -847,7 +817,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -874,7 +843,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -905,7 +873,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -924,7 +891,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -943,7 +909,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -970,7 +935,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -998,7 +962,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1029,7 +992,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1061,7 +1023,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1093,7 +1054,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1127,7 +1087,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1163,7 +1122,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1195,7 +1153,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1218,7 +1175,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1245,7 +1201,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1275,7 +1230,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1311,7 +1265,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1348,7 +1301,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1382,7 +1334,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1408,7 +1359,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1431,7 +1381,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1444,7 +1393,7 @@
 			</li>
 		</skillGains>
 	</AlienRace.AlienBackstoryDef>
-	
+
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodPopIdol</defName>
 		<title>Pop idol</title>
@@ -1454,7 +1403,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1482,7 +1430,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1509,7 +1456,6 @@
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1543,7 +1489,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1574,7 +1519,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1597,7 +1541,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -1617,5 +1560,5 @@
 			<li>Intellectual</li>
 		</workDisables>
 	</AlienRace.AlienBackstoryDef>
-    
+
 </Defs>

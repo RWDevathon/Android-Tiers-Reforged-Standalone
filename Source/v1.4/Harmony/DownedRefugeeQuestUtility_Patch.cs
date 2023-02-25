@@ -29,6 +29,11 @@ namespace ATReforged
                     HealthUtility.DamageLegsUntilIncapableOfMoving(pawn, allowBleedingWounds: false);
                     __result = pawn;
                 }
+
+                if (Utils.IsConsideredMechanical(__result))
+                {
+                    __result.health.AddHediff(ATR_HediffDefOf.ATR_LongReboot);
+                }
             }
         }
     }

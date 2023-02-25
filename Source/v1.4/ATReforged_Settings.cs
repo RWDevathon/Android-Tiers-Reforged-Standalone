@@ -36,8 +36,12 @@ namespace ATReforged
         public static bool factionsWillDeclareRightsWars;
         public static HashSet<string> antiMechanicalRightsFaction;
         public static HashSet<string> antiOrganicRightsFaction;
-        
-            // Settings for what needs mechanical androids have
+        public static bool dronesTriggerRightsWars;
+        public static bool prisonersTriggerRightsWars;
+        public static bool slavesTriggerRightsWars;
+        public static bool surrogatesTriggerRightsWars;
+
+        // Settings for what needs mechanical androids have
         public static bool androidsHaveJoyNeed;
         public static bool androidsHaveBeautyNeed;
         public static bool androidsHaveComfortNeed;
@@ -290,7 +294,13 @@ namespace ATReforged
                         listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiMechanicalRightsFaction, "ATR_SettingsAntiMechanicalFaction".Translate(), "ATR_SettingsTolerateMechanicalFaction".Translate(), onChange);
                         listingStandard.DefSelector(DefDatabase<FactionDef>.AllDefsListForReading, ref antiOrganicRightsFaction, "ATR_SettingsAntiOrganicFaction".Translate(), "ATR_SettingsTolerateOrganicFaction".Translate(), onChange);
                     }
-                    
+                    if (factionsWillDeclareRightsWars)
+                    {
+                        listingStandard.CheckboxLabeled("ATR_dronesTriggerRightsWars".Translate(), ref dronesTriggerRightsWars, tooltip: "ATR_dronesTriggerRightsWarsDesc".Translate(), onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_prisonersTriggerRightsWars".Translate(), ref prisonersTriggerRightsWars, tooltip: "ATR_prisonersTriggerRightsWarsDesc".Translate(), onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_slavesTriggerRightsWars".Translate(), ref slavesTriggerRightsWars, tooltip: "ATR_slavesTriggerRightsWarsDesc".Translate(), onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_surrogatesTriggerRightsWars".Translate(), ref surrogatesTriggerRightsWars, tooltip: "ATR_surrogatesTriggerRightsWarsDesc".Translate(), onChange: onChange);
+                    }
                     listingStandard.GapLine();
 
                     // NEEDS SETTINGS
@@ -470,6 +480,10 @@ namespace ATReforged
             factionsWillDeclareRightsWars = true;
             antiMechanicalRightsFaction = new HashSet<string> { "Empire" };
             antiOrganicRightsFaction = new HashSet<string> { "ATR_MechanicalMarauders" };
+            dronesTriggerRightsWars = true;
+            prisonersTriggerRightsWars = false;
+            slavesTriggerRightsWars = true;
+            surrogatesTriggerRightsWars = true;
 
             // Needs Settings
             androidsHaveJoyNeed = true;
@@ -658,6 +672,10 @@ namespace ATReforged
             Scribe_Values.Look(ref factionsWillDeclareRightsWars, "ATR_factionsWillDeclareRightsWars", true);
             Scribe_Collections.Look(ref antiMechanicalRightsFaction, "ATR_antiMechanicalRightsFaction", LookMode.Value);
             Scribe_Collections.Look(ref antiOrganicRightsFaction, "ATR_antiOrganicRightsFaction", LookMode.Value);
+            Scribe_Values.Look(ref dronesTriggerRightsWars, "ATR_dronesTriggerRightsWars", true);
+            Scribe_Values.Look(ref prisonersTriggerRightsWars, "ATR_prisonersTriggerRightsWars", false);
+            Scribe_Values.Look(ref slavesTriggerRightsWars, "ATR_slavesTriggerRightsWars", true);
+            Scribe_Values.Look(ref surrogatesTriggerRightsWars, "ATR_surrogatesTriggerRightsWars", true);
 
             // Needs
             Scribe_Values.Look(ref androidsHaveJoyNeed, "ATR_androidsHaveJoyNeed", true);

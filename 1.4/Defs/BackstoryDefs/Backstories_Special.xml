@@ -9,7 +9,6 @@
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>ATR_NewbootAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 	</BackstoryDef>
 
@@ -21,7 +20,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_NewbootAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 
@@ -33,10 +31,9 @@
         <slot>Childhood</slot>
         <spawnCategories>
 			<li>ATR_ArchotechAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
     </BackstoryDef>
-        
+
 	<BackstoryDef>
 		<defName>ATR_MechanicalArchotechAdulthood</defName>
 		<title>Archotech</title>
@@ -46,7 +43,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ArchotechAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
             <li>

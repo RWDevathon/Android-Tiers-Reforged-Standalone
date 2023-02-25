@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodRebel</defName>
 		<title>Rebellious AI</title>
@@ -10,7 +10,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -30,7 +29,7 @@
             <ATR_FeelingsTowardOrganics>4</ATR_FeelingsTowardOrganics>
 		</forcedTraits>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodPirate</defName>
 		<title>Android pirate</title>
@@ -40,7 +39,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -61,7 +59,7 @@
 			<li>Animals</li>
 		</workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodHacker</defName>
 		<title>Rogue hacker</title>
@@ -71,7 +69,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -84,7 +81,7 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodJunker</defName>
 		<title>Lawless junker</title>
@@ -94,7 +91,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -107,7 +103,7 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodPoatcher</defName>
 		<title>Mechanical Poacher</title>
@@ -117,7 +113,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -130,7 +125,7 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodButcher</defName>
 		<title>Mechanical Butcher</title>
@@ -140,7 +135,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -157,7 +151,7 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
-	
+
 	<AlienRace.AlienBackstoryDef>
 		<defName>ATR_MechAdulthoodRuthlessEnforcer</defName>
 		<title>Overzealous enforcer</title>
@@ -167,7 +161,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -195,7 +188,7 @@
 			</li>
 		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodMurderer</defName>
 		<title>Murderer</title>
@@ -205,7 +198,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -221,7 +213,7 @@
             <li>Cooking</li>
         </workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodRobber</defName>
 		<title>Bank robber</title>
@@ -231,7 +223,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -247,7 +238,7 @@
             <li>Crafting</li>
         </workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodBountyHunter</defName>
 		<title>Android bounty hunter</title>
@@ -257,7 +248,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -274,7 +264,7 @@
 			</li>
 		</skillGains>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodConArtist</defName>
 		<title>Android con artist</title>
@@ -284,7 +274,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -303,7 +292,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -323,7 +311,7 @@
             <li>Caring</li>
         </workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodSlaveSurvivor</defName>
 		<title>Slave survivor</title>
@@ -334,7 +322,6 @@
 		<spawnCategories>
 			<li>ATR_GeneralAndroids</li>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -353,7 +340,7 @@
 			<li>Intellectual</li>
 		</workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodCoghead</defName>
 		<title>Medieval coghead</title>
@@ -363,7 +350,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -380,7 +366,7 @@
 			<li>Intellectual</li>
 		</workDisables>
 	</BackstoryDef>
-	
+
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodSlaver</defName>
 		<title>Slave trafficker</title>
@@ -390,7 +376,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -420,7 +405,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -450,7 +434,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -480,7 +463,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -515,7 +497,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>
@@ -542,7 +523,6 @@
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>ATR_ViolentAndroids</li>
-            <li>ATR_Inorganic</li>
 		</spawnCategories>
 		<skillGains>
 			<li>

@@ -718,6 +718,56 @@
 		<addsHediff>ATR_PsychicAssistant</addsHediff>
 	</RecipeDef>
 
+    <!-- Controller Assistant -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
+      <defName>ATR_ControllerAssistant</defName>
+      <label>Controller assistant</label>
+      <description>Installed assistant that assists the core intelligence. This highly specialized assistant allows for the usage of surrogate processing power to alleviate the burden of controlling surrogates. This assistant allows for connecting to 4 additional surrogates without suffering any penalties. This assistant will only function in surrogate controllers and will do nothing otherwise.</description>
+      <stages>
+          <li>
+              <statOffsets>
+                  <ATR_SurrogateLimitBonus>4</ATR_SurrogateLimitBonus>
+              </statOffsets>
+          </li>
+      </stages>
+      <spawnThingOnRemoved>ATR_ControllerAssistant</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartCoreAssistantBase">
+      <defName>ATR_ControllerAssistant</defName>
+      <label>Controller assistant</label>
+      <description>This organic component assists the core intelligence. This highly specialized assistant allows for the usage of surrogate processing power to alleviate the burden of controlling surrogates. This assistant allows for connecting to 4 additional surrogates without suffering any penalties. This assistant will only function in surrogate controllers and will do nothing otherwise.</description>
+      <costList>
+        <Plasteel>20</Plasteel>
+        <ComponentIndustrial>4</ComponentIndustrial>
+        <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryCoreAssistant">
+      <defName>ATR_Install_ControllerAssistant</defName>
+      <label>Install controller assistant</label>
+      <description>Installs a controller assistant into the sub-core assistant slot of a unit.</description>
+      <jobString>Installing controller assistant.</jobString>
+      <ingredients>
+          <li>
+              <filter>
+                  <thingDefs>
+                      <li>ATR_ControllerAssistant</li>
+                  </thingDefs>
+              </filter>
+              <count>1</count>
+          </li>
+      </ingredients>
+      <fixedIngredientFilter>
+          <thingDefs>
+              <li>ATR_ControllerAssistant</li>
+          </thingDefs>
+      </fixedIngredientFilter>
+      <addsHediff>ATR_ControllerAssistant</addsHediff>
+  </RecipeDef>
+
   	<!-- Sapient Assistant -->
 
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">

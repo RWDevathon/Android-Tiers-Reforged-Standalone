@@ -16,7 +16,7 @@ namespace ATReforged
         {
             base.ExposeData();
 
-            Scribe_Values.Look(ref isTerminal, "ATR_FractalTerminalBool", false);
+            Scribe_Values.Look(ref isTerminal, "ATR_FractalTerminalBool", false); 
             Scribe_Values.Look(ref nextMutationTick, "ATR_nextMutationTick", 0);
         }
 
@@ -35,7 +35,6 @@ namespace ATReforged
                 if (Severity >= 0.45f)
                 { // Abomination threshold reached;
                     DoMutation(pawn);
-                    pawn.Destroy();
                     return;
                 }
                 Severity += 0.1f;
@@ -45,8 +44,7 @@ namespace ATReforged
             { 
                 if (Severity <= 0.1f)
                 { // True Transcendance threshold reached;
-                    isTerminal = true;
-                    Severity = 0.01f;
+                    DoTranscendance(pawn);
                     return;
                 }
                 severityInt -= .1f;
@@ -80,7 +78,7 @@ namespace ATReforged
             }
         }
 
-        public static void DoMutation(Pawn pawn)
+        public void DoMutation(Pawn pawn)
         {
             string label = "ATR_FractalCorruption".Translate();
             label = label.AdjustedFor(pawn);
@@ -94,6 +92,14 @@ namespace ATReforged
 
             GenSpawn.Spawn(abomination, pawn.Position, pawn.Map);
             abomination.mindState.mentalStateHandler.TryStartMentalState(ATR_MentalStateDefOf.ATR_MentalState_Exterminator, transitionSilently: true);
+
+            pawn.Destroy();
+        }
+
+        public void DoTranscendance(Pawn pawn)
+        {
+            isTerminal = true;
+            Severity = 0.01f;
         }
 
         bool isTerminal;

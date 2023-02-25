@@ -28,7 +28,7 @@
                     <organicSeverity>1</organicSeverity>
 					<mechanicalEffect>ATR_MechaniteSurge</mechanicalEffect>
 					<mechanicalSeverity>1</mechanicalSeverity>
-				</li>  
+				</li>
 			</outcomeDoers>
 		</ingestible>
 		<recipeMaker>
@@ -52,7 +52,7 @@
 		<defName>ATR_MechaniteSurge</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Mechanite surge</label>
-		<description>An extra boost of mechanites flowing through coolant tubing. The overpopulation of mechanites can't be sustained by the mechanite storage, and will return to normal levels before long.\n\nIn the mean time however, overall efficiency will be improved.</description>
+		<description>An extra boost of mechanites flowing through coolant tubing. The overpopulation of mechanites can't be sustained by the mechanite storage, and will return to normal levels before long.\n\nIn the mean time however, overall efficiency will be improved and the extra mechanites will greatly reduce coolant loss. The initial infusion of mechanites can replace lost coolant outright.</description>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
         <initialSeverity>1.0</initialSeverity>
@@ -61,6 +61,9 @@
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.5</severityPerDay>
+			</li>
+			<li Class="ATReforged.HediffCompProperties_RemoveHediffOnApply">
+				<hediffToRemove>ATR_CoolantLoss</hediffToRemove>
 			</li>
 		</comps>
 		<stages>
@@ -75,6 +78,7 @@
 				<statOffsets>
 					<CarryingCapacity>10</CarryingCapacity>
 				</statOffsets>
+                <totalBleedFactor>0.5</totalBleedFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -82,14 +86,13 @@
 					</li>
 				</capMods>
 			</li>
-
-
 			<li>
 				<minSeverity>0.25</minSeverity>
 				<label>Moderate</label>
 				<statOffsets>
 					<CarryingCapacity>30</CarryingCapacity>
 				</statOffsets>
+                <totalBleedFactor>0.25</totalBleedFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -97,14 +100,13 @@
 					</li>
 				</capMods>
 			</li>
-
-
 			<li>
 				<minSeverity>0.6</minSeverity>
 				<label>Significant</label>
 				<statOffsets>
 					<CarryingCapacity>50</CarryingCapacity>
 				</statOffsets>
+                <totalBleedFactor>0</totalBleedFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -112,14 +114,13 @@
 					</li>
 				</capMods>
 			</li>
-
-
 			<li>
 				<minSeverity>0.8</minSeverity>
 				<label>Peak</label>
 				<statOffsets>
 					<CarryingCapacity>70</CarryingCapacity>
 				</statOffsets>
+                <totalBleedFactor>0</totalBleedFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>

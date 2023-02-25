@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	
+
 	<!-- General -->
 	<ATR_SkyMindConnectionFailed>Could not establish SkyMind connection. Check network capacity and availability.</ATR_SkyMindConnectionFailed>
 	<ATR_SkyMindConnectionFailedNoNetwork>Could not establish SkyMind connection. There is no network available.</ATR_SkyMindConnectionFailedNoNetwork>
-	
-	<ATR_GridlockerCleared>The Grid-locker has successfully been decrypted and disabled.</ATR_GridlockerCleared> 
+
+	<ATR_GridlockerCleared>The Grid-locker has successfully been decrypted and disabled.</ATR_GridlockerCleared>
 
 	<!-- Core -->
 	<ATR_RemoveCloudPawnSuccess>The neural network of {0} has been removed.</ATR_RemoveCloudPawnSuccess>
-	
+
 	<ATR_ReplicateCloudPawnFailed>Could not initiate replication. Insufficient SkyMind space available for allocation.</ATR_ReplicateCloudPawnFailed>
 
     <!-- Player hacking -->
@@ -26,6 +26,7 @@
     <ATR_HostileMechFall>The mech has arrived, but is identifying everything as hostile! It has activated a delayed self-shutdown as well.</ATR_HostileMechFall>
 
 	<!-- Link -->
+    <ATR_CannotConnect>Attempted connection could not be established, ensure adequate network capacity and target viability.</ATR_CannotConnect>
 	<ATR_SurrogateControlled>{0} connected to a new surrogate</ATR_SurrogateControlled>
 	<ATR_OperationInitiated>SkyMind network link established by {0}'s request. Do not disable network connection until procedure is complete.</ATR_OperationInitiated>
 	<ATR_OperationCompleted>SkyMind operation complete</ATR_OperationCompleted>
@@ -38,5 +39,5 @@
 	<MessageMedicalOperationFailureCatastrophicAndroid>{0} has failed catastrophically while attempting an operation on {1}.</MessageMedicalOperationFailureCatastrophicAndroid>
 	<MessageMedicalOperationFailureRidiculousAndroid>{0} has committed a major error while attempting an operation on {1}.</MessageMedicalOperationFailureRidiculousAndroid>
 	<MessageMedicalOperationFailureFatalAndroid>{0} has committed a fatal error while operating on {1} that caused unintentional cascading damage. The procedure caused irreversible damage to the central processor, resulting in total loss of memory and consciousness.</MessageMedicalOperationFailureFatalAndroid>
-	
+
 </LanguageData>

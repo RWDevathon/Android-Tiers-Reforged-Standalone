@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using RimWorld;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -25,7 +26,6 @@ namespace ATReforged
             else
             {
                 SetSeverity(link.GetSurrogates().Count());
-
             }
         }
 
@@ -34,6 +34,17 @@ namespace ATReforged
         private void SetSeverity(int pawnCount)
         {
             int softCap = ATReforged_Settings.safeSurrogateConnectivityCountBeforePenalty;
+
+            // Surrogates check their controller for a surrogate limit bonus to add to the soft cap.
+            if (Utils.IsSurrogate(pawn))
+            {
+                softCap += (int)pawn.GetComp<CompSkyMindLink>().GetSurrogates().First().GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
+            }
+            // Controllers check their own surrogate limit bonus to add to the soft cap.
+            else
+            {
+                softCap += (int)pawn.GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
+            }
 
             // If underneath the cap, there is no penalty. 
             if (pawnCount <= softCap)

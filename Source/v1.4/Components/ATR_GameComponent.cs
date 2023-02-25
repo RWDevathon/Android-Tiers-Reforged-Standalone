@@ -127,17 +127,83 @@ namespace ATReforged
 
             bool playerFactionHasMechanicalColonists = false;
             bool playerFactionHasOrganicColonists = false;
-            IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
+            IEnumerable<Pawn> playerPawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonistsAndPrisoners;
             foreach (Pawn pawn in playerPawns)
             {
-                if (Utils.IsConsideredMechanicalAndroid(pawn))
+                // Drone check (only for mechanical)
+                if (Utils.IsConsideredMechanicalDrone(pawn))
                 {
+                    if (!ATReforged_Settings.dronesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
                     playerFactionHasMechanicalColonists = true;
                 }
-                else if (!Utils.IsConsideredMechanical(pawn))
+                // Prisoner check (can be either mechanical or organic)
+                else if (pawn.IsPrisonerOfColony)
                 {
-                    playerFactionHasOrganicColonists = true;
+                    if (!ATReforged_Settings.prisonersTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
+                    if (Utils.IsConsideredMechanical(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
                 }
+                // Slave check (can be either mechanical androids or organic, only available with Ideology DLC)
+                else if (ModsConfig.IdeologyActive && pawn.IsSlaveOfColony)
+                {
+                    if (!ATReforged_Settings.slavesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+                // Surrogate check (can be mechanical androids or organic)
+                else if (Utils.IsSurrogate(pawn))
+                {
+                    if (!ATReforged_Settings.surrogatesTriggerRightsWars)
+                    {
+                        continue;
+                    }
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+                // Colonists
+                else
+                {
+                    if (Utils.IsConsideredMechanicalAndroid(pawn))
+                    {
+                        playerFactionHasMechanicalColonists = true;
+                    }
+                    else
+                    {
+                        playerFactionHasOrganicColonists = true;
+                    }
+                }
+
+                // If both are true, terminate early to avoid unnecessary checks.
                 if (playerFactionHasOrganicColonists && playerFactionHasMechanicalColonists)
                 {
                     break;
@@ -154,9 +220,14 @@ namespace ATReforged
                         continue;
                     }
 
-                    faction.TryAffectGoodwillWith(Faction.OfPlayer, -500, reason: ATR_HistoryEventDefOf.ATR_PossessesMechanicalColonist);
+                    // If the faction had an opinion higher than -100, send a notification about the rights war to the player.
+                    if (faction.GoodwillWith(Faction.OfPlayer) > -100)
+                    {
+                        Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeMechanical".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
+                    }
 
-                    Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeMechanical".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
+                    // Ensure the opinion is -100, and set the faction to permanent enemy.
+                    faction.TryAffectGoodwillWith(Faction.OfPlayer, -500, reason: ATR_HistoryEventDefOf.ATR_PossessesMechanicalColonist);
                     faction.def.permanentEnemy = true;
                 }
             }
@@ -185,8 +256,14 @@ namespace ATReforged
                         continue;
                     }
 
+                    // If the faction had an opinion higher than -100, send a notification about the rights war to the player.
+                    if (faction.GoodwillWith(Faction.OfPlayer) > -100)
+                    {
+                        Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeOrganic".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
+                    }
+
+                    // Ensure the opinion is -100, and set the faction to permanent enemy.
                     faction.TryAffectGoodwillWith(Faction.OfPlayer, -500, reason: ATR_HistoryEventDefOf.ATR_PossessesOrganicColonist);
-                    Find.LetterStack.ReceiveLetter("ATR_DeclarationOfWarRights".Translate(), "ATR_DeclarationOfWarRightsDesc".Translate(faction.NameColored, "ATR_PawnTypeOrganic".Translate().ToLower(), faction.leader?.NameFullColored ?? faction.NameColored), LetterDefOf.NegativeEvent);
                     faction.def.permanentEnemy = true;
                 }
             }
@@ -223,7 +300,6 @@ namespace ATReforged
                 }
             }
         }
-
 
         // Check to see if any virused things have elapsed their infected timers. Remove viruses that have elapsed.
         public void CheckVirusedThings()

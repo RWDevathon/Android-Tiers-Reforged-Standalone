@@ -21,5 +21,7 @@ namespace ATReforged
         public static StatDef ATR_MechanicalSurgerySuccessChanceFactor;
 
         public static StatDef ATR_MaintenanceRetention;
+
+        public static StatDef ATR_SurrogateLimitBonus;
     }
 }
