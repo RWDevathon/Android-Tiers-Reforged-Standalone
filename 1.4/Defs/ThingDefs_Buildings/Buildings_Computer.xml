@@ -201,7 +201,7 @@
         </comps>
         <minifiedDef>MinifiedThing</minifiedDef>
         <researchPrerequisites>
-        <li>ATR_ServerInsight</li>
+            <li>ATR_ServerInsight</li>
         </researchPrerequisites>
         <thingCategories>
             <li>BuildingsMisc</li>

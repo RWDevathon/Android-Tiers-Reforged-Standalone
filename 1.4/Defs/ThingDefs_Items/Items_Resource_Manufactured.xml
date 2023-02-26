@@ -313,6 +313,9 @@
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
+        <recipeMaker>
+            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
+        </recipeMaker>
     </ThingDef>
 
     <RecipeDef>
@@ -359,9 +362,6 @@
             <li>TableMachining</li>
             <li>ATR_MechPartWorkbench</li>
         </recipeUsers>
-        <recipeMaker>
-            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
-        </recipeMaker>
 	</RecipeDef>
 
     <!-- Android Resurrection Kit -->
@@ -384,6 +384,9 @@
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
+        <recipeMaker>
+            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
+        </recipeMaker>
     </ThingDef>
 
     <RecipeDef>
@@ -446,5 +449,6 @@
             <li>TableMachining</li>
             <li>ATR_MechPartWorkbench</li>
         </recipeUsers>
+	</RecipeDef>
 
 </Defs>
