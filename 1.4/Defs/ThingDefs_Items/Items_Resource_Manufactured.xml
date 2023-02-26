@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- All Parts Packs Base Def -->
+
     <ThingDef Name="ATR_PartPackBase" ParentName="ResourceBase" Abstract="True">
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <useHitPoints>true</useHitPoints>
@@ -39,6 +41,7 @@
         </thingSetMakerTags>
     </ThingDef>
 
+    <!-- Mechanical Part Pack -->
     <ThingDef ParentName="ATR_PartPackBase">
         <defName>ATR_PartPack</defName>
         <label>Mechanical Part Pack</label>
@@ -65,7 +68,7 @@
         </recipeMaker>
     </ThingDef>
 
-    <!-- Resurrector Kits Base Def -->
+    <!-- Resurrector Kits Base Def (builds from Part Pack) -->
 
     <ThingDef Name="ATR_ApplicableKitBase" ParentName="ATR_PartPackBase" Abstract="True">
 	    <thingClass>ThingWithComps</thingClass>
@@ -328,73 +331,5 @@
             <li>FabricationBench</li>
         </recipeUsers>
     </RecipeDef>
-
-    <!-- Drone Resurrector Kit -->
-    <ThingDef ParentName="ATR_ApplicableKitBase">
-        <defName>ATR_DroneResurrectorKit</defName>
-        <label>Drone Resurrector Kit</label>
-        <description>A specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
-        <graphicData>
-            <texPath>Things/Items/Manufactured/DroneResurrectionKit</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <statBases>
-            <MarketValue>200</MarketValue>
-            <DeteriorationRate>2.0</DeteriorationRate>
-            <MaxHitPoints>80</MaxHitPoints>
-            <Mass>0.2</Mass>
-            <Flammability>0.2</Flammability>
-        </statBases>
-        <tradeability>Sellable</tradeability>
-        <thingSetMakerTags>
-            <li>RewardSpecial</li>
-        </thingSetMakerTags>
-    </ThingDef>
-
-    <RecipeDef>
-        <defName>ATR_DroneResurrectorKit</defName>
-        <label>Make a drone resurrector kit</label>
-        <description>Create a specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
-        <jobString>Making drone resurrector kit</jobString>
-        <allowMixingIngredients>false</allowMixingIngredients>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Steel</li>
-                    </thingDefs>
-                </filter>
-                <count>40</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Plasteel</li>
-                    </thingDefs>
-                </filter>
-                <count>20</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentIndustrial</li>
-                    </thingDefs>
-                </filter>
-                <count>6</count>
-            </li>
-        </ingredients>
-        <products>
-            <ATR_DroneResurrectorKit>1</ATR_DroneResurrectorKit>
-        </products>
-        <workAmount>2450</workAmount>
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill>
-        <effectWorking>Smelt</effectWorking>
-        <soundWorking>Recipe_Smelt</soundWorking>
-	    <recipeUsers>
-            <li>TableMachining</li>
-            <li>ATR_MechPartWorkbench</li>
-        </recipeUsers>
-	</RecipeDef>
 
 </Defs>
