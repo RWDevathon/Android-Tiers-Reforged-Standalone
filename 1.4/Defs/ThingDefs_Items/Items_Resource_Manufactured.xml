@@ -313,9 +313,6 @@
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
-        <recipeMaker>
-            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
-        </recipeMaker>
     </ThingDef>
 
     <RecipeDef>
@@ -353,6 +350,7 @@
         <products>
             <ATR_DroneResurrectorKit>1</ATR_DroneResurrectorKit>
         </products>
+		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         <workAmount>2450</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <workSkill>Crafting</workSkill>
@@ -384,9 +382,6 @@
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
-        <recipeMaker>
-            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
-        </recipeMaker>
     </ThingDef>
 
     <RecipeDef>
@@ -440,6 +435,7 @@
         <products>
             <ATR_AndroidResurrectorKit>1</ATR_AndroidResurrectorKit>
         </products>
+		<researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
         <workAmount>4550</workAmount>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <workSkill>Crafting</workSkill>
