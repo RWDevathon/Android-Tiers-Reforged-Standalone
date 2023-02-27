@@ -118,7 +118,6 @@
             <skillRequirements>
                 <Crafting>8</Crafting>
             </skillRequirements>
-            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -150,7 +149,6 @@
             <skillRequirements>
                 <Crafting>10</Crafting>
             </skillRequirements>
-            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -281,7 +279,7 @@
     <RecipeDef>
         <defName>ATR_MakeAIPersonaCore</defName>
         <label>Make an AI persona core</label>
-        <description>Create a complexe AI core capable of sentience.</description>
+        <description>Create a complex AI core capable of sentience.</description>
         <jobString>Making AI Core</jobString>
         <allowMixingIngredients>false</allowMixingIngredients>
         <ingredients>
