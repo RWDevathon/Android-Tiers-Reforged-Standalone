@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
     <ThoughtDef>
         <defName>ATR_ChronicAnnoyance</defName>
         <workerClass>ATReforged.ThoughtWorker_ChronicAnnoyance</workerClass>
@@ -28,7 +28,7 @@
         </stages>
 	    <validWhileDespawned>true</validWhileDespawned>
     </ThoughtDef>
-  
+
     <ThoughtDef>
         <defName>ATR_RustedPart</defName>
         <workerClass>ATReforged.ThoughtWorker_RustedPart</workerClass>
@@ -41,5 +41,19 @@
         </stages>
 	    <validWhileDespawned>true</validWhileDespawned>
     </ThoughtDef>
-  
+
+    <ThoughtDef>
+        <defName>ATR_OverclockedThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ATR_MechanicalOverclocking</hediff>
+        <stages>
+            <li>
+                <label>overclocked</label>
+                <description>My processor is running at an abnormally high clockrate. I can sense the strain on my hardware.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+	    <validWhileDespawned>true</validWhileDespawned>
+    </ThoughtDef>
+
  </Defs>

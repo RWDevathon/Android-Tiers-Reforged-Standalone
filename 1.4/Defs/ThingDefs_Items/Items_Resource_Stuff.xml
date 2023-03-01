@@ -59,7 +59,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Neutroamine>2</Neutroamine>
+			<Neutroamine>1</Neutroamine>
 		</products>
 	    <recipeUsers>
             <li>BiofuelRefinery</li>

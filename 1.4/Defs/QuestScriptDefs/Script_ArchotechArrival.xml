@@ -3,7 +3,7 @@
 
     <QuestScriptDef>
         <defName>ATR_OpportunitySite_ArchotechArrival</defName>
-        <rootSelectionWeight>0.1</rootSelectionWeight>
+        <rootSelectionWeight>0.4</rootSelectionWeight>
         <rootMinPoints>1200</rootMinPoints>
         <rootIncreasesPopulation>true</rootIncreasesPopulation>
         <autoAccept>true</autoAccept>
@@ -79,7 +79,7 @@
                         <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
                     </parms>
                 </li>
-        
+
                 <li Class="QuestNode_SpawnWorldObjects">
                     <worldObjects>$site</worldObjects>
                 </li>

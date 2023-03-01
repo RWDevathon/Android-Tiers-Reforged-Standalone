@@ -79,12 +79,6 @@
 					<CarryingCapacity>10</CarryingCapacity>
 				</statOffsets>
                 <totalBleedFactor>0.5</totalBleedFactor>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>0.1</offset>
-					</li>
-				</capMods>
 			</li>
 			<li>
 				<minSeverity>0.25</minSeverity>
@@ -96,7 +90,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.25</offset>
+						<offset>0.05</offset>
 					</li>
 				</capMods>
 			</li>
@@ -110,7 +104,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.4</offset>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 			</li>
@@ -124,7 +118,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.5</offset>
+						<offset>0.15</offset>
 					</li>
 				</capMods>
 			</li>

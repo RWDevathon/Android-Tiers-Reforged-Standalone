@@ -271,6 +271,7 @@
 		</modExtensions>
         <recipes>
             <li>ATR_ShutdownMechanical</li>
+            <li>ATR_ReprogramDrone</li>
         </recipes>
 	</AlienRace.ThingDef_AlienRace>
 

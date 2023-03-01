@@ -44,8 +44,8 @@ namespace ATReforged
         { 
             Pawn innerPawn = Corpse.InnerPawn;
 
-            // Legal to resurrect pawns with this if they are considered mechanical and have a brain (core).
-            if (Utils.IsConsideredMechanical(innerPawn) && innerPawn.health.hediffSet.GetBrain() != null)
+            // Legal to resurrect pawns with this if they are considered mechanical.
+            if (Utils.IsConsideredMechanical(innerPawn))
             {
                 // Drone Resurrection Kits may only resurrect drone units (simple-minded) or animal units.
                 if (Item.def.defName == "ATR_DroneResurrectorKit" && Utils.IsConsideredMechanicalAndroid(innerPawn))
@@ -55,24 +55,49 @@ namespace ATReforged
                 }
 
                 // Apply the long reboot (24 hours) to the pawn. This will ensure hostile units can be safely captured, and that friendly units can't be reactivated mid-combat.
-                Hediff rebootHediff = HediffMaker.MakeHediff(DefDatabase<HediffDef>.GetNamed("ATR_LongReboot"), innerPawn);
+                Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, innerPawn);
                 innerPawn.health.AddHediff(rebootHediff);
+
+                bool shouldbeBlank = false;
+                // Androids have a special consideration attached: if the Core is destroyed, then the dead pawn is blank upon resurrection.
+                if (Utils.IsConsideredMechanicalAndroid(innerPawn))
+                {
+                    // Dead surrogates originating from other factions should no longer be considered foreign. Surrogates are already blank when dead, no additional checks needed.
+                    if (Utils.IsSurrogate(innerPawn))
+                    {
+                        CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
+                        if (targetComp.isForeign)
+                            targetComp.isForeign = false;
+                    }
+                    // If the android is missing their consciousness source, they should be blank upon revival.
+                    else if (innerPawn.def.GetModExtension<ATR_MechTweaker>()?.needsCoreAsAndroid == true && innerPawn.health.hediffSet.GetBrain() == null)
+                    {
+                        shouldbeBlank = true;
+                    }
+                }
 
                 // This kit executes a full resurrection which removes all negative hediffs.
                 ResurrectionUtility.Resurrect(innerPawn);
                 SoundDefOf.MechSerumUsed.PlayOneShot(SoundInfo.InMap(innerPawn));
 
-                // Dead surrogates originating from other factions should no longer be considered foreign.
-                if (Utils.IsSurrogate(innerPawn))
+                // If the pawn should be blank, replace their autonomous core with an isolated core to represent that.
+                if (shouldbeBlank)
                 {
-                    CompSkyMindLink targetComp = innerPawn.TryGetComp<CompSkyMindLink>();
-                    if (targetComp.isForeign)
-                        targetComp.isForeign = false;
-                }
-                // Make the revived pawn grateful to the pawn that revived them.
-                else if (innerPawn.needs.mood != null)
-                {
-                    innerPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.RescuedMe, pawn);
+                    Utils.Duplicate(Utils.GetBlank(), innerPawn, false, false);
+                    innerPawn.health.AddHediff(ATR_HediffDefOf.ATR_IsolatedCore, innerPawn.health.hediffSet.GetBrain());
+                    Hediff target = innerPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_AutonomousCore);
+                    if (target != null)
+                    {
+                        innerPawn.health.RemoveHediff(target);
+                    }
+                    target = innerPawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ReceiverCore);
+                    if (target != null)
+                    {
+                        innerPawn.health.RemoveHediff(target);
+                    }
+                    innerPawn.guest?.SetGuestStatus(Faction.OfPlayer);
+                    if (innerPawn.playerSettings != null)
+                        innerPawn.playerSettings.medCare = MedicalCareCategory.Best;
                 }
 
                 // Notify successful resurrection and destroy the used kit.
