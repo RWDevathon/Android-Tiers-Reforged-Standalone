@@ -35,7 +35,7 @@ namespace ATReforged
             {
                 if (Utils.IsSurrogate(___pawn))
                 {
-                    // Non-player surrogates trigger dead man's hand... brain.
+                    // Surrogates from other factions are fail-deadly, and will self-immolate to prevent capture.
                     if (___pawn.Faction != null && ___pawn.Faction != Faction.OfPlayer)
                     {
                         ___pawn.TakeDamage(new DamageInfo(DamageDefOf.Bomb, 99999f, 999f, -1f, null, ___pawn.health.hediffSet.GetBrain()));

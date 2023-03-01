@@ -66,10 +66,10 @@
     <ATR_SettingsAntiOrganicFaction>Factions without organic rights</ATR_SettingsAntiOrganicFaction>
     <ATR_SettingsTolerateOrganicFaction>Factions tolerating organics</ATR_SettingsTolerateOrganicFaction>
 
-    <dronesTriggerRightsWars>Anti-mechanical factions declare war over drones</dronesTriggerRightsWars>
-    <prisonersTriggerRightsWars>Factions declare war over prisoners</prisonersTriggerRightsWars>
-    <slavesTriggerRightsWars>Factions declare war over slaves</slavesTriggerRightsWars>
-    <surrogatesTriggerRightsWars>Factions declare war over surrogates</surrogatesTriggerRightsWars>
+    <ATR_dronesTriggerRightsWars>Anti-mechanical factions declare war over drones</ATR_dronesTriggerRightsWars>
+    <ATR_prisonersTriggerRightsWars>Factions declare war over prisoners</ATR_prisonersTriggerRightsWars>
+    <ATR_slavesTriggerRightsWars>Factions declare war over slaves</ATR_slavesTriggerRightsWars>
+    <ATR_surrogatesTriggerRightsWars>Factions declare war over surrogates</ATR_surrogatesTriggerRightsWars>
 
 	<!-- Needs Settings -->
 	<ATR_AndroidOnlyNotice>Note: Only units marked as androids are affected by this. Drones have no such needs.</ATR_AndroidOnlyNotice>

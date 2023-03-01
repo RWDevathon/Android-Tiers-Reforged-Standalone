@@ -17,7 +17,7 @@
         <graphicPath>Things/Pawns/Humanlikes/Tier1/head/Female_Average_Normal</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
-    
+
     <!-- None -->
 
     <HeadTypeDef>
@@ -43,7 +43,7 @@
         <graphicPath>Things/Pawns/Humanlikes/Tier2/head/Female_Average_Normal</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
-    
+
     <!-- None -->
 
     <HeadTypeDef>
@@ -52,7 +52,7 @@
         <gender>None</gender>
     </HeadTypeDef>
 
-    
+
     <!-- Tier 3 -->
     <!-- Male -->
 
@@ -69,7 +69,7 @@
         <graphicPath>Things/Pawns/Humanlikes/Tier3/head/Female_Average_Normal</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
-    
+
     <!-- None -->
 
     <HeadTypeDef>
@@ -78,7 +78,7 @@
         <gender>None</gender>
     </HeadTypeDef>
 
-    
+
     <!-- Tier 4 -->
     <!-- Male -->
 
@@ -95,7 +95,7 @@
         <graphicPath>Things/Pawns/Humanlikes/Tier4/head/Female_Average_Normal</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
-    
+
     <!-- None -->
 
     <HeadTypeDef>
@@ -113,7 +113,7 @@
         <graphicPath>Things/Pawns/Humanlikes/Tier5/head/None_Average_Normal</graphicPath>
         <gender>None</gender>
     </HeadTypeDef>
-    
+
 
     <!-- M7 -->
     <!-- None -->

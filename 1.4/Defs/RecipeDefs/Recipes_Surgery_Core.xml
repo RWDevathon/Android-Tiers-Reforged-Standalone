@@ -22,7 +22,7 @@
             <li>ATR_DroneWatchdog</li>
 		</recipeUsers>
     </RecipeDef>
- 
+
 	<!-- Surgery to shutdown any incapacitated mechanical unit -->
     <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ATR_ShutdownMechanical</defName>
@@ -36,7 +36,7 @@
         <isViolation>true</isViolation>
 		<targetsBodyPart>false</targetsBodyPart>
 	</RecipeDef>
-	
+
 	<!-- Surgery to remove body parts from mechanical units -->
 	<RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>ATR_RemoveBodyPartAndroid</defName>
@@ -191,5 +191,100 @@
 		<researchPrerequisite>ATR_T1Androids</researchPrerequisite>
 		<addsHediff>ATR_LongReboot</addsHediff>
 	</RecipeDef>
-    
+
+	<!-- Reboot, akin to anesthetic but requiring no medicine -->
+    <RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ATR_RebootUnit</defName>
+		<label>Reboot unit</label>
+		<description>An exceedingly straightforward operation to restart the unit, without any side effects or consequences.</description>
+		<workerClass>Recipe_AddHediff</workerClass>
+		<jobString>Rebooting unit.</jobString>
+		<workAmount>5000</workAmount>
+		<skillRequirements>
+            <Crafting>4</Crafting>
+            <Intellectual>2</Intellectual>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+		<surgerySuccessChanceFactor>4</surgerySuccessChanceFactor>
+		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
+		<addsHediff>ATR_LongReboot</addsHediff>
+	</RecipeDef>
+
+	<!-- Overclocking -->
+    <RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ATR_ApplyOverclocking</defName>
+		<label>Apply overclocking</label>
+		<description>A simple hardware restructuring to a mechanical unit to lower hardware safety measures to allow for greater performance and risks.</description>
+		<workerClass>Recipe_AddHediff</workerClass>
+        <jobString>Applying overclocking.</jobString>
+		<workAmount>5000</workAmount>
+		<skillRequirements>
+            <Crafting>4</Crafting>
+            <Intellectual>2</Intellectual>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+		<surgerySuccessChanceFactor>4</surgerySuccessChanceFactor>
+		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
+		<addsHediff>ATR_MechanicalOverclocking</addsHediff>
+	</RecipeDef>
+
+    <RecipeDef ParentName="ATR_surgeryMechanical">
+		<defName>ATR_ResetOverclocking</defName>
+		<label>Resetting overclocking</label>
+		<description>A simple hardware restructuring to a mechanical unit to reset hardware safety measures to standard settings.</description>
+        <workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Resetting overclocking.</jobString>
+		<workAmount>5000</workAmount>
+		<skillRequirements>
+            <Crafting>4</Crafting>
+            <Intellectual>2</Intellectual>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+		<surgerySuccessChanceFactor>4</surgerySuccessChanceFactor>
+		<researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
+        <removesHediff>ATR_MechanicalOverclocking</removesHediff>
+	</RecipeDef>
+
 </Defs>

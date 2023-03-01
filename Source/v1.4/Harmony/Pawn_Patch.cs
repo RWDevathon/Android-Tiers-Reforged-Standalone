@@ -21,7 +21,7 @@ namespace ATReforged
                         IntVec3 tempPos = __instance.Position;
                         Map tempMap = __instance.Map;
                         __instance.Destroy();
-                        GenExplosion.DoExplosion(tempPos, tempMap, 1, DamageDefOf.Bomb, __instance, 5);
+                        GenExplosion.DoExplosion(tempPos, tempMap, 0.3f, DamageDefOf.Bomb, __instance, 5);
                     }
                     return false;
                 }

@@ -16,14 +16,13 @@ namespace ATReforged
         {
             base.ExposeData();
 
-            Scribe_Values.Look(ref isTerminal, "ATR_FractalTerminalBool", false); 
             Scribe_Values.Look(ref nextMutationTick, "ATR_nextMutationTick", 0);
         }
 
         private void ChangeState()
         {
             // Terminate if isTerminal
-            if (isTerminal)
+            if (Severity == 0.001f)
             {
                 nextMutationTick = int.MaxValue;
                 return;
@@ -41,10 +40,15 @@ namespace ATReforged
             }
             // Decrease mutation
             else
-            { 
+            {
+                // True Transcendance threshold reached;
                 if (Severity <= 0.1f)
-                { // True Transcendance threshold reached;
-                    DoTranscendance(pawn);
+                {
+                    // Only humanlikes may fully transcend.
+                    if (pawn.RaceProps.Humanlike)
+                    {
+                        DoTranscendance(pawn);
+                    }
                     return;
                 }
                 severityInt -= .1f;
@@ -66,11 +70,11 @@ namespace ATReforged
         public override void PostTick()
         {
             base.PostTick();
-            ageTicks++;
-            if (isTerminal)
+            if (Severity == 0.001f)
             {
                 return;
             }
+            ageTicks++;
 
             if (ageTicks >= nextMutationTick)
             {
@@ -98,11 +102,9 @@ namespace ATReforged
 
         public void DoTranscendance(Pawn pawn)
         {
-            isTerminal = true;
-            Severity = 0.01f;
+            Severity = 0.001f;
         }
 
-        bool isTerminal;
         int nextMutationTick;
     }
 }

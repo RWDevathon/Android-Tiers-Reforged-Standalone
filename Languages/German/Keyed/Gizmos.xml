@@ -89,7 +89,7 @@
     <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
     <ATR_MaintenanceLevelInfoFallRate>Instandhaltung fällt um {0} pro Tag.</ATR_MaintenanceLevelInfoFallRate>
 
-    <ATR_MaintenanceEffectGizmoLabel>Durchschnittlich Instandhaltung, {0}: {1} Tag(e)</ATR_MaintenanceEffectGizmoLabel>
+    <ATR_MaintenanceEffectGizmoLabel>Instandhaltungstrend, {0}: {1} Tag(e)</ATR_MaintenanceEffectGizmoLabel>
     <ATR_MaintenanceEffectGizmoLabelPositive>Positiv</ATR_MaintenanceEffectGizmoLabelPositive>
     <ATR_MaintenanceEffectGizmoLabelNegative>Negativ</ATR_MaintenanceEffectGizmoLabelNegative>
     <ATR_MaintenanceEffectDesc>Durchschnittliche Instandhaltung gibt den Trend im Zeitverlauf wieder. Ein hoher Wert wirkt sich positiv auf die Stimmung aus - ein Negativer negativ. Oberhalb von 70% steigt sie und fällt unterhalb von 30% Instandhaltung. Dazwischen kehrt sie zum Normalwert zurück.\n\nHinweis: Wartung und Instandhaltung sind sehr persönlich für mechanische Lebensformen. Nur im Fall von kritischen Fehlern sind sie bereit Hilfe in Anspruch zu nehmen.</ATR_MaintenanceEffectDesc>

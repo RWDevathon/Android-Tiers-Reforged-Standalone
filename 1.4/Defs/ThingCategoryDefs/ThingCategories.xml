@@ -13,4 +13,10 @@
         <parent>Weapons</parent>
     </ThingCategoryDef>
 
+    <ThingCategoryDef>
+        <defName>ATR_FixPacks</defName>
+        <label>Repair kits</label>
+        <parent>Medicine</parent>
+    </ThingCategoryDef>
+
 </Defs>

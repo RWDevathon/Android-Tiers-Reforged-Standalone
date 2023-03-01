@@ -100,6 +100,29 @@
     </HediffDef>
 
     <HediffDef>
+        <defName>ATR_MechanicalOverclocking</defName>
+        <label>Overclocking</label>
+        <description>This unit is overclocking its core processor, with a noticeable boost to performance. This requires significant additional power consumption, and strains heat and maintenance systems. The unusually heightened processor activity stresses the host consciousness as well.</description>
+        <initialSeverity>1</initialSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+				<hungerRateFactorOffset>1.25</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+		        <statOffsets>
+					<ComfyTemperatureMax>-10</ComfyTemperatureMax>
+                    <ATR_MaintenanceRetention>-0.25</ATR_MaintenanceRetention>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
         <defName>ATR_MemoryCorruption</defName>
         <label>Memory corruption</label>
         <description>This unit suffered a critical memory corruption. The memories are lost, but the damaged storage itself may eventually be recoverable. It will be a long and arduous road, however.</description>

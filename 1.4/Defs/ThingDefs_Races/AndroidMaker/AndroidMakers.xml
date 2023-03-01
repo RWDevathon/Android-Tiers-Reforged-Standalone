@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Unfinished Thing for android production being paused without losing progress -->
+
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>ATR_UnfinishedAndroid</defName>
+        <label>unfinished android</label>
+        <graphicData>
+            <texPath>Things/Items/UnfinishedAndroid</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,2.5)</drawSize>
+        </graphicData>
+        <stuffCategories Inherit="False" />
+    </ThingDef>
+
+    <ThingDef Name="ATR_GeneratorBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <graphicData>
+            <texPath>Things/Alpha</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+
+    <ThingDef Name="ATR_MakeableGeneratorBase" ParentName="ATR_GeneratorBase" Abstract="True">
+        <recipeMaker>
+            <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+            <workAmount>16500</workAmount>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Repair</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>ATR_MechanicalAssemblyPod</li>
+            </recipeUsers>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_T1AndroidGenerator</defName>
+        <label>T1 Android</label>
+        <description>An uninitialized Tier 1 android. Tier one androids are simply humanlike-machines, designed to mimic the general image and minimal capabilities of humanity. Lacking true sapience, many view them like very intelligent and responsive animals. This often leads to their exploitation as fodder or belittlement as pets, of which the dutiful drones pay no heed. Their existence is to serve, and they do so uncomplainingly.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Humanlikes/Tier1/ATR_TierOneExemplar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <researchPrerequisite>ATR_T1Androids</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>80</Steel>
+            <Plasteel>40</Plasteel>
+            <Gold>1</Gold>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_T1Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_T2AndroidGenerator</defName>
+        <label>T2 Android</label>
+        <description>An uninitialized Tier 2 android. The most common tier of androids, tier two androids are classified as the lowest specifications required for fully autonomous sapience. When fully clothed or when viewed from afar, they are easily mistaken for shorter, scrawnier humans. Indeed, tier two intelligences are often the most humanlike and most likely to seek integration into human society.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Humanlikes/Tier2/ATR_TierTwoExemplar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <workAmount>22500</workAmount>
+            <researchPrerequisite>ATR_T2Androids</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>120</Steel>
+            <Plasteel>60</Plasteel>
+            <Gold>2</Gold>
+            <ComponentIndustrial>16</ComponentIndustrial>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_T2Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_T3AndroidGenerator</defName>
+        <label>T3 Android</label>
+        <description>An uninitialized Tier 3 android. Androids classified as tier three are often qualified by their large stature - standing at a height ranging from seven to nine feet - and impressive capabilities. They are incredibly durable, modular, and capable. Requiring extensive amounts of rare resources, they are generally only mass-produced on glitterworlds.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Humanlikes/Tier3/ATR_TierThreeExemplar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <workAmount>28500</workAmount>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ATR_T3Androids</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Plasteel>220</Plasteel>
+            <Uranium>100</Uranium>
+            <Gold>3</Gold>
+            <ComponentIndustrial>16</ComponentIndustrial>
+            <ComponentSpacer>12</ComponentSpacer>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_T3Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_T4AndroidGenerator</defName>
+        <label>T4 Android</label>
+        <description>An uninitialized Tier 4 android. The pinnacle of known android theory and practice, the class of tier four androids is marked by the possession of a special AI persona core. While these cores are archotech technology, the chassis and internals are all glitterworld technology - there is no known method for the creation of an archotech chassis. \n\nTier four androids are a cut above the rest, and they know it too - ego complexes and disdain toward lesser tiers are very common amongst them.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Humanlikes/Tier4/ATR_TierFourExemplar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <workAmount>36500</workAmount>
+            <skillRequirements>
+                <Crafting>16</Crafting>
+                <Intellectual>8</Intellectual>
+            </skillRequirements>
+            <researchPrerequisite>ATR_T4Androids</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Plasteel>240</Plasteel>
+            <Uranium>80</Uranium>
+            <Gold>4</Gold>
+            <ComponentIndustrial>16</ComponentIndustrial>
+            <ComponentSpacer>16</ComponentSpacer>
+            <AIPersonaCore>1</AIPersonaCore>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_T4Colonist</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_WatchdogGenerator</defName>
+        <label>Watchdog Unit</label>
+        <description>An uninitialized mechanical wolf-analogue designed for guard, assault, search and destroy, and support duties. Watchdogs are intelligent enough and capable of charging.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Animals/DroneWatchdog/DroneWatchdog_east</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ATR_MilitaryBiomimetics</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>20</Plasteel>
+            <Uranium>10</Uranium>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_DroneWatchdog</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_TORTGenerator</defName>
+        <label>TORT Unit</label>
+        <description>An uninitialized mechanical tortoise-analogue designed for both short and long range transportation services. TORT units are intelligent enough and capable of charging.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Animals/DroneTORT/DroneTORT_east</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>80</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_DroneTORT</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_MineralUnitGenerator</defName>
+        <label>Mineral Unit</label>
+        <description>An uninitialized mechanical sheep-analogue designed for producing steel. This unit necessitates organic matter consumption, and can not charge.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Animals/DroneMineralUnit/DroneMineralUnit_east</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>100</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_DroneMineralUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_NutritionUnitGenerator</defName>
+        <label>Nutrition Unit</label>
+        <description>An uninitialized mechanical cow-analogue designed for producing high-grade high-efficiency milk. This unit necessitates organic matter consumption, and can not charge.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Animals/DroneNutritionUnit/DroneNutritionUnit_east</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_DroneNutritionUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ATR_MakeableGeneratorBase">
+        <defName>ATR_ChemUnitGenerator</defName>
+        <label>Chemical processing unit</label>
+        <description>An uninitialized mechanical hen-analogue designed for producing neutroamine or chemfuel precursors. This unit necessitates organic matter consumption, and can not charge.</description>
+        <graphicData>
+            <texPath>Things/Pawns/Animals/DroneChemUnit/DroneChemUnit_east</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <recipeMaker>
+            <researchPrerequisite>ATR_UtilityBiomimetics</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="ATReforged.CompProperties_GenericSpawner">
+                <pawnKind>ATR_DroneChemUnit</pawnKind>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Non-Manufacturable, only generated via Microscyther shell, so inherit only from the Generator Base. -->
+
+    <ThingDef ParentName="ATR_GeneratorBase">
+        <defName>ATR_MicroScytherGenerator</defName>
+        <label>MicroScyther</label>
+        <description>An uninitialized mechanical drone designed for swarming targets. They have a severely limited battery lifespan, yield nothing when destroyed, and attack anything that isn't a microscyther.</description>
+        <comps>
+            <li>
+                <compClass>ATReforged.CompSpawnerMicroscyther</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>
