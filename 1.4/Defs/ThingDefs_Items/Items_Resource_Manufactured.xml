@@ -3,27 +3,13 @@
 
     <!-- All Parts Packs Base Def -->
 
-    <ThingDef Name="ATR_PartPackBase" ParentName="ResourceBase" Abstract="True">
-        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <useHitPoints>true</useHitPoints>
-		<drawGUIOverlay>True</drawGUIOverlay>
-        <uiIconForStackCount>1</uiIconForStackCount>
+    <ThingDef Name="ATR_RepairItemBase" ParentName="ResourceBase" Abstract="True">
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
-        <statBases>
-            <MaxHitPoints>60</MaxHitPoints>
-            <MarketValue>30</MarketValue>
-            <Mass>0.45</Mass>
-            <Flammability>0</Flammability>
-        </statBases>
-        <intricate>true</intricate>
         <thingCategories>
-            <li>ATR_FixPacks</li>
+            <li>Manufactured</li>
         </thingCategories>
         <techLevel>Industrial</techLevel>
-        <tradeTags>
-            <li>ExoticMisc</li>
-        </tradeTags>
         <recipeMaker>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
@@ -42,7 +28,7 @@
     </ThingDef>
 
     <!-- Mechanical Part Pack -->
-    <ThingDef ParentName="ATR_PartPackBase">
+    <ThingDef ParentName="ATR_RepairItemBase">
         <defName>ATR_PartPack</defName>
         <label>Mechanical Part Pack</label>
         <description>This pack of half-assembled parts is designed to replace standard components ranging from whole legs and arms to intricate batteries and adaptors. Basic pre-programmed mechanites shape themselves to fit more complicated tasks.</description>
@@ -52,6 +38,10 @@
         </graphicData>
         <stackLimit>25</stackLimit>
         <statBases>
+            <MarketValue>30</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>0.45</Mass>
+            <Flammability>0</Flammability>
             <WorkToMake>2150</WorkToMake>
         </statBases>
         <costList>
@@ -70,10 +60,10 @@
 
     <!-- Resurrector Kits Base Def (builds from Part Pack) -->
 
-    <ThingDef Name="ATR_ApplicableKitBase" ParentName="ATR_PartPackBase" Abstract="True">
+    <ThingDef Name="ATR_ResurrectorKitBase" ParentName="ATR_RepairItemBase" Abstract="True">
 	    <thingClass>ThingWithComps</thingClass>
+        <techLevel>Spacer</techLevel>
         <stackLimit>10</stackLimit>
-        <tradeNeverStack>true</tradeNeverStack>
         <comps>
             <li Class="CompProperties_Usable">
                 <useJob>UseItem</useJob>
@@ -93,7 +83,7 @@
     </ThingDef>
 
     <!-- Drone Resurrector Kit -->
-    <ThingDef ParentName="ATR_ApplicableKitBase">
+    <ThingDef ParentName="ATR_ResurrectorKitBase">
         <defName>ATR_DroneResurrectorKit</defName>
         <label>Drone Resurrector Kit</label>
         <description>A specialized suite of tools capable of bringing disabled simple mechanical drones back to life. The tools are sufficiently advanced to bring simple-minded mechanical units like animals back to life. Revived units must fully reboot in order to begin operating again.</description>
@@ -116,14 +106,14 @@
         </costList>
         <recipeMaker>
             <skillRequirements>
-                <Crafting>8</Crafting>
+                <Crafting>6</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
     <!-- Android Resurrection Kit -->
-    <ThingDef ParentName="ATR_ApplicableKitBase">
+    <ThingDef ParentName="ATR_ResurrectorKitBase">
         <defName>ATR_AndroidResurrectorKit</defName>
         <label>Android Resurrector Kit</label>
         <description>A specialized suite of tools capable of bringing disabled mechanical units back to life. The tools are sufficiently advanced to bring any such unit back to nominal functionality. Revived units must fully reboot in order to begin operating again.</description>
@@ -148,7 +138,7 @@
         </costList>
         <recipeMaker>
             <skillRequirements>
-                <Crafting>10</Crafting>
+                <Crafting>8</Crafting>
             </skillRequirements>
             <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
         </recipeMaker>
@@ -159,6 +149,7 @@
     <ThingDef Name="ATR_RepairStimBase" ParentName="ResourceBase" Abstract="True">
         <thingClass>Medicine</thingClass>
         <stackLimit>25</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
         <drawGUIOverlay>True</drawGUIOverlay>
         <uiIconForStackCount>1</uiIconForStackCount>
         <soundInteract>Standard_Drop</soundInteract>
