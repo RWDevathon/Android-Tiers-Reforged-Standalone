@@ -108,6 +108,7 @@
             <skillRequirements>
                 <Crafting>6</Crafting>
             </skillRequirements>
+            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -139,10 +140,11 @@
             <skillRequirements>
                 <Crafting>8</Crafting>
             </skillRequirements>
+            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
-    <!-- Repair Stim Base -->
+    <!-- Repair Stim Base Def -->
 
     <ThingDef Name="ATR_RepairStimBase" ParentName="ResourceBase" Abstract="True">
         <thingClass>Medicine</thingClass>
@@ -199,7 +201,7 @@
                 <Crafting>4</Crafting>
                 <Intellectual>4</Intellectual>
             </skillRequirements>
-            <researchPrerequisite>Electricity</researchPrerequisite>
+            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -226,7 +228,7 @@
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <recipeMaker>
-            <researchPrerequisite>ATR_MechanicalStandardization</researchPrerequisite>
+            <researchPrerequisite>ATR_MechaniteAssistedRecovery</researchPrerequisite>
             <skillRequirements>
                 <Crafting>6</Crafting>
                 <Intellectual>6</Intellectual>

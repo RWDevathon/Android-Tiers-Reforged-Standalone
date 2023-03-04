@@ -9,24 +9,11 @@
         <baseCost>1600</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
-            <li>ATR_MechanicalInsight</li>
-        </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>2</researchViewY>
-    </ResearchProjectDef>
-  
-    <ResearchProjectDef>
-        <defName>ATR_MassCharging</defName>
-        <label>Charging station</label>
-        <tab>ATR_MechResearch</tab>
-        <description>In order to maximize charging and space efficiency, an effective way to charge a number of mechanical units simultaneously must be developed. A small charging port that can charge 8 at a time could prove essential to expansion.</description>
-        <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <prerequisites>
-            <li>ATR_MechanicalStandardization</li>
+            <li>ATR_UtilityBiomimetics</li>
+			<li>ATR_T1Androids</li>
         </prerequisites>
         <researchViewX>2</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewY>2.5</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -37,23 +24,64 @@
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
 		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
-		<researchViewX>2</researchViewX>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_IndustrialUtilityFrameworks</defName>
+        <label>Industrial utility frameworks</label>
+        <tab>ATR_MechResearch</tab>
+        <description>The specialization of frameworks follows the same trend from novelty to economy as the utilization of the T1's expanded. These allow basic drones to match or exceed the performance of a regular worker without the difficulties of biological needs, or more advanced machines to be shackled to similar purpose...</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ATR_MechanicalFrameworks</li>
+			<li>ATR_AutonomousIndustrialization</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_MilitaryFrameworks</defName>
+        <label>Military frameworks</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Application of advanced ingredients, such as luciferium, to otherwise simple combat-improving framework enhancements allows for truly superior outcomes to be achieved in military applications.</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ATR_MechanicalFrameworks</li>
+			<li>ATR_MechanicalStimulators</li>
+		</prerequisites>
+		<researchViewX>5</researchViewX>
 		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<defName>ATR_T1Androids</defName>
-		<label>T1 androids</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Tier one androids are marked by humanlike resemblance, but are still no more than machines. Impressive in their resemblance and capabilities, they represent the higher echelons of Urbworld creativity and Midworld dreams. A fine advancement in our progress, and the dawn of a bright future.</description>
-		<baseCost>1600</baseCost>
-		<techLevel>Industrial</techLevel>
-		<prerequisites>
-            <li>ATR_MechanicalStandardization</li>
-            <li>ATR_UtilityBiomimetics</li>
+
+    <ResearchProjectDef>
+        <defName>ATR_MassCharging</defName>
+        <label>Charging station</label>
+        <tab>ATR_MechResearch</tab>
+        <description>In order to maximize charging and space efficiency for industrial applications, an effective way to charge a number of mechanical units simultaneously must be developed. A small charging port that can charge 8 at a time could prove essential to expansion.</description>
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>ATR_IndustrialUtilityFrameworks</li>
         </prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>3</researchViewY>
+        <researchViewX>5</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_MechaniteAssistedRecovery</defName>
+		<label>Mechanite assisted recovery</label>
+		<tab>ATR_MechResearch</tab>
+		<description>More than the provision of mere componentry and assistance tools, the inclusion of basic mechanites allows for many simple damages which can arise during repair or modification works to simply be smoothed over and perfected. This serves to greatly increase the quality of work performed by any marginally competent mechanic.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -63,9 +91,9 @@
 		<description>While mechanical units are largely unconcerned by the passage of time and therefore unconcerned about the efficiency of its use, there are times when efficiency at a particular moment is critical. Consumable short-term stimulants could prove useful in these moments.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
-		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
+		<prerequisites><li>ATR_MechaniteAssistedRecovery</li></prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1.5</researchViewY>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -76,35 +104,16 @@
         <baseCost>1600</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
-            <li>ATR_MechanicalStandardization</li>
+			<li>ATR_MechanicalStimulators</li>
             <li>Fabrication</li>
         </prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>6</researchViewX>
+		<researchViewY>1.5</researchViewY>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
     </ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ATR_T2Androids</defName>
-		<label>T2 androids</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
-		<baseCost>2000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-            <li>ATR_T1Androids</li>
-            <li>Fabrication</li>
-        </prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>3</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchFacilities>
-            <li>MultiAnalyzer</li>
-        </requiredResearchFacilities>
-	</ResearchProjectDef>
   
     <ResearchProjectDef>
         <defName>ATR_StandardizedCommunications</defName>
@@ -115,9 +124,14 @@
         <techLevel>Industrial</techLevel>
         <prerequisites>
             <li>ATR_MechanicalStandardization</li>
+			<li>ATR_ServerInsight</li>
         </prerequisites>
-        <researchViewX>4</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewX>5</researchViewX>
+        <researchViewY>4</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
     </ResearchProjectDef>
   
     <ResearchProjectDef>
@@ -130,8 +144,28 @@
         <prerequisites>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
-        <researchViewX>5</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewX>6</researchViewX>
+        <researchViewY>4.8</researchViewY>
     </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_T2Androids</defName>
+		<label>T2 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>Fabrication</li>
+            <li>ATR_MechanicalFrameworks</li>
+            <li>ATR_StandardizedCommunications</li>
+        </prerequisites>
+		<researchViewX>6</researchViewX>
+		<researchViewY>0.5</researchViewY>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+	</ResearchProjectDef>
 
 </Defs>
