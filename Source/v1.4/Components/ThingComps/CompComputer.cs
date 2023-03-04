@@ -2,6 +2,7 @@
 using Verse;
 using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace ATReforged
 {
@@ -49,6 +50,7 @@ namespace ATReforged
             }
             else if ((signal == "SkyMindNetworkUserConnected" && powerConnection.PowerOn) || (signal == "PowerTurnedOn" && networkConnection?.connected != false))
             {
+                UpdateGlow();
                 Utils.gameComp.AddServer(building, serverMode);
             }
         }
@@ -176,11 +178,47 @@ namespace ATReforged
             }
         }
 
+        // Change this server to the given type, making sure it deregisters from the previous type.
         public void ChangeServerMode(ServerType newMode)
         {
             Utils.gameComp.RemoveServer(building, serverMode);
             Utils.gameComp.AddServer(building, newMode);
             serverMode = newMode;
+            UpdateGlow();
+        }
+
+        // Change the color of the server's glow to match its server type: green for skill, blue for security, red for hacking, black for illegal states. Do nothing if there is no CompGlower.
+        private void UpdateGlow()
+        {
+            CompGlower glower = parent.GetComp<CompGlower>();
+            if (glower == null)
+            {
+                return;
+            }
+
+            switch (serverMode)
+            {
+                case ServerType.SkillServer:
+                {
+                    glower.GlowColor = new ColorInt(0, 200, 0);
+                    break;
+                }
+                case ServerType.SecurityServer:
+                {
+                    glower.GlowColor = new ColorInt(0, 0, 200);
+                    break;
+                }
+                case ServerType.HackingServer:
+                {
+                    glower.GlowColor = new ColorInt(200, 0, 0);
+                    break;
+                }
+                default:
+                {
+                    glower.GlowColor = new ColorInt(0, 0, 0);
+                    break;
+                }
+            }
         }
 
         private CompSkyMind networkConnection;

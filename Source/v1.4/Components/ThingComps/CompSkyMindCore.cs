@@ -199,7 +199,7 @@ namespace ATReforged
                 action = delegate ()
                 {
                     List<FloatMenuOption> cloudPawnOpts = new List<FloatMenuOption>();
-                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null && !pawn.GetComp<CompSkyMindLink>().HasSurrogate()))
+                    foreach (Pawn cloudPawn in Utils.gameComp.GetCloudPawns().Where(pawn => pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_MindOperation) == null))
                     {
                         cloudPawnOpts.Add(new FloatMenuOption(cloudPawn.LabelShortCap, delegate
                         {
