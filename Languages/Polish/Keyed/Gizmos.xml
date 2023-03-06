@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoDoor -->
+	<ATR_AutoDoorOpen>Otwórz</ATR_AutoDoorOpen>
+	<ATR_AutoDoorOpenDescription>Otwórz zdalnie poprzez połączenie SkyMind.</ATR_AutoDoorOpenDescription>
+	<ATR_AutoDoorClose>Zamknij</ATR_AutoDoorClose>
+	<ATR_AutoDoorCloseDescription>Zamknij zdalnie poprzez połączenie SkyMind.</ATR_AutoDoorCloseDescription>
+
+	<!-- Computer -->
+    <ATR_ServerNetworkConnectionNeeded>Serwer nie jest połączony z siecią SkyMind.</ATR_ServerNetworkConnectionNeeded>
+
+	<ATR_SkillMode>Tryb Umiejętności</ATR_SkillMode>
+	<ATR_SkillModeDesc>Ten serwer jest przypisany do generowania punktów umiejętności. Kliknij, aby przełączyć się na tryb zabezpieczeń</ATR_SkillModeDesc>
+
+	<ATR_SecurityMode>Tryb Zabezpieczeń</ATR_SecurityMode>
+	<ATR_SecurityModeDesc>Ten serwer jest przypisany do generowania punktów bezpieczeństwa. Kliknij, aby przełączyć się na tryb hakowania.</ATR_SecurityModeDesc>
+
+	<ATR_HackingMode>Tryb Hakowania</ATR_HackingMode>
+	<ATR_HackingModeDesc>Ten serwer jest przypisany do generowania punktów hakowania. Kliknij, aby przełączyć się na tryb umiejętności.</ATR_HackingModeDesc>
+
+    <ATR_HackingWindow>Próba Hakowania</ATR_HackingWindow>
+    <ATR_HackingWindowDesc>Otwórz interfejs hakerski, umożliwiający wykorzystanie punktów hakowania do angażowania się w nikczemne działania.</ATR_HackingWindowDesc>
+
+	<ATR_SwitchToSkillMode>Nieaktywny!</ATR_SwitchToSkillMode>
+	<ATR_SwitchToSkillModeDesc>Ten serwer jest w stanie nielegalnym. Kliknij, aby przejść do trybu umiejętności.</ATR_SwitchToSkillModeDesc>
+
+	<!-- SkyMind -->
+	<ATR_ConnectSkyMind>Połącz ze SkyMind</ATR_ConnectSkyMind>
+	<ATR_ConnectSkyMindDesc>Połącz to urządzenie z siecią SkyMind w celu zdalnej interakcji.</ATR_ConnectSkyMindDesc>
+
+	<!-- Core -->
+	<ATR_CloudPawnInfo>Informacje</ATR_CloudPawnInfo>
+	<ATR_CloudPawnInfoDesc>Wyświetl informacje o świadomościach SkyMind.</ATR_CloudPawnInfoDesc>
+
+	<ATR_RemoveCloudPawn>Usuń</ATR_RemoveCloudPawn>
+	<ATR_RemoveCloudPawnDesc>Usuń świadomość SkyMind</ATR_RemoveCloudPawnDesc>
+	<ATR_RemoveCloudPawnConfirm>Usunięcie {0} z sieci SkyMind trwale zniszczy podświadomość. Jest to uważane za morderstwo.</ATR_RemoveCloudPawnConfirm>
+
+	<ATR_ReplicateCloudPawn>Odtwórz</ATR_ReplicateCloudPawn>
+	<ATR_ReplicateCloudPawnDesc>Odtwórz świadomość SkyMind.</ATR_ReplicateCloudPawnDesc>
+
+	<ATR_Skills>Umiejętności</ATR_Skills>
+	<ATR_SkillsDesc>Otwórz warsztat umiejętności, umożliwiający wymianę punktów umiejętności na doświadczenie i pasje.</ATR_SkillsDesc>
+
+	<ATR_ControlSurrogate>Połącz</ATR_ControlSurrogate>
+	<ATR_ControlSurrogateDesc>Przejmij kontrolę nad wybranym surogatem bez gospodarza.</ATR_ControlSurrogateDesc>
+
+	<ATR_DisconnectCloudPawn>Odłącz</ATR_DisconnectCloudPawn>
+	<ATR_DisconnectCloudPawnDesc>Odłącz podświadomość SkyMind ze swoich surogatów.</ATR_DisconnectCloudPawnDesc>
+
+	<ATR_ControlCaravanSurrogate>Odzyskaj</ATR_ControlCaravanSurrogate>
+	<ATR_ControlCaravanSurrogateDesc>Odzyskaj surogata bez gospodarza w karawanie.</ATR_ControlCaravanSurrogateDesc>
+
+	<!-- Link -->
+    <ATR_Surrogate>surogat</ATR_Surrogate>
+
+	<ATR_AbsorbExperience>Absorpcja umysłu</ATR_AbsorbExperience>
+	<ATR_AbsorbExperienceDesc>Absorbuj doświadczenie świadomości jednostki za punkty umiejętności i hakowania.</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceConfirm>Ta operacja wydobywa przydatną wiedzę dotyczącą umiejętności i hakowania za cenę życia jednostki. Jest to traktowane jako morderstwo.</ATR_AbsorbExperienceConfirm>
+
+	<ATR_DownloadCloudPawn>Pobierz</ATR_DownloadCloudPawn>
+	<ATR_DownloadCloudPawnDesc>Pobierz świadomość SkyMind dla tej jednostki.</ATR_DownloadCloudPawnDesc>
+	<ATR_DownloadCloudPawnConfirm>Ta operacja w pełni przenosi świadomość SkyMind do tej jednostki. Świadomość nie będzie utrzymywać się w sieci.</ATR_DownloadCloudPawnConfirm>
+
+	<ATR_DisconnectSurrogate>Odłącz</ATR_DisconnectSurrogate>
+	<ATR_DisconnectSurrogateDesc>Odłącz wszystkie połączenia surogatów.</ATR_DisconnectSurrogateDesc>
+
+	<ATR_ToggleControlMode>Przełącz Kontrolę</ATR_ToggleControlMode>
+	<ATR_ToggleControlModeDesc>Przełącza tryb sterowania surogata, umożliwiając sterowanie surogata, ale wyłączając operacje SkyMind.</ATR_ToggleControlModeDesc>
+
+	<ATR_Permute>Zamiana</ATR_Permute>
+	<ATR_PermuteDesc>Zamień świadomość aktualnie wybranego kolonisty z innym kolonistą.</ATR_PermuteDesc>
+	<ATR_PermuteConfirm>Ta operacja zamieni świadomość {0} i {1}.</ATR_PermuteConfirm>
+
+	<ATR_Transfer>Przenieś</ATR_Transfer>
+	<ATR_TransferDesc>Przenieś świadomość aktualnie wybranego kolonisty do organicznego surogata.</ATR_TransferDesc>
+	<ATR_TransferConfirm>Ta operacja przeniesie {0} do ciała docelowego surogata. W ten sposób oryginalne ciało {0} pozostanie bezmyślne. Odbiornik SkyMind spali się po zakończeniu operacji.</ATR_TransferConfirm>
+
+	<ATR_Upload>Wyślij</ATR_Upload>
+	<ATR_UploadDesc>Prześlij tę inteligencję do sieci SkyMind. To, co się stanie z pozostawionym ciałem jest kontrolowane poprzez ustawienia (domyślnie ciało staje się martwe).</ATR_UploadDesc>
+	<ATR_UploadConfirm>Operacja ta przenosi tę świadomość do sieci SkyMind, pozostawiając ciało za sobą.</ATR_UploadConfirm>
+
+    <!-- Remotely Triggered -->
+    <ATR_DetonateIEDRemotely>Odpal materiały wybuchowe</ATR_DetonateIEDRemotely>
+    <ATR_DetonateIEDRemotelyDesc>Zdalnie i natychmiastowo odpala materiały wybuchowe za pomocą połączenia SkyMind.</ATR_DetonateIEDRemotelyDesc>
+
+	<!-- Maintenance -->
+    <ATR_MaintenanceGizmoLabel>Stan Techniczny</ATR_MaintenanceGizmoLabel>
+    <ATR_MaintenanceDesc>Stan techniczny jest miarą pamięci i zdrowia systemu pionka - jest on tylko pośrednio związany ze zdrowiem części fizycznej i ma przede wszystkim charakter medytacyjny. Stan techniczny ulega degradacji z czasem i musi być utrzymywany przez androidy, które mają wystarczająco dużo wolnego czasu, aby dbać o swoje zdrowie wewnętrzne. Słaby stan techniczny pogarsza wydajność i może prowadzić do awarii części fizycznych z powodu krytycznych błędów naprawczych, jeśli występuje on za długo.\n\nWysoki poziom stanu technicznego zapewnia niewielkie korzyści, ale również znacznie zwiększa straty związane z utrzymaniem - co prowadzi do tego, że większość androidów stosuje podejście środka drogi.\n\nUwaga: podane wartości są wskaźnikami bazowymi, rzeczywisty wskaźnik spadku zależy od stanu technicznego jednostki (w zakładce info)</ATR_MaintenanceDesc>
+    <ATR_MaintenanceTargetLabel>Stan techniczny celu</ATR_MaintenanceTargetLabel>
+    <ATR_MaintenanceTargetLabelDesc>Kliknij by ustawić pożądany poziom stanu technicznego.</ATR_MaintenanceTargetLabelDesc>
+    <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+    <ATR_MaintenanceLevelInfoFallRate>Stan techniczny spada o {0} dziennie.</ATR_MaintenanceLevelInfoFallRate>
+
+    <ATR_MaintenanceEffectGizmoLabel>Średni stan technicnzy, {0}: {1} dzień(dni)</ATR_MaintenanceEffectGizmoLabel>
+    <ATR_MaintenanceEffectGizmoLabelPositive>Pozytywny</ATR_MaintenanceEffectGizmoLabelPositive>
+    <ATR_MaintenanceEffectGizmoLabelNegative>Negatywny</ATR_MaintenanceEffectGizmoLabelNegative>
+    <ATR_MaintenanceEffectDesc>Średni stan techniczny to miara tego, jak dobrze utrzymana była pamięć i systemy wewnętrzne jednostki przez pewien czas, i zmienia się w zależności od poziomu utrzymania jednostki. Wysoki poziom poprawia samopoczucie, podczas gdy niski poziom pogarsza samopoczucie i zdrowie. Poziom ten wzrasta, gdy stan techniczny jest wyższy niż 70%, spada, gdy jest niższy niż 30%, a w przeciwnym razie powoli wraca do poziomu wyjściowego.\n\nUwaga: stan techniczny jest czynnością osobistą, głęboko introspektywną i dlatego w dużej mierze nie może być wykonywany przez innych dla jednostki, z wyjątkiem sytuacji awaryjnych z pakietem części.</ATR_MaintenanceEffectDesc>
+
+    <!-- Pawn Type Restriction -->
+    <ATR_RestrictPawnType>Ograniczenia</ATR_RestrictPawnType>
+    <ATR_RestrictPawnTypeDescription>Otwórz ograniczenia typu jednostki, aby ustawić kontrolę nad tym, jaki typ jednostki może tego użyć.</ATR_RestrictPawnTypeDescription>
+
+</LanguageData>

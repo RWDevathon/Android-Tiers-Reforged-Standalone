@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General -->
+	<ATR_SkyMindConnectionFailed>Nie można ustanowić połączenia SkyMind. Sprawdź przepustowość i dostępność sieci.</ATR_SkyMindConnectionFailed>
+	<ATR_SkyMindConnectionFailedNoNetwork>Nie można ustanowić połączenia SkyMind. Nie ma dostępnej sieci.</ATR_SkyMindConnectionFailedNoNetwork>
+
+	<ATR_GridlockerCleared>Blokada Sieci została pomyślnie odszyfrowana i wyłączona.</ATR_GridlockerCleared>
+
+	<!-- Core -->
+	<ATR_RemoveCloudPawnSuccess>Sieć neuronowa z {0} została usunięta.</ATR_RemoveCloudPawnSuccess>
+
+	<ATR_ReplicateCloudPawnFailed>Nie można zainicjować replikacji. Niewystarczająca ilość miejsca w SkyMind dostępna do alokacji.</ATR_ReplicateCloudPawnFailed>
+
+    <!-- Player hacking -->
+    <ATR_HackOperationFailed>Operacja nie zdołała naruszyć systemu bezpieczeństwa frakcji docelowej. Nie przewiduje się żadnych konsekwencji.</ATR_HackOperationFailed>
+	<ATR_DisruptorHackSuccess>Zakłócenia udane. Wrogie jednostki zostały osłabione.</ATR_DisruptorHackSuccess>
+
+    <ATR_NoArrival>Nic nie zostało wysłane na pomieszane współrzędne, zanim frakcja zresetowała swój system naprowadzania. Tym razem mieli szczęście.</ATR_NoArrival>
+
+    <!-- Android Interfaces -->
+    <ATR_NewbootAndroidCreated>Android stworzony. Zainstaluj interfejs poprzez operację, aby wprowadzić jednostkę do sieci.</ATR_NewbootAndroidCreated>
+    <ATR_InterfaceRemoved>Interfejs androida został usunięty. Wszystkie dane osobowości i kontroli zostały zniszczone. Zainstaluj nowy interfejs, aby przywrócić go do działania.</ATR_InterfaceRemoved>
+
+    <!-- Mechfaller -->
+    <ATR_HostileMechFall>Mech przybył, ale identyfikuje wszystko jako wrogie! Aktywował też opóźnione samowyłączenie.</ATR_HostileMechFall>
+
+	<!-- Link -->
+    <ATR_CannotConnect>Próba połączenia nie mogła zostać nawiązana, należy zapewnić odpowiednią przepustowość sieci i rentowność celu.</ATR_CannotConnect>
+	<ATR_SurrogateControlled>{0} jest połączony z nowym surogatem</ATR_SurrogateControlled>
+	<ATR_OperationInitiated>Połączenie sieciowe SkyMind ustanowione na żądanie {0}. Nie wyłączaj połączenia sieciowego do czasu zakończenia procedury.</ATR_OperationInitiated>
+	<ATR_OperationCompleted>Operacja SkyMind zakończona</ATR_OperationCompleted>
+	<ATR_OperationCompletedDesc>Sieć SkyMind pomyślnie przeprowadziła operację zgodnie z żądaniem {0}.</ATR_OperationCompletedDesc>
+    <ATR_OperationFailure>Operacja SkyMind nie powiodła się!</ATR_OperationFailure>
+    <ATR_OperationFailureDesc>W {0} doszło do katastrofalnego uszkodzenia pamięci w wyniku załamania się łącza SkyMind podczas operacji umysłu. Operacja nie powiodła się i doszło do poważnego uszkodzenia pamięci.</ATR_OperationFailureDesc>
+
+    <!-- Surgeries -->
+	<MessageMedicalOperationFailureMinorAndroid>{0} popełnił drobny błąd podczas działania i przerwał operację na {1}.</MessageMedicalOperationFailureMinorAndroid>
+	<MessageMedicalOperationFailureCatastrophicAndroid>{0} popełnił katastrofalny błąd podczas próby wykonania operacji na {1}.</MessageMedicalOperationFailureCatastrophicAndroid>
+	<MessageMedicalOperationFailureRidiculousAndroid>{0} popełnił poważny błąd podczas próby wykonania operacji na {1}.</MessageMedicalOperationFailureRidiculousAndroid>
+	<MessageMedicalOperationFailureFatalAndroid>{0} popełnił błąd fatalny podczas operacji na {1}, który spowodował niezamierzone uszkodzenie kaskadowe. Zabieg ten spowodował nieodwracalne uszkodzenie centralnego procesora, co skutkowało całkowitą utratą pamięci i świadomości.</MessageMedicalOperationFailureFatalAndroid>
+
+</LanguageData>

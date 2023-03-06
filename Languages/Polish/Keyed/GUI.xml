@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Needs -->
+	
+	<ATR_EnergyNeed>Energia</ATR_EnergyNeed>
+	<ATR_EnergyNeedDesc>Energia to ilość zachowanego ładunku w urządzeniu. Jeśli osiągnie ona wartość zero, jednostka przejdzie w nieefektywny tryb niskiego zużycia energii. Jeśli ładunek nie zostanie przywrócony, sprzęt w końcu ulegnie krytycznej awarii i jednostka przestanie działać.</ATR_EnergyNeedDesc>
+	
+    <!-- Ritual Permissions -->
+
+    <ATR_DronesCannotParticipateInRituals>Drony nie mogą brać udziału w rytuałach.</ATR_DronesCannotParticipateInRituals>
+
+    <!-- Prisoner Tab -->
+
+    <ATR_PrisonerDroneWarning>Z dronami nie można wchodzić w interakcje. Użyj chirurgii, aby przeprogramować (wymagane badania T1) lub wyłączyć.</ATR_PrisonerDroneWarning>
+    <ATR_SlaveDroneAlert>Drony nie powinny być niewolnikami! W każdym ticku generowany jest błąd w konsoli. Natychmiast przeprogramuj lub wyeliminuj tego drona.</ATR_SlaveDroneAlert>
+
+    <!-- Maintenance Spot -->
+    <ATR_MaintenanceNeedRequired>Konserwacja nie jest wymagana</ATR_MaintenanceNeedRequired>
+
+</LanguageData>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ATR_AlertServerHeatCritical>Urządzenie Wrażliwe Na Ciepło W Stanie Krytycznym</ATR_AlertServerHeatCritical>
+	<ATR_AlertServerHeatCriticalDesc>Przynajmniej jedno urządzenie wrażliwe na ciepło grozi zapłonem z powodu przekroczenia maksymalnego bezpiecznego progu ciepła! Podejmij wymagane działania, aby zachować integralność sieci!</ATR_AlertServerHeatCriticalDesc>
+	
+	<ATR_AlertFullSkillServers>Serwery Umiejętnościowe Pełne</ATR_AlertFullSkillServers>
+    <ATR_AlertFullSkillServersDesc>Nie ma już więcej miejsca dla punktów umiejętności. Rozważ ich zużycie lub zwiększenie pojemności.</ATR_AlertFullSkillServersDesc>
+    
+	<ATR_AlertFullHackingServers>Serwery Hakowania Pełne</ATR_AlertFullHackingServers>
+    <ATR_AlertFullHackingServersDesc>Nie ma już więcej miejsca dla punktów hakowania i nie ma aktualnie kary czasowej. Rozważ ich zużycie lub zwiększenie pojemności.</ATR_AlertFullHackingServersDesc>
+    
+    <ATR_AlertLowSecurity>Sieć Zagrożona</ATR_AlertLowSecurity>
+	<ATR_AlertLowSecurityDesc>Aktualna liczba dostępnych punktów zabezpieczeń najprawdopodobniej nie ochroni twojej sieci przed próbami włamaniowymi! Wymagane są dodatkowe serwery zabezpieczeń oraz punkty - w tej chwili należy zachować szczególną ostrożność przy korzystaniu z sieci.</ATR_AlertLowSecurityDesc>
+
+	<ATR_NeedMechanic>Wymagany mechanik</ATR_NeedMechanic>
+	<ATR_NeedMechanicDesc>Te jednostki mechaniczne wymagają napraw, ale nie masz żadnych zdrowych kolonistów przypisanych do pracy mechanika.\n\n{0}\nPrzypisz zdrowego kolonistę do rodzaju pracy Mechanik. Podczas gdy większość obrażeń zostanie naturalnie złagodzona z czasem, mechanik znacznie przyspieszy regenerację i zmniejszy ryzyko wystąpienia efektów ubocznych.</ATR_NeedMechanicDesc>
+  
+</LanguageData>

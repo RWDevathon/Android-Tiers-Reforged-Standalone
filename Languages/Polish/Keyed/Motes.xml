@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- AutoFlickering -->
+	<ATR_FlickEnable>Włączanie za pomocą SkyMind</ATR_FlickEnable>
+	<ATR_FlickDisable>Wyłączanie za pomocą SkyMind</ATR_FlickDisable>
+	<ATR_AutoDoorOpenMoteText>Otwieranie za pomocą SkyMind</ATR_AutoDoorOpenMoteText>
+	<ATR_AutoDoorCloseMoteText>Zamykanie za pomocą SkyMind</ATR_AutoDoorCloseMoteText>
+
+</LanguageData>

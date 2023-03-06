@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- Miscellaneous Keys -->
+	<ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
+
+	<ATR_RestartRequired>Wymagany Restart.</ATR_RestartRequired>
+	<ATR_RestartRequiredSectionDesc>Wszelkie zmiany ustawień w tej sekcji wymagają ponownego uruchomienia gry.</ATR_RestartRequiredSectionDesc>
+	<ATR_RestartRequiredPostDesc>Niektóre zmienione ustawienia wymagają ponownego uruchomienia gry dla bezpieczeństwa.</ATR_RestartRequiredPostDesc>
+
+
+    <ATR_ExpandMenu>Rozwiń/Zwiń</ATR_ExpandMenu>
+
+	<!-- Mod Settings Page Keys -->
+	<ATR_SettingsTabTitle>Konfiguracja</ATR_SettingsTabTitle>
+
+	<ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+	<ATR_SettingsTabOption_General>Ogólne</ATR_SettingsTabOption_General>
+	<ATR_SettingsTabOption_Power>Moc</ATR_SettingsTabOption_Power>
+	<ATR_SettingsTabOption_Security>Zabezpieczenia</ATR_SettingsTabOption_Security>
+	<ATR_SettingsTabOption_Health>Zdrowie</ATR_SettingsTabOption_Health>
+	<ATR_SettingsTabOption_Connectivity>Łączność</ATR_SettingsTabOption_Connectivity>
+	<ATR_SettingsTabOption_Stats>Statystyki</ATR_SettingsTabOption_Stats>
+
+	<!-- General Settings -->
+	<ATR_ApplyPreset>Zastosuj Ustawienia Wstępne</ATR_ApplyPreset>
+
+		<!-- Gender Settings -->
+	<ATR_AndroidGenderNotice>Zmiany dotyczą tylko NOWYCH androidów</ATR_AndroidGenderNotice>
+	<ATR_AndroidsHaveGenders>Androidy mają płeć</ATR_AndroidsHaveGenders>
+	<ATR_AndroidsPickGenders>Androidy wybierają płeć przy tworzeniu</ATR_AndroidsPickGenders>
+	<ATR_AndroidsFixedGenderSelector>Wszystkie androidy są męskie (fałsz) lub żeńskie (prawda)</ATR_AndroidsFixedGenderSelector>
+	<ATR_AndroidsGenderRatio>Szansa dla androidów na wybór płci męskiej vs. żeńskiej</ATR_AndroidsGenderRatio>
+
+		<!-- Commonality Settings -->
+	<ATR_PlayerOnlyNote>Jeśli wyłączone, androidy będą istnieć tylko wtedy, gdy zostaną zbudowane przez gracza</ATR_PlayerOnlyNote>
+	<ATR_AndroidsAppearNaturally>Androidy mogą pojawiać się jako części frakcji lub wydarzeń</ATR_AndroidsAppearNaturally>
+
+	<ATR_AndroidFactionSettings>Jaką rolę odgrywają frakcje androidów? Wpływa tylko na NOWE gry</ATR_AndroidFactionSettings>
+	<ATR_AndroidSocietiesExist>Androidy mają swoje własne frakcje</ATR_AndroidSocietiesExist>
+	<ATR_AndroidRaidersExist>Androidy utworzyły swój własny piracki kolektyw</ATR_AndroidRaidersExist>
+	<ATR_AndroidRaidersDesc>Działa jak frakcja piratów z gry bazowej</ATR_AndroidRaidersDesc>
+	<ATR_AndroidUnionistsExist>Androidy poświęcone zbiorowemu przetrwaniu zjednoczyły się</ATR_AndroidUnionistsExist>
+	<ATR_AndroidUnionistsDesc>Działa jak frakcja cudzoziemców z gry bazowej</ATR_AndroidUnionistsDesc>
+
+        <!-- Permission Settings-->
+    <ATR_bedRestrictionDefaultsToAll>Łóżka domyślnie ustawiają się na Wszystkie jednostki, a nie Mechaniczne/Organiczne</ATR_bedRestrictionDefaultsToAll>
+    <ATR_bedRestrictionDefaultsToAllDesc>Łóżka ładujące z tego moda domyślnie ustawiają się tylko na mechaniczne, a wszystkie inne łóżka na organiczne.</ATR_bedRestrictionDefaultsToAllDesc>
+
+        <!-- Consideration Settings -->
+    <ATR_isUsingCustomConsiderations>Używanie niestandardowej konfiguracji, nie będzie resetowane: {0}</ATR_isUsingCustomConsiderations>
+    <ATR_isUsingCustomConsiderationsDesc>Jeśli fałsz, ATR będzie automatycznie regenerował to co jest/nie jest mechaniczne przy starcie gry, tak aby mógł złapać nowe zmodowane rasy dla Ciebie.</ATR_isUsingCustomConsiderationsDesc>
+    <ATR_resetCustomConsiderations>Resetuj ustalenia</ATR_resetCustomConsiderations>
+	<ATR_SettingsConsideredAndroid>Androidy</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>Nie Androidy</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>Drony</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>Nie Drony</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>Mechaniczne Zwierzęta</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Organiczne Zwierzęta</ATR_SettingsNotConsideredAnimals>
+
+        <!-- Rights Settings -->
+    <ATR_factionsWillDeclareRightsWars>Frakcje wypowiedzą wojnę o spory o prawa</ATR_factionsWillDeclareRightsWars>
+    <ATR_factionsWillDeclareRightsWarsDesc>Frakcje, które są anty-mechaniczne lub anty-organiczne wypowiedzą ci wojnę, jeśli będziesz miał mechanicznych/organicznych kolonistów.</ATR_factionsWillDeclareRightsWarsDesc>
+
+    <ATR_SettingsAntiMechanicalFaction>Fakcje bez praw dla jednostek mechanicznych</ATR_SettingsAntiMechanicalFaction>
+    <ATR_SettingsTolerateMechanicalFaction>Frakcje tolerujące jednostki mechaniczne</ATR_SettingsTolerateMechanicalFaction>
+    <ATR_SettingsAntiOrganicFaction>Frakcje bez praw dla jednostek organicznych</ATR_SettingsAntiOrganicFaction>
+    <ATR_SettingsTolerateOrganicFaction>Frakcje tolerujące jednostki organiczne</ATR_SettingsTolerateOrganicFaction>
+
+    <ATR_dronesTriggerRightsWars>Anty-mechaniczne frakcje wypowiadają wojnę o drony</ATR_dronesTriggerRightsWars>
+    <ATR_prisonersTriggerRightsWars>Frakcje wypowiadają wojnę o więźniów</ATR_prisonersTriggerRightsWars>
+    <ATR_slavesTriggerRightsWars>Fakcje wypowiadają wojnę o niewolników</ATR_slavesTriggerRightsWars>
+    <ATR_surrogatesTriggerRightsWars>Frakcje wypowiadają wojnę o surogatów</ATR_surrogatesTriggerRightsWars>
+
+	<!-- Needs Settings -->
+	<ATR_AndroidOnlyNotice>Uwaga: Dotyczy to tylko jednostek oznaczonych jako androidy. Drony nie mają takich potrzeb.</ATR_AndroidOnlyNotice>
+	<ATR_AndroidsNeedJoy>Androidy muszą spełniać potrzeby rekreacji</ATR_AndroidsNeedJoy>
+	<ATR_AndroidsNeedBeauty>Androidy muszą zaspokoić potrzeby związane z pięknem otoczenia</ATR_AndroidsNeedBeauty>
+	<ATR_AndroidsNeedComfort>Androidy muszą zaspokoić potrzeby komfortu</ATR_AndroidsNeedComfort>
+	<ATR_AndroidsNeedOutdoors>Androidziki muszą zaspokoić potrzeby związane z przebywaniem na świeżym powietrzu/ w pomieszczeniach zamkniętych</ATR_AndroidsNeedOutdoors>
+
+	<ATR_SettingsPresetDefault>Domyślne</ATR_SettingsPresetDefault>
+	<ATR_SettingsPresetCustom>Własne</ATR_SettingsPresetCustom>
+
+	<!-- Power Settings -->
+	<ATR_wattsConsumedPerBodySize>Zużycie mocy na 1 rozmiar ciała podczas ładowania [domyślnie: 500]</ATR_wattsConsumedPerBodySize>
+	<ATR_batteryPercentagePerRareTick>Procent naładowania baterii na rzadki tick (~4 sekundy) [domyślnie: 7%]</ATR_batteryPercentagePerRareTick>
+	<ATR_batteryPercentagePerTick>Szybkość ładowania baterii [domyślnie: 1]</ATR_batteryPercentagePerTick>
+	<ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Urządzenia mechaniczne inaczej radzą sobie z odżywianiem niż organiczne.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+	<ATR_mechanicalBioprocessingEfficiency>Efektywność odżywiania [domyślnie: 50%]</ATR_mechanicalBioprocessingEfficiency>
+
+	<!-- Security Settings -->
+        <!-- Hostile Hacking -->
+	<ATR_EnemyHacksOccur>Wrogie hakowanie jest włączone.</ATR_EnemyHacksOccur>
+	<ATR_ChanceAlliesInterceptHack>Szansa na przechwycenie hacków przeciwko tobie na każdą sojuszniczą frakcję</ATR_ChanceAlliesInterceptHack>
+	<ATR_ChanceAlliesInterceptHackDesc>Procentowa szansa, że sojusznicze frakcje uratują cię przed udanym hakiem wroga, zapobiegając obrażeniom i faktycznie dając ci punkty bezpieczeństwa. To jest NA KAŻDEGO SOJUSZNIKA.</ATR_ChanceAlliesInterceptHackDesc>
+	<ATR_PointsGainedOnInterceptPercentage>Punkty zdobyte podczas przechwytywania przez sojuszników jako procent ataku</ATR_PointsGainedOnInterceptPercentage>
+	<ATR_PointsGainedOnInterceptPercentageDesc>Kiedy sojusznik przechwytuje atak na ciebie, przekazuje ci punkty bezpieczeństwa. To kontroluje, jaki procent punktów napadu dają tobie.</ATR_PointsGainedOnInterceptPercentageDesc>
+	<ATR_EnemyHackAttackStrengthModifier>Modyfikator siły haków wroga</ATR_EnemyHackAttackStrengthModifier>
+	<ATR_EnemyHackAttackStrengthModifierDesc>Mnożnik na to, ile punktów hakerskich będą miały wrogie incydenty hakerskie. Mniej niż 100% zmniejsza intensywność, więcej niż 100% zwiększa intensywność.</ATR_EnemyHackAttackStrengthModifierDesc>
+	<ATR_PercentageOfValueUsedForRansoms>Procent wartości przedmiotu żądanego w ataku okupu</ATR_PercentageOfValueUsedForRansoms>
+
+        <!-- Player Hacking -->
+    <ATR_PlayerCanHack>Hakowanie przez gracza jest włączone.</ATR_PlayerCanHack>
+    <ATR_receiveFullHackingAlert>Ostrzeżenie dla punktów hakowania przekraczających 90% pojemności.</ATR_receiveFullHackingAlert>
+    <ATR_RetaliationChanceOnFailure>Szansa, że docelowa frakcja podejmie działania odwetowe po nieudanym hakowaniu</ATR_RetaliationChanceOnFailure>
+    <ATR_MinHackSuccessChance>Minimalna szansa na udany hack</ATR_MinHackSuccessChance>
+    <ATR_MaxHackSuccessChance>Maksymalna szansa na udany hack</ATR_MaxHackSuccessChance>
+
+    <!-- Health Settings -->
+        <!-- Medical -->
+    <ATR_medicinesAreInterchangeable>Leki organiczne/mechaniczne można stosować zamiennie.</ATR_medicinesAreInterchangeable>
+    <ATR_showMechanicalSurgerySuccessChance>Wyświetl szanse powodzenia zakończonych operacji mechanicznych.</ATR_showMechanicalSurgerySuccessChance>
+    <ATR_maxChanceMechanicOperationSuccess>Maksymalna szansa powodzenia dla operacji mechanicznych</ATR_maxChanceMechanicOperationSuccess>
+    <ATR_chanceFailedOperationMinor>Szansa na to, że nieudane operacje mechaniczne mają małe konsekwencje [domyślnie 75%]</ATR_chanceFailedOperationMinor>
+    <ATR_chancePartSavedOnFailure>Szansa na zwrot części z nieudanych operacji mechanicznych [domyślnie 75%]</ATR_chancePartSavedOnFailure>
+
+        <!-- Maintenance -->
+    <ATR_maintenanceNeedExists>Urządzenia mechaniczne wymagają konserwacji.</ATR_maintenanceNeedExists>
+    <ATR_receiveMaintenanceFailureLetters>Otrzymywanie listów dotyczących kwestii zdrowotnych związanych ze stanem technicznym.</ATR_receiveMaintenanceFailureLetters>
+    <ATR_maintenancePartFailureRateFactor>Po jakim czasie zły stan techniczny może spowodować awarię części i jakie są szanse, że nie dojdzie do awarii</ATR_maintenancePartFailureRateFactor>
+    <ATR_maintenanceFallRateFactor>Jak szybko stan techniczny spada naturalnie</ATR_maintenanceFallRateFactor>
+    <ATR_maintenanceGainRateFactor>Jak szybko uzyskuje się stan techniczny podczas wykonywania prac konserwacyjnych</ATR_maintenanceGainRateFactor>
+
+        <!-- Hediffs -->
+    <ATR_hediffBlacklistWarning>Ostrzeżenie: Im dłuższa jest lista hediffów z czarnej listy, tym większy będzie miała wpływ na wydajność gry.</ATR_hediffBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalHediffs>Hediffy mechaniczne na czarnej liście</ATR_settingsBlacklistedMechanicalHediffs>
+    <ATR_settingsAllowedMechanicalHediffs>Dozwolone hediffy mechaniczne</ATR_settingsAllowedMechanicalHediffs>
+
+	<!-- Connectivity Settings -->
+        <!-- Surrogates -->
+    <ATR_surrogatesAllowed>Dozwolone są surogaty.</ATR_surrogatesAllowed>
+    <ATR_otherFactionsAllowedSurrogates>Inne frakcje mogą używać surogatów.</ATR_otherFactionsAllowedSurrogates>
+    <ATR_minGroupSizeForSurrogates>Liczba członków dla grup frakcji dla spawnu z surogatami</ATR_minGroupSizeForSurrogates>
+    <ATR_minSurrogatePercentagePerLegalGroup>Minimalny odsetek surogatów w grupach spełniających warunki [domyślnie 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+    <ATR_maxSurrogatePercentagePerLegalGroup>Maksymalny odsetek surogatów w grupach spełniających warunki [domyślnie 70%].</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_displaySurrogateControlIcon>Wyświetlanie unoszącej się ikony nad kontrolowanymi surogatami.</ATR_displaySurrogateControlIcon>
+    <ATR_safeSurrogateConnectivityCountBeforePenalty>Liczba surogatów na kontrolera przed karami:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+        <!-- Skills -->
+    <ATR_receiveFullSkillAlert>Ostrzeżenie punktów umiejętności przekraczających 90% możliwości.</ATR_receiveFullSkillAlert>
+	<ATR_skillPointInsertionRate>Ilość punktów umiejętności wykorzystywanych na jedno wstawienie [domyślnie: 100].</ATR_skillPointInsertionRate>
+	<ATR_skillPointConversionRate>Ilość bazowego XP generowanego za każdy punkt umiejętności [domyślnie: 0,5].</ATR_skillPointConversionRate>
+	<ATR_passionSoftCap>Miękki limit pasji przed wzrostem kosztów na pasję [domyślnie: 8]</ATR_passionSoftCap>
+	<ATR_basePointsNeededForPassion>Bazowe punkty umiejętności potrzebne na pasję [domyślnie: 5000].</ATR_basePointsNeededForPassion>
+
+        <!-- Cloud -->
+    <ATR_UploadingKills>Wgranie do SkyMind zamienia ciało inicjatora w pustą skorupę.</ATR_UploadingKills>
+    <ATR_UploadingPermakills>Wgranie do SkyMind pozostawia ciało inicjatora całkowicie bezużyteczne i martwe.</ATR_UploadingPermakills>
+    <ATR_SkyMindOperationTimeRequired>Godziny wymagane do wykonania operacji SkyMind [domyślnie: 24].</ATR_SkyMindOperationTimeRequired>
+
+    <!-- Stats Settings -->
+        <!-- Traits -->
+    <ATR_traitBlacklistWarning>Ostrzeżenie: Im dłuższa jest lista cech z czarnej listy, tym większy wpływ na wydajność gry będzie miała.</ATR_traitBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalTraits>Cechy mechaniczne z czarnej listy</ATR_settingsBlacklistedMechanicalTraits>
+    <ATR_settingsAllowedMechanicalTraits>Dozwolone cechy mechaniczne</ATR_settingsAllowedMechanicalTraits>
+
+</LanguageData>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ATR_SkyMindDisconnectionRisk>Odłączenie od sieci SkyMind w trakcie trwania operacji spowoduje poważne konsekwencje. W przypadku nieprawidłowego rozłączenia gwarantowane jest uszkodzenie pamięci o różnym stopniu.</ATR_SkyMindDisconnectionRisk>
+
+	<ATR_ResurrectionSuccessful>Jednostka mechaniczna {0} została pomyślnie reaktywowana do minimalnej wydajności. Jednostka musi zostać ponownie uruchomiona przed powrotem do pełnej funkcjonalności.</ATR_ResurrectionSuccessful>
+	<ATR_ResurrectionFailedInvalidPawn>Cel {0}, nie został reaktywowany, ponieważ nie jest prawidłowym celem do wskrzeszenia w ten sposób. Cele muszą być mechaniczne (ustawienia AT Reforged).</ATR_ResurrectionFailedInvalidPawn>
+	<ATR_ResurrectionFailedDroneOnly>Zestaw wskrzeszania dronów może być używany tylko na dronach lub zwierzętach, a {0} jest uważany za w pełni autonomiczną jednostkę mechaniczną!</ATR_ResurrectionFailedDroneOnly>
+
+    <ATR_InsufficientPoints>Do wykonania tej operacji wymagane jest co najmniej {0} punktów.</ATR_InsufficientPoints>
+
+	<!-- Skill Upgrades -->
+	<ATR_PawnBeingModified>Umiejętności i pasje dla: </ATR_PawnBeingModified>
+	<ATR_CurrentXP> XP wymagane do następnego poziomu: </ATR_CurrentXP>
+	<ATR_TodaysXP> XP dzisiaj: </ATR_TodaysXP>
+
+	<ATR_AddSkillPoints>Wprowadź punkty w {0}</ATR_AddSkillPoints>
+	<ATR_AvailableSkillPoints>Dostępne punkty : {0}</ATR_AvailableSkillPoints>
+	<ATR_AvailableSkillPointsDesc>Uwaga: Wprowadzanie wiedzy jest uzależnione od indywidualnych możliwości uczenia się, jak również od dziennych limitów umiejętności. Wprowadzanie pasji zależy od indywidualnych zdolności uczenia się, jak również od istniejących wcześniej pasji. Nadmierna stymulacja jest nieefektywna.</ATR_AvailableSkillPointsDesc>
+
+    <!-- Hacking Interface -->
+    <ATR_HackInterfaceTitle>Oczekuje na dyrektywę o cyberwojnie.</ATR_HackInterfaceTitle>
+    <ATR_ConfirmHack>Zezwolić na operację docelową?</ATR_ConfirmHack>
+    <ATR_ConfirmhackDesc>Wszystkie włamania wiążą się z ryzykiem. Niepowodzenie może oznaczać szkody dyplomatyczne, automatyczną aktywację środków zapobiegawczych lub jakąś formę odwetu.</ATR_ConfirmhackDesc>
+
+    <ATR_HackOpCost>Koszt: {0}</ATR_HackOpCost>
+    <ATR_SuccessChance>Przewidywana szansa powodzenia: {0}%</ATR_SuccessChance>
+
+    <ATR_AvailableHackingPoints>Dostępne punkty: {0}. Kara czasowa: {1}.</ATR_AvailableHackingPoints>
+    <ATR_AvailableHackingPointsDesc>Uwaga: Koszt inicjowania haków jest funkcją kosztu operacji bazowej pomnożonego przez czas od ostatniego hakowania (kara za częste używanie).\nPrzeznaczenie większej ilości punktów zwiększa prawdopodobieństwo sukcesu.</ATR_AvailableHackingPointsDesc>
+
+        <!-- Guidance Hack -->
+    <ATR_GuidanceHack>Wymuś przekierowanie systemu naprowadzania frakcji</ATR_GuidanceHack>
+    <ATR_GuidanceHackDesc>Próba hakowania systemu naprowadzania frakcji w celu przekierowania czegoś na tę mapę. Nie ma gwarancji, jaka będzie zawartość tego, co zostanie wysłane. Może to być zaopatrzenie, statek handlowy, więzień - lub przeniesienie garnizonu wroga.</ATR_GuidanceHackDesc>
+
+        <!-- Propaganda Hack -->
+    <ATR_PropagandaHack>Przeprowadź ukierunkowaną kampanię propagandową</ATR_PropagandaHack>
+    <ATR_PropagandaHackDesc>Spróbuj przeprowadzić dedykowaną i specjalnie ukierunkowaną kampanię, aby wpłynąć na kluczowych członków danej frakcji na korzyść kolonii. Ze względu na nieprzejrzystą naturę wpływów politycznych, dokładny skutek nie jest znany.</ATR_PropagandaHackDesc>
+
+        <!-- Espionage Hack -->
+    <ATR_EspionageHack>Rozpocznij kampanię szpiegowską, aby zdobyć zadanie</ATR_EspionageHack>
+    <ATR_EspionageHackDesc>Próba użycia nabytej wiedzy wywiadowczej w celu zidentyfikowania obiecującego zadania na podstawie wywiadu w tle od danej frakcji. Gwarantowane jest uzyskanie wglądu w lokację jakiejś skrytki, ale nie od konkretnej frakcji lub grupy.</ATR_EspionageHackDesc>
+
+        <!-- Disruptor Hack -->
+    <ATR_DisruptorHack>Przeprowadź atak DDOS na lokalne wrogie jednostki obejmujący całą mapę</ATR_DisruptorHack>
+    <ATR_DisruptorHackDesc>Spróbuj przeprowadzić lokalny atak DDOS na jednostki obsługujące SkyMind konkretnej frakcji, które są obecne na tej mapie.</ATR_DisruptorHackDesc>
+
+    <!-- Initialize Mind Dialog/Keys -->
+	<ATR_InitializeMindTitle>Jednostka mechaniczna wymaga inicjalizacji</ATR_InitializeMindTitle>
+	<ATR_InitializeMindDesc>Nowo podłączony interfejs rdzenia jest gotowy do umieszczenia w nim świadomości, ale jeszcze jej nie zainicjował. Świadomość może zostać przeniesiona z dowolnej jednostki połączonej ze SkyMindem, jeśli jest dostępna, lub można pozwolić jej na samodzielne uformowanie osobowości.</ATR_InitializeMindDesc>
+
+	<ATR_SkyMindInitialization>Inicjalizacja ze SkyMind</ATR_SkyMindInitialization>
+	<ATR_AutomaticInitialization>Inicjalizacja automatyczna</ATR_AutomaticInitialization>
+
+    <!-- PawnType Restriction Dialog -->
+    <ATR_RestrictedPawnTypes>Ustawienia ograniczeń</ATR_RestrictedPawnTypes>
+
+    <ATR_PawnTypeNone>Brak</ATR_PawnTypeNone>
+    <ATR_PawnTypeNoneTooltip>Nikt nie może tego użyć</ATR_PawnTypeNoneTooltip>
+    <ATR_PawnTypeDrone>Dron</ATR_PawnTypeDrone>
+    <ATR_PawnTypeDroneTooltip>Tylko drony mogą tego użyć</ATR_PawnTypeDroneTooltip>
+    <ATR_PawnTypeAndroid>Android</ATR_PawnTypeAndroid>
+    <ATR_PawnTypeAndroidTooltip>Tylko androidy mogą tego użyć</ATR_PawnTypeAndroidTooltip>
+    <ATR_PawnTypeMechanical>Mechaniczne</ATR_PawnTypeMechanical>
+    <ATR_PawnTypeMechanicalTooltip>Tylko androidy i drony mogą tego użyć</ATR_PawnTypeMechanicalTooltip>
+    <ATR_PawnTypeOrganic>Organiczne</ATR_PawnTypeOrganic>
+    <ATR_PawnTypeOrganicTooltip>Tylko jednostki organiczne mogą tego użyć</ATR_PawnTypeOrganicTooltip>
+    <ATR_PawnTypeNonAI>Bez AI</ATR_PawnTypeNonAI>
+    <ATR_PawnTypeNonAITooltip>Tylko jednostki organiczne i drony mogą tego użyć</ATR_PawnTypeNonAITooltip>
+    <ATR_PawnTypeAutonomous>Autonomiczne</ATR_PawnTypeAutonomous>
+    <ATR_PawnTypeAutonomousTooltip>Tylko androidy i jednostki organiczne mogą tego użyć</ATR_PawnTypeAutonomousTooltip>
+    <ATR_PawnTypeAll>Wszyscy</ATR_PawnTypeAll>
+    <ATR_PawnTypeAllTooltip>Wszyscy mogą tego użyć</ATR_PawnTypeAllTooltip>
+
+    <!-- Maintenance Level Setter Dialog -->
+    <ATR_SetTargetMaintenanceLevel>Pożądany poziom konserwacji: {0}%</ATR_SetTargetMaintenanceLevel>
+
+</LanguageData>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Computer -->
+	<ATR_SkillServersSynthesis>Dostępne Punkty Umiejętności: {0} / {1}</ATR_SkillServersSynthesis>
+	<ATR_SkillProducedPoints>Punkty Umiejętności w Produkcji: {0}</ATR_SkillProducedPoints>
+	<ATR_SkillSlotsAdded>Dodana Pojemność Umiejętności: {0}</ATR_SkillSlotsAdded>
+	
+	<ATR_SecurityServersSynthesis>Dostępne Punkty Zabezpieczeń: {0} / {1}</ATR_SecurityServersSynthesis>
+	<ATR_SecurityProducedPoints>Punkty Zabezpieczeń w Produkcji: {0}</ATR_SecurityProducedPoints>
+	<ATR_SecuritySlotsAdded>Dodana Pojemność Zabezpieczeń: {0}</ATR_SecuritySlotsAdded>
+	
+	<ATR_HackingServersSynthesis>Dostępne Punkty Hakowania: {0} / {1}</ATR_HackingServersSynthesis>
+	<ATR_HackingProducedPoints>Punkty Hakowania w Produkcji: {0}</ATR_HackingProducedPoints>
+	<ATR_HackingSlotsAdded>Dodana Pojemność Hakowania: {0}</ATR_HackingSlotsAdded>
+
+    <!-- Charging -->
+    <ATR_CurrentChargerPowerConsumption>Aktualny pobór prądu: {0} W</ATR_CurrentChargerPowerConsumption>
+	
+	<!-- Heat -->
+	<ATR_CompHotSensitiveCriticalText>Próg ciepła przekroczony: szkody nieuniknione!</ATR_CompHotSensitiveCriticalText>
+	<ATR_CompHotSensitiveDangerText>Zbliża się próg ciepła: zalecane działania zapobiegawcze!</ATR_CompHotSensitiveDangerText>
+	<ATR_CompHotSensitiveWarningText>Przekroczony optymalny próg ciepła: zalecana ostrożność.</ATR_CompHotSensitiveWarningText>
+	<ATR_CompHotSensitiveSafeText>W granicach bezpiecznego progu roboczego: eksploatacja normalna.</ATR_CompHotSensitiveSafeText>
+
+	<!-- SkyMind -->
+	<ATR_HackedWithTimer>Rekompilacja oprogramowania zakończy się w {0}.</ATR_HackedWithTimer>
+	<ATR_CryptoLocked>Kryptoblokada, odmowa dostępu.</ATR_CryptoLocked>
+	<ATR_SkyMindDetected>Połączono z SkyMind</ATR_SkyMindDetected>
+	
+	<!-- Core -->
+	<ATR_CloudIntelligenceSummary>Świadomości SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
+	<ATR_AssistingIntelligenceSummary>Bezczynne świadomości: {0}</ATR_AssistingIntelligenceSummary>
+	
+	<!-- Link -->
+	<ATR_SkyMindOperationInProgress>Czas do zakończenia operacji: {0}</ATR_SkyMindOperationInProgress>
+	<ATR_SkyMindCoreOperationInProgress>Czas do zakończenia operacji dla {0}: {1}</ATR_SkyMindCoreOperationInProgress>
+	<ATR_SurrogateConnected>Połączony z: {0} innymi osobami</ATR_SurrogateConnected>
+	
+	<!-- Tower -->
+	<ATR_SkyMindNetworkSummary>Połączeni użytkownicy: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>
