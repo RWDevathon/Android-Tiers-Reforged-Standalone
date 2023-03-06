@@ -390,13 +390,13 @@
                 </tools>
             </li>
         </comps>
-        <spawnThingOnRemoved>ATR_ScalpelArm</spawnThingOnRemoved>
+        <spawnThingOnRemoved>ATR_RendingArm</spawnThingOnRemoved>
     </HediffDef>
 
     <ThingDef ParentName="ATR_BodyPartIndustrialBase">
-        <defName>ATR_ScalpelArm</defName>
-        <label>Scalpel arm</label>
-	    <description>A mechanical arm with a very modified structure designed for precision and perfectly smooth movement. A number of integrated counterbalances, unique parts, and multi-tools provide this arm with much finer - but delicate - control. While unsuited for general work tasks, this arm is an incredible boon to surgeons and mechanics alike. The delicate structure combined with minor changes to the the larger chassis leave the user more vulnerable to damage, but the scalpel can be used as a very dangerous piercing weapon if needed.</description>
+        <defName>ATR_RendingArm</defName>
+        <label>Rending arm</label>
+	    <description>A mechanical arm designed to rend down organic or inorganic mass into component parts. An array of specialized internal sensors, sorters, and processors provide this arm with powerful disassembly capacities. The design permits free range of movement and no outstanding penalties, but is uncanny and disturbing to observe. The arm is capable of breaking down living tissue just as well as dead tissue, and can make short work of buildings. Android troops of notoriously brutal commanders will often be found equipped with these to handle shocking executions and rapidly eliminating issues with corpses.\n\nThe rending process thoroughly destroys pathogens and contaminants, make it an ideal attachment for efficiency and cleanliness obsessed butchers and chefs.</description>
         <costList>
             <Steel>20</Steel>
             <Plasteel>20</Plasteel>
@@ -408,15 +408,15 @@
     </ThingDef>
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
-		<defName>ATR_Install_ScalpelArm</defName>
-		<label>Install scalpel arm</label>
-		<description>Installs a scalpel arm.</description>
-		<jobString>Installing scalpel arm.</jobString>
+		<defName>ATR_Install_RendingArm</defName>
+		<label>Install rending arm</label>
+		<description>Installs a rending arm.</description>
+		<jobString>Installing rending arm.</jobString>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ATR_ScalpelArm</li>
+						<li>ATR_RendingArm</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -424,13 +424,13 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ATR_ScalpelArm</li>
+				<li>ATR_RendingArm</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
-		<addsHediff>ATR_ScalpelArm</addsHediff>
+		<addsHediff>ATR_RendingArm</addsHediff>
 	</RecipeDef>
 
     <!-- Makeshift Leg -->
