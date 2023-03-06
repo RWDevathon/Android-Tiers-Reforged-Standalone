@@ -9,7 +9,7 @@
 		<baseCost>20000</baseCost>
 		<techLevel>Archotech</techLevel>
 		<researchViewX>9</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

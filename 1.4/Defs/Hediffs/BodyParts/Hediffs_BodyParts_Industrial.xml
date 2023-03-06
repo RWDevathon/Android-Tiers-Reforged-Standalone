@@ -90,7 +90,7 @@
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <recipeMaker>
-	    	<researchPrerequisite>ATR_AutonomousIndustrialization</researchPrerequisite>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -163,7 +163,7 @@
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <recipeMaker>
-	    	<researchPrerequisite>ATR_AutonomousIndustrialization</researchPrerequisite>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 
@@ -191,6 +191,246 @@
 			<li>ATR_MechanicalArm</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>ATR_AgriArm</addsHediff>
+	</RecipeDef>
+
+    <!-- Pacification Utility Arm -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
+        <defName>ATR_PacificationArm</defName>
+        <label>Pacification arm</label>
+	    <description>A simple mechanical arm with built-in energy absorbers and generators. The fists are capable of reaching dangerously high temperatures and are able to vent heat upon impacting something - effectively scorching a target - and applying an overloading amount of energy - an EMP in all but name. They are often used by riot police to impart highly painful but non-lethal burns and disable vehicles.\n\nEccentric chefs appreciate the consistent and rapid heat transfer.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<CookSpeed>0.5</CookSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>charged fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>5</power>
+                        <cooldownTime>2</cooldownTime>
+                        <extraMeleeDamages>
+                            <li>
+                                <def>Flame</def>
+                                <amount>10</amount>
+                            </li>
+                            <li>
+                                <def>EMP</def>
+                                <amount>5</amount>
+                            </li>
+                        </extraMeleeDamages>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ATR_PacificationArm</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartIndustrialBase">
+        <defName>ATR_PacificationArm</defName>
+        <label>Pacification arm</label>
+	    <description>A simple mechanical arm with built-in energy absorbers and generators. The fists are capable of reaching dangerously high temperatures and are able to vent heat upon impacting something - effectively scorching a target - and applying an overloading amount of energy - an EMP in all but name. They are often used by riot police to impart highly painful but non-lethal burns and disable vehicles.\n\nEccentric chefs appreciate the consistent and rapid heat transfer.</description>
+        <costList>
+            <Steel>20</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
+		<defName>ATR_Install_PacificationArm</defName>
+		<label>Install pacification arm</label>
+		<description>Installs a pacification arm.</description>
+		<jobString>Installing pacification arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PacificationArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PacificationArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_PacificationArm</addsHediff>
+	</RecipeDef>
+
+    <!-- Scalpel Utility Arm -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
+        <defName>ATR_ScalpelArm</defName>
+        <label>Scalpel arm</label>
+	    <description>A mechanical arm with a very modified structure designed for precision and perfectly smooth movement. A number of integrated counterbalances, unique parts, and multi-tools provide this arm with much finer - but delicate - control. While unsuited for general work tasks, this arm is an incredible boon to surgeons and mechanics alike. The delicate structure combined with minor changes to the the larger chassis leave the user more vulnerable to damage, but the scalpel can be used as a very dangerous piercing weapon if needed.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<GeneralLaborSpeed>-0.1</GeneralLaborSpeed>
+                    <MedicalTendSpeed>0.45</MedicalTendSpeed>
+                    <MedicalOperationSpeed>0.45</MedicalOperationSpeed>
+                    <MedicalTendQuality>0.15</MedicalTendQuality>
+                    <MedicalSurgerySuccessChance>0.05</MedicalSurgerySuccessChance>
+                    <ATR_MechanicalTendSpeed>0.45</ATR_MechanicalTendSpeed>
+                    <ATR_MechanicalOperationSpeed>0.45</ATR_MechanicalOperationSpeed>
+                    <ATR_MechanicalTendQuality>0.15</ATR_MechanicalTendQuality>
+                    <ATR_MechanicalSurgerySuccessChance>0.05</ATR_MechanicalSurgerySuccessChance>
+				</statOffsets>
+                <statFactors>
+                    <IncomingDamageFactor>1.05</IncomingDamageFactor>
+                </statFactors>
+			</li>
+		</stages>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>scalpel</label>
+                        <capacities>
+                            <li>Scratch</li>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>12</power>
+                        <cooldownTime>2.25</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ATR_ScalpelArm</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartIndustrialBase">
+        <defName>ATR_ScalpelArm</defName>
+        <label>Scalpel arm</label>
+	    <description>A mechanical arm with a very modified structure designed for precision and perfectly smooth movement. A number of integrated counterbalances, unique parts, and multi-tools provide this arm with much finer - but delicate - control. While unsuited for general work tasks, this arm is an incredible boon to surgeons and mechanics alike. The delicate structure combined with minor changes to the the larger chassis leave the user more vulnerable to damage, but the scalpel can be used as a very dangerous piercing weapon if needed.</description>
+        <costList>
+            <Steel>20</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
+		<defName>ATR_Install_ScalpelArm</defName>
+		<label>Install scalpel arm</label>
+		<description>Installs a scalpel arm.</description>
+		<jobString>Installing scalpel arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ScalpelArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_ScalpelArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_ScalpelArm</addsHediff>
+	</RecipeDef>
+
+    <!-- Rending Utility Arm -->
+
+    <HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
+        <defName>ATR_RendingArm</defName>
+        <label>Rending arm</label>
+	    <description>A mechanical arm designed to rend down organic or inorganic mass into component parts. An array of specialized internal sensors, sorters, and processors provide this arm with powerful disassembly capacities. The design permits free range of movement and no outstanding penalties, but is uncanny and disturbing to observe. The arm is capable of breaking down living tissue just as well as dead tissue, and can make short work of buildings. Android troops of notoriously brutal commanders will often be found equipped with these to handle shocking executions and rapidly eliminating issues with corpses.\n\nThe rending process thoroughly destroys pathogens and contaminants, make it an ideal attachment for efficiency and cleanliness obsessed butchers and chefs.</description>
+		<stages>
+			<li>
+				<statOffsets>
+                    <PawnBeauty>-1</PawnBeauty>
+					<ButcheryFleshSpeed>0.5</ButcheryFleshSpeed>
+                    <ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
+                    <ButcheryFleshEfficiency>0.25</ButcheryFleshEfficiency>
+                    <ButcheryMechanoidEfficiency>0.25</ButcheryMechanoidEfficiency>
+				</statOffsets>
+                <statFactors>
+                    <FoodPoisonChance>0</FoodPoisonChance>
+                </statFactors>
+			</li>
+		</stages>
+	    <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>carver</label>
+                        <capacities>
+                            <li>Scratch</li>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>15</power>
+                        <cooldownTime>2</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>ATR_ScalpelArm</spawnThingOnRemoved>
+    </HediffDef>
+
+    <ThingDef ParentName="ATR_BodyPartIndustrialBase">
+        <defName>ATR_ScalpelArm</defName>
+        <label>Scalpel arm</label>
+	    <description>A mechanical arm with a very modified structure designed for precision and perfectly smooth movement. A number of integrated counterbalances, unique parts, and multi-tools provide this arm with much finer - but delicate - control. While unsuited for general work tasks, this arm is an incredible boon to surgeons and mechanics alike. The delicate structure combined with minor changes to the the larger chassis leave the user more vulnerable to damage, but the scalpel can be used as a very dangerous piercing weapon if needed.</description>
+        <costList>
+            <Steel>20</Steel>
+            <Plasteel>20</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+	    	<researchPrerequisite>ATR_InterchangeableParts</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
+		<defName>ATR_Install_ScalpelArm</defName>
+		<label>Install scalpel arm</label>
+		<description>Installs a scalpel arm.</description>
+		<jobString>Installing scalpel arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ScalpelArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_ScalpelArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_MechanicalArm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_ScalpelArm</addsHediff>
 	</RecipeDef>
 
     <!-- Makeshift Leg -->

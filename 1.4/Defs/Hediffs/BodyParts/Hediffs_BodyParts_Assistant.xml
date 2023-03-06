@@ -396,11 +396,11 @@
 			<li>
 				<statOffsets>
 					<ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
-					<FoodPoisonChance>-1</FoodPoisonChance>
 				</statOffsets>
                 <statFactors>
 					<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
 					<CookSpeed>1.2</CookSpeed>
+					<FoodPoisonChance>0</FoodPoisonChance>
                 </statFactors>
 			</li>
 		</stages>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
     <ResearchProjectDef>
         <defName>ATR_MechanicalStandardization</defName>
         <label>Mechanical standardization</label>
@@ -9,53 +9,12 @@
         <baseCost>1600</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
+            <li>MicroelectronicsBasics</li>
             <li>ATR_UtilityBiomimetics</li>
 			<li>ATR_T1Androids</li>
         </prerequisites>
         <researchViewX>2</researchViewX>
         <researchViewY>2.5</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>ATR_MechanicalFrameworks</defName>
-        <label>Mechanical framework enhancements</label>
-        <tab>ATR_MechResearch</tab>
-        <description>The framework of a mechanical unit is its most visible feature, as it quite literally holds the entire chassis together. Framework modifications could result in significant gains in a wide range of particular tasks - but does require committing to one particular modification at a time.</description>
-        <baseCost>800</baseCost>
-        <techLevel>Industrial</techLevel>
-		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
-		<researchViewX>3</researchViewX>
-		<researchViewY>0.5</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>ATR_IndustrialUtilityFrameworks</defName>
-        <label>Industrial utility frameworks</label>
-        <tab>ATR_MechResearch</tab>
-        <description>The specialization of frameworks follows the same trend from novelty to economy as the utilization of the T1's expanded. These allow basic drones to match or exceed the performance of a regular worker without the difficulties of biological needs, or more advanced machines to be shackled to similar purpose...</description>
-        <baseCost>1200</baseCost>
-        <techLevel>Industrial</techLevel>
-		<prerequisites>
-			<li>ATR_MechanicalFrameworks</li>
-			<li>ATR_AutonomousIndustrialization</li>
-		</prerequisites>
-		<researchViewX>4</researchViewX>
-		<researchViewY>0</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>ATR_MilitaryFrameworks</defName>
-        <label>Military frameworks</label>
-        <tab>ATR_MechResearch</tab>
-        <description>Application of advanced ingredients, such as luciferium, to otherwise simple combat-improving framework enhancements allows for truly superior outcomes to be achieved in military applications.</description>
-        <baseCost>1200</baseCost>
-        <techLevel>Industrial</techLevel>
-		<prerequisites>
-			<li>ATR_MechanicalFrameworks</li>
-			<li>ATR_MechanicalStimulators</li>
-		</prerequisites>
-		<researchViewX>5</researchViewX>
-		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -66,23 +25,57 @@
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
-            <li>ATR_IndustrialUtilityFrameworks</li>
+            <li>ATR_MechanicalStandardization</li>
         </prerequisites>
-        <researchViewX>5</researchViewX>
+        <researchViewX>3</researchViewX>
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>ATR_MechaniteAssistedRecovery</defName>
-		<label>Mechanite assisted recovery</label>
+		<defName>ATR_InterchangeableParts</defName>
+		<label>Interchangeable parts</label>
 		<tab>ATR_MechResearch</tab>
-		<description>More than the provision of mere componentry and assistance tools, the inclusion of basic mechanites allows for many simple damages which can arise during repair or modification works to simply be smoothed over and perfected. This serves to greatly increase the quality of work performed by any marginally competent mechanic.</description>
+		<description>The standardization of designs, components, and assembly techniques allows for the standardization of parts, and thus, interchangeability. Dedicating resources to designing easily replaceable, upgradeable parts will open up new avenues for specialization and efficiency gains.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
-		<prerequisites><li>ATR_MechanicalStandardization</li></prerequisites>
+		<prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+        </prerequisites>
 		<researchViewX>3</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_MilitaryBiomimetics</defName>
+		<label>Military biomimetics</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Iterating upon utility biomimetics, this research delves into military applications. Significantly more complicated than copying mere domesticated farm animals, militarization can lead to miniature swarm drones, mechanical hounds, or more experimental adaptations.</description>
+		<baseCost>1400</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_UtilityBiomimetics</li>
+            <li>ATR_MechanicalStandardization</li>
+        </prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3.2</researchViewY>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_StandardizedCommunications</defName>
+        <label>Standardized communications</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Standardizing communication and digital presence technologies will allow a baseline for a network of connected mechanical units and devices. The advent of a theoretical cloud environment connecting those consciousnesses and devices could allow for great opportunities for insights into shared experience, security, or remote attacks on hostile entitites. It all begins with infrastructure.</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>ATR_MechanicalStandardization</li>
+        </prerequisites>
+        <researchViewX>3</researchViewX>
+        <researchViewY>4</researchViewY>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+    </ResearchProjectDef>
 
 	<ResearchProjectDef>
 		<defName>ATR_MechanicalStimulators</defName>
@@ -90,10 +83,10 @@
 		<tab>ATR_MechResearch</tab>
 		<description>While mechanical units are largely unconcerned by the passage of time and therefore unconcerned about the efficiency of its use, there are times when efficiency at a particular moment is critical. Consumable short-term stimulants could prove useful in these moments.</description>
 		<baseCost>800</baseCost>
-		<techLevel>Industrial</techLevel>
-		<prerequisites><li>ATR_MechaniteAssistedRecovery</li></prerequisites>
+		<techLevel>Spacer</techLevel>
+		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
 		<researchViewX>4</researchViewX>
-		<researchViewY>1.5</researchViewY>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -104,36 +97,55 @@
         <baseCost>1600</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
-			<li>ATR_MechanicalStimulators</li>
+			<li>ATR_InterchangeableParts</li>
             <li>Fabrication</li>
         </prerequisites>
-		<researchViewX>6</researchViewX>
-		<researchViewY>1.5</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-        <requiredResearchFacilities>
-            <li>MultiAnalyzer</li>
-        </requiredResearchFacilities>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
     </ResearchProjectDef>
-  
+
     <ResearchProjectDef>
-        <defName>ATR_StandardizedCommunications</defName>
-        <label>Standardized communications</label>
+        <defName>ATR_MechanicalFrameworks</defName>
+        <label>Basic framework replacements</label>
         <tab>ATR_MechResearch</tab>
-        <description>If physical standardization can be achieved, then there should similarly be a method for standardizing the methods of communication, thought, and philosophy. The advent of a theoretical cloud environment connecting consciousnesses could promise vast improvements across many fields. A simple relay tower allowing mechanical intra-net communications is a strong start.</description>
+        <description>The framework of a mechanical unit is its most visible feature, as it quite literally holds the entire chassis together. Basic modifications could result in significant gains in a wide range of particular tasks - but does require committing to one particular modification at a time.</description>
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
-        <prerequisites>
+		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
+		<researchViewX>5</researchViewX>
+		<researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_MechaniteAssistedRecovery</defName>
+		<label>Mechanite assisted recovery</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Components and replacement parts alone can almost perfectly imitate original parts and repair most damage. The inclusion of mechanites will allow for the eradication of words like "almost" and "most" as even in the hands of mediocre mechanics, mechanites will greatly improve repair and operation outcomes.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites><li>ATR_InterchangeableParts</li></prerequisites>
+		<researchViewX>5</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ATR_T2Androids</defName>
+		<label>T2 androids</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
             <li>ATR_MechanicalStandardization</li>
-			<li>ATR_ServerInsight</li>
+            <li>Fabrication</li>
         </prerequisites>
-        <researchViewX>5</researchViewX>
-        <researchViewY>4</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5</researchViewX>
+		<researchViewY>2</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
-    </ResearchProjectDef>
-  
+	</ResearchProjectDef>
+
     <ResearchProjectDef>
         <defName>ATR_RemoteControlProtocols</defName>
         <label>Remote control protocols</label>
@@ -144,28 +156,11 @@
         <prerequisites>
             <li>ATR_StandardizedCommunications</li>
         </prerequisites>
-        <researchViewX>6</researchViewX>
-        <researchViewY>4.8</researchViewY>
-    </ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ATR_T2Androids</defName>
-		<label>T2 androids</label>
-		<tab>ATR_MechResearch</tab>
-		<description>Tier two androids are marked by the lowest specifications required for full sapience. The most common android produced, it is widely seen as a new species distinct from humanity. With this, the colony will step across the threshold of mechanical autonomy - are we prepared for what comes next?</description>
-		<baseCost>2000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-            <li>Fabrication</li>
-            <li>ATR_MechanicalFrameworks</li>
-            <li>ATR_StandardizedCommunications</li>
-        </prerequisites>
-		<researchViewX>6</researchViewX>
-		<researchViewY>0.5</researchViewY>
-        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <researchViewX>5</researchViewX>
+        <researchViewY>5</researchViewY>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
-	</ResearchProjectDef>
+    </ResearchProjectDef>
 
 </Defs>

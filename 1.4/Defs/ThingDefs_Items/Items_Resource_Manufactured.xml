@@ -201,7 +201,7 @@
                 <Crafting>4</Crafting>
                 <Intellectual>4</Intellectual>
             </skillRequirements>
-            <researchPrerequisite>ATR_MechanicalInsight</researchPrerequisite>
+            <researchPrerequisite>Electricity</researchPrerequisite>
         </recipeMaker>
     </ThingDef>
 

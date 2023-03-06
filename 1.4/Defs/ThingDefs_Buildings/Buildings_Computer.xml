@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef Name="ATR_ServerBase" ParentName="BuildingBase" Abstract="True">
-        <thingClass>Building</thingClass>	
+        <thingClass>Building</thingClass>
         <canOverlapZones>false</canOverlapZones>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -90,7 +90,7 @@
             <li>ATR_SkyMindCore</li>
         </researchPrerequisites>
     </ThingDef>
-    
+
     <!-- Networked Database -->
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedDatabase</defName>
@@ -142,13 +142,13 @@
         </comps>
         <minifiedDef>MinifiedThing</minifiedDef>
         <researchPrerequisites>
-            <li>ATR_ServerInsight</li>
+            <li>ATR_StandardizedCommunications</li>
         </researchPrerequisites>
         <thingCategories>
             <li>BuildingsMisc</li>
         </thingCategories>
     </ThingDef>
-    
+
     <!-- Networked Analyst -->
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedAnalyst</defName>
@@ -201,13 +201,13 @@
         </comps>
         <minifiedDef>MinifiedThing</minifiedDef>
         <researchPrerequisites>
-            <li>ATR_ServerInsight</li>
+            <li>ATR_StandardizedCommunications</li>
         </researchPrerequisites>
         <thingCategories>
             <li>BuildingsMisc</li>
         </thingCategories>
     </ThingDef>
-    
+
     <!-- Networked Intelligence -->
     <ThingDef ParentName="ATR_ServerBase">
         <defName>ATR_NetworkedIntelligence</defName>
