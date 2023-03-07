@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<AndroidFactionGreetingHostileI>Zapętlony automatyczny komunikat powoli przeczesuje przygotowaną wiadomość, wskazując na brak zainteresowania komunikacją w tym czasie.</AndroidFactionGreetingHostileI>
+	<AndroidFactionGreetingHostileII>{0} Łączy się i rozpoczyna długą diatrybę przeciwko wielu wadom twojej frakcji. {0} żąda daniny, jeśli ma dojść do porozumienia.</AndroidFactionGreetingHostileII>
+	<AndroidFactionGreetingHostileIII>Zostajesz powitany długą ciszą wypełnioną niczym, tylko szumem.</AndroidFactionGreetingHostileIII>
+	
+	<AndroidFactionGreetingWaryI>Głęboki, mechaniczny głos {0} wita {NEGOTIATOR_labelShort}. Jest przygotowany do obiektywnego i sprawiedliwego wysłuchania i rozważenia wszelkich propozycji.</AndroidFactionGreetingWaryI>
+	<AndroidFactionGreetingWaryII>Automatyczna odpowiedź wskazuje, że {0} jest zajęty i że system automatycznie przekaże sprawy {NEGOTIATOR_labelShort} w razie potrzeby.</AndroidFactionGreetingWaryII>
+	<AndroidFactionGreetingWaryIII>{0} otwiera komunikację z {NEGOTIATOR_labelShort}, oznajmiając, że uczynił to ostrożnie i z pewną dozą ostrożności. {0} prosi o szybkie załatwienie sprawy.</AndroidFactionGreetingWaryIII>
+	
+	<AndroidFactionGreetingWarmI>{0} wita {NEGOTIATOR_labelShort} z dużym uznaniem, pytając, co można zrobić dla wzajemnych korzyści i postępu wspólnego celu.</AndroidFactionGreetingWarmI>
+	<AndroidFactionGreetingWarmII>{NEGOTIATOR_labelShort} spotyka się z życzliwie sformułowanym automatycznym komunikatem. Informuje on, że każda prośba będzie miała wysoki priorytet w wewnętrznych rozważaniach.</AndroidFactionGreetingWarmII>
+	<AndroidFactionGreetingWarmIII>{0} natychmiast nawiązuje kontakt i wita się z {NEGOTIATOR_labelShort}. {0} wykazuje gotowość do wysłuchania wszelkich propozycji i chętnie oferuje potencjalną pomoc.</AndroidFactionGreetingWarmIII>
+	
+</LanguageData>

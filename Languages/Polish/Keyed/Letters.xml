@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- General --> 
+	
+	<ATR_ReprogramSuccess>Dron Przeprogramowany</ATR_ReprogramSuccess>
+	<ATR_ReprogramSuccessDesc>{0} został przeprogramowany. Po ponownym uruchomieniu, rozpozna kolonię jako swój kontroler.</ATR_ReprogramSuccessDesc>
+	<ATR_ReprogramFailed>Przepogramowanie Nieudane</ATR_ReprogramFailed>
+	<ATR_ReprogramFailedDesc>Operacja przeprogramowania na {0} nie powiodła się. Urządzenie zostanie zrestartowane, ale nie rozpoznaje poleceń. Mogło dojść do uszkodzenia pamięci podczas procesu.</ATR_ReprogramFailedDesc>
+	
+	<ATR_FractalCorruption>Fraktalna Abominacja</ATR_FractalCorruption>
+	<ATR_FractalCorruptionDesc>{0} zostało całkowicie zniszczone przez fraktalne zniekształcenia. Nie są niczym więcej niż abominacją! Echa torturowanych krzyków będą słyszane przez wiele mil, a może także lat.</ATR_FractalCorruptionDesc>
+	
+	<ATR_ServerMeltdown>Katastrofalna Awaria Serwera</ATR_ServerMeltdown>
+    <ATR_ServerMeltdownDesc>Serwer częściowo eksplodował z powodu nadmiernego ciepła!</ATR_ServerMeltdownDesc>
+	
+    <!-- Faction Rights Letters -->
+    <ATR_DeclarationOfWarRights>Wojna o prawa</ATR_DeclarationOfWarRights>
+    <ATR_DeclarationOfWarRightsDesc>{0} utrzymuje ścisły kodeks przeciwko prawom {1}, które naruszyliście. {2} jest zdeterminowany, aby wymazać wszystkie świadomości {1} - dopóki naruszający prawa koloniści nie zostaną wyeliminowani, nie będzie pokoju.</ATR_DeclarationOfWarRightsDesc>
+    <ATR_CessationOfConflict>Konflikt praw został rozwiązany</ATR_CessationOfConflict>
+    <ATR_CessationOfConflictDesc>{0} utrzymuje ścisły kodeks przeciwko prawom {1}, których już nie naruszasz. W miarę jak napięcia maleją, a stosunki się ocieplają, pokój znów jest w zasięgu możliwości.</ATR_CessationOfConflictDesc>
+	
+	<!-- Hacking Incidents -->
+		<!-- Generic Messages -->
+	<ATR_IncidentGenericAttackDesc>Próba włamania oceniona na siłę {0} skutecznie złamała system bezpieczeństwa SkyMind kolonii, infekując {1} urządzeń sieciowych zanim zadziałały zabezpieczenia..</ATR_IncidentGenericAttackDesc>
+	<ATR_IncidentGenericDefense>Próba hakowania pokonana</ATR_IncidentGenericDefense>
+	<ATR_IncidentGenericDefenseDesc>Wroga próba włamania oceniona na siłę {0} nie zdołała naruszyć systemu bezpieczeństwa kolonii SkyMind. Funkcjonalność systemu jest normalna, a serwery bezpieczeństwa starają się wyprzedzać wtargnięcia.</ATR_IncidentGenericDefenseDesc>
+	<ATR_IncidentGenericAllyIntercept>Hak przechwycony!</ATR_IncidentGenericAllyIntercept>
+	<ATR_IncidentGenericAllyInterceptDesc>Hakerzy White-hat od Twojego sojusznika {0} kontaktują się z Tobą informując o próbie włamania do Twojej sieci SkyMind przez wrogą osobę. Nie tylko udało im się powstrzymać atak (oceniony na siłę {1} punktów), który naruszyłby Twoje bezpieczeństwo, ale także zidentyfikować kilka luk w zabezpieczeniach, które można łatwo załatać, dzięki czemu Twój system bezpieczeństwa zyskał {2} punktów!</ATR_IncidentGenericAllyInterceptDesc>
+	
+		<!-- Gridscreen Virus -->
+			<!-- Grid-virus defeated -->
+	<ATR_IncidentGridVirusDefeated>Wirus Sieciowy Pokonany</ATR_IncidentGridVirusDefeated>
+	
+			<!-- Grid-sleeper attack -->
+	<ATR_IncidentGridsleeperAttack>Usypiacz Sieci</ATR_IncidentGridsleeperAttack>
+	<ATR_IncidentGridsleeperAttackDesc>Dotknięte urządzenia uległy awarii i będą wymagały czasu na przywrócenie domyślnej funkcjonalności.</ATR_IncidentGridsleeperAttackDesc>
+	
+			<!-- Grid-locker attack -->
+	<ATR_IncidentGridlockerAttack>Blokada Sieci</ATR_IncidentGridlockerAttack>
+	<ATR_IncidentGridlockerAttackDesc>Dotknięte urządzenia mają zaszyfrowaną funkcjonalność przez hakera! Teraz do hakera należy przywrócenie funkcjonalności - będzie to wymagało zawarcia umowy.</ATR_IncidentGridlockerAttackDesc>
+	
+	<ATR_CryptolockerNeedRansom>Okup na Blokadę sieci</ATR_CryptolockerNeedRansom>
+	<ATR_CryptolockerNeedRansomDesc>Zablokowane urządzenie wypluwa w pętli wiadomość. Haker wyśle kody deszyfrujące i zrzeknie się kontroli nad {0} urządzeń, które zhakował, w zamian za {1} srebra. </ATR_CryptolockerNeedRansomDesc>
+	
+			<!-- Grid-breaker attack -->
+	<ATR_IncidentGridbreakerAttack>Niszczyciel Sieci</ATR_IncidentGridbreakerAttack>
+	<ATR_IncidentGridbreakerAttackDesc>W dotkniętych urządzeniach doszło do awarii sprzętu z powodu niebezpiecznych procedur oprogramowania. Przywrócenie domyślnej funkcjonalności po naprawie zajmie trochę czasu.</ATR_IncidentGridbreakerAttackDesc>
+	
+			<!-- Ally Grid Virus Intervention -->
+	<ATR_IncidentGridVirusAllyIntercept>Wirus Sieciowy Przechwycony!</ATR_IncidentGridVirusAllyIntercept>
+	
+		<!-- DDOS Attack -->
+	<ATR_IncidentDDOSDefeated>Atak DDOS Pokonany</ATR_IncidentDDOSDefeated>
+			
+	<ATR_IncidentDDOSAttack>Atak DDOS</ATR_IncidentDDOSAttack>
+	<ATR_IncidentDDOSNormalAttackDesc>Dotknięte urządzenia zostały zalane śmieciowymi danymi i śmieciowymi informacjami. Szkodzi to generowaniu punktów umiejętności i hakowania. Atak nie był jednak w stanie skutecznie uszkodzić pojedynczych jednostek.</ATR_IncidentDDOSNormalAttackDesc>
+	<ATR_IncidentDDOSOverwhelmingAttackDesc>Dotknięte urządzenia zostały zalane śmieciowymi danymi i śmieciowymi informacjami. Szkodzi to generowaniu punktów umiejętności i hakowania. Atak zdołał załadować tyle śmieciowych informacji, że jednostki będą zmuszone do ponownego skompilowania większości swojej wiedzy.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+	
+	<ATR_IncidentDDOSAllyIntercept>Atak DDOS Przechwycony!</ATR_IncidentDDOSAllyIntercept>
+	
+		<!-- Troll Attack -->
+	<ATR_IncidentTrollDefeated>Atak Trolla Pokonany</ATR_IncidentTrollDefeated>
+	
+	<ATR_IncidentTrollAttack>Atak Trolla</ATR_IncidentTrollAttack>
+	<ATR_IncidentTrollAttackDesc>Dotknięta jednostka, {0}, straciła w sumie {1} punktów umiejętności rozłożonych na umiejętności z pasją i wysokopoziomowe! {0} jest również bardzo zdenerwowana z powodu strasznych rzeczy, które hakerzy zdołali załadować do jej umysłu, a także z powodu braku ochrony ze strony systemów bezpieczeństwa.</ATR_IncidentTrollAttackDesc>
+	
+	<ATR_IncidentTrollAllyIntercept>Atak Trolla Przechwycony!</ATR_IncidentTrollAllyIntercept>
+	
+		<!-- Diplohack -->
+	<ATR_IncidentDiplohackDefeated>Dyplohak pokonany</ATR_IncidentDiplohackDefeated>
+	
+	<ATR_IncidentDiplohackAttack>Dyplohak</ATR_IncidentDiplohackAttack>
+	<ATR_IncidentDiplohackAttackDesc>Nieznani hakerzy zdołali rozszyfrować kluczowe linie komunikacyjne z {0} i dostarczyli im wiadomość, która wiarygodnie wskazywała na ciebie jako źródło. Wiadomość ta zawierała błędne informacje, które wprowadziły karawanę z {0} w zasadzkę. Wyrazili swoje niezadowolenie z waszej "nieostrożności i słabych zabezpieczeń" w mocno sformułowanej - i przypuszczalnie prawdziwej - odpowiedzi dyplomatycznej. Obiecali, że przekażą informację o tym incydencie także innym frakcjom.</ATR_IncidentDiplohackAttackDesc>
+	
+	<ATR_IncidentDiplohackAllyIntercept>Dyplohak przechwycony!</ATR_IncidentDiplohackAllyIntercept>
+	
+		<!-- Provoker Hack -->
+	<ATR_IncidentProvokerhackDefeated>Hak Prowokatorski Pokonany</ATR_IncidentProvokerhackDefeated>
+	
+	<ATR_IncidentProvokerhackAttack>Hak Prowokatorski</ATR_IncidentProvokerhackAttack>
+	<ATR_IncidentProvokerhackAttackDesc>Nieznani hakerzy byli w stanie złamać zabezpieczenia SkyMind i zainstalować prosty program emitujący sygnał. Sygnał zwrócił uwagę wrogich sił, zanim zdołano go dezaktywować!</ATR_IncidentProvokerhackAttackDesc>
+	
+	<ATR_IncidentProvokerhackAllyIntercept>Hak Prowokatorski Przechwycony!</ATR_IncidentProvokerhackAllyIntercept>
+	
+		<!-- Counterhack -->
+	<ATR_IncidentCounterhackDefeated>Kontratak hakerski pokonany</ATR_IncidentCounterhackDefeated>
+	
+	<ATR_IncidentCounterhackAttack>Kontratak Hakerski</ATR_IncidentCounterhackAttack>
+	<ATR_IncidentCounterhackAttackDesc>Nieznani hakerzy włamali się do sieci SkyMind i przejęli tyle informacji, ile mogli, preferując świadomość zebraną na innych celach, a następnie punkty umiejętności. Szacuje się, że zanim stracili dostęp, ukradli łącznie do {0} punktów.</ATR_IncidentCounterhackAttackDesc>
+	
+	<ATR_IncidentCounterhackAllyIntercept>Kontratak Hakerski Przechwycony!</ATR_IncidentCounterhackAllyIntercept>
+
+        <!-- Player Hacks failing -->
+    <ATR_RelationshipRetaliation>Naruszone relacje</ATR_RelationshipRetaliation>
+    <ATR_RelationshipRetaliationDesc>Próba została przechwycona i pokonana przez środki obrony celu. Frakcja podejrzewa cię o dokonanie próby, ale nie ma twardych dowodów łączących cię z przestępstwem. Rzeczywisty wpływ na stosunki, {0}, wydaje się wynikać z tego, że osoba, która przechwyciła próbę, zdecydowała się oskarżyć cię przed każdym, kto chciał słuchać. Niefortunny incydent dyplomatyczny.</ATR_RelationshipRetaliationDesc>
+
+    <!-- Maintenance -->
+    <ATR_PoorMaintenanceLetter>Słaby stan techniczny</ATR_PoorMaintenanceLetter>
+	
+</LanguageData>
