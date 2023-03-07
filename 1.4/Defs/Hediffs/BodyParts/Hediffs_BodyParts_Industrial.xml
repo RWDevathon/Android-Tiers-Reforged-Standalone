@@ -387,6 +387,14 @@
                         <power>15</power>
                         <cooldownTime>2</cooldownTime>
                     </li>
+                    <li>
+                        <label>demolisher</label>
+                        <capacities>
+                            <li>Demolish</li>
+                        </capacities>
+                        <power>10</power>
+                        <cooldownTime>2</cooldownTime>
+                    </li>
                 </tools>
             </li>
         </comps>

@@ -276,7 +276,7 @@
 
     <!-- Advanced Framework Base -->
 
-    <ThingDef Name="ATR_BodyPartAdvancedFrameworkBase" ParentName="ATR_MechBodyPartBase" Abstract="True">
+    <ThingDef Name="ATR_BodyPartAdvancedFrameworkBase" ParentName="ATR_BodyPartFrameworkBase" Abstract="True">
         <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>32000</WorkToMake>
