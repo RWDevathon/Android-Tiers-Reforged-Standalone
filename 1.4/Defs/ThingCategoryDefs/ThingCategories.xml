@@ -7,10 +7,4 @@
         <parent>BodyParts</parent>
     </ThingCategoryDef>
 
-    <ThingCategoryDef>
-        <defName>ATR_WeaponsMech</defName>
-        <label>Mech weapons</label>
-        <parent>Weapons</parent>
-    </ThingCategoryDef>
-
 </Defs>

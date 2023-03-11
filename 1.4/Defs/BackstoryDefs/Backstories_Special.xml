@@ -23,75 +23,35 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 
-    <BackstoryDef>
-        <defName>ATR_MechanicalArchotechChildhood</defName>
-        <title>Archotech</title>
-        <titleShort>Archotech</titleShort>
-        <baseDesc>It is not known whether archotechs truly have childhoods, or if they even have something as simplistic and basic as a date of creation. How, then, could anyone claim to know anything about the youth of such a being?</baseDesc>
-        <slot>Childhood</slot>
-        <spawnCategories>
-			<li>ATR_ArchotechAndroids</li>
-		</spawnCategories>
-    </BackstoryDef>
-
 	<BackstoryDef>
-		<defName>ATR_MechanicalArchotechAdulthood</defName>
-		<title>Archotech</title>
-		<titleShort>Archotech</titleShort>
-		<baseDesc>Enshrouded in mystery, archotechs remain one of the least understood phenomena. Even the most advanced glitterworlds fail to grasp even the most basic attributes of archotech civilization. What, then, could possibly be said about any individual of such a civilization?</baseDesc>
-		<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+		<defName>ATR_FractalVictim</defName>
+		<title>Fractal Witness</title>
+		<titleShort>Witness</titleShort>
+		<baseDesc>{PAWN_nameDef} remembers leading a normal life, until one day, something came for {PAWN_objective}. It tore through walls, through people, through everything, to reach {PAWN_objective}. The last thing {PAWN_pronoun} remembers is the howling. And now, somehow, {PAWN_nameDef} is here, alive, but... changed.</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
-			<li>ATR_ArchotechAndroids</li>
+			<li>ATR_FractalWitness</li>
 		</spawnCategories>
 		<skillGains>
             <li>
-                <key>Shooting</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Melee</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Construction</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Mining</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Cooking</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Plants</key>
-                <value>10</value>
-            </li>
-            <li>
-                <key>Animals</key>
-                <value>10</value>
-            </li>
-            <li>
                 <key>Crafting</key>
-                <value>10</value>
+                <value>4</value>
             </li>
             <li>
                 <key>Artistic</key>
-                <value>10</value>
+                <value>4</value>
             </li>
             <li>
                 <key>Medicine</key>
-                <value>10</value>
+                <value>4</value>
             </li>
 			<li>
 				<key>Social</key>
-				<value>10</value>
+				<value>4</value>
 			</li>
 			<li>
 				<key>Intellectual</key>
-				<value>10</value>
+				<value>4</value>
 			</li>
 		</skillGains>
 	</BackstoryDef>

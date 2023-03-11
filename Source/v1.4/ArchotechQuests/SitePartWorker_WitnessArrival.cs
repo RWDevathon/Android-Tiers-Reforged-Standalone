@@ -7,12 +7,12 @@ using Verse.Grammar;
 
 namespace ATReforged
 {
-    public class SitePartWorker_ArchotechArrival : SitePartWorker_DownedRefugee
+    public class SitePartWorker_WitnessArrival : SitePartWorker_DownedRefugee
     {
         public override void Notify_GeneratedByQuestGen(SitePart part, Slate slate, List<Rule> outExtraDescriptionRules, Dictionary<string, string> outExtraDescriptionConstants)
         {
             base.Notify_GeneratedByQuestGen(part, slate, outExtraDescriptionRules, outExtraDescriptionConstants);
-            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_T5Colonist, Faction.OfAncients, PawnGenerationContext.NonPlayer, part.site.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
+            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(ATR_PawnKindDefOf.ATR_FractalWitness, Faction.OfAncients, PawnGenerationContext.NonPlayer, part.site.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
 
             part.things = new ThingOwner<Pawn>(part, oneStackOnly: true);
             part.things.TryAdd(pawn);
@@ -39,7 +39,7 @@ namespace ATReforged
                 outExtraDescriptionRules.Add(new Rule_String("pawnInvolvedInQuestInfo", text));
             }
 
-            slate.Set("archotech", pawn);
+            slate.Set("witness", pawn);
         }
     }
 }

@@ -313,7 +313,7 @@
             <AIPersonaCore>1</AIPersonaCore>
         </products>
         <workAmount>8650</workAmount>
-        <researchPrerequisite>ATR_ArchotechInsight</researchPrerequisite>
+        <researchPrerequisite>ATR_PersonaManufacturing</researchPrerequisite>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <workSkill>Crafting</workSkill>
         <effectWorking>Smelt</effectWorking>

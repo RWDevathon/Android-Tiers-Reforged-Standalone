@@ -3,13 +3,13 @@ using RimWorld.Planet;
 
 namespace ATReforged
 {
-    public class DownedT5AndroidComp : DownedRefugeeComp
+    public class DownedFractalWitnessComp : DownedRefugeeComp
     {
         protected override string PawnSaveKey
         {
             get
             {
-                return "enigmatic archotech";
+                return "fractal witness";
             }
         }
 

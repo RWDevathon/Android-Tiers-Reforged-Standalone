@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<!-- ====== Abomination ===== -->
 	<ThingDef ParentName="BasePawn">
 		<defName>ATR_FractalAbomination</defName>
 		<label>Fractal Abomination</label>
@@ -35,7 +34,7 @@
 			<li>
 				<label>right fist</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>Demolish</li>
 				</capacities>
 				<power>25</power>
 				<cooldownTime>1</cooldownTime>
@@ -52,7 +51,7 @@
 			<li>
 				<label>left fist</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>Demolish</li>
 				</capacities>
 				<power>25</power>
 				<cooldownTime>1</cooldownTime>

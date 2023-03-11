@@ -4,19 +4,6 @@
     <!-- Childhoods -->
 
 	<BackstoryDef>
-		<defName>ATR_MechChildhoodAncientDroneSoldier</defName>
-		<title>M-Series Drone</title>
-		<titleShort>Mech</titleShort>
-		<baseDesc>Assembled, by archotechs, seemingly very long ago, with no knowledge of {PAWN_possessive} origin or purpose remaining. {PAWN_pronoun} certainly only seems built for warfare, though. What use could Archotechs have had for {PAWN_objective}?</baseDesc>
-		<bodyTypeMale>Male</bodyTypeMale>
-		<bodyTypeFemale>Female</bodyTypeFemale>
-		<slot>Childhood</slot>
-		<spawnCategories>
-			<li>ATR_MSeries</li>
-		</spawnCategories>
-	</BackstoryDef>
-
-	<BackstoryDef>
 		<defName>ATR_MechChildhoodDrone</defName>
 		<title>Drone</title>
 		<titleShort>Drone</titleShort>
@@ -46,22 +33,6 @@
 	</BackstoryDef>
 
     <!-- Adulthoods -->
-
-	<BackstoryDef>
-		<defName>ATR_MechAdulthoodAncientDroneSoldier</defName>
-		<title>War Drone</title>
-		<titleShort>Mech</titleShort>
-		<baseDesc>{PAWN_nameDef} is a drone that has only ever been capable of warfighting. Bugs, mechanoids, rebels, empires, none of it matters. Drones don't care who they fight, and they don't remember who they've killed.</baseDesc>
-		<bodyTypeMale>Male</bodyTypeMale>
-		<bodyTypeFemale>Female</bodyTypeFemale>
-		<slot>Adulthood</slot>
-		<spawnCategories>
-			<li>ATR_MSeries</li>
-		</spawnCategories>
-		<workDisables>
-			<li>AllWork</li>
-		</workDisables>
-	</BackstoryDef>
 
 	<BackstoryDef>
 		<defName>ATR_MechAdulthoodDrone</defName>

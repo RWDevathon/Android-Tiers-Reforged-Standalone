@@ -177,7 +177,7 @@
     <Compile Include="Alerts\Alert_FullSkillServers.cs" />
     <Compile Include="Alerts\Alert_NeedMechanic.cs" />
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
-    <Compile Include="ArchotechQuests\SitePartWorker_ArchotechArrival.cs" />
+    <Compile Include="ArchotechQuests\SitePartWorker_WitnessArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
     <Compile Include="Components\HediffComps\HediffCompProperties_RemoveHediffOnApply.cs" />
     <Compile Include="Components\HediffComps\HediffComp_RemoveHediffOnApply.cs" />
@@ -326,8 +326,8 @@
     <Compile Include="Harmony\WorkGiver_DoBill_Patch.cs" />
     <Compile Include="Recipes\Recipe_DoEmergencyMaintenance.cs" />
     <Compile Include="Recipes\Recipe_RemoveOrganicSkyMindInterface.cs" />
-    <Compile Include="ArchotechQuests\DownedT5AndroidComp.cs" />
-    <Compile Include="ArchotechQuests\GenStep_DownedT5Android.cs" />
+    <Compile Include="ArchotechQuests\DownedFractalWitnessComp.cs" />
+    <Compile Include="ArchotechQuests\GenStep_DownedFractalWitness.cs" />
     <Compile Include="DefOfs\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_PaintedColor_Favorite.cs" />
@@ -346,8 +346,6 @@
     <Compile Include="WorkGivers\JobGiver_DoMaintenanceIdle.cs" />
     <Compile Include="WorkGivers\JobGiver_DoMaintenanceUrgent.cs" />
     <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
-    <Compile Include="MechFallStuff\MechFallClass.cs" />
-    <Compile Include="MechFallStuff\MechFallMote.cs" />
     <Compile Include="Extensions\PawnExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
@@ -366,7 +364,6 @@
     <Compile Include="Components\ATR_GameComponent.cs" />
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
-    <Compile Include="MechFallStuff\Verb_MechFall.cs" />
     <Compile Include="WorkGivers\WorkGiver_GenerateInsight.cs" />
     <Compile Include="WorkGivers\WorkGiver_MechTend.cs" />
     <Compile Include="WorkGivers\WorkGiver_TendSelfEmergencyMech.cs" />

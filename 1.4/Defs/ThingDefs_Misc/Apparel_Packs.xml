@@ -22,7 +22,7 @@
                 <explosiveDamageType>Flame</explosiveDamageType>
                 <startWickHitPointsPercent>0</startWickHitPointsPercent>
                 <chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage> <!-- Player or AI toggled. Otherwise it won't use a charge. -->
-                <preExplosionSpawnThingDef>Filth_FireFoam</preExplosionSpawnThingDef>
+                <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
                 <preExplosionSpawnChance>0.25</preExplosionSpawnChance>
                 <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
                 <explosionSound>MortarIncendiary_Explode</explosionSound>

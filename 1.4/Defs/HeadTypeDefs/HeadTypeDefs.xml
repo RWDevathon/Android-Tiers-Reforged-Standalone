@@ -104,34 +104,4 @@
         <gender>None</gender>
     </HeadTypeDef>
 
-
-    <!-- Tier 5 -->
-    <!-- None -->
-
-    <HeadTypeDef>
-        <defName>ATR_Tier5_None</defName>
-        <graphicPath>Things/Pawns/Humanlikes/Tier5/head/None_Average_Normal</graphicPath>
-        <gender>None</gender>
-    </HeadTypeDef>
-
-
-    <!-- M7 -->
-    <!-- None -->
-
-    <HeadTypeDef>
-        <defName>ATR_M7_None</defName>
-        <graphicPath>Things/Pawns/Humanlikes/M7/head/None_Average_Normal</graphicPath>
-        <gender>None</gender>
-    </HeadTypeDef>
-
-
-    <!-- M8 -->
-    <!-- None -->
-
-    <HeadTypeDef>
-        <defName>ATR_M8_None</defName>
-        <graphicPath>Things/Pawns/Humanlikes/M8/head/None_Average_Normal</graphicPath>
-        <gender>None</gender>
-    </HeadTypeDef>
-
 </Defs>

@@ -1,4 +1,4 @@
-#	ATR 1.2.14 Changelog
+#	ATR 1.3.0 Changelog
 
 ## Medical
 - Mechanical implants, prosthetics, and Hediffs have been completely reworked across the board.
@@ -31,10 +31,10 @@
         - Roughly every 3 days, the effect warps, with an 80% to increase instead of decreasing.
         - Each stage has different effects, with stages < 4 toward mental and > 4 toward physical.
         - Stage 7 is lethal... depending on your point of view.
-        - Stage 1 will be lethal... also depending on your point of view... but is for now a stage at which warping will freeze and remain permanent at that level.
+        - Stage 1 is a permanent effect - if it hits this point, it will not change.
 
 ## Drones:
-- Drones (By default, T1's and the M7) have set skill levels and can not learn or lose skills or passions. Set skill level depends on the pawn's race, but defaults to 8.
+- Drones (By default, T1's) have set skill levels and can not learn or lose skills or passions. Set skill level depends on the pawn's race, but defaults to 8.
 - Drones can not use the SkyMind, and do not possess Cores like androids do - they can not be blanks, and start pre-initialized.
 - Drones are completely thoughtless, and have no related needs, and no ideology.
 - Drones can neither start nor receive social interactions, making them ineligible for various relationship statuses.
@@ -106,15 +106,6 @@
 - Mechanical animals are now much more closely aligned in their output to their vanilla counterparts while still maintaining unique roles.
 - Most stats have been tweaked to more closely align with vanilla values.
 
-## T5's:
-- Still exist.
-- Are now acquirable via a ridiculously rare quest rather than a ridiculously rare incident.
-- Have no needs (besides possibly mod added ones).
-- Can not use the SkyMind network.
-- Still can not wear clothes.
-- No longer have the intolerance trait, but probably still looks down upon lesser beings.
-- May eventually be de-implemented during the course of making an Archotech sub-expansion.
-
 ## Miscellaneous
 - Mechanical units are now paintable via surgery (and it has no gameplay impact) in a wider variety of colors.
 - Performance and compatibility has been improved across the board, with a number of severe memory and performance flaws resolved.
@@ -127,12 +118,12 @@
 
 ## Removed features:
 - Androids can no longer charge via LWPN from Power++. The integration was very poorly implemented and was removed to decrease complexity and lag.
-- Drones and T5's can no longer make use of the SkyMind Network, meaning exploits around transferring minds for trait and bodies have been closed.
+- Drones can no longer make use of the SkyMind Network, meaning exploits around transferring minds for trait and bodies have been closed.
 - Simple Minded and Mech traits have been removed.
 - There is now only the basic Crashlanded-like android scenario
-- The M7 is no longer craftable and is obtainable only via the orbital target. M8's have been removed entirely.
 - Rerolling android stats and traits, as well as reprogramming androids, has been removed.
 - Duplication of minds now requires the SkyCloud Core building. Mind transfer and surrogate operations are unaffected.
+- T5's, M8's. The M7 was moved to the M-Series sub mod to become the M5.
 - Removed the anti-material rifle.
 - Removed steel wool - mineral units now shed steel itself.
 
@@ -142,19 +133,12 @@
 - Skymind Retexture
 - Swarm IED
 - AT enchantment
-- ~~M7 overhaul~~
-	- Due to a miscommunication this submod will be added in the next update.
-	- The Mech Blade has been replaced with a pole-axe
 - Shiny Androids
 
-- _The TX (Terminator Expansion) submod is currently incompatible. It's on their owner to make them compatible again._
-
 ## Known Issues:
-- Adding ATR mid-save seems to turn underground steel into blueprints for bedside chargers. It will not affect steel deposits discovered after the mod is installed. For this reason, adding this mod mid-save is not recommended - This will be fixed when the next update that is forced to break saves is released, as the only way to avoid this is to change the defName (which would break saves).
 - "Guards for me" guards apply a mood buff to nearby pawns, but drones do not have a mood need at all, so it will throw constant errors for them if a drone happens to be nearby a guard. The mod's functionality still works, but expect significant errors or performance drops if drones are nearby guards. The solution would be for Guards for me to only apply it to pawns with a mood need.
 - "No Random Relations" appears to have an incompatibility surrounding the use of surrogates. The exact source of this issue is unknown at this time.
 - Mechlinks and Neuroformers are not usable on androids due to the fact that they are hardcoded to check against the Brain bodypart and also are tied to psychic sensitivity. This is not a bug. If you read the item descriptions, it is pretty clear they are designed explicitly and specifically for human physiology.
 - "Smart Medicine" and "Common Sense" need to be loaded at the end of your modlist or it will cause issues. That's a general rule, but ATR really depends on you fixing your modlists. Smart medicine may still find a way to cause androids to be untendable.
 - Activating Self-Tend on a mechanical pawn will throw a message at you complaining that the Doctor work type is not assigned even if the pawn has the Mechanic work type assigned (It's harmless, mechanical pawns will self-tend based on Mechanic, not Doctor).
 - Blood Rot and Paralytic Abasia do not function on androids at the moment. Work is planned to add mechanical variants for them.
-- Quest pawns may occasionally be humans in android factions with android backstories. No current plan of attack is viable for this.

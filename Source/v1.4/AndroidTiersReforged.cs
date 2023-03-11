@@ -50,6 +50,8 @@ namespace ATReforged
             RecipeDef androidSmashing = DefDatabase<RecipeDef>.GetNamed("SmashCorpseMechanoid");
             RecipeDef butcherFlesh = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseFlesh");
 
+            CompProperties_Facility bedsideChargerLinkables = ATR_ThingDefOf.ATR_BedsideChargerFacility.GetCompProperties<CompProperties_Facility>();
+
             // Some patches can't be run with the other harmony patches as Defs aren't loaded yet. So we patch them here.
             if (HealthCardUtility_Patch.DrawOverviewTab_Patch.Prepare())
             {
@@ -196,7 +198,8 @@ namespace ATReforged
                     CompProperties_AffectedByFacilities linkable = thingDef.GetCompProperties<CompProperties_AffectedByFacilities>();
                     if (linkable != null && !typeof(Building_ChargingBed).IsAssignableFrom(thingDef.thingClass))
                     {
-                        linkable.linkableFacilities.Add(ATR_ThingDefOf.ATR_BedsideCharger);
+                        linkable.linkableFacilities.Add(ATR_ThingDefOf.ATR_BedsideChargerFacility);
+                        bedsideChargerLinkables.linkableBuildings.Add(thingDef);
                     }
                 }
             }

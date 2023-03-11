@@ -251,12 +251,18 @@
             <li Class="ATReforged.CompProperties_Computer">
                 <serverMode>SkillServer</serverMode>
                 <passivePointGeneration>20</passivePointGeneration>
-                <pointStorage>500</pointStorage>
+                <pointStorage>5000</pointStorage>
             </li>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>true</shortCircuitInRain>
                 <basePowerConsumption>600</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Facility">
+              <statOffsets>
+                <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+              </statOffsets>
+              <maxSimultaneous>2</maxSimultaneous>
             </li>
         </comps>
         <minifiedDef>MinifiedThing</minifiedDef>

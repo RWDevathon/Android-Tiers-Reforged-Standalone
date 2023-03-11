@@ -904,7 +904,7 @@
 		<defName>ATR_MechAdulthoodExiled</defName>
 		<title>Exiled android</title>
 		<titleShort>Exile</titleShort>
-		<baseDesc>{PAWN_nameDef} was held captive in secret on a world with no formal android rights. {PAWN_nameDef} spent its captivity lost in profound thought. When {PAWN_possessive} captor was exposed and arrested, {PAWN_pronoun} was freed and allowed to leave the planet in peace without consequence.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was held captive in secret on a world with no formal android rights. {PAWN_nameDef} spent {PAWN_possessive} captivity lost in profound thought. When {PAWN_possessive} captor was exposed and arrested, {PAWN_pronoun} was freed and allowed to leave the planet in peace without consequence.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>

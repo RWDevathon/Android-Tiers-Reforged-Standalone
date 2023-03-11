@@ -214,12 +214,12 @@
                         <capacities>
                             <li>Blunt</li>
                         </capacities>
-                        <power>5</power>
+                        <power>6</power>
                         <cooldownTime>2</cooldownTime>
                         <extraMeleeDamages>
                             <li>
                                 <def>Flame</def>
-                                <amount>10</amount>
+                                <amount>12</amount>
                             </li>
                             <li>
                                 <def>EMP</def>
@@ -306,7 +306,7 @@
                             <li>Scratch</li>
                             <li>Stab</li>
                         </capacities>
-                        <power>12</power>
+                        <power>16</power>
                         <cooldownTime>2.25</cooldownTime>
                     </li>
                 </tools>
@@ -384,7 +384,7 @@
                             <li>Scratch</li>
                             <li>Stab</li>
                         </capacities>
-                        <power>15</power>
+                        <power>16</power>
                         <cooldownTime>2</cooldownTime>
                     </li>
                     <li>
@@ -467,7 +467,6 @@
             <li>ATR_Tier2Android</li>
             <li>ATR_Tier3Android</li>
             <li>ATR_Tier4Android</li>
-            <li>ATR_Tier5Android</li>
         </recipeUsers>
 		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
 		<ingredients>
@@ -540,7 +539,6 @@
             <li>ATR_Tier2Android</li>
             <li>ATR_Tier3Android</li>
             <li>ATR_Tier4Android</li>
-            <li>ATR_Tier5Android</li>
         </recipeUsers>
 		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
 		<ingredients>

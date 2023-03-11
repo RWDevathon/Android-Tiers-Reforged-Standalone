@@ -12,9 +12,7 @@ namespace ATReforged
             DefOfHelper.EnsureInitializedInCtor(typeof(ATR_ThingDefOf));
         }
 
-        public static ThingDef ATR_MechFallTargetterBeam;
-
-        public static ThingDef ATR_BedsideCharger;
+        public static ThingDef ATR_BedsideChargerFacility;
 
         public static ThingDef HospitalBed;
 

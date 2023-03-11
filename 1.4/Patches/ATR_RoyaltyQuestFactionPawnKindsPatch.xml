@@ -10,7 +10,7 @@
             <operations>
                 <!-- Guests -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <xpath>Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
                     <value>
                         <li>
                             <factionDef>ATR_MechanicalMarauders</factionDef>
@@ -23,12 +23,12 @@
                             <pawnKinds>
                                 <li>ATR_AndroidT2CollectiveSoldier</li>
                             </pawnKinds>
-                        </li>  
+                        </li>
                     </value>
                 </li>
                 <!-- Mercenaries -->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <xpath>Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
                     <value>
                         <li>
                             <factionDef>ATR_MechanicalMarauders</factionDef>
@@ -41,7 +41,7 @@
                             <pawnKinds>
                                 <li>ATR_AndroidT2CollectiveSoldier</li>
                             </pawnKinds>
-                        </li>  
+                        </li>
                     </value>
                 </li>
             </operations>

@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>ATR_T5Colonist</defName>
-		<label>T5 Android Colonist</label>
-		<race>ATR_Tier5Android</race>
-		<backstoryFiltersOverride>
-            <li>
-                <categories>
-                    <li>ATR_ArchotechAndroids</li>
-                </categories>
-            </li>
-		</backstoryFiltersOverride>
-		<chemicalAddictionChance>0.00</chemicalAddictionChance>
-		<techHediffsMoney>
-			<min>2000</min>
-			<max>10000</max>
-		</techHediffsMoney>
-		<techHediffsTags>
-			<li>Advanced</li>
-		</techHediffsTags>
-		<maxGenerationAge>400000</maxGenerationAge>
-		<defaultFactionType>ATR_PlayerAndroidFaction</defaultFactionType>
-		<techHediffsChance>0.3</techHediffsChance>
-		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-		<initialResistanceRange>13~21</initialResistanceRange>
-	</PawnKindDef>
-
     <PawnKindDef Name="BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
 		<backstoryFiltersOverride>
@@ -111,5 +85,23 @@
 		<label>T1 Android Colonist</label>
 		<race>ATR_Tier1Android</race>
 	</PawnKindDef>
+
+    <!-- Special PawnKinds -->
+
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>ATR_FractalWitness</defName>
+        <label>Fractal Witness</label>
+		<chemicalAddictionChance>0.00</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <initialResistanceRange>13~21</initialResistanceRange>
+        <extraSkillLevels>6</extraSkillLevels>
+		<backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ATR_FractalWitness</li>
+                </categories>
+            </li>
+		</backstoryFiltersOverride>
+    </PawnKindDef>
 
 </Defs>

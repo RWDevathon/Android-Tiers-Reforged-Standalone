@@ -26,6 +26,12 @@
 				<allowHumanBios>false</allowHumanBios>
 				<maxDamageForSocialfight>20</maxDamageForSocialfight>
 				<immuneToAge>false</immuneToAge>
+                <notXenophobistTowards>
+                    <li>ATR_Tier1Android</li>
+                    <li>ATR_Tier2Android</li>
+                    <li>ATR_Tier3Android</li>
+                    <li>ATR_Tier4Android</li>
+                </notXenophobistTowards>
 				<alienPartGenerator>
 					<headBodyPartDef>ATR_MechanicalHead</headBodyPartDef>
                     <bodyTypes>
@@ -206,73 +212,5 @@
 			</hediffGiverSets>
 		</race>
     </AlienRace.ThingDef_AlienRace>
-
-    <!-- M-Series Base -->
-	<AlienRace.ThingDef_AlienRace Name="ATR_BaseMSeriesPawn" ParentName="ATR_BaseMechanicalPawn" Abstract="True">
-        <alienRace>
-			<raceRestriction>
-				<apparelList>
-				</apparelList>
-				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
-				<weaponList>
-					<li>ATR_RotaryAutocannon</li>
-					<li>ATR_RotaryShrapnelcannon</li>
-					<li>ATR_HeadhunterCannon</li>
-					<li>ATR_MechPoleaxe</li>
-				</weaponList>
-				<onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
-			</raceRestriction>
-			<thoughtSettings>
-				<cannotReceiveThoughtsAtAll>true</cannotReceiveThoughtsAtAll>
-			</thoughtSettings>
-        </alienRace>
-		<statBases>
-			<MarketValue>18000</MarketValue>
-			<MoveSpeed>5.20</MoveSpeed>
-			<ComfyTemperatureMin>-200</ComfyTemperatureMin>
-			<ComfyTemperatureMax>200</ComfyTemperatureMax>
-			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-			<ArmorRating_Blunt>1.00</ArmorRating_Blunt>
-            <ArmorRating_Heat>1.00</ArmorRating_Heat>
-            <InjuryHealingFactor>0.2</InjuryHealingFactor>
-            <IncomingDamageFactor>0.75</IncomingDamageFactor>
-			<GlobalLearningFactor>0.4</GlobalLearningFactor>
-            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0</StaggerDurationFactor>
-            <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance>
-            <ATR_MaintenanceRetention>0.8</ATR_MaintenanceRetention>
-			<Mass>450</Mass>
-		</statBases>
-        <race>
-			<thinkTreeMain>Humanlike</thinkTreeMain>
-			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-			<lifeExpectancy>1000</lifeExpectancy>
-			<body>ATR_AndroidBody</body>
-			<baseHungerRate>4</baseHungerRate>
-			<baseHealthScale>7.5</baseHealthScale>
-			<baseBodySize>5</baseBodySize>
-			<needsRest>false</needsRest>
-			<ageGenerationCurve>
-				<points>
-                    <li>(0,0)</li>
-					<li>(100,0)</li>
-					<li>(200,2)</li>
-					<li>(800,4)</li>
-					<li>(2000,10)</li>
-					<li>(8000,15)</li>
-					<li>(10000,0)</li>
-				</points>
-			</ageGenerationCurve>
-        </race>
-		<modExtensions>
-			<li Class="ATReforged.ATR_MechTweaker">
-                <letPawnKindHandleDroneBackstories>true</letPawnKindHandleDroneBackstories>
-                <droneSkillLevel>14</droneSkillLevel>
-			</li>
-		</modExtensions>
-        <recipes>
-            <li>ATR_ShutdownMechanical</li>
-            <li>ATR_ReprogramDrone</li>
-        </recipes>
-	</AlienRace.ThingDef_AlienRace>
 
 </Defs>

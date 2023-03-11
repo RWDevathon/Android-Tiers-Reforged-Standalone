@@ -80,7 +80,7 @@
 
     <!-- Bedside Charger -->
     <ThingDef ParentName="BuildingBase">
-        <defName>ATR_BedsideCharger</defName>
+        <defName>ATR_BedsideChargerFacility</defName>
         <label>bedside charger</label>
         <description>A bedside device that allows the occupant of the linked bed to charge. It provides energy while in bed, but consumes a lot of power to do so. It must be placed directly adjacent to and facing the head of the bed.</description>
         <graphicData>
@@ -135,7 +135,6 @@
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Facility">
                 <maxSimultaneous>1</maxSimultaneous>
-                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
                 <mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
             </li>
         </comps>
@@ -215,8 +214,8 @@
         <techLevel>Industrial</techLevel>
         <uiIconScale>0.90</uiIconScale>
     </ThingDef>
-  
-  
+
+
     <ThingDef ParentName="ATR_ChargingPodBase">
 	    <defName>ATR_ChargingPod</defName>
         <label>Charging pod</label>
@@ -236,7 +235,7 @@
 	        </li>
         </comps>
     </ThingDef>
-  
+
     <ThingDef ParentName="ATR_ChargingPodBase">
 	    <defName>ATR_ChargingPodMech</defName>
         <label>Mech pod</label>
@@ -282,5 +281,5 @@
 		</statBases>
 		<uiIconPath>Things/Building/Special/VanometricPowerCell_north</uiIconPath>
 	</ThingDef>
-    
+
 </Defs>

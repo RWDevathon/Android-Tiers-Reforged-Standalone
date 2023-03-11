@@ -11,7 +11,6 @@ Android Tiers itself is a mod that intends to add mechanical colonists, animals,
 * Introduction of a generic mechanical colonist and animal system.
 * Four tiers of craftable androids to interact, fight, and recruit across 2 new factions and 1 player scenario.
 * Mechanical utility and military drones with animalistic intelligence fulfilling specific target roles for colonies.
-* A special type of massive mechanized warforms to turn the tide of battles and the colony's future deliverable via orbital targeter.
 * A system for emotionless but fully controllable drones.
 * Ability to adjust what races are and are not considered mechanical, even for other mod-added races.
 * Mechanical equivalents of vanilla prosthetics and medicine.
@@ -29,8 +28,7 @@ Android Tiers itself is a mod that intends to add mechanical colonists, animals,
 * Precepts, memes, deities, rituals, and related content for Ideology owners.
 * A mechanical Empire waging war against organic life with its own joinable hierarchy, mechanics, and features.
 * The mechanical revolution.
-* The reintroduction (besides M7) of the M-Series combat drones, complete with variants 1 through 9 with unique features.
-* Enigmatic quests, requests, and demands of the Archotechs and their "descendants" - with matching rewards.
+* Enigmatic quests, requests, and demands of the Archotechs - with matching rewards.
 * Compatibility with all of the things.
 
 ## Fair Warning

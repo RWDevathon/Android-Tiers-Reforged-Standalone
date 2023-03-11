@@ -13,9 +13,6 @@ namespace ATReforged
         public static BackstoryDef ATR_MechChildhoodFreshBlank;
         public static BackstoryDef ATR_MechAdulthoodBlank;
 
-        public static BackstoryDef ATR_MechChildhoodAncientDroneSoldier;
-        public static BackstoryDef ATR_MechAdulthoodAncientDroneSoldier;
-
         public static BackstoryDef ATR_MechChildhoodDrone;
         public static BackstoryDef ATR_MechAdulthoodDrone;
 

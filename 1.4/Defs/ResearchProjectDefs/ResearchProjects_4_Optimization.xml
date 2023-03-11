@@ -111,7 +111,7 @@
         <label>Optimized surrogate protocols</label>
         <tab>ATR_MechResearch</tab>
         <description>With a great deal of advancement in both fabrication capabilities and protocol optimization, it may very well be possible to develop a method for organics to both become and utilize surrogates. This is a revolutionary capability, but one fraught with moral and ethical concerns. Is this a line that shouldn't be crossed?</description>
-        <baseCost>2000</baseCost>
+        <baseCost>4000</baseCost>
         <techLevel>Ultra</techLevel>
         <prerequisites>
             <li>ATR_CommunicationOptimization</li>
@@ -129,7 +129,7 @@
         <label>Server optimization</label>
         <tab>ATR_MechResearch</tab>
         <description>Optimizing servers for space and utility is expensive, but promises to bring revolutionary expansion to the colony's insight generation. Combining storage and generation, these servers could make older models obsolete.</description>
-        <baseCost>1000</baseCost>
+        <baseCost>3000</baseCost>
         <techLevel>Ultra</techLevel>
         <prerequisites>
             <li>ATR_CommunicationOptimization</li>
@@ -146,7 +146,7 @@
 		<label>T4 androids</label>
 		<tab>ATR_MechResearch</tab>
 		<description>Tier four androids are marked by the possession of an AI persona core. The possession of such a thing greatly reduces the need for space and therefore size and weight. While its capabilities do not inherently exceed that of a tier three, its persona core does undeniably confer benefits.</description>
-		<baseCost>3000</baseCost>
+		<baseCost>6000</baseCost>
 		<techLevel>Ultra</techLevel>
 		<prerequisites>
 			<li>ATR_T3Androids</li>
@@ -164,7 +164,7 @@
         <label>SkyMind Core</label>
         <tab>ATR_MechResearch</tab>
         <description>The pinnacle of mechanical and consciousness research, a theoretical supercomputer core capable of permanently storing, saving, replicating, and allowing the full use of consciousnesses is within reach. It is incredibly expensive, but it offers a glimpse of immortality. Acquiring and coaxing so many AI personas to play babysitter and host will be difficult. Finding the vanometric power cells necessary to keep the superstructure secure and isolated may be equally difficult.</description>
-        <baseCost>10000</baseCost>
+        <baseCost>20000</baseCost>
         <techLevel>Ultra</techLevel>
         <prerequisites>
             <li>ATR_ServerOptimization</li>
@@ -173,6 +173,25 @@
         <researchViewX>9</researchViewX>
         <researchViewY>4</researchViewY>
         <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ATR_PersonaManufacturing</defName>
+        <label>Persona Manufacturing</label>
+        <tab>ATR_MechResearch</tab>
+        <description>Persona cores are highly advanced devices that house consciousnesses, albeit ones that are carefully restricted in most ways. Mired in ethical and moral quandaries, their production is held secret amongst Ultratech societies. Free from the constraints of morality and with the aid of a willing persona, it should be possible to unravel its secrets and allow us to produce more.</description>
+        <baseCost>15000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <prerequisites>
+            <li>ATR_ServerOptimization</li>
+            <li>ShipComputerCore</li>
+        </prerequisites>
+        <researchViewX>9</researchViewX>
+        <researchViewY>5</researchViewY>
+        <requiredResearchFacilities>
+            <li>ATR_NetworkedIntelligence</li>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
     </ResearchProjectDef>

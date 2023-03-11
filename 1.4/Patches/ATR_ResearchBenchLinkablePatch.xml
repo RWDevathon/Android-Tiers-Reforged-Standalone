@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Add the Networked Intelligence to the list of linkable facilities for high tech research benches. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>ATR_NetworkedIntelligence</li>
+		</value>
+	</Operation>
+
+</Patch>

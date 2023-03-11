@@ -65,7 +65,7 @@
                         <capacities>
                             <li>Blunt</li>
                         </capacities>
-                        <power>14</power>
+                        <power>12</power>
                         <cooldownTime>2</cooldownTime>
                     </li>
                 </tools>
@@ -562,7 +562,7 @@
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>ATR_OrganicCharger</defName>
         <label>organic charger</label>
-        <description>An advanced bionic part that allows organics that have this installed to charge. It does not interfere with food consumption, but does consume considerable energy itself, increasing the pawn's energy need.\n\nDue to the inherently uncomfortable process of charging, pawns do not gain rest while charging.</description>
+        <description>An advanced bionic part that allows organics that have this installed to charge. It does not interfere with food consumption, but does require considerable energy itself, leading to faster consumption.</description>
 		<descriptionHyperlinks><ThingDef>ATR_OrganicCharger</ThingDef></descriptionHyperlinks>
         <comps>
             <li>

@@ -99,10 +99,6 @@
             <li>ATR_PlatingPlasteel</li>
         </thingDefs>
         </fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
         <addsHediff>ATR_PlatingPlasteel</addsHediff>
     </RecipeDef>
 
@@ -159,10 +155,6 @@
 				<li>ATR_GuardianFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
 		<addsHediff>ATR_GuardianFrame</addsHediff>
 	</RecipeDef>
 
@@ -355,10 +347,6 @@
                 <li>ATR_CompositePlating</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
         <addsHediff>ATR_CompositePlating</addsHediff>
     </RecipeDef>
 
@@ -418,10 +406,6 @@
 				<li>ATR_RefinedFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
 		<addsHediff>ATR_RefinedFrame</addsHediff>
 	</RecipeDef>
 
@@ -476,10 +460,6 @@
 				<li>ATR_SanitaryFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
 		<addsHediff>ATR_SanitaryFrame</addsHediff>
 	</RecipeDef>
 
@@ -533,10 +513,6 @@
 				<li>ATR_MobilityFrame</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-        <recipeUsers>
-            <li>ATR_M7Mech</li>
-            <!--<li>ATR_M8Mech</li>-->
-        </recipeUsers>
 		<addsHediff>ATR_MobilityFrame</addsHediff>
 	</RecipeDef>
 
