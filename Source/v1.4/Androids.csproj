@@ -218,6 +218,7 @@
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
     <Compile Include="Harmony\Dialog_AssignBuildingOwner_Patch.cs" />
+    <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
     <Compile Include="Harmony\SpouseRelationUtility_Patch.cs" />
     <Compile Include="Harmony\QuestGen_Pawns_Patch.cs" />
     <Compile Include="Harmony\HealthCardUtility_Patch.cs" />
@@ -227,7 +228,6 @@
     <Compile Include="Harmony\FeedPatientUtility_Patch.cs" />
     <Compile Include="Harmony\GasUtility_Patch.cs" />
     <Compile Include="Harmony\PrisonBreakUtility_Patch.cs" />
-    <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
     <Compile Include="Harmony\ImmunityHandler_Patch.cs" />
     <Compile Include="Harmony\Pawn_InteractionsTracker.cs" />
     <Compile Include="Harmony\JobGiver_GetHemogen_Patch.cs" />

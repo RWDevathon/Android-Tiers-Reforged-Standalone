@@ -4,18 +4,16 @@ using RimWorld;
 
 namespace ATReforged
 {
-    internal class Precept_Ritual_Patch
+    public class RitualObligationTrigger_MemberDied_Patch
     {
-        // Mechanical drones do not have ideological obligations.
-        [HarmonyPatch(typeof(Precept_Ritual), "AddObligation")]
-        public class AddObligation_Patch
+        // Mechanical drones do not trigger death related obligations.
+        [HarmonyPatch(typeof(RitualObligationTrigger_MemberDied), "Notify_MemberDied")]
+        public class Notify_MemberDied_Patch
         {
             [HarmonyPrefix]
-            public static bool Listener(RitualObligation obligation)
+            public static bool Listener(Pawn p)
             {
-                if (obligation.targetA.Thing == null
-                    || (obligation.targetA.Thing is Pawn pawn && Utils.IsConsideredMechanicalDrone(pawn))
-                    || (obligation.targetA.Thing is Corpse corpse && Utils.IsConsideredMechanicalDrone(corpse.InnerPawn)))
+                if (Utils.IsConsideredMechanicalDrone(p))
                 {
                     return false;
                 }
