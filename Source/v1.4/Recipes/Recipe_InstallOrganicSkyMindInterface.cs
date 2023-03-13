@@ -21,6 +21,15 @@ namespace ATReforged
                         yield break;
                     }
                 }
+
+                // If Biotech is active, ensure the pawn does not have a mechlink if we are applying a receiver (surrogates can not be mechanitors)
+                if (ModLister.BiotechInstalled)
+                {
+                    if (recipe.addsHediff.CompProps<HediffCompProperties_SkyMindEffecter>().isReceiver && pawn.health.hediffSet.HasHediff(HediffDefOf.MechlinkImplant))
+                    {
+                        yield break;
+                    }
+                }
                 yield return targetBodyPart;
             }
             yield break;

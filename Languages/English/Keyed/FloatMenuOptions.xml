@@ -12,5 +12,7 @@
 	<ATR_NeedToAllowCharge>{0} does not have charging capabilities enabled.</ATR_NeedToAllowCharge>
 	<ATR_MassiveNotAllowed>Massive mechanical units can not use this.</ATR_MassiveNotAllowed>
 	<ATR_MassiveRequired>Only massive mechanical units can use this.</ATR_MassiveRequired>
-	
+
+    <ATR_NoSurrogateMechanitors>Mechanitors can not be surrogates.</ATR_NoSurrogateMechanitors>
+
 </LanguageData>

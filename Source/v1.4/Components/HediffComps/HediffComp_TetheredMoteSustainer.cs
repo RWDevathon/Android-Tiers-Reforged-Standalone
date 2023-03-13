@@ -54,12 +54,6 @@ namespace ATReforged
             }
         }
 
-        public override void CompExposeData()
-        {
-            base.CompExposeData();
-            Scribe_References.Look(ref attachedMote, "ATR_tetheredAttachedMote");
-        }
-
         private Mote attachedMote;
     }
 }

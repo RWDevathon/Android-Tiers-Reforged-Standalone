@@ -119,6 +119,13 @@
         <defName>ATR_ReceiverCore</defName>
         <label>Receiver core</label>
         <description>This core is interfaced to the chassis with all core functionalities delegated to communication and remote control protocols. There is no intelligence in this core, but any connected intelligence can exact their will through it.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">0</MechBandwidth>
+                </statFactors>
+            </li>
+        </stages>
         <comps>
             <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
                 <allowsConnection>true</allowsConnection>
@@ -142,6 +149,13 @@
         <defName>ATR_SkyMindReceiver</defName>
         <label>SkyMind Receiver</label>
         <description>This device is installed directly into the brain, and completely overrides the subject's neural network, converting them into a blank husk to be controlled by an external force. Due to the complexity of the device and the inherent difficulty of controlling organic matter, this device has a tendency to combust violently upon destruction. \n\nMany forces have used this to their advantage to destroy surrogates rather than let them fall into enemy hands.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">0</MechBandwidth>
+                </statFactors>
+            </li>
+        </stages>
         <comps>
             <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
                 <allowsConnection>true</allowsConnection>

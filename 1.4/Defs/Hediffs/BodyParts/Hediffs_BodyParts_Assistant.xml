@@ -866,19 +866,10 @@
 			<graphicClass>Graphic_Single</graphicClass>
     	</graphicData>
     	<techLevel>Archotech</techLevel>
-    	<thingSetMakerTags>
-      		<li>RewardSpecial</li>
-    	</thingSetMakerTags>
 		<statBases>
 			<MarketValue>3500</MarketValue>
 			<Mass>0.5</Mass>
 		</statBases>
-    	<tradeTags>
-      		<li>Bionic</li>
-    	</tradeTags>
-    	<techHediffsTags>
-      		<li>Archotech</li>
-    	</techHediffsTags>
   	</ThingDef>
 
   	<RecipeDef ParentName="ATR_SurgeryCoreAssistant">

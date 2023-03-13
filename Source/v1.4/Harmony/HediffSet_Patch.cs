@@ -1,6 +1,7 @@
 ﻿using Verse;
 using HarmonyLib;
 using System.Collections.Generic;
+using System;
 
 namespace ATReforged
 {
@@ -34,21 +35,29 @@ namespace ATReforged
                     return true;
                 }
 
-                // The targetHediffs cached are all hediffs which are temperature related and need to be checked against the hediffs present on this pawn.
-                HashSet<HediffDef> targetHediffDefs = Utils.GetTemperatureHediffDefsForRace(__instance.pawn.RaceProps);
-                if (targetHediffDefs.Count > 0)
+                try
                 {
-                    foreach (Hediff hediff in __instance.hediffs)
+                    // The targetHediffs cached are all hediffs which are temperature related and need to be checked against the hediffs present on this pawn.
+                    HashSet<HediffDef> targetHediffDefs = Utils.GetTemperatureHediffDefsForRace(__instance.pawn.RaceProps);
+                    if (targetHediffDefs.Count > 0)
                     {
-                        if (targetHediffDefs.Contains(hediff.def) && hediff.CurStageIndex > (int)minStage)
+                        foreach (Hediff hediff in __instance.hediffs)
                         {
-                            __result = true;
-                            return false;
+                            if (targetHediffDefs.Contains(hediff.def) && hediff.CurStageIndex > (int)minStage)
+                            {
+                                __result = true;
+                                return false;
+                            }
                         }
                     }
+                    __result = false;
+                    return false;
                 }
-                __result = false;
-                return false;
+                // If for whatever reason our detour fails, continue with vanilla behavior instead of erroring out.
+                catch (Exception ex)
+                {
+                    return true;
+                }
             }
         }
     }
