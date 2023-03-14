@@ -32,14 +32,14 @@ namespace ATReforged
                 TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
             }
 
-            // Restore this part and 50 points of severity for children to normal functionality.
-            float HPLeftForChildrenParts = 50 + part.def.hitPoints;
-            RestoreChildParts(pawn, part, ref HPLeftForChildrenParts);
+            // Restore 100 points of severity for this part and child parts to normal functionality.
+            float HPForRepair = 100;
+            RestoreParts(pawn, part, ref HPForRepair);
 
             // If not all hp was used in a non-core part, then apply remaining hp to the Core part and its children.
-            if (HPLeftForChildrenParts > 0 && part != pawn.def.race.body.corePart)
+            if (HPForRepair > 0 && part != pawn.def.race.body.corePart)
             {
-                RestoreChildParts(pawn, pawn.def.race.body.corePart, ref HPLeftForChildrenParts);
+                RestoreParts(pawn, pawn.def.race.body.corePart, ref HPForRepair);
             }
         }
 
@@ -57,14 +57,13 @@ namespace ATReforged
         }
 
         // Recursively restore children parts of the originally restored part. IE. hands and fingers when an arm was restored.
-        private void RestoreChildParts(Pawn pawn, BodyPartRecord part, ref float HPLeftToRestoreChildren)
+        private void RestoreParts(Pawn pawn, BodyPartRecord part, ref float HPLeftToRestoreChildren)
         {
             if (part == null)
                 return;
 
             // Acquire a list of all hediffs on this specific part, and prepare a bool to check if this part has hediffs that can't be handled with the available points.
             List<Hediff> targetHediffs = pawn.health.hediffSet.hediffs.Where(hediff => hediff.Part == part && !hediff.def.keepOnBodyPartRestoration && hediff.def.isBad).ToList();
-            bool insufficientToCoverSeverity = false;
 
             // Destroy hediffs that does not put the HPLeft below 0. If there is any hediff with a severity too high, then recursion stops at this node.
             foreach (Hediff hediff in targetHediffs)
@@ -75,13 +74,18 @@ namespace ATReforged
 
                 if (HPLeftToRestoreChildren < severity)
                 {
-                    insufficientToCoverSeverity = true;
-                    // On the last possible part fix, give it an extra 10% to get one last part fixed.
-                    if (HPLeftToRestoreChildren * 1.1 >= severity)
+                    // Injury severity can be reduced directly.
+                    if (hediff.def.injuryProps != null)
                     {
-                        HPLeftToRestoreChildren -= severity;
+                        hediff.Severity = -HPLeftToRestoreChildren;
+                    }
+
+                    // If the part is missing entirely and there is at least half the HP necessary to restore the part or half of the original HP unused, let it get away with it.
+                    if (hediff.def == HediffDefOf.MissingBodyPart && (severity / 2 < HPLeftToRestoreChildren || HPLeftToRestoreChildren >= 50))
+                    {
                         pawn.health.RemoveHediff(hediff);
                     }
+                    return;
                 }
                 else
                 {
@@ -89,11 +93,10 @@ namespace ATReforged
                     pawn.health.RemoveHediff(hediff);
                 }
             }
-            if (insufficientToCoverSeverity)
-                return;
+
             foreach (BodyPartRecord childPart in part.GetDirectChildParts())
             {
-                RestoreChildParts(pawn, childPart, ref HPLeftToRestoreChildren);
+                RestoreParts(pawn, childPart, ref HPLeftToRestoreChildren);
             }
         }
     }
