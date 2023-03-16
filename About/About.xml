@@ -49,6 +49,7 @@
 		<li>EdB.PrepareCarefully</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>EdB.PrepareCarefully.UnofficialPatch</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+		<li>Uuugggg.SmartMedicine</li><!-- Same as CommonSense, but confirmed. -->
     </incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li><!-- Dependency -->
@@ -65,7 +66,6 @@
     </loadAfter>
 	<loadBefore>
 		<li>avilmask.CommonSense</li><!-- I'd prefer putting this under incompatibleWith, but I don't have a valid reason, unfortunately... If you're reading this, put it at the end of your list, but before any performance mods. -FG -->
-		<li>Uuugggg.SmartMedicine</li><!-- Same as CommonSense. -->
 		<li>Taranchuk.PerformanceOptimizer</li><!-- *Don't even think about it.* -->
 		<li>GhostRolly.Rim73</li><!-- *Don't even think about it.* (Outdated, but I'd rather not take the chance.) -->
 		<li>Krkr.RocketMan</li><!-- *Don't even think about it.* -->
