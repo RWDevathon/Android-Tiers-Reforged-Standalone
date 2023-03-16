@@ -50,6 +50,7 @@
 		<li>EdB.PrepareCarefully.UnofficialPatch</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>Uuugggg.SmartMedicine</li><!-- Same as CommonSense, but confirmed. -->
+		<li>OskarPotocki.VFE.Empire</li><!-- Probably temporary, until we or they find a fix. -->
     </incompatibleWith>
     <loadAfter>
         <li>brrainz.harmony</li><!-- Dependency -->
