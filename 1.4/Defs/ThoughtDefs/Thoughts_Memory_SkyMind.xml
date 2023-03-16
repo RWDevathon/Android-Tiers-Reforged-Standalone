@@ -43,21 +43,4 @@
         </stages>
     </ThoughtDef>
 
-    <ThoughtDef>
-        <defName>ATR_SurrogatePuppetThought</defName>
-        <durationDays>8</durationDays>
-        <stackLimit>5</stackLimit>
-        <nullifyingTraits>
-            <li>Psychopath</li>
-            <li>Bloodlust</li>
-        </nullifyingTraits>
-        <stages>
-            <li>
-                <label>Murderous puppeteering</label>
-                <description>An intelligent being has been transformed by the colony into a puppet. They may look the same, but now there is no intelligence. We killed them and turned their body into a soulless husk.</description>
-                <baseMoodEffect>-3</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-    
 </Defs>

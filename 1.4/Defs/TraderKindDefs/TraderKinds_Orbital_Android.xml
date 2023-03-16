@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TraderKindDef>
+		<defName>ATR_Orbital_Mechanized</defName>
+		<label>Mechanized Trader</label>
+		<orbital>true</orbital>
+		<stockGenerators>
+
+            <!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>2000~4000</countRange>
+			</li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>ComponentIndustrial</thingDef>
+                <countRange>5~30</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>ComponentSpacer</thingDef>
+                <countRange>3~8</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Gold</thingDef>
+                <countRange>200~400</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>Plasteel</thingDef>
+                <countRange>100~400</countRange>
+            </li>
+			<li Class="StockGenerator_SingleDef">
+                <thingDef>ATR_PartPack</thingDef>
+                <countRange>8~40</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+                <thingDef>ATR_RepairStimSimple</thingDef>
+                <countRange>20~80</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ATR_RepairStimIntermediate</thingDef>
+				<countRange>5~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ATR_RepairStimAdvanced</thingDef>
+				<countRange>5~30</countRange>
+			</li>
+            <li Class="StockGenerator_SingleDef">
+              <thingDef>ATR_ChemCapsule</thingDef>
+              <countRange>100~600</countRange>
+            </li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ATR_MicroscytherShell</thingDef>
+				<countRange>-5~10</countRange>
+			</li>
+
+            <!-- Implants -->
+            <li Class="StockGenerator_Tag">
+                <tradeTag>TechHediff</tradeTag>
+                <thingDefCountRange>3~5</thingDefCountRange>
+                <countRange>1~1</countRange>
+            </li>
+
+            <!-- Exotic -->
+            <li Class="StockGenerator_Tag">
+              <tradeTag>ExoticMisc</tradeTag>
+              <thingDefCountRange>3~5</thingDefCountRange>
+              <countRange>1~2</countRange>
+              <excludedThingDefs>
+                <li>ComponentSpacer</li> <!-- already handled by single def -->
+              </excludedThingDefs>
+              <customCountRanges>
+                <Hyperweave>50~200</Hyperweave>
+              </customCountRanges>
+            </li>
+            <li Class="StockGenerator_Tag">
+              <tradeTag>Artifact</tradeTag>
+              <thingDefCountRange>2~4</thingDefCountRange>
+              <countRange>1~1</countRange>
+            </li>
+
+            <!-- Drones -->
+            <li Class="ATReforged.StockGenerator_Drones">
+                <countRange>2~4</countRange>
+                <droneKinds> <!-- Include all tiers as the Generator automatically selects ones designated drones -->
+                    <li>ATR_T1Colonist</li>
+                    <li>ATR_T2Colonist</li>
+                    <li>ATR_T3Colonist</li>
+                    <li>ATR_T4Colonist</li>
+                </droneKinds>
+            </li>
+
+            <!-- Animals -->
+			<li Class="StockGenerator_Animals">
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>ATR_MechanicalAnimal</li>
+				</tradeTagsSell>
+                <tradeTagsBuy>
+                  <li>ATR_MechanicalAnimal</li>
+                </tradeTagsBuy>
+				<kindCountRange>1~2</kindCountRange>
+				<countRange>2~5</countRange>
+			</li>
+
+            <!-- Buying -->
+            <li Class="StockGenerator_BuyExpensiveSimple" />
+            <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+
+		</stockGenerators>
+	</TraderKindDef>
+
+</Defs>

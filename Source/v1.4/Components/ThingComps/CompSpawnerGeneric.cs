@@ -55,6 +55,13 @@ namespace ATReforged
                         pawn.playerSettings.medCare = MedicalCareCategory.NormalOrWorse;
                         pawn.guest.SetGuestStatus(Faction.OfPlayer);
                         Messages.Message("ATR_NewbootAndroidCreated".Translate(), MessageTypeDefOf.PositiveEvent);
+
+                        // If this is the player's first constructed android, send a letter in case they don't understand how they work.
+                        if (!Utils.gameComp.hasBuiltAndroid)
+                        {
+                            Find.LetterStack.ReceiveLetter("ATR_FirstBlankAndroidCreated".Translate(), "ATR_FirstBlankAndroidCreatedDesc".Translate(), LetterDefOf.NeutralEvent);
+                            Utils.gameComp.hasBuiltAndroid = true;
+                        }
                     }
                     // Androids that do not need a Core are newly initialized, with the stats/passions of a 30-year old to avoid child debuff nonsense.
                     else
@@ -66,6 +73,11 @@ namespace ATReforged
                         rebootHediff.Severity = 1;
                         pawn.health.AddHediff(rebootHediff);
                     }
+                }
+                else if (Utils.IsConsideredMechanicalDrone(pawn) && !Utils.gameComp.hasBuiltDrone)
+                {
+                    Find.LetterStack.ReceiveLetter("ATR_FirstDroneCreated".Translate(), "ATR_FirstDroneCreatedDesc".Translate(), LetterDefOf.NeutralEvent);
+                    Utils.gameComp.hasBuiltDrone = true;
                 }
 
                 GenSpawn.Spawn(pawn, parent.Position, parent.Map);

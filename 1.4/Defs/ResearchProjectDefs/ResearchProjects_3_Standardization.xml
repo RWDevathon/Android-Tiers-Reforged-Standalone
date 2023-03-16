@@ -75,6 +75,8 @@
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
+        <discoveredLetterTitle>About: SkyMind Network</discoveredLetterTitle>
+        <discoveredLetterText>You have unlocked the basic components for a SkyMind network. While organic pawns can't make use of it yet, building a SkyMind relay tower will allow powered devices to be remotely turned on (and have some special functions in some cases) and mechanical pawns with an installed core (no drones) to connect.\n\nPawns connected to the network can be transferred to other connected pawns (or androids that have an autonomous core freshly installed), and may be uploaded to, downloaded from, or duplicated within a SkyMind Core once one is built.\n\nNetworked servers will allow you to accrue insights into skill, security, or hacking fields. You will need databases to store points, and either analysts or researchers on a SkyMind-connected research bench to generate points. Skill points can give pawns xp or passions. Security points protect against enemy hacks on your network. Hacking points can be used against others' networks for benefits.</discoveredLetterText>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -161,6 +163,8 @@
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
+        <discoveredLetterTitle>About: Surrogates</discoveredLetterTitle>
+        <discoveredLetterText>With network communication controls in place, core-less androids may now be turned into surrogates by installing a receiver core. Other pawns connected to the SkyMind network can activate surrogate controls to remotely pilot the body, sharing all skills (including learning) between the controller and surrogate. Controllers not contained within a SkyMind Core can only control so many surrogates before the stress of split attention begins to take a severe toll on learning and consciousness. Controllers are otherwise unaffected by this process.</discoveredLetterText>
     </ResearchProjectDef>
 
 </Defs>

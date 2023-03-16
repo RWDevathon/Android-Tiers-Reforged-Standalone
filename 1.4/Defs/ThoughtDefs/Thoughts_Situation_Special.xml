@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
+
     <ThoughtDef>
         <defName>ATR_AssistingMindBoost</defName>
         <workerClass>ATReforged.ThoughtWorker_AssistedByMinds</workerClass>
@@ -23,11 +23,12 @@
         </stages>
 	    <validWhileDespawned>true</validWhileDespawned>
     </ThoughtDef>
-  
+
+    <!-- Sapient Assistant thought, reserved for future sub mod.
     <ThoughtDef>
         <defName>ATR_SapientAssistant</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>ATR_MentalAssistant</hediff>
+        <hediff></hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -62,7 +63,8 @@
             </li>
         </stages>
     </ThoughtDef>
-    
+    -->
+
     <ThoughtDef>
         <defName>ATR_MentalAssistant</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -76,7 +78,7 @@
             </li>
         </stages>
     </ThoughtDef>
-    
+
     <ThoughtDef>
         <defName>ATR_Thought_Situational_PaintedColor_Favorite</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
@@ -90,5 +92,5 @@
             </li>
         </stages>
     </ThoughtDef>
-  
+
  </Defs>

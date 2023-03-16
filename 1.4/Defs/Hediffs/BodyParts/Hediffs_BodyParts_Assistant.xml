@@ -768,7 +768,7 @@
       <addsHediff>ATR_ControllerAssistant</addsHediff>
   </RecipeDef>
 
-  	<!-- Sapient Assistant -->
+  	<!-- Sapient Assistant (It is de-implemented waiting for future projects.)
 
   	<HediffDef ParentName="ATR_AddedBodyPartCoreAssistantBase">
 		<defName>ATR_SapientAssistant</defName>
@@ -779,7 +779,7 @@
 		<initialSeverity>0.001</initialSeverity>
     	<comps>
       		<li Class="HediffCompProperties_SeverityPerDay">
-        		<severityPerDay>0.0055</severityPerDay> <!-- max severity 1 / 0.0055 == 181.81 days -->
+        		<severityPerDay>0.0055</severityPerDay>
       		</li>
     	</comps>
     	<stages>
@@ -856,7 +856,7 @@
     	<spawnThingOnRemoved>ATR_SapientAssistant</spawnThingOnRemoved>
   	</HediffDef>
 
-  	<!-- Note: This assistant does not derive from the base class! This is to avoid it being manufacturable. -->
+  	Note: This assistant does not derive from the base class! This is to avoid it being manufacturable.
   	<ThingDef ParentName="ATR_MechBodyPartBase">
 		<defName>ATR_SapientAssistant</defName>
 		<label>Archotech sapient assistant</label>
@@ -894,5 +894,6 @@
 		</fixedIngredientFilter>
 		<addsHediff>ATR_SapientAssistant</addsHediff>
 	</RecipeDef>
+    -->
 
 </Defs>

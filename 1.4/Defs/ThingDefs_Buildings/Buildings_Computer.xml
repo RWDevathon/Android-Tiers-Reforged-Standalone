@@ -36,7 +36,7 @@
         <statBases>
             <WorkToBuild>65000</WorkToBuild>
             <Mass>500</Mass>
-            <Flammability>0.1</Flammability>
+            <Flammability>0</Flammability>
             <Beauty>5</Beauty>
             <MaxHitPoints>850</MaxHitPoints>
         </statBases>
@@ -269,54 +269,6 @@
         <researchPrerequisites>
         <li>ATR_ServerOptimization</li>
         </researchPrerequisites>
-        <thingCategories>
-            <li>BuildingsMisc</li>
-        </thingCategories>
-    </ThingDef>
-
-    <!-- Archotech Network -->
-    <ThingDef ParentName="BuildingBase">
-        <defName>ATR_ArchotechNetwork</defName>
-        <label>Archotech Server Network</label>
-        <description>An incredibly powerful archotech device that seems to readily offer equally incredible insights in training skills, and how to both secure and breach critical data. It neither uses energy nor produces heat to the amazement of any who have the honor of witnessing it. Many believe that they serve as the eyes and ears of invisible archotech societies interested in monitoring the universe, and that they only gift information to those who have earned an archotech's blessing. Others believe them to be cursed, as they serve as beacons to the unfortunate souls corrupted by fractal warping. \n\nThis is an extremely powerful asset, and many have sought to claim it as their own. Most of those who have tried have become fractal abominations. Even in that sad state, they will continue to seek it out. Be warned.\n\nThe network will produce vast amounts of insight into all fields, and can easily store equally vast quantities of information - and amazingly, does so without power or any SkyMind connection whatsoever.</description>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <altitudeLayer>Building</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <fillPercent>0.40</fillPercent>
-        <statBases>
-            <Mass>20</Mass>
-            <Flammability>0</Flammability>
-            <Beauty>100</Beauty>
-        </statBases>
-        <canOverlapZones>false</canOverlapZones>
-        <pathCost>30</pathCost>
-        <rotatable>false</rotatable>
-        <destroyable>false</destroyable>
-        <useHitPoints>false</useHitPoints>
-        <building>
-            <deconstructible>false</deconstructible>
-        </building>
-        <graphicData>
-            <texPath>Things/Building/Misc/Urn</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shadowData>
-                <volume>(0.55, 0.35, 0.3)</volume>
-                <offset>(0, 0, -0.28)</offset>
-            </shadowData>
-            <damageData>
-                <rect>(0.3,0,0.3,0.9)</rect>
-            </damageData>
-        </graphicData>
-        <comps>
-            <li Class="CompProperties_Glower">
-                <glowRadius>10</glowRadius>
-                <glowColor>(250, 250, 250)</glowColor>
-            </li>
-            <li Class="ATReforged.CompProperties_SuperComputer">
-                <passivePointGeneration>1000</passivePointGeneration>
-                <pointStorage>100000</pointStorage>
-            </li>
-        </comps>
         <thingCategories>
             <li>BuildingsMisc</li>
         </thingCategories>

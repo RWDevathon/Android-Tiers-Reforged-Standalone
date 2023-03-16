@@ -1,4 +1,4 @@
-#	ATR 1.3.0 Changelog
+#	ATR 2.0.0 Changelog
 
 ## Medical
 - Mechanical implants, prosthetics, and Hediffs have been completely reworked across the board.

@@ -43,6 +43,10 @@ namespace ATReforged
             Scribe_Values.Look(ref cachedSkillGeneration, "ATR_cachedSkillGeneration", 0);
             Scribe_Values.Look(ref cachedSecurityGeneration, "ATR_cachedSecurityGeneration", 0);
             Scribe_Values.Look(ref cachedHackingGeneration, "ATR_cachedHackingGeneration", 0);
+            Scribe_Values.Look(ref hasBuiltAndroid, "ATR_hasBuiltAndroid", false);
+            Scribe_Values.Look(ref hasBuiltDrone, "ATR_hasBuiltDrone", false);
+            Scribe_Values.Look(ref hasImprisonedDrone, "ATR_hasImprisonedDrone", false);
+            Scribe_Values.Look(ref hasMadeSurrogate, "ATR_hasMadeSurrogate", false);
 
             Scribe_Deep.Look(ref blankPawn, "ATR_blankPawn");
 
@@ -824,5 +828,12 @@ namespace ATReforged
         // Local containers for factions for being checked against. They are not saved, and are produced when needed;
         private List<Faction> antiMechanicalRightsFactions = null;
         private List<Faction> antiOrganicRightsFactions = null;
+
+        // Simple booleans for whether players have encountered some mechanics yet to display educational letters. Some letters are handled by researches.
+        public bool hasBuiltDrone = false;
+        public bool hasBuiltAndroid = false;
+        public bool hasImprisonedDrone = false;
+        public bool hasMadeSurrogate = false;
+
     }
 }

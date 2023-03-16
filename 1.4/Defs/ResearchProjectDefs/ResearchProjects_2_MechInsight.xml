@@ -13,6 +13,8 @@
 		</prerequisites>
 		<researchViewX>0</researchViewX>
 		<researchViewY>2.5</researchViewY>
+        <discoveredLetterTitle>About: Mechanical pawns</discoveredLetterTitle>
+        <discoveredLetterText>You have started down the path of producing mechanical pawns using ATR. Additional letters will appear as needed, but know that mechanical pawns can be built at the production pod, and have a different set of needs - instead of rest, they need maintenance, and while they can consume food, generally charge more efficiently. Healing units is done using repair stims or part packs instead of medicine. Units can be selectively restricted or permitted from using any resting spot for various purposes.</discoveredLetterText>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>

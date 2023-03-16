@@ -217,6 +217,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\Pawn_GuestTracker_Patch.cs" />
     <Compile Include="Harmony\Dialog_AssignBuildingOwner_Patch.cs" />
     <Compile Include="Harmony\CompUseEffect_InstallImplantMechlink_Patch.cs" />
     <Compile Include="Harmony\RitualRoleAssignments_Patch.cs" />
@@ -331,6 +332,7 @@
     <Compile Include="ArchotechQuests\GenStep_DownedFractalWitness.cs" />
     <Compile Include="DefOfs\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
+    <Compile Include="StockGenerators\StockGenerator_Drones.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_PaintedColor_Favorite.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_MaintenanceMood.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />
@@ -342,11 +344,11 @@
     <Compile Include="ThoughtWorker\ThoughtWorker_RustedPart.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_ChronicAnnoyance.cs" />
     <Compile Include="Utils\MaintenanceUtility.cs" />
-    <Compile Include="WorkGivers\JobGiver_AIExterminatorFight.cs" />
-    <Compile Include="WorkGivers\JobGiver_AIExterminatorSap.cs" />
-    <Compile Include="WorkGivers\JobGiver_DoMaintenanceIdle.cs" />
-    <Compile Include="WorkGivers\JobGiver_DoMaintenanceUrgent.cs" />
-    <Compile Include="WorkGivers\JobGiver_SelfTendMech.cs" />
+    <Compile Include="JobGivers\JobGiver_AIExterminatorFight.cs" />
+    <Compile Include="JobGivers\JobGiver_AIExterminatorSap.cs" />
+    <Compile Include="JobGivers\JobGiver_DoMaintenanceIdle.cs" />
+    <Compile Include="JobGivers\JobGiver_DoMaintenanceUrgent.cs" />
+    <Compile Include="JobGivers\JobGiver_SelfTendMech.cs" />
     <Compile Include="Extensions\PawnExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
@@ -365,12 +367,12 @@
     <Compile Include="Components\ATR_GameComponent.cs" />
     <Compile Include="Utils\Tex.cs" />
     <Compile Include="Utils\Utils.cs" />
-    <Compile Include="WorkGivers\WorkGiver_GenerateInsight.cs" />
-    <Compile Include="WorkGivers\WorkGiver_MechTend.cs" />
-    <Compile Include="WorkGivers\WorkGiver_TendSelfEmergencyMech.cs" />
-    <Compile Include="WorkGivers\WorkGiver_TendSelfMech.cs" />
-    <Compile Include="WorkGivers\WorkGiver_TendOtherUrgentMech.cs" />
-    <Compile Include="WorkGivers\WorkGiver_TendOtherMech.cs" />
+    <Compile Include="JobGivers\WorkGiver_GenerateInsight.cs" />
+    <Compile Include="JobGivers\WorkGiver_MechTend.cs" />
+    <Compile Include="JobGivers\WorkGiver_TendSelfEmergencyMech.cs" />
+    <Compile Include="JobGivers\WorkGiver_TendSelfMech.cs" />
+    <Compile Include="JobGivers\WorkGiver_TendOtherUrgentMech.cs" />
+    <Compile Include="JobGivers\WorkGiver_TendOtherMech.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\About\About.xml">

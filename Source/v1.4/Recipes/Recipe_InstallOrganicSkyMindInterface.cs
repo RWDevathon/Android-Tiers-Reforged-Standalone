@@ -49,6 +49,13 @@ namespace ATReforged
             {
                 Utils.Duplicate(Utils.GetBlank(), pawn, isTethered: false);
                 pawn.health.AddHediff(ATR_HediffDefOf.ATR_NoController);
+
+                // If this is the pawn's first surrogate, send a letter with information about surrogates.
+                if (!Utils.gameComp.hasMadeSurrogate)
+                {
+                    Find.LetterStack.ReceiveLetter("ATR_FirstSurrogateCreated".Translate(), "ATR_FirstSurrogateCreatedDesc".Translate(), LetterDefOf.NeutralEvent);
+                    Utils.gameComp.hasMadeSurrogate = true;
+                }
             }
         }
     }

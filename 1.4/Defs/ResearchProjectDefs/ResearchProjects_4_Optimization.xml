@@ -122,6 +122,8 @@
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
+        <discoveredLetterTitle>About: Organics and the SkyMind</discoveredLetterTitle>
+        <discoveredLetterText>With optimized network schemes, you can now manufacture SkyMind transceivers and receivers to allow organic pawns to use the network. Unlike in androids, these two implants require manufacturing. Installing a receiver in an organic pawn to make them a surrogate is considered murder, and is the only way to download a pawn into an organic body without permutation. Transceivers carry no particular negative consequences, and give organic pawns full access to all the network's features that are available to mechanical pawns.</discoveredLetterText>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -139,6 +141,8 @@
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
+        <discoveredLetterTitle>About: Advanced SkyMind Networks</discoveredLetterTitle>
+        <discoveredLetterText>The Networked Intelligence may require a persona core to build, but it offers the ability to progress deeper into SkyMind networks and can store and generate simultaneously at far higher capacities than lower networks. Two may connect to a research bench at a time, and offers a small boost to research speed - and is a requirement to developing the technology necessary to understand how to manufacture Ultratech persona cores or a SkyMind Core.</discoveredLetterText>
     </ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -173,8 +177,11 @@
         <researchViewX>9</researchViewX>
         <researchViewY>4</researchViewY>
         <requiredResearchFacilities>
+            <li>ATR_NetworkedIntelligence</li>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
+        <discoveredLetterTitle>About: Building a Core</discoveredLetterTitle>
+        <discoveredLetterText>The SkyMind Core is the pinnacle of Ultratech SkyMind networks. A conglomeration of highly advanced but still restrained personae within a superstructure with no need for external power - thanks to internal vanometric power cells - and with immunity to atmospheric or environmental effects like heat or solar flares allows for a safe holding chamber of nigh immortal consciousnesses. From within this vessel, consciousnesses can be stored, transferred, or even duplicated. The infrastructure allows for a single pawn to control a huge number of surrogates, allowing for an almost hive-mind like consciousness.</discoveredLetterText>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
