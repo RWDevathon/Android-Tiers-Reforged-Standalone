@@ -80,6 +80,10 @@
 	<ATR_Upload>Upload</ATR_Upload>
 	<ATR_UploadDesc>Lade dieses Bewusstsein in den Kern hoch. Wirf vor Beginn mal einen Blick auf die Modeinstellungen um zu entscheiden was mit dem Körper passieren soll. (Standardmäßig ist dieser Vorgang tödlich für den Körper!)</ATR_UploadDesc>
 	<ATR_UploadConfirm>Dieser Vorgang lädt dieses Bewusstsein in den Kern hoch. Wirf vor Beginn mal einen Blick auf die Modeinstellungen um zu entscheiden was mit dem Körper passieren soll. (Standardmäßig ist dieser Vorgang tödlich für den Körper!) Vorgang einleiten?</ATR_UploadConfirm>
+
+    <!-- Remotely Triggered -->
+    <ATR_DetonateIEDRemotely>Zünden</ATR_DetonateIEDRemotely>
+    <ATR_DetonateIEDRemotelyDesc>Fernzündung der Sprengfalle.</ATR_Detonat
 	
 	<!-- Maintenance -->
     <ATR_MaintenanceGizmoLabel>Instandhaltung</ATR_MaintenanceGizmoLabel>
@@ -93,5 +97,10 @@
     <ATR_MaintenanceEffectGizmoLabelPositive>Positiv</ATR_MaintenanceEffectGizmoLabelPositive>
     <ATR_MaintenanceEffectGizmoLabelNegative>Negativ</ATR_MaintenanceEffectGizmoLabelNegative>
     <ATR_MaintenanceEffectDesc>Durchschnittliche Instandhaltung gibt den Trend im Zeitverlauf wieder. Ein hoher Wert wirkt sich positiv auf die Stimmung aus - ein Negativer negativ. Oberhalb von 70% steigt sie und fällt unterhalb von 30% Instandhaltung. Dazwischen kehrt sie zum Normalwert zurück.\n\nHinweis: Wartung und Instandhaltung sind sehr persönlich für mechanische Lebensformen. Nur im Fall von kritischen Fehlern sind sie bereit Hilfe in Anspruch zu nehmen.</ATR_MaintenanceEffectDesc>
+
+    <!-- Pawn Type Restriction -->
+    <ATR_RestrictPawnType>Nutzungseinstellungen...</ATR_RestrictPawnType>
+    <ATR_RestrictPawnTypeDescription>Öffne die Nutzerbeschränkungseinstellungen um Festzulegen welche Art von Nutzer hierfür gestattet ist.</ATR_RestrictPawnTypeDescription>
+
     
 </LanguageData>

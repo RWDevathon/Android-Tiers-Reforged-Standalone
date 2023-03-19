@@ -52,6 +52,26 @@
 	<ATR_SkyMindInitialization>Aus dem Netzwerk hochladen</ATR_SkyMindInitialization>
 	<ATR_AutomaticInitialization>Automatisch entwickeln</ATR_AutomaticInitialization>
 
+    <!-- PawnType Restriction Dialog -->
+    <ATR_RestrictedPawnTypes>Restriction settings</ATR_RestrictedPawnTypes>
+
+    <ATR_PawnTypeNone>Niemand</ATR_PawnTypeNone>
+    <ATR_PawnTypeNoneTooltip>Niemand darf das benutzen</ATR_PawnTypeNoneTooltip>
+    <ATR_PawnTypeDrone>Dronen</ATR_PawnTypeDrone>
+    <ATR_PawnTypeDroneTooltip>Nur Dronen dürfen das benutzen</ATR_PawnTypeDroneTooltip>
+    <ATR_PawnTypeAndroid>Androiden</ATR_PawnTypeAndroid>
+    <ATR_PawnTypeAndroidTooltip>Nur empfindungsfähige Androiden dürfen das benutzen</ATR_PawnTypeAndroidTooltip>
+    <ATR_PawnTypeMechanical>Mechanische</ATR_PawnTypeMechanical>
+    <ATR_PawnTypeMechanicalTooltip>Nur Androiden und Dronen dürfen das benutzen</ATR_PawnTypeMechanicalTooltip>
+    <ATR_PawnTypeOrganic>Organische</ATR_PawnTypeOrganic>
+    <ATR_PawnTypeOrganicTooltip>Nur Organische dürfen das benutzen</ATR_PawnTypeOrganicTooltip>
+    <ATR_PawnTypeNonAI>Keine Androiden</ATR_PawnTypeNonAI>
+    <ATR_PawnTypeNonAITooltip>Nur Organische und Dronen dürfen das benutzen</ATR_PawnTypeNonAITooltip>
+    <ATR_PawnTypeAutonomous>Keine Dronen</ATR_PawnTypeAutonomous>
+    <ATR_PawnTypeAutonomousTooltip>Nur Androiden und Organische dürfen das benutzen</ATR_PawnTypeAutonomousTooltip>
+    <ATR_PawnTypeAll>Jeder</ATR_PawnTypeAll>
+    <ATR_PawnTypeAllTooltip>Jeder kann das benutzen</ATR_PawnTypeAllTooltip>
+
     <!-- Maintenance Level Setter Dialog -->
     <ATR_SetTargetMaintenanceLevel>Instandhaltungsziel: {0}%</ATR_SetTargetMaintenanceLevel>
 	

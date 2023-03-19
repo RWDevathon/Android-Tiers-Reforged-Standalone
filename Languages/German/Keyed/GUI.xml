@@ -2,9 +2,8 @@
 <LanguageData>
 
 	<!-- Needs -->
-	
 	<ATR_EnergyNeed>Energie</ATR_EnergyNeed>
-	<ATR_EnergyNeedDesc>Energie beschreibt die Energiereserven der Einheit. Fällt sie auf Null wird die Notreserve angebrochen und jeder nicht-notwendige Verbrauch eingestellt. Sollte die Notreserve aufgebraucht werden, werden die Selbsterhaltungsmaßnahmen nicht mehr aufrechtzuerhalten sein und die Einheit wird aufhören zu funktionieren.</ATR_EnergyNeedDesc>
+	<ATR_EnergyNeedDesc>Energie beschreibt die Energiereserven dieser Einheit. Fallen sie auf Null wird die Notreserve angebrochen und jeder nicht-notwendige Verbrauch eingestellt. Sollte die Notreserve aufgebraucht werden, werden die Selbsterhaltungsmaßnahmen nicht mehr aufrechtzuerhalten sein und die Einheit wird aufhören zu funktionieren.</ATR_EnergyNeedDesc>
 	
     <!-- Ritual Permissions -->
     <ATR_DronesCannotSpectate>Dronen verstehen das nicht und werden nicht zuschauen.</ATR_DronesCannotSpectate>
@@ -12,5 +11,8 @@
     <!-- Prisoner Tab -->
     <ATR_PrisonerDroneWarning>Dronen sind sozial unfähig. Programmiere sie um, um sie für dich arbeiten zu lassen (Erforsche T1 um die Operationen freizuschalten).</ATR_PrisonerDroneWarning>
     <ATR_SlaveDroneAlert>Warnung: Dronen dürfen keine Sklaven sein! RimWorld versteht das nicht und wird dir nun dauerhaft Fehler um die Ohren hauen bis du sie umprogrammiert oder zerstört hast!</ATR_SlaveDroneAlert>
+
+    <!-- Maintenance Spot -->
+    <ATR_MaintenanceNeedRequired>Wartungsplatz fehlt</ATR_MaintenanceNeedRequired>
 
 </LanguageData>

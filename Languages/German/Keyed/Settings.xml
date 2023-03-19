@@ -41,6 +41,35 @@
 	<ATR_AndroidRaidersDesc>Fungiert genau wie die Außenweltlerpiraten</ATR_AndroidRaidersDesc>
 	<ATR_AndroidUnionistsExist>Friedliche Androiden</ATR_AndroidUnionistsExist>
 	<ATR_AndroidUnionistsDesc>Fungiert genau wie die friedliche Außenweltlerfraktion</ATR_AndroidUnionistsDesc>
+
+        <!-- Permission Settings-->
+    <ATR_bedRestrictionDefaultsToAll>Betten können standardmäßig von Jedem verwendet werden und sind nicht auf Organische oder Mechanische beschränkt</ATR_bedRestrictionDefaultsToAll>
+    <ATR_bedRestrictionDefaultsToAllDesc>Standardmäßig sind Betten nur für Organische und Ladekapseln nur für Mechanische. Aktiviere diese Option um alles allen zu erlauben.</ATR_bedRestrictionDefaultsToAllDesc>
+		
+		<!-- Consideration Settings -->
+    <ATR_isUsingCustomConsiderations>Hat Verteilung manuell geändert und wird nicht überschrieben: {0}</ATR_isUsingCustomConsiderations>
+    <ATR_isUsingCustomConsiderationsDesc>Ist diese Option verneint, wird beim nächsten Spielneustart die Zuweisung von Rassen in Mechanisch/Organisch automatisch neu vorgenommen.</ATR_isUsingCustomConsiderationsDesc>
+    <ATR_resetCustomConsiderations>Mechanisch/Organisch Zurücksetzen</ATR_resetCustomConsiderations>
+	<ATR_SettingsConsideredAndroid>Höhere mechanische Lebensformen (Androiden)</ATR_SettingsConsideredAndroid>
+	<ATR_SettingsNotConsideredAndroid>Keine Androiden</ATR_SettingsNotConsideredAndroid>
+	<ATR_SettingsConsideredDrone>Niedere mechanische Lebensformen (Dronen)</ATR_SettingsConsideredDrone>
+	<ATR_SettingsNotConsideredDrone>Keine Dronen</ATR_SettingsNotConsideredDrone>
+	<ATR_SettingsConsideredAnimal>Mechanische Tiere (Dronen)</ATR_SettingsConsideredAnimal>
+	<ATR_SettingsNotConsideredAnimals>Organische Tiere</ATR_SettingsNotConsideredAnimals>
+
+        <!-- Rights Settings -->
+    <ATR_factionsWillDeclareRightsWars>Der Konflikt über die Stellung mechanischen Lebens kann zum Kreig führen</ATR_factionsWillDeclareRightsWars>
+    <ATR_factionsWillDeclareRightsWarsDesc>Solltest du mechanisches und organisches Leben als gleichwertig behandeln wird wenigstens eine der Fraktion dich als unbekehrbaren Feind betrachten.</ATR_factionsWillDeclareRightsWarsDesc>
+
+    <ATR_SettingsAntiMechanicalFaction>Organische Überlegenheit</ATR_SettingsAntiMechanicalFaction>
+    <ATR_SettingsTolerateMechanicalFaction>Mechanische tolleriert</ATR_SettingsTolerateMechanicalFaction>
+    <ATR_SettingsAntiOrganicFaction>Mechanische Überlegenheit</ATR_SettingsAntiOrganicFaction>
+    <ATR_SettingsTolerateOrganicFaction>Organische tolleriert</ATR_SettingsTolerateOrganicFaction>
+
+    <ATR_dronesTriggerRightsWars>Dronen lösen Rechtekonflikt aus</ATR_dronesTriggerRightsWars>
+    <ATR_prisonersTriggerRightsWars>Gefangene lösen Rechtekonflikt aus</ATR_prisonersTriggerRightsWars>
+    <ATR_slavesTriggerRightsWars>Sklaven lösen Rechtekonflikt aus</ATR_slavesTriggerRightsWars>
+    <ATR_surrogatesTriggerRightsWars>Marionetten lösen Rechtekonflikt aus</ATR_surrogatesTriggerRightsWars>
 	
 	<!-- Needs Settings -->
 	<ATR_AndroidOnlyNotice>Hinweis: Dies betrifft nur höhere mechanische Lebensformen. Dronen haben keinerlei Bedürfnisse außer Wartung und Energie.</ATR_AndroidOnlyNotice>
@@ -51,13 +80,6 @@
 	
 	<ATR_SettingsPresetDefault>Standard</ATR_SettingsPresetDefault>
 	<ATR_SettingsPresetCustom>Geändert</ATR_SettingsPresetCustom>
-	
-	<ATR_SettingsConsideredAndroid>Höhere mechanische Lebensformen (Androiden)</ATR_SettingsConsideredAndroid>
-	<ATR_SettingsNotConsideredAndroid>Keine Androiden</ATR_SettingsNotConsideredAndroid>
-	<ATR_SettingsConsideredDrone>Niedere mechanische Lebensformen (Dronen)</ATR_SettingsConsideredDrone>
-	<ATR_SettingsNotConsideredDrone>Keine Dronen</ATR_SettingsNotConsideredDrone>
-	<ATR_SettingsConsideredAnimal>Mechanische Tiere (Dronen)</ATR_SettingsConsideredAnimal>
-	<ATR_SettingsNotConsideredAnimals>Organische Tiere</ATR_SettingsNotConsideredAnimals>
 	
 	<!-- Power Settings -->
 	<ATR_wattsConsumedPerBodySize>Stromverbrauch pro Einheiten Körpergröße [Standard: 500W]</ATR_wattsConsumedPerBodySize>
@@ -99,18 +121,24 @@
     <ATR_maintenanceFallRateFactor>Natürlicher Wartungsverfallfaktor</ATR_maintenanceFallRateFactor>
     <ATR_maintenanceGainRateFactor>Wartungsgeschwindigkeit</ATR_maintenanceGainRateFactor>
 
-    
-	<!-- Connectivity Settings -->
+        <!-- Hediffs -->
+    <ATR_hediffBlacklistWarning>Warnung: Je länger diese Liste umso höher ist der Einfluss auf die Spielperformance.</ATR_hediffBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalHediffs>Unzulässige Gesundheitszustände</ATR_settingsBlacklistedMechanicalHediffs>
+    <ATR_settingsAllowedMechanicalHediffs>Zulässige Gesundheitszustände</ATR_settingsAllowedMechanicalHediffs>
+
+    <!-- Connectivity Settings -->
         <!-- Surrogates -->
     <ATR_surrogatesAllowed>Marionetten aktivieren</ATR_surrogatesAllowed>
     <ATR_otherFactionsAllowedSurrogates>Andere Fraktionen können Marionetten verwenden</ATR_otherFactionsAllowedSurrogates>
     <ATR_minGroupSizeForSurrogates>Mindestgröße für Gruppen um Marionetten zu verwenden</ATR_minGroupSizeForSurrogates>
     <ATR_minSurrogatePercentagePerLegalGroup>Mindestanteil von Marionetten [Standard: 20%]</ATR_minSurrogatePercentagePerLegalGroup>
     <ATR_maxSurrogatePercentagePerLegalGroup>Maximalanteil von Marionetten [Standard: 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+    <ATR_displaySurrogateControlIcon>Display floating icon above controlled surrogates.</ATR_displaySurrogateControlIcon>
     <ATR_safeSurrogateConnectivityCountBeforePenalty>Marionetten pro Person (ohne Einschränkungen)[Standard: 4]:</ATR_safeSurrogateConnectivityCountBeforePenalty>
 
         <!-- Skills -->
     <ATR_receiveFullSkillAlert>Warnung für Überschreiten von 90% der Skillpunktekapazität</ATR_receiveFullSkillAlert>
+	<ATR_skillPointInsertionRate>Punktevergabe pro Knopfdruck [Standard: 100 - Empfohlen: 1000]</ATR_skillPointInsertionRate>
 	<ATR_skillPointConversionRate>Erfahrung pro Skillpunkt [Standard: 0,5]</ATR_skillPointConversionRate>
 	<ATR_passionSoftCap>Erlaubte Hingaben vor exponentiellem Kostenanstieg [Standard: 8]</ATR_passionSoftCap>
 	<ATR_basePointsNeededForPassion>Kosten für Hingabesteigerung [Standard: 5000]</ATR_basePointsNeededForPassion>
@@ -118,6 +146,12 @@
         <!-- Cloud -->
     <ATR_UploadingKills>Beim Hochladen in den Kern wird das Bewusstsein verschoben anstatt kopiert.</ATR_UploadingKills>
     <ATR_UploadingPermakills>Beim Hochladen in den Kern stirbt der Körper</ATR_UploadingPermakills>
-    <ATR_SkyMindOperationTimeRequired>Dauer des Uploads (in Stunden)[Standard: 24h]</ATR_SkyMindOperationTimeRequired>
+    <ATR_SkyMindOperationTimeRequired>Dauer des Uploads (in Stunden)[Standard: 24h - Empfohlen: 1h]</ATR_SkyMindOperationTimeRequired>
+
+    <!-- Stats Settings -->
+        <!-- Traits -->
+    <ATR_traitBlacklistWarning>Warnung: Je länger diese Liste umso höher ist der Einfluss auf die Spielperformance.</ATR_traitBlacklistWarning>
+    <ATR_settingsBlacklistedMechanicalTraits>Unzulässige Merkmale</ATR_settingsBlacklistedMechanicalTraits>
+    <ATR_settingsAllowedMechanicalTraits>Zulässige Merkmale</ATR_settingsAllowedMechanicalTraits>
 
 </LanguageData>
