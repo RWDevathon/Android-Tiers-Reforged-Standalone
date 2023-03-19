@@ -8,7 +8,6 @@
 <ATR_T3Colonist.label>T3 新生殖民者</ATR_T3Colonist.label>
 <ATR_T2Colonist.label>T2 新生殖民者</ATR_T2Colonist.label>
 <ATR_T1Colonist.label>T1 新生殖民者</ATR_T1Colonist.label>
-<ATR_M1WarriorColony.label>M1 新生戰鬥單元（測試性）</ATR_M1WarriorColony.label>
 
 <ATR_BaseMechPlayerPawnKind.label>智能人形殖民者</ATR_BaseMechPlayerPawnKind.label>
 <ATR_T4Refugee.label>T4 智能人形難民</ATR_T4Refugee.label>
@@ -21,8 +20,5 @@
 <ATR_AndroidT2Surrogate.label>T2 代理人形</ATR_AndroidT2Surrogate.label>
 <ATR_AndroidT3Surrogate.label>T3 代理人形</ATR_AndroidT3Surrogate.label>
 <ATR_AndroidT4Surrogate.label>T4 代理人形</ATR_AndroidT4Surrogate.label>
-
-<ATR_M7MechPawn.label>M7 戰體</ATR_M7MechPawn.label>
-<ATR_M8MechPawn.label>M8 戰體</ATR_M8MechPawn.label>
 
 </LanguageData>

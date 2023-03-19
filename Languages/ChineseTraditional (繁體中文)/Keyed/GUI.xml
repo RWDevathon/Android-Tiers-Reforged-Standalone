@@ -9,7 +9,7 @@
 	<!--EN: Energy is the amount of retained charge in the unit. If it is hits zero, the unit will enter an inefficient low-power mode. If charge is not restored, hardware will eventually critically malfunction, and the unit will cease functioning.-->
 	
     <!-- Ritual Permissions -->
-    <ATR_DronesCannotSpectate>無人機無法參與儀式活動。</ATR_DronesCannotSpectate>
+    <ATR_DronesCannotParticipateInRituals>無人機無法參與儀式活動。</ATR_DronesCannotParticipateInRituals>
 	<!--EN: Drones can not spectate rituals.-->
 
     <!-- Prisoner Tab -->
@@ -17,5 +17,9 @@
 	<!--EN: Drones can not be interacted with. Use surgeries to reprogram (T1 Research required) or shut down.-->
     <ATR_SlaveDroneAlert>無人機不應該是奴隸！接下來的每個tick你都會遇到一個錯誤。請立即重新編程或者乾掉這架無人機。</ATR_SlaveDroneAlert>
 	<!--EN: Drones should not be slaves! You are suffering a free error each tick. Immediately reprogram or eliminate this drone.-->
+
+    <!-- Maintenance Spot -->
+    <ATR_MaintenanceNeedRequired>無需維護</ATR_MaintenanceNeedRequired>
+	<!--EN: No maintenance need-->
 
 </LanguageData>

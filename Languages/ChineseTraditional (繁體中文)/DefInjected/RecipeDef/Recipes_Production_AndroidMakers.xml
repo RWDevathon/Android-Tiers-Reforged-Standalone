@@ -9,8 +9,6 @@
 <ATR_CreateT3Android.description>利用玻璃鋼、黃金和先進零部件創建一個空白的 T3 智能人形。 </ATR_CreateT3Android.description>
 <ATR_CreateT4Android.label>製造 T4 智能人形</ATR_CreateT4Android.label>
 <ATR_CreateT4Android.description>利用玻璃鋼、黃金和先進零部件創建一個空白的 T4 智能人形。 </ATR_CreateT4Android.description>
-<ATR_CreateM1Warrior.label>製造 M1 戰鬥單元（測試性）</ATR_CreateM1Warrior.label>
-<ATR_CreateM1Warrior.description>利用玻璃鋼和零部件創建一個空白的 M1 戰鬥單元</ATR_CreateM1Warrior.description>
 <ATR_CreateWatchdog.label>製造犬類單元</ATR_CreateWatchdog.label>
 <ATR_CreateWatchdog.description>創建一個犬類單元，一個將殺傷力、智慧和友善完美結合的可陪伴的模擬機械狼。 </ATR_CreateWatchdog.description>
 <ATR_CreateTORT.label>製造玄武單元</ATR_CreateTORT.label>

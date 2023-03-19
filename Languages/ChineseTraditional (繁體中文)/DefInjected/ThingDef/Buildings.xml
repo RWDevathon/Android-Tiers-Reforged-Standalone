@@ -5,11 +5,11 @@
 <ATR_SkyMindCore.label>天雲核心</ATR_SkyMindCore.label>
 <ATR_SkyMindCore.description>人格智能網絡的高度集成形成一台能夠處理、存儲和操縱大量信息的超級計算機————這些信息最終定義了意識。該設備能夠為有恰當插件的有機體和機械個體提供數字永生、意識操作和遠程控制。它的存在就是力量、意志力和財富的證明。\n\n其內部的虛空電池可以支持整個結構，並由內部自動智能進行精確的調整，以防止設備巨大的輸出熱量導致任何形式的電力中斷。 \n\n如果設備被損毀或丟失，所有無法被其他核心存儲的內容將不可挽回地消失。永生也伴隨著風險。 </ATR_SkyMindCore.description>
 <ATR_NetworkedDatabase.label>數據服務器</ATR_NetworkedDatabase.label>
-<ATR_NetworkedDatabase.description>用於數據製表、存儲和計算的基本服務器。它無法產生技能點，但可以大大提高那些希望少花時間做數學，多花時間分析的人的工作速度。它會產生少量熱量，如果熱量超過其安全閾值可能會損壞。 </ATR_NetworkedDatabase.description>
+<ATR_NetworkedDatabase.description>用於數據製表、存儲和計算的基本服務器。它無法產生技能點，但可以大大提高那些希望少花時間做數學，多花時間分析的人的工作速度。它會產生少量熱量，如果熱量超過其安全閾值可能會損壞。\n\n該設備只能存儲其他設備生成的技能點數，通電時可由聯網的天雲思維所使用，它自身並不能生成這些點數。 </ATR_NetworkedDatabase.description>
 <ATR_NetworkedAnalyst.label>分析服務器</ATR_NetworkedAnalyst.label>
-<ATR_NetworkedAnalyst.description>一個基本的服務器，用於分析數據並使用基本的機器學習算法生成對解決所選任務相關的技能點。其體積小，計算量大，但發熱量大，它也依賴數據服務器進行存儲數據。如果熱量超過其安全閾值，它可能會損壞。 </ATR_NetworkedAnalyst.description>
+<ATR_NetworkedAnalyst.description>一個基本的服務器，用於分析數據並使用基本的機器學習算法生成對解決所選任務相關的技能點。其體積小，計算量大，但發熱量大，它也依賴數據服務器進行存儲數據。如果熱量超過其安全閾值，它可能會損壞。\n\n當通電並連接至天雲核心時，分析服務器會在其所選類別中生成點數，但不能存儲這些點數。 </ATR_NetworkedAnalyst.description>
 <ATR_NetworkedIntelligence.label>智能服務器</ATR_NetworkedIntelligence.label>
-<ATR_NetworkedIntelligence.description>一個高級服務器，使用其內部的自主 AI 智能在選定的任務重點中進行數據分析、製表、存儲和技能點生成。雖然它在理論上優於其他服務器，但代價是空間效率低、大量的電力和熱量產生。它非常容易過熱，如果過熱可能會損壞。 </ATR_NetworkedIntelligence.description>
+<ATR_NetworkedIntelligence.description>一個高級服務器，使用其內部的自主 AI 智能在選定的任務重點中進行數據分析、製表、存儲和技能點生成。雖然它在理論上優於其他服務器，但代價是空間效率低、大量的電力和熱量產生。它非常容易過熱，如果過熱可能會損壞。\n\n當通電並連接到天雲核心時，它會生成和存儲選定類別的點數，但需要一個人格核心。 </ATR_NetworkedIntelligence.description>
 <ATR_ArchotechNetwork.label>遠古科技終端</ATR_ArchotechNetwork.label>
 <ATR_ArchotechNetwork.description>一個非常強大的遠古科技設備，似乎很容易在培養技能以及如何保護和破壞關鍵數據方面提供同樣令人難以置信的見解。它既不消耗電力也不產生熱量，這讓任何有幸目睹它的人感到難以理解。許多人認為，他們是無形的遠古科技社會的外延，會對監測宇宙感興趣，並且他們只向那些獲得遠古科技祝福的人提供信息。而其他人則認為它們受到了詛咒，因為它們充當了被分形能量扭曲腐蝕的不幸靈魂的燈塔。 \n\n這是一項極其強大的設備，許多人都試圖將其據為己有，但大多數嘗試過的人都變成了分形怪物。即使在那種令人悲傷的狀態下，他們仍然會繼續尋找它。要小心。 </ATR_ArchotechNetwork.description>
 
@@ -28,6 +28,8 @@
 <ATR_ChargingPod.description>一個簡單的充電櫃，可以為機械單元充電。它並不是為舒適而設計的。 </ATR_ChargingPod.description>
 <ATR_ChargingPodMech.label>大型充電艙</ATR_ChargingPodMech.label>
 <ATR_ChargingPodMech.description>一個巨大的充電艙，能夠容納任何較小的充電艙都裝不下的大部分戰爭機甲。 </ATR_ChargingPodMech.description>
+<ATR_MaintenanceSpot.label>維護點</ATR_MaintenanceSpot.label>
+<ATR_MaintenanceSpot.description>指定維修地點，機械單元會傾向於在這裡進行維護，可以分配給特定的單位。 </ATR_MaintenanceSpot.description>
 
 <!--Production-->
 <ATR_MechanicalAssemblyPod.label>智能人形組裝台</ATR_MechanicalAssemblyPod.label>

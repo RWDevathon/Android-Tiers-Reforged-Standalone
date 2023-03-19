@@ -2,7 +2,7 @@
 <LanguageData>
 
 <ATR_Tier1Android.label>T1 智能人形</ATR_Tier1Android.label>
-<ATR_Tier1Android.description>一级机器人只是类人机器，旨在模仿人类的一般外观和最低限度的能力。 由于缺乏真正的智慧，许多人将它们视为非常聪明且反应灵敏的动物。 这常常导致它们被当作无用之人或被贬低为宠物，而尽职尽责的机器人对此并不在意。 他们的存在是为了服务，他们为此毫无怨言。</ATR_Tier1Android.description>
+<ATR_Tier1Android.description>一级机器人只是类人机器，旨在模仿人类的一般外观和最低限度的能力，对于资源的消耗与需求很低。 由于缺乏真正的智慧，许多人将它们视为非常聪明且反应灵敏的动物。 这常常导致它们被当作无用之人或被贬低为宠物，而尽职尽责的机器人对此并不在意。 他们的存在是为了服务，他们为此毫无怨言。</ATR_Tier1Android.description>
 <ATR_Tier1Android.tools.0.label>右拳</ATR_Tier1Android.tools.0.label>
 <ATR_Tier1Android.tools.1.label>左拳</ATR_Tier1Android.tools.1.label>
 <ATR_Tier1Android.tools.2.label>头部</ATR_Tier1Android.tools.2.label>

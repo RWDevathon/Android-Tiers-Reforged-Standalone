@@ -61,12 +61,56 @@
 	<!--EN: Androids have their own factions-->
 	<ATR_AndroidRaidersExist>智能人形已經組建了他們自己的海盜集團</ATR_AndroidRaidersExist>
 	<!--EN: Androids have formed their own pirate collective-->
-	<ATR_AndroidRaidersDesc>行為將模仿原版拓展模組的海盜派系</ATR_AndroidRaidersDesc>
+	<ATR_AndroidRaidersDesc>行為將模仿遊戲本體的海盜派系</ATR_AndroidRaidersDesc>
 	<!--EN: Acts like vanilla's Pirate faction-->
 	<ATR_AndroidUnionistsExist>追求集體生存的智能人形已經實現了聯合</ATR_AndroidUnionistsExist>
 	<!--EN: Androids dedicated to collective survival have unified-->
-	<ATR_AndroidUnionistsDesc>行為將模仿原版拓展模組的外來者派系</ATR_AndroidUnionistsDesc>
+	<ATR_AndroidUnionistsDesc>行為將模仿遊戲本體的外來者派系</ATR_AndroidUnionistsDesc>
 	<!--EN: Acts like vanilla's Outlander faction-->
+	
+	<!--新增內容-->
+	    <!-- Permission Settings-->
+    <ATR_bedRestrictionDefaultsToAll>床默認為所有對象使用而非僅由機械體/有機體</ATR_bedRestrictionDefaultsToAll>
+	<!--EN: Beds default to All pawns rather than Mechanical/Organic-->
+	<ATR_bedRestrictionDefaultsToAllDesc>默認此mod的充電艙僅機械體使用，其他所有床默認僅有機體使用。 </ATR_bedRestrictionDefaultsToAllDesc>
+	<!--EN: By default, charging beds from this mod default to mechanical only, and all other beds default to organic only.-->
+	
+    <!-- Consideration Settings -->
+	<ATR_isUsingCustomConsiderations>使用自定義設置且不會重置： {0}</ATR_isUsingCustomConsiderations>
+	<!--EN: Using custom config and will not reset: {0}-->
+    <ATR_isUsingCustomConsiderationsDesc>如果取消該項，ATR會在遊戲啟動時自動重新生成機械/非機械的內容，這樣它可以自動加載新添加的種族模組內容。 </ATR_isUsingCustomConsiderationsDesc>
+	<!--EN: If false, ATR will automatically regenerate what is/isn't mechanical at game startup so that it can catch new modded races for you.-->
+    <ATR_resetCustomConsiderations>重置注意事項</ATR_resetCustomConsiderations>
+	<!--EN: Reset considerations-->
+	
+    <!-- Consideration Settings -->
+	<ATR_SettingsConsideredAndroid>智能人形</ATR_SettingsConsideredAndroid>
+	<!--EN: Androids-->
+	<ATR_SettingsNotConsideredAndroid>非智能人形</ATR_SettingsNotConsideredAndroid>
+	<!--EN: Not Androids-->
+	<ATR_SettingsConsideredDrone>無人機</ATR_SettingsConsideredDrone>
+	<!--EN: Drones-->
+	<ATR_SettingsNotConsideredDrone>非無人機</ATR_SettingsNotConsideredDrone>
+	<!--EN: Not Drones-->
+	<ATR_SettingsConsideredAnimal>機械動物</ATR_SettingsConsideredAnimal>
+	<!--EN: Mechanical Animals-->
+	<ATR_SettingsNotConsideredAnimals>有機動物</ATR_SettingsNotConsideredAnimals>
+	<!--EN: Organic Animals-->
+
+    <!-- Rights Settings -->
+    <ATR_factionsWillDeclareRightsWars>派系會因權利糾紛而宣戰</ATR_factionsWillDeclareRightsWars>
+	<!--EN: Factions will declare war over rights disputes-->
+    <ATR_factionsWillDeclareRightsWarsDesc>如果你有機械/有機殖民者，反機械或反有機派係將會向你宣戰。 </ATR_factionsWillDeclareRightsWarsDesc>
+	<!--EN: Factions that are anti-mechanical or anti-organic will declare war on you if you have mechanical/organic colonists-->
+
+    <ATR_SettingsAntiMechanicalFaction>無機械體權利的派系</ATR_SettingsAntiMechanicalFaction>
+	<!--EN: Factions without mechanical rights-->
+    <ATR_SettingsTolerateMechanicalFaction>可允許機械體存在的派系</ATR_SettingsTolerateMechanicalFaction>
+	<!--EN: Factions tolerating mechanicals-->
+    <ATR_SettingsAntiOrganicFaction>無有機體權利的派系</ATR_SettingsAntiOrganicFaction>
+	<!--EN: Factions without organic rights-->
+    <ATR_SettingsTolerateOrganicFaction>可允許有機體存在的派系</ATR_SettingsTolerateOrganicFaction>
+	<!--EN: Factions tolerating organics-->
 	
 	<!-- Needs Settings -->
 	<ATR_AndroidOnlyNotice>注意：只有標記為智能人形的單位會受此影響，無人機則不會</ATR_AndroidOnlyNotice>
@@ -84,19 +128,6 @@
 	<!--EN: Default-->
 	<ATR_SettingsPresetCustom>傳統</ATR_SettingsPresetCustom>
 	<!--EN: Custom-->
-	
-	<ATR_SettingsConsideredAndroid>智能人形</ATR_SettingsConsideredAndroid>
-	<!--EN: Androids-->
-	<ATR_SettingsNotConsideredAndroid>非智能人形</ATR_SettingsNotConsideredAndroid>
-	<!--EN: Not Androids-->
-	<ATR_SettingsConsideredDrone>無人機</ATR_SettingsConsideredDrone>
-	<!--EN: Drones-->
-	<ATR_SettingsNotConsideredDrone>非無人機</ATR_SettingsNotConsideredDrone>
-	<!--EN: Not Drones-->
-	<ATR_SettingsConsideredAnimal>機械動物</ATR_SettingsConsideredAnimal>
-	<!--EN: Mechanical Animals-->
-	<ATR_SettingsNotConsideredAnimals>有機動物</ATR_SettingsNotConsideredAnimals>
-	<!--EN: Organic Animals-->
 	
 	<!-- Power Settings -->
 	<ATR_wattsConsumedPerBodySize>充電時每個機體的電量消耗</ATR_wattsConsumedPerBodySize>
@@ -166,6 +197,14 @@
 	<ATR_maintenanceGainRateFactor>進行維護時維護水平增長的速率</ATR_maintenanceGainRateFactor>
     <!--EN: How quickly maintenance is gained when doing maintenance-->
 
+    <!-- Hediffs -->
+    <ATR_hediffBlacklistWarning>警告：禁用的健康狀況的名單越長，其對遊戲性能的影響就越大。 </ATR_hediffBlacklistWarning>
+	<!--EN: Warning: The longer the list of blacklisted hediffs is, the more performance impact on the game it will have.-->
+    <ATR_settingsBlacklistedMechanicalHediffs>對機械體禁用的健康狀況</ATR_settingsBlacklistedMechanicalHediffs>
+	<!--EN: Blacklisted Mechanical Hediffs-->
+    <ATR_settingsAllowedMechanicalHediffs>機械體可擁有的健康狀況</ATR_settingsAllowedMechanicalHediffs>
+	<!--EN: Allowed Mechanical Hediffs-->
+
     
 	<!-- Connectivity Settings -->
         <!-- Surrogates -->
@@ -179,17 +218,21 @@
 	<!--EN: Minimum percentage of surrogates in legal groups [default 20%]-->
     <ATR_maxSurrogatePercentagePerLegalGroup>友好團體中代理人數量的最高百分比</ATR_maxSurrogatePercentagePerLegalGroup>
 	<!--EN: Maximum percentage of surrogates in legal groups [default 70%]-->
+	<ATR_displaySurrogateControlIcon>在受控的代理人形上方顯示浮動圖標</ATR_displaySurrogateControlIcon>
+	<!--EN: Display floating icon above controlled surrogates.-->
     <ATR_safeSurrogateConnectivityCountBeforePenalty>每個控制者的代理人數上限（超過限制會有懲罰）：</ATR_safeSurrogateConnectivityCountBeforePenalty>
 	<!--EN: Surrogates per controller before penalties:-->
 
         <!-- Skills -->
     <ATR_receiveFullSkillAlert>技能點數超過容量的90%時進行提醒</ATR_receiveFullSkillAlert>
 	<!--EN: Alert for skill points exceeding 90% of capacity.-->
-	<ATR_skillPointConversionRate>每個技能點數產生的基礎經驗點數</ATR_skillPointConversionRate>
+	<ATR_skillPointInsertionRate>單次輸入所消耗的技能點數（默認：100）</ATR_skillPointInsertionRate>
+	<!--EN: Amount of skill points used per insertion [default: 100]-->
+	<ATR_skillPointConversionRate>每個技能點數產生的基礎經驗點數（默認：0.5）</ATR_skillPointConversionRate>
 	<!--EN: Amount of base XP generated per skill point [default: 0.5]-->
-	<ATR_passionSoftCap>在成本增加之前的興趣軟上限</ATR_passionSoftCap>
+	<ATR_passionSoftCap>在成本增加之前的興趣軟上限（默認：8）</ATR_passionSoftCap>
 	<!--EN: Passion soft-cap before cost increases per passion [default: 8]-->
-	<ATR_basePointsNeededForPassion>每個興趣增長所需的基本技能點數</ATR_basePointsNeededForPassion>
+	<ATR_basePointsNeededForPassion>每個興趣增長所需的基本技能點數（默認：5000）</ATR_basePointsNeededForPassion>
 	<!--EN: Base skill points needed per passion [default: 5000]-->
 
         <!-- Cloud -->
@@ -199,5 +242,14 @@
 	<!--EN: Uploading to SkyMind leaves the initiator's body completely useless and dead.-->
     <ATR_SkyMindOperationTimeRequired>完成天云網絡上傳操作所需要的小時數</ATR_SkyMindOperationTimeRequired>
 	<!--EN: Hours required to complete SkyMind operations [default: 24]-->
+
+    <!-- Stats Settings -->
+        <!-- Traits -->
+    <ATR_traitBlacklistWarning>警告：禁用的特徵列表越長，其對遊戲性能的影響就越大。 </ATR_traitBlacklistWarning>
+	<!--EN: Warning: The longer the list of blacklisted traits is, the more performance impact on the game it will have.-->
+    <ATR_settingsBlacklistedMechanicalTraits>對機械體禁用的特徵</ATR_settingsBlacklistedMechanicalTraits>
+	<!--EN: Blacklisted Mechanical Traits-->
+    <ATR_settingsAllowedMechanicalTraits>機械體可擁有的特徵</ATR_settingsAllowedMechanicalTraits>
+	<!--EN: Allowed Mechanical Traits-->
 
 </LanguageData>
