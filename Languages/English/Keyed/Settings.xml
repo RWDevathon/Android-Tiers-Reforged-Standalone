@@ -57,6 +57,9 @@
 	<ATR_SettingsConsideredAnimal>Mechanical Animals</ATR_SettingsConsideredAnimal>
 	<ATR_SettingsNotConsideredAnimals>Organic Animals</ATR_SettingsNotConsideredAnimals>
 
+        <!-- Android Faction Settings -->
+    <ATR_AndroidFactionsNeverFlee>Android factions never flee from battle</ATR_AndroidFactionsNeverFlee>
+
         <!-- Rights Settings -->
     <ATR_factionsWillDeclareRightsWars>Factions will declare war over rights disputes</ATR_factionsWillDeclareRightsWars>
     <ATR_factionsWillDeclareRightsWarsDesc>Factions that are anti-mechanical or anti-organic will declare war on you if you have mechanical/organic colonists</ATR_factionsWillDeclareRightsWarsDesc>

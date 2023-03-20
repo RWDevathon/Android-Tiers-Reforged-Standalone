@@ -4,8 +4,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using static ATReforged.Enums;
+using static ATReforged.SettingsEnums;
 
 namespace ATReforged
 {
@@ -31,6 +30,9 @@ namespace ATReforged
         public static HashSet<string> isConsideredMechanicalDrone;
         public static HashSet<string> isConsideredMechanical;
         public static HashSet<string> hasSpecialStatus;
+
+            // Settings for mechanical factions
+        public static bool androidFactionsNeverFlee;
 
             // Settings for mechanical/organic rights
         public static bool factionsWillDeclareRightsWars;
@@ -282,6 +284,10 @@ namespace ATReforged
                     
                     listingStandard.GapLine();
 
+                    // ANDROID FACTION SETTINGS
+                    listingStandard.CheckboxLabeled("ATR_AndroidFactionsNeverFlee".Translate(), ref androidFactionsNeverFlee, onChange: onChange);
+                    listingStandard.GapLine();
+
                     // RIGHTS SETTINGS
 
                     listingStandard.CheckboxLabeled("ATR_factionsWillDeclareRightsWars".Translate(), ref factionsWillDeclareRightsWars, tooltip: "ATR_factionsWillDeclareRightsWarsDesc".Translate(), onChange: onChange);
@@ -296,10 +302,10 @@ namespace ATReforged
                     }
                     if (factionsWillDeclareRightsWars)
                     {
-                        listingStandard.CheckboxLabeled("ATR_dronesTriggerRightsWars".Translate(), ref dronesTriggerRightsWars, tooltip: "ATR_dronesTriggerRightsWarsDesc".Translate(), onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_prisonersTriggerRightsWars".Translate(), ref prisonersTriggerRightsWars, tooltip: "ATR_prisonersTriggerRightsWarsDesc".Translate(), onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_slavesTriggerRightsWars".Translate(), ref slavesTriggerRightsWars, tooltip: "ATR_slavesTriggerRightsWarsDesc".Translate(), onChange: onChange);
-                        listingStandard.CheckboxLabeled("ATR_surrogatesTriggerRightsWars".Translate(), ref surrogatesTriggerRightsWars, tooltip: "ATR_surrogatesTriggerRightsWarsDesc".Translate(), onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_dronesTriggerRightsWars".Translate(), ref dronesTriggerRightsWars, onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_prisonersTriggerRightsWars".Translate(), ref prisonersTriggerRightsWars, onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_slavesTriggerRightsWars".Translate(), ref slavesTriggerRightsWars, onChange: onChange);
+                        listingStandard.CheckboxLabeled("ATR_surrogatesTriggerRightsWars".Translate(), ref surrogatesTriggerRightsWars, onChange: onChange);
                     }
                     listingStandard.GapLine();
 
@@ -475,6 +481,9 @@ namespace ATReforged
 
             // Considerations
             isUsingCustomConsiderations = false;
+
+            // Android Factions
+            androidFactionsNeverFlee = false;
 
             // Rights
             factionsWillDeclareRightsWars = true;
@@ -667,6 +676,9 @@ namespace ATReforged
                 Log.Warning("[ATR] Mod settings failed to load appropriately! Resetting to default to avoid further issues. " + ex.Message + " " + ex.StackTrace);
                 RebuildCaches();
             }
+
+            // Android Factions
+            Scribe_Values.Look(ref androidFactionsNeverFlee, "ATR_androidFactionsNeverFlee", false);
 
             // Rights
             Scribe_Values.Look(ref factionsWillDeclareRightsWars, "ATR_factionsWillDeclareRightsWars", true);

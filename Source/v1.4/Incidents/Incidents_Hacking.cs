@@ -260,7 +260,7 @@ namespace ATReforged
             }
 
             // Apply the Trolled mood debuff to this victim and the witnessed breach debuff to all other pawns.
-            Utils.ApplySkyMindAttack((IEnumerable<Pawn>) victim, Utils.SkyMindTrollVictimDef);
+            Utils.ApplySkyMindAttack((IEnumerable<Pawn>) victim, ATR_ThoughtDefOf.ATR_TrolledViaSkyMind);
 
             // Create hack letter. Message starts with generic and then will append an additional string.
             letter = LetterDefOf.ThreatSmall;

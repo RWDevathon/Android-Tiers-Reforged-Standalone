@@ -14,5 +14,16 @@
         <earliestDay>30</earliestDay>
 		<baseChance>5</baseChance>
 	</IncidentDef>
-    
+
+	<IncidentDef>
+		<defName>ATR_PersonalityShiftIncident</defName>
+		<label>Personality shift request</label>
+		<category>Misc</category>
+		<targetTags>
+		    <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>ATReforged.Incidents_PersonalityShift</workerClass>
+		<baseChance>0.3</baseChance>
+	</IncidentDef>
+
 </Defs>

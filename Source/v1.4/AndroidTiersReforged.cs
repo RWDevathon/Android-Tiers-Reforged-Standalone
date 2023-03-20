@@ -40,10 +40,9 @@ namespace ATReforged
             ATReforged.settings = ATReforged.ModSingleton.GetSettings<ATReforged_Settings>();
             ATReforged.settings.StartupChecks();
 
-            // Set Util Defs now that all Defs are initialized.
-            Utils.SkyMindAttackWitnessDef = DefDatabase<ThoughtDef>.GetNamed("ATR_ConnectedSkyMindAttacked");
-            Utils.SkyMindAttackVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_AttackedViaSkyMind");
-            Utils.SkyMindTrollVictimDef = DefDatabase<ThoughtDef>.GetNamed("ATR_TrolledViaSkyMind");
+            // Patch android factions based on the appropriate settings.
+            DefDatabase<FactionDef>.GetNamedSilentFail("ATR_AndroidUnion").autoFlee = ATReforged_Settings.androidFactionsNeverFlee;
+            DefDatabase<FactionDef>.GetNamedSilentFail("ATR_MechanicalMarauders").autoFlee = ATReforged_Settings.androidFactionsNeverFlee;
 
             // Acquire Defs for mechanical butchering so that mechanical (non-mechanoid) units are placed in the correct categories.
             RecipeDef androidDisassembly = DefDatabase<RecipeDef>.GetNamed("ButcherCorpseMechanoid");

@@ -46,11 +46,6 @@ namespace ATReforged
             {
                 pawn.health.RemoveHediff(target);
             }
-            target = pawn.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
-            if (target != null)
-            {
-                pawn.health.RemoveHediff(target);
-            }
 
         }
     }

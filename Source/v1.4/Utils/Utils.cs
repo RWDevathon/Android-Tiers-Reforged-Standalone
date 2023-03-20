@@ -182,8 +182,9 @@ namespace ATReforged
 
 
         // Misc
+        // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
         public static void ApplySkyMindAttack(IEnumerable<Pawn> victims = null, ThoughtDef forVictim = null, ThoughtDef forWitness = null)
-        { // When a SkyMind is breached, all users of the SkyMind receive a mood debuff. It is especially bad for direct victims.
+        {
             try
             {
                 // Victims were directly attacked by a hack and get a worse mood debuff
@@ -191,7 +192,7 @@ namespace ATReforged
                 {
                     foreach (Pawn pawn in victims)
                     {
-                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forVictim ?? SkyMindAttackVictimDef);
+                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forVictim ?? ATR_ThoughtDefOf.ATR_AttackedViaSkyMind);
                     }
                 }
 
@@ -200,7 +201,7 @@ namespace ATReforged
                 {
                     if (thing is Pawn pawn && (victims == null || !victims.Contains(pawn)))
                     {
-                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? SkyMindAttackVictimDef);
+                        pawn.needs.mood.thoughts.memories.TryGainMemoryFast(forWitness ?? ATR_ThoughtDefOf.ATR_AttackedViaSkyMind);
                     }
                 }
             }
@@ -288,9 +289,6 @@ namespace ATReforged
         // Utilities not available for direct player editing but not reserved by this mod
         public static List<PawnKindDef> ValidSurrogatePawnKindDefs = new List<PawnKindDef>();
         public static List<ThingDef> ValidServerDefs = new List<ThingDef>();
-        public static ThoughtDef SkyMindAttackWitnessDef = new ThoughtDef();
-        public static ThoughtDef SkyMindAttackVictimDef = new ThoughtDef();
-        public static ThoughtDef SkyMindTrollVictimDef = new ThoughtDef();
 
         public static ATR_GameComponent gameComp;
 
@@ -948,56 +946,15 @@ namespace ATReforged
             }
         }
 
-        // Remove all illegal traits for a given pawn, and replace them if the appropriate bool is true.
-        public static void ReconfigureIllegalTraits(Pawn pawn, HashSet<string> illegalTraitDefNames, bool shouldReplace)
-        {
-            TraitSet traits = pawn.story?.traits;
-            if (traits == null || traits.allTraits.Count == 0 || illegalTraitDefNames == null || illegalTraitDefNames.Count == 0)
-            {
-                return;
-            }
-
-            // Identify illegal traits and remove them.
-            List<Trait> illegalTraits = new List<Trait>();
-            for (int i = traits.allTraits.Count - 1; i >= 0; i--)
-            {
-                Trait trait = traits.allTraits[i];
-                if (trait.sourceGene == null && illegalTraitDefNames.Contains(trait.def.defName))
-                {
-                    illegalTraits.Add(trait);
-                    traits.RemoveTrait(trait);
-                }
-            }
-
-            if (!shouldReplace)
-            {
-                return;
-            }
-
-            // Generate new traits.
-            int iteration = 0;
-            while (illegalTraits.Count > 0 && iteration++ < 5)
-            {
-                illegalTraits = new List<Trait>();
-                List<Trait> newTraits = PawnGenerator.GenerateTraitsFor(pawn, illegalTraits.Count);
-                for (int i = newTraits.Count - 1; i >= 0; i--)
-                {
-                    Trait trait = newTraits[i];
-                    if (illegalTraitDefNames.Contains(trait.def.defName))
-                    {
-                        illegalTraits.Add(trait);
-                    }
-                    else
-                    {
-                        traits.GainTrait(trait);
-                    }
-                }
-            }
-        }
-
         // Caches and returns the HediffDefs contained in the HediffGiver of a given RaceProperties.
         public static HashSet<HediffDef> GetTemperatureHediffDefsForRace(RaceProperties raceProperties)
         {
+            if (raceProperties == null)
+            {
+                Log.Error("[ATR] A pawn with null raceProperties tried to have those properties checked!");
+                return new HashSet<HediffDef>();
+            }
+
             if (!cachedTemperatureHediffs.ContainsKey(raceProperties))
             {
                 List<HediffGiverSetDef> hediffGiverSetDefs = raceProperties.hediffGiverSets;

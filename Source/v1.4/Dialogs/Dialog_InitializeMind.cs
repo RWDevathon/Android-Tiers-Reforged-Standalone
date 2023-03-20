@@ -3,6 +3,8 @@ using Verse;
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using static UnityEngine.GraphicsBuffer;
+using static Mono.Security.X509.X520;
 
 namespace ATReforged
 {
@@ -48,6 +50,12 @@ namespace ATReforged
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
+                            // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
+                            Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
+                            if (target != null)
+                            {
+                                newIntelligence.health.RemoveHediff(target);
+                            }
                             Close();
                         }));
                     }
@@ -57,6 +65,12 @@ namespace ATReforged
                         {
                             Utils.gameComp.AttemptSkyMindConnection(newIntelligence);
                             newIntelligence.GetComp<CompSkyMindLink>().InitiateConnection(4, pawn);
+                            // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
+                            Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
+                            if (target != null)
+                            {
+                                newIntelligence.health.RemoveHediff(target);
+                            }
                             Close();
                         }));
                     }
@@ -77,6 +91,22 @@ namespace ATReforged
                 Hediff rebootHediff = HediffMaker.MakeHediff(ATR_HediffDefOf.ATR_LongReboot, newIntelligence, null);
                 rebootHediff.Severity = 1;
                 newIntelligence.health.AddHediff(rebootHediff);
+                // Remove the short reboot Hediff now so there aren't two restarting hediffs but it isn't removed before the long reboot is added.
+                Hediff target = newIntelligence.health.hediffSet.GetFirstHediffOfDef(ATR_HediffDefOf.ATR_ShortReboot);
+                if (target != null)
+                {
+                    newIntelligence.health.RemoveHediff(target);
+                }
+
+                // Allow the player to pick a few passions and a trait for the new android, akin to child growth moments in Biotech.
+                if (ModLister.BiotechInstalled)
+                {
+                    ChoiceLetter_PersonalityShift choiceLetter = (ChoiceLetter_PersonalityShift)LetterMaker.MakeLetter(ATR_LetterDefOf.ATR_PersonalityShiftLetter);
+                    choiceLetter.ConfigureChoiceLetter(newIntelligence, 3, 3, false, false);
+                    choiceLetter.Label = "ATR_PersonalityShiftNewboot".Translate();
+                    choiceLetter.StartTimeout(120000);
+                    Find.LetterStack.ReceiveLetter(choiceLetter);
+                }
             };
             closeOnCancel = false;
             closeOnAccept = false;
