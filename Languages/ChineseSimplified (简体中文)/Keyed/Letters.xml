@@ -22,6 +22,16 @@
     <ATR_ServerMeltdownDesc>部分服务器因过热而发生爆炸！哇!</ATR_ServerMeltdownDesc>
 	<!--EN: A server has partially exploded due to excessive heat!-->
 	
+	<!--新增内容-->
+	<!-- Faction Rights Letters -->
+    <ATR_DeclarationOfWarRights>权利之战</ATR_DeclarationOfWarRights>
+	<!--EN: War of rights-->
+    <ATR_DeclarationOfWarRightsDesc>{0} 对您侵犯的 {1} 权利曾制定过严格的强制性条文。因此 {2} 决定抹除 {1} 所有的智能体————除非有罪的殖民者被消灭，否则开战。</ATR_DeclarationOfWarRightsDesc>
+	<!--EN: {0} maintains a strict code against {1} rights, which you have violated. {2} is determined to wipe out all {1} intelligences - until the offending colonists are eliminated, there will be no peace.-->
+    <ATR_CessationOfConflict>权利冲突已解决</ATR_CessationOfConflict>
+	<!--EN: Rights conflict resolved-->
+    <ATR_CessationOfConflictDesc>{0} 对您不再违反 {1} 权利曾制定过严格的强制性条文。随着两者紧张局势的缓和和关系的不断升温，和平将成为可能。</ATR_CessationOfConflictDesc>
+	<!--EN: {0} maintains a strict code against {1} rights, which you no longer violate. As tensions melt away and relations warm, peace is within the realm of possibility once again.-->
 	
 	<!-- Hacking Incidents -->
 		<!-- Generic Messages -->

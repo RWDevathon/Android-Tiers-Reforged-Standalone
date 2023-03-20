@@ -34,6 +34,7 @@
 	
 	<!-- Link -->
 	<ATR_SkyMindOperationInProgress>Vorgang vollständig in: {0}</ATR_SkyMindOperationInProgress>
+	<ATR_SkyMindCoreOperationInProgress>Vorgang von {0} vollständig in: {1}</ATR_SkyMindCoreOperationInProgress>																												   
 	<ATR_SurrogateConnected>Verbunden mit {0} anderen Körpern</ATR_SurrogateConnected>
 	
 	<!-- Tower -->

@@ -12,5 +12,7 @@
 	<ATR_NeedToAllowCharge>{0} ist nicht in der Lage Strom vom Stromnetz zu beziehen.</ATR_NeedToAllowCharge>
 	<ATR_MassiveNotAllowed>Diese Einheit ist zu groß dafür.</ATR_MassiveNotAllowed>
 	<ATR_MassiveRequired>Für Starkstromrezipienten reserviert.</ATR_MassiveRequired>
+
+    <ATR_NoSurrogateMechanitors>Mechanitoren dürfen keine Marionetten sein.</ATR_NoSurrogateMechanitors>
 	
 </LanguageData>

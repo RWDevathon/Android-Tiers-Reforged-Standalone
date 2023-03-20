@@ -16,5 +16,8 @@
 <ATR_NoController.label>无思维连接</ATR_NoController.label>
 <ATR_NoController.labelNoun>无思维连接</ATR_NoController.labelNoun>
 <ATR_NoController.description>该代理人没有控制者，因此无法自主行动</ATR_NoController.description>
+<ATR_ForeignConsciousness.label>代理思维</ATR_ForeignConsciousness.label>
+<ATR_ForeignConsciousness.description>这个身体的控制者来自其他派系。控制者被击倒后会断开连接，其核心可能会自毁。</ATR_ForeignConsciousness.description>
+<ATR_ForeignConsciousness.labelNoun>一个外来思维</ATR_ForeignConsciousness.labelNoun>
 
 </LanguageData>

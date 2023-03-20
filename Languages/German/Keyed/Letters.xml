@@ -14,7 +14,12 @@
 	<ATR_ServerMeltdown>Serverschmelze</ATR_ServerMeltdown>
     <ATR_ServerMeltdownDesc>Ein Server ist aufgrund von Überhitzung explodiert!</ATR_ServerMeltdownDesc>
 	
-	
+    <!-- Faction Rights Letters -->
+    <ATR_DeclarationOfWarRights>Konflikt über die Stellung mechanischen Lebens</ATR_DeclarationOfWarRights>
+    <ATR_DeclarationOfWarRightsDesc>Nach Anschauung von {2} haben {1} keine Rechte und solange ihr sie als gleichwertig behandelst kann es zwischen euch und {0} keinen Frieden geben. \n\n{2} erklärt dir hiermit den Krieg.</ATR_DeclarationOfWarRightsDesc>
+    <ATR_CessationOfConflict>Konflikt über die Stellung mechanischen Lebens gelöst</ATR_CessationOfConflict>
+    <ATR_CessationOfConflictDesc>Da in deiner Fraktion {1} nicht länger als Gleichgestellte leben, liegt Frieden mit {0} wieder im Bereich des Möglichen.</ATR_CessationOfConflictDesc>
+
 	<!-- Hacking Incidents -->
 		<!-- Generic Messages -->
 	<ATR_IncidentGenericAttackDesc>Ein Cyberangriff mit der Stärke von {0} Punkten hat erfolgreich eure Firewall geknackt und {1} Netzwerkgerät(e) infiziert bevor Verteidigungsmaßahmen ergriffen werden konnten.</ATR_IncidentGenericAttackDesc>
@@ -92,5 +97,19 @@
 
     <!-- Maintenance -->
     <ATR_PoorMaintenanceLetter>Instandhaltungsverfall</ATR_PoorMaintenanceLetter>
+
+    <!-- Learning Letters -->
+    <ATR_FirstBlankAndroidCreated>Info: Androiden initialisieren</ATR_FirstBlankAndroidCreated>
+    <ATR_FirstBlankAndroidCreatedDesc>Anders als Dronen haben Androiden nach dem Bau noch kein Bewusstsein. Um sie in Betrieb zu nehmen muss ein Kern eingestzt werden. Festspeicherkerne können ein Bewusstsein speichern und fungieren wie das Gehirn beim Menschen. Bei der Installation kann man entweder eine neue KI entstehen lassen, oder ein anderes Bewusstsein herunterladen. Ohne den SkyCloud Kern kann jedoch das Bewusstsein nicht dupliziert werden. Alternativ zum Festspeicherkern gibt es den Fernsteuerkern. Dieser macht den neuen Körper zur Marionette die von Jedem genutzt werden kann der mit deinem Netzwerk verbunden ist. Beide Kerne sind bereits im Chassis vorhanden und können durch ein einfaches neuverkebeln verbunden oder abgetrennt werden.</ATR_FirstBlankAndroidCreatedDesc>
+
+    <ATR_FirstDroneCreated>Info: Dronen</ATR_FirstDroneCreated>
+    <ATR_FirstDroneCreatedDesc>Wenngleich sie über einen menschenähnlichen Intellekt verfügen, haben sie doch kein Bewusstsein im eigentlichen Sinne. Sie werden von anderen nur als Maschinen wahrgenommen und haben kein Problem damit, abgeschaltet oder auseinandergenommen zu werden. Ihre sozialen Fähigkeiten beschränken sich auf das fraglose befolgen von Befehlen und die Wiedergabe von Fakten. Daher sind sie weder zum Smalltalk, Handeln, Beaufsichtigen oder zur Arbeit mit Tieren geeignet.</ATR_FirstDroneCreatedDesc>
+
+    <ATR_FirstDroneCaptured>Info: Dronen als Gefangene</ATR_FirstDroneCaptured>
+    <ATR_FirstDroneCapturedDesc>Aufgrund ihres Mangels an sozialen Fähigkeiten jedweder Art können Dronen nicht wie empfindungsfähige Lebensformen zum Beitritt überredet oder unter Androhung von Gewalt dazu gezwungen werden. Stattdessen können sie umprogrammiert werden um deiner Gruppe fortan zu dienen oder schlichtweg auseinandergenommen zu werden. Sie können auch nicht freigelassen werden, da sie nicht selbstständig Denken können. (Sie könnten trotzden abhauen wenn sie keiner aufhält.)  Um Probleme zu vermeiden wird das Gefängnisinterface bei Dronen ausgeblendet.</ATR_FirstDroneCapturedDesc>
+
+    <ATR_FirstSurrogateCreated>Info: Marionetten (Surrogates)</ATR_FirstSurrogateCreated>
+    <ATR_FirstSurrogateCreatedDesc>Du hast deine erste Marionette erschaffen. Ohne Host ist sie bewegungsunfähig und fraktionslos. Wähle ein mit dem Netzwerk verbundenes Bewusstsein, in Form eines Androiden, eines Menschen mit Netzwerkchip oder eines körperlosen Bewusstseins im SkyCloud Kern, aus und aktiviere den Fernsteuermodus, um sie in Betrieb zu nehmen. Während der Verbindung teilen alle verbundenen Körper Merkmale und Fertigkeiten, inklusive ihrer Veränderungen. Simmung und Bedürfnisse werden nicht geteilt um Probleme zu vermeiden.</ATR_FirstSurrogateCreatedDesc>
+
 	
 </LanguageData>

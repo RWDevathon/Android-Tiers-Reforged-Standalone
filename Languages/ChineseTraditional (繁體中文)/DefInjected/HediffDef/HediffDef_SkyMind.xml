@@ -15,4 +15,7 @@
 <ATR_NoController.label>無思維連接</ATR_NoController.label>
 <ATR_NoController.labelNoun>無思維連接</ATR_NoController.labelNoun>
 <ATR_NoController.description>該代理人沒有控制者，因此無法自主行動</ATR_NoController.description>
+<ATR_ForeignConsciousness.label>代理思維</ATR_ForeignConsciousness.label>
+<ATR_ForeignConsciousness.description>這個身體的控制者來自其他派系。控制者被擊倒後會斷開連接，其核心可能會自毀。 </ATR_ForeignConsciousness.description>
+<ATR_ForeignConsciousness.labelNoun>一個外來思維</ATR_ForeignConsciousness.labelNoun>
 </LanguageData>

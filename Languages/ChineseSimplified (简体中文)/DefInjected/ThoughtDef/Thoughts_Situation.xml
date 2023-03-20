@@ -56,4 +56,7 @@
 <ATR_MentalAssistant.stages.label>心理辅助</ATR_MentalAssistant.stages.label>
 <ATR_MentalAssistant.stages.description>这种精神辅助芯片有助于消除可怕的压力源，并帮助我保持心理弹性。 现在没有什么能打垮我。</ATR_MentalAssistant.stages.description>
 
+<ATR_Thought_Situational_PaintedColor_Favorite.stages.label>喷上了最喜欢的颜色</ATR_Thought_Situational_PaintedColor_Favorite.stages.label>
+<ATR_Thought_Situational_PaintedColor_Favorite.stages.description>我很喜欢这个颜色</ATR_Thought_Situational_PaintedColor_Favorite.stages.description>
+
 </LanguageData>

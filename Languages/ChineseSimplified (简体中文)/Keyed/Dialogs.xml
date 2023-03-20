@@ -81,6 +81,43 @@
 	<!--EN: Initialize from SkyMind-->
 	<ATR_AutomaticInitialization>自动初始化</ATR_AutomaticInitialization>
 	<!--EN: Initialize automatically-->
+	
+	    <!-- PawnType Restriction Dialog -->
+    <ATR_RestrictedPawnTypes>限制设置</ATR_RestrictedPawnTypes>
+	<!--EN: Restriction settings-->
+
+    <ATR_PawnTypeNone>无</ATR_PawnTypeNone>
+	<!--EN: None-->
+    <ATR_PawnTypeNoneTooltip>所有对象都不可适用</ATR_PawnTypeNoneTooltip>
+	<!--EN: No pawns can use this-->
+    <ATR_PawnTypeDrone>无人机</ATR_PawnTypeDrone>
+	<!--EN: Drone-->
+    <ATR_PawnTypeDroneTooltip>仅无人机适用</ATR_PawnTypeDroneTooltip>
+	<!--EN: Only drones can use this-->
+    <ATR_PawnTypeAndroid>智能人形</ATR_PawnTypeAndroid>
+	<!--EN: Android-->
+    <ATR_PawnTypeAndroidTooltip>仅智能人形适用</ATR_PawnTypeAndroidTooltip>
+	<!--EN: Only androids can use this-->
+    <ATR_PawnTypeMechanical>机械体</ATR_PawnTypeMechanical>
+	<!--EN: Mechanical-->
+    <ATR_PawnTypeMechanicalTooltip>仅智能人形和无人机适用</ATR_PawnTypeMechanicalTooltip>
+	<!--EN: Only androids and drones can use this-->
+    <ATR_PawnTypeOrganic>有机体</ATR_PawnTypeOrganic>
+	<!--EN: Organic-->
+    <ATR_PawnTypeOrganicTooltip>仅有机体适用</ATR_PawnTypeOrganicTooltip>
+	<!--EN: Only organics can use this-->
+    <ATR_PawnTypeNonAI>非AI</ATR_PawnTypeNonAI>
+	<!--EN: Non-AI-->
+    <ATR_PawnTypeNonAITooltip>仅有机体和无人机适用</ATR_PawnTypeNonAITooltip>
+	<!--EN: Only organics and drones can use this-->
+    <ATR_PawnTypeAutonomous>可自主控制的单位</ATR_PawnTypeAutonomous>
+	<!--EN: Autonomous-->
+    <ATR_PawnTypeAutonomousTooltip>仅智能人形和有机体适用</ATR_PawnTypeAutonomousTooltip>
+	<!--EN: Only androids and organics can use this-->
+    <ATR_PawnTypeAll>全部</ATR_PawnTypeAll>
+	<!--EN: All-->
+    <ATR_PawnTypeAllTooltip>所有对象均适用</ATR_PawnTypeAllTooltip>
+	<!--EN: All pawns can use this-->
 
     <!-- Maintenance Level Setter Dialog -->
     <ATR_SetTargetMaintenanceLevel>所需维护级别： {0}%</ATR_SetTargetMaintenanceLevel>

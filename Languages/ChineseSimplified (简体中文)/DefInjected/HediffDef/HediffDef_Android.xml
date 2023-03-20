@@ -44,7 +44,7 @@
    <ATR_Overheating.stages.4.label>明显的影响</ATR_Overheating.stages.4.label>
    <ATR_Overheating.stages.5.label>严重的影响</ATR_Overheating.stages.5.label>
 <ATR_MechanicalHypothermia.label>低温反应</ATR_MechanicalHypothermia.label>
-<ATR_MechanicalHypothermia.description>机械单元不会像许多有机体因严寒而遭受严重损坏。 在较低温度下，实际上可以通过利用环境冷却来实现更加强大的功能，从而从寒冷中受益。 然而，过于寒冷的环境确实会消耗电池寿命。所以在极低的临界水平时，该单元必须将所有热量产生集中到内部系统来维持一定的温度水平。</ATR_MechanicalHypothermia.description>
+<ATR_MechanicalHypothermia.description>机械单元不会像许多有机体因严寒而遭受严重损坏。 在较低温度下，实际上可以通过利用环境冷却来实现更加强大的功能，从而从寒冷中受益。 然而，过于寒冷的环境确实会消耗电池寿命。所以在极低的临界水平时，该单元必须将所有热量产生集中到内部系统来维持一定的温度水平，这会极大地增加机体的电量消耗。</ATR_MechanicalHypothermia.description>
    <ATR_MechanicalHypothermia.stages.0.label>可以忽略不计</ATR_MechanicalHypothermia.stages.0.label>
    <ATR_MechanicalHypothermia.stages.1.label>较少的影响</ATR_MechanicalHypothermia.stages.1.label>
    <ATR_MechanicalHypothermia.stages.2.label>适中的影响</ATR_MechanicalHypothermia.stages.2.label>

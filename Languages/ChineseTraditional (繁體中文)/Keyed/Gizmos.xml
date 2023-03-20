@@ -4,12 +4,12 @@
 	<!-- AutoDoor -->
 	<ATR_AutoDoorOpen>打開</ATR_AutoDoorOpen>
 	<!--EN: Open-->
-	<ATR_AutoDoorOpenDescription>通過天雲核心遠程開啟。</ATR_AutoDoorOpenDescription>
-	<!--EN: Open remotely via a SkyCloud core.-->
+	<ATR_AutoDoorOpenDescription>通過天雲網絡遠程開啟。</ATR_AutoDoorOpenDescription>
+	<!--EN: Open remotely via a SkyMind connection.-->
 	<ATR_AutoDoorClose>關閉</ATR_AutoDoorClose>
 	<!--EN: Close-->
-	<ATR_AutoDoorCloseDescription>通過天雲服務器遠程關閉。</ATR_AutoDoorCloseDescription>
-	<!--EN: Close remotely via a SkyCloud server.-->
+	<ATR_AutoDoorCloseDescription>通過天雲網絡遠程關閉。</ATR_AutoDoorCloseDescription>
+	<!--EN: Close remotely via a SkyMind connection.-->
 	
 	<!-- Computer -->
     <ATR_ServerNetworkConnectionNeeded>服務器未連接至天云網絡</ATR_ServerNetworkConnectionNeeded>
@@ -90,9 +90,9 @@
 	
 	<ATR_AbsorbExperience>思維同化</ATR_AbsorbExperience>
 	<!--EN: Mind absorption-->
-	<ATR_AbsorbExperienceDesc>吸收囚犯思維中過往的經驗來獲取技能和入侵點數</ATR_AbsorbExperienceDesc>
+	<ATR_AbsorbExperienceDesc>吸收對象思維中過往的經驗來獲取技能和入侵點數</ATR_AbsorbExperienceDesc>
 	<!--EN: Absorb the experience of a prisoner's intelligence for skill and hacking points.-->
-	<ATR_AbsorbExperienceConfirm>這樣的操作是以囚犯的生命為代價來抽取其有用的技能和入侵知識，這被認為是謀殺。</ATR_AbsorbExperienceConfirm>
+	<ATR_AbsorbExperienceConfirm>這樣的操作是以對象的生命為代價來抽取其有用的技能和入侵知識，這被認為是謀殺。</ATR_AbsorbExperienceConfirm>
 	<!--EN: This operation extracts useful insights in skills and hacking at the cost of the prisoner's life. This is considered murder.-->
 	
 	<ATR_DownloadCloudPawn>下載</ATR_DownloadCloudPawn>
@@ -133,6 +133,12 @@
 	<ATR_UploadConfirm>這項操作會將其意識傳輸至天云網絡中，拋棄軀殼變成數字化意識。</ATR_UploadConfirm>
 	<!--EN: This operation transfers this intelligence into the SkyMind network, leaving the body behind.-->
 	
+	<!-- Remotely Triggered -->
+    <ATR_DetonateIEDRemotely>觸發爆炸裝置</ATR_DetonateIEDRemotely>
+	<!--EN: Trigger IED-->
+    <ATR_DetonateIEDRemotelyDesc>立刻通過天云網絡遠程觸發爆炸裝置</ATR_DetonateIEDRemotelyDesc>
+	<!--EN: Trigger the IED remotely and instantly via a SkyMind connection.-->
+	
 	<!-- Maintenance -->
     <ATR_MaintenanceGizmoLabel>維護</ATR_MaintenanceGizmoLabel>
 	<!--EN: Maintenance-->
@@ -157,5 +163,17 @@
 	<!--EN: Average maintenance is a measure of how well maintained this unit's core memory and internal systems have been over time, and changes based on the maintenance level of the pawn. High levels will improve mood, while low levels will degrade both mood and health. It rises if maintenance is above 70% and falls if below 30%, and otherwise slowly returns to a baseline.\n\nNote: maintenance is a personal, deeply introspective activity, and therefore can largely not be done by others for a pawn except in emergency situations with a part pack.-->
 	<ATR_MaintenanceEffectDesc>平均維護水平是對這個單位的核心記憶與內部系統在長期維護後整體狀態的一種評價，會隨著單位所選的維護水平而發生變化。高水平會改善情緒，而低水平會降低情緒和健康。如果維護水平高於70%，它會上升；如果低於30%，它會下降，否則會慢慢回到基準線。 n\n注意：維護是一種個人的、深刻的內省活動，因此很大程度上不能由他人協助完成，除非是在緊急狀況下使用部件包。 </ATR_MaintenanceEffectDesc>
 
+    <!--新增内容+1-->
+	<!-- Pawn Type Restriction -->
+    <ATR_RestrictPawnType>限制</ATR_RestrictPawnType>
+	<!--EN: Restrictions-->
+    <ATR_RestrictPawnTypeDescription>打開對像類型限制界面來設置何種類型的對象可以適用它。 </ATR_RestrictPawnTypeDescription>
+	<!--EN: Open the pawn type restrictions to set controls over what type of pawn can use this.-->
 
+    <!-- Link -->
+    <ATR_RampageState>陷入瘋狂</ATR_RampageState>
+	<!--EN: Rampage-->
+    <ATR_RampageStateDesc>切換天雲控制器的功能以強制對象進入狂暴的自殺式襲擊狀態，這會導致其不計後果地攻擊所有人。由於控制方案的缺陷，它們不會攻擊其他也陷入狂暴狀態的對象。 </ATR_RampageStateDesc>
+	<!--EN: Toggle the SkyMind manipulator's functionality to enforce a suicidal rampage state, causing the pawn to attack all others with reckless abandon. A quirk in the control scheme makes them not attack other rampaging pawns.-->
+	
 </LanguageData>

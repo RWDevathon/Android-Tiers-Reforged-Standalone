@@ -44,7 +44,7 @@
    <ATR_Overheating.stages.4.label>明顯的影響</ATR_Overheating.stages.4.label>
    <ATR_Overheating.stages.5.label>嚴重的影響</ATR_Overheating.stages.5.label>
 <ATR_MechanicalHypothermia.label>低溫反應</ATR_MechanicalHypothermia.label>
-<ATR_MechanicalHypothermia.description>機械單元不會像許多有機體因嚴寒而遭受嚴重損壞。在較低溫度下，實際上可以通過利用環境冷卻來實現更加強大的功能，從而從寒冷中受益。然而，過於寒冷的環境確實會消耗電池壽命。所以在極低的臨界水平時，該單元必須將所有熱量產生集中到內部系統來維持一定的溫度水平。 </ATR_MechanicalHypothermia.description>
+<ATR_MechanicalHypothermia.description>機械單元不會像許多有機體因嚴寒而遭受嚴重損壞。在較低溫度下，實際上可以通過利用環境冷卻來實現更加強大的功能，從而從寒冷中受益。然而，過於寒冷的環境確實會消耗電池壽命。所以在極低的臨界水平時，該單元必須將所有熱量產生集中到內部系統來維持一定的溫度水平，這會極大地增加機體的電量消耗。 </ATR_MechanicalHypothermia.description>
    <ATR_MechanicalHypothermia.stages.0.label>可以忽略不計</ATR_MechanicalHypothermia.stages.0.label>
    <ATR_MechanicalHypothermia.stages.1.label>較少的影響</ATR_MechanicalHypothermia.stages.1.label>
    <ATR_MechanicalHypothermia.stages.2.label>適中的影響</ATR_MechanicalHypothermia.stages.2.label>

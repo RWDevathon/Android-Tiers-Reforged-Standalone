@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<!-- AutoFlickering -->
-	<ATR_FlickEnable>通過天云網絡開機</ATR_FlickEnable>
-	<!--EN: PowerOn via SkyCloud-->
-	<ATR_FlickDisable>通過天云網絡關機</ATR_FlickDisable>
-	<!--EN: PowerOff via SkyCloud-->
-	<ATR_AutoDoorOpenMoteText>通過天云網絡打開</ATR_AutoDoorOpenMoteText>
-	<!--EN: Opening via SkyCloud-->
-	<ATR_AutoDoorCloseMoteText>通過天云網絡關閉</ATR_AutoDoorCloseMoteText>
-	<!--EN: Closing via SkyCloud-->
+    <!-- AutoFlickering -->
+	<ATR_FlickEnable>通過天雲思維開機</ATR_FlickEnable>
+	<!--EN: PowerOn via SkyMind-->
+	<ATR_FlickDisable>通過天雲思維關機</ATR_FlickDisable>
+	<!--EN: PowerOff via SkyMind-->
+	<ATR_AutoDoorOpenMoteText>通過天雲思維打開</ATR_AutoDoorOpenMoteText>
+	<!--EN: Opening via SkyMind-->
+	<ATR_AutoDoorCloseMoteText>通過天雲思維關閉</ATR_AutoDoorCloseMoteText>
+	<!--EN: Closing via SkyMind-->
 
 </LanguageData>

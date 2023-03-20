@@ -31,6 +31,10 @@
 	<!--EN: Android created. Install an interface via surgery to bring the unit online.-->
     <ATR_InterfaceRemoved>移除了一个智能人形的接口。 所有人格和控制数据已被销毁。 安装一个新的接口以使其联网。</ATR_InterfaceRemoved>
 	<!--EN: An android's interface was removed. All personality and control data has been destroyed. Install a new interface to bring it online.-->
+	
+	<!-- Mechfaller -->
+    <ATR_HostileMechFall>机甲已经到达，但会对所有对象展开攻击！ 它还激活了延时的关机程序。</ATR_HostileMechFall>
+	<!--EN: The mech has arrived, but is identifying everything as hostile! It has activated a delayed self-shutdown as well.-->
 
 	<!-- Link -->
 	<ATR_SurrogateControlled>{0} 已连接到新的代理人形</ATR_SurrogateControlled>
