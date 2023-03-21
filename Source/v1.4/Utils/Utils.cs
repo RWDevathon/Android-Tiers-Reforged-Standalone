@@ -955,23 +955,38 @@ namespace ATReforged
                 return new HashSet<HediffDef>();
             }
 
-            if (!cachedTemperatureHediffs.ContainsKey(raceProperties))
+            try
             {
-                List<HediffGiverSetDef> hediffGiverSetDefs = raceProperties.hediffGiverSets;
-                HashSet<HediffDef> targetHediffs = new HashSet<HediffDef>();
-                foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
+                if (!cachedTemperatureHediffs.ContainsKey(raceProperties))
                 {
-                    foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
+                    List<HediffGiverSetDef> hediffGiverSetDefs = raceProperties.hediffGiverSets;
+                    HashSet<HediffDef> targetHediffs = new HashSet<HediffDef>();
+
+                    if (hediffGiverSetDefs == null)
                     {
-                        if (typeof(HediffGiver_Heat).IsAssignableFrom(hediffGiver.GetType()) || typeof(HediffGiver_Hypothermia).IsAssignableFrom(hediffGiver.GetType()))
+                        cachedTemperatureHediffs[raceProperties] = targetHediffs;
+                        return targetHediffs;
+                    }
+
+                    foreach (HediffGiverSetDef hediffGiverSetDef in hediffGiverSetDefs)
+                    {
+                        foreach (HediffGiver hediffGiver in hediffGiverSetDef.hediffGivers)
                         {
-                            targetHediffs.Add(hediffGiver.hediff);
+                            if (typeof(HediffGiver_Heat).IsAssignableFrom(hediffGiver.GetType()) || typeof(HediffGiver_Hypothermia).IsAssignableFrom(hediffGiver.GetType()))
+                            {
+                                targetHediffs.Add(hediffGiver.hediff);
+                            }
                         }
                     }
+                    cachedTemperatureHediffs[raceProperties] = targetHediffs;
                 }
-                cachedTemperatureHediffs[raceProperties] = targetHediffs;
+                return cachedTemperatureHediffs[raceProperties];
             }
-            return cachedTemperatureHediffs[raceProperties];
+            catch (Exception ex)
+            {
+                Log.Warning("[ATR] Encountered an error while trying to get temperature HediffDefs. Using default behavior." + ex.Message + ex.StackTrace);
+                return new HashSet<HediffDef>();
+            }
         }
 
         // Cached Hediffs for a particular pawn's race that count as temperature hediffs to avoid recalculation, cached when needed.
