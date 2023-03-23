@@ -10,10 +10,12 @@ namespace ATReforged
     {
         public override bool ShouldRemove => !pawn.GetComp<CompSkyMindLink>().HasSurrogate();
 
+        private int cachedSurrogateSoftCap = 999;
+
         public override void PostTick()
         {
             base.PostTick();
-            if (!pawn.IsHashIntervalTick(180))
+            if (!pawn.IsHashIntervalTick(2500))
                 return;
 
             CompSkyMindLink link = pawn.GetComp<CompSkyMindLink>();
@@ -33,33 +35,35 @@ namespace ATReforged
         // If there are fewer or equal pawns to the soft cap, there is no penalty. Otherwise the scale of penalty is based on 5 stages, and no stage may be skipped.
         private void SetSeverity(int pawnCount)
         {
-            int softCap = ATReforged_Settings.safeSurrogateConnectivityCountBeforePenalty;
-
-            // Surrogates check their controller for a surrogate limit bonus to add to the soft cap.
-            if (Utils.IsSurrogate(pawn))
+            if (cachedSurrogateSoftCap > 100 || pawn.IsHashIntervalTick(3000))
             {
-                softCap += (int)pawn.GetComp<CompSkyMindLink>().GetSurrogates().First().GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
-            }
-            // Controllers check their own surrogate limit bonus to add to the soft cap.
-            else
-            {
-                softCap += (int)pawn.GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
+                cachedSurrogateSoftCap = ATReforged_Settings.safeSurrogateConnectivityCountBeforePenalty;
+                // Surrogates check their controller for a surrogate limit bonus to add to the soft cap.
+                if (Utils.IsSurrogate(pawn))
+                {
+                    cachedSurrogateSoftCap += (int)pawn.GetComp<CompSkyMindLink>().GetSurrogates().First().GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
+                }
+                // Controllers check their own surrogate limit bonus to add to the soft cap.
+                else
+                {
+                    cachedSurrogateSoftCap += (int)pawn.GetStatValue(ATR_StatDefOf.ATR_SurrogateLimitBonus);
+                }
             }
 
             // If underneath the cap, there is no penalty. 
-            if (pawnCount <= softCap)
+            if (pawnCount <= cachedSurrogateSoftCap)
             {
                 Severity = 0.01f;
             }
             // Penalty should not skip any of the 5 stages, so if the cap is small, do simplified math.
-            else if (softCap <= 5)
+            else if (cachedSurrogateSoftCap <= 5)
             {
-                Severity = Mathf.Clamp(0.2f * (pawnCount - softCap), 0.01f, 1f);
+                Severity = Mathf.Clamp(0.2f * (pawnCount - cachedSurrogateSoftCap), 0.01f, 1f);
             }
             // Penalty should be scaled by the softCap so having a large softCap means more surrogates with less harsh penalties over time.
             else
             {
-                Severity = Mathf.Clamp((pawnCount - softCap) / ((float)softCap), 0.01f, 1f);
+                Severity = Mathf.Clamp((pawnCount - cachedSurrogateSoftCap) / ((float)cachedSurrogateSoftCap), 0.01f, 1f);
             }
         }
     }
