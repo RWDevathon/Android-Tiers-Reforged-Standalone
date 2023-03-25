@@ -179,6 +179,8 @@
     <Compile Include="Alerts\Alert_LowSecurity.cs" />
     <Compile Include="ArchotechQuests\SitePartWorker_WitnessArrival.cs" />
     <Compile Include="Buildings\Building_ChargingBed.cs" />
+    <Compile Include="ChoiceLetter\ChoiceLetter_PersonalityShiftRequest.cs" />
+    <Compile Include="ChoiceLetter\ChoiceLetter_PersonalityShift.cs" />
     <Compile Include="Components\HediffComps\HediffCompProperties_RemoveHediffOnApply.cs" />
     <Compile Include="Components\HediffComps\HediffComp_RemoveHediffOnApply.cs" />
     <Compile Include="Components\ThingComps\CompAssignableToPawn_MaintenanceSpot.cs" />
@@ -201,15 +203,18 @@
     <Compile Include="DefOfs\ATR_BodyPartDefOf.cs" />
     <Compile Include="DefOfs\ATR_BackstoryDefOf.cs" />
     <Compile Include="DefOfs\ATR_IncidentDefOf.cs" />
+    <Compile Include="DefOfs\ATR_ThoughtDefOf.cs" />
     <Compile Include="DefOfs\ATR_MentalStateDefOf.cs" />
     <Compile Include="DefOfs\ATR_QuestScriptDefOf.cs" />
+    <Compile Include="DefOfs\ATR_LetterDefOf.cs" />
     <Compile Include="DefOfs\ATR_RulePackDefOf.cs" />
     <Compile Include="DefOfs\ATR_WorkTypeDefOf.cs" />
+    <Compile Include="Dialogs\Dialog_PersonalityShiftChoices.cs" />
     <Compile Include="Dialogs\Dialog_RestrictToPawnType.cs" />
     <Compile Include="Dialogs\Dialog_Repaint.cs" />
     <Compile Include="Dialogs\Dialog_InitializeMind.cs" />
-    <Compile Include="Enum\PawnType.cs" />
-    <Compile Include="Enum\ServerType.cs" />
+    <Compile Include="Enums\PawnType.cs" />
+    <Compile Include="Enums\ServerType.cs" />
     <Compile Include="Extensions\ListingExtensions.cs" />
     <Compile Include="Extensions\SettingsUIExtensions.cs" />
     <Compile Include="Gizmos\Gizmo_MaintenanceEffect.cs" />
@@ -217,6 +222,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\RaceRestrictionSettings_Patch.cs" />
     <Compile Include="Harmony\Pawn_GuestTracker_Patch.cs" />
     <Compile Include="Harmony\Dialog_AssignBuildingOwner_Patch.cs" />
     <Compile Include="Harmony\CompUseEffect_InstallImplantMechlink_Patch.cs" />
@@ -276,6 +282,7 @@
     <Compile Include="Hediffs\HediffGiver_MechHypothermia.cs" />
     <Compile Include="Hediffs\Hediff_ForeignConsciousness.cs" />
     <Compile Include="Hediffs\Hediff_SplitConsciousness.cs" />
+    <Compile Include="Incidents\Incidents_PersonalityShift.cs" />
     <Compile Include="Incidents\Incidents_Hacking.cs" />
     <Compile Include="JobDrivers\JobDriver_DoMaintenanceIdle.cs" />
     <Compile Include="JobDrivers\JobDriver_GenerateInsight.cs" />
@@ -362,7 +369,7 @@
     <Compile Include="ThoughtWorker\ThoughtWorker_AssistingMinds.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_FeelingsTowardOrganics.cs" />
     <Compile Include="Toils\Toils_LayDownPower.cs" />
-    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Enums\Enums.cs" />
     <Compile Include="Utils\FilteredGetters.cs" />
     <Compile Include="Components\ATR_GameComponent.cs" />
     <Compile Include="Utils\Tex.cs" />

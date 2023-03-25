@@ -6,4 +6,14 @@
         <letterClass>ATReforged.ChoiceLetter_RansomDemand</letterClass>
     </LetterDef>
 
+    <LetterDef ParentName="CustomChoiceLetterBase">
+        <defName>ATR_PersonalityShiftRequestLetter</defName>
+        <letterClass>ATReforged.ChoiceLetter_PersonalityShiftRequest</letterClass>
+    </LetterDef>
+
+    <LetterDef ParentName="CustomChoiceLetterBase">
+        <defName>ATR_PersonalityShiftLetter</defName>
+        <letterClass>ATReforged.ChoiceLetter_PersonalityShift</letterClass>
+    </LetterDef>
+
 </Defs>

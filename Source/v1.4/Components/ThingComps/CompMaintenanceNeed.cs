@@ -130,7 +130,7 @@ namespace ATReforged
 
         public float MaintenanceFallPerDay()
         {
-            return Mathf.Clamp(DailyFallPerStage(Stage) * ATReforged_Settings.maintenanceFallRateFactor / Pawn.GetStatValue(ATR_StatDefOf.ATR_MaintenanceRetention), 0.005f, 2f);
+            return Mathf.Clamp(DailyFallPerStage(Stage) * ATReforged_Settings.maintenanceFallRateFactor / Pawn.GetStatValue(ATR_StatDefOf.ATR_MaintenanceRetention, cacheStaleAfterTicks: 2000), 0.005f, 2f);
         }
 
         public override void PostPostMake()
@@ -146,7 +146,7 @@ namespace ATReforged
             }
             if (cachedFallRatePerDay < 0)
             {
-                cachedFallRatePerDay = 0;
+                cachedFallRatePerDay = MaintenanceFallPerDay();
             }
         }
 
@@ -167,7 +167,11 @@ namespace ATReforged
                 return;
             }
 
-            cachedFallRatePerDay = MaintenanceFallPerDay();
+            // Recache fall rate every in game day.
+            if (Find.TickManager.TicksGame % 60000 == 0)
+            {
+                cachedFallRatePerDay = MaintenanceFallPerDay();
+            }
 
             // If maintenance has been low for at least 3 days (modified by settings), issues can begin manifesting.
             if (maintenanceEffectTicks < (-180000 * ATReforged_Settings.maintenancePartFailureRateFactor))

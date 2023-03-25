@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>ATR_PersonalityShiftAllowed</defName>
+        <durationDays>20</durationDays>
+        <stages>
+            <li>
+                <label>Personality shift</label>
+                <description>This slightly different world view is interesting.</description>
+                <baseMoodEffect>4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_PersonalityShiftDenied</defName>
+        <durationDays>20</durationDays>
+        <stages>
+            <li>
+                <label>Stagnant personality</label>
+                <description>I wanted to try out a different personality, but was denied. I feel stifled.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

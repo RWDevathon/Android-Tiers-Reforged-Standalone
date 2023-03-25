@@ -53,7 +53,6 @@ namespace ATReforged
                         __result.ideo = null;
                         __result.apparel.DestroyAll();
                     }
-                    Utils.ReconfigureIllegalTraits(__result, ATReforged_Settings.blacklistedMechanicalTraits, true);
                 }
                 catch(Exception ex)
                 {

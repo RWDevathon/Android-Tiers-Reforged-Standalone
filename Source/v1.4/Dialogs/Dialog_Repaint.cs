@@ -129,6 +129,7 @@ namespace ATReforged
         {
             pawn.GetComp<AlienPartGenerator.AlienComp>()?.OverwriteColorChannel("skin", initialColor);
             pawn.story.SkinColorBase = initialColor;
+            targetColor = initialColor;
             pawn.Drawer.renderer.graphics.SetAllGraphicsDirty();
             PortraitsCache.SetDirty(pawn);
         }
