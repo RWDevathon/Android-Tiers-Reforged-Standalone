@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_SplitConsciousness.label>Роздвоєння свідомості</ATR_SplitConsciousness.label>
+  <ATR_SplitConsciousness.description>Свідомість, що контролює це тіло, розщеплюється, так як воно також контролює інші тіла. Це ефективно знижує здатність свідомості здійснювати тонкий контроль над цим тілом. Більше тіл означає більш крутий штраф.</ATR_SplitConsciousness.description>
+  <ATR_SplitConsciousness.stages.0.label>Буває...</ATR_SplitConsciousness.stages.0.label>
+  <ATR_SplitConsciousness.stages.1.label>Тривіальне</ATR_SplitConsciousness.stages.1.label>
+  <ATR_SplitConsciousness.stages.2.label>Кероване</ATR_SplitConsciousness.stages.2.label>
+  <ATR_SplitConsciousness.stages.3.label>Важке</ATR_SplitConsciousness.stages.3.label>
+  <ATR_SplitConsciousness.stages.4.label>Інтенсивне</ATR_SplitConsciousness.stages.4.label>
+  <ATR_SplitConsciousness.stages.5.label>Екстремальне</ATR_SplitConsciousness.stages.5.label>
+  <ATR_SplitConsciousness.labelNoun>Роздвоєння свідомості</ATR_SplitConsciousness.labelNoun>
+
+  <ATR_ForeignConsciousness.label>Іноземна свідомість</ATR_ForeignConsciousness.label>
+  <ATR_ForeignConsciousness.description>Свідомість, що контролює цей орган, належить іншій фракції. Контролер відключиться після його збиття і, ймовірно, викличе самознищення ядра.</ATR_ForeignConsciousness.description>
+  <ATR_ForeignConsciousness.labelNoun>чужорідна свідомість</ATR_ForeignConsciousness.labelNoun>
+
+  <ATR_MindOperation.label>Триває операція SkyMind</ATR_MindOperation.label>
+  <ATR_MindOperation.description>В даний час цей блок проходить операцію SkyMind. Для того щоб зберегти зв'язок і цілісність, свідомість в даний час не контролює цей орган.</ATR_MindOperation.description>
+  <ATR_MindOperation.labelNoun>Операція SkyMind</ATR_MindOperation.labelNoun>
+
+  <ATR_NoController.label>Контролер не підключений</ATR_NoController.label>
+  <ATR_NoController.description>Цей сурогат не має контролера і тому не здатний до автономної дії.</ATR_NoController.description>
+  <ATR_NoController.labelNoun>Немає підключеного хоста</ATR_NoController.labelNoun>
+
+
+</LanguageData>

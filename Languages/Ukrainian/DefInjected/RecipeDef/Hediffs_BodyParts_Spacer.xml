@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Advanced Arm -->
+
+  <ATR_Install_AdvancedArm.label>Встановіть просунуту руку</ATR_Install_AdvancedArm.label>
+  <ATR_Install_AdvancedArm.description>Встановлює вдосконалену руку.</ATR_Install_AdvancedArm.description>
+  <ATR_Install_AdvancedArm.jobString>Установка просунутої руки.</ATR_Install_AdvancedArm.jobString>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_Install_AdvancedLeg.label>Встановіть просунуту ногу</ATR_Install_AdvancedLeg.label>
+  <ATR_Install_AdvancedLeg.description>Більш висока плавчаста стриманість з більш високою ефективністю компонентів надає цьому оку значну перевагу перед стандартними емісійними деталями.</ATR_Install_AdvancedLeg.description>
+  <ATR_Install_AdvancedLeg.jobString>Установка ніжки високої потужності.</ATR_Install_AdvancedLeg.jobString>
+
+
+  <!-- Advanced Visual Sensor -->
+
+  <ATR_Install_AdvancedVisualSensor.label>Встановіть просунутий візуальний датчик</ATR_Install_AdvancedVisualSensor.label>
+  <ATR_Install_AdvancedVisualSensor.description>Встановлює вдосконалений візуальний датчик.</ATR_Install_AdvancedVisualSensor.description>
+  <ATR_Install_AdvancedVisualSensor.jobString>Установка просунутого візуального датчика.</ATR_Install_AdvancedVisualSensor.jobString>
+
+
+  <!-- Advanced Audio Sensor -->
+
+  <ATR_Install_AdvancedAudioSensor.label>Встановіть просунутий аудіо датчик</ATR_Install_AdvancedAudioSensor.label>
+  <ATR_Install_AdvancedAudioSensor.description>Встановлює вдосконалений датчик звуку.</ATR_Install_AdvancedAudioSensor.description>
+  <ATR_Install_AdvancedAudioSensor.jobString>Встановлення просунутого датчика слуху.</ATR_Install_AdvancedAudioSensor.jobString>
+
+
+  <!-- Advanced Heatsink -->
+
+  <ATR_Install_AdvancedHeatsink.label>Встановіть розширений радіатор</ATR_Install_AdvancedHeatsink.label>
+  <ATR_Install_AdvancedHeatsink.description>Встановлює вдосконалений радіатор.</ATR_Install_AdvancedHeatsink.description>
+  <ATR_Install_AdvancedHeatsink.jobString>Установка просунутого радіатора.</ATR_Install_AdvancedHeatsink.jobString>
+
+
+  <!-- Advanced Coolant Pump -->
+
+  <ATR_Install_AdvancedCoolantPump.label>Встановіть вдосконалений насос теплоносія</ATR_Install_AdvancedCoolantPump.label>
+  <ATR_Install_AdvancedCoolantPump.description>Встановлює вдосконалений насос теплоносія.</ATR_Install_AdvancedCoolantPump.description>
+  <ATR_Install_AdvancedCoolantPump.jobString>Установка вдосконаленого насоса охолоджуючої рідини.</ATR_Install_AdvancedCoolantPump.jobString>
+
+
+  <!-- Advanced Battery -->
+
+  <ATR_Install_AdvancedBattery.label>Встановіть розширений акумулятор</ATR_Install_AdvancedBattery.label>
+  <ATR_Install_AdvancedBattery.description>Встановлює вдосконалений акумуляторний блок.</ATR_Install_AdvancedBattery.description>
+  <ATR_Install_AdvancedBattery.jobString>Установка просунутого акумулятора.</ATR_Install_AdvancedBattery.jobString>
+
+
+  <!-- Advanced Mechanite Storage -->
+
+  <ATR_Install_AdvancedMechaniteStorage.label>Встановіть розширене сховище механіту</ATR_Install_AdvancedMechaniteStorage.label>
+  <ATR_Install_AdvancedMechaniteStorage.description>Встановлює сучасне сховище механіту.</ATR_Install_AdvancedMechaniteStorage.description>
+  <ATR_Install_AdvancedMechaniteStorage.jobString>Установка розширеного зберігання механіту.</ATR_Install_AdvancedMechaniteStorage.jobString>
+
+
+  <!-- Advanced Reactor -->
+
+  <ATR_Install_AdvancedReactor.label>встановити вдосконалений біо-реактор</ATR_Install_AdvancedReactor.label>
+  <ATR_Install_AdvancedReactor.description>Встановлює вдосконалений біо-реактор.</ATR_Install_AdvancedReactor.description>
+  <ATR_Install_AdvancedReactor.jobString>Встановлення вдосконаленого біо-реактора.</ATR_Install_AdvancedReactor.jobString>
+
+
+  <!-- Organic Charger -->
+
+  <ATR_Install_OrganicCharger.label>встановити органічний зарядний пристрій</ATR_Install_OrganicCharger.label>
+  <ATR_Install_OrganicCharger.description>Встановлює органічний зарядний пристрій.</ATR_Install_OrganicCharger.description>
+  <ATR_Install_OrganicCharger.jobString>Встановлення органічного зарядного пристрою.</ATR_Install_OrganicCharger.jobString>
+
+
+</LanguageData>

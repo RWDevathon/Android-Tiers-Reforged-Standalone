@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechQuadrupedal.label>Чотириногий дрон</ATR_MechQuadrupedal.label>
+  <ATR_MechQuadrupedal.corePart.parts.4.customLabel>лівий радіатор</ATR_MechQuadrupedal.corePart.parts.4.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.5.customLabel>правий радіатор</ATR_MechQuadrupedal.corePart.parts.5.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.1.customLabel>лівий зоровий датчик</ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.1.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.2.customLabel>правий зоровий датчик</ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.2.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.3.customLabel>лівий аудіодатчик</ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.3.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.4.customLabel>правий аудіодатчик</ATR_MechQuadrupedal.corePart.parts.8.parts.0.parts.4.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.9.customLabel>передня ліва нога</ATR_MechQuadrupedal.corePart.parts.9.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.9.parts.0.customLabel>передня ліва лапа</ATR_MechQuadrupedal.corePart.parts.9.parts.0.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.10.customLabel>передня права нога</ATR_MechQuadrupedal.corePart.parts.10.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.10.parts.0.customLabel>передня права лапа</ATR_MechQuadrupedal.corePart.parts.10.parts.0.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.11.customLabel>задня ліва лапа</ATR_MechQuadrupedal.corePart.parts.11.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.11.parts.0.customLabel>задня ліва лапа</ATR_MechQuadrupedal.corePart.parts.11.parts.0.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.12.customLabel>задня права нога</ATR_MechQuadrupedal.corePart.parts.12.customLabel>
+  <ATR_MechQuadrupedal.corePart.parts.12.parts.0.customLabel>задня права лапа</ATR_MechQuadrupedal.corePart.parts.12.parts.0.customLabel>
+
+
+</LanguageData>

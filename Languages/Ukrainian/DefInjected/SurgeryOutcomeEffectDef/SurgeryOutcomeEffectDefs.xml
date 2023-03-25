@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterLabel>Операція не вдалася на {PATIENT_labelShort}</ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterLabel>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterText>{SURGEON_labelShort} допустив фатальну помилку під час роботи на {PATIENT_labelShort} через особливі виклики: {RECIPE_label}.</ATR_MechanicalSurgeryOutcomeBase.outcomes.1.letterText>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterLabel>Операція не вдалася на {PATIENT_labelShort}</ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterLabel>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterText>{SURGEON_labelShort} катастрофічно провалився під час роботи на {PATIENT_labelShort} ({RECIPE_label}).</ATR_MechanicalSurgeryOutcomeBase.outcomes.2.letterText>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterLabel>Операція не вдалася на {PATIENT_labelShort}</ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterLabel>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterText>{SURGEON_labelShort} зазнав невдачі в смішний спосіб під час роботи на {PATIENT_labelShort} ({RECIPE_label}).</ATR_MechanicalSurgeryOutcomeBase.outcomes.3.letterText>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterLabel>Операція не вдалася на {PATIENT_labelShort}</ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterLabel>
+  <ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterText>{SURGEON_labelShort} не впорався незначним чином під час роботи на {PATIENT_labelShort} ({RECIPE_label}).</ATR_MechanicalSurgeryOutcomeBase.outcomes.4.letterText>
+
+
+</LanguageData>

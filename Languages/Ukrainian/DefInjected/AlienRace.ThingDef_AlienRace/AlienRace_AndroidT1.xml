@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Tier1Android.label>T1 Андроїд</ATR_Tier1Android.label>
+  <ATR_Tier1Android.description>Андроїди першого рівня - це просто людиноподібні машини, створені для того, щоб імітувати загальний образ і мінімальні здібності людства. Не маючи справжнього розуму, багато хто сприймає їх як дуже розумних і чуйних тварин. Їхнє призначення - служити, і вони роблять це без нарікань.\n\nЧерез мінімальні інвестиції і дизайн, андроїди першого рівня страждають від недоліків в обслуговуванні і ефективності, що робить їх відносно застарілими до наступних, більш довговічних, ітерацій - за винятком робіт, де явно потрібні або бажані мінімальні специфікації і ресурси.</ATR_Tier1Android.description>
+  <ATR_Tier1Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_Tier1Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_Tier1Android.tools.0.label>правий кулак</ATR_Tier1Android.tools.0.label>
+  <ATR_Tier1Android.tools.1.label>лівий кулак</ATR_Tier1Android.tools.1.label>
+  <ATR_Tier1Android.tools.2.label>голова</ATR_Tier1Android.tools.2.label>
+
+
+</LanguageData>

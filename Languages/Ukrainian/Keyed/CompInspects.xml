@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Computer -->
+  <ATR_SkillServersSynthesis>Доступні бали кваліфікації: {0} / {1}</ATR_SkillServersSynthesis>
+  <ATR_SkillProducedPoints>Отримання балів кваліфікації: {0}</ATR_SkillProducedPoints>
+  <ATR_SkillSlotsAdded>Додано сховище навичок: {0}</ATR_SkillSlotsAdded>
+
+  <ATR_SecurityServersSynthesis>Доступні пункти безпеки: {0} / {1}</ATR_SecurityServersSynthesis>
+  <ATR_SecurityProducedPoints>Пункти безпеки, що виробляють: {0}</ATR_SecurityProducedPoints>
+  <ATR_SecuritySlotsAdded>Додано сховище безпеки: {0}</ATR_SecuritySlotsAdded>
+
+  <ATR_HackingServersSynthesis>Доступні точки злому: {0} / {1}</ATR_HackingServersSynthesis>
+  <ATR_HackingProducedPoints>Створення точок злому: {0}</ATR_HackingProducedPoints>
+  <ATR_HackingSlotsAdded>Злом сховища додано: {0}</ATR_HackingSlotsAdded>
+
+  <!-- Charging -->
+  <ATR_CurrentChargerPowerConsumption>Поточний показник потужності: {0} W</ATR_CurrentChargerPowerConsumption>
+
+  <!-- Heat -->
+  <ATR_CompHotSensitiveCriticalText>Тепловий поріг перевищено: пошкодження неминучі!</ATR_CompHotSensitiveCriticalText>
+  <ATR_CompHotSensitiveDangerText>Наближення порогу спеки: рекомендується профілактична дія!</ATR_CompHotSensitiveDangerText>
+  <ATR_CompHotSensitiveWarningText>Ідеальний тепловий поріг перевищив: рекомендується обережність.</ATR_CompHotSensitiveWarningText>
+  <ATR_CompHotSensitiveSafeText>В межах безпечного порогу експлуатації: операції в нормі.</ATR_CompHotSensitiveSafeText>
+
+  <!-- SkyMind -->
+  <ATR_HackedWithTimer>Перекомпіляція програмного забезпечення завершена в {0}.</ATR_HackedWithTimer>
+  <ATR_CryptoLocked>Криптоблоковано, доступ заборонено.</ATR_CryptoLocked>
+  <ATR_SkyMindDetected>Підключення до SkyMind</ATR_SkyMindDetected>
+
+  <!-- Core -->
+  <ATR_CloudIntelligenceSummary>Розвідки SkyMind: {0} / {1}</ATR_CloudIntelligenceSummary>
+  <ATR_AssistingIntelligenceSummary>Пусті розвідки: {0}</ATR_AssistingIntelligenceSummary>
+
+  <!-- Link -->
+  <ATR_SkyMindOperationInProgress>Час до завершення операції: {0}</ATR_SkyMindOperationInProgress>
+  <ATR_SkyMindCoreOperationInProgress>Час до операції для {0} завершено: {1}</ATR_SkyMindCoreOperationInProgress>
+  <ATR_SurrogateConnected>Підключений до: {0} інші пішаки</ATR_SurrogateConnected>
+
+  <!-- Tower -->
+  <ATR_SkyMindNetworkSummary>Підключені користувачі: {0} / {1}</ATR_SkyMindNetworkSummary>
+
+</LanguageData>

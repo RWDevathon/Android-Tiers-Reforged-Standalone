@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Surrogate Limit Bonus -->
+
+  <ATR_SurrogateLimitBonus.label>Бонус за сурогатний ліміт</ATR_SurrogateLimitBonus.label>
+  <ATR_SurrogateLimitBonus.description>Скільки додаткових сурогатів цей пішак може контролювати відразу, не страждаючи від свідомості або покарання за швидкість навчання.</ATR_SurrogateLimitBonus.description>
+
+
+</LanguageData>

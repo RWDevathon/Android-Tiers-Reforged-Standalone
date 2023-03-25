@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- SkyMind Receiver -->
+
+  <ATR_SkyMindReceiver.label>Приймач SkyMind</ATR_SkyMindReceiver.label>
+  <ATR_SkyMindReceiver.description>Невеликий модуль, який можна імплантувати в органічний мозок, щоб повністю перевизначити нейронну мережу суб'єкта, перетворюючи їх у порожню лушпиння, щоб керувати зовнішньою силою. У зв'язку зі складністю пристрою і властивою йому складністю контролю органічної речовини, цей пристрій має схильність до сильного горіння при руйнуванні. \n\nБагато сил використовували це на свою користь, щоб знищити сурогатів, а не дозволити їм потрапити до ворожих рук.</ATR_SkyMindReceiver.description>
+
+
+  <!-- SkyMind Transceiver -->
+
+  <ATR_SkyMindTransceiver.label>Відпраляч SkyMind</ATR_SkyMindTransceiver.label>
+  <ATR_SkyMindTransceiver.description>Невеликий модуль, який можна вбудувати в органічний мозок, дозволяючи суб'єкту вільно взаємодіяти з мережею SkyMind. Успішна імплантація або видалення цього імплантату не має серйозних наслідків.</ATR_SkyMindTransceiver.description>
+
+
+</LanguageData>

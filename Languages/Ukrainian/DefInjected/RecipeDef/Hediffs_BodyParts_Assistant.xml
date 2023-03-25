@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Insight Assistant -->
+
+  <ATR_Install_InsightAssistant.label>Install insight assistant</ATR_Install_InsightAssistant.label>
+  <ATR_Install_InsightAssistant.description>Installs an insight assistant into the sub-core assistant slot of a unit.</ATR_Install_InsightAssistant.description>
+  <ATR_Install_InsightAssistant.jobString>Installing insight assistant.</ATR_Install_InsightAssistant.jobString>
+
+
+  <!-- General Assistant -->
+
+  <ATR_Install_GeneralAssistant.label>Install general assistant</ATR_Install_GeneralAssistant.label>
+  <ATR_Install_GeneralAssistant.description>Installs a general assistant into the sub-core assistant slot of a unit.</ATR_Install_GeneralAssistant.description>
+  <ATR_Install_GeneralAssistant.jobString>Installing general assistant.</ATR_Install_GeneralAssistant.jobString>
+
+
+  <!-- Combat Assistant -->
+
+  <ATR_Install_CombatAssistant.label>Install combat assistant</ATR_Install_CombatAssistant.label>
+  <ATR_Install_CombatAssistant.description>Installs a combat assistant into the sub-core assistant slot of a unit.</ATR_Install_CombatAssistant.description>
+  <ATR_Install_CombatAssistant.jobString>Installing combat assistant.</ATR_Install_CombatAssistant.jobString>
+
+
+  <!-- Mechanic Assistant -->
+
+  <ATR_Install_MechanicAssistant.label>Install mechanic assistant</ATR_Install_MechanicAssistant.label>
+  <ATR_Install_MechanicAssistant.description>Installs a mechanic assistant into the sub-core assistant slot of a unit.</ATR_Install_MechanicAssistant.description>
+  <ATR_Install_MechanicAssistant.jobString>Installing mechanic assistant.</ATR_Install_MechanicAssistant.jobString>
+
+
+  <!-- Construction Assistant -->
+
+  <ATR_Install_ConstructionAssistant.label>Install construction assistant</ATR_Install_ConstructionAssistant.label>
+  <ATR_Install_ConstructionAssistant.description>Installs a construction assistant into the sub-core assistant slot of a unit.</ATR_Install_ConstructionAssistant.description>
+  <ATR_Install_ConstructionAssistant.jobString>Installing construction assistant.</ATR_Install_ConstructionAssistant.jobString>
+
+
+  <!-- Excavation Assistant -->
+
+  <ATR_Install_ExcavationAssistant.label>Install excavator assistant</ATR_Install_ExcavationAssistant.label>
+  <ATR_Install_ExcavationAssistant.description>Installs an excavator assistant into the sub-core assistant slot of a unit.</ATR_Install_ExcavationAssistant.description>
+  <ATR_Install_ExcavationAssistant.jobString>Installing excavator assistant.</ATR_Install_ExcavationAssistant.jobString>
+
+
+  <!-- Victual Assistant -->
+
+  <ATR_Install_VictualAssistant.label>Install victual assistant</ATR_Install_VictualAssistant.label>
+  <ATR_Install_VictualAssistant.description>Installs a victual assistant into the sub-core assistant slot of a unit.</ATR_Install_VictualAssistant.description>
+  <ATR_Install_VictualAssistant.jobString>Installing victual assistant.</ATR_Install_VictualAssistant.jobString>
+
+
+  <!-- Cultivation Assistant -->
+
+  <ATR_Install_CultivationAssistant.label>Install cultivation assistant</ATR_Install_CultivationAssistant.label>
+  <ATR_Install_CultivationAssistant.description>Installs a cultivation assistant into the sub-core assistant slot of a unit.</ATR_Install_CultivationAssistant.description>
+  <ATR_Install_CultivationAssistant.jobString>Installing cultivation assistant.</ATR_Install_CultivationAssistant.jobString>
+
+
+  <!-- Medicine Assistant -->
+
+  <ATR_Install_MedicineAssistant.label>Встановіть фельдшера</ATR_Install_MedicineAssistant.label>
+  <ATR_Install_MedicineAssistant.description>Встановлює помічника з медицини в підстрижневий слот помічника агрегату.</ATR_Install_MedicineAssistant.description>
+  <ATR_Install_MedicineAssistant.jobString>Установка фельдшера.</ATR_Install_MedicineAssistant.jobString>
+
+
+  <!-- Social Assistant -->
+
+  <ATR_Install_SocialAssistant.label>Встановіть соціального помічника</ATR_Install_SocialAssistant.label>
+  <ATR_Install_SocialAssistant.description>Встановлює соціального помічника в підосновний слот помічника підрозділу.</ATR_Install_SocialAssistant.description>
+  <ATR_Install_SocialAssistant.jobString>Установка соціального помічника.</ATR_Install_SocialAssistant.jobString>
+
+
+  <!-- Mental Assistant -->
+
+  <ATR_Install_MentalAssistant.label>Установка ментального помічника</ATR_Install_MentalAssistant.label>
+  <ATR_Install_MentalAssistant.description>Встановлює ментального помічника в підосновний слот помічника підрозділу.</ATR_Install_MentalAssistant.description>
+  <ATR_Install_MentalAssistant.jobString>Установка ментального помічника.</ATR_Install_MentalAssistant.jobString>
+
+
+  <!-- Psychic Assistant -->
+
+  <ATR_Install_PsychicAssistant.label>Встановіть помічника екстрасенса</ATR_Install_PsychicAssistant.label>
+  <ATR_Install_PsychicAssistant.description>Встановлює помічника екстрасенса в підосновний слот помічника підрозділу.</ATR_Install_PsychicAssistant.description>
+  <ATR_Install_PsychicAssistant.jobString>Установка помічника екстрасенса.</ATR_Install_PsychicAssistant.jobString>
+
+
+  <!-- Controller Assistant -->
+
+  <ATR_Install_ControllerAssistant.label>Інсталяція помічника контролера</ATR_Install_ControllerAssistant.label>
+  <ATR_Install_ControllerAssistant.description>Встановлює помічника контролера в гніздо підстрижневого помічника блоку.</ATR_Install_ControllerAssistant.description>
+  <ATR_Install_ControllerAssistant.jobString>Встановлення помічника контролера.</ATR_Install_ControllerAssistant.jobString>
+
+
+  <!-- Note: This assistant does not derive from the base class! This is to avoid it being manufacturable. -->
+
+  <ATR_Install_SapientAssistant.label>Інсталяція помічника користувача</ATR_Install_SapientAssistant.label>
+  <ATR_Install_SapientAssistant.description>Встановлює сапієнт-помічника в підосновний слот помічника блоку. Цей архотех-пристрій, здається, володіє інтелектом тільки при імплантації в механічний блок. Куди він дівається при деінсталяції?</ATR_Install_SapientAssistant.description>
+  <ATR_Install_SapientAssistant.jobString>Установка сапієнтного помічника.</ATR_Install_SapientAssistant.jobString>
+
+
+</LanguageData>

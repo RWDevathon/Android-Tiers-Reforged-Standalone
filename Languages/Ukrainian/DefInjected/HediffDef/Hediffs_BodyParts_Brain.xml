@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Isolated Core Housing -->
+
+  <ATR_IsolatedCore.label>Немає встановленого інтерфейсу</ATR_IsolatedCore.label>
+  <ATR_IsolatedCore.description>Ядро цього агрегату порожнє. Ініціалізація автономного ядра або сердечника приймача потрібно для підключення до інтерфейсу і активації блоку.</ATR_IsolatedCore.description>
+
+
+  <!-- Autonomous Core -->
+
+  <ATR_AutonomousCore.label>Автономне ядро</ATR_AutonomousCore.label>
+  <ATR_AutonomousCore.description>Це ядро повністю пов'язане з автономним інтелектом. Все, з чого складається інтелект, надійно зберігається в межах цього ядра, з якого воно здатне здійснювати контроль над рештою шасі.</ATR_AutonomousCore.description>
+
+
+  <!-- SkyMind Receiver Core -->
+
+  <ATR_ReceiverCore.label>Сердечник приймача</ATR_ReceiverCore.label>
+  <ATR_ReceiverCore.description>Це ядро пов'язане з шасі з усіма основними функціями, делегованими протоколам зв'язку та дистанційного керування. У цьому ядрі немає інтелекту, але будь-який пов'язаний інтелект може визначити свою волю через нього.</ATR_ReceiverCore.description>
+
+
+  <!-- SkyMind Receiver -->
+
+  <ATR_SkyMindReceiver.label>SkyMind Приймач</ATR_SkyMindReceiver.label>
+  <ATR_SkyMindReceiver.description>Цей пристрій встановлюється безпосередньо в мозок, і повністю перекриває нейронну мережу суб'єкта, перетворюючи їх в порожню лушпиння для управління зовнішньою силою. У зв'язку зі складністю пристрою і властивою йому складністю контролю органічної речовини, цей пристрій має схильність до сильного горіння при руйнуванні. \n\nБагато сил використовували це на свою користь, щоб знищити сурогатів, а не дозволити їм потрапити до ворожих рук.</ATR_SkyMindReceiver.description>
+
+
+  <!-- SkyMind Transceiver -->
+
+  <ATR_SkyMindTransceiver.label>SkyMind Приймач</ATR_SkyMindTransceiver.label>
+  <ATR_SkyMindTransceiver.description>Цей пристрій встановлюється безпосередньо в мозок, дозволяючи суб'єкту вільно взаємодіяти з мережею SkyMind. Успішна імплантація або видалення цього імплантату не має серйозних наслідків.</ATR_SkyMindTransceiver.description>
+
+
+</LanguageData>

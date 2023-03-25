@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_InternalCorePump.label>Насос теплоносія</ATR_InternalCorePump.label>
+  <ATR_MechanicalHeatsink.label>Лівий радіатор</ATR_MechanicalHeatsink.label>
+  <ATR_InternalBattery.label>Батарея</ATR_InternalBattery.label>
+  <ATR_MechaniteStorage.label>зберігання механіту</ATR_MechaniteStorage.label>
+  <ATR_InternalGenerator.label>Генератор</ATR_InternalGenerator.label>
+
+
+</LanguageData>

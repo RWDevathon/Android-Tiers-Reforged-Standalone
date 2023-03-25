@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_PartDecay.label>частина, що розпадається,</ATR_PartDecay.label>
+  <ATR_PartDecay.description>Ця частина цієї одиниці зазнала значного розпаду і виступає субоптимально. Для полегшення цього потрібен ремонт.</ATR_PartDecay.description>
+  <ATR_PartDecay.labelNoun>Частина, що розпадається,</ATR_PartDecay.labelNoun>
+
+  <ATR_RustedPart.label>іржава частина,</ATR_RustedPart.label>
+  <ATR_RustedPart.description>Ця частина проржавіла. Хоча він не працює помітно гірше, дуже неприємно бачити, чути та використовувати. Для полегшення цього потрібен ремонт.</ATR_RustedPart.description>
+  <ATR_RustedPart.labelNoun>іржава частина,</ATR_RustedPart.labelNoun>
+
+  <ATR_PowerLoss.label>часткове затемнення</ATR_PowerLoss.label>
+  <ATR_PowerLoss.description>Ця частина зазнала майже повної втрати потужності. Хоча деталь все ще дещо керована сусідніми частинами, вона серйозно погіршує функціональність і збільшує споживання енергії. Ремонт може полегшити це, але він пройде самостійно, так як механіти ремонтують систему.</ATR_PowerLoss.description>
+  <ATR_PowerLoss.labelNoun>часткове затемнення</ATR_PowerLoss.labelNoun>
+
+  <ATR_DamagedCore.label>пошкодження серцевини,</ATR_DamagedCore.label>
+  <ATR_DamagedCore.description>Ядро пам'яті цього агрегату зазнало внутрішніх фізичних пошкоджень і не працює на належному рівні. Це може призвести до додаткових тимчасових пошкоджень пам'яті та погіршення функціональності, доки її не буде відновлено.</ATR_DamagedCore.description>
+
+  <ATR_FailingCoolantValves.label>Виходять з ладу клапани теплоносія</ATR_FailingCoolantValves.label>
+  <ATR_FailingCoolantValves.description>Внутрішні клапани теплоносія цього агрегату деградують. Згодом шасі втратить здатність циркулювати охолоджуючу рідину, що призведе до серйозних перешкод для ремонту та ефективності охолодження до ремонту.</ATR_FailingCoolantValves.description>
+  <ATR_FailingCoolantValves.stages.0.label>Початковий</ATR_FailingCoolantValves.stages.0.label>
+  <ATR_FailingCoolantValves.stages.1.label>Незначні</ATR_FailingCoolantValves.stages.1.label>
+  <ATR_FailingCoolantValves.stages.2.label>Помірний</ATR_FailingCoolantValves.stages.2.label>
+  <ATR_FailingCoolantValves.stages.3.label>значний</ATR_FailingCoolantValves.stages.3.label>
+  <ATR_FailingCoolantValves.stages.4.label>Дуже</ATR_FailingCoolantValves.stages.4.label>
+
+  <ATR_RogueMechanites.label>Механіти-ізгої</ATR_RogueMechanites.label>
+  <ATR_RogueMechanites.description>Внутрішнє сховище механітів зазнало критичного провалу, а механіти декогерують і перешкоджають потоку теплоносія. Оскільки вони накопичуються в критичних регіонах і пошкоджують лінії теплоносія, вони можуть спричинити смертельний апаратний збій, якщо не відбудеться аварійний ремонт.</ATR_RogueMechanites.description>
+  <ATR_RogueMechanites.stages.0.label>висока злагодженість</ATR_RogueMechanites.stages.0.label>
+  <ATR_RogueMechanites.stages.1.label>помірна злагодженість</ATR_RogueMechanites.stages.1.label>
+  <ATR_RogueMechanites.stages.2.label>важка узгодженість</ATR_RogueMechanites.stages.2.label>
+  <ATR_RogueMechanites.stages.3.label>Фатальним</ATR_RogueMechanites.stages.3.label>
+
+  <ATR_MaintenanceCritical.label>критична цілісність</ATR_MaintenanceCritical.label>
+  <ATR_MaintenanceCritical.description>Цей агрегат страждає від критично поганого обслуговування і може зазнати спонтанних серйозних поломок або багатьох невеликих відмов. Відсутність технічного обслуговування також знижує загальну ефективність та здатність шасі ремонтувати себе.</ATR_MaintenanceCritical.description>
+  <ATR_MaintenanceCritical.labelNoun>критична вразливість</ATR_MaintenanceCritical.labelNoun>
+
+  <ATR_MaintenancePoor.label>погана цілісність,</ATR_MaintenancePoor.label>
+  <ATR_MaintenancePoor.description>Цей агрегат страждає від поганого обслуговування і може зазнати спонтанних невеликих відмов, якщо його занадто довго залишати без нагляду. Відсутність технічного обслуговування дещо знижує здатність шасі до ремонту себе.</ATR_MaintenancePoor.description>
+  <ATR_MaintenancePoor.labelNoun>незначна вразливість</ATR_MaintenancePoor.labelNoun>
+
+  <ATR_MaintenanceSatisfactory.label>висока цілісність</ATR_MaintenanceSatisfactory.label>
+  <ATR_MaintenanceSatisfactory.description>Цей агрегат отримує вигоду від правильного обслуговування і несприйнятливий до спонтанного виходу з ладу деталі. Доглянуте шасі вражає, трохи більше здатне впоратися з пошкодженнями і трохи більш енергоефективне.</ATR_MaintenanceSatisfactory.description>
+  <ATR_MaintenanceSatisfactory.labelNoun>підвищена стійкість,</ATR_MaintenanceSatisfactory.labelNoun>
+
+
+</LanguageData>

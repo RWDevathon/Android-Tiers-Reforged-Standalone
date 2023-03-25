@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneMineralUnit.label>мінеральна одиниця</ATR_DroneMineralUnit.label>
+  <ATR_DroneMineralUnit.labelPlural>Мінеральні агрегати</ATR_DroneMineralUnit.labelPlural>
+  <ATR_DroneMineralUnit.labelMale>чоловіча мінеральна одиниця</ATR_DroneMineralUnit.labelMale>
+  <ATR_DroneMineralUnit.labelMalePlural>чоловічі мінеральні одиниці</ATR_DroneMineralUnit.labelMalePlural>
+  <ATR_DroneMineralUnit.labelFemale>жіноча мінеральна одиниця</ATR_DroneMineralUnit.labelFemale>
+  <ATR_DroneMineralUnit.labelFemalePlural>жіночі мінеральні одиниці</ATR_DroneMineralUnit.labelFemalePlural>
+
+
+</LanguageData>

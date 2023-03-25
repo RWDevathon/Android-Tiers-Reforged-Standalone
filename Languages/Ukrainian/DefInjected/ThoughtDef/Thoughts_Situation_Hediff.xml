@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_ChronicAnnoyance.stages.0.label>несправна деталь</ATR_ChronicAnnoyance.stages.0.label>
+  <ATR_ChronicAnnoyance.stages.0.description>Одна з моїх частин - це страждання від тривалої неефективності. Як незручно.</ATR_ChronicAnnoyance.stages.0.description>
+  <ATR_ChronicAnnoyance.stages.1.label>дві дефектні деталі</ATR_ChronicAnnoyance.stages.1.label>
+  <ATR_ChronicAnnoyance.stages.1.description>Дві мої частини страждають від тривалої неефективності. Як дратує.</ATR_ChronicAnnoyance.stages.1.description>
+  <ATR_ChronicAnnoyance.stages.2.label>три дефектні деталі</ATR_ChronicAnnoyance.stages.2.label>
+  <ATR_ChronicAnnoyance.stages.2.description>Три мої частини страждають від тривалої неефективності. Це абсурд.</ATR_ChronicAnnoyance.stages.2.description>
+  <ATR_ChronicAnnoyance.stages.3.label>багато несправних деталей</ATR_ChronicAnnoyance.stages.3.label>
+  <ATR_ChronicAnnoyance.stages.3.description>Величезна кількість моїх частин неблагополучні! Це смішно - мені потрібен ремонт!</ATR_ChronicAnnoyance.stages.3.description>
+
+  <ATR_RustedPart.stages.0.label>Ржава частина</ATR_RustedPart.stages.0.label>
+  <ATR_RustedPart.stages.0.description>На моєму шасі є іржа. Це принизливо і принизливо.</ATR_RustedPart.stages.0.description>
+
+  <ATR_OverclockedThought.stages.0.label>Розігнан</ATR_OverclockedThought.stages.0.label>
+  <ATR_OverclockedThought.stages.0.description>Мій процесор працює з аномально високою тактовою частотою. Я відчуваю навантаження на своє обладнання.</ATR_OverclockedThought.stages.0.description>
+
+
+</LanguageData>

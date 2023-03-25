@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Needs -->
+
+  <ATR_EnergyNeed>Енергія</ATR_EnergyNeed>
+  <ATR_EnergyNeedDesc>Енергія - це кількість утримуваного заряду в одиниці. Якщо він потрапить в нуль, агрегат перейде в неефективний режим малої потужності. Якщо заряд не відновити, апаратне забезпечення з часом критично вийде з ладу, і агрегат перестане функціонувати.</ATR_EnergyNeedDesc>
+
+  <!-- Ritual Permissions -->
+
+  <ATR_DronesCannotParticipateInRituals>Трутні не можуть брати участь в ритуалах.</ATR_DronesCannotParticipateInRituals>
+
+  <!-- Prisoner Tab -->
+
+  <ATR_PrisonerDroneWarning>З дронами неможливо взаємодіяти. Використовуйте операції для перепрограмування (T1 Необхідні дослідження) або вимкніть.</ATR_PrisonerDroneWarning>
+  <ATR_SlaveDroneAlert>Трутні не повинні бути рабами! Ви страждаєте від безкоштовної помилки кожної галочки. Негайно перепрограмувати або ліквідувати цей дрон.</ATR_SlaveDroneAlert>
+
+  <!-- Maintenance Spot -->
+  <ATR_MaintenanceNeedRequired>Немає необхідності в обслуговуванні</ATR_MaintenanceNeedRequired>
+
+</LanguageData>

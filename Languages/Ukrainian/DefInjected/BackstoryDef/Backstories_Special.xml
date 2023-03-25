@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_NewbootChildhood.title>Механічна одиниця</ATR_NewbootChildhood.title>
+  <ATR_NewbootChildhood.titleShort>Одиниця</ATR_NewbootChildhood.titleShort>
+  <ATR_NewbootChildhood.baseDesc>{PAWN_nameDef} вперше прокинувся на цьому світі як свіжий інтелект.</ATR_NewbootChildhood.baseDesc>
+
+  <ATR_MechanicalArchotechChildhood.title>Архотех</ATR_MechanicalArchotechChildhood.title>
+  <ATR_MechanicalArchotechChildhood.titleShort>Архотех</ATR_MechanicalArchotechChildhood.titleShort>
+  <ATR_MechanicalArchotechChildhood.baseDesc>Невідомо, чи справді у архотехів дитинство, чи навіть у них є щось таке спрощене і базове, як дата створення. Як же тоді хтось міг стверджувати, що знає що-небудь про молодість такої істоти?</ATR_MechanicalArchotechChildhood.baseDesc>
+
+  <ATR_MechanicalArchotechAdulthood.title>Архотех</ATR_MechanicalArchotechAdulthood.title>
+  <ATR_MechanicalArchotechAdulthood.titleShort>Архотех</ATR_MechanicalArchotechAdulthood.titleShort>
+  <ATR_MechanicalArchotechAdulthood.baseDesc>Оповиті таємницею, архотехи залишаються одним з найменш зрозумілих явищ. Навіть найдосконаліші блискучі світи не в змозі осягнути навіть найосновніші атрибути архотех-цивілізації. Що ж тоді можна було б сказати про будь-якого індивіда такої цивілізації?</ATR_MechanicalArchotechAdulthood.baseDesc>
+
+
+</LanguageData>

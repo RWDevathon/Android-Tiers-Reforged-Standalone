@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Abomination -->
+
+  <ATR_FractalAbomination.label>Фрактальна гидота</ATR_FractalAbomination.label>
+  <ATR_FractalAbomination.description>Викривлені і жахливі результати повноцінного фрактального викривлення, гидоти - невблаганні вбивці і кошмарні істоти. Здатні і готові переслідувати будь-яку істоту, яка перетинає її шлях, їх відлуння криків прокляття є звичайним кормом для навіть блискучих світових засобів жахів. \n\nДля тих, хто не знає страху, або для дослідників архотехів, ці істоти представляють великий інтерес. Народжені і дають так звані фрактальні таблетки, гидоти тягнуться до архотех-пристроїв - часто збираються навколо особливо потужних артефактів. З цієї причини відомо, що морально корумповані археологи переслідують гидоти, щоб слідувати за ними до руїн архотеху, часто лише для того, щоб бути вбитими ним після прибуття.</ATR_FractalAbomination.description>
+  <ATR_FractalAbomination.tools.1.label>правий кулак</ATR_FractalAbomination.tools.1.label>
+  <ATR_FractalAbomination.tools.2.label>лівий кулак</ATR_FractalAbomination.tools.2.label>
+  <ATR_FractalAbomination.tools.3.label>голова</ATR_FractalAbomination.tools.3.label>
+  <ATR_FractalAbomination.tools.4.label>фрактальний ланс</ATR_FractalAbomination.tools.4.label>
+
+
+</LanguageData>

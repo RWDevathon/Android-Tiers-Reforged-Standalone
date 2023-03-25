@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Cybertech Arm -->
+
+  <ATR_Install_CybertechArm.label>Встановити кібертехнічку руку</ATR_Install_CybertechArm.label>
+  <ATR_Install_CybertechArm.description>Встановлює кібертехнологічну руку.</ATR_Install_CybertechArm.description>
+  <ATR_Install_CybertechArm.jobString>Встановлення кібертех-руки.</ATR_Install_CybertechArm.jobString>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_Install_CybertechLeg.label>Встановити кібертехнічну руку</ATR_Install_CybertechLeg.label>
+  <ATR_Install_CybertechLeg.description>Встановлює кібертехнічну ногу.</ATR_Install_CybertechLeg.description>
+  <ATR_Install_CybertechLeg.jobString>Встановлення кібертехнічну ногу.</ATR_Install_CybertechLeg.jobString>
+
+
+  <!-- Cybertech Visual Sensor -->
+
+  <ATR_Install_CybertechVisualSensor.label>Встановіть візуальний кібертехнічний датчик</ATR_Install_CybertechVisualSensor.label>
+  <ATR_Install_CybertechVisualSensor.description>Встановлює візуальний кібертехнічний датчик.</ATR_Install_CybertechVisualSensor.description>
+  <ATR_Install_CybertechVisualSensor.jobString>Встановити візуальний кібертехнічний датчик.</ATR_Install_CybertechVisualSensor.jobString>
+
+
+  <!-- Cybertech Audio Sensor -->
+
+  <ATR_Install_CybertechAudioSensor.label>Встановити кібертехнічний датчик слуху</ATR_Install_CybertechAudioSensor.label>
+  <ATR_Install_CybertechAudioSensor.description>Встановлює кібертехнічний датчик слуху.</ATR_Install_CybertechAudioSensor.description>
+  <ATR_Install_CybertechAudioSensor.jobString>Встановити кібертехнічний датчик слуху.</ATR_Install_CybertechAudioSensor.jobString>
+
+
+  <!-- Cybertech Heatsink -->
+
+  <ATR_Install_CybertechHeatsink.label>Встановити кібертехнічний радіатор</ATR_Install_CybertechHeatsink.label>
+  <ATR_Install_CybertechHeatsink.description>Встановлює кібертехнічний радіатор.</ATR_Install_CybertechHeatsink.description>
+  <ATR_Install_CybertechHeatsink.jobString>Встановити кібертехнічний радіатор.</ATR_Install_CybertechHeatsink.jobString>
+
+
+  <!-- Cybertech Coolant Pump -->
+
+  <ATR_Install_CybertechCoolantPump.label>Встановіть кібертехнічний насос охолоджуючої рідини</ATR_Install_CybertechCoolantPump.label>
+  <ATR_Install_CybertechCoolantPump.description>Встановлює кібертехнічний насос охолоджуючої рідини.</ATR_Install_CybertechCoolantPump.description>
+  <ATR_Install_CybertechCoolantPump.jobString>Встановіть кібертехнічний насос охолоджуючої рідини.</ATR_Install_CybertechCoolantPump.jobString>
+
+
+  <!-- Cybertech Battery -->
+
+  <ATR_Install_CybertechBattery.label>Встановіть кібертехнічний акамулятор</ATR_Install_CybertechBattery.label>
+  <ATR_Install_CybertechBattery.description>Встановлює кібертехнічний акамулятор.</ATR_Install_CybertechBattery.description>
+  <ATR_Install_CybertechBattery.jobString>Встановіти кібертехнічний акамулятор.</ATR_Install_CybertechBattery.jobString>
+
+
+  <!-- Cybertech Mechanite Storage -->
+
+  <ATR_Install_CybertechMechaniteStorage.label>Встановіть кібертехнічне сховище механіту</ATR_Install_CybertechMechaniteStorage.label>
+  <ATR_Install_CybertechMechaniteStorage.description>Встановлює кібертехнічне сховище механіту.</ATR_Install_CybertechMechaniteStorage.description>
+  <ATR_Install_CybertechMechaniteStorage.jobString>Встановіть кібертехнічне сховище механіту.</ATR_Install_CybertechMechaniteStorage.jobString>
+
+
+  <!-- Cybertech Reactor -->
+
+  <ATR_Install_CybertechReactor.label>Встановити кібертехнічний біо-реактор.</ATR_Install_CybertechReactor.label>
+  <ATR_Install_CybertechReactor.description>Встановлює кібертехнічний біо-реактор.</ATR_Install_CybertechReactor.description>
+  <ATR_Install_CybertechReactor.jobString>Встановити кібертехнічний біо-реактор.</ATR_Install_CybertechReactor.jobString>
+
+
+</LanguageData>

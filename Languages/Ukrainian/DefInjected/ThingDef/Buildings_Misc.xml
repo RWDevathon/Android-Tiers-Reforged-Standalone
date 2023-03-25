@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MaintenanceSpot.label>Mісце технічного обслуговування</ATR_MaintenanceSpot.label>
+  <ATR_MaintenanceSpot.description>Визначає місце для обслуговування. Механічні пішаки віддадуть перевагу обслуговуванню тут, і їх можна призначити певним підрозділам.</ATR_MaintenanceSpot.description>
+
+
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_NewbootAdulthood.title>Механічна одиниця</ATR_NewbootAdulthood.title>
+  <ATR_NewbootAdulthood.titleShort>Юніт</ATR_NewbootAdulthood.titleShort>
+  <ATR_NewbootAdulthood.baseDesc>{PAWN_nameDef} тільки пізнав цей світ, і був «народжений» членом цього суспільства. Майбутнє і невизначене, і не визначене для {PAWN_nameDef}.</ATR_NewbootAdulthood.baseDesc>
+
+
+</LanguageData>

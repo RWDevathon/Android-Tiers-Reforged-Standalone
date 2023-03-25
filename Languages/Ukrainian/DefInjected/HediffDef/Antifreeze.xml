@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Toxicated.label>Токсикація</ATR_Toxicated.label>
+  <ATR_Toxicated.description>Токсичні синтетичні сполуки в кровотоці, що викликають важкі дефекти здоров'я.</ATR_Toxicated.description>
+  <ATR_Toxicated.stages.0.label>Незначним</ATR_Toxicated.stages.0.label>
+  <ATR_Toxicated.stages.1.label>Незначні</ATR_Toxicated.stages.1.label>
+  <ATR_Toxicated.stages.2.label>Помірний</ATR_Toxicated.stages.2.label>
+  <ATR_Toxicated.stages.3.label>Значні</ATR_Toxicated.stages.3.label>
+  <ATR_Toxicated.stages.4.label>Критичні</ATR_Toxicated.stages.4.label>
+
+
+  <!-- HediffMechanical -->
+
+  <ATR_MechAntifreeze.label>Механітовий антифриз</ATR_MechAntifreeze.label>
+  <ATR_MechAntifreeze.description>Синтетична хімічна сполука призначена для зниження сприйнятливості ходової частини до несприятливої температури - позитивної і негативної. Небезпечно для органічного споживання.</ATR_MechAntifreeze.description>
+  <ATR_MechAntifreeze.stages.0.label>Незначним</ATR_MechAntifreeze.stages.0.label>
+  <ATR_MechAntifreeze.stages.1.label>Незначні</ATR_MechAntifreeze.stages.1.label>
+  <ATR_MechAntifreeze.stages.2.label>Помірний</ATR_MechAntifreeze.stages.2.label>
+  <ATR_MechAntifreeze.stages.3.label>Значний</ATR_MechAntifreeze.stages.3.label>
+  <ATR_MechAntifreeze.stages.4.label>Критичні</ATR_MechAntifreeze.stages.4.label>
+
+
+</LanguageData>

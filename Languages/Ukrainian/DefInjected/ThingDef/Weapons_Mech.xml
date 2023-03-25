@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Rotary Autocannon -->
+
+  <ATR_AutocannonShell.label>Оболонка автоматичної гармати</ATR_AutocannonShell.label>
+
+  <ATR_RotaryAutocannon.label>Роторна автопушка</ATR_RotaryAutocannon.label>
+  <ATR_RotaryAutocannon.description>Це масивна зброя, більша за всю людину, призначена для того, щоб збити навіть найбільших супротивників під шквал артилерійських снарядів прямої наводки. Обертові стволи, інтегровані з високоефективним магазином автозавантаження, забезпечують стійку скорострільність. \n\nТака зброя, що монтується тільки на масивну зброю війни, викликає питання: чи була така зброя винайдена для перемоги над мехами або були винайдені мехи для того, щоб нею володіти?</ATR_RotaryAutocannon.description>
+  <ATR_RotaryAutocannon.tools.0.label>ствол</ATR_RotaryAutocannon.tools.0.label>
+  <ATR_RotaryAutocannon.tools.1.label>Запас</ATR_RotaryAutocannon.tools.1.label>
+  <ATR_RotaryAutocannon.tools.2.label>Зчеплення</ATR_RotaryAutocannon.tools.2.label>
+
+
+  <!-- Rotary Shrapnelcannon -->
+
+  <ATR_ShrapnelcannonChunk.label>Шматок осколків</ATR_ShrapnelcannonChunk.label>
+
+  <ATR_RotaryShrapnelcannon.label>Роторна осколкова гармата</ATR_RotaryShrapnelcannon.label>
+  <ATR_RotaryShrapnelcannon.description>Це масивна зброя, більша за всю людину, призначена для подрібнення щільно набитих цілей шквалом осколків розміром з лаву. Обертові стволи, інтегровані з високоефективним магазином автозавантаження, забезпечують стійку скорострільність. \n\nТака зброя, що монтується тільки на масивну зброю війни, викликає питання: чи була така зброя винайдена для перемоги над мехами або були винайдені мехи для того, щоб нею володіти?</ATR_RotaryShrapnelcannon.description>
+  <ATR_RotaryShrapnelcannon.tools.0.label>ствол</ATR_RotaryShrapnelcannon.tools.0.label>
+  <ATR_RotaryShrapnelcannon.tools.1.label>Запас</ATR_RotaryShrapnelcannon.tools.1.label>
+  <ATR_RotaryShrapnelcannon.tools.2.label>Зчеплення</ATR_RotaryShrapnelcannon.tools.2.label>
+
+
+  <!-- Headhunter Cannon -->
+
+  <ATR_HeadhunterCannon.label>Гармата хедхантера</ATR_HeadhunterCannon.label>
+  <ATR_HeadhunterCannon.description>Ця масивна зброя, розміром з повноцінну людину, призначена для стрільби артилерійськими снарядами прямої стрільби великої дальності з точною точністю, щоб вийняти ключові цілі, перш ніж вони зможуть помститися. Маючи велику кількість внутрішніх компонентів автокорекції, ця зброя за своєю природою є танк-бустером. \n\nТака зброя, що монтується тільки на масивну зброю війни, викликає питання: чи була така зброя винайдена для перемоги над мехами або були винайдені мехи для того, щоб нею володіти?</ATR_HeadhunterCannon.description>
+  <ATR_HeadhunterCannon.tools.0.label>ствол</ATR_HeadhunterCannon.tools.0.label>
+  <ATR_HeadhunterCannon.tools.1.label>Запас</ATR_HeadhunterCannon.tools.1.label>
+  <ATR_HeadhunterCannon.tools.2.label>Зчеплення</ATR_HeadhunterCannon.tools.2.label>
+
+
+  <!-- Mech Poleaxe -->
+
+  <ATR_MechPoleaxe.label>Механічна сокира</ATR_MechPoleaxe.label>
+  <ATR_MechPoleaxe.description>Ця масивна зброя, розміром з повнолітню людину, служить точно такій же меті, якій служать її менші двоюрідні брати: закритися з ворогом і зламати їх. Звичайно, цей інструмент в ньому краще, ніж його предки - він виготовлений з тонких матеріалів блискучого класу і відточений до досконалості... і досить великий, щоб бризкати людям, а не потрібно колоти або різати. \n\nТака зброя, придатна для використання лише масивною зброєю війни, викликає питання: чи була така зброя винайдена для перемоги над мехами або були винайдені мехи для того, щоб нею володіти?</ATR_MechPoleaxe.description>
+  <ATR_MechPoleaxe.tools.0.label>Сплеск</ATR_MechPoleaxe.tools.0.label>
+  <ATR_MechPoleaxe.tools.1.label>сокира</ATR_MechPoleaxe.tools.1.label>
+  <ATR_MechPoleaxe.tools.2.label>молот</ATR_MechPoleaxe.tools.2.label>
+
+
+</LanguageData>

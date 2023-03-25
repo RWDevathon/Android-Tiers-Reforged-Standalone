@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneMineralUnit.label>мінеральна установка</ATR_DroneMineralUnit.label>
+  <ATR_DroneMineralUnit.description>Ці дрони повсюдно поширені в суспільствах андроїдів у життєдайних світах завдяки своїй спеціалізованій техніці, здатній видобувати мінерали з органічного матеріалу, щоб переробляти та кувати в сталь. Їх шалене споживання згаданої органічної речовини призвело до загальнопланетарних заборон на багато світів - і до того, що багато світів стали майже млявими, блукаючи андроїдними "скотарями", які беруть "стада" цих істот з планети на планету.</ATR_DroneMineralUnit.description>
+  <ATR_DroneMineralUnit.tools.0.label>голова</ATR_DroneMineralUnit.tools.0.label>
+
+
+</LanguageData>

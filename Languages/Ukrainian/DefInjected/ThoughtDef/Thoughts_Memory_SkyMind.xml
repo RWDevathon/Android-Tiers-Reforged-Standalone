@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_ConnectedSkyMindAttacked.stages.0.label>SkyMind зламано</ATR_ConnectedSkyMindAttacked.stages.0.label>
+  <ATR_ConnectedSkyMindAttacked.stages.0.description>Мережа SkyMind, до якої я підключився, була порушена! Я не відчуваю себе в безпеці.</ATR_ConnectedSkyMindAttacked.stages.0.description>
+
+  <ATR_AttackedViaSkyMind.stages.0.label>Безпосередньо зламаний</ATR_AttackedViaSkyMind.stages.0.label>
+  <ATR_AttackedViaSkyMind.stages.0.description>На мене подумки напали через порушення в мережі SkyMind, до якої я підключився! Я відчуваю себе порушеним - як я міг довіряти, що це безпечно?</ATR_AttackedViaSkyMind.stages.0.description>
+
+  <ATR_TrolledViaSkyMind.stages.0.label>Тролінг</ATR_TrolledViaSkyMind.stages.0.label>
+  <ATR_TrolledViaSkyMind.stages.0.description>Хакери пішли далеко не на шляху, щоб зламати мережу SkyMind, щоб просто заподіяти мені біль і образити! У кого є зухвалість зробити таку справу - і чому ми не могли її зупинити?</ATR_TrolledViaSkyMind.stages.0.description>
+
+  <ATR_SurrogatePuppetThought.stages.0.label>Убивче лялькарство</ATR_SurrogatePuppetThought.stages.0.label>
+  <ATR_SurrogatePuppetThought.stages.0.description>Розумна істота була перетворена колонією в маріонетку. Вони можуть виглядати однаково, але зараз немає інтелекту. Ми вбили їх і перетворили їхнє тіло на бездушне лушпиння.</ATR_SurrogatePuppetThought.stages.0.description>
+
+
+</LanguageData>

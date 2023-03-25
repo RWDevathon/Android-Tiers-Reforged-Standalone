@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_RegenOrganic.label>Регенерація органіки</ATR_RegenOrganic.label>
+  <ATR_RegenOrganic.description>Спеціалізовані механіти займаються ремонтом і зміцненням пошкоджених частин кузова.</ATR_RegenOrganic.description>
+  <ATR_RegenOrganic.stages.0.label>Незначним</ATR_RegenOrganic.stages.0.label>
+  <ATR_RegenOrganic.stages.1.label>Незначні</ATR_RegenOrganic.stages.1.label>
+  <ATR_RegenOrganic.stages.2.label>Помірний</ATR_RegenOrganic.stages.2.label>
+  <ATR_RegenOrganic.stages.3.label>Значний</ATR_RegenOrganic.stages.3.label>
+  <ATR_RegenOrganic.stages.4.label>Пік</ATR_RegenOrganic.stages.4.label>
+
+
+  <!-- HediffMechanical -->
+
+  <ATR_RegenMechanical.label>механічна регенерація</ATR_RegenMechanical.label>
+  <ATR_RegenMechanical.description>Спеціально сконструйовані механіти - це ремонт і зміцнення пошкоджених ділянок ходової частини.</ATR_RegenMechanical.description>
+
+
+</LanguageData>

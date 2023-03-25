@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechAdulthoodRuthlessEnforcer.title>Надмірно завзятий правоохоронець</ATR_MechAdulthoodRuthlessEnforcer.title>
+  <ATR_MechAdulthoodRuthlessEnforcer.titleShort>Правоохоронець</ATR_MechAdulthoodRuthlessEnforcer.titleShort>
+  <ATR_MechAdulthoodRuthlessEnforcer.baseDesc>{PAWN_nameDef} був правоохоронцем Urbworld для однієї з великих корпорацій. {PAWN_pronoun} був занадто грубим і готовим до посади, і замість цього працював охоронцем банди. {PAWN_nameDef} однак виявився занадто явним для них і вирішив залишити планету позаду.</ATR_MechAdulthoodRuthlessEnforcer.baseDesc>
+
+
+</LanguageData>

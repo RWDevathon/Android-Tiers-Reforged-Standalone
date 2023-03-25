@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Make_ChemfuelFromChemCapsule.label>синтезувати хімпаливо з хімічних капсул</ATR_Make_ChemfuelFromChemCapsule.label>
+  <ATR_Make_ChemfuelFromChemCapsule.description>Зробіть партію хімпалива шляхом переробки сировинних ресурсів у хімічних капсулах.</ATR_Make_ChemfuelFromChemCapsule.description>
+  <ATR_Make_ChemfuelFromChemCapsule.jobString>Рафінування хімпалива з капсул.</ATR_Make_ChemfuelFromChemCapsule.jobString>
+
+  <ATR_Make_NeutroamineFromChemCapsule.label>синтезувати нейтроамін з хімічних капсул,</ATR_Make_NeutroamineFromChemCapsule.label>
+  <ATR_Make_NeutroamineFromChemCapsule.description>Зробіть партію нейтроаміну, рафінуючи сировинні ресурси в хімічних капсулах.</ATR_Make_NeutroamineFromChemCapsule.description>
+  <ATR_Make_NeutroamineFromChemCapsule.jobString>Рафінування нейтроаміну з капсул.</ATR_Make_NeutroamineFromChemCapsule.jobString>
+
+  <ATR_Make_NutritionBlockFromSolutionAndCapsules.label>стабілізувати живильний розчин за допомогою хімічних капсул,</ATR_Make_NutritionBlockFromSolutionAndCapsules.label>
+  <ATR_Make_NutritionBlockFromSolutionAndCapsules.description>Роблять партію стабілізованих блоків живлення шляхом рафінування живильного розчину хімічними капсулами. Це трудомістке завдання.</ATR_Make_NutritionBlockFromSolutionAndCapsules.description>
+  <ATR_Make_NutritionBlockFromSolutionAndCapsules.jobString>Стабілізуючий живильний розчин за допомогою капсул.</ATR_Make_NutritionBlockFromSolutionAndCapsules.jobString>
+
+
+</LanguageData>

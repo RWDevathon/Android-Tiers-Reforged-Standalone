@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_FractalLance.label>фрактальне викривлення</ATR_FractalLance.label>
+  <ATR_FractalLance.description>Рана, яка постійно деформується і скручується фрактальною енергією.</ATR_FractalLance.description>
+  <ATR_FractalLance.comps.1.labelTendedWell>Стабілізований</ATR_FractalLance.comps.1.labelTendedWell>
+  <ATR_FractalLance.comps.1.labelTendedWellInner>Стабілізований</ATR_FractalLance.comps.1.labelTendedWellInner>
+  <ATR_FractalLance.comps.1.labelSolidTendedWell>Оселилися</ATR_FractalLance.comps.1.labelSolidTendedWell>
+  <ATR_FractalLance.injuryProps.destroyedLabel>Викривлення розірване</ATR_FractalLance.injuryProps.destroyedLabel>
+  <ATR_FractalLance.injuryProps.destroyedOutLabel>Деформація подрібнена</ATR_FractalLance.injuryProps.destroyedOutLabel>
+  <ATR_FractalLance.labelNoun>болісна рана, викривлена фрактальною енергією</ATR_FractalLance.labelNoun>
+
+
+</LanguageData>

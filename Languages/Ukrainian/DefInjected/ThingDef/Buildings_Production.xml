@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechanicalAssemblyPod.label>Механічна складальна скринька</ATR_MechanicalAssemblyPod.label>
+  <ATR_MechanicalAssemblyPod.description>Скринька, призначена для формування себе для формування шасі та складання всіх необхідних деталей для андроїдів та механічних тварин.</ATR_MechanicalAssemblyPod.description>
+
+  <ATR_MechPartWorkbench.label>Механічні деталі верстата</ATR_MechPartWorkbench.label>
+  <ATR_MechPartWorkbench.description>Верстак, який вміщує все обладнання, необхідне для виготовлення різноманітних запасних частин Android.</ATR_MechPartWorkbench.description>
+
+
+</LanguageData>

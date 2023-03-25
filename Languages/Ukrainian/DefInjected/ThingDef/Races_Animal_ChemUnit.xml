@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneChemUnit.label>Блок хімічної обробки</ATR_DroneChemUnit.label>
+  <ATR_DroneChemUnit.description>Вузькоспеціалізований складний автономний дрон, здатний ідентифікувати, шукати та поглинати біологічну речовину для переробки в синтетичний хімічний попередник нейтроаміну або хімпалива. Порядок операцій процесу добре піддавався формуванню машини у вигляді маленької пташки, причому продукт виводився у вигляді самозбереженої яйцеподібної капсули. Крила чисто косметичні.</ATR_DroneChemUnit.description>
+  <ATR_DroneChemUnit.tools.0.label>голова</ATR_DroneChemUnit.tools.0.label>
+
+
+</LanguageData>

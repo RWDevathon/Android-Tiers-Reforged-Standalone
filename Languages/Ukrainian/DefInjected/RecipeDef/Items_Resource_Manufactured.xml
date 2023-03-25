@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- AI Persona Core Recipe -->
+
+  <ATR_MakeAIPersonaCore.label>Зробіть ядро персони АІ</ATR_MakeAIPersonaCore.label>
+  <ATR_MakeAIPersonaCore.description>Створіть складне ядро АІ, здатне до розумності.</ATR_MakeAIPersonaCore.description>
+  <ATR_MakeAIPersonaCore.jobString>Створення ядра AI</ATR_MakeAIPersonaCore.jobString>
+
+
+</LanguageData>

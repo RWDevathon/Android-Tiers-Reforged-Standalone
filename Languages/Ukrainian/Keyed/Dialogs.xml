@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_SkyMindDisconnectionRisk>Відключення від мережі SkyMind, поки триває операція, призведе до важких наслідків. Пошкодження пам'яті різного ступеня гарантовано при виникненні неправильного відключення.</ATR_SkyMindDisconnectionRisk>
+
+  <ATR_ResurrectionSuccessful>механічний вузол {0} був успішно відновлений до мінімальної потужності. Агрегат повинен перезавантажитися, перш ніж повернутися до повного функціоналу.</ATR_ResurrectionSuccessful>
+  <ATR_ResurrectionFailedInvalidPawn>The target, {0},не був відновлений, оскільки не є дійсною мішенню для воскресіння таким чином. Мішені повинні бути механічними (AT Повторні налаштування).</ATR_ResurrectionFailedInvalidPawn>
+  <ATR_ResurrectionFailedDroneOnly>Набір для воскресіння дронів можна використовувати лише на дронах або тваринах, і {0} вважається повністю автономним механічним агрегатом!</ATR_ResurrectionFailedDroneOnly>
+
+  <ATR_InsufficientPoints>Принаймні {0} Для цієї операції потрібні бали.</ATR_InsufficientPoints>
+
+  <!-- Skill Upgrades -->
+  <ATR_PawnBeingModified>Навички та пристрасті до: </ATR_PawnBeingModified>
+  <ATR_CurrentXP>ХР, необхідна для наступного рівня: </ATR_CurrentXP>
+  <ATR_TodaysXP> XP Сьогодні: </ATR_TodaysXP>
+
+  <ATR_AddSkillPoints>Введення точок в {0}</ATR_AddSkillPoints>
+  <ATR_AvailableSkillPoints>Доступні бали : {0}</ATR_AvailableSkillPoints>
+  <ATR_AvailableSkillPointsDesc>Примітка: ін'єкція інсайту залежить від навчальних можливостей людини, а також до щоденних меж розуміння. Ін'єкція пристрасті підпорядковується індивідуальним здібностям до навчання, а також вже існуючим пристрастям. Надмірна стимуляція неефективна.</ATR_AvailableSkillPointsDesc>
+
+  <!-- Hacking Interface -->
+  <ATR_HackInterfaceTitle>В очікуванні директиви кібервійни.</ATR_HackInterfaceTitle>
+  <ATR_ConfirmHack>Авторизація цільової операції?</ATR_ConfirmHack>
+  <ATR_ConfirmhackDesc>Всім хакерам притаманні ризики. Невдача може означати дипломатичну шкоду, автоматичну активацію контрзаходів або певну форму помсти.</ATR_ConfirmhackDesc>
+
+  <ATR_HackOpCost>Вартість: {0}</ATR_HackOpCost>
+  <ATR_SuccessChance>Передбачуваний шанс успіху: {0}%</ATR_SuccessChance>
+
+  <ATR_AvailableHackingPoints>Доступні бали: {0}. Штраф за час: {1}.</ATR_AvailableHackingPoints>
+  <ATR_AvailableHackingPointsDesc>Примітка: Вартість ініціювання злому - це функція базової вартості операції, помножена на час з моменту останнього злому (штраф за часте використання).\nПрисвячування більшої кількості балів збільшує ймовірність успіху.</ATR_AvailableHackingPointsDesc>
+
+  <!-- Guidance Hack -->
+  <ATR_GuidanceHack>Примусове перенаправлення системи наведення фракції</ATR_GuidanceHack>
+  <ATR_GuidanceHackDesc>Спробуйте зламати систему наведення фракції, намагаючись перенаправити щось на цю карту. Немає гарантії, який вміст того, що буде відправлено. Це може бути припаси, торговий корабель, полонений - або передача ворожого гарнізону.</ATR_GuidanceHackDesc>
+
+  <!-- Propaganda Hack -->
+  <ATR_PropagandaHack>Розгортання цілеспрямованої позитивно-пропагандистської кампанії</ATR_PropagandaHack>
+  <ATR_PropagandaHackDesc>Спробуйте провести цілеспрямовану і конкретно цілеспрямовану кампанію, щоб вплинути на ключових членів цільової фракції на користь колонії. Через непрозорий характер політичного впливу точний результат невідомий.</ATR_PropagandaHackDesc>
+
+  <!-- Espionage Hack -->
+  <ATR_EspionageHack>Ініціюйте шпигунську кампанію для придбання квесту</ATR_EspionageHack>
+  <ATR_EspionageHackDesc>Спроба використати набуту розвідувальну інсайт для виявлення перспективного квесту з фонової розвідки фракції. Він гарантовано дасть уявлення про якусь форму заначки, але не з певної фракції чи групи.</ATR_EspionageHackDesc>
+
+  <!-- Disruptor Hack -->
+  <ATR_DisruptorHack>Розпочати DDOS-атаку на місцеві ворожі підрозділи по всій карті</ATR_DisruptorHack>
+  <ATR_DisruptorHackDesc>Спроба локалізованої DDOS-атаки на пішаків певної фракції, здатних до SkyMind, які присутні на цій карті.</ATR_DisruptorHackDesc>
+
+  <!-- Initialize Mind Dialog/Keys -->
+  <ATR_InitializeMindTitle>Механічний вузол потребує ініціалізації</ATR_InitializeMindTitle>
+  <ATR_InitializeMindDesc>Нещодавно підключений основний інтерфейс готовий містити інтелект, але ще не ініціалізував його. Інтелект може бути переданий від будь-яких пішаків, пов'язаних зі SkyMind, якщо це можливо, або може бути дозволено формувати особистість самостійно.</ATR_InitializeMindDesc>
+
+  <ATR_SkyMindInitialization>Ініціалізація зі SkyMind</ATR_SkyMindInitialization>
+  <ATR_AutomaticInitialization>Автоматична ініціалізація</ATR_AutomaticInitialization>
+
+  <!-- PawnType Restriction Dialog -->
+  <ATR_RestrictedPawnTypes>Налаштування обмеження</ATR_RestrictedPawnTypes>
+
+  <ATR_PawnTypeNone>Ніхто</ATR_PawnTypeNone>
+  <ATR_PawnTypeNoneTooltip>Ніякі пішаки не можуть цим скористатися</ATR_PawnTypeNoneTooltip>
+  <ATR_PawnTypeDrone>Дрони</ATR_PawnTypeDrone>
+  <ATR_PawnTypeDroneTooltip>Використовувати це можуть тільки дрони</ATR_PawnTypeDroneTooltip>
+  <ATR_PawnTypeAndroid>Андроїд</ATR_PawnTypeAndroid>
+  <ATR_PawnTypeAndroidTooltip>Тільки андроїди можуть використовувати це</ATR_PawnTypeAndroidTooltip>
+  <ATR_PawnTypeMechanical>Механічні</ATR_PawnTypeMechanical>
+  <ATR_PawnTypeMechanicalTooltip>Тільки андроїди та дрони можуть використовувати це</ATR_PawnTypeMechanicalTooltip>
+  <ATR_PawnTypeOrganic>Органі́к</ATR_PawnTypeOrganic>
+  <ATR_PawnTypeOrganicTooltip>Використовувати цю може тільки органіка</ATR_PawnTypeOrganicTooltip>
+  <ATR_PawnTypeNonAI>Ні-AI</ATR_PawnTypeNonAI>
+  <ATR_PawnTypeNonAITooltip>Використовувати це може тільки органіка і трутні</ATR_PawnTypeNonAITooltip>
+  <ATR_PawnTypeAutonomous>Автономний</ATR_PawnTypeAutonomous>
+  <ATR_PawnTypeAutonomousTooltip>Тільки андроїди та органіка можуть використовувати це</ATR_PawnTypeAutonomousTooltip>
+  <ATR_PawnTypeAll>Усі</ATR_PawnTypeAll>
+  <ATR_PawnTypeAllTooltip>Всі пішаки можуть використовувати це</ATR_PawnTypeAllTooltip>
+
+  <!-- Maintenance Level Setter Dialog -->
+  <ATR_SetTargetMaintenanceLevel>Бажаний рівень обслуговування: {0}%</ATR_SetTargetMaintenanceLevel>
+
+</LanguageData>

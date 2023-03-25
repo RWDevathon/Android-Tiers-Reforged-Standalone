@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- This is the item that goes into the racedef's namegenerator
+        Example - <nameGenerator>ATR_AndroidMaleNames</nameGenerator> -->
+
+  <ATR_AndroidMaleNames.rulePack.rulesStrings.0>r_name(p=12)->[ATR_Male] [ATR_IDs]</ATR_AndroidMaleNames.rulePack.rulesStrings.0>
+  <ATR_AndroidFemaleNames.rulePack.rulesStrings.0>r_name(p=12)->[ATR_Female] [ATR_IDs]</ATR_AndroidFemaleNames.rulePack.rulesStrings.0>
+  <ATR_AndroidNoneNames.rulePack.rulesStrings.0>r_name(p=12)->[ATR_None] [ATR_IDs]</ATR_AndroidNoneNames.rulePack.rulesStrings.0>
+  <ATR_DroneNoneNames.rulePack.rulesStrings.0>r_name(p=12)->[ATR_Drone] [ATR_IDs]</ATR_DroneNoneNames.rulePack.rulesStrings.0>
+  <ATR_Archotechs.rulePack.rulesStrings.0>name->[ArchotechFirstNames] Lo' [ArchotechLastNames]</ATR_Archotechs.rulePack.rulesStrings.0>
+
+
+</LanguageData>

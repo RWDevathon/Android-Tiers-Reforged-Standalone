@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- SkyMind Towers Abstract -->
+
+  <ATR_SkyMindRelay.label>Релейна вежа SkyMind</ATR_SkyMindRelay.label>
+  <ATR_SkyMindRelay.description>Ця вежа діє як реле для пристроїв, підключених до SkyMind, для зв'язку та роботи. Такі вежі необхідні для операцій сурогату або SkyMind - ця вежа має ємність для трьох безперервних з'єднань пристроїв.</ATR_SkyMindRelay.description>
+
+  <ATR_SkyMindNetwork.label>Мережева вежа SkyMind</ATR_SkyMindNetwork.label>
+  <ATR_SkyMindNetwork.description>Ця вежа діє як потужний мережевий хост для пристроїв, підключених до SkyMind, для зв'язку та роботи. Такі вежі необхідні для сурогатних або SkyMind операцій - ця вежа має ємність для п'ятнадцяти безперервних з'єднань пристроїв.</ATR_SkyMindNetwork.description>
+
+
+</LanguageData>

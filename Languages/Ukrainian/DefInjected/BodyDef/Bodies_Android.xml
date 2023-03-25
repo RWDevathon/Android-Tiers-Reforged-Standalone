@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_AndroidBody.label>Андроїд</ATR_AndroidBody.label>
+  <ATR_AndroidBody.corePart.parts.3.customLabel>Лівий радіатор</ATR_AndroidBody.corePart.parts.3.customLabel>
+  <ATR_AndroidBody.corePart.parts.4.customLabel>Правий радіатор</ATR_AndroidBody.corePart.parts.4.customLabel>
+  <ATR_AndroidBody.corePart.parts.7.parts.0.parts.3.customLabel>Лівий зоровий датчик</ATR_AndroidBody.corePart.parts.7.parts.0.parts.3.customLabel>
+  <ATR_AndroidBody.corePart.parts.7.parts.0.parts.4.customLabel>Правий зоровий датчик</ATR_AndroidBody.corePart.parts.7.parts.0.parts.4.customLabel>
+  <ATR_AndroidBody.corePart.parts.7.parts.0.parts.5.customLabel>Лівий звуковий датчик</ATR_AndroidBody.corePart.parts.7.parts.0.parts.5.customLabel>
+  <ATR_AndroidBody.corePart.parts.7.parts.0.parts.6.customLabel>Правий звуковий датчик</ATR_AndroidBody.corePart.parts.7.parts.0.parts.6.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.customLabel>Ліве плече</ATR_AndroidBody.corePart.parts.8.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.customLabel>Ліва рука</ATR_AndroidBody.corePart.parts.8.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.customLabel>Ліва рука</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>лівий мізинець</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>безіменний палець лівої руки</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>середній палець лівої руки</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>вказівний палець лівої руки</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>
+  <ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.4.customLabel>великий палець лівої руки</ATR_AndroidBody.corePart.parts.8.parts.0.parts.0.parts.4.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.customLabel>Праве плече</ATR_AndroidBody.corePart.parts.9.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.customLabel>Права рука</ATR_AndroidBody.corePart.parts.9.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.customLabel>Права рука</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.0.customLabel>правий мізинець</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.1.customLabel>безіменний палець правої руки</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.1.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.2.customLabel>середній палець правої руки</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.2.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.3.customLabel>вказівний палець правої руки</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.3.customLabel>
+  <ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.4.customLabel>великий палець правої руки</ATR_AndroidBody.corePart.parts.9.parts.0.parts.0.parts.4.customLabel>
+  <ATR_AndroidBody.corePart.parts.11.customLabel>Ліва нога</ATR_AndroidBody.corePart.parts.11.customLabel>
+  <ATR_AndroidBody.corePart.parts.11.parts.0.customLabel>Ліва ступня</ATR_AndroidBody.corePart.parts.11.parts.0.customLabel>
+  <ATR_AndroidBody.corePart.parts.12.customLabel>Права нога</ATR_AndroidBody.corePart.parts.12.customLabel>
+  <ATR_AndroidBody.corePart.parts.12.parts.0.customLabel>Права ступня</ATR_AndroidBody.corePart.parts.12.parts.0.customLabel>
+
+
+</LanguageData>

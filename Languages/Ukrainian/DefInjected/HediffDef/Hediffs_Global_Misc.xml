@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_CoolantLoss.label>Втрата охолоджуючої рідини</ATR_CoolantLoss.label>
+  <ATR_CoolantLoss.description>Втрата охолоджувальної рідини в корпусі, що призводить до зниження потужності охолодження та втрати точного керування двигуном. Відсутність циркуляції перешкоджає належному функціонуванню реставраційних механізмів, що призводить до збільшення часу відновлення. \Пріоритезація забезпечує достатній потік охолоджувальної рідини для основних функцій до досягнення критичного рівня.</ATR_CoolantLoss.description>
+  <ATR_CoolantLoss.stages.0.label>Номінальна</ATR_CoolantLoss.stages.0.label>
+  <ATR_CoolantLoss.stages.1.label>Незначна</ATR_CoolantLoss.stages.1.label>
+  <ATR_CoolantLoss.stages.2.label>Помірна</ATR_CoolantLoss.stages.2.label>
+  <ATR_CoolantLoss.stages.3.label>Значна</ATR_CoolantLoss.stages.3.label>
+  <ATR_CoolantLoss.stages.4.label>Загрожує</ATR_CoolantLoss.stages.4.label>
+  <ATR_CoolantLoss.stages.5.label>Опасна</ATR_CoolantLoss.stages.5.label>
+  <ATR_CoolantLoss.stages.6.label>Критична</ATR_CoolantLoss.stages.6.label>
+
+  <ATR_Overheating.label>Перегрів</ATR_Overheating.label>
+  <ATR_Overheating.description>Небезпечні рівні збереження тепла в шасі. На незначних рівнях механічні агрегати можуть зменшити деяку високу функціональність потужності/тепла, щоб компенсувати вплив. На основних рівнях агрегат буде страждати від зростаючих збоїв системи. Якщо він перевищить критичний поріг, ядро відключиться, і агрегат загине.</ATR_Overheating.description>
+  <ATR_Overheating.stages.0.label>Номінальний</ATR_Overheating.stages.0.label>
+  <ATR_Overheating.stages.1.label>Непомітний</ATR_Overheating.stages.1.label>
+  <ATR_Overheating.stages.2.label>Незначні</ATR_Overheating.stages.2.label>
+  <ATR_Overheating.stages.3.label>Помірний</ATR_Overheating.stages.3.label>
+  <ATR_Overheating.stages.4.label>Значний</ATR_Overheating.stages.4.label>
+  <ATR_Overheating.stages.5.label>Критичний</ATR_Overheating.stages.5.label>
+
+  <ATR_MechanicalHypothermia.label>Гіпотермічна реакція</ATR_MechanicalHypothermia.label>
+  <ATR_MechanicalHypothermia.description>Хоча механічні частини не страждають від обмороження, як це робить органічна плоть, холод є екзистенційною загрозою для техніки. На критичних рівнях агрегат повинен зосередити всю теплогенерацію на внутрішніх системах - ефективно іммобілізуючи його - і розряджатися акумулятори з тривожною швидкістю при охолодженні.</ATR_MechanicalHypothermia.description>
+  <ATR_MechanicalHypothermia.stages.0.label>Незначнима</ATR_MechanicalHypothermia.stages.0.label>
+  <ATR_MechanicalHypothermia.stages.1.label>Незначна</ATR_MechanicalHypothermia.stages.1.label>
+  <ATR_MechanicalHypothermia.stages.2.label>Помірна</ATR_MechanicalHypothermia.stages.2.label>
+  <ATR_MechanicalHypothermia.stages.3.label>Значний</ATR_MechanicalHypothermia.stages.3.label>
+  <ATR_MechanicalHypothermia.stages.4.label>Загрожує</ATR_MechanicalHypothermia.stages.4.label>
+  <ATR_MechanicalHypothermia.stages.5.label>Критична</ATR_MechanicalHypothermia.stages.5.label>
+
+
+</LanguageData>

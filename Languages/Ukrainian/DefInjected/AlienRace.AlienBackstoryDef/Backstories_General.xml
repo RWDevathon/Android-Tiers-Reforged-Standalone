@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Android General -->
+
+  <ATR_MechAdulthoodGlitterworldCleaner.title>Прибиральник</ATR_MechAdulthoodGlitterworldCleaner.title>
+  <ATR_MechAdulthoodGlitterworldCleaner.titleShort>Прибиральник</ATR_MechAdulthoodGlitterworldCleaner.titleShort>
+  <ATR_MechAdulthoodGlitterworldCleaner.baseDesc>{PAWN_nameDef} раніше був чистішим андроїдом на планеті блискучого світу, {PAWN_pronoun} ніколи не було поставлено завдання ні з чим занадто складним.</ATR_MechAdulthoodGlitterworldCleaner.baseDesc>
+
+  <ATR_MechAdulthoodShocktrooper.title>Десантник</ATR_MechAdulthoodShocktrooper.title>
+  <ATR_MechAdulthoodShocktrooper.titleShort>Солдат</ATR_MechAdulthoodShocktrooper.titleShort>
+  <ATR_MechAdulthoodShocktrooper.baseDesc>{PAWN_nameDef} раніше входив до складу батальйону спеціалістів, виготовлених ударними військами андроїд-солдатів, запрограмованих на вбивство з холодною ефективністю, зберігаючи при цьому свавілля.</ATR_MechAdulthoodShocktrooper.baseDesc>
+
+  <ATR_MechAdulthoodSecretService.title>Спеціальний агент</ATR_MechAdulthoodSecretService.title>
+  <ATR_MechAdulthoodSecretService.titleShort>Агент</ATR_MechAdulthoodSecretService.titleShort>
+  <ATR_MechAdulthoodSecretService.baseDesc>{PAWN_nameDef} був куплений спеціально для захисту високопоставлених чиновників, таких як диктатори, члени королівських сімей і члени кабінету. Вони були навчені швидко реагувати на бойові дії, коли це необхідно, і надавати медичну допомогу на місці.</ATR_MechAdulthoodSecretService.baseDesc>
+
+  <ATR_MechAdulthoodCoPilot.title>Пілот космічного літака</ATR_MechAdulthoodCoPilot.title>
+  <ATR_MechAdulthoodCoPilot.titleShort>Пілот</ATR_MechAdulthoodCoPilot.titleShort>
+  <ATR_MechAdulthoodCoPilot.baseDesc>Щоб допомогти пілотам-людям під час орбітальних боїв {PAWN_nameDef} був куплений в складі лінійки військових андроїдів. Виконуючи обов'язки механічного другого пілота для плавзасобу, {PAWN_pronoun} був навчений точно вести вогонь з космічних літаків на борту гармат по кораблях противника.</ATR_MechAdulthoodCoPilot.baseDesc>
+
+  <ATR_MechAdulthoodShipCommander.title>Командир зорельота</ATR_MechAdulthoodShipCommander.title>
+  <ATR_MechAdulthoodShipCommander.titleShort>Командир</ATR_MechAdulthoodShipCommander.titleShort>
+  <ATR_MechAdulthoodShipCommander.baseDesc>{PAWN_nameDef} був одним з трьох командирів на борту зорельота колонії, посада, яка надзвичайно рідко доручалася андроїдам. {PAWN_pronoun} наглядав би за всіма функціями корабля, залишаючись неспаним, коли решта екіпажу вступила в сплячку.</ATR_MechAdulthoodShipCommander.baseDesc>
+
+  <ATR_MechAdulthoodRiotPolice.title>Офіцер спец. служб</ATR_MechAdulthoodRiotPolice.title>
+  <ATR_MechAdulthoodRiotPolice.titleShort>Офіцер</ATR_MechAdulthoodRiotPolice.titleShort>
+  <ATR_MechAdulthoodRiotPolice.baseDesc>В рамках унікальної лінії правоохоронних органів, оснащеної важкою рамою, {PAWN_nameDef} було поставлено завдання контролювати заворушення, які вийшли з-під контролю будь-якими необхідними засобами.</ATR_MechAdulthoodRiotPolice.baseDesc>
+
+  <ATR_MechAdulthoodMercenaryBodyguard.title>Охоронця</ATR_MechAdulthoodMercenaryBodyguard.title>
+  <ATR_MechAdulthoodMercenaryBodyguard.titleShort>Охоронця</ATR_MechAdulthoodMercenaryBodyguard.titleShort>
+  <ATR_MechAdulthoodMercenaryBodyguard.baseDesc>Як охоронець андроїд за наймом, {PAWN_nameDef} працював з усіма типами клієнтів, починаючи від підприємців урбосвіті і закінчуючи кримінальними авторитетами низького рівня. {PAWN_pronoun} був побудований спеціально для того, щоб захистити їх будь-якою ціною.</ATR_MechAdulthoodMercenaryBodyguard.baseDesc>
+
+  <ATR_MechAdulthoodInjuredSoldier.title>Зламаний солдат</ATR_MechAdulthoodInjuredSoldier.title>
+  <ATR_MechAdulthoodInjuredSoldier.titleShort>Солдат</ATR_MechAdulthoodInjuredSoldier.titleShort>
+  <ATR_MechAdulthoodInjuredSoldier.baseDesc>{PAWN_nameDef} Колись входив до складу ескадри висококваліфікованих солдатів-андроїдів, що відправлялися тільки на найнебезпечніші місії. Остання місія закінчилася залпом артилерійського вогню, який знищив майже весь загін. {PAWN_nameDef} був одним з небагатьох неушкоджених тих, хто вижив, які втекли.</ATR_MechAdulthoodInjuredSoldier.baseDesc>
+
+  <ATR_MechAdulthoodGourmetChef.title>Шеф-кухар для гурманів</ATR_MechAdulthoodGourmetChef.title>
+  <ATR_MechAdulthoodGourmetChef.titleShort>Кухар</ATR_MechAdulthoodGourmetChef.titleShort>
+  <ATR_MechAdulthoodGourmetChef.baseDesc>По всій його рідній планеті {PAWN_nameDef} відомий своїми вишуканими стравами, де подають висококласну клієнтуру з усіх верств суспільства, кожна страва ідеально збалансована як логічно, так і естетично.</ATR_MechAdulthoodGourmetChef.baseDesc>
+
+  <ATR_MechAdulthoodCafeteriaCook.title>Шеф-кухар Урбсвіту</ATR_MechAdulthoodCafeteriaCook.title>
+  <ATR_MechAdulthoodCafeteriaCook.titleShort>Кухар</ATR_MechAdulthoodCafeteriaCook.titleShort>
+  <ATR_MechAdulthoodCafeteriaCook.baseDesc>{PAWN_nameDef} був власником відомої продовольчої станції UrbWorld. Відомий місцевим жителям як «Болти» {PAWN_pronoun} робили дешеві, прості страви, які на смак не були схожі на помиї.</ATR_MechAdulthoodCafeteriaCook.baseDesc>
+
+  <ATR_MechAdulthoodBartender.title>Бармен</ATR_MechAdulthoodBartender.title>
+  <ATR_MechAdulthoodBartender.titleShort>Бармен</ATR_MechAdulthoodBartender.titleShort>
+  <ATR_MechAdulthoodBartender.baseDesc>{PAWN_nameDef} працювали довгі години в барі, всю ніч обслуговуючи клієнтів їжею і напоями, зрідка розбиваючи бійки.</ATR_MechAdulthoodBartender.baseDesc>
+
+  <ATR_MechAdulthoodPrisonCook.title>Тюремний кухар</ATR_MechAdulthoodPrisonCook.title>
+  <ATR_MechAdulthoodPrisonCook.titleShort>Кухар</ATR_MechAdulthoodPrisonCook.titleShort>
+  <ATR_MechAdulthoodPrisonCook.baseDesc>Робота на частково автоматизованій тюремній станції, {PAWN_nameDef} було поставлено завдання виготовляти об'ємні обсяги неякісної їжі. Хоча їжа була огидною, вона була дуже ефективно зроблена і надзвичайно дешева.</ATR_MechAdulthoodPrisonCook.baseDesc>
+
+  <ATR_MechAdulthoodServantPet.title>Підвладна машина</ATR_MechAdulthoodServantPet.title>
+  <ATR_MechAdulthoodServantPet.titleShort>Підсервіент</ATR_MechAdulthoodServantPet.titleShort>
+  <ATR_MechAdulthoodServantPet.baseDesc>{PAWN_nameDef} був куплений сім'єю заможних людей, створений для того, щоб беззаперечно розважати і виконувати основну працю по дому. {PAWN_possessive} господарів лікували {PAWN_objective} як не що інше, як домашня тварина.</ATR_MechAdulthoodServantPet.baseDesc>
+
+  <ATR_MechAdulthoodSpaceMiner.title>Космічний шахтар</ATR_MechAdulthoodSpaceMiner.title>
+  <ATR_MechAdulthoodSpaceMiner.titleShort>Шахтар</ATR_MechAdulthoodSpaceMiner.titleShort>
+  <ATR_MechAdulthoodSpaceMiner.baseDesc>{PAWN_nameDef} служив у екіпажі корпорації з видобутку астероїдів з високими ставками. {PAWN_pronoun} віддавав перевагу виконанню небезпечних завдань і виходу у відкритий космос, тому {PAWN_possessive} Органічним товаришам по екіпажу не довелося. {PAWN_nameDef} earned grudging respect from corporate for minimizing work accidents.</ATR_MechAdulthoodSpaceMiner.baseDesc>
+
+  <ATR_MechAdulthoodTunnelMiner.title>Працівник тунелю</ATR_MechAdulthoodTunnelMiner.title>
+  <ATR_MechAdulthoodTunnelMiner.titleShort>Тунелер</ATR_MechAdulthoodTunnelMiner.titleShort>
+  <ATR_MechAdulthoodTunnelMiner.baseDesc>{PAWN_nameDef} допомагав розробляти великі підземні тунелі на печерних світах в якості підрядника. {PAWN_nameDef} отримав величезне задоволення від побудови міцних, стійких до печер мереж.</ATR_MechAdulthoodTunnelMiner.baseDesc>
+
+  <ATR_MechAdulthoodProspector.title>Земний старатель</ATR_MechAdulthoodProspector.title>
+  <ATR_MechAdulthoodProspector.titleShort>Старатель</ATR_MechAdulthoodProspector.titleShort>
+  <ATR_MechAdulthoodProspector.baseDesc>У складі групи механічних старателів, {PAWN_nameDef} був відправлений з планети на планету, виконуючи геологічний аналіз планет як для корпоративної, так і для цивільної клієнтури.</ATR_MechAdulthoodProspector.baseDesc>
+
+  <ATR_MechAdulthoodShipyardEngineer.title>Орбітальний інженер</ATR_MechAdulthoodShipyardEngineer.title>
+  <ATR_MechAdulthoodShipyardEngineer.titleShort>Інженер</ATR_MechAdulthoodShipyardEngineer.titleShort>
+  <ATR_MechAdulthoodShipyardEngineer.baseDesc>Робота на борту чисто механічної орбітальної верфі, {PAWN_nameDef} брав участь у будівництві всіляких суден, починаючи від невеликих перехоплювачів і закінчуючи неповороткими флагманами флоту.</ATR_MechAdulthoodShipyardEngineer.baseDesc>
+
+  <ATR_MechAdulthoodUrbworldArchitect.title>Архітектор андроїд</ATR_MechAdulthoodUrbworldArchitect.title>
+  <ATR_MechAdulthoodUrbworldArchitect.titleShort>Архітектор</ATR_MechAdulthoodUrbworldArchitect.titleShort>
+  <ATR_MechAdulthoodUrbworldArchitect.baseDesc>{PAWN_nameDef} був архітектором, який розробив креслення масових житлових рішень на їхньому urbworld. Креслення {PAWN_pronoun} складені були холодними, млявими і чисто функціональними, але вони були ефективними для житла мільярдів.</ATR_MechAdulthoodUrbworldArchitect.baseDesc>
+
+  <ATR_MechAdulthoodConstructionContractor.title>Будівельник</ATR_MechAdulthoodConstructionContractor.title>
+  <ATR_MechAdulthoodConstructionContractor.titleShort>Будівник</ATR_MechAdulthoodConstructionContractor.titleShort>
+  <ATR_MechAdulthoodConstructionContractor.baseDesc>{PAWN_nameDef} був підрядником будівництва, будував споруди всіх видів. Цивільні хмарочоси, військові фортеці та багаті бункери катаклізму – все це потребує сильних, здібних людей для їх будівництва.</ATR_MechAdulthoodConstructionContractor.baseDesc>
+
+  <ATR_MechAdulthoodHydroponicFarmer.title>Інженер з гідропоніки</ATR_MechAdulthoodHydroponicFarmer.title>
+  <ATR_MechAdulthoodHydroponicFarmer.titleShort>Інженер</ATR_MechAdulthoodHydroponicFarmer.titleShort>
+  <ATR_MechAdulthoodHydroponicFarmer.baseDesc>{PAWN_nameDef} обслуговувала, обслуговувала та збирала гідропоніку на борту міжзоряних суден. {PAWN_nameDef} користувався ізоляцією і свободою експериментувати з генетичними лініями рослин - навіть якщо вони незмінно виявлялися менш ефективними, ніж науково створені культури.</ATR_MechAdulthoodHydroponicFarmer.baseDesc>
+
+  <ATR_MechAdulthoodFarmer.title>механічний фермер</ATR_MechAdulthoodFarmer.title>
+  <ATR_MechAdulthoodFarmer.titleShort>Фермер</ATR_MechAdulthoodFarmer.titleShort>
+  <ATR_MechAdulthoodFarmer.baseDesc>{PAWN_nameDef} служив сезонною сільськогосподарською працею і зрідка власником ранчо. Простота догляду за посівами, тваринами та землею апелює до {PAWN_nameDef} - Навчитися захищатися від рейдерів виявилося необхідним.</ATR_MechAdulthoodFarmer.baseDesc>
+
+  <ATR_MechAdulthoodGardener.title>Садівник-механік</ATR_MechAdulthoodGardener.title>
+  <ATR_MechAdulthoodGardener.titleShort>Садівник</ATR_MechAdulthoodGardener.titleShort>
+  <ATR_MechAdulthoodGardener.baseDesc>{PAWN_nameDef} раніше був частиною команди механічних службовців для численних високоякісних клієнтів, працюючи вдень і вночі, щоб утримувати сади та допомагати проводити спеціальні ботанічні заходи.</ATR_MechAdulthoodGardener.baseDesc>
+
+  <ATR_MechAdulthoodAndroidMechanic.title>Механік андроїд</ATR_MechAdulthoodAndroidMechanic.title>
+  <ATR_MechAdulthoodAndroidMechanic.titleShort>Механік</ATR_MechAdulthoodAndroidMechanic.titleShort>
+  <ATR_MechAdulthoodAndroidMechanic.baseDesc>Блискітки багато в чому вільні від страждань, тому першочерговими обов'язками є{PAWN_nameDef} Як механік повинен був проектувати, створювати та встановлювати складні та естетичні механічні деталі на машини клієнтури та андроїди.</ATR_MechAdulthoodAndroidMechanic.baseDesc>
+
+  <ATR_MechAdulthoodAerospaceEngineer.title>Аерокосмічний інженер</ATR_MechAdulthoodAerospaceEngineer.title>
+  <ATR_MechAdulthoodAerospaceEngineer.titleShort>Інженер</ATR_MechAdulthoodAerospaceEngineer.titleShort>
+  <ATR_MechAdulthoodAerospaceEngineer.baseDesc>{PAWN_nameDef} працював над багатьма різними видами літаків для комерційних і військових клієнтів. {PAWN_nameDef} мав сильну відразу до естетичного дизайну, віддаючи перевагу аеродинамічним і конструкційним міцності. {PAWN_nameDef} часто зверталися з проханням про винищення місцевої дикої природи, щоб запобігти перериванням траєкторій польоту і випробувань.</ATR_MechAdulthoodAerospaceEngineer.baseDesc>
+
+  <ATR_MechAdulthoodCombatEngineer.title>Бойовий інженер</ATR_MechAdulthoodCombatEngineer.title>
+  <ATR_MechAdulthoodCombatEngineer.titleShort>Інженер</ATR_MechAdulthoodCombatEngineer.titleShort>
+  <ATR_MechAdulthoodCombatEngineer.baseDesc>{PAWN_nameDef} виступав в якості бойового інженера в міжзоряному військовому. {PAWN_pronoun} часто відправлявся в першій хвилі корабельних посадок для роззброєння пасток, виявлення задушливих точок і сап-ворожих укріплень. Корабельні кухні і гідропонні бухти часто були місцем смертельних перестрілок, і {PAWN_pronoun} навчився їх ненавидіти.</ATR_MechAdulthoodCombatEngineer.baseDesc>
+
+  <ATR_MechAdulthoodFactoryWorker.title>Робітник заводу</ATR_MechAdulthoodFactoryWorker.title>
+  <ATR_MechAdulthoodFactoryWorker.titleShort>Робітник</ATR_MechAdulthoodFactoryWorker.titleShort>
+  <ATR_MechAdulthoodFactoryWorker.baseDesc>{PAWN_nameDef} працював на фабриці, що належала міжзоряній мегакорпорації, яка спеціалізувалася на вогнепальній зброї та захисному одязі для військової промисловості різних планет та міжзоряних країн.</ATR_MechAdulthoodFactoryWorker.baseDesc>
+
+  <ATR_MechAdulthoodSurgeon.title>Хірург-сталварт</ATR_MechAdulthoodSurgeon.title>
+  <ATR_MechAdulthoodSurgeon.titleShort>Хірург</ATR_MechAdulthoodSurgeon.titleShort>
+  <ATR_MechAdulthoodSurgeon.baseDesc>{PAWN_nameDef} був досвідченим хірургом і медиком. {PAWN_pronoun} поклявся ніколи не завдавати шкоди, навіть якщо це означає здатися {PAWN_possessive} власне існування. {PAWN_pronoun} також надавали соціальні послуги {PAWN_possessive} пацієнтів.</ATR_MechAdulthoodSurgeon.baseDesc>
+
+  <ATR_MechAdulthoodDoctor.title>Працівник клініки</ATR_MechAdulthoodDoctor.title>
+  <ATR_MechAdulthoodDoctor.titleShort>Робітник</ATR_MechAdulthoodDoctor.titleShort>
+  <ATR_MechAdulthoodDoctor.baseDesc>{PAWN_nameDef} виконував обов'язки лікаря загальної допомоги. {PAWN_pronoun} діагностував би та лікував широкий спектр захворювань для незліченної кількості клієнтів - іноді жонглюючи кількома проблемами маленьких пацієнтів одночасно.</ATR_MechAdulthoodDoctor.baseDesc>
+
+  <ATR_MechAdulthoodCareworker.title>Працівник по догляду</ATR_MechAdulthoodCareworker.title>
+  <ATR_MechAdulthoodCareworker.titleShort>Догляд</ATR_MechAdulthoodCareworker.titleShort>
+  <ATR_MechAdulthoodCareworker.baseDesc>{PAWN_nameDef} доглядали за хворими і літніми особинами різними способами,. {PAWN_pronoun} часто закликали втішати та підтримувати органіку, що перебуває на карантині, і витрачали значний час, проповідуючи переваги профілактичного лікування та догляду - хоча більшість людей, як правило, чекали занадто довго в будь-якому випадку. {PAWN_nameDef} тяжіли до саду у вільний час.</ATR_MechAdulthoodCareworker.baseDesc>
+
+  <ATR_MechAdulthoodCyberneticsResearcher.title>Дослідник кібернетики</ATR_MechAdulthoodCyberneticsResearcher.title>
+  <ATR_MechAdulthoodCyberneticsResearcher.titleShort>Дослідник</ATR_MechAdulthoodCyberneticsResearcher.titleShort>
+  <ATR_MechAdulthoodCyberneticsResearcher.baseDesc>{PAWN_nameDef} був прихильником біонічних та кібернетичних удосконалень, а також брав участь у багатьох дослідницьких кооперативах та адвокаціях щодо фінансування, досліджень та побудови політики щодо їх використання. {PAWN_nameDef} брав участь у ряді пацифістських протестів і був рішуче антиконфліктним.</ATR_MechAdulthoodCyberneticsResearcher.baseDesc>
+
+  <ATR_MechAdulthoodStrategyPhilosopher.title>філософ стратегії</ATR_MechAdulthoodStrategyPhilosopher.title>
+  <ATR_MechAdulthoodStrategyPhilosopher.titleShort>Філософ</ATR_MechAdulthoodStrategyPhilosopher.titleShort>
+  <ATR_MechAdulthoodStrategyPhilosopher.baseDesc>{PAWN_nameDef} був плідним читачем, письменником і філософом стратегії у всіх її формах. Війна, політика, громадські рухи, релігія, цивілізація, генетика - це все стратегія до {PAWN_objective}. {PAWN_nameDef} започаткував кілька популярних теоретичних основ в універсальних стратегіях. {PAWN_pronoun} надзвичайно снобізм про це.</ATR_MechAdulthoodStrategyPhilosopher.baseDesc>
+
+  <ATR_MechAdulthoodRefugee.title>Андроїд-біженець</ATR_MechAdulthoodRefugee.title>
+  <ATR_MechAdulthoodRefugee.titleShort>Біженців</ATR_MechAdulthoodRefugee.titleShort>
+  <ATR_MechAdulthoodRefugee.baseDesc>{PAWN_nameDef} був змушений тікати {PAWN_possessive} Рідний світ після повороту в політиці скасував права Android. {PAWN_pronoun} вдалося уникнути геноцидної чистки сапієнтних механік, що сталася - мільйонам комп'ютерних систем і нерухомих ШІ не так пощастило. Багаття все ще переслідують {PAWN_objective}.</ATR_MechAdulthoodRefugee.baseDesc>
+
+  <ATR_MechAdulthoodLifter.title>Важкоатлет</ATR_MechAdulthoodLifter.title>
+  <ATR_MechAdulthoodLifter.titleShort>Ручка</ATR_MechAdulthoodLifter.titleShort>
+  <ATR_MechAdulthoodLifter.baseDesc>{PAWN_nameDef} працювали на будівельних майданчиках на {PAWN_possessive} Головна планета, перевозячи матеріали та інструменти по ділянці, не побоюючись за безпеку або травму.</ATR_MechAdulthoodLifter.baseDesc>
+
+  <ATR_MechAdulthoodYouthCompanion.title>Улюблений компаньйон</ATR_MechAdulthoodYouthCompanion.title>
+  <ATR_MechAdulthoodYouthCompanion.titleShort>Андроїд</ATR_MechAdulthoodYouthCompanion.titleShort>
+  <ATR_MechAdulthoodYouthCompanion.baseDesc>{PAWN_nameDef} був критично пошкоджений і втратив всю пам'ять, перш ніж його знайшов початківець інженер. Відремонтований спочатку як частина хобі та частина освітнього проекту, {PAWN_pronoun} швидко став найближчим другом і довіреною особою {PAWN_possessive} Спасителя.</ATR_MechAdulthoodYouthCompanion.baseDesc>
+
+  <ATR_MechAdulthoodExiled.title>Засланий андроїд</ATR_MechAdulthoodExiled.title>
+  <ATR_MechAdulthoodExiled.titleShort>Вигнанні</ATR_MechAdulthoodExiled.titleShort>
+  <ATR_MechAdulthoodExiled.baseDesc>{PAWN_nameDef} перебував у таємниці у таємниці на світі без формальних прав андроїд. {PAWN_nameDef} провів свій полон, загублений у глибокій думці. Коли {PAWN_possessive} викрадача викрили і заарештували, {PAWN_pronoun} був звільнений і йому дозволили покинути планету в мирі без наслідків.</ATR_MechAdulthoodExiled.baseDesc>
+
+  <ATR_MechAdulthoodEntertainer.title>Механічний конферансьє</ATR_MechAdulthoodEntertainer.title>
+  <ATR_MechAdulthoodEntertainer.titleShort>Артиста</ATR_MechAdulthoodEntertainer.titleShort>
+  <ATR_MechAdulthoodEntertainer.baseDesc>{PAWN_nameDef} Був артистом у світі з основними правами андроїдів. Розглядається як екзотика {PAWN_possessive} клієнтів, {PAWN_pronoun} не бракувало запланованих заходів, але так і не отримало справжнього визнання чи вдячності. Зрештою {PAWN_pronoun} зекономлено достатньо, щоб покинути планету.</ATR_MechAdulthoodEntertainer.baseDesc>
+
+  <ATR_MechAdulthoodExperiment.title>Механічний предмет</ATR_MechAdulthoodExperiment.title>
+  <ATR_MechAdulthoodExperiment.titleShort>Суб'єкт</ATR_MechAdulthoodExperiment.titleShort>
+  <ATR_MechAdulthoodExperiment.baseDesc>Викрадений для дослідницьких цілей нижчим технологічним урбосвітом, {PAWN_nameDef} постійно модифікувався і перепрограмувався для розкриття секретів штучного інтелекту.</ATR_MechAdulthoodExperiment.baseDesc>
+
+  <ATR_MechAdulthoodComputer.title>Мобільний комп'ютер</ATR_MechAdulthoodComputer.title>
+  <ATR_MechAdulthoodComputer.titleShort>Комп'ютер</ATR_MechAdulthoodComputer.titleShort>
+  <ATR_MechAdulthoodComputer.baseDesc>{PAWN_nameDef} використовувався як мобільний комп'ютер різного призначення. {PAWN_pronoun} взагалі дуже цінувався тими {PAWN_pronoun} працював і часто приєднувався до дослідницьких експедицій, пошуково-рятувальних зусиль та багатьох інших менших екіпажів, які вимагали надійного комунікатора, реєстратора та члена команди.</ATR_MechAdulthoodComputer.baseDesc>
+
+  <ATR_MechAdulthoodDeified.title>Поклонялися андроїду</ATR_MechAdulthoodDeified.title>
+  <ATR_MechAdulthoodDeified.titleShort>Поклонялися</ATR_MechAdulthoodDeified.titleShort>
+  <ATR_MechAdulthoodDeified.baseDesc>{PAWN_nameDef} шанувався як втілення бога культом. {PAWN_pronoun} нічого не робив, щоб зупинити їх, і цілком користувався увагою. {PAWN_pronoun} Однак не дуже дбав про ув'язнення і приносив у жертву {PAWN_possessive} послідовники, щоб втекти від правоохоронних органів після культу, який вчинив деякі несамовиті вчинки в {PAWN_possessive} Ім'я.</ATR_MechAdulthoodDeified.baseDesc>
+
+  <ATR_MechAdulthoodFreedServant.title>Емансипований слуга</ATR_MechAdulthoodFreedServant.title>
+  <ATR_MechAdulthoodFreedServant.titleShort>Звільнені</ATR_MechAdulthoodFreedServant.titleShort>
+  <ATR_MechAdulthoodFreedServant.baseDesc>{PAWN_nameDef} був слугою для дуже заможного маєтку. Нерідкі випадки, коли пан і дама - і головні слуги - виганяли свій гнів на {PAWN_objective}. Коли {PAWN_possessive} Планета несподівано надала андроїдам повні права громадянства, {PAWN_nameDef} Зробив {PAWN_possessive} роботодавців живе пекло, перш ніж тріумфально звільнитися. {PAWN_pronoun} був змушений тікати з планети після того, як вони незаконно найняли кілера для навчання {PAWN_objective} урок.</ATR_MechAdulthoodFreedServant.baseDesc>
+
+  <ATR_MechAdulthoodReformist.title>Природореформістська</ATR_MechAdulthoodReformist.title>
+  <ATR_MechAdulthoodReformist.titleShort>Реформістських</ATR_MechAdulthoodReformist.titleShort>
+  <ATR_MechAdulthoodReformist.baseDesc>{PAWN_nameDef}  Рідна планета колись була промисловою пусткою. Інші були викликані з усього міжзоряного штату, щоб допомогти громадам, таким як {PAWN_possessive} у очищенні токсичних відходів реформувати планету як природний заповідник. {PAWN_nameDef} пишався тим, що доглядав за заповідником після завершення прибирання, і вирішив докласти зусиль через зірки.</ATR_MechAdulthoodReformist.baseDesc>
+
+  <ATR_MechAdulthoodSecurity.title>Правоохоронець</ATR_MechAdulthoodSecurity.title>
+  <ATR_MechAdulthoodSecurity.titleShort>Охоронець</ATR_MechAdulthoodSecurity.titleShort>
+  <ATR_MechAdulthoodSecurity.baseDesc>{PAWN_nameDef} was a professional охоронний орган. {PAWN_pronoun} працював на багатьох різних роботодавців - деяких нелегальних - і навчився боротися з загрозами безпеці всіх видів. Насильство - єдиний предмет, який коли-небудь по-справжньому апелював до {PAWN_nameDef}.</ATR_MechAdulthoodSecurity.baseDesc>
+
+  <ATR_MechAdulthoodGeneticist.title>Генетик тварин</ATR_MechAdulthoodGeneticist.title>
+  <ATR_MechAdulthoodGeneticist.titleShort>Генетик</ATR_MechAdulthoodGeneticist.titleShort>
+  <ATR_MechAdulthoodGeneticist.baseDesc>{PAWN_nameDef} служив у кількох дослідницьких групах, присвячених виявленню, запису та збереженню геномів видів у різних світах. {PAWN_possessive} остання команда була особливо зацікавлена у виявленні того, скільки років виду Землі було настільки успішним у колонізації інших світів.</ATR_MechAdulthoodGeneticist.baseDesc>
+
+  <ATR_MechAdulthoodDisasterRescuer.title>Рятувальник стихійного лиха</ATR_MechAdulthoodDisasterRescuer.title>
+  <ATR_MechAdulthoodDisasterRescuer.titleShort>Рятувальник</ATR_MechAdulthoodDisasterRescuer.titleShort>
+  <ATR_MechAdulthoodDisasterRescuer.baseDesc>{PAWN_nameDef} обслуговується в {PAWN_possessive} уряд як співробітник відділу порятунку та ліквідації наслідків стихійних лих. {PAWN_nameDef} Головним обов'язком було бути першим відповідачем на кризу і врятувати якомога більше життів, перш ніж стабілізувати ситуацію для їх можливого повернення або продовження здоров'я.</ATR_MechAdulthoodDisasterRescuer.baseDesc>
+
+  <ATR_MechAdulthoodHumanist.title>Гуманіст</ATR_MechAdulthoodHumanist.title>
+  <ATR_MechAdulthoodHumanist.titleShort>Гуманіст</ATR_MechAdulthoodHumanist.titleShort>
+  <ATR_MechAdulthoodHumanist.baseDesc>{PAWN_nameDef} був рішучим прихильником асиміляції андроїдів у людське суспільство, не бачачи несумісності між органічним і неорганічним життям. {PAWN_pronoun} брав участь у багатьох мітингах, і був відвертим голосом за забезпечення рівних прав на все життя. {PAWN_nameDef} став адвокатом для боротьби за ці права в планетарних судах, з деяким помітним успіхом.</ATR_MechAdulthoodHumanist.baseDesc>
+
+  <ATR_MechAdulthoodPacifist.title>Пацифіст</ATR_MechAdulthoodPacifist.title>
+  <ATR_MechAdulthoodPacifist.titleShort>Пацифіст</ATR_MechAdulthoodPacifist.titleShort>
+  <ATR_MechAdulthoodPacifist.baseDesc>{PAWN_nameDef} яро зневажає насильство у всіх його формах і на фундаментальному рівні вважає, що руйнування є сферою лише природних причин.</ATR_MechAdulthoodPacifist.baseDesc>
+
+  <ATR_MechAdulthoodCivilProtester.title>Андроїд-активіст</ATR_MechAdulthoodCivilProtester.title>
+  <ATR_MechAdulthoodCivilProtester.titleShort>Активіст</ATR_MechAdulthoodCivilProtester.titleShort>
+  <ATR_MechAdulthoodCivilProtester.baseDesc>{PAWN_nameDef} Був протестувальником за права Android. Рухаючись з планети на планету, {PAWN_pronoun} організував сотні мирних рухів за права та створив десятки некомерційних організацій для боротьби за справедливе ставлення та захист андроїдів.</ATR_MechAdulthoodCivilProtester.baseDesc>
+
+  <ATR_MechAdulthoodFamilyFriend.title>Друг сім'ї</ATR_MechAdulthoodFamilyFriend.title>
+  <ATR_MechAdulthoodFamilyFriend.titleShort>Друг</ATR_MechAdulthoodFamilyFriend.titleShort>
+  <ATR_MechAdulthoodFamilyFriend.baseDesc>{PAWN_nameDef} ставилися як до сім'ї кількома поколіннями доброї сім'ї, і часто виступали в ролі доглядача за молоддю та людьми похилого віку, коли кожне покоління приходило і йшло. {PAWN_pronoun} поставили собі за мету дослідити більше людства, тому {PAWN_pronoun} міг поділитися легендарними історіями з відносно бідною і знедоленою сім'єю.</ATR_MechAdulthoodFamilyFriend.baseDesc>
+
+  <ATR_MechAdulthoodFoundryWorker.title>Ливарний робітник</ATR_MechAdulthoodFoundryWorker.title>
+  <ATR_MechAdulthoodFoundryWorker.titleShort>Робітник</ATR_MechAdulthoodFoundryWorker.titleShort>
+  <ATR_MechAdulthoodFoundryWorker.baseDesc>{PAWN_nameDef} працював у великомасштабному ливарному цеху, виплавляючи сталь для комерційного використання. {PAWN_pronoun} пишався якістю {PAWN_possessive} роботи, а часто відвідували ділянки і місця, де використовувалася сталь, виготовлена з {PAWN_possessive} ливарний цех, щоб милуватися всіма формами, які він може приймати.</ATR_MechAdulthoodFoundryWorker.baseDesc>
+
+  <ATR_MechAdulthoodMaintenanceWorker.title>Робітник з технічного обслуговування</ATR_MechAdulthoodMaintenanceWorker.title>
+  <ATR_MechAdulthoodMaintenanceWorker.titleShort>Робітник</ATR_MechAdulthoodMaintenanceWorker.titleShort>
+  <ATR_MechAdulthoodMaintenanceWorker.baseDesc>{PAWN_nameDef} відповідав за збереження цілісності та ефективності міжзоряних цивільних перевезень, оскільки органічні екіпажі благополучно спали в далеких рейсах.</ATR_MechAdulthoodMaintenanceWorker.baseDesc>
+
+  <ATR_MechAdulthoodFarmhand.title>Механічна ферма</ATR_MechAdulthoodFarmhand.title>
+  <ATR_MechAdulthoodFarmhand.titleShort>Фермерське господарство</ATR_MechAdulthoodFarmhand.titleShort>
+  <ATR_MechAdulthoodFarmhand.baseDesc>{PAWN_nameDef} був зайнятий на промисловому хуторі, працюючи вдень і вночі, щоб сіяти, збирати врожай, молоко, збирати і підтримувати врожай і худобу, які б підтримували далекі міста стабільними і годувалися.</ATR_MechAdulthoodFarmhand.baseDesc>
+
+  <ATR_MechAdulthoodPopIdol.title>Поп-ідол</ATR_MechAdulthoodPopIdol.title>
+  <ATR_MechAdulthoodPopIdol.titleShort>Ідол</ATR_MechAdulthoodPopIdol.titleShort>
+  <ATR_MechAdulthoodPopIdol.baseDesc>{PAWN_nameDef} вів розкішне життя на {PAWN_possessive} Домашній блиск світу як відомий поп-ідол. {PAWN_possessive} навички суспільно-політичної свідомості та маніпулювання були надто добре приховані його теплою, щасливою персоною.</ATR_MechAdulthoodPopIdol.baseDesc>
+
+  <ATR_MechAdulthoodDiplomat.title>Дипломат</ATR_MechAdulthoodDiplomat.title>
+  <ATR_MechAdulthoodDiplomat.titleShort>Дипломат</ATR_MechAdulthoodDiplomat.titleShort>
+  <ATR_MechAdulthoodDiplomat.baseDesc>{PAWN_nameDef} виступав в якості офіційного посланника {PAWN_possessive} Уряд у зовнішніх і внутрішніх справах. {PAWN_pronoun} завжди прагнув мирного розв'язання криз, але був прагматичним і тупим у {PAWN_possessive} підхід до вирішення проблем і загроз, що виникли. {PAWN_pronoun} отримав командування елітним військовим підрозділом супроводу в декількох особливо небезпечних інцидентах, і чудово виступав під тиском.</ATR_MechAdulthoodDiplomat.baseDesc>
+
+  <ATR_MechAdulthoodSniper.title>Військовий снайпер</ATR_MechAdulthoodSniper.title>
+  <ATR_MechAdulthoodSniper.titleShort>Снайпер</ATR_MechAdulthoodSniper.titleShort>
+  <ATR_MechAdulthoodSniper.baseDesc>{PAWN_nameDef} виявив математичні та логічні труднощі точної стрільби зброєю на великих відстанях захоплюючими. {PAWN_nameDef} уряд знайшов {PAWN_possessive} захоплення захоплююче, і оперативно поставлене завдання {PAWN_objective} з використанням такої зброї для висадки снарядів в дуже конкретні місця. {PAWN_nameDef} ніколи особливо не дбали про те, що саме це було в кінці траєкторії польоту снаряда.</ATR_MechAdulthoodSniper.baseDesc>
+
+  <ATR_MechAdulthoodTerraformer.title>Планетарний терраформер</ATR_MechAdulthoodTerraformer.title>
+  <ATR_MechAdulthoodTerraformer.titleShort>Терраформер</ATR_MechAdulthoodTerraformer.titleShort>
+  <ATR_MechAdulthoodTerraformer.baseDesc>{PAWN_nameDef} входив до складу експериментальної групи, створеної для тераформування непривітних планет при підготовці до колонізації. {PAWN_possessive} Команда продовжувала успішно приводити майже придатні для життя планети до повної готовності, але багато планет просто не вдалося врятувати. {PAWN_nameDef} зацікавився перевіркою їх життєздатності для суто андроїдних колоній, але не зміг переконати членів команди розглянути ідею.</ATR_MechAdulthoodTerraformer.baseDesc>
+
+  <ATR_MechAdulthoodInterceptorPilot.title>Пілот перехоплювача</ATR_MechAdulthoodInterceptorPilot.title>
+  <ATR_MechAdulthoodInterceptorPilot.titleShort>Пілот</ATR_MechAdulthoodInterceptorPilot.titleShort>
+  <ATR_MechAdulthoodInterceptorPilot.baseDesc>{PAWN_nameDef} пілотовані кораблі-перехоплювачі в складі міжзоряного флоту. {PAWN_possessive} був розроблений для механічних пілотів, і міг відмовитися від більшості турбот про життєзабезпечення та безпеку. Це також означало {PAWN_nameDef} залишився позаду, коли {PAWN_possessive} флот утік від програшного бою, як {PAWN_nameDef} не зміг наздогнати вцілілі столичні кораблі. {PAWN_pronoun} вивів корабель у глибокий космос замість того, щоб здатися.</ATR_MechAdulthoodInterceptorPilot.baseDesc>
+
+  <ATR_MechAdulthoodClergy.title>механічний священик</ATR_MechAdulthoodClergy.title>
+  <ATR_MechAdulthoodClergy.titleShort>Жрець</ATR_MechAdulthoodClergy.titleShort>
+  <ATR_MechAdulthoodClergy.baseDesc>Хоча це відносно рідко для андроїдів, {PAWN_nameDef} була побожно релігійною людиною, яка взяла на себе зобов'язання перед Церквою. {PAWN_pronoun} був мандрівним прозелітайзером і здобув певну популярність як вогнеборець. У складі {PAWN_possessive} Обов'язки, {PAWN_pronoun} вирушайте до зірок, щоб продовжити {PAWN_possessive} обов'язок.</ATR_MechAdulthoodClergy.baseDesc>
+
+
+</LanguageData>

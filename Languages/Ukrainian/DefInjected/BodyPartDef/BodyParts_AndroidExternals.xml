@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Framework.label>рамка</ATR_Framework.label>
+  <ATR_MechanicalThorax.label>грудна клітка</ATR_MechanicalThorax.label>
+  <ATR_MechanicalNeck.label>шия</ATR_MechanicalNeck.label>
+  <ATR_MechanicalHead.label>голова</ATR_MechanicalHead.label>
+  <ATR_VoiceSynthesizer.label>Синтезатор голосу</ATR_VoiceSynthesizer.label>
+  <ATR_MechanicalVisualSensor.label>візуальний датчик</ATR_MechanicalVisualSensor.label>
+  <ATR_MechanicalAudioSensor.label>звуковий датчик</ATR_MechanicalAudioSensor.label>
+  <ATR_SmellSensor.label>датчик запаху</ATR_SmellSensor.label>
+  <ATR_MechanicalShoulder.label>плече</ATR_MechanicalShoulder.label>
+  <ATR_MechanicalArm.label>рука</ATR_MechanicalArm.label>
+  <ATR_MechanicalHand.label>руку</ATR_MechanicalHand.label>
+  <ATR_MechanicalFinger.label>палець</ATR_MechanicalFinger.label>
+  <ATR_MechanicalWaist.label>utility slot</ATR_MechanicalWaist.label>
+  <ATR_MechanicalLeg.label>нога</ATR_MechanicalLeg.label>
+  <ATR_MechanicalFoot.label>стопа</ATR_MechanicalFoot.label>
+  <ATR_ArtificialBrain.label>штучний мозок</ATR_ArtificialBrain.label>
+  <ATR_CoreAssistant.label>основний помічник</ATR_CoreAssistant.label>
+  <ATR_CounterWeightTail.label>противага</ATR_CounterWeightTail.label>
+  <ATR_MechanicalJaw.label>щелепа</ATR_MechanicalJaw.label>
+  <ATR_MechanicalWing.label>крило</ATR_MechanicalWing.label>
+  <ATR_MechanicalPropeller.label>Гвинт</ATR_MechanicalPropeller.label>
+  <ATR_CounterWeightTop.label>невелика противага</ATR_CounterWeightTop.label>
+
+
+</LanguageData>

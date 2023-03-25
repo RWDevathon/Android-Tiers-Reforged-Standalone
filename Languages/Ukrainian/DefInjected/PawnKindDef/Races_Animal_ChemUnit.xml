@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneChemUnit.label>Установка хімічної переробки</ATR_DroneChemUnit.label>
+  <ATR_DroneChemUnit.labelPlural>Вузли хімічної обробки</ATR_DroneChemUnit.labelPlural>
+  <ATR_DroneChemUnit.labelMale>чоловічий підрозділ хімічної обробки</ATR_DroneChemUnit.labelMale>
+  <ATR_DroneChemUnit.labelMalePlural>чоловічі установки хімічної обробки</ATR_DroneChemUnit.labelMalePlural>
+  <ATR_DroneChemUnit.labelFemale>жіночий блок хімічної обробки</ATR_DroneChemUnit.labelFemale>
+  <ATR_DroneChemUnit.labelFemalePlural>жіночі установки хімічної обробки</ATR_DroneChemUnit.labelFemalePlural>
+
+
+</LanguageData>

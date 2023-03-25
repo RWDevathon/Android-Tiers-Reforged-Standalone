@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Miscellaneous Keys -->
+  <ATR_ModTitle>Android Tiers Reforged</ATR_ModTitle>
+
+  <ATR_RestartRequired>Обов'язкове перезавантаження.</ATR_RestartRequired>
+  <ATR_RestartRequiredSectionDesc>Будь-які зміни налаштувань в цьому розділі вимагають перезапуску гри.</ATR_RestartRequiredSectionDesc>
+  <ATR_RestartRequiredPostDesc>Деякі змінені настройки вимагають перезапуску гри для безпеки.</ATR_RestartRequiredPostDesc>
+
+
+  <ATR_ExpandMenu>Розгорнути/Згорнути</ATR_ExpandMenu>
+
+  <!-- Mod Settings Page Keys -->
+  <ATR_SettingsTabTitle>Конфігурації</ATR_SettingsTabTitle>
+
+  <ATR_SettingsTabOption_Folded>&lt;</ATR_SettingsTabOption_Folded>
+  <ATR_SettingsTabOption_General>Загальне</ATR_SettingsTabOption_General>
+  <ATR_SettingsTabOption_Power>Міць</ATR_SettingsTabOption_Power>
+  <ATR_SettingsTabOption_Security>Безпека</ATR_SettingsTabOption_Security>
+  <ATR_SettingsTabOption_Health>Здоров’я</ATR_SettingsTabOption_Health>
+  <ATR_SettingsTabOption_Connectivity>Підключення</ATR_SettingsTabOption_Connectivity>
+  <ATR_SettingsTabOption_Stats>Статистика</ATR_SettingsTabOption_Stats>
+
+  <!-- General Settings -->
+  <ATR_ApplyPreset>Застосувати</ATR_ApplyPreset>
+
+  <!-- Gender Settings -->
+  <ATR_AndroidGenderNotice>Зміни стосуються лише НОВИХ андроїдів</ATR_AndroidGenderNotice>
+  <ATR_AndroidsHaveGenders>Андроїди мають стать</ATR_AndroidsHaveGenders>
+  <ATR_AndroidsPickGenders>Андроїди вибирають стать при створенні</ATR_AndroidsPickGenders>
+  <ATR_AndroidsFixedGenderSelector>Усі андроїди чоловічі (false) або жіночий (true)</ATR_AndroidsFixedGenderSelector>
+  <ATR_AndroidsGenderRatio>Шанс для андроїда вибрати чоловічу стать проти жіночої статі</ATR_AndroidsGenderRatio>
+
+  <!-- Commonality Settings -->
+  <ATR_PlayerOnlyNote>Якщо його вимкнуто, андроїди існуватимуть лише тоді, коли їх створить плеєр</ATR_PlayerOnlyNote>
+  <ATR_AndroidsAppearNaturally>Андроїди можуть відображатися як частини фракцій або подій</ATR_AndroidsAppearNaturally>
+
+  <ATR_AndroidFactionSettings>Яку роль відіграють фракції андроїдів? Впливає лише на НОВІ ігри</ATR_AndroidFactionSettings>
+  <ATR_AndroidSocietiesExist>Андроїди мають свої фракції</ATR_AndroidSocietiesExist>
+  <ATR_AndroidRaidersExist>Андроїди сформували власний піратський колектив</ATR_AndroidRaidersExist>
+  <ATR_AndroidRaidersDesc>Діє як піратська фракція ванілі</ATR_AndroidRaidersDesc>
+  <ATR_AndroidUnionistsExist>Андроїд, присвячені колективному виживанню, об'єднали</ATR_AndroidUnionistsExist>
+  <ATR_AndroidUnionistsDesc>Діє як фракція «Чужеземець» ванілі</ATR_AndroidUnionistsDesc>
+
+  <!-- Permission Settings-->
+  <ATR_bedRestrictionDefaultsToAll>Ліжка за замовчуванням для всіх пішаків, а не механічні/органічні</ATR_bedRestrictionDefaultsToAll>
+  <ATR_bedRestrictionDefaultsToAllDesc>За замовчуванням зарядка ліжок від цього мода за замовчуванням до механічного, а всі інші ліжка за замовчуванням лише до органічних.</ATR_bedRestrictionDefaultsToAllDesc>
+
+  <!-- Consideration Settings -->
+  <ATR_isUsingCustomConsiderations>Використовуючи користувацьку конфігурацію, і не скинеться: {0}</ATR_isUsingCustomConsiderations>
+  <ATR_isUsingCustomConsiderationsDesc>Якщо це помилково, ATR автоматично відновить те, що є/не є механічним під час запуску гри, щоб він міг ловити нові модифіковані гонки для вас.</ATR_isUsingCustomConsiderationsDesc>
+  <ATR_resetCustomConsiderations>Скидання міркувань</ATR_resetCustomConsiderations>
+  <ATR_SettingsConsideredAndroid>Андроїди</ATR_SettingsConsideredAndroid>
+  <ATR_SettingsNotConsideredAndroid>Не Андроїди</ATR_SettingsNotConsideredAndroid>
+  <ATR_SettingsConsideredDrone>Дрони</ATR_SettingsConsideredDrone>
+  <ATR_SettingsNotConsideredDrone>Не дрони</ATR_SettingsNotConsideredDrone>
+  <ATR_SettingsConsideredAnimal>механічні тварини</ATR_SettingsConsideredAnimal>
+  <ATR_SettingsNotConsideredAnimals>Органічні тварини</ATR_SettingsNotConsideredAnimals>
+
+  <!-- Rights Settings -->
+  <ATR_factionsWillDeclareRightsWars>Фракції оголосять війну через спори про права</ATR_factionsWillDeclareRightsWars>
+  <ATR_factionsWillDeclareRightsWarsDesc>Фракції, які є антимеханічними або антиорганічними, оголосять вам війну, якщо у вас є механічні/органічні колоністи</ATR_factionsWillDeclareRightsWarsDesc>
+
+  <ATR_SettingsAntiMechanicalFaction>Фракції без механічних прав</ATR_SettingsAntiMechanicalFaction>
+  <ATR_SettingsTolerateMechanicalFaction>Фракції, що терплять механіку</ATR_SettingsTolerateMechanicalFaction>
+  <ATR_SettingsAntiOrganicFaction>Фракції без органічних прав</ATR_SettingsAntiOrganicFaction>
+  <ATR_SettingsTolerateOrganicFaction>Нет данных.</ATR_SettingsTolerateOrganicFaction>
+
+  <ATR_dronesTriggerRightsWars>Антимеханічні угруповання оголошують війну безпілотникам</ATR_dronesTriggerRightsWars>
+  <ATR_prisonersTriggerRightsWars>Фракції оголошують війну полоненим</ATR_prisonersTriggerRightsWars>
+  <ATR_slavesTriggerRightsWars>Фракції оголошують війну рабам</ATR_slavesTriggerRightsWars>
+  <ATR_surrogatesTriggerRightsWars>Фракції оголошують війну сурогатам</ATR_surrogatesTriggerRightsWars>
+
+  <!-- Needs Settings -->
+  <ATR_AndroidOnlyNotice>Примітка: Це впливає лише на одиниці, позначені як андроїди. У дронів таких потреб немає.</ATR_AndroidOnlyNotice>
+  <ATR_AndroidsNeedJoy>Андроїд повинні задовольняти потреби радості</ATR_AndroidsNeedJoy>
+  <ATR_AndroidsNeedBeauty>Андроїди повинні задовольняти потреби в красі</ATR_AndroidsNeedBeauty>
+  <ATR_AndroidsNeedComfort>Андроїд повинні задовольняти потреби в комфорті</ATR_AndroidsNeedComfort>
+  <ATR_AndroidsNeedOutdoors>Андроїд повинні задовольняти потреби на відкритому повітрі / в приміщенні</ATR_AndroidsNeedOutdoors>
+
+  <ATR_SettingsPresetDefault>Default</ATR_SettingsPresetDefault>
+  <ATR_SettingsPresetCustom>Custom</ATR_SettingsPresetCustom>
+
+  <!-- Power Settings -->
+  <ATR_wattsConsumedPerBodySize>Використання потужності на 1 розмір корпусу при зарядці [default: 500]</ATR_wattsConsumedPerBodySize>
+  <ATR_batteryPercentagePerRareTick>Відсоток зарядженого акумулятора на одного рідкісного кліща (~4 seconds) [default: 7%]</ATR_batteryPercentagePerRareTick>
+  <ATR_batteryPercentagePerTick>Швидкість заряду акумулятора [default: 1]</ATR_batteryPercentagePerTick>
+  <ATR_mechanicalsHaveDifferentBioprocessingEfficiency>Механічні агрегати обробляють харчування інакше, ніж органіка.</ATR_mechanicalsHaveDifferentBioprocessingEfficiency>
+  <ATR_mechanicalBioprocessingEfficiency>ефективність харчування [default: 50%]</ATR_mechanicalBioprocessingEfficiency>
+
+  <!-- Security Settings -->
+  <!-- Hostile Hacking -->
+  <ATR_EnemyHacksOccur>Увімкнено ворожий злом.</ATR_EnemyHacksOccur>
+  <ATR_ChanceAlliesInterceptHack>Шанс перехопити хакерські атаки проти вас на союзницьку фракцію</ATR_ChanceAlliesInterceptHack>
+  <ATR_ChanceAlliesInterceptHackDesc>Відсоток шансів, що союзні фракції врятують вас від успішного злому противника, запобігаючи пошкодженню і фактично надаючи вам точки безпеки. Це ЗА СОЮЗНИКА.</ATR_ChanceAlliesInterceptHackDesc>
+  <ATR_PointsGainedOnInterceptPercentage>Очки, набрані, коли союзники перехоплюють у відсотках від атаки</ATR_PointsGainedOnInterceptPercentage>
+  <ATR_PointsGainedOnInterceptPercentageDesc>Коли союзник перехоплює атаку проти вас, вони жертвують вам точки безпеки. Це контролює, який відсоток точок рейду вони вам дають.</ATR_PointsGainedOnInterceptPercentageDesc>
+  <ATR_EnemyHackAttackStrengthModifier>Модифікатор сили злому противника</ATR_EnemyHackAttackStrengthModifier>
+  <ATR_EnemyHackAttackStrengthModifierDesc>Mультиплікативний модифікатор того, скільки хакерських точок матимуть інциденти злому противника. Менше 100% знижує інтенсивність, більше 100% підвищує інтенсивність,.</ATR_EnemyHackAttackStrengthModifierDesc>
+  <ATR_PercentageOfValueUsedForRansoms>Відсоток вартості товару, що вимагається під час атаки викупу</ATR_PercentageOfValueUsedForRansoms>
+
+  <!-- Player Hacking -->
+  <ATR_PlayerCanHack>Увімкнено злом гравців.</ATR_PlayerCanHack>
+  <ATR_receiveFullHackingAlert>Оповіщення для пунктів злому, що перевищують 90% ємності.</ATR_receiveFullHackingAlert>
+  <ATR_RetaliationChanceOnFailure>Шанс, що цільова фракція помститься за невдалий злом</ATR_RetaliationChanceOnFailure>
+  <ATR_MinHackSuccessChance>Мінімум шансів на успішний злом</ATR_MinHackSuccessChance>
+  <ATR_MaxHackSuccessChance>Максимальний шанс на успішний злом</ATR_MaxHackSuccessChance>
+
+  <!-- Health Settings -->
+  <!-- Medical -->
+  <ATR_medicinesAreInterchangeable>Органічні / механічні лікарські засоби взаємозамінні.</ATR_medicinesAreInterchangeable>
+  <ATR_showMechanicalSurgerySuccessChance>Покажіть шанс на успіх завершених механічних операцій.</ATR_showMechanicalSurgerySuccessChance>
+  <ATR_maxChanceMechanicOperationSuccess>Максимальна зміна успіху для механічних операцій</ATR_maxChanceMechanicOperationSuccess>
+  <ATR_chanceFailedOperationMinor>Ймовірність невдалих механічних операцій незначна [default 75%]</ATR_chanceFailedOperationMinor>
+  <ATR_chancePartSavedOnFailure>Ймовірність повернення деталей з невдалих механічних операцій [default 75%]</ATR_chancePartSavedOnFailure>
+
+  <!-- Maintenance -->
+  <ATR_maintenanceNeedExists>Механічні агрегати потребують обслуговування.</ATR_maintenanceNeedExists>
+  <ATR_receiveMaintenanceFailureLetters>Отримуйте листи про проблеми зі здоров'ям, пов'язані з технічним обслуговуванням.</ATR_receiveMaintenanceFailureLetters>
+  <ATR_maintenancePartFailureRateFactor>Як довго до поганого обслуговування може призвести до збоїв деталей і шансів на те, що збою не станеться</ATR_maintenancePartFailureRateFactor>
+  <ATR_maintenanceFallRateFactor>Як швидко випадає технічне обслуговування природним шляхом</ATR_maintenanceFallRateFactor>
+  <ATR_maintenanceGainRateFactor>Як швидко отримується технічне обслуговування при проведенні технічного обслуговування</ATR_maintenanceGainRateFactor>
+
+  <!-- Hediffs -->
+  <ATR_hediffBlacklistWarning>Попередження: Чим довший список хедіффів, внесених до чорного списку, тим більший вплив на продуктивність він матиме на гру.</ATR_hediffBlacklistWarning>
+  <ATR_settingsBlacklistedMechanicalHediffs>Механічні хедіффи в чорному списку</ATR_settingsBlacklistedMechanicalHediffs>
+  <ATR_settingsAllowedMechanicalHediffs>Дозволені механічні гедіффи</ATR_settingsAllowedMechanicalHediffs>
+
+  <!-- Connectivity Settings -->
+  <!-- Surrogates -->
+  <ATR_surrogatesAllowed>Сурогат дозволений.</ATR_surrogatesAllowed>
+  <ATR_otherFactionsAllowedSurrogates>Інші фракції можуть використовувати сурогат.</ATR_otherFactionsAllowedSurrogates>
+  <ATR_minGroupSizeForSurrogates>Кількість членів фракційних груп для нересту сурогатами</ATR_minGroupSizeForSurrogates>
+  <ATR_minSurrogatePercentagePerLegalGroup>Мінімальний відсоток сурогатів в юридичних групах [default 20%]</ATR_minSurrogatePercentagePerLegalGroup>
+  <ATR_maxSurrogatePercentagePerLegalGroup>Максимальний відсоток сурогатів в юридичних групах [default 70%]</ATR_maxSurrogatePercentagePerLegalGroup>
+  <ATR_displaySurrogateControlIcon>Відображення плаваючого значка над контрольованими сурогатами.</ATR_displaySurrogateControlIcon>
+  <ATR_safeSurrogateConnectivityCountBeforePenalty>Сурогат на одного контролера перед штрафними санкціями:</ATR_safeSurrogateConnectivityCountBeforePenalty>
+
+  <!-- Skills -->
+  <ATR_receiveFullSkillAlert>Оповіщення про пункти кваліфікації, що перевищують 90% місткості.</ATR_receiveFullSkillAlert>
+  <ATR_skillPointInsertionRate>Кількість балів навичок, що використовуються за вставку [default: 100]</ATR_skillPointInsertionRate>
+  <ATR_skillPointConversionRate>Монтування базової XP, згенерованої на точку кваліфікації [default: 0.5]</ATR_skillPointConversionRate>
+  <ATR_passionSoftCap>Пристрасть м'яка шапка до збільшення вартості за пристрасть [default: 8]</ATR_passionSoftCap>
+  <ATR_basePointsNeededForPassion>Базові очки навичок, необхідні для пристрасті [default: 5000]</ATR_basePointsNeededForPassion>
+
+  <!-- Cloud -->
+  <ATR_UploadingKills>Завантаження в SkyMind перетворює тіло ініціатора в порожній.</ATR_UploadingKills>
+  <ATR_UploadingPermakills>Завантаження в SkyMind залишає тіло ініціатора абсолютно марним і мертвим.</ATR_UploadingPermakills>
+  <ATR_SkyMindOperationTimeRequired>Години, необхідні для завершення операцій SkyMind [default: 24]</ATR_SkyMindOperationTimeRequired>
+
+  <!-- Stats Settings -->
+  <!-- Traits -->
+  <ATR_traitBlacklistWarning>Попередження: Чим довший список рис, внесених до чорного списку, тим більший вплив на продуктивність він матиме на гру.</ATR_traitBlacklistWarning>
+  <ATR_settingsBlacklistedMechanicalTraits>Механічні риси, внесені до чорного списку</ATR_settingsBlacklistedMechanicalTraits>
+  <ATR_settingsAllowedMechanicalTraits>Допустимі механічні ознаки</ATR_settingsAllowedMechanicalTraits>
+
+</LanguageData>

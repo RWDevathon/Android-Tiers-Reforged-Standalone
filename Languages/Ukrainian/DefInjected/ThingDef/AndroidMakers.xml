@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Unfinished Thing for android production being paused without losing progress -->
+
+  <ATR_UnfinishedAndroid.label>незавершений андроїд</ATR_UnfinishedAndroid.label>
+
+  <ATR_T1AndroidGenerator.label>T1 Андроід</ATR_T1AndroidGenerator.label>
+  <ATR_T1AndroidGenerator.description>Неініціалізований андроїд рівня 1. Андроїди першого рівня - це просто людиноподібні машини, призначені для імітації загального образу і мінімальних можливостей людства. Не маючи справжньої сапієнції, багато хто вважає їх дуже розумними і чуйними тваринами. Це часто призводить до їх експлуатації як корму або приниження як домашніх тварин, до яких покірні трутні не звертають уваги. Їхнє існування полягає в тому, щоб служити, і вони роблять це незрівнянно.</ATR_T1AndroidGenerator.description>
+
+  <ATR_T2AndroidGenerator.label>T2 Андроід</ATR_T2AndroidGenerator.label>
+  <ATR_T2AndroidGenerator.description>Неініціалізований андроїд рівня 2. Найпоширеніший рівень андроїдів, другий рівень андроїдів класифікується як найнижчі технічні характеристики, необхідні для повністю автономного sapience. При повному одязі або при погляді здалеку їх легко прийняти за більш коротких, крадькома людей. Дійсно, інтелект другого рівня часто є найбільш схожим на людину і, швидше за все, прагне інтеграції в людське суспільство.</ATR_T2AndroidGenerator.description>
+
+  <ATR_T3AndroidGenerator.label>T3 Андроід</ATR_T3AndroidGenerator.label>
+  <ATR_T3AndroidGenerator.description>Неініціалізований андроїд рівня 3. Android, класифіковані як третій рівень, часто кваліфікуються за великим зростом - стоячи на висоті від семи до дев'яти футів - і вражаючими можливостями. Вони неймовірно міцні, модульні і здатні. Вимагаючи великої кількості рідкісних ресурсів, вони, як правило, виробляються лише масово на блискучих світах.</ATR_T3AndroidGenerator.description>
+
+  <ATR_T4AndroidGenerator.label>T4 Андроід</ATR_T4AndroidGenerator.label>
+  <ATR_T4AndroidGenerator.description>Неініціалізований андроїд рівня 4. Вершина відомої теорії та практики андроїдів, клас андроїдів четвертого рівня відзначений володінням спеціальним ядром персони ШІ. У той час як ці ядра є архотех-технологією, шасі і внутрішні органи - все це технологія блискучого світу - не існує відомого методу створення архотех-шасі. \n\nАндроїди четвертого рівня є зрізом вище за інших, і вони це теж знають - комплекси его та зневага до менших ярусів дуже поширені серед них.</ATR_T4AndroidGenerator.description>
+
+  <ATR_WatchdogGenerator.label>Сторожовий одиниця</ATR_WatchdogGenerator.label>
+  <ATR_WatchdogGenerator.description>Неініціалізований механічний вовк-аналог, призначений для охорони, штурму, пошуку і знищення, а також допоміжних обов'язків. Сторожові пси досить розумні і здатні заряджати.</ATR_WatchdogGenerator.description>
+
+  <ATR_TORTGenerator.label>TORT Одиниця</ATR_TORTGenerator.label>
+  <ATR_TORTGenerator.description>Неініціалізована механічна черепаха-аналог, призначена як для транспортування на ближню, так і на далеку дальність. Блоки TORT досить інтелектуальні і здатні заряджатися.</ATR_TORTGenerator.description>
+
+  <ATR_MineralUnitGenerator.label>Мінеральна одиниця</ATR_MineralUnitGenerator.label>
+  <ATR_MineralUnitGenerator.description>Неініціалізований механічний овечий аналог, призначений для виробництва сталі. Ця одиниця обумовлює необхідність споживання органіки, і не може заряджатися.</ATR_MineralUnitGenerator.description>
+
+  <ATR_NutritionUnitGenerator.label>Блок харчування</ATR_NutritionUnitGenerator.label>
+  <ATR_NutritionUnitGenerator.description>Неініціалізований механічний коров'ячий аналог, призначений для отримання повноцінного високоефективного молока. Ця одиниця обумовлює необхідність споживання органіки, і не може заряджатися.</ATR_NutritionUnitGenerator.description>
+
+  <ATR_ChemUnitGenerator.label>Блок хімічної обробки</ATR_ChemUnitGenerator.label>
+  <ATR_ChemUnitGenerator.description>Неініціалізована механічна курка-аналог, призначена для отримання попередників нейтроаміну або хімпалива. Ця одиниця обумовлює необхідність споживання органіки, і не може заряджатися.</ATR_ChemUnitGenerator.description>
+
+
+  <!-- Non-Manufacturable, only generated via Microscyther shell, so inherit only from the Generator Base. -->
+
+  <ATR_MicroScytherGenerator.label>МікроСцитер</ATR_MicroScytherGenerator.label>
+  <ATR_MicroScytherGenerator.description>Неініціалізований механічний дрон, призначений для роїння цілей. Вони мають сильно обмежений термін служби акумулятора, нічого не дають при знищенні та атакують все, що не є мікросцитером.</ATR_MicroScytherGenerator.description>
+
+
+</LanguageData>

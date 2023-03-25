@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_M7Mech.label>M7 Механізована піхота</ATR_M7Mech.label>
+  <ATR_M7Mech.description>Різновид механізованої піхоти, що з'явився в давнину на цьому світі. Це дуже сильні, потужні бойові машини, але згодом повільні і мають обмежений запас ходу.</ATR_M7Mech.description>
+  <ATR_M7Mech.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_M7Mech.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_M7Mech.alienRace.generalSettings.alienPartGenerator.colorChannels.1.name>skin</ATR_M7Mech.alienRace.generalSettings.alienPartGenerator.colorChannels.1.name>
+  <ATR_M7Mech.tools.0.label>правий кулак</ATR_M7Mech.tools.0.label>
+  <ATR_M7Mech.tools.1.label>лівий кулак</ATR_M7Mech.tools.1.label>
+
+
+</LanguageData>

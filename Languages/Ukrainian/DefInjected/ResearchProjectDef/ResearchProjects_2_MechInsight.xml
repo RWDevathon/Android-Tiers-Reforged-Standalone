@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechanicalInsight.label>Механічне розуміння</ATR_MechanicalInsight.label>
+  <ATR_MechanicalInsight.description>Ініціювати дослідження можливості створення механічних рекреацій живих істот - і пов'язаних з ними можливостей.</ATR_MechanicalInsight.description>
+
+  <ATR_T1Androids.label>T1 андроїди</ATR_T1Androids.label>
+  <ATR_T1Androids.description>Андроїди першого рівня відзначаються схожістю по-людськи, але все одно є не більше, ніж машинами. Вражаючі своєю схожістю і можливостями, вони представляють вищі ешелони творчості Урбсвіту і мрій Середнього світу. Прекрасне просування в нашому прогресі і світанок світлого майбутнього.</ATR_T1Androids.description>
+
+  <ATR_UtilityBiomimetics.label>Корисна біоміметика</ATR_UtilityBiomimetics.label>
+  <ATR_UtilityBiomimetics.description>Біоміметика - це теоретична область створення механічних версій живих істот. Найбільш ранні успішні механічні прототипи завжди повторюють біологічні успіхи. Дослідження в цій галузі могли б відтворити багато успіхів людства в селекційній селекції в роботизованій формі.</ATR_UtilityBiomimetics.description>
+
+
+</LanguageData>
