@@ -111,6 +111,13 @@
     <ATR_FirstSurrogateCreated>About: Surrogates</ATR_FirstSurrogateCreated>
     <ATR_FirstSurrogateCreatedDesc>You have created your first surrogate pawn. Until it is connected to a controller (any SkyMind-connected pawn can toggle controls and link to this pawn), it will remain blank and not considered part of your faction. When connected to a controller, it will share the skills, passions, and relations with its controller. XP gained is automatically shared. Mood, health, and some other details can't be shared to avoid game-breaking issues.</ATR_FirstSurrogateCreatedDesc>
 
+    <!-- Mental States -->
+    <ATR_SurrogateSufferedMentalState>Surrogate Breakdown</ATR_SurrogateSufferedMentalState>
+    <ATR_SurrogateSufferedMentalStateDesc>A surrogate has suffered a mental break and shut-down as a self-preservation reaction. It will reboot automatically.</ATR_SurrogateSufferedMentalStateDesc>
+
+    <ATR_ControllerSufferedMentalState>Controller Breakdown</ATR_ControllerSufferedMentalState>
+    <ATR_ControllerSufferedMentalStateDesc>A surrogate controller has suffered a mental break due to an extreme breakdown in a surrogate propagating to the controller or a breakdown in the controller directly. All connected surrogates to the controller have shut down - initiating reboots automatically - and have disconnected from the controller.</ATR_ControllerSufferedMentalStateDesc>
+
     <!-- Personality Shift Letters -->
     <ATR_PersonalityShiftFreewilled>Personality shift request</ATR_PersonalityShiftFreewilled>
     <ATR_PersonalityShiftFreewilledDesc>{0_nameDef} would like to alter their personality slightly to see the world in a new way. If accepted, {0_possessive} passion in three skills and a trait will be exchanged for new ones with your input. {0_nameDef} would be pleased by the change, and would be mildly disappointed if prevented from changing.</ATR_PersonalityShiftFreewilledDesc>

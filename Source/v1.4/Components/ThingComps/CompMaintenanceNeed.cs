@@ -144,10 +144,6 @@ namespace ATReforged
             {
                 targetLevel = 0.5f;
             }
-            if (cachedFallRatePerDay < 0)
-            {
-                cachedFallRatePerDay = MaintenanceFallPerDay();
-            }
         }
 
         public override void PostExposeData()
@@ -427,7 +423,7 @@ namespace ATReforged
 
         private float maintenanceLevel = -1;
         public float targetLevel = -1;
-        private float cachedFallRatePerDay = -1;
+        private float cachedFallRatePerDay = 0.1f;
         public float maintenanceEffectTicks = TicksPerDay;
         public static string maintenanceLevelInfoCached;
     }

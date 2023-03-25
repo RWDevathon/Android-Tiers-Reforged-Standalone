@@ -108,7 +108,7 @@
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
         <defName>ATR_Install_AutonomousCore</defName>
 		<label>Install autonomous core</label>
-		<description>Installs and connects an autonomous core. Upon completion, the core will be able to store an intelligence - either copied from the SkyMind network or freshly generated.</description>
+		<description>Installs and connects an autonomous core. After repair stims connect the central networking, the core will be able to store an intelligence - either copied from the SkyMind network or freshly generated.</description>
 		<jobString>Installing autonomous core.</jobString>
 		<addsHediff>ATR_AutonomousCore</addsHediff>
     </RecipeDef>
@@ -137,7 +137,7 @@
     <RecipeDef ParentName="ATR_SurgeryCoreMechanical">
         <defName>Install_ReceiverCore</defName>
         <label>Install receiver core</label>
-        <description>Installs and connects a receiver core. Upon completion, the core will be able to host remote controllers and act as a surrogate. It will have no intelligence or functionality on its own, however.</description>
+        <description>Installs and connects a receiver core. After repair stims connect the central networking, the core will be able to host remote controllers and act as a surrogate. It will have no intelligence or functionality on its own, however.</description>
         <researchPrerequisite>ATR_RemoteControlProtocols</researchPrerequisite>
         <jobString>Installing receiver core.</jobString>
         <addsHediff>ATR_ReceiverCore</addsHediff>

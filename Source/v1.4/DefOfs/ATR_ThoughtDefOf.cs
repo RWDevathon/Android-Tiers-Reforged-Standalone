@@ -17,6 +17,8 @@ namespace ATReforged
 
         public static ThoughtDef ATR_TrolledViaSkyMind;
 
+        public static ThoughtDef ATR_SurrogateMentalBreak;
+
 
         public static ThoughtDef ATR_PersonalityShiftAllowed;
 

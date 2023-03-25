@@ -25,4 +25,18 @@
         </stages>
     </ThoughtDef>
 
+    <ThoughtDef>
+        <defName>ATR_SurrogateMentalBreak</defName>
+        <durationDays>15</durationDays>
+        <stackLimit>5</stackLimit>
+        <stackedEffectMultiplier>0.6</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>Surrogate discomfort</label>
+                <description>I experienced a great deal of discomfort through a surrogate. It's stressful.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 </Defs>
