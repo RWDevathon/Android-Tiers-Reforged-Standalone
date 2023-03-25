@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+  <ATR_SkyMindConnectionFailed>Не вдалося встановити зв'язок SkyMind. Перевірка пропускної здатності та доступності мережі.</ATR_SkyMindConnectionFailed>
+  <ATR_SkyMindConnectionFailedNoNetwork>Не вдалося встановити зв'язок SkyMind. Немає доступної мережі.</ATR_SkyMindConnectionFailedNoNetwork>
+
+  <ATR_GridlockerCleared>Сітка-шафка успішно розшифрована і відключена.</ATR_GridlockerCleared>
+
+  <!-- Core -->
+  <ATR_RemoveCloudPawnSuccess>Нейронна мережа {0} було видалено.</ATR_RemoveCloudPawnSuccess>
+
+  <ATR_ReplicateCloudPawnFailed>Не міг ініціювати реплікацію. Недостатній простір SkyMind, доступний для розміщення.</ATR_ReplicateCloudPawnFailed>
+
+  <!-- Player hacking -->
+  <ATR_HackOperationFailed>Операція не змогла зламати систему безпеки цільової фракції. Жодних репресій не передбачається.</ATR_HackOperationFailed>
+  <ATR_DisruptorHackSuccess>Зрив успішний. Ворожі підрозділи були знешкоджені.</ATR_DisruptorHackSuccess>
+
+  <ATR_NoArrival>Нічого не було відправлено на переплутані координати до того, як фракція скине свою систему наведення. Їм пощастило, цього разу.</ATR_NoArrival>
+
+  <!-- Android Interfaces -->
+  <ATR_NewbootAndroidCreated>Андроїд створив. Встановіть інтерфейс за допомогою операції, щоб вивести пристрій в онлайн.</ATR_NewbootAndroidCreated>
+  <ATR_InterfaceRemoved>Інтерфейс андроїда було видалено. Всі дані про особистість і контроль були знищені. Встановіть новий інтерфейс, щоб вивести його в Інтернет.</ATR_InterfaceRemoved>
+
+  <!-- Mechfaller -->
+  <ATR_HostileMechFall>Мех прибув, але ідентифікує все як вороже! Він також активував відстрочене самостійне завершення роботи.</ATR_HostileMechFall>
+
+  <!-- Link -->
+  <ATR_CannotConnect>Спроба з'єднання не може бути встановлена, що забезпечує достатню пропускну здатність мережі та цільову життєздатність.</ATR_CannotConnect>
+  <ATR_SurrogateControlled>{0} підключений до нового сурогату</ATR_SurrogateControlled>
+  <ATR_OperationInitiated>Мережеве посилання SkyMind, встановлене {0} запит. Не вимикайте підключення до мережі до завершення процедури.</ATR_OperationInitiated>
+  <ATR_OperationCompleted>Операція SkyMind завершена</ATR_OperationCompleted>
+  <ATR_OperationCompletedDesc>Мережа SkyMind успішно провела операцію на вимогу {0}.</ATR_OperationCompletedDesc>
+  <ATR_OperationFailure>Операція SkyMind провалилася!</ATR_OperationFailure>
+  <ATR_OperationFailureDesc>{0} зазнав катастрофічного пошкодження пам'яті через крах посилання SkyMind під час операції розуму. Операція провалилася і сталося сильне пошкодження пам'яті.</ATR_OperationFailureDesc>
+
+  <!-- Surgeries -->
+  <MessageMedicalOperationFailureMinorAndroid>{0} допустив незначну помилку під час роботи та перервав процедуру на {1}.</MessageMedicalOperationFailureMinorAndroid>
+  <MessageMedicalOperationFailureCatastrophicAndroid>{0} катастрофічно провалився під час спроби операції на {1}.</MessageMedicalOperationFailureCatastrophicAndroid>
+  <MessageMedicalOperationFailureRidiculousAndroid>{0} допустив серйозну помилку під час спроби операції на {1}.</MessageMedicalOperationFailureRidiculousAndroid>
+  <MessageMedicalOperationFailureFatalAndroid>{0} допустив фатальну помилку під час роботи на {1} що спричинило ненавмисну каскадну шкоду. Процедура завдала незворотної шкоди центральному процесору, що призвело до повної втрати пам'яті і свідомості.</MessageMedicalOperationFailureFatalAndroid>
+
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneNutritionUnit.label>Блок харчування</ATR_DroneNutritionUnit.label>
+  <ATR_DroneNutritionUnit.description>Блок дрімучого дрона, що спеціалізується на оптимізації генерації харчування з органічних речовин для споживання людиною. На відміну від інших механічних дронів, цей блок досить рідкісний серед андроїд-суспільств, враховуючи його цільове призначення. З майже тривожно довгим терміном зберігання і надзвичайно високим вмістом поживних речовин, придбання таких одиниць призвело до демографічного буму в багатьох світах - і, що досить цікаво, за продовженням, багатьох воєн.</ATR_DroneNutritionUnit.description>
+  <ATR_DroneNutritionUnit.tools.0.label>голова</ATR_DroneNutritionUnit.tools.0.label>
+
+
+</LanguageData>

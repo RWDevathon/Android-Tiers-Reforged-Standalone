@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MicroScyther.label>Мікро Скітер</ATR_MicroScyther.label>
+  <ATR_MicroScyther.description>Невеликий літаючий дрон з двома боковими лопатями пласталі. Хоча ці дрони не є особливо небезпечними поодинці, їх рідко можна побачити на самоті. Рої можуть швидко шматувати цілі на шматки.\n\nЦі дрони мають безбарвні датчики IFF, і атакують будь-якого немікросцитера.</ATR_MicroScyther.description>
+  <ATR_MicroScyther.tools.0.label>голова</ATR_MicroScyther.tools.0.label>
+  <ATR_MicroScyther.tools.1.label>ліве крило</ATR_MicroScyther.tools.1.label>
+  <ATR_MicroScyther.tools.2.label>праве крило</ATR_MicroScyther.tools.2.label>
+
+
+</LanguageData>

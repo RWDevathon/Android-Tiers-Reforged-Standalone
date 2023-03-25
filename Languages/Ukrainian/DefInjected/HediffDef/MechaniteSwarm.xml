@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechaniteSurge.label>сплеск механіту</ATR_MechaniteSurge.label>
+  <ATR_MechaniteSurge.description>Додатковий наддув механітів, що протікають через трубки теплоносія. Перенаселення механітів не може бути підтримане зберіганням механіту, і незабаром повернеться до нормального рівня.\n\nОднак тим часом загальна ефективність буде покращена, а додаткові механіти значно зменшать втрати теплоносія. Початкова інфузія механітів може замінити втрачену охолоджуючу рідину прямо.</ATR_MechaniteSurge.description>
+  <ATR_MechaniteSurge.stages.0.label>Незначним</ATR_MechaniteSurge.stages.0.label>
+  <ATR_MechaniteSurge.stages.1.label>Незначні</ATR_MechaniteSurge.stages.1.label>
+  <ATR_MechaniteSurge.stages.2.label>Помірний</ATR_MechaniteSurge.stages.2.label>
+  <ATR_MechaniteSurge.stages.3.label>Значний</ATR_MechaniteSurge.stages.3.label>
+  <ATR_MechaniteSurge.stages.4.label>Пік</ATR_MechaniteSurge.stages.4.label>
+
+
+</LanguageData>

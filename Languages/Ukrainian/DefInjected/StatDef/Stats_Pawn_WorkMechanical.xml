@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanical Surgery Success Chance (Base) -->
+
+  <ATR_MechanicalSurgerySuccessChance.label>Шанс на успіх у механічній хірургії</ATR_MechanicalSurgerySuccessChance.label>
+  <ATR_MechanicalSurgerySuccessChance.description>Базовий шанс, що персонаж досягне успіху при виконанні операції на андроїд. На фактичний шанс успіху також впливають такі фактори, як зручності, чистота приміщень, використовувані ліки, складність операції та натхнення. Яким би високим не був шанс успіху, завжди є невеликий шанс невдачі на будь-якій операції.</ATR_MechanicalSurgerySuccessChance.description>
+
+
+  <!-- Mechanical Surgery Operation Speed -->
+
+  <ATR_MechanicalOperationSpeed.label>швидкість механічної роботи,</ATR_MechanicalOperationSpeed.label>
+  <ATR_MechanicalOperationSpeed.description>Швидкість, з якою персонаж виконує механічні операції.</ATR_MechanicalOperationSpeed.description>
+
+
+  <!-- Mechanical Tend Quality -->
+
+  <ATR_MechanicalTendQuality.label>механічна схильність до якості</ATR_MechanicalTendQuality.label>
+  <ATR_MechanicalTendQuality.description>У нього базова якість дотримання, що дається при усуненні пошкоджень цілісності.\n\nНа фактичну якість тенденції також впливатимуть такі фактори, як використовувана медицина, засоби, удача тощо.</ATR_MechanicalTendQuality.description>
+
+
+  <!-- Mechanical tend speed -->
+
+  <ATR_MechanicalTendSpeed.label>механічна швидкість нахилу,</ATR_MechanicalTendSpeed.label>
+  <ATR_MechanicalTendSpeed.description>Швидкість, з якою персонаж прагне до пошкодження цілісності.</ATR_MechanicalTendSpeed.description>
+
+
+</LanguageData>

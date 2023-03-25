@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanical Part Pack -->
+
+  <ATR_PartPack.label>Механічна частина упаковки</ATR_PartPack.label>
+  <ATR_PartPack.description>Ця упаковка напівзібраних деталей призначена для заміни стандартних компонентів, починаючи від цілих ніг і рук і закінчуючи складними батареями і адаптерами. Базові заздалегідь запрограмовані механіти формують себе під більш складні завдання.</ATR_PartPack.description>
+
+
+  <!-- Drone Resurrector Kit -->
+
+  <ATR_DroneResurrectorKit.label>Набір для воскресіння дрона</ATR_DroneResurrectorKit.label>
+  <ATR_DroneResurrectorKit.description>Спеціалізований набір інструментів, здатних повернути до життя відключені прості механічні дрони. Інструменти досить просунуті, щоб повернути до життя простодушні механічні одиниці, такі як тварини. Відроджені агрегати повинні повністю перезавантажитися, щоб знову почати роботу.</ATR_DroneResurrectorKit.description>
+  <ATR_DroneResurrectorKit.comps.0.useLabel>Використовуйте набір для воскресіння</ATR_DroneResurrectorKit.comps.0.useLabel>
+
+
+  <!-- Android Resurrection Kit -->
+
+  <ATR_AndroidResurrectorKit.label>Набір для воскресіння Android</ATR_AndroidResurrectorKit.label>
+  <ATR_AndroidResurrectorKit.description>Спеціалізований набір інструментів, здатних повернути до життя виведені з ладу механічні агрегати. Інструменти достатньо просунуті, щоб повернути будь-який такий пристрій до номінальної функціональності. Відроджені агрегати повинні повністю перезавантажитися, щоб знову почати роботу.</ATR_AndroidResurrectorKit.description>
+  <ATR_AndroidResurrectorKit.comps.0.useLabel>Використовуйте набір для воскресіння</ATR_AndroidResurrectorKit.comps.0.useLabel>
+
+
+  <!-- Simple Repair Stim -->
+
+  <ATR_RepairStimSimple.label>Простий ремонт Stim</ATR_RepairStimSimple.label>
+  <ATR_RepairStimSimple.description>Невеликий простий зібраний комплект промислових компонентів та інструментів для надання допомоги та стимулювання механічного ремонту. Комплект не має ряду дуже корисних активів для більш серйозних травм або операцій, і більше підходить для тріажу на полі бою, ніж для професійного використання.</ATR_RepairStimSimple.description>
+
+
+  <!-- Intermediate Repair Stim -->
+
+  <ATR_RepairStimIntermediate.label>Проміжний ремонт Stim</ATR_RepairStimIntermediate.label>
+  <ATR_RepairStimIntermediate.description>Зібраний комплект промислових компонентів, механітів та інструментів для надання допомоги та стимулювання механічного ремонту. Такі набори стимуляції є основними інструментами будь-якого механіка, який вірить у якість. Добре підходить для цілого ряду завдань, він функціонально здатний і практичний.</ATR_RepairStimIntermediate.description>
+
+
+  <!-- Advanced Repair Stim -->
+
+  <ATR_RepairStimAdvanced.label>Розширений ремонт Stim</ATR_RepairStimAdvanced.label>
+  <ATR_RepairStimAdvanced.description>Масив високотехнологічних механітів та інструментів для надання допомоги та стимулювання механічного ремонту. Відносно рідко за межами Glitterworlds, такі набори високо цінуються механікою та будь-яким поважаючим себе андроїдом. Автономні механіти можуть змусити навіть погану механіку здаватися дуже грамотною.</ATR_RepairStimAdvanced.description>
+
+
+</LanguageData>

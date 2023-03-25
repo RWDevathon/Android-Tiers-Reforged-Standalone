@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanical Surgery Success Chance Factor -->
+
+  <ATR_MechanicalSurgerySuccessChanceFactor.label>фактор успіху механічної хірургії</ATR_MechanicalSurgerySuccessChanceFactor.label>
+  <ATR_MechanicalSurgerySuccessChanceFactor.description>Множник до шансу, що операція на механічному агрегаті буде успішною при виконанні тут. На шанси на успіх механічної хірургії також впливає багато інших факторів, включаючи здатність механіка.</ATR_MechanicalSurgerySuccessChanceFactor.description>
+
+
+  <!-- Mechanical Tend Quality Offset -->
+
+  <ATR_MechanicalTendQualityOffset.label>механічна тенденція до зміщення якості</ATR_MechanicalTendQualityOffset.label>
+  <ATR_MechanicalTendQualityOffset.description>Механічна властивість якості компенсується цим значенням.</ATR_MechanicalTendQualityOffset.description>
+
+
+</LanguageData>

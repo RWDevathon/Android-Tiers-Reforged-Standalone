@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Tier3Android.label>T3 Андроїд</ATR_Tier3Android.label>
+  <ATR_Tier3Android.description>Андроїди, віднесені до третього рівня, часто характеризуються великим зростом - висотою від семи до дев'яти футів - і вражаючими можливостями. Вони неймовірно міцні, модульні та потужні. Потребуючи великої кількості рідкісних ресурсів, вони, як правило, масово виробляються лише на гліттерсвітах.</ATR_Tier3Android.description>
+  <ATR_Tier3Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_Tier3Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_Tier3Android.tools.0.label>правий кулак</ATR_Tier3Android.tools.0.label>
+  <ATR_Tier3Android.tools.1.label>лівий кулак</ATR_Tier3Android.tools.1.label>
+  <ATR_Tier3Android.tools.2.label>голова</ATR_Tier3Android.tools.2.label>
+
+
+</LanguageData>

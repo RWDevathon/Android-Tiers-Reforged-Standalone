@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Added body parts -->
+
+  <ATR_ShutdownMechanical.label>виведений з експлуатації</ATR_ShutdownMechanical.label>
+  <ATR_ShutdownMechanical.description>Відключення ядра ШІ.</ATR_ShutdownMechanical.description>
+
+  <ATR_ShortReboot.label>Перезавантаження</ATR_ShortReboot.label>
+  <ATR_ShortReboot.description>Блок перезавантажується.</ATR_ShortReboot.description>
+
+  <ATR_LongReboot.label>Перезавантаження</ATR_LongReboot.label>
+  <ATR_LongReboot.description>В даний час блок проходить повний перезапуск системи.</ATR_LongReboot.description>
+
+  <ATR_RecoveringFromDDOS.label>DDOS Відновлення</ATR_RecoveringFromDDOS.label>
+  <ATR_RecoveringFromDDOS.description>Цей блок відновлюється після впливу DDOS-атаки. Повторна компіляція та відокремлення небажаних даних від справжніх даних є неприємною та відволікаючою діяльністю, оскільки мало даних можна повністю довіряти, поки вони не будуть завершені.</ATR_RecoveringFromDDOS.description>
+
+  <ATR_MechanicalOverclocking.label>розгін</ATR_MechanicalOverclocking.label>
+  <ATR_MechanicalOverclocking.description>Цей блок розганяє свій основний процесор, з помітним підвищенням продуктивності. Це вимагає значного додаткового енергоспоживання, і напружує системи тепло- і технічного обслуговування. Незвично підвищена активність процесора підкреслює і свідомість господаря.</ATR_MechanicalOverclocking.description>
+
+  <ATR_MemoryCorruption.label>Пошкодження пам'яті</ATR_MemoryCorruption.label>
+  <ATR_MemoryCorruption.description>Цей підрозділ зазнав критичного пошкодження пам'яті. Спогади втрачені, але саме пошкоджене сховище в кінцевому підсумку може бути відновлено. Однак це буде довга і важка дорога.</ATR_MemoryCorruption.description>
+  <ATR_MemoryCorruption.stages.0.label>Майже повне відновлення</ATR_MemoryCorruption.stages.0.label>
+  <ATR_MemoryCorruption.stages.1.label>Незначні помилки</ATR_MemoryCorruption.stages.1.label>
+  <ATR_MemoryCorruption.stages.2.label>Основні помилки</ATR_MemoryCorruption.stages.2.label>
+  <ATR_MemoryCorruption.stages.3.label>значні невдачі</ATR_MemoryCorruption.stages.3.label>
+  <ATR_MemoryCorruption.stages.4.label>критичні збої</ATR_MemoryCorruption.stages.4.label>
+  <ATR_MemoryCorruption.stages.5.label>Майже повна втрата</ATR_MemoryCorruption.stages.5.label>
+
+  <ATR_RemainingCharge.label>Батареї</ATR_RemainingCharge.label>
+  <ATR_RemainingCharge.description>Час автономної роботи, що залишився до втрати функції.</ATR_RemainingCharge.description>
+  <ATR_RemainingCharge.stages.0.label>Порожній</ATR_RemainingCharge.stages.0.label>
+  <ATR_RemainingCharge.stages.1.label>Критичний</ATR_RemainingCharge.stages.1.label>
+  <ATR_RemainingCharge.stages.2.label>Низький</ATR_RemainingCharge.stages.2.label>
+  <ATR_RemainingCharge.stages.3.label>Помірний</ATR_RemainingCharge.stages.3.label>
+  <ATR_RemainingCharge.stages.4.label>Високий</ATR_RemainingCharge.stages.4.label>
+  <ATR_RemainingCharge.stages.5.label>Повний</ATR_RemainingCharge.stages.5.label>
+
+
+</LanguageData>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechFallTargetterBeam.label>Мехфолл</ATR_MechFallTargetterBeam.label>
+
+  <ATR_OrbitalTargeterMechFall.label>Цільовий пристрій розгортання серії M7</ATR_OrbitalTargeterMechFall.label>
+  <ATR_OrbitalTargeterMechFall.description>Стародавня установка для націлювання на військовий мех серії M7. Пристрій вказує на те, що дійсно є повністю активний мех, який очікує команди впасти на призначену ціль. Однак, схоже, він не вказує, на що він буде націлений.</ATR_OrbitalTargeterMechFall.description>
+
+
+</LanguageData>

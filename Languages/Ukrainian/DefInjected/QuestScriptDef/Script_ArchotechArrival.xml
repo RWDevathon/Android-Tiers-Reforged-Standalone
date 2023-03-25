@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_OpportunitySite_ArchotechArrival.root.nodes.5.node.name>siteThreatChance</ATR_OpportunitySite_ArchotechArrival.root.nodes.5.node.name>
+  <ATR_OpportunitySite_ArchotechArrival.root.nodes.5.elseNode.name>siteThreatChance</ATR_OpportunitySite_ArchotechArrival.root.nodes.5.elseNode.name>
+  <ATR_OpportunitySite_ArchotechArrival.root.nodes.10.node.nodes.0.label>Quest expired: [resolvedQuestName]</ATR_OpportunitySite_ArchotechArrival.root.nodes.10.node.nodes.0.label>
+  <ATR_OpportunitySite_ArchotechArrival.root.nodes.10.node.nodes.0.text>Таємничий сигнал, що вабить вас до місця аварії зловісного метерориту, раптово припинився. Квест [resolvedQuestName] закінчився термін дії.</ATR_OpportunitySite_ArchotechArrival.root.nodes.10.node.nodes.0.text>
+  <ATR_OpportunitySite_ArchotechArrival.questDescriptionRules.rulesStrings.0>questDescription-&gt;З верескливим ревом по небу болить вогненна куля металу. Саме повітря ніби тремтить. Здавалося, воно прийшло не з космосу. Зрештою, він приземляється за горизонтом - і все ж якось його точне місце посадки вам відомо. Що може вас туди вабити, і з якою метою?
+                \nНез'ясовно, ви відчуваєте, що [allSitePartsDescriptionsExceptFirst]</ATR_OpportunitySite_ArchotechArrival.questDescriptionRules.rulesStrings.0>
+  <ATR_OpportunitySite_ArchotechArrival.questNameRules.rulesStrings.0>questName-&gt;Зловісний метеорит</ATR_OpportunitySite_ArchotechArrival.questNameRules.rulesStrings.0>
+
+
+</LanguageData>

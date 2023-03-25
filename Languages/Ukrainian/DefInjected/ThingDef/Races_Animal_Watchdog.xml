@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneWatchdog.label>Сторожовий блок</ATR_DroneWatchdog.label>
+  <ATR_DroneWatchdog.description>Ці безпілотні підрозділи є унікальними в багатьох відношеннях - програмованими для широкого кола завдань як військового, так і цивільного характеру, важкоозброєними і в той же час беззбройно ласкавими, здатними до заряду і чуйними до командування - і, таким чином, є добре відомою лінією механічної біоміметики. Багато хто служить компаньйонами, страшними розвідниками, мобільним спостереженням або навіть саперами.\n\nЇхня смертоносність і насильницькі можливості, безумовно, принесли їм репутацію - репутацію, яку вони, здається, майже прагнуть зберегти.</ATR_DroneWatchdog.description>
+  <ATR_DroneWatchdog.tools.0.label>лівий кіготь</ATR_DroneWatchdog.tools.0.label>
+  <ATR_DroneWatchdog.tools.1.label>правий кіготь</ATR_DroneWatchdog.tools.1.label>
+  <ATR_DroneWatchdog.tools.3.label>голова</ATR_DroneWatchdog.tools.3.label>
+
+
+</LanguageData>

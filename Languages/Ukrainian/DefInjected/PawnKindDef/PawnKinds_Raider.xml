@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_RaiderSlaveT1.label>T1 андроід раб</ATR_RaiderSlaveT1.label>
+  <ATR_RaiderSlaveT1.labelPlural>Поневолений андроід</ATR_RaiderSlaveT1.labelPlural>
+  <ATR_RaiderSlaveT1.labelMale>чоловік T1 андроїд раб</ATR_RaiderSlaveT1.labelMale>
+  <ATR_RaiderSlaveT1.labelMalePlural>чоловік поневолений андроїд</ATR_RaiderSlaveT1.labelMalePlural>
+  <ATR_RaiderSlaveT1.labelFemale>жінка T1 андроід раб</ATR_RaiderSlaveT1.labelFemale>
+  <ATR_RaiderSlaveT1.labelFemalePlural>жінка-поневолений андроїд</ATR_RaiderSlaveT1.labelFemalePlural>
+
+  <ATR_RaiderSoldierT1.label>T1 андроід рейдер</ATR_RaiderSoldierT1.label>
+  <ATR_RaiderSoldierT1.labelPlural>Рейдерські андроїди</ATR_RaiderSoldierT1.labelPlural>
+  <ATR_RaiderSoldierT1.labelMale>чоловічий T1 андроід рейдер</ATR_RaiderSoldierT1.labelMale>
+  <ATR_RaiderSoldierT1.labelMalePlural>чоловіки-рейдери андроїдів</ATR_RaiderSoldierT1.labelMalePlural>
+  <ATR_RaiderSoldierT1.labelFemale>жіночий T1 андроід рейдер</ATR_RaiderSoldierT1.labelFemale>
+  <ATR_RaiderSoldierT1.labelFemalePlural>жінки-рейдерські андроїди</ATR_RaiderSoldierT1.labelFemalePlural>
+
+  <ATR_RaiderSoldierT2.label>T2 андроід Рейдер</ATR_RaiderSoldierT2.label>
+  <ATR_RaiderSoldierT2.labelPlural>Рейдерські андроїди</ATR_RaiderSoldierT2.labelPlural>
+  <ATR_RaiderSoldierT2.labelMale>чоловічий T2 андроід рейдер</ATR_RaiderSoldierT2.labelMale>
+  <ATR_RaiderSoldierT2.labelMalePlural>чоловіки-рейдери андроїдів</ATR_RaiderSoldierT2.labelMalePlural>
+  <ATR_RaiderSoldierT2.labelFemale>жіночий T2 андроід рейдер</ATR_RaiderSoldierT2.labelFemale>
+  <ATR_RaiderSoldierT2.labelFemalePlural>жінки-рейдерські андроїди</ATR_RaiderSoldierT2.labelFemalePlural>
+
+  <ATR_RaiderSoldierT3.label>T3 андроід Рейдер</ATR_RaiderSoldierT3.label>
+  <ATR_RaiderSoldierT3.labelPlural>Рейдерські андроїди</ATR_RaiderSoldierT3.labelPlural>
+  <ATR_RaiderSoldierT3.labelMale>чоловічий T3 андроід рейдер</ATR_RaiderSoldierT3.labelMale>
+  <ATR_RaiderSoldierT3.labelMalePlural>чоловіки-рейдери андроїдів</ATR_RaiderSoldierT3.labelMalePlural>
+  <ATR_RaiderSoldierT3.labelFemale>жіночий T3 андроід рейдер</ATR_RaiderSoldierT3.labelFemale>
+  <ATR_RaiderSoldierT3.labelFemalePlural>жінки-рейдерські андроїди</ATR_RaiderSoldierT3.labelFemalePlural>
+
+  <ATR_RaiderSoldierT4.label>T4 андроід Рейдер</ATR_RaiderSoldierT4.label>
+  <ATR_RaiderSoldierT4.labelPlural>Рейдерські андроїди</ATR_RaiderSoldierT4.labelPlural>
+  <ATR_RaiderSoldierT4.labelMale>чоловічий T4 андроід рейдер</ATR_RaiderSoldierT4.labelMale>
+  <ATR_RaiderSoldierT4.labelMalePlural>чоловіки-рейдери андроїдів</ATR_RaiderSoldierT4.labelMalePlural>
+  <ATR_RaiderSoldierT4.labelFemale>жіночий T4 андроід рейдер</ATR_RaiderSoldierT4.labelFemale>
+  <ATR_RaiderSoldierT4.labelFemalePlural>жінки-рейдерські андроїди</ATR_RaiderSoldierT4.labelFemalePlural>
+
+
+</LanguageData>

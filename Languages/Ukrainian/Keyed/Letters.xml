@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+
+  <ATR_ReprogramSuccess>Дрон перепрограмований</ATR_ReprogramSuccess>
+  <ATR_ReprogramSuccessDesc>{0} була перепрограмована. Після перезавантаження він визнає колонію своїм контролером.</ATR_ReprogramSuccessDesc>
+  <ATR_ReprogramFailed>Перепрограмування не вдалося</ATR_ReprogramFailed>
+  <ATR_ReprogramFailedDesc>Операція перепрограмування на {0}Не вдалося. Він перезавантажиться, але не розпізнає команди. Можливо, він зазнав пошкодження пам'яті в процесі.</ATR_ReprogramFailedDesc>
+
+  <ATR_FractalCorruption>Фрактальна гидота</ATR_FractalCorruption>
+  <ATR_FractalCorruptionDesc>{0} був повністю зіпсований фрактальним викривленням. Вони не більше ніж гидота! Відлуння замучених криків буде чути багато миль, а можливо, і цілих років.</ATR_FractalCorruptionDesc>
+
+  <ATR_ServerMeltdown>Крах серверів</ATR_ServerMeltdown>
+  <ATR_ServerMeltdownDesc>Сервер частково вибухнув через надмірне нагрівання!</ATR_ServerMeltdownDesc>
+
+  <!-- Faction Rights Letters -->
+  <ATR_DeclarationOfWarRights>Війна за права</ATR_DeclarationOfWarRights>
+  <ATR_DeclarationOfWarRightsDesc>{0} знову підтримує суворий кодекс {1} права, які ви порушили. {2} сповнений рішучості стерти з лиця землі все {1} розвідки - поки не будуть усунені колоністи-кривдники, миру не буде.</ATR_DeclarationOfWarRightsDesc>
+  <ATR_CessationOfConflict>Конфлікт у правах вирішено</ATR_CessationOfConflict>
+  <ATR_CessationOfConflictDesc>{0} підтримує суворий кодекс проти {1} права, які ви більше не порушуєте. У міру того, як напруженість тане, а відносини теплі, мир знову опиняється в царині можливостей.</ATR_CessationOfConflictDesc>
+
+  <!-- Hacking Incidents -->
+  <!-- Generic Messages -->
+  <ATR_IncidentGenericAttackDesc>Ворожа спроба злому, за оцінками, має силу {0} успішно порушив систему безпеки SkyMind колонії, заразивши {1} мережеві пристрої, перш ніж почалися заходи безпеки.</ATR_IncidentGenericAttackDesc>
+  <ATR_IncidentGenericDefense>Спроба злому зазнала поразки</ATR_IncidentGenericDefense>
+  <ATR_IncidentGenericDefenseDesc>Ворожа спроба злому, за оцінками, має силу {0} не вдалося порушити систему безпеки SkyMind колонії. Функціональність системи є нормальною, і сервери безпеки намагаються випереджати вторгнення.</ATR_IncidentGenericDefenseDesc>
+  <ATR_IncidentGenericAllyIntercept>Зламати перехоплено!</ATR_IncidentGenericAllyIntercept>
+  <ATR_IncidentGenericAllyInterceptDesc>Хакери з білим капелюхом від вашого союзника {0} зв'яжіться з вами, повідомляючи про спробу злому ворожої особи у вашій мережі SkyMind. Вони не тільки змогли зупинити атаку (оцінювалося, що вони мають силу {1} пункти), які порушили б вашу безпеку, вони змогли виявити кілька вразливостей безпеки, які можна легко виправити, в результаті чого ваша система безпеки отримала {2} очок!</ATR_IncidentGenericAllyInterceptDesc>
+
+  <!-- Gridscreen Virus -->
+  <!-- Grid-virus defeated -->
+  <ATR_IncidentGridVirusDefeated>Вірус сітки переміг</ATR_IncidentGridVirusDefeated>
+
+  <!-- Grid-sleeper attack -->
+  <ATR_IncidentGridsleeperAttack>Сітка-спальне місце</ATR_IncidentGridsleeperAttack>
+  <ATR_IncidentGridsleeperAttackDesc>Уражені пристрої вийшли з ладу, і для відновлення функціональності за замовчуванням знадобиться час.</ATR_IncidentGridsleeperAttackDesc>
+
+  <!-- Grid-locker attack -->
+  <ATR_IncidentGridlockerAttack>Сітка-шафка</ATR_IncidentGridlockerAttack>
+  <ATR_IncidentGridlockerAttackDesc>Уражені пристрої мали свою функціональність, зашифровану хакером! Відновити функціональність тепер справа за хакером - для цього буде потрібно укласти угоду.</ATR_IncidentGridlockerAttackDesc>
+
+  <ATR_CryptolockerNeedRansom>Сітка-шафка Ренсом</ATR_CryptolockerNeedRansom>
+  <ATR_CryptolockerNeedRansomDesc>Пристрій, заблокований сіткою, випльовує повідомлення на петлю. Хакер надішле коди дешифрування та відмовиться від контролю над {0} пристрої, які вони зламали в обмін на {1} срібло. </ATR_CryptolockerNeedRansomDesc>
+
+  <!-- Grid-breaker attack -->
+  <ATR_IncidentGridbreakerAttack>Сітка-переривник</ATR_IncidentGridbreakerAttack>
+  <ATR_IncidentGridbreakerAttackDesc>У пристроїв виникла апаратна несправність через небезпечні програмні процедури. На відновлення функціональності за замовчуванням після ремонту піде деякий час.</ATR_IncidentGridbreakerAttackDesc>
+
+  <!-- Ally Grid Virus Intervention -->
+  <ATR_IncidentGridVirusAllyIntercept>Вірус сітки перехоплено!</ATR_IncidentGridVirusAllyIntercept>
+
+  <!-- DDOS Attack -->
+  <ATR_IncidentDDOSDefeated>Вірус сітки переміг</ATR_IncidentDDOSDefeated>
+
+  <ATR_IncidentDDOSAttack>DDOS</ATR_IncidentDDOSAttack>
+  <ATR_IncidentDDOSNormalAttackDesc>Уражені пристрої були завалені сміттєвими даними та інформацією про сміття. Це зашкодить навичкам та поколінню хакерського розуміння. Атака не змогла ефективно пошкодити окремі підрозділи, однак.</ATR_IncidentDDOSNormalAttackDesc>
+  <ATR_IncidentDDOSOverwhelmingAttackDesc>Уражені пристрої були завалені сміттєвими даними та інформацією про сміття. Це зашкодить навичкам та поколінню хакерського розуміння. Атака змогла успішно завантажити достатньо інформації про сміття, що підрозділи будуть змушені перекомпілювати більшу частину своїх ідей.</ATR_IncidentDDOSOverwhelmingAttackDesc>
+
+  <ATR_IncidentDDOSAllyIntercept>DDOS перехоплено!</ATR_IncidentDDOSAllyIntercept>
+
+  <!-- Troll Attack -->
+  <ATR_IncidentTrollDefeated>Атака тролів переможена</ATR_IncidentTrollDefeated>
+
+  <ATR_IncidentTrollAttack>Троль</ATR_IncidentTrollAttack>
+  <ATR_IncidentTrollAttackDesc>Уражений пішак, {0}, втратив загальну суму {1} очки навичок поширюються на їхні пристрасні навички та навички високого рівня! {0} також надзвичайно засмучений жахливими речами, які хакери змогли завантажити у свою свідомість, і збоєм систем безпеки для їх захисту.</ATR_IncidentTrollAttackDesc>
+
+  <ATR_IncidentTrollAllyIntercept>Атаку тролів перехопили!</ATR_IncidentTrollAllyIntercept>
+
+  <!-- Diplohack -->
+  <ATR_IncidentDiplohackDefeated>Диплохак переміг</ATR_IncidentDiplohackDefeated>
+
+  <ATR_IncidentDiplohackAttack>Диплохак</ATR_IncidentDiplohackAttack>
+  <ATR_IncidentDiplohackAttackDesc>Невідомі хакери змогли розшифрувати ключові лінії зв'язку з {0}, і доставив їм повідомлення, достовірно ідентифікуючи вас як джерело. Повідомлення містило помилкову інформацію, яка вела караван з {0} в засідку. Своє невдоволення вашою «необережністю і слабкою безпекою» вони висловили в чітко сформульованій - і, мабуть, реальній - дипломатичній відповіді. Вони пообіцяли поширити інформацію про цей інцидент і на інші фракції.</ATR_IncidentDiplohackAttackDesc>
+
+  <ATR_IncidentDiplohackAllyIntercept>Диплохак перехопив!</ATR_IncidentDiplohackAllyIntercept>
+
+  <!-- Provoker Hack -->
+  <ATR_IncidentProvokerhackDefeated>Провокатор Хакер переміг</ATR_IncidentProvokerhackDefeated>
+
+  <ATR_IncidentProvokerhackAttack>Провокатор злому</ATR_IncidentProvokerhackAttack>
+  <ATR_IncidentProvokerhackAttackDesc>Невідомі хакери змогли порушити безпеку SkyMind і встановити просту програму-випромінювач сигналу. Сигнал привернув увагу ворожої сили, перш ніж її можна було деактивувати!</ATR_IncidentProvokerhackAttackDesc>
+
+  <ATR_IncidentProvokerhackAllyIntercept>Провокатор перехоплений!</ATR_IncidentProvokerhackAllyIntercept>
+
+  <!-- Counterhack -->
+  <ATR_IncidentCounterhackDefeated>Контрхак переміг</ATR_IncidentCounterhackDefeated>
+
+  <ATR_IncidentCounterhackAttack>Контрхак</ATR_IncidentCounterhackAttack>
+  <ATR_IncidentCounterhackAttackDesc>Невідомі хакери зламали мережу SkyMind і заволоділи якомога більшою кількістю інформації, віддаючи перевагу розвідці, зібраній на інших цілях, а потім інсайтам навичок. За оцінками, вони вкрали до {0} очок загалом до того, як вони втратили доступ.</ATR_IncidentCounterhackAttackDesc>
+
+  <ATR_IncidentCounterhackAllyIntercept>Контрхак перехоплено!</ATR_IncidentCounterhackAllyIntercept>
+
+  <!-- Player Hacks failing -->
+  <ATR_RelationshipRetaliation>Зіпсовані відносини</ATR_RelationshipRetaliation>
+  <ATR_RelationshipRetaliationDesc>Спроба операції була перехоплена і розгромлена цільовими заходами оборони. Фракція підозрює вас у скоєнні замаху, але не має вагомих доказів, які прив'язують вас до злочину. Фактичний вплив на відносини, {0}, здається, сталося тому, що людина, яка перехопила його, вирішила взяти це на себе, щоб звинуватити вас перед усіма, хто бажає вислухати. Прикрий дипломатичний інцидент.</ATR_RelationshipRetaliationDesc>
+
+  <!-- Maintenance -->
+  <ATR_PoorMaintenanceLetter>Погане обслуговування</ATR_PoorMaintenanceLetter>
+
+</LanguageData>

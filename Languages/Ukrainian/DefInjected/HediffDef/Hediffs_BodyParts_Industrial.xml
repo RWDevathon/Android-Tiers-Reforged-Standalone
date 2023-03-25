@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mining Utility Arm -->
+
+  <ATR_MiningArm.label>Гірничодобувна рука</ATR_MiningArm.label>
+  <ATR_MiningArm.description>Проста механічна рука, розроблена з урахуванням видобутку та переробки корисних копалин. На видному місці рука має пластовий бур, який подає вміст у внутрішній процесор, ефективно відокремлюючи корисні копалини та швидко викидаючи відходи, щоб забезпечити максимальне буріння та мінімальний час сортування.</ATR_MiningArm.description>
+  <ATR_MiningArm.comps.0.tools.0.label>Дриль</ATR_MiningArm.comps.0.tools.0.label>
+
+
+  <!-- Agriculture Utility Arm -->
+
+  <ATR_AgriArm.label>Агро рука</ATR_AgriArm.label>
+  <ATR_AgriArm.description>Проста механічна рука, розроблена з урахуванням сільського господарства та садівництва. Рука оснащена кількома внутрішніми мультиінструментами, які належним чином збирають продукти та подають вміст у внутрішній процесор, викидаючи продукти життєдіяльності, щоб забезпечити оптимальний урожай та мінімальний час сортування. Викидання продуктів зі спеціалізованих ліктьових портів є ефективним, якщо досить дивно спостерігати.</ATR_AgriArm.description>
+  <ATR_AgriArm.comps.0.tools.0.label>коса</ATR_AgriArm.comps.0.tools.0.label>
+
+
+  <!-- Pacification Utility Arm -->
+
+  <ATR_PacificationArm.label>Звичайна рука</ATR_PacificationArm.label>
+  <ATR_PacificationArm.description>Простий механічний кронштейн з вбудованими поглиначами енергії і генераторами. Кулаки здатні досягати небезпечно високих температур і здатні відводити тепло при ударі об щось - ефективно обпалюючи ціль - і застосовуючи перевантажену кількість енергії - EMP у всьому, крім назви. Вони часто використовуються ОМОНом для надання дуже болючих, але несмертельних опіків та виведення з ладу транспортних засобів.\n\nEccentric chefs appreciate the consistent and rapid heat transfer.</ATR_PacificationArm.description>
+  <ATR_PacificationArm.comps.0.tools.0.label>заряджений кулак</ATR_PacificationArm.comps.0.tools.0.label>
+
+
+  <!-- Scalpel Utility Arm -->
+
+  <ATR_ScalpelArm.label>Скальпель руки</ATR_ScalpelArm.label>
+  <ATR_ScalpelArm.description>Механічний кронштейн з дуже зміненою структурою, призначений для точності і ідеально плавного руху. Ряд інтегрованих противаг, унікальні деталі та мультиінструменти забезпечують цій руці набагато більш тонке - але делікатне - управління. Хоча ця рука не підходить для загальних робочих завдань, вона є неймовірним благом як для хірургів, так і для механіків.</ATR_ScalpelArm.description>
+  <ATR_ScalpelArm.comps.0.tools.0.label>скальпель</ATR_ScalpelArm.comps.0.tools.0.label>
+
+
+  <!-- Rending Utility Arm -->
+
+  <ATR_RendingArm.label>Рендінгова рука</ATR_RendingArm.label>
+  <ATR_RendingArm.description>Механічний кронштейн, призначений для розбиття органічної або неорганічної маси на складові частини. Безліч спеціалізованих внутрішніх датчиків, сортувальників і процесорів забезпечують цю руку потужними можливостями розбирання. Конструкція дозволяє вільний діапазон пересування та відсутність непогашених штрафів, але є дивовижною та тривожною для спостереження. Рука здатна руйнувати живу тканину так само, як і мертві, і може здійснювати коротку роботу будівель.\n\nПроцес рендінга ретельно знищує хвороботворні мікроорганізми і забруднення, робить його ідеальним прихильником для ефективності і чистоти одержимих м'ясниками і кухарями.</ATR_RendingArm.description>
+  <ATR_RendingArm.comps.0.tools.0.label>Карвер</ATR_RendingArm.comps.0.tools.0.label>
+  <ATR_RendingArm.comps.0.tools.1.label>Зносник</ATR_RendingArm.comps.0.tools.1.label>
+
+
+  <!-- Makeshift Leg -->
+
+  <ATR_MakeshiftMechLeg.label>Імпровізована механічна ніжка</ATR_MakeshiftMechLeg.label>
+  <ATR_MakeshiftMechLeg.description>Встановлена імпровізована ніжка, тільки з мінімальним функціоналом. Хоча він чудово функціонує, враховуючи його спеціальний характер та відсутність виразних ніг або пальців ніг, він все ще значно поступається правильно спроектованій та виготовленій нозі.</ATR_MakeshiftMechLeg.description>
+
+
+  <!-- Makeshift Arm -->
+
+  <ATR_MakeshiftMechArm.label>Імпровізована механічна рука</ATR_MakeshiftMechArm.label>
+  <ATR_MakeshiftMechArm.description>Встановлена імпровізована рука, що володіє лише мінімальним функціоналом. Хоча він чудово функціонує, враховуючи його спеціальний характер і відсутність виразних рук або пальців, він все ще значно поступається правильно розробленій та виготовленій руці.</ATR_MakeshiftMechArm.description>
+  <ATR_MakeshiftMechArm.comps.0.tools.0.label>кулак</ATR_MakeshiftMechArm.comps.0.tools.0.label>
+
+
+</LanguageData>

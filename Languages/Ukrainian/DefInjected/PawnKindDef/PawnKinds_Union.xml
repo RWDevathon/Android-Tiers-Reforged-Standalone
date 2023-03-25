@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_AndroidT2CollectiveTrader.label>T2 андроїд Трейдер</ATR_AndroidT2CollectiveTrader.label>
+  <ATR_AndroidT2CollectiveTrader.labelPlural>Профспілкові трейдер</ATR_AndroidT2CollectiveTrader.labelPlural>
+  <ATR_AndroidT2CollectiveTrader.labelMale>чоловічий T2 андроїд трейдер</ATR_AndroidT2CollectiveTrader.labelMale>
+  <ATR_AndroidT2CollectiveTrader.labelMalePlural>чоловіки-профспілкові торговці</ATR_AndroidT2CollectiveTrader.labelMalePlural>
+  <ATR_AndroidT2CollectiveTrader.labelFemale>жіночий трейдер T2 андроїд</ATR_AndroidT2CollectiveTrader.labelFemale>
+  <ATR_AndroidT2CollectiveTrader.labelFemalePlural>жінки-профспілкові торговці</ATR_AndroidT2CollectiveTrader.labelFemalePlural>
+
+  <ATR_AndroidT1CollectiveSoldier.label>T1 Андроїд солдат</ATR_AndroidT1CollectiveSoldier.label>
+  <ATR_AndroidT1CollectiveSoldier.labelPlural>Андроїд солдати</ATR_AndroidT1CollectiveSoldier.labelPlural>
+  <ATR_AndroidT1CollectiveSoldier.labelMale>чоловік T1 Андроїд солдат</ATR_AndroidT1CollectiveSoldier.labelMale>
+  <ATR_AndroidT1CollectiveSoldier.labelMalePlural>чоловіки-солдати андроїд</ATR_AndroidT1CollectiveSoldier.labelMalePlural>
+  <ATR_AndroidT1CollectiveSoldier.labelFemale>жінка Т1 Андроїд Солдат</ATR_AndroidT1CollectiveSoldier.labelFemale>
+  <ATR_AndroidT1CollectiveSoldier.labelFemalePlural>жінки-солдати андроїд</ATR_AndroidT1CollectiveSoldier.labelFemalePlural>
+
+  <ATR_AndroidT2CollectiveSoldier.label>T2 Андроїд солдат</ATR_AndroidT2CollectiveSoldier.label>
+  <ATR_AndroidT2CollectiveSoldier.labelPlural>Солдати андроїд</ATR_AndroidT2CollectiveSoldier.labelPlural>
+  <ATR_AndroidT2CollectiveSoldier.labelMale>чоловік T2 Андроїд солдат</ATR_AndroidT2CollectiveSoldier.labelMale>
+  <ATR_AndroidT2CollectiveSoldier.labelMalePlural>чоловіки-солдати андроїд</ATR_AndroidT2CollectiveSoldier.labelMalePlural>
+  <ATR_AndroidT2CollectiveSoldier.labelFemale>жінка-Т2 Андроїд-солдат</ATR_AndroidT2CollectiveSoldier.labelFemale>
+  <ATR_AndroidT2CollectiveSoldier.labelFemalePlural>Жінки-солдати андроїд</ATR_AndroidT2CollectiveSoldier.labelFemalePlural>
+
+  <ATR_AndroidT3CollectiveSoldier.label>T3 Андроїд солдат</ATR_AndroidT3CollectiveSoldier.label>
+  <ATR_AndroidT3CollectiveSoldier.labelPlural>Солдати союзу</ATR_AndroidT3CollectiveSoldier.labelPlural>
+  <ATR_AndroidT3CollectiveSoldier.labelMale>чоловік T3 Андроїд солдат</ATR_AndroidT3CollectiveSoldier.labelMale>
+  <ATR_AndroidT3CollectiveSoldier.labelMalePlural>чоловіки-солдати Союзу</ATR_AndroidT3CollectiveSoldier.labelMalePlural>
+  <ATR_AndroidT3CollectiveSoldier.labelFemale>жінка T3 Андроїд солдат</ATR_AndroidT3CollectiveSoldier.labelFemale>
+  <ATR_AndroidT3CollectiveSoldier.labelFemalePlural>жінки-солдати Союзу</ATR_AndroidT3CollectiveSoldier.labelFemalePlural>
+
+  <ATR_AndroidT4CollectiveSoldier.label>T4 Андроїд солдат</ATR_AndroidT4CollectiveSoldier.label>
+  <ATR_AndroidT4CollectiveSoldier.labelPlural>Солдати андроїд</ATR_AndroidT4CollectiveSoldier.labelPlural>
+  <ATR_AndroidT4CollectiveSoldier.labelMale>чоловік T4 андроїд солдат</ATR_AndroidT4CollectiveSoldier.labelMale>
+  <ATR_AndroidT4CollectiveSoldier.labelMalePlural>чоловіки-солдати андроїд</ATR_AndroidT4CollectiveSoldier.labelMalePlural>
+  <ATR_AndroidT4CollectiveSoldier.labelFemale>жінка T4 Андроїд солдат</ATR_AndroidT4CollectiveSoldier.labelFemale>
+  <ATR_AndroidT4CollectiveSoldier.labelFemalePlural>Жінки-солдати андроїд</ATR_AndroidT4CollectiveSoldier.labelFemalePlural>
+
+  <ATR_AndroidT4CollectiveLeader.label>Лідер андроїдів</ATR_AndroidT4CollectiveLeader.label>
+  <ATR_AndroidT4CollectiveLeader.labelPlural>Лідери андроїдів</ATR_AndroidT4CollectiveLeader.labelPlural>
+  <ATR_AndroidT4CollectiveLeader.labelMale>чоловічий лідер андроїд</ATR_AndroidT4CollectiveLeader.labelMale>
+  <ATR_AndroidT4CollectiveLeader.labelMalePlural>чоловіки-лідери андроїд</ATR_AndroidT4CollectiveLeader.labelMalePlural>
+  <ATR_AndroidT4CollectiveLeader.labelFemale>жінка-лідер андроїд</ATR_AndroidT4CollectiveLeader.labelFemale>
+  <ATR_AndroidT4CollectiveLeader.labelFemalePlural>жінок-лідерів андроїд</ATR_AndroidT4CollectiveLeader.labelFemalePlural>
+
+
+</LanguageData>

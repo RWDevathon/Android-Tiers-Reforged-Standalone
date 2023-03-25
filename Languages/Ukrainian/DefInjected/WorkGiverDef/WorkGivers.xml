@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanic -->
+
+  <ATR_MechanicTendEmergency.label>ремонт хворих з нагальними потребами</ATR_MechanicTendEmergency.label>
+  <ATR_MechanicTendEmergency.verb>Ремонт</ATR_MechanicTendEmergency.verb>
+  <ATR_MechanicTendEmergency.gerund>Ремонтує</ATR_MechanicTendEmergency.gerund>
+
+  <ATR_MechanicTendToHumanlikes.label>ремонт пацієнтів</ATR_MechanicTendToHumanlikes.label>
+  <ATR_MechanicTendToHumanlikes.verb>Ремонт</ATR_MechanicTendToHumanlikes.verb>
+  <ATR_MechanicTendToHumanlikes.gerund>Ремонтує</ATR_MechanicTendToHumanlikes.gerund>
+
+  <ATR_MechanicTendToSelf.label>самостійний ремонт</ATR_MechanicTendToSelf.label>
+  <ATR_MechanicTendToSelf.verb>Ремонт</ATR_MechanicTendToSelf.verb>
+  <ATR_MechanicTendToSelf.gerund>Ремонтує</ATR_MechanicTendToSelf.gerund>
+
+  <MechanicTendToSelfEmergency.label>самостійний ремонт</MechanicTendToSelfEmergency.label>
+  <MechanicTendToSelfEmergency.verb>Ремонт</MechanicTendToSelfEmergency.verb>
+  <MechanicTendToSelfEmergency.gerund>Ремонтує</MechanicTendToSelfEmergency.gerund>
+
+  <ATR_DoBillsMechanicalOperation.label>оперувати людськими симпатіями</ATR_DoBillsMechanicalOperation.label>
+  <ATR_DoBillsMechanicalOperation.verb>оперувати</ATR_DoBillsMechanicalOperation.verb>
+  <ATR_DoBillsMechanicalOperation.gerund>що працюють на</ATR_DoBillsMechanicalOperation.gerund>
+
+  <ATR_MechanicRescue.label>порятунок збитих союзників до ліжка</ATR_MechanicRescue.label>
+  <ATR_MechanicRescue.verb>рятувати</ATR_MechanicRescue.verb>
+  <ATR_MechanicRescue.gerund>Порятунок</ATR_MechanicRescue.gerund>
+
+  <ATR_MechanicTendToAnimals.label>ремонтні тварини</ATR_MechanicTendToAnimals.label>
+  <ATR_MechanicTendToAnimals.verb>Ремонт</ATR_MechanicTendToAnimals.verb>
+  <ATR_MechanicTendToAnimals.gerund>Ремонтує</ATR_MechanicTendToAnimals.gerund>
+
+  <ATR_DoBillsMechanicalAnimalOperation.label>оперувати тварин,</ATR_DoBillsMechanicalAnimalOperation.label>
+  <ATR_DoBillsMechanicalAnimalOperation.verb>оперувати</ATR_DoBillsMechanicalAnimalOperation.verb>
+  <ATR_DoBillsMechanicalAnimalOperation.gerund>що працюють на</ATR_DoBillsMechanicalAnimalOperation.gerund>
+
+  <ATR_TakeMechanicalToBedToOperate.label>водити хворих спати на операції</ATR_TakeMechanicalToBedToOperate.label>
+  <ATR_TakeMechanicalToBedToOperate.verb>взяти на експлуатацію</ATR_TakeMechanicalToBedToOperate.verb>
+  <ATR_TakeMechanicalToBedToOperate.gerund>взяття на експлуатацію</ATR_TakeMechanicalToBedToOperate.gerund>
+
+
+  <!-- Research -->
+
+  <ATR_GenerateInsight.label>генерувати точки розуміння SkyMind</ATR_GenerateInsight.label>
+  <ATR_GenerateInsight.verb>генерувати розуміння</ATR_GenerateInsight.verb>
+  <ATR_GenerateInsight.gerund>генерування розуміння</ATR_GenerateInsight.gerund>
+
+
+</LanguageData>

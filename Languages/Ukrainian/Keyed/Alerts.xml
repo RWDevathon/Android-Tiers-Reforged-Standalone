@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ATR_AlertServerHeatCritical>Термочутливий пристрій критичний</ATR_AlertServerHeatCritical>
+  <ATR_AlertServerHeatCriticalDesc>Принаймні одному термочутливому пристрою загрожує горіння через перевищення максимального порогу безпеки тепла! Для збереження цілісності мережі потрібні дії!</ATR_AlertServerHeatCriticalDesc>
+
+  <ATR_AlertFullSkillServers>Повні сервери навичок</ATR_AlertFullSkillServers>
+  <ATR_AlertFullSkillServersDesc>Більше немає можливостей для балів кваліфікації. Подумайте про їх використання або розширення можливостей.</ATR_AlertFullSkillServersDesc>
+
+  <ATR_AlertFullHackingServers>Повний злом серверів</ATR_AlertFullHackingServers>
+  <ATR_AlertFullHackingServersDesc>Більше немає можливостей для злому очок і немає штрафу за поточний час. Подумайте про їх використання або розширення можливостей.</ATR_AlertFullHackingServersDesc>
+
+  <ATR_AlertLowSecurity>Мережа під загрозою</ATR_AlertLowSecurity>
+  <ATR_AlertLowSecurityDesc>Кількість доступних точок безпеки навряд чи успішно захистить від будь-яких спроб злому! Потрібні додаткові сервери безпеки і точки - в цей час слід дотримуватися крайньої обережності навколо використання мережі.</ATR_AlertLowSecurityDesc>
+
+  <ATR_NeedMechanic>потрібен механік</ATR_NeedMechanic>
+  <ATR_NeedMechanicDesc>Ці механічні агрегати потребують ремонту, але у вас немає здорових колоністів, призначених механіками.\n\n{0}\nВіднесіть здорового колоніста до типу роботи механіка. Хоча більшість пошкоджень, природно, будуть пом'якшені з часом, механіка значно збільшить швидкість відновлення та зменшить ймовірність побічних ефектів.</ATR_NeedMechanicDesc>
+
+</LanguageData>

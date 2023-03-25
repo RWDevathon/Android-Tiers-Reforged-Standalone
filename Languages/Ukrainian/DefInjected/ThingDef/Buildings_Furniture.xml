@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechanicBed.label>Механічне ліжко</ATR_MechanicBed.label>
+  <ATR_MechanicBed.description>Аналог лікарняного ліжка для механіків для обробки операцій на механічних агрегатах. Агрегати можуть заряджатися під час використання цього ліжка, а ряд вбудованих функцій надає механіці переваги при виконанні операцій.</ATR_MechanicBed.description>
+
+  <ATR_MechanicCabinet.label>Механічний кабінет</ATR_MechanicCabinet.label>
+  <ATR_MechanicCabinet.description>Невелика шафа, яку можна використовувати в поєднанні з механічно сумісними ліжками. Він містить низку корисних інструментів для подальшого вдосконалення механічних операцій.</ATR_MechanicCabinet.description>
+
+
+</LanguageData>

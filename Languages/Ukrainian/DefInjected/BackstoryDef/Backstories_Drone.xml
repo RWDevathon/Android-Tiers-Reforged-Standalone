@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Childhoods -->
+
+  <ATR_MechChildhoodAncientDroneSoldier.title>Дрон серії М</ATR_MechChildhoodAncientDroneSoldier.title>
+  <ATR_MechChildhoodAncientDroneSoldier.titleShort>Мех</ATR_MechChildhoodAncientDroneSoldier.titleShort>
+  <ATR_MechChildhoodAncientDroneSoldier.baseDesc>Зібраний, архотеками, здавалося б, дуже давно, без знання {PAWN_possessive}походження або мета, що залишилася. {PAWN_pronoun} Однак, звичайно, лише здається побудованим для війни. Яку користь могли мати Archotechs для {PAWN_objective}?</ATR_MechChildhoodAncientDroneSoldier.baseDesc>
+
+  <ATR_MechChildhoodDrone.title>Трутень</ATR_MechChildhoodDrone.title>
+  <ATR_MechChildhoodDrone.titleShort>Трутень</ATR_MechChildhoodDrone.titleShort>
+  <ATR_MechChildhoodDrone.baseDesc>Трутневі «дитинства» настільки ж нецікаві, наскільки про них часто забувають. Багато творців не обтяжують себе відзначенням моменту пробудження, і жоден дрон не знає власної історії.</ATR_MechChildhoodDrone.baseDesc>
+
+  <ATR_MechChildhoodFreshBlank.title>Fresh Blank</ATR_MechChildhoodFreshBlank.title>
+  <ATR_MechChildhoodFreshBlank.titleShort>Unit</ATR_MechChildhoodFreshBlank.titleShort>
+  <ATR_MechChildhoodFreshBlank.baseDesc>{PAWN_nameDef} був створений, щоб бути ідеально порожнім шифером, готовим до того, щоб його наступний власник сформував свої перші і єдині спогади.</ATR_MechChildhoodFreshBlank.baseDesc>
+
+
+  <!-- Adulthoods -->
+
+  <ATR_MechAdulthoodAncientDroneSoldier.title>Військовий дрон</ATR_MechAdulthoodAncientDroneSoldier.title>
+  <ATR_MechAdulthoodAncientDroneSoldier.titleShort>Мех</ATR_MechAdulthoodAncientDroneSoldier.titleShort>
+  <ATR_MechAdulthoodAncientDroneSoldier.baseDesc>{PAWN_nameDef} це дрон, який лише коли-небудь був здатний воювати. Жуки, механоїди, повстанці, імперії, ніщо з цього не має значення. Дронам все одно, з ким вони воюють, і вони не пам'ятають, кого вони вбили.</ATR_MechAdulthoodAncientDroneSoldier.baseDesc>
+
+  <ATR_MechAdulthoodDrone.title>Дрон</ATR_MechAdulthoodDrone.title>
+  <ATR_MechAdulthoodDrone.titleShort>Дрон</ATR_MechAdulthoodDrone.titleShort>
+  <ATR_MechAdulthoodDrone.baseDesc>{PAWN_nameDef} є дроном, який продовжує нести службу на основі {PAWN_possessive} програмування. Неможливо знати, скільки разів змінювалося це програмування, але дрон, здається, не турбується цим.</ATR_MechAdulthoodDrone.baseDesc>
+
+  <ATR_MechAdulthoodBlank.title>Пустий дрон</ATR_MechAdulthoodBlank.title>
+  <ATR_MechAdulthoodBlank.titleShort>Одиниці</ATR_MechAdulthoodBlank.titleShort>
+  <ATR_MechAdulthoodBlank.baseDesc>Цей підрозділ не має ні інтелекту, ні пам'яті. Вона повністю позбавлена характеру і корисності.</ATR_MechAdulthoodBlank.baseDesc>
+
+
+</LanguageData>

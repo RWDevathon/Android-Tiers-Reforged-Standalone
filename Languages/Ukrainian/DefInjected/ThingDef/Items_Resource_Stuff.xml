@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_ChemCapsule.label>Хімічна капсула</ATR_ChemCapsule.label>
+  <ATR_ChemCapsule.description>Невелика щільна капсула, повна синтетичних хімічних речовин-попередників, готових до переробки в нейтроамін або хімпаливо.</ATR_ChemCapsule.description>
+
+  <ATR_NutrientSolution.label>живильний розчин</ATR_NutrientSolution.label>
+  <ATR_NutrientSolution.description>Густа кашка з високим вмістом білка і висококалорійних речовин, яка має невиразно медоподібну консистенцію, хоча і з м'яким смаком, який не є ні образливим, ні солодким. Цей розчин нестабілізований, і його необхідно обробляти хімічними капсулами, щоб досягти його, як відомо, не псує стану.</ATR_NutrientSolution.description>
+
+  <ATR_NutritionBlock.label>блок харчування</ATR_NutritionBlock.label>
+  <ATR_NutritionBlock.description>Щільний, багатий на харчування блок, створений стабілізуючим живильним розчином з хімічними капсулами. Подібно до розсипчастої форми сиру, ця речовина ніколи не закінчиться і сповнена необхідних поживних речовин для прожитку.</ATR_NutritionBlock.description>
+
+
+</LanguageData>

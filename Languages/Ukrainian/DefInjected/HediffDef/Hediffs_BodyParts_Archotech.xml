@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Cybertech Arm -->
+
+  <ATR_CybertechArm.label>Кібертехнологічна рука</ATR_CybertechArm.label>
+  <ATR_CybertechArm.description>Архотех-пристрій у вигляді кібернетичної руки. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechArm.description>
+  <ATR_CybertechArm.comps.0.tools.0.label>кулак</ATR_CybertechArm.comps.0.tools.0.label>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_CybertechLeg.label>Кібертехнологічна нога</ATR_CybertechLeg.label>
+  <ATR_CybertechLeg.description>Архотех-пристрій у вигляді кібернетичної ноги. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechLeg.description>
+
+
+  <!-- Cybertech Visual Sensor -->
+
+  <ATR_CybertechVisualSensor.label>Візуальний датчик кібертехнологій</ATR_CybertechVisualSensor.label>
+  <ATR_CybertechVisualSensor.description>Архотех-пристрій у вигляді кібернетичного ока. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechVisualSensor.description>
+
+
+  <!-- Cybertech Audio Sensor -->
+
+  <ATR_CybertechAudioSensor.label>Кібертехнологічний аудіодатчик</ATR_CybertechAudioSensor.label>
+  <ATR_CybertechAudioSensor.description>Архотех-пристрій у вигляді кібернетичного вуха. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechAudioSensor.description>
+
+
+  <!-- Cybertech Heatsink -->
+
+  <ATR_CybertechHeatsink.label>Радіатор для кібертехнологій</ATR_CybertechHeatsink.label>
+  <ATR_CybertechHeatsink.description>Архотех-пристрій у вигляді кібернетичного радіатора. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechHeatsink.description>
+
+
+  <!-- Cybertech Coolant Pump -->
+
+  <ATR_CybertechCoolantPump.label>Насос охолоджуючої рідини для кібертехнологій</ATR_CybertechCoolantPump.label>
+  <ATR_CybertechCoolantPump.description>Архотех-пристрій у вигляді кібернетичного насоса теплоносія. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechCoolantPump.description>
+
+
+  <!-- Cybertech Battery -->
+
+  <ATR_CybertechBattery.label>Акумуляторна батарея Cybertech</ATR_CybertechBattery.label>
+  <ATR_CybertechBattery.description>Архотех-пристрій у вигляді кібернетичної батареї. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechBattery.description>
+
+
+  <!-- Cybertech Mechanite Storage -->
+
+  <ATR_CybertechMechaniteStorage.label>Зберігання механітів у кібертехнологіях</ATR_CybertechMechaniteStorage.label>
+  <ATR_CybertechMechaniteStorage.description>Архотех-пристрій у вигляді кібернетичного ливарного цеху нанітів зі сховищем для них. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechMechaniteStorage.description>
+
+
+  <!-- Cybertech Reactor -->
+
+  <ATR_CybertechReactor.label>Біо-реактор Кібертех</ATR_CybertechReactor.label>
+  <ATR_CybertechReactor.description>Архотех-пристрій у вигляді біо-реактора - але, схоже, він також знижує енергоспоживання. Значно потужніші, ніж навіть блискучі передові частини, езотеричні знання та навички, необхідні для їх виробництва, нічого не варті без явного благословення архотеха. Можливо, в цьому і полягає секрет її сили?</ATR_CybertechReactor.description>
+
+
+</LanguageData>

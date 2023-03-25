@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_FeelingsTowardOrganics.degreeDatas.0.label>Любить органіку</ATR_FeelingsTowardOrganics.degreeDatas.0.label>
+  <ATR_FeelingsTowardOrganics.degreeDatas.0.description>{PAWN_nameDef} має глибоку прихильність до всього органічного життя, вбачаючи в них вершину культури та існування. {PAWN_nameDef} прагне бути максимально органічним, що б це для них не означало.</ATR_FeelingsTowardOrganics.degreeDatas.0.description>
+  <ATR_FeelingsTowardOrganics.degreeDatas.1.label>Поважає органіку</ATR_FeelingsTowardOrganics.degreeDatas.1.label>
+  <ATR_FeelingsTowardOrganics.degreeDatas.1.description>{PAWN_nameDef} Природно поважає і готовий довіряти органічному життю, розуміючи і підтримуючи свою природу.</ATR_FeelingsTowardOrganics.degreeDatas.1.description>
+  <ATR_FeelingsTowardOrganics.degreeDatas.2.label>Неповага до органіки</ATR_FeelingsTowardOrganics.degreeDatas.2.label>
+  <ATR_FeelingsTowardOrganics.degreeDatas.2.description>{PAWN_nameDef} не розуміє, чому хтось хотів би бути органічно заснованим, і намагається уникати спілкування з ними, де це можливо.</ATR_FeelingsTowardOrganics.degreeDatas.2.description>
+  <ATR_FeelingsTowardOrganics.degreeDatas.3.label>Ненавидить органіку</ATR_FeelingsTowardOrganics.degreeDatas.3.label>
+  <ATR_FeelingsTowardOrganics.degreeDatas.3.description>{PAWN_nameDef} зневажає органічне життя, і ледве готовий терпіти її присутність. Ледь.</ATR_FeelingsTowardOrganics.degreeDatas.3.description>
+
+
+</LanguageData>

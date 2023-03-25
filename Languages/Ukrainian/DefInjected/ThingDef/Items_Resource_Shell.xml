@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MicroscytherShell.label>Снаряд рою</ATR_MicroscytherShell.label>
+  <ATR_MicroscytherShell.description>Артилерійський снаряд, що містить кілька заздалегідь запрограмованих мікросцитерів, які будуть розв'язані і при ударі атакувати всі довколишні цілі.</ATR_MicroscytherShell.description>
+
+  <ATR_MicroscytherShell_round.label>Шкарлупка рою</ATR_MicroscytherShell_round.label>
+
+
+</LanguageData>

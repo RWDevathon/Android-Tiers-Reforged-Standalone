@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MaintenanceMood.stages.0.label>Жахливе обслуговування</ATR_MaintenanceMood.stages.0.label>
+  <ATR_MaintenanceMood.stages.0.description>Я не зміг належним чином підтримувати свою основну пам'ять і системи занадто довго. Мої внутрішні органи стикаються з помилками, є критичні компоненти, змушені добре виходити за свої межі, а основні системи виходять з ладу. Це те, що відчуває органіка, коли вона літня і старіє?</ATR_MaintenanceMood.stages.0.description>
+  <ATR_MaintenanceMood.stages.1.label>жахливе технічне обслуговування</ATR_MaintenanceMood.stages.1.label>
+  <ATR_MaintenanceMood.stages.1.description>Деякий час я не міг належним чином підтримувати свою основну пам'ять і системи. Є внутрішні системні помилки, і мої системи перевантажені. На виправлення цього піде чимало часу.</ATR_MaintenanceMood.stages.1.description>
+  <ATR_MaintenanceMood.stages.2.label>погане обслуговування</ATR_MaintenanceMood.stages.2.label>
+  <ATR_MaintenanceMood.stages.2.description>Моя основна пам'ять і системи можуть використовувати перерву для перевірки справності. Повний цикл технічного обслуговування відчував би себе добре прямо зараз.</ATR_MaintenanceMood.stages.2.description>
+  <ATR_MaintenanceMood.stages.3.label>стандартне обслуговування</ATR_MaintenanceMood.stages.3.label>
+  <ATR_MaintenanceMood.stages.3.description>Усі системи повідомляють про регулярну операційну ефективність, при цьому всі помилки добре відповідають стандартним очікуванням.</ATR_MaintenanceMood.stages.3.description>
+  <ATR_MaintenanceMood.stages.4.label>гідне обслуговування</ATR_MaintenanceMood.stages.4.label>
+  <ATR_MaintenanceMood.stages.4.description>Моя основна пам'ять і системи мали достатні перерви в обслуговуванні для зневаги. Мої системи працюють безперебійно.</ATR_MaintenanceMood.stages.4.description>
+  <ATR_MaintenanceMood.stages.5.label>відмінне обслуговування,</ATR_MaintenanceMood.stages.5.label>
+  <ATR_MaintenanceMood.stages.5.description>Я встиг зробити широкий спектр внутрішніх перевірок здоров'я та оптимізації ефективності. Мої системи працюють бездоганно, і всі перевірки пройшли за найвищими стандартами.</ATR_MaintenanceMood.stages.5.description>
+  <ATR_MaintenanceMood.stages.6.label>бездоганне утримання</ATR_MaintenanceMood.stages.6.label>
+  <ATR_MaintenanceMood.stages.6.description>У мене був час, щоб заощадити навіть на найнеобхідніші перевірки здоров'я та оптимізації для прогнозування проблем, перш ніж вони можуть виникнути. Мої системи працюють краще, ніж у день, коли моє ядро вперше ввімкнено! Це, мабуть, відчуття, яке є у органічної молоді - незламне і в ідеальному здоров'ї!</ATR_MaintenanceMood.stages.6.description>
+
+
+</LanguageData>

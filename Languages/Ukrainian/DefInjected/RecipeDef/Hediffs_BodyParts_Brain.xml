@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Autonomous Core -->
+
+  <ATR_Install_AutonomousCore.label>Встановіть автономне ядро</ATR_Install_AutonomousCore.label>
+  <ATR_Install_AutonomousCore.description>Встановлює і підключає автономне ядро. По завершенні ядро зможе зберігати розвідку - або скопійовану з мережі SkyMind, або свіжозгенеровану.</ATR_Install_AutonomousCore.description>
+  <ATR_Install_AutonomousCore.jobString>Установка автономного ядра.</ATR_Install_AutonomousCore.jobString>
+
+
+  <!-- SkyMind Receiver Core -->
+
+  <Install_ReceiverCore.label>Встановіть ядро ресивера</Install_ReceiverCore.label>
+  <Install_ReceiverCore.description>Встановлює і підключає ядро приймача. По завершенні ядро зможе розміщувати віддалені контролери і виступати в ролі сурогату. Однак він не матиме власного інтелекту чи функціональності.</Install_ReceiverCore.description>
+  <Install_ReceiverCore.jobString>Установка ядра ресивера.</Install_ReceiverCore.jobString>
+
+
+  <!-- SkyMind Receiver -->
+
+  <ATR_Install_SkyMindReceiver.label>Встановіть приймач SkyMind</ATR_Install_SkyMindReceiver.label>
+  <ATR_Install_SkyMindReceiver.description>Встановлює та ініціалізує приймач у мозку суб'єктів. Який би інтелект не зберігався в мозку, він помре, а суб'єкт стане сурогатом.</ATR_Install_SkyMindReceiver.description>
+  <ATR_Install_SkyMindReceiver.jobString>Встановлення приймача SkyMind.</ATR_Install_SkyMindReceiver.jobString>
+
+  <ATR_RemoveSkyMindReceiver.label>видалення приймача SkyMind</ATR_RemoveSkyMindReceiver.label>
+  <ATR_RemoveSkyMindReceiver.description>Видалення імплантату приймача Skymind.</ATR_RemoveSkyMindReceiver.description>
+  <ATR_RemoveSkyMindReceiver.jobString>Видалення приймача Skymind.</ATR_RemoveSkyMindReceiver.jobString>
+
+
+  <!-- SkyMind Transceiver -->
+
+  <ATR_Install_SkyMindTransceiver.label>Встановіть приймач SkyMind</ATR_Install_SkyMindTransceiver.label>
+  <ATR_Install_SkyMindTransceiver.description>Встановлює та ініціалізує приймач у мозку суб'єктів. Пішак зможе вільно отримати доступ до мережі SkyMind.</ATR_Install_SkyMindTransceiver.description>
+  <ATR_Install_SkyMindTransceiver.jobString>Встановлення приймача SkyMind.</ATR_Install_SkyMindTransceiver.jobString>
+
+  <ATR_RemoveOrganicSkyMindTransceiver.label>видалити приймач SkyMind</ATR_RemoveOrganicSkyMindTransceiver.label>
+  <ATR_RemoveOrganicSkyMindTransceiver.description>Видалення імплантату приймача Skymind.</ATR_RemoveOrganicSkyMindTransceiver.description>
+  <ATR_RemoveOrganicSkyMindTransceiver.jobString>Видалення приймача Skymind.</ATR_RemoveOrganicSkyMindTransceiver.jobString>
+
+
+</LanguageData>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- AutoDoor -->
+  <ATR_AutoDoorOpen>Open</ATR_AutoDoorOpen>
+  <ATR_AutoDoorOpenDescription>Open remotely via a SkyMind connection.</ATR_AutoDoorOpenDescription>
+  <ATR_AutoDoorClose>Close</ATR_AutoDoorClose>
+  <ATR_AutoDoorCloseDescription>Close remotely via a SkyMind connection.</ATR_AutoDoorCloseDescription>
+
+  <!-- Computer -->
+  <ATR_ServerNetworkConnectionNeeded>Server not connected to SkyMind network.</ATR_ServerNetworkConnectionNeeded>
+
+  <ATR_SkillMode>Skill Mode</ATR_SkillMode>
+  <ATR_SkillModeDesc>This server is assigned to skill point generation. Click to switch to security.</ATR_SkillModeDesc>
+
+  <ATR_SecurityMode>Security Mode</ATR_SecurityMode>
+  <ATR_SecurityModeDesc>This server is assigned to security point generation. Click to switch to hacking.</ATR_SecurityModeDesc>
+
+  <ATR_HackingMode>Hacking Mode</ATR_HackingMode>
+  <ATR_HackingModeDesc>This server is assigned to hacking point generation. Click to switch to skill.</ATR_HackingModeDesc>
+
+  <ATR_HackingWindow>Attempt Hack</ATR_HackingWindow>
+  <ATR_HackingWindowDesc>Open the hacking interface, allowing for the usage of hacking points to engage in nefarious activity.</ATR_HackingWindowDesc>
+
+  <ATR_SwitchToSkillMode>Inactive!</ATR_SwitchToSkillMode>
+  <ATR_SwitchToSkillModeDesc>This server is in an illegal state. Click to switch to skill.</ATR_SwitchToSkillModeDesc>
+
+  <!-- SkyMind -->
+  <ATR_ConnectSkyMind>Connect to SkyMind</ATR_ConnectSkyMind>
+  <ATR_ConnectSkyMindDesc>Connect this device to the SkyMind network for remote interaction.</ATR_ConnectSkyMindDesc>
+
+  <!-- Core -->
+  <ATR_CloudPawnInfo>Infos</ATR_CloudPawnInfo>
+  <ATR_CloudPawnInfoDesc>Get information about SkyMind intelligences.</ATR_CloudPawnInfoDesc>
+
+  <ATR_RemoveCloudPawn>Remove</ATR_RemoveCloudPawn>
+  <ATR_RemoveCloudPawnDesc>Remove a SkyMind intelligence</ATR_RemoveCloudPawnDesc>
+  <ATR_RemoveCloudPawnConfirm>Flushing {0} from the SkyMind network will permanently destroy the intelligence. This is considered murder.</ATR_RemoveCloudPawnConfirm>
+
+  <ATR_ReplicateCloudPawn>Replicate</ATR_ReplicateCloudPawn>
+  <ATR_ReplicateCloudPawnDesc>Replicate a SkyMind intelligence.</ATR_ReplicateCloudPawnDesc>
+
+  <ATR_Skills>Skills</ATR_Skills>
+  <ATR_SkillsDesc>Open skill workshop, allowing exchange of server skill points for experience and passions.</ATR_SkillsDesc>
+
+  <ATR_ControlSurrogate>Connect</ATR_ControlSurrogate>
+  <ATR_ControlSurrogateDesc>Take control of the selected hostless surrogate.</ATR_ControlSurrogateDesc>
+
+  <ATR_DisconnectCloudPawn>Disconnect</ATR_DisconnectCloudPawn>
+  <ATR_DisconnectCloudPawnDesc>Disconnect a SkyMind consciousness from its surrogates.</ATR_DisconnectCloudPawnDesc>
+
+  <ATR_ControlCaravanSurrogate>Recover</ATR_ControlCaravanSurrogate>
+  <ATR_ControlCaravanSurrogateDesc>Recover a hostless surrogate in a caravan.</ATR_ControlCaravanSurrogateDesc>
+
+  <!-- Link -->
+  <ATR_Surrogate>surrogate</ATR_Surrogate>
+
+  <ATR_AbsorbExperience>Mind absorption</ATR_AbsorbExperience>
+  <ATR_AbsorbExperienceDesc>Absorb the experience of a pawn's intelligence for skill and hacking points.</ATR_AbsorbExperienceDesc>
+  <ATR_AbsorbExperienceConfirm>This operation extracts useful insights in skills and hacking at the cost of the pawn's life. This is considered murder.</ATR_AbsorbExperienceConfirm>
+
+  <ATR_DownloadCloudPawn>Download</ATR_DownloadCloudPawn>
+  <ATR_DownloadCloudPawnDesc>Download a SkyMind intelligence into this pawn.</ATR_DownloadCloudPawnDesc>
+  <ATR_DownloadCloudPawnConfirm>This operation fully transfers a SkyMind intelligence into this pawn. The intelligence will not persist in the network.</ATR_DownloadCloudPawnConfirm>
+
+  <ATR_DisconnectSurrogate>Disconnect</ATR_DisconnectSurrogate>
+  <ATR_DisconnectSurrogateDesc>Disconnect all surrogate links.</ATR_DisconnectSurrogateDesc>
+
+  <ATR_ToggleControlMode>Toggle Controls</ATR_ToggleControlMode>
+  <ATR_ToggleControlModeDesc>Toggle surrogate control mode, allowing for surrogate controls but disabling SkyMind operations.</ATR_ToggleControlModeDesc>
+
+  <ATR_Permute>Permute</ATR_Permute>
+  <ATR_PermuteDesc>Permute the consciousness of the currently selected colonist with another colonist.</ATR_PermuteDesc>
+  <ATR_PermuteConfirm>This operation will swap the intelligences of {0} and {1}.</ATR_PermuteConfirm>
+
+  <ATR_Transfer>Transfer</ATR_Transfer>
+  <ATR_TransferDesc>Transfer the consciousness of the currently selected colonist into an organic surrogate.</ATR_TransferDesc>
+  <ATR_TransferConfirm>This operation will transfer {0} into the target surrogate's body. This will leave {0}'s original body mindless. The SkyMind receiver will burn out once the operation is complete.</ATR_TransferConfirm>
+
+  <ATR_Upload>Upload</ATR_Upload>
+  <ATR_UploadDesc>Upload this intelligence to the SkyMind network. What happens to the left-behind body is controlled via settings (default is body becomes braindead).</ATR_UploadDesc>
+  <ATR_UploadConfirm>This operation transfers this intelligence into the SkyMind network, leaving the body behind.</ATR_UploadConfirm>
+
+  <!-- Remotely Triggered -->
+  <ATR_DetonateIEDRemotely>Trigger IED</ATR_DetonateIEDRemotely>
+  <ATR_DetonateIEDRemotelyDesc>Trigger the IED remotely and instantly via a SkyMind connection.</ATR_DetonateIEDRemotelyDesc>
+
+  <!-- Maintenance -->
+  <ATR_MaintenanceGizmoLabel>Maintenance</ATR_MaintenanceGizmoLabel>
+  <ATR_MaintenanceDesc>Maintenance is a measure of a pawn's core memory and system health - it is only tangentially related to physical part health and is primarily meditative. Maintenance degrades over time, and must be built by androids having sufficient free time to tend to their internal health. Poor maintenance degrades efficiency, and may lead to physical part failures due to critical repair errors if allowed to persist for too long.\n\nA high level of maintenance provides small benefits, but also greatly increases maintenance loss - leading most androids to pursue a middle of the road approach.\n\nNote: provided values are baseline rates, actual fall rate depends on the pawn's maintenance efficiency (in info tab)</ATR_MaintenanceDesc>
+  <ATR_MaintenanceTargetLabel>Target maintenance</ATR_MaintenanceTargetLabel>
+  <ATR_MaintenanceTargetLabelDesc>Click to set desired maintenance level.</ATR_MaintenanceTargetLabelDesc>
+  <ATR_MaintenanceLevelInfoRange>{0}-{1}%</ATR_MaintenanceLevelInfoRange>
+  <ATR_MaintenanceLevelInfoFallRate>Maintenance falls {0} per day.</ATR_MaintenanceLevelInfoFallRate>
+
+  <ATR_MaintenanceEffectGizmoLabel>Average Maintenance, {0}: {1} day(s)</ATR_MaintenanceEffectGizmoLabel>
+  <ATR_MaintenanceEffectGizmoLabelPositive>Positive</ATR_MaintenanceEffectGizmoLabelPositive>
+  <ATR_MaintenanceEffectGizmoLabelNegative>Negative</ATR_MaintenanceEffectGizmoLabelNegative>
+  <ATR_MaintenanceEffectDesc>Average maintenance is a measure of how well maintained this unit's core memory and internal systems have been over time, and changes based on the maintenance level of the pawn. High levels will improve mood, while low levels will degrade both mood and health. It rises if maintenance is above 70% and falls if below 30%, and otherwise slowly returns to a baseline.\n\nNote: maintenance is a personal, deeply introspective activity, and therefore can largely not be done by others for a pawn except in emergency situations with a part pack.</ATR_MaintenanceEffectDesc>
+
+  <!-- Pawn Type Restriction -->
+  <ATR_RestrictPawnType>Restrictions</ATR_RestrictPawnType>
+  <ATR_RestrictPawnTypeDescription>Open the pawn type restrictions to set controls over what type of pawn can use this.</ATR_RestrictPawnTypeDescription>
+
+</LanguageData>

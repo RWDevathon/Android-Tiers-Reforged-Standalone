@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Tier5Android.label>T5 Андроїд</ATR_Tier5Android.label>
+  <ATR_Tier5Android.description>Безперечно, що це археотехнічний пристрій у вигляді механічного гуманоїда. Але також беззаперечно, що це не справжній архотех. Він загадково заявляє, що "я сам є поширеним помилковим уявленням про архонтів", і відмовляється уточнювати - а також визнає, що бреше про дату свого народження. Він має абсолютно чуже розуміння і не може інтегруватися з Небесним Розумом. Такі істоти нічого не говорять про своє походження, мету чи причину перебування на периферії. Чого вона може хотіти, і чому її, здається, влаштовує участь у нормальному суспільстві? \n\nІ чому одяг - це єдине, в чому вона відмовляється брати участь і, здається, засмучується - це якийсь таємний архтехнологічний код?</ATR_Tier5Android.description>
+  <ATR_Tier5Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_Tier5Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_Tier5Android.tools.0.label>правий кулак</ATR_Tier5Android.tools.0.label>
+  <ATR_Tier5Android.tools.1.label>лівий кулак</ATR_Tier5Android.tools.1.label>
+  <ATR_Tier5Android.tools.2.label>голова</ATR_Tier5Android.tools.2.label>
+
+
+</LanguageData>

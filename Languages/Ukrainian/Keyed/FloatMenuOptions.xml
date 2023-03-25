@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- General -->
+  <ATR_ViableSources>Доступні джерела:</ATR_ViableSources>
+  <ATR_ViableTargets>Доступні цілі:</ATR_ViableTargets>
+  <ATR_NoAvailableTarget>Немає доступних цільових показників для роботи.</ATR_NoAvailableTarget>
+
+  <!-- Charging -->
+  <ATR_ForceCharge>Примусова зарядка акумулятора</ATR_ForceCharge>
+  <ATR_NoAvailableChargingSpots>Не можна використовувати, місця для зарядки зарезервовані.</ATR_NoAvailableChargingSpots>
+  <ATR_NeedToAllowCharge>{0} не має ввімкнених можливостей зарядки.</ATR_NeedToAllowCharge>
+  <ATR_MassiveNotAllowed>Масивні механічні агрегати не можуть цим скористатися.</ATR_MassiveNotAllowed>
+  <ATR_MassiveRequired>Тільки масивні механічні агрегати можуть використовувати це.</ATR_MassiveRequired>
+
+</LanguageData>

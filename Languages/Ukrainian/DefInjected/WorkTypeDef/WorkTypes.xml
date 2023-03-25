@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Mechanic.label>механік</ATR_Mechanic.label>
+  <ATR_Mechanic.description>Ремонт травмованих механічних агрегатів, рукоятки та рятування інвалідів. Механіки будуть піклуватися як про колоністів, так і про ув'язнених.</ATR_Mechanic.description>
+  <ATR_Mechanic.labelShort>механік</ATR_Mechanic.labelShort>
+  <ATR_Mechanic.pawnLabel>Механік</ATR_Mechanic.pawnLabel>
+  <ATR_Mechanic.gerundLabel>Ремонту</ATR_Mechanic.gerundLabel>
+  <ATR_Mechanic.verb>Ремонт</ATR_Mechanic.verb>
+
+
+</LanguageData>

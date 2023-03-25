@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_T5Colonist.label>T5 Андроїд Колоніст</ATR_T5Colonist.label>
+  <ATR_T5Colonist.labelPlural>T5 Андроїд Колоніст</ATR_T5Colonist.labelPlural>
+  <ATR_T5Colonist.labelMale>чоловік Т5 Андроїд Колоніст</ATR_T5Colonist.labelMale>
+  <ATR_T5Colonist.labelMalePlural>чоловіки T5 Колоністи Android</ATR_T5Colonist.labelMalePlural>
+  <ATR_T5Colonist.labelFemale>жінка T5 Колоніст Android</ATR_T5Colonist.labelFemale>
+  <ATR_T5Colonist.labelFemalePlural>жіночі колоністи T5 Android</ATR_T5Colonist.labelFemalePlural>
+
+  <ATR_T4Colonist.label>T4 Колоніст-ньюбот</ATR_T4Colonist.label>
+  <ATR_T4Colonist.labelPlural>T4 Колоністи новий бот</ATR_T4Colonist.labelPlural>
+  <ATR_T4Colonist.labelMale>чоловік Т4 новий бот</ATR_T4Colonist.labelMale>
+  <ATR_T4Colonist.labelMalePlural>чоловік T4 новий бот</ATR_T4Colonist.labelMalePlural>
+  <ATR_T4Colonist.labelFemale>жінка T4 новий бот</ATR_T4Colonist.labelFemale>
+  <ATR_T4Colonist.labelFemalePlural>жінки Т4 новий бот</ATR_T4Colonist.labelFemalePlural>
+
+  <ATR_T3Colonist.label>Т3 новий колоніст</ATR_T3Colonist.label>
+  <ATR_T3Colonist.labelPlural>T3 новий бот</ATR_T3Colonist.labelPlural>
+  <ATR_T3Colonist.labelMale>чоловік Т3 новий бот</ATR_T3Colonist.labelMale>
+  <ATR_T3Colonist.labelMalePlural>чоловіки Т3 новий бот</ATR_T3Colonist.labelMalePlural>
+  <ATR_T3Colonist.labelFemale>жінка Т3 новий бот</ATR_T3Colonist.labelFemale>
+  <ATR_T3Colonist.labelFemalePlural>жінка Т3 новий бот</ATR_T3Colonist.labelFemalePlural>
+
+  <ATR_T2Colonist.label>Т2 новий бот</ATR_T2Colonist.label>
+  <ATR_T2Colonist.labelPlural>T2 новий бот</ATR_T2Colonist.labelPlural>
+  <ATR_T2Colonist.labelMale>чоловік T2 новий бот</ATR_T2Colonist.labelMale>
+  <ATR_T2Colonist.labelMalePlural>самець Т2 новий бот</ATR_T2Colonist.labelMalePlural>
+  <ATR_T2Colonist.labelFemale>жіночий Т2 новий бот</ATR_T2Colonist.labelFemale>
+  <ATR_T2Colonist.labelFemalePlural>жінка Т2 новий бот</ATR_T2Colonist.labelFemalePlural>
+
+  <ATR_T1Colonist.label>Т1 новий бот</ATR_T1Colonist.label>
+  <ATR_T1Colonist.labelPlural>T1 новий бот</ATR_T1Colonist.labelPlural>
+  <ATR_T1Colonist.labelMale>чоловік Т1 новий бот</ATR_T1Colonist.labelMale>
+  <ATR_T1Colonist.labelMalePlural>самець Т1 новий бот</ATR_T1Colonist.labelMalePlural>
+  <ATR_T1Colonist.labelFemale>жінка Т1 новий бот</ATR_T1Colonist.labelFemale>
+  <ATR_T1Colonist.labelFemalePlural>жінки Т1 новий бот</ATR_T1Colonist.labelFemalePlural>
+
+
+  <!-- Androids With Real Backstories -->
+
+  <ATR_T4Refugee.label>T4 Колоніст андроїд</ATR_T4Refugee.label>
+  <ATR_T4Refugee.labelPlural>T4 Колоністи андроїд</ATR_T4Refugee.labelPlural>
+  <ATR_T4Refugee.labelMale>чоловік Т4 Андроїд Колоніст</ATR_T4Refugee.labelMale>
+  <ATR_T4Refugee.labelMalePlural>чоловіки T4 Колоністи андроід</ATR_T4Refugee.labelMalePlural>
+  <ATR_T4Refugee.labelFemale>жінка Т4 Андроїд Колоніст</ATR_T4Refugee.labelFemale>
+  <ATR_T4Refugee.labelFemalePlural>жінки T4 Колоністи андроід</ATR_T4Refugee.labelFemalePlural>
+
+  <ATR_T3Refugee.label>T3 Колоністиандроїд</ATR_T3Refugee.label>
+  <ATR_T3Refugee.labelPlural>T3 Колоніст андроїд</ATR_T3Refugee.labelPlural>
+  <ATR_T3Refugee.labelMale>чоловік Т3 Андроїд Колоніст</ATR_T3Refugee.labelMale>
+  <ATR_T3Refugee.labelMalePlural>чоловік T3 Колоністи андроід</ATR_T3Refugee.labelMalePlural>
+  <ATR_T3Refugee.labelFemale>жінка T3 Android Колоніст</ATR_T3Refugee.labelFemale>
+  <ATR_T3Refugee.labelFemalePlural>жінки T3 Колоністи андроід</ATR_T3Refugee.labelFemalePlural>
+
+  <ATR_T2Refugee.label>T2 Колоніст андроїд</ATR_T2Refugee.label>
+  <ATR_T2Refugee.labelPlural>T2 Колоніст андроїд</ATR_T2Refugee.labelPlural>
+  <ATR_T2Refugee.labelMale>чоловік Т2 Андроїд Колоніст</ATR_T2Refugee.labelMale>
+  <ATR_T2Refugee.labelMalePlural>чоловіки T2 Колоністи андроід</ATR_T2Refugee.labelMalePlural>
+  <ATR_T2Refugee.labelFemale>жінка T2 Android Колоніст</ATR_T2Refugee.labelFemale>
+  <ATR_T2Refugee.labelFemalePlural>жінки Т2 Колоністи андроід</ATR_T2Refugee.labelFemalePlural>
+
+  <ATR_T1Refugee.label>T1 Колоніст андроїд</ATR_T1Refugee.label>
+  <ATR_T1Refugee.labelPlural>T1 Колоніст андроїд</ATR_T1Refugee.labelPlural>
+  <ATR_T1Refugee.labelMale>чоловік T1 Android Колоніст</ATR_T1Refugee.labelMale>
+  <ATR_T1Refugee.labelMalePlural>чоловіки T1 Колоністи андроід</ATR_T1Refugee.labelMalePlural>
+  <ATR_T1Refugee.labelFemale>жінка Т1 Андроїд Колоніст</ATR_T1Refugee.labelFemale>
+  <ATR_T1Refugee.labelFemalePlural>жінки Т1 Колоністи андроід</ATR_T1Refugee.labelFemalePlural>
+
+
+</LanguageData>

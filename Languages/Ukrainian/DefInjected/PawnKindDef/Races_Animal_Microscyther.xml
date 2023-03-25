@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MicroScyther.label>Мікросцитер</ATR_MicroScyther.label>
+  <ATR_MicroScyther.labelPlural>Мікроскітери</ATR_MicroScyther.labelPlural>
+  <ATR_MicroScyther.labelMale>чоловічий мікросцитер</ATR_MicroScyther.labelMale>
+  <ATR_MicroScyther.labelMalePlural>чоловіки-мікроскітери</ATR_MicroScyther.labelMalePlural>
+  <ATR_MicroScyther.labelFemale>жіночий мікросцитер</ATR_MicroScyther.labelFemale>
+  <ATR_MicroScyther.labelFemalePlural>жінки-мікроскітери</ATR_MicroScyther.labelFemalePlural>
+
+
+</LanguageData>

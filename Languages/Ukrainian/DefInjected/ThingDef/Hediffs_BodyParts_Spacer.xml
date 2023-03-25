@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Advanced Arm -->
+
+  <ATR_AdvancedArm.label>Вдосконалена рука</ATR_AdvancedArm.label>
+  <ATR_AdvancedArm.description>Більш висока плавна стриманість з більш високою ефективністю компонентів надає цій руці значну перевагу перед стандартними емісійними деталями.</ATR_AdvancedArm.description>
+
+
+  <!-- Advanced Leg -->
+
+  <ATR_AdvancedLeg.label>Вдосконалена нога</ATR_AdvancedLeg.label>
+  <ATR_AdvancedLeg.description>Більш висока плавна стриманість з більш високою ефективністю компонентів надає цій нозі значну перевагу перед стандартними емісійними деталями.</ATR_AdvancedLeg.description>
+
+
+  <!-- Advanced Visual Sensor -->
+
+  <ATR_AdvancedVisualSensor.label>Вдосконалений візуальний датчик</ATR_AdvancedVisualSensor.label>
+  <ATR_AdvancedVisualSensor.description>Більш висока плавна стриманість з більш високою ефективністю компонентів надає цьому візуальному датчику значну перевагу перед стандартними деталями випуску.</ATR_AdvancedVisualSensor.description>
+
+
+  <!-- Advanced Audio Sensor -->
+
+  <ATR_AdvancedAudioSensor.label>Розширений аудіодатчик</ATR_AdvancedAudioSensor.label>
+  <ATR_AdvancedAudioSensor.description>Більш висока плавність з компонентами з більш високою ефективністю надає цьому звуковому датчику значну перевагу перед стандартними деталями випуску.</ATR_AdvancedAudioSensor.description>
+
+
+  <!-- Advanced Heatsink -->
+
+  <ATR_AdvancedHeatsink.label>Розширений радіатор</ATR_AdvancedHeatsink.label>
+  <ATR_AdvancedHeatsink.description>Більш висока плавність з більш високою ефективністю компонентів надає цьому радіатору значну перевагу перед стандартними емісійними деталями.</ATR_AdvancedHeatsink.description>
+
+
+  <!-- Advanced Coolant Pump -->
+
+  <ATR_AdvancedCoolantPump.label>Вдосконалений насос теплоносія</ATR_AdvancedCoolantPump.label>
+  <ATR_AdvancedCoolantPump.description>Більш висока плавність з більш високою ефективністю компонентів надає цьому насосу охолоджуючої рідини значну перевагу перед стандартними деталями випуску.</ATR_AdvancedCoolantPump.description>
+
+
+  <!-- Advanced Battery -->
+
+  <ATR_AdvancedBattery.label>Розширений акумуляторний блок</ATR_AdvancedBattery.label>
+  <ATR_AdvancedBattery.description>Більш висока плавна темперансність з більш високою ефективністю компонентів надає цій батареї значну перевагу перед стандартними емісійними деталями.</ATR_AdvancedBattery.description>
+
+
+  <!-- Advanced Mechanite Storage -->
+
+  <ATR_AdvancedMechaniteStorage.label>Розширене зберігання механіту</ATR_AdvancedMechaniteStorage.label>
+  <ATR_AdvancedMechaniteStorage.description>Більш висока плавність пластеля з більш високою ефективністю компонентів надає цьому механітовому сховищу значну перевагу перед стандартними емісійними деталями. Механіти вищої якості означають, що травми будуть відновлюватися швидше.</ATR_AdvancedMechaniteStorage.description>
+
+
+  <!-- Advanced Reactor -->
+
+  <ATR_AdvancedReactor.label>Вдосконалений біо-реактор</ATR_AdvancedReactor.label>
+  <ATR_AdvancedReactor.description>Більш висока плавність пластеля з більш високою ефективністю компонентів надає цьому реактору значну перевагу перед стандартними емісійними деталями.</ATR_AdvancedReactor.description>
+
+
+  <!-- Organic Charger -->
+
+  <ATR_OrganicCharger.label>органічний зарядний пристрій</ATR_OrganicCharger.label>
+  <ATR_OrganicCharger.description>Вдосконалена біонічна частина, яка дозволяє органіці, у якої це встановлено, заряджати. Він не заважає споживанню їжі, але сам споживає чималу енергію, збільшуючи енергетичну потребу пішака.\n\nЧерез незручного за своєю суттю процесу зарядки пішаки не набирають спокою під час зарядки.</ATR_OrganicCharger.description>
+
+
+</LanguageData>

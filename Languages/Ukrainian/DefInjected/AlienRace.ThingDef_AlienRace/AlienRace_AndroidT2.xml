@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Tier2Android.label>T2 Андроїд</ATR_Tier2Android.label>
+  <ATR_Tier2Android.description>Найпоширеніший рівень андроїдів - андроїди другого рівня - мають найнижчі технічні характеристики, необхідні для повністю автономної розумної діяльності. У повному одязі або якщо дивитися на них здалеку, їх легко сплутати з низькорослими, худорлявими людьми. Дійсно, інтелект другого рівня часто найбільш схожий на людський і, швидше за все, прагне до інтеграції в людське суспільство.</ATR_Tier2Android.description>
+  <ATR_Tier2Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_Tier2Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_Tier2Android.tools.0.label>правий кулак</ATR_Tier2Android.tools.0.label>
+  <ATR_Tier2Android.tools.1.label>лівий кулак</ATR_Tier2Android.tools.1.label>
+  <ATR_Tier2Android.tools.2.label>голова</ATR_Tier2Android.tools.2.label>
+
+
+</LanguageData>

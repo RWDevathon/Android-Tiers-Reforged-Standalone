@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_ChargingStation.label>Зарядна станція для андроід</ATR_ChargingStation.label>
+  <ATR_ChargingStation.description>Станція, побудована для зарядки 8 сусідніх андроїдів одночасно.</ATR_ChargingStation.description>
+
+
+  <!-- Bedside Charger -->
+
+  <ATR_BedsideCharger.label>Приліжковий зарядний пристрій</ATR_BedsideCharger.label>
+  <ATR_BedsideCharger.description>Приліжковий пристрій, що дозволяє мешканця з'єднаного ліжка заряджати. Він забезпечує енергією, перебуваючи в ліжку, але споживає багато енергії для цього. Його необхідно розмістити безпосередньо поруч і обличчям до узголів'я ліжка.</ATR_BedsideCharger.description>
+
+
+  <!-- Charging Pods -->
+
+  <ATR_ChargingPod.label>Зарядний под</ATR_ChargingPod.label>
+  <ATR_ChargingPod.description>Простий зарядний под, який може заряджати механічні агрегати. Він не розрахований на комфорт.</ATR_ChargingPod.description>
+
+  <ATR_ChargingPodMech.label>Мех под</ATR_ChargingPodMech.label>
+  <ATR_ChargingPodMech.description>Надзвичайно великий зарядний под, здатний зберігати основну масу бойового меха, який не може поміститися ні в одному меншому поді.</ATR_ChargingPodMech.description>
+
+
+  <!-- Minified Vanometric Power Cell for SkyMind Core needs -->
+
+  <ATR_VanometricPowerCellMinified.label>мініфікована ванометрична силова комірка</ATR_VanometricPowerCellMinified.label>
+
+
+</LanguageData>

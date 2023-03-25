@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_FractalPillOrganic.label>Фрактальне викривлення</ATR_FractalPillOrganic.label>
+  <ATR_FractalPillOrganic.description>Фрактальне викривлення тіла. У міру того, як плоть посилюється і набуває металевих якостей, а розум гниє, але також зростає, унікально просвітницька і болісна перспектива набуває обертів. Це робота архотеха, але з якою незбагненною метою проявилося це викривлення?</ATR_FractalPillOrganic.description>
+  <ATR_FractalPillOrganic.stages.0.label>Трансцендентний</ATR_FractalPillOrganic.stages.0.label>
+  <ATR_FractalPillOrganic.stages.1.label>Благословив</ATR_FractalPillOrganic.stages.1.label>
+  <ATR_FractalPillOrganic.stages.2.label>Обдарованих</ATR_FractalPillOrganic.stages.2.label>
+  <ATR_FractalPillOrganic.stages.3.label>Збалансований</ATR_FractalPillOrganic.stages.3.label>
+  <ATR_FractalPillOrganic.stages.4.label>Заплямована</ATR_FractalPillOrganic.stages.4.label>
+  <ATR_FractalPillOrganic.stages.5.label>Мерзенних</ATR_FractalPillOrganic.stages.5.label>
+  <ATR_FractalPillOrganic.stages.6.label>Пошкоджені</ATR_FractalPillOrganic.stages.6.label>
+
+
+  <!-- HediffMechanical -->
+
+  <ATR_FractalPillMechanical.label>Фрактальна інтеграція</ATR_FractalPillMechanical.label>
+  <ATR_FractalPillMechanical.description>Фрактальна інтеграція у все шасі. Хоча викривлення, яке відбувається, нешкідливе для агрегату, ефекти рішуче двосічні. Дійсно, завищене его і збільшення енергоспоживання є первинними ефектами - хоча уражені одиниці нез'ясовно беруть менше шкоди від одних і тих же ударів, і сильніше розуміють справжню природу реальності.\n\nМожливо, архотехи не проектували фрактальне викривлення з урахуванням машин, і знаходять своє застосування їм нецікавим? Або, можливо, фрактальне викривлення - це прокляття на все, а не тільки на органіку?</ATR_FractalPillMechanical.description>
+  <ATR_FractalPillMechanical.stages.0.label>Невеликий ефект</ATR_FractalPillMechanical.stages.0.label>
+  <ATR_FractalPillMechanical.stages.1.label>Прокинувся</ATR_FractalPillMechanical.stages.1.label>
+  <ATR_FractalPillMechanical.stages.2.label>Освітлен</ATR_FractalPillMechanical.stages.2.label>
+  <ATR_FractalPillMechanical.stages.3.label>Освічений</ATR_FractalPillMechanical.stages.3.label>
+  <ATR_FractalPillMechanical.stages.4.label>Трансцендентний</ATR_FractalPillMechanical.stages.4.label>
+
+
+</LanguageData>

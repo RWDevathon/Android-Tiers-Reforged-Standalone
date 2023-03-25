@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mining Utility Arm -->
+
+  <ATR_Install_MiningArm.label>Установка гірничну руку</ATR_Install_MiningArm.label>
+  <ATR_Install_MiningArm.description>Встановлює гірничу руку.</ATR_Install_MiningArm.description>
+  <ATR_Install_MiningArm.jobString>Установка гірничого руку.</ATR_Install_MiningArm.jobString>
+
+
+  <!-- Agriculture Utility Arm -->
+
+  <ATR_Install_AgriArm.label>Встановіть агроруку</ATR_Install_AgriArm.label>
+  <ATR_Install_AgriArm.description>Встановлює агроруку.</ATR_Install_AgriArm.description>
+  <ATR_Install_AgriArm.jobString>Встановлення агроруків'я.</ATR_Install_AgriArm.jobString>
+
+
+  <!-- Pacification Utility Arm -->
+
+  <ATR_Install_PacificationArm.label>Встановіть руку умиротворення</ATR_Install_PacificationArm.label>
+  <ATR_Install_PacificationArm.description>Встановлює руку умиротворення.</ATR_Install_PacificationArm.description>
+  <ATR_Install_PacificationArm.jobString>Установка умиротворюючої руки.</ATR_Install_PacificationArm.jobString>
+
+
+  <!-- Scalpel Utility Arm -->
+
+  <ATR_Install_ScalpelArm.label>Встановіть скальпельну руку</ATR_Install_ScalpelArm.label>
+  <ATR_Install_ScalpelArm.description>Встановлює скальпельну руку.</ATR_Install_ScalpelArm.description>
+  <ATR_Install_ScalpelArm.jobString>Установка скальпелевої руки.</ATR_Install_ScalpelArm.jobString>
+
+
+  <!-- Rending Utility Arm -->
+
+  <ATR_Install_RendingArm.label>Встановіть рендінговий кронштейн</ATR_Install_RendingArm.label>
+  <ATR_Install_RendingArm.description>Встановлює рендінгову руку.</ATR_Install_RendingArm.description>
+  <ATR_Install_RendingArm.jobString>Установка рендінгової руки.</ATR_Install_RendingArm.jobString>
+
+
+  <!-- Makeshift Leg -->
+
+  <ATR_Install_MakeshiftReplacementLeg.label>Установка імпровізованої механічної ніжки</ATR_Install_MakeshiftReplacementLeg.label>
+  <ATR_Install_MakeshiftReplacementLeg.description>Встановлює імпровізовану механічну ніжку.</ATR_Install_MakeshiftReplacementLeg.description>
+  <ATR_Install_MakeshiftReplacementLeg.jobString>Установка імпровізованої механічної ніжки.</ATR_Install_MakeshiftReplacementLeg.jobString>
+
+
+  <!-- Makeshift Arm -->
+
+  <ATR_Install_MakeshiftReplacementArm.label>Встановлюємо імпровізований механічний кронштейн</ATR_Install_MakeshiftReplacementArm.label>
+  <ATR_Install_MakeshiftReplacementArm.description>Встановлює імпровізований механічний кронштейн.</ATR_Install_MakeshiftReplacementArm.description>
+  <ATR_Install_MakeshiftReplacementArm.jobString>Установка імпровізованого механічного кронштейна.</ATR_Install_MakeshiftReplacementArm.jobString>
+
+
+</LanguageData>

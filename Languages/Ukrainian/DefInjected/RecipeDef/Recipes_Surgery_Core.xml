@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Surgery to shutdown any incapacitated mechanical unit -->
+
+  <ATR_ShutdownMechanical.label>Вимкнення центрального ядра</ATR_ShutdownMechanical.label>
+  <ATR_ShutdownMechanical.description>Вимикає механічний блок, від'єднуючи основне обладнання. Це не руйнує назавжди пам'ять агрегату.</ATR_ShutdownMechanical.description>
+  <ATR_ShutdownMechanical.jobString>Відключення механічного блоку.</ATR_ShutdownMechanical.jobString>
+
+
+  <!-- Surgery to remove body parts from mechanical units -->
+
+  <ATR_RemoveBodyPartAndroid.label>Видалити частину</ATR_RemoveBodyPartAndroid.label>
+  <ATR_RemoveBodyPartAndroid.description>Видаляє частину тіла.</ATR_RemoveBodyPartAndroid.description>
+  <ATR_RemoveBodyPartAndroid.jobString>Видалення частини тіла.</ATR_RemoveBodyPartAndroid.jobString>
+
+
+  <!-- Surgery to restore body parts in mechanical units -->
+
+  <ATR_RestoreBodyPartAndroid.label>Відновити частину</ATR_RestoreBodyPartAndroid.label>
+  <ATR_RestoreBodyPartAndroid.description>Відновлює ту чи іншу частину тіла.</ATR_RestoreBodyPartAndroid.description>
+  <ATR_RestoreBodyPartAndroid.jobString>Відновлює частину тіла.</ATR_RestoreBodyPartAndroid.jobString>
+
+
+  <!-- Surgery to repaint mechanical units -->
+
+  <ATR_RepaintMechanical.label>перефарбування</ATR_RepaintMechanical.label>
+  <ATR_RepaintMechanical.description>Змінює колір фарби механічного вузла.</ATR_RepaintMechanical.description>
+  <ATR_RepaintMechanical.jobString>Фарбування механічного вузла.</ATR_RepaintMechanical.jobString>
+
+
+  <!-- Surgery to increase the maintenance level of a unit to a certain extent. -->
+
+  <ATR_DoEmergencyMaintenance.label>Виконуйте імпровізоване обслуговування</ATR_DoEmergencyMaintenance.label>
+  <ATR_DoEmergencyMaintenance.description>Використовуйте деталі для усунення серйозних недоліків технічного обслуговування. Оскільки технічне обслуговування - це в першу чергу внутрішня діяльність, це може довести його лише до 40%.</ATR_DoEmergencyMaintenance.description>
+  <ATR_DoEmergencyMaintenance.jobString>Відновлює частину тіла.</ATR_DoEmergencyMaintenance.jobString>
+
+
+  <!-- Surgery to reprogram drones to serve the colony -->
+
+  <ATR_ReprogramDrone.label>перепрограмувати дрон</ATR_ReprogramDrone.label>
+  <ATR_ReprogramDrone.description>Проста, але делікатна операція, перепрограмування дронів відповідно до цілей колонії є відмінним способом посилення можливостей. Однак попередні власники, можливо, встановили запобіжники від таких операцій, тому існує високий ризик смерті, якщо вона вийде з ладу.</ATR_ReprogramDrone.description>
+  <ATR_ReprogramDrone.jobString>Перепрограмування дрона.</ATR_ReprogramDrone.jobString>
+
+
+  <!-- Reboot, akin to anesthetic but requiring no medicine -->
+
+  <ATR_RebootUnit.label>Перезавантаження блоку</ATR_RebootUnit.label>
+  <ATR_RebootUnit.description>Надзвичайно проста операція з перезапуску пристрою, без будь-яких побічних ефектів або наслідків.</ATR_RebootUnit.description>
+  <ATR_RebootUnit.jobString>Перезавантаження блоку.</ATR_RebootUnit.jobString>
+
+
+  <!-- Overclocking -->
+
+  <ATR_ApplyOverclocking.label>Застосування розгону</ATR_ApplyOverclocking.label>
+  <ATR_ApplyOverclocking.description>Проста реструктуризація обладнання в механічний блок для зниження заходів безпеки обладнання, щоб забезпечити більшу продуктивність і ризики.</ATR_ApplyOverclocking.description>
+  <ATR_ApplyOverclocking.jobString>Застосування розгону.</ATR_ApplyOverclocking.jobString>
+
+  <ATR_ResetOverclocking.label>скидання розгону</ATR_ResetOverclocking.label>
+  <ATR_ResetOverclocking.description>Проста реструктуризація обладнання на механічний блок для скидання заходів безпеки обладнання до стандартних налаштувань.</ATR_ResetOverclocking.description>
+  <ATR_ResetOverclocking.jobString>Скидання розгону.</ATR_ResetOverclocking.jobString>
+
+
+</LanguageData>

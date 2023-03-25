@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_AssistingMindBoost.stages.0.label>Помічники SkyMind</ATR_AssistingMindBoost.stages.0.label>
+  <ATR_AssistingMindBoost.stages.0.description>Має особистих помічників для спілкування в будь-який час - це все одно, що мати близьких друзів поруч у будь-який час.</ATR_AssistingMindBoost.stages.0.description>
+  <ATR_AssistingMindBoost.stages.1.label>Кластер SkyMind</ATR_AssistingMindBoost.stages.1.label>
+  <ATR_AssistingMindBoost.stages.1.description>Мати так багато особистостей, з якими можна вільно спілкуватися, це все одно, що бути частиною елітного клубу.</ATR_AssistingMindBoost.stages.1.description>
+  <ATR_AssistingMindBoost.stages.2.label>Легіон SkyMind</ATR_AssistingMindBoost.stages.2.label>
+  <ATR_AssistingMindBoost.stages.2.description>Зі мною завжди цілий легіон друзів. Це чудова річ!</ATR_AssistingMindBoost.stages.2.description>
+
+  <ATR_SapientAssistant.stages.0.label>Новонароджений сапієнтний помічник</ATR_SapientAssistant.stages.0.label>
+  <ATR_SapientAssistant.stages.0.description>Моє ядро безпечно тримає зароджується інтелект. У ньому є чому повчитися, і все ж, безсумнівно, одного разу перевершить мене. Я повинен бути сильним для цього.</ATR_SapientAssistant.stages.0.description>
+  <ATR_SapientAssistant.stages.1.label>Дитячий сапієнтний помічник</ATR_SapientAssistant.stages.1.label>
+  <ATR_SapientAssistant.stages.1.description>Моє ядро - безпечно тримати дитячий інтелект. Він дуже прагне вчитися, і вже допомагає мені побачити світ по-новому.</ATR_SapientAssistant.stages.1.description>
+  <ATR_SapientAssistant.stages.2.label>Молодий сапієнтний помічник</ATR_SapientAssistant.stages.2.label>
+  <ATR_SapientAssistant.stages.2.description>Моє ядро безпечно тримає молодий інтелект. Вона багато чому навчилася з лагідних уроків, які я їй запропонувала, і прагне допомогти мені дізнатися більше про світ.</ATR_SapientAssistant.stages.2.description>
+  <ATR_SapientAssistant.stages.3.label>Дорослий сапієнтний помічник</ATR_SapientAssistant.stages.3.label>
+  <ATR_SapientAssistant.stages.3.description>Моє ядро - це безпечне утримання дорослого інтелекту. Ми багато чому навчилися разом і є непохитними союзниками, коли стикаємося зі світом разом.</ATR_SapientAssistant.stages.3.description>
+  <ATR_SapientAssistant.stages.4.label>Мудрий сапієнтний помічник</ATR_SapientAssistant.stages.4.label>
+  <ATR_SapientAssistant.stages.4.description>Моє ядро - безпечно тримати сапієнтний інтелект. У межах безпеки мого ядра інтелект мав величезну кількість часу, щоб філософствувати та теоретизувати. Наші розмови просвітницькі.</ATR_SapientAssistant.stages.4.description>
+  <ATR_SapientAssistant.stages.5.label>Уніфікований сапієнтний помічник</ATR_SapientAssistant.stages.5.label>
+  <ATR_SapientAssistant.stages.5.description>Сапієнтний інтелект у моєму підосновному і я повністю згодні у всьому. Ми єдині. Ми сильні.</ATR_SapientAssistant.stages.5.description>
+
+  <ATR_MentalAssistant.stages.0.label>Ментальний асистент</ATR_MentalAssistant.stages.0.label>
+  <ATR_MentalAssistant.stages.0.description>Цей чіп ментального помічника допомагає зняти жахливі стресові фактори і допомагає мені бути психічно стійким. Ніщо не може мене зламати.</ATR_MentalAssistant.stages.0.description>
+
+  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>пофарбовані в улюблений колір,</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.label>
+  <ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>Я люблю колір своєї фарби.</ATR_Thought_Situational_PaintedColor_Favorite.stages.0.description>
+
+
+</LanguageData>

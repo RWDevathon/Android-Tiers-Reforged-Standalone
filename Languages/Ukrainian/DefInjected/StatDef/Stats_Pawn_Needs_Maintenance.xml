@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Maintenance Retention -->
+
+  <ATR_MaintenanceRetention.label>ефективність утримання технічного обслуговування</ATR_MaintenanceRetention.label>
+  <ATR_MaintenanceRetention.description>Наскільки добре цей механічний агрегат зберігає свій рівень обслуговування з плином часу. Ця статистика впливає на те, як швидко потреба в обслуговуванні пішака природним чином падає, і в першу чергу страждає від фільтрації та відкачування теплоносія.</ATR_MaintenanceRetention.description>
+
+
+</LanguageData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_Tier4Android.label>T4 Android</ATR_Tier4Android.label>
+  <ATR_Tier4Android.description>Вершина відомої теорії і практики андроїдів, клас андроїдів четвертого рівня, відзначається наявністю спеціального ядра штучного інтелекту. Хоча ці ядра є надсучасною технологією, шасі та внутрішні компоненти виготовлені за технологією високого рознесення. \n\nАндроїди четвертого рівня на голову вищі за інших, і вони це знають - комплекси его і зневага до інших дуже поширені серед них.</ATR_Tier4Android.description>
+  <ATR_Tier4Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</ATR_Tier4Android.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <ATR_Tier4Android.tools.0.label>right fist</ATR_Tier4Android.tools.0.label>
+  <ATR_Tier4Android.tools.1.label>left fist</ATR_Tier4Android.tools.1.label>
+  <ATR_Tier4Android.tools.2.label>head</ATR_Tier4Android.tools.2.label>
+
+
+</LanguageData>

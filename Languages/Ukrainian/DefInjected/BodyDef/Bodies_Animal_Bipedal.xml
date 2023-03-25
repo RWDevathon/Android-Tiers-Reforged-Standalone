@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechBipedal.label>Двоногий дрон</ATR_MechBipedal.label>
+  <ATR_MechBipedal.corePart.parts.3.customLabel>лівий радіатор</ATR_MechBipedal.corePart.parts.3.customLabel>
+  <ATR_MechBipedal.corePart.parts.4.customLabel>правий радіатор</ATR_MechBipedal.corePart.parts.4.customLabel>
+  <ATR_MechBipedal.corePart.parts.7.parts.0.parts.1.customLabel>лівий зоровий датчик</ATR_MechBipedal.corePart.parts.7.parts.0.parts.1.customLabel>
+  <ATR_MechBipedal.corePart.parts.7.parts.0.parts.2.customLabel>правий зоровий датчик</ATR_MechBipedal.corePart.parts.7.parts.0.parts.2.customLabel>
+  <ATR_MechBipedal.corePart.parts.7.parts.0.parts.3.customLabel>лівий звуковий датчик</ATR_MechBipedal.corePart.parts.7.parts.0.parts.3.customLabel>
+  <ATR_MechBipedal.corePart.parts.7.parts.0.parts.4.customLabel>правий звуковий датчик</ATR_MechBipedal.corePart.parts.7.parts.0.parts.4.customLabel>
+  <ATR_MechBipedal.corePart.parts.8.customLabel>ліва нога</ATR_MechBipedal.corePart.parts.8.customLabel>
+  <ATR_MechBipedal.corePart.parts.8.parts.0.customLabel>ліва ступня</ATR_MechBipedal.corePart.parts.8.parts.0.customLabel>
+  <ATR_MechBipedal.corePart.parts.9.customLabel>права нога</ATR_MechBipedal.corePart.parts.9.customLabel>
+  <ATR_MechBipedal.corePart.parts.9.parts.0.customLabel>права ступня</ATR_MechBipedal.corePart.parts.9.parts.0.customLabel>
+
+
+</LanguageData>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_MechAirborne.label>Безпілотник</ATR_MechAirborne.label>
+  <ATR_MechAirborne.corePart.parts.2.customLabel>лівий радіатор</ATR_MechAirborne.corePart.parts.2.customLabel>
+  <ATR_MechAirborne.corePart.parts.3.customLabel>правий радіатор</ATR_MechAirborne.corePart.parts.3.customLabel>
+  <ATR_MechAirborne.corePart.parts.4.parts.0.parts.1.customLabel>лівий зоровий датчик</ATR_MechAirborne.corePart.parts.4.parts.0.parts.1.customLabel>
+  <ATR_MechAirborne.corePart.parts.4.parts.0.parts.2.customLabel>правий зоровий датчик</ATR_MechAirborne.corePart.parts.4.parts.0.parts.2.customLabel>
+  <ATR_MechAirborne.corePart.parts.5.customLabel>ліве крило</ATR_MechAirborne.corePart.parts.5.customLabel>
+  <ATR_MechAirborne.corePart.parts.6.customLabel>праве крило</ATR_MechAirborne.corePart.parts.6.customLabel>
+
+
+</LanguageData>

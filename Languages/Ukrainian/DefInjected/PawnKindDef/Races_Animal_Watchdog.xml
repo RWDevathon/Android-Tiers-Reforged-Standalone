@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_DroneWatchdog.label>Сторожовий блок</ATR_DroneWatchdog.label>
+  <ATR_DroneWatchdog.labelPlural>Сторожові підрозділи</ATR_DroneWatchdog.labelPlural>
+  <ATR_DroneWatchdog.labelMale>чоловічий сторожовий підрозділ</ATR_DroneWatchdog.labelMale>
+  <ATR_DroneWatchdog.labelMalePlural>чоловічі сторожові одиниці</ATR_DroneWatchdog.labelMalePlural>
+  <ATR_DroneWatchdog.labelFemale>жіночий сторожовий підрозділ</ATR_DroneWatchdog.labelFemale>
+  <ATR_DroneWatchdog.labelFemalePlural>жіночі сторожові підрозділи</ATR_DroneWatchdog.labelFemalePlural>
+
+
+</LanguageData>

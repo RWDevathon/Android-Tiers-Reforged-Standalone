@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Abomination -->
+
+  <ATR_FractalAbomination.label>фрактальна гидота</ATR_FractalAbomination.label>
+  <ATR_FractalAbomination.labelPlural>фрактальні гидоти</ATR_FractalAbomination.labelPlural>
+  <ATR_FractalAbomination.labelMale>самець фрактальної гидоти</ATR_FractalAbomination.labelMale>
+  <ATR_FractalAbomination.labelMalePlural>чоловічі фрактальні гидоти</ATR_FractalAbomination.labelMalePlural>
+  <ATR_FractalAbomination.labelFemale>жіноча фрактальна гидота</ATR_FractalAbomination.labelFemale>
+  <ATR_FractalAbomination.labelFemalePlural>жіночі фрактальні гидоти</ATR_FractalAbomination.labelFemalePlural>
+
+
+</LanguageData>

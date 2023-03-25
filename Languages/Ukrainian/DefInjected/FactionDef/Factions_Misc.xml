@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ATR_PlayerAndroidFaction.label>Нові надходження Android</ATR_PlayerAndroidFaction.label>
+  <ATR_PlayerAndroidFaction.description>Ваша колонія Android.</ATR_PlayerAndroidFaction.description>
+  <ATR_PlayerAndroidFaction.pawnsPlural>Колоністи</ATR_PlayerAndroidFaction.pawnsPlural>
+
+  <ATR_MechanicalMarauders.label>Механічні мародери</ATR_MechanicalMarauders.label>
+  <ATR_MechanicalMarauders.description>Ізгойовані або заслані - або рятуючись від рабства - з людського суспільства, багато механічні одиниці в кінцевому підсумку об'єднуються в групи злісних бандитів. Об'єднані любов'ю до пілінгу та зняття агресії на тих, хто прагне виробляти, а не руйнувати, ці мародери вирішують тероризувати інших, а не залучати один одного.\n\nДипломатія неприйнятна з будь-якою фракцією, яка дозволяє органіці бути чим завгодно, крім ув'язнених, але мародери можуть навчитися терпіти механічні фракції однодумців.</ATR_MechanicalMarauders.description>
+  <ATR_MechanicalMarauders.pawnsPlural>Мародери</ATR_MechanicalMarauders.pawnsPlural>
+  <ATR_MechanicalMarauders.leaderTitle>Капітан-мародер</ATR_MechanicalMarauders.leaderTitle>
+
+  <ATR_AndroidUnion.label>Цивільні андроїди</ATR_AndroidUnion.label>
+  <ATR_AndroidUnion.description>RimWorlds, з їх серйозною відсутністю правил, роблять прекрасні місця для приживання суспільств андроїдів. Ці андроїди вирішили утворити союз напівнезалежних міст для взаємної оборони та процвітання. Вони, як правило, піддаються торгівлі і співпраці, і бажають нічого іншого, як жити в мирі.\n\nЦя фракція зазвичай торгує високотехнологічними товарами разом з основними оптовими поставками.</ATR_AndroidUnion.description>
+  <ATR_AndroidUnion.pawnsPlural>Андроїди</ATR_AndroidUnion.pawnsPlural>
+  <ATR_AndroidUnion.leaderTitle>Лідер коаліції</ATR_AndroidUnion.leaderTitle>
+
+
+</LanguageData>

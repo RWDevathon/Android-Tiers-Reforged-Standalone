@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- CORE MODEL DEFINITIONS -->
+
+  <ATR_AndroidT2Surrogate.label>T2 Сурогат андроїд</ATR_AndroidT2Surrogate.label>
+  <ATR_AndroidT2Surrogate.labelPlural>Сурогатні андроїди</ATR_AndroidT2Surrogate.labelPlural>
+  <ATR_AndroidT2Surrogate.labelMale>чоловічий сурогат T2 андроїд</ATR_AndroidT2Surrogate.labelMale>
+  <ATR_AndroidT2Surrogate.labelMalePlural>чоловічі сурогатні андроїди</ATR_AndroidT2Surrogate.labelMalePlural>
+  <ATR_AndroidT2Surrogate.labelFemale>жіночий сурогат T2 андроїд</ATR_AndroidT2Surrogate.labelFemale>
+  <ATR_AndroidT2Surrogate.labelFemalePlural>жіночі сурогатні андроїди</ATR_AndroidT2Surrogate.labelFemalePlural>
+
+  <ATR_AndroidT3Surrogate.label>T3 Сурогат андроїд</ATR_AndroidT3Surrogate.label>
+  <ATR_AndroidT3Surrogate.labelPlural>Сурогатні андроїди</ATR_AndroidT3Surrogate.labelPlural>
+  <ATR_AndroidT3Surrogate.labelMale>чоловічий сурогат T3 андроїд</ATR_AndroidT3Surrogate.labelMale>
+  <ATR_AndroidT3Surrogate.labelMalePlural>чоловічі сурогатні андроїди</ATR_AndroidT3Surrogate.labelMalePlural>
+  <ATR_AndroidT3Surrogate.labelFemale>жіночий сурогат T3 андроїд</ATR_AndroidT3Surrogate.labelFemale>
+  <ATR_AndroidT3Surrogate.labelFemalePlural>жіночі сурогатні андроїди</ATR_AndroidT3Surrogate.labelFemalePlural>
+
+  <ATR_AndroidT4Surrogate.label>T4 Сурогат андроїд</ATR_AndroidT4Surrogate.label>
+  <ATR_AndroidT4Surrogate.labelPlural>Сурогатні андроїди</ATR_AndroidT4Surrogate.labelPlural>
+  <ATR_AndroidT4Surrogate.labelMale>чоловічий сурогат T4 андроїд</ATR_AndroidT4Surrogate.labelMale>
+  <ATR_AndroidT4Surrogate.labelMalePlural>чоловічі сурогатні андроїди</ATR_AndroidT4Surrogate.labelMalePlural>
+  <ATR_AndroidT4Surrogate.labelFemale>жіночий сурогат T4 андроїд</ATR_AndroidT4Surrogate.labelFemale>
+  <ATR_AndroidT4Surrogate.labelFemalePlural>жіночі сурогатні андроїди</ATR_AndroidT4Surrogate.labelFemalePlural>
+
+
+</LanguageData>
