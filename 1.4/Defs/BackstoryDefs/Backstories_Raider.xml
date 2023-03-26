@@ -492,7 +492,7 @@
 		<defName>ATR_MechAdulthoodDischargedOfficer</defName>
 		<title>Discharged officer</title>
 		<titleShort>Officer</titleShort>
-		<baseDesc>{PAWN_nameDef} was an officer in an interstellar nation's fleet who was charged with treason for refusing to send android soldiers into a suicide mission to save a tiny force of organic troops. Many of {PAWN_pronoun} android - and even organic - subordinates followed {PAWN_nameDef} into exile instead of surrendering.</baseDesc>
+		<baseDesc>{PAWN_nameDef} was an officer in an interstellar nation's fleet who was charged with treason for refusing to send android soldiers into a suicide mission to save a tiny force of organic troops. Many of {PAWN_possessive} android - and even organic - subordinates followed {PAWN_nameDef} into exile instead of surrendering.</baseDesc>
 		<bodyTypeGlobal>Male</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
