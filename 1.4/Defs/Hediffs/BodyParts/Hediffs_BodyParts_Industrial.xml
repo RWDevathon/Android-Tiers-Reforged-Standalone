@@ -441,6 +441,113 @@
 		<addsHediff>ATR_RendingArm</addsHediff>
 	</RecipeDef>
 
+    <!-- Voice Synthesizers share a single ThingDef, with different HediffDefs and RecipeDefs -->
+
+    <ThingDef ParentName="ATR_BodyPartIndustrialBase">
+        <defName>ATR_SpecializedVoiceSynthesizer</defName>
+        <label>Specialized voice synthesizer</label>
+        <description>An unprogrammed specialized voice synthesizer replacement for mechanical units that can be given specialized roles upon installation into a unit to enhance certain qualities from social impact to coercive abilities.</description>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>10</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <statBases>
+            <Mass>4</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- Auto-modulator Voice Synthesizer -->
+
+    <HediffDef ParentName="ATR_AddedATR_BodyPartSpacerBase">
+        <defName>ATR_AutomodulatedVoiceSynthesizer</defName>
+        <label>Automodulated Voice Synthesizer</label>
+        <description>A voice synthesizer replacement utilizing a large built-in language modelling algorithm that can rapidly modulate the unit's voice output to perfectly reflect their desired tone, intonation, and connotation in a wide array of languages and even dialects of those languages. While organics do occasionally find dynamically changing voices to be unnerving, this device ensures that the android's voice is sonorous, perfectly crisp, and with the exact sound desired to maximize positive outcomes in social interactions, leading others to have higher opinions of the unit.</description>
+        <descriptionHyperlinks><ThingDef>ATR_SpecializedVoiceSynthesizer</ThingDef></descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+                    <SocialImpact>0.5</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_SpecializedVoiceSynthesizer</spawnThingOnRemoved>
+    </HediffDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
+		<defName>ATR_Install_AutomodulatedVoiceSynthesizer</defName>
+		<label>install automodulated voice synthesizer</label>
+		<description>Installs an automodulated voice synthesizer.</description>
+		<jobString>Installing automodulated voice synthesizer.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_SpecializedVoiceSynthesizer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_SpecializedVoiceSynthesizer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_VoiceSynthesizer</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_AutomodulatedVoiceSynthesizer</addsHediff>
+	</RecipeDef>
+
+    <!-- Coercive Voice Synthesizer -->
+
+    <HediffDef ParentName="ATR_AddedATR_BodyPartSpacerBase">
+        <defName>ATR_CoerciveVoiceSynthesizer</defName>
+        <label>Coercive Voice Synthesizer</label>
+        <description>A voice synthesizer replacement programmed to maximize coercive capabilities by greatly increasing volume and intensity. Specialized to operate only in various menacing tones and manipulative modes, others find units equipped with this to be terrifying and threatening and generally more conducive to obeying the will of the unit. The module has a single "normal" mode for instances where threatening is unnecessary, but others still find it mildly offputting.</description>
+        <descriptionHyperlinks><ThingDef>ATR_SpecializedVoiceSynthesizer</ThingDef></descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+                    <SocialImpact>-0.25</SocialImpact>
+                    <NegotiationAbility>0.5</NegotiationAbility>
+                    <ArrestSuccessChance>0.25</ArrestSuccessChance>
+                    <TradePriceImprovement>0.05</TradePriceImprovement>
+                    <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.25</ConversionPower>
+                    <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</SuppressionPower>
+				</statOffsets>
+			</li>
+		</stages>
+        <spawnThingOnRemoved>ATR_SpecializedVoiceSynthesizer</spawnThingOnRemoved>
+    </HediffDef>
+
+    <RecipeDef ParentName="ATR_SurgeryMechanicalIndustrial">
+		<defName>ATR_Install_CoerciveVoiceSynthesizer</defName>
+		<label>install coercive voice synthesizer</label>
+		<description>Installs a coercive voice synthesizer.</description>
+		<jobString>Installing coercive voice synthesizer.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_SpecializedVoiceSynthesizer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_SpecializedVoiceSynthesizer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>ATR_VoiceSynthesizer</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>ATR_CoerciveVoiceSynthesizer</addsHediff>
+	</RecipeDef>
+
     <!-- Makeshift Leg -->
 
     <HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">

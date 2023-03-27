@@ -344,6 +344,8 @@
     <Compile Include="DefOfs\ATR_HediffDefOf.cs" />
     <Compile Include="Recipes\Recipe_PaintMechanicalUnit.cs" />
     <Compile Include="StockGenerators\StockGenerator_Drones.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_CoerciveVoiceSynthesizer.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_ModulatedVoiceSynthesizer.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_PaintedColor_Favorite.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_MaintenanceMood.cs" />
     <Compile Include="Utils\IngestionOutcomeDoer_MechOrganicDifferentEffects.cs" />

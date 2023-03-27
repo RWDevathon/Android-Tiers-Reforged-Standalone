@@ -24,6 +24,10 @@ namespace ATReforged
 
         public static HediffDef ATR_MemoryCorruption;
 
+        public static HediffDef ATR_AutomodulatedVoiceSynthesizer;
+
+        public static HediffDef ATR_CoerciveVoiceSynthesizer;
+
         // SkyMind related Hediffs
 
         public static HediffDef ATR_SplitConsciousness;

@@ -2,28 +2,54 @@
 <Defs>
 
     <ThoughtDef>
-    <defName>ATR_FeelingsTowardOrganicsATReforged</defName>
-    <thoughtClass>Thought_SituationalSocial</thoughtClass>
-    <workerClass>ATReforged.ThoughtWorker_FeelingsTowardOrganics</workerClass>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>Loves Organics</label>
-        <baseOpinionOffset>30</baseOpinionOffset>
-      </li>
-      <li>
-        <label>Respects Organics</label>
-        <baseOpinionOffset>15</baseOpinionOffset>
-      </li>
-      <li>
-        <label>Disrespects Organics</label>
-        <baseOpinionOffset>-15</baseOpinionOffset>
-      </li>
-      <li>
-        <label>Hates Organics</label>
-        <baseOpinionOffset>-30</baseOpinionOffset>
-      </li>
-    </stages>
-  </ThoughtDef>
+        <defName>ATR_FeelingsTowardOrganics</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ATReforged.ThoughtWorker_FeelingsTowardOrganics</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Loves organics</label>
+                <baseOpinionOffset>30</baseOpinionOffset>
+            </li>
+            <li>
+                <label>Respects organics</label>
+                <baseOpinionOffset>15</baseOpinionOffset>
+            </li>
+            <li>
+                <label>Disrespects organics</label>
+                <baseOpinionOffset>-15</baseOpinionOffset>
+            </li>
+            <li>
+                <label>Hates organics</label>
+                <baseOpinionOffset>-30</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_AutomodulatedVoiceSynthesizer</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ATReforged.ThoughtWorker_ModulatedVoiceSynthesizer</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Sonorous voice</label>
+                <baseOpinionOffset>10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>ATR_CoerciveVoiceSynthesizer</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ATReforged.ThoughtWorker_CoerciveVoiceSynthesizer</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Threatening voice</label>
+                <baseOpinionOffset>-10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
 
 </Defs>
