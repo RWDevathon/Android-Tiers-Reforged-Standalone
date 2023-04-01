@@ -4,7 +4,7 @@
 	<!-- Needs -->
 	<ATR_EnergyNeed>Energy</ATR_EnergyNeed>
 	<ATR_EnergyNeedDesc>Energy is the amount of retained charge in the unit. If it is hits zero, the unit will enter an inefficient low-power mode. If charge is not restored, hardware will eventually critically malfunction, and the unit will cease functioning.</ATR_EnergyNeedDesc>
-	
+
     <!-- Ritual Permissions -->
     <ATR_DronesCannotParticipateInRituals>Drones can not participate in rituals.</ATR_DronesCannotParticipateInRituals>
 
@@ -13,6 +13,6 @@
     <ATR_SlaveDroneAlert>Drones should not be slaves! You are suffering a free error each tick. Immediately reprogram or eliminate this drone.</ATR_SlaveDroneAlert>
 
     <!-- Maintenance Spot -->
-    <ATR_MaintenanceNeedRequired>Maintenance sport required</ATR_MaintenanceNeedRequired>
+    <ATR_MaintenanceNeedRequired>Maintenance need required</ATR_MaintenanceNeedRequired>
 
 </LanguageData>

@@ -135,6 +135,11 @@
 			</li>
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <modExtensions>
+            <li MayRequire="OskarPotocki.VFE.Empire" Class="VFEEmpire.FactionExtension_Deserters">
+                <canSendDeserters>false</canSendDeserters>
+            </li>
+        </modExtensions>
 	</FactionDef>
 
 	<FactionDef ParentName="FactionBase">
@@ -249,6 +254,11 @@
 			</li>
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <modExtensions>
+            <li MayRequire="OskarPotocki.VFE.Empire" Class="VFEEmpire.FactionExtension_Deserters">
+                <canSendDeserters>false</canSendDeserters>
+            </li>
+        </modExtensions>
 	</FactionDef>
 
     <ThingSetMakerDef>
