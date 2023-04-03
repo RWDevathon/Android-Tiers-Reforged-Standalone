@@ -16,6 +16,7 @@ namespace ATReforged
                 if (!Utils.IsConsideredMechanicalAndroid(possiblePawn))
                 {
                     possiblePawns.RemoveAt(i);
+                    continue;
                 }
 
                 if (possiblePawn.needs.mood != null && possiblePawn.needs.mood.CurInstantLevelPercentage < 0.7f)
