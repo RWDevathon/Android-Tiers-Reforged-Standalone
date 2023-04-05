@@ -21,7 +21,6 @@
 
     <!-- Base Implant Installation Surgery Recipe -->
     <RecipeDef Name="ATR_MechanicalSurgeryInstallImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
-        <workerClass>ATReforged.Recipe_InstallImplantAndroid</workerClass>
         <workAmount>2500</workAmount>
         <skillRequirements>
             <Crafting>5</Crafting>
@@ -47,7 +46,7 @@
     <RecipeDef Name="ATR_MechanicalSurgeryInstallBodyPartBase" ParentName="ATR_MechanicalSurgeryInstallImplantBase" Abstract="True">
         <workerClass>ATReforged.Recipe_InstallAndroidPart</workerClass>
     </RecipeDef>
-	
+
     <!-- Base Remove Implant Surgery Recipe-->
 	<RecipeDef Name="ATR_MechanicalSurgeryRemoveImplantBase" ParentName="ATR_surgeryMechanical" Abstract="True">
 		<workerClass>Recipe_RemoveImplant</workerClass>
@@ -72,5 +71,5 @@
             </categories>
 		</fixedIngredientFilter>
 	</RecipeDef>
-  
+
 </Defs>

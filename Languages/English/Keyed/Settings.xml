@@ -7,7 +7,6 @@
 	<ATR_RestartRequiredSectionDesc>Any changes to settings in this section require restarting the game.</ATR_RestartRequiredSectionDesc>
 	<ATR_RestartRequiredPostDesc>Some changed settings require restarting the game for safety.</ATR_RestartRequiredPostDesc>
 
-
     <ATR_ExpandMenu>Expand/Collapse</ATR_ExpandMenu>
 
 	<!-- Mod Settings Page Keys -->
