@@ -365,7 +365,6 @@
     <Compile Include="Extensions\PawnExtensions.cs" />
     <Compile Include="Hediffs\Hediff_Fractal.cs" />
     <Compile Include="Recipes\Recipe_InstallAndroidPart.cs" />
-    <Compile Include="Recipes\Recipe_InstallImplantAndroid.cs" />
     <Compile Include="Recipes\Recipe_ReprogramDrone.cs" />
     <Compile Include="Recipes\Recipe_SurgeryAndroids.cs" />
     <Compile Include="DefOfs\ATR_PawnKindDefOf.cs" />
