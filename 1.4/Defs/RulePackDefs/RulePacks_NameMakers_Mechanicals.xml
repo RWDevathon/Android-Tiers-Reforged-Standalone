@@ -40,7 +40,7 @@
             </rulesStrings>
         </rulePack>
     </RulePackDef>
-  
+
     <RulePackDef>
         <defName>ATR_AndroidNoneNames</defName>
         <include>
@@ -52,7 +52,7 @@
             </rulesStrings>
         </rulePack>
     </RulePackDef>
-  
+
     <RulePackDef>
         <defName>ATR_DroneNoneNames</defName>
         <include>
@@ -62,25 +62,6 @@
             <rulesStrings>
                 <li>r_name(p=12)->[ATR_Drone] [ATR_IDs]</li>
             </rulesStrings>
-        </rulePack>
-    </RulePackDef>
-  
-    <RulePackDef>
-        <defName>ATR_Archotechs</defName>
-        <rulePack>
-            <rulesStrings>
-                <li>name->[ArchotechFirstNames] Lo' [ArchotechLastNames]</li>
-            </rulesStrings>
-            <rulesRaw>
-                <li Class="Rule_File">
-                    <keyword>ArchotechFirstNames</keyword>
-                    <path>ATR_Names/ArchotechFirstNames</path>
-                </li>
-                <li Class="Rule_File">
-                    <keyword>ArchotechLastNames</keyword>
-                    <path>ATR_Names/ArchotechLastNames</path>
-                </li>
-            </rulesRaw>
         </rulePack>
     </RulePackDef>
 

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.git</exclude>
+    <exclude>1.0</exclude>
+    <exclude>Common\Sounds\Obsolete</exclude>
+    <exclude>Common\Textures\Things\Obsolete</exclude>
+    <exclude>Source</exclude>
+  </Excluded>
+</Configuration>

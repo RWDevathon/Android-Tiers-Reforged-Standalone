@@ -70,28 +70,26 @@
 			<Steel>3</Steel>
 		</butcherProducts>
     </ThingDef>
-  
-    <PawnKindDef ParentName="BasePlayerPawnKind">
+
+    <PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
         <defName>ATR_MicroScyther</defName>
         <label>Microscyther</label>
         <race>ATR_MicroScyther</race>
         <combatPower>10</combatPower>
         <canArriveManhunter>false</canArriveManhunter>
         <ecoSystemWeight>9999</ecoSystemWeight>
-        <backstoryCategories><li>ATR_MSeries</li></backstoryCategories>
         <defaultFactionType>PlayerColony</defaultFactionType>
         <lifeStages>
-        <li>
-            <bodyGraphicData>
-            <texPath>Things/Pawns/Animals/MicroScyther/MicroScyther</texPath>
-            <drawSize>1.5</drawSize>
-            <shadowData>
-                <volume>(0.25, 0.3, 0.25)</volume>
-                <offset>(0,0,-0.15)</offset>
-            </shadowData>
-            </bodyGraphicData>
-        </li>
-
+            <li>
+                <bodyGraphicData>
+                <texPath>Things/Pawns/Animals/MicroScyther/MicroScyther</texPath>
+                <drawSize>1.5</drawSize>
+                <shadowData>
+                    <volume>(0.25, 0.3, 0.25)</volume>
+                    <offset>(0,0,-0.15)</offset>
+                </shadowData>
+                </bodyGraphicData>
+            </li>
         </lifeStages>
     </PawnKindDef>
 
