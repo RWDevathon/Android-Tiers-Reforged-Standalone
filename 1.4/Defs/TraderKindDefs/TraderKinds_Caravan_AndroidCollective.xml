@@ -79,7 +79,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_Animals">
-                <maxWildness>0.70</maxWildness>
+                <maxWildness>0.50</maxWildness>
                 <tradeTagsSell>
                     <li>ATR_MechanicalAnimal</li>
                 </tradeTagsSell>

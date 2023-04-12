@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <PawnKindDef Name="BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
+    <PawnKindDef Name="ATR_BaseNewbootPlayerPawnKind" ParentName="BasePlayerPawnKind" Abstract="True">
         <label>Android colonist</label>
 		<backstoryFiltersOverride>
             <li>
@@ -17,28 +17,28 @@
 		<initialResistanceRange>13~21</initialResistanceRange>
     </PawnKindDef>
 
-	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseNewbootPlayerPawnKind">
 		<defName>ATR_T1Colonist</defName>
 		<label>T1 Newboot Colonist</label>
 		<race>ATR_Tier1Android</race>
         <combatPower>20</combatPower>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseNewbootPlayerPawnKind">
 		<defName>ATR_T2Colonist</defName>
 		<label>T2 Newboot Colonist</label>
 		<race>ATR_Tier2Android</race>
         <combatPower>40</combatPower>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseNewbootPlayerPawnKind">
 		<defName>ATR_T3Colonist</defName>
 		<label>T3 Newboot Colonist</label>
 		<race>ATR_Tier3Android</race>
         <combatPower>60</combatPower>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="BaseNewbootPlayerPawnKind">
+	<PawnKindDef ParentName="ATR_BaseNewbootPlayerPawnKind">
 		<defName>ATR_T4Colonist</defName>
 		<label>T4 Newboot Colonist</label>
 		<race>ATR_Tier4Android</race>
