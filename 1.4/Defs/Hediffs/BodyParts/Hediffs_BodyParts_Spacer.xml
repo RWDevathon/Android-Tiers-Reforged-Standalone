@@ -143,7 +143,7 @@
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
 		<defName>ATR_Install_AdvancedLeg</defName>
 		<label>Install advanced leg</label>
-        <description>Higher plasteel temperance with higher efficiency components grants this eye a significant advantage over standard issue parts.</description>
+        <description>Higher plasteel temperance with higher efficiency components grants this leg a significant advantage over standard issue parts.</description>
 		<jobString>Installing high power leg.</jobString>
 		<ingredients>
 			<li>
@@ -505,7 +505,7 @@
 
     <HediffDef ParentName="ATR_AddedATR_BodyPartSpacerBase">
         <defName>ATR_AdvancedReactor</defName>
-        <label>Advanced bio-reactor</label>
+        <label>Advanced reactor</label>
         <description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</description>
         <descriptionHyperlinks><ThingDef>ATR_AdvancedReactor</ThingDef></descriptionHyperlinks>
 		<stages>
@@ -518,7 +518,7 @@
 
     <ThingDef ParentName="ATR_BodyPartSpacerBase">
         <defName>ATR_AdvancedReactor</defName>
-        <label>Advanced bio-reactor</label>
+        <label>Advanced reactor</label>
         <description>Higher plasteel temperance with higher efficiency components grants this reactor a significant advantage over standard issue parts.</description>
         <costList>
             <Steel>10</Steel>
@@ -533,9 +533,9 @@
 
     <RecipeDef ParentName="ATR_SurgeryMechanicalSpacer">
 		<defName>ATR_Install_AdvancedReactor</defName>
-		<label>install advanced bio-reactor</label>
-		<description>Installs an advanced bio-reactor.</description>
-		<jobString>Installing advanced bio-reactor.</jobString>
+		<label>install advanced reactor</label>
+		<description>Installs an advanced reactor.</description>
+		<jobString>Installing advanced reactor.</jobString>
 		<ingredients>
 			<li>
 				<filter>

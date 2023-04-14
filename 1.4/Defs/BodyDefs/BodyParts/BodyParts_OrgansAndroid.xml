@@ -16,7 +16,7 @@
 
     <BodyPartDef>
         <defName>ATR_MechanicalHeatsink</defName>
-        <label>Left Heatsink</label>
+        <label>Heatsink</label>
         <hitPoints>20</hitPoints>
         <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
         <skinCovered>false</skinCovered>
@@ -66,5 +66,5 @@
         </tags>
         <canSuggestAmputation>false</canSuggestAmputation>
     </BodyPartDef>
-  
+
 </Defs>
