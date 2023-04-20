@@ -514,8 +514,8 @@ namespace ATReforged
                 // If untethered, copy all relations that involve the source pawn and apply them to the destination. As animals may have only one master, assign it to the destination.
                 if (!isTethered)
                 {
-                    Pawn_RelationsTracker destRelations = dest.relations;
-                    destRelations.ClearAllRelations();
+                    // Create a new tracker to avoid overwriting anything previously tethered and dealing with old data.
+                    Pawn_RelationsTracker destRelations = new Pawn_RelationsTracker(dest);
 
                     List<Pawn> checkedOtherPawns = new List<Pawn>();
                     // Duplicate all of the source's relations. Ensure that other pawns with relations to the source also have them to the destination.
@@ -524,12 +524,12 @@ namespace ATReforged
                         // Ensure that we check the pawn relations for the opposite side only once to avoid doing duplicate relations.
                         if (!checkedOtherPawns.Contains(pawnRelation.otherPawn))
                         {
-                            // Ensure the other pawn has all the same relations to the destination as it does to the source.
+                            // Iterate through all of the other pawn's relations and copy any they have with the source onto the destination.
                             foreach (DirectPawnRelation otherPawnRelation in pawnRelation.otherPawn.relations?.DirectRelations.ToList())
                             {
                                 if (otherPawnRelation.otherPawn == source)
                                 {
-                                    otherPawnRelation.otherPawn = dest;
+                                    pawnRelation.otherPawn.relations?.AddDirectRelation(otherPawnRelation.def, dest);
                                 }
                             }
                             checkedOtherPawns.Add(pawnRelation.otherPawn);
@@ -538,6 +538,7 @@ namespace ATReforged
                     }
 
                     destRelations.everSeenByPlayer = true;
+                    dest.relations = destRelations;
 
                     // Transfer animal master status to destination
                     foreach (Map map in Find.Maps)
