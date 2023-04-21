@@ -322,18 +322,6 @@ namespace ATReforged
             {
                 DuplicateStory(ref source, ref dest);
 
-                // If Ideology dlc is active, duplicate pawn ideology into destination.
-                if (ModsConfig.IdeologyActive)
-                {
-                    DuplicateIdeology(source, dest, isTethered);
-                }
-
-                // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
-                if (ModsConfig.RoyaltyActive)
-                {
-                    DuplicateRoyalty(source, dest, isTethered);
-                }
-
                 DuplicateSkills(source, dest, isTethered);
 
                 // If this duplication is considered to be killing a sapient individual, then handle some relations before they're duplicated.
@@ -354,6 +342,18 @@ namespace ATReforged
 
                 // Duplicate relations.
                 DuplicateRelations(source, dest, isTethered);
+
+                // If Ideology dlc is active, duplicate pawn ideology into destination.
+                if (ModsConfig.IdeologyActive)
+                {
+                    DuplicateIdeology(source, dest, isTethered);
+                }
+
+                // If Royalty dlc is active, then handle it. Royalty is non-transferable, but it should be checked for the other details that have been duplicated.
+                if (ModsConfig.RoyaltyActive)
+                {
+                    DuplicateRoyalty(source, dest, isTethered);
+                }
 
                 // Duplicate faction. No difference if tethered or not.
                 if (source.Faction != dest.Faction)
