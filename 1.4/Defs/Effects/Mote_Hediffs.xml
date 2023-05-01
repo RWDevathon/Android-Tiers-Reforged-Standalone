@@ -7,13 +7,11 @@
         <thingClass>MoteAttached</thingClass>
         <altitudeLayer>MoteOverhead</altitudeLayer>
         <mote>
-            <fadeInTime>0.25</fadeInTime>
-            <fadeOutTime>0.25</fadeOutTime>
-            <solidTime>999999</solidTime>
+            <solidTime>9999</solidTime>
+            <needsMaintenance>true</needsMaintenance>
         </mote>
-        <isSaveable>true</isSaveable>
     </ThingDef>
-    
+
     <ThingDef ParentName="ATR_AttachedHediffMoteBase">
         <defName>ATR_MindOperationAttachedMote</defName>
         <graphicData>
@@ -21,7 +19,7 @@
             <renderInstanced>true</renderInstanced>
         </graphicData>
     </ThingDef>
-    
+
     <ThingDef ParentName="ATR_AttachedHediffMoteBase">
         <defName>ATR_SurrogateAttachedMote</defName>
         <graphicData>

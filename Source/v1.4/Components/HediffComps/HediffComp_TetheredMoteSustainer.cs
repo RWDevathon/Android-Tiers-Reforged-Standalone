@@ -12,46 +12,29 @@ namespace ATReforged
         public override void CompPostMake()
         {
             base.CompPostMake();
-            if (Pawn.Spawned)
+            if (Pawn.Spawned && ATReforged_Settings.displaySurrogateControlIcon)
             {
                 AssignAttachedMote();
             }
-        }
-
-        public override void CompPostPostRemoved()
-        {
-            base.CompPostPostRemoved();
-            DestroyAttachedMote();
         }
 
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
-            if (attachedMote == null && Pawn.Spawned)
+            if (attachedMote == null && Pawn.Spawned && ATReforged_Settings.displaySurrogateControlIcon)
             {
                 AssignAttachedMote();
             }
+            attachedMote?.Maintain();
         }
 
         public void AssignAttachedMote()
         {
-            if (ATReforged_Settings.displaySurrogateControlIcon)
-            {
-                Vector3 vector = Vector3.zero;
-                vector.x += Pawn.def.size.x / 2;
-                vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
-                vector.z += 1.4f;
-                attachedMote = MoteMaker.MakeAttachedOverlay(Pawn, Props.moteDef, vector, Props.scale);
-            }
-        }
-
-        public void DestroyAttachedMote()
-        {
-            if (attachedMote != null)
-            {
-                attachedMote.Destroy();
-                attachedMote = null;
-            }
+            Vector3 vector = Vector3.zero;
+            vector.x += Pawn.def.size.x / 2;
+            vector.y = Altitudes.AltitudeFor(AltitudeLayer.MetaOverlays) + 0.28125f;
+            vector.z += 1.4f;
+            attachedMote = MoteMaker.MakeAttachedOverlay(Pawn, Props.moteDef, vector, Props.scale);
         }
 
         private Mote attachedMote;
