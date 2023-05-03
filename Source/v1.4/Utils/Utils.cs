@@ -133,6 +133,16 @@ namespace ATReforged
             if (user.Map == null)
                 return null;
 
+            // Try to use the user's owned bed if it is legal.
+            if (user.ownership?.OwnedBed != null)
+            {
+                Building_Bed bed = user.ownership.OwnedBed;
+                if ((int)bed.Position.GetDangerFor(user, user.Map) <= (int)Danger.Deadly && RestUtility.IsValidBedFor(bed, user, carrier, true) && ((bed.TryGetComp<CompPawnCharger>() != null && bed.TryGetComp<CompPowerTrader>()?.PowerOn == true) || bed.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.Any(thing => thing.TryGetComp<CompPawnCharger>() != null && thing.TryGetComp<CompPowerTrader>()?.PowerOn == true) == true))
+                {
+                    return bed;
+                }
+            }
+
             return (Building_Bed)GenClosest.ClosestThingReachable(user.PositionHeld, user.MapHeld, ThingRequest.ForGroup(ThingRequestGroup.Bed), PathEndMode.OnCell, TraverseParms.For(carrier), 9999f, (Thing b) => b.def.IsBed && (int)b.Position.GetDangerFor(user, user.Map) <= (int)Danger.Deadly && RestUtility.IsValidBedFor(b, user, carrier, true) && ((b.TryGetComp<CompPawnCharger>() != null && b.TryGetComp<CompPowerTrader>()?.PowerOn == true) || b.TryGetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.Any(thing => thing.TryGetComp<CompPawnCharger>() != null && thing.TryGetComp<CompPowerTrader>()?.PowerOn == true) == true));
         }
 
