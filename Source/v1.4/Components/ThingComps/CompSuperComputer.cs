@@ -66,6 +66,14 @@ namespace ATReforged
             Utils.gameComp.RemoveServer(building);
         }
 
+        public override void Notify_MapRemoved()
+        {
+            base.Notify_MapRemoved();
+
+            // Things that have their map removed are not despawned but outright lost, but it should still be removed from the server types.
+            Utils.gameComp.RemoveServer(building);
+        }
+
         private Building building = null;
     }
 }

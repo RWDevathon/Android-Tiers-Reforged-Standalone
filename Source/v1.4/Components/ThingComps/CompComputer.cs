@@ -166,17 +166,6 @@ namespace ATReforged
             return ret.Append(base.CompInspectStringExtra()).ToString();
         }
 
-        public override void PostDeSpawn(Map map)
-        {
-            base.PostDeSpawn(map);
-
-            // Servers can not be connected to the network when despawned.
-            if (networkConnection?.connected == true)
-            {
-                Utils.gameComp.DisconnectFromSkyMind(building);
-            }
-        }
-
         // Change this server to the given type, making sure it deregisters from the previous type.
         public void ChangeServerMode(ServerType newMode)
         {

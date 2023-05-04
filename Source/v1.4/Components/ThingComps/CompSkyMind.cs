@@ -166,6 +166,35 @@ namespace ATReforged
             }
         }
 
+        // Buildings must always disconnect when despawned.
+        public override void PostDeSpawn(Map map)
+        {
+            base.PostDeSpawn(map);
+
+            // Servers can not be connected to the network when despawned.
+            if (parent is Building && connected)
+            {
+                Utils.gameComp.DisconnectFromSkyMind(parent);
+            }
+        }
+
+        public override void Notify_MapRemoved()
+        {
+            base.Notify_MapRemoved();
+
+            // Pawns may stay connected to the SkyMind network if despawned.
+            if (parent is Pawn)
+            {
+                return;
+            }
+
+            // No building can be connected to the network when their map is removed.
+            if (connected)
+            {
+                Utils.gameComp.DisconnectFromSkyMind(parent);
+            }
+        }
+
         public override string CompInspectStringExtra()
         {
             StringBuilder ret = new StringBuilder();

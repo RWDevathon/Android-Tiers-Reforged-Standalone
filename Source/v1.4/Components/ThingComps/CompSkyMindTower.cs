@@ -26,6 +26,17 @@ namespace ATReforged
             }
         }
 
+        // If the map the tower is on is lost, lose the tower's capacity if it was online.
+        public override void Notify_MapRemoved()
+        {
+            base.Notify_MapRemoved();
+            CompPowerTrader cpt = parent.GetComp<CompPowerTrader>();
+            if (cpt != null && cpt.PowerOn)
+            {
+                Utils.gameComp.RemoveTower(this);
+            }
+        }
+
         public override void ReceiveCompSignal(string signal)
         {
             base.ReceiveCompSignal(signal);

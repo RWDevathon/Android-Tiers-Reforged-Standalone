@@ -222,6 +222,7 @@
     <Compile Include="Harmony\Alert_NeedDoctor_Patch.cs" />
     <Compile Include="Harmony\Alert_RoyalNoAcceptableFood_Patch.cs" />
     <Compile Include="Harmony\AttackTargetFinder_Patch.cs" />
+    <Compile Include="Harmony\WorldPawns_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_ColonyXenotypeMakeup_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_SelfDislikedXenotype_Patch.cs" />
     <Compile Include="Harmony\ThoughtWorker_Precept_PreferredXenotype_Social_Patch.cs" />

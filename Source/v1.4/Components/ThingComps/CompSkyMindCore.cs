@@ -42,6 +42,16 @@ namespace ATReforged
             }
         }
 
+        public override void Notify_MapRemoved()
+        {
+            base.Notify_MapRemoved();
+            // Buildings that provide core capacity lose it when the map they are on is lost if they are online (whenever something either has no power trader or has an online power trader).
+            if (parent is Building && parent.GetComp<CompPowerTrader>()?.PowerOn != false)
+            {
+                Utils.gameComp.RemoveCore(this);
+            }
+        }
+
         public override void ReceiveCompSignal(string signal)
         {
             base.ReceiveCompSignal(signal);
