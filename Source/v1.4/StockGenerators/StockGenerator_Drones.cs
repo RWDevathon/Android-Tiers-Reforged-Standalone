@@ -44,7 +44,7 @@ namespace ATReforged
 
             if (droneKinds == null)
             {
-                yield return $"StockGenerator_Drones in {trader.defName} was not supplied with any drone pawn kinds!";
+                yield return $"StockGenerator_Drones was not supplied with any drone pawn kinds!";
             }
         }
 
