@@ -108,7 +108,7 @@ namespace ATReforged
             {
                 if (Linked == -1 && (Utils.gameComp.GetSkillPointCapacity() > 0 || Utils.gameComp.GetHackingPointCapacity() > 0))
                 {
-                    Texture2D tex = Tex.MindAbsorption;
+                    Texture2D tex = Tex.HackingIcon;
                     yield return new Command_Action
                     {
                         icon = tex,
@@ -366,7 +366,7 @@ namespace ATReforged
                 networkOperationInProgress = value;
                 // Pawn's operation has ended. Close out appropriate function based on the networkOperation that had been chosen (contained in status).
                 if (networkOperationInProgress == -1 && status > -1)
-                { 
+                {
                     // If the status is resetting because of a failure, notify that a failure occurred. HandleInterrupt takes care of actual negative events.
                     if (ThisPawn.health.hediffSet.hediffs.Any(targetHediff => targetHediff.def == HediffDefOf.ATR_MemoryCorruption || targetHediff.def == RimWorld.HediffDefOf.Dementia))
                     {
@@ -400,7 +400,7 @@ namespace ATReforged
                 }
                 // Operation has begun. Stand by until completion or aborted.
                 else if (networkOperationInProgress > -1)
-                { 
+                {
                     HandleInitialization();
                 }
             }
@@ -484,8 +484,8 @@ namespace ATReforged
         }
 
         public IEnumerable<Pawn> GetSurrogates()
-        { 
-            return surrogatePawns; 
+        {
+            return surrogatePawns;
         }
 
         // Called only on controlled surrogates, this will deactivate the surrogate and inform the controller it was disconnected. External controllers (other factions) are deleted.
@@ -667,7 +667,7 @@ namespace ATReforged
                 Utils.gameComp.PushCloudPawn(ThisPawn);
                 Current.Game.tickManager.DeRegisterAllTickabilityFor(ThisPawn);
 
-                // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core. 
+                // Upon completion, we need to spawn a copy of the pawn to take their physical place as the original pawn despawns "into" the SkyMind Core.
                 Pawn replacement = Utils.SpawnCopy(ThisPawn, ATReforged_Settings.uploadingToSkyMindKills);
                 // If in the settings, uploading is set to Permakill, find the new pawn copy's brain and mercilessly destroy it so it can't be revived.
                 if (ATReforged_Settings.uploadingToSkyMindPermaKills)
@@ -685,7 +685,7 @@ namespace ATReforged
             // Replication simply creates a new SkyMind intelligence duplicated from another.
             if (status == 6)
             {
-                // Generate the clone. 
+                // Generate the clone.
                 PawnGenerationRequest request = new PawnGenerationRequest(ThisPawn.kindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, fixedBiologicalAge: ThisPawn.ageTracker.AgeBiologicalYearsFloat, fixedChronologicalAge: ThisPawn.ageTracker.AgeChronologicalYearsFloat, fixedGender: ThisPawn.gender, fixedMelanin: ThisPawn.story.melanin);
                 Pawn clone = PawnGenerator.GeneratePawn(request);
 
@@ -713,9 +713,9 @@ namespace ATReforged
 
             Find.LetterStack.ReceiveLetter("ATR_OperationCompleted".Translate(), "ATR_OperationCompletedDesc".Translate(ThisPawn.LabelShortCap), LetterDefOf.PositiveEvent, ThisPawn);
         }
-        
 
-        // Check if there is an operation in progress. If there is (Linked != -1) and it is the operation source (LinkedPawn != -2), then we need to check if it's been interrupted and respond appropriately. 
+
+        // Check if there is an operation in progress. If there is (Linked != -1) and it is the operation source (LinkedPawn != -2), then we need to check if it's been interrupted and respond appropriately.
         public void CheckInterruptedUpload()
         {
             if (Linked > -1 && Utils.gameComp.GetLinkedPawn(ThisPawn) != -2)

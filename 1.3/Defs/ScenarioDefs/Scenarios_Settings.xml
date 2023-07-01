@@ -6,13 +6,13 @@
 			<alienslavekinds>
 				<li>
 					<kindDefs>
-						<li>T2Refugee</li>
+						<li>ATR_T2Refugee</li>
 					</kindDefs>
 					<chance>10.0</chance>
 				</li>
 				<li>
 					<kindDefs>
-						<li>T3Refugee</li>
+						<li>ATR_T3Refugee</li>
 					</kindDefs>
 					<chance>1.0</chance>
 				</li>
@@ -20,13 +20,13 @@
 			<alienrefugeekinds>
 				<li>
 					<kindDefs>
-						<li>T2Refugee</li>
+						<li>ATR_T2Refugee</li>
 					</kindDefs>
 					<chance>10.0</chance>
 				</li>
 				<li>
 					<kindDefs>
-						<li>T3Refugee</li>
+						<li>ATR_T3Refugee</li>
 					</kindDefs>
 					<chance>1.0</chance>
 				</li>
@@ -36,19 +36,19 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>T2Refugee</li>
+								<li>ATR_T2Refugee</li>
 							</kindDefs>
 							<chance>10.0</chance>
 						</li>
 						<li>
 							<kindDefs>
-								<li>T3Refugee</li>
+								<li>ATR_T3Refugee</li>
 							</kindDefs>
 							<chance>1.0</chance>
 						</li>
 					</pawnKindEntries>
 					<factionDefs>
-						<li>PlayerColony</li> 
+						<li>PlayerColony</li>
 					</factionDefs>
 				</li>
 			</startingColonists>
@@ -57,13 +57,13 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>T2Refugee</li>
+								<li>ATR_T2Refugee</li>
 							</kindDefs>
 							<chance>1</chance>
 						</li>
 					</pawnKindEntries>
 					<factionDefs>
-						<li>PlayerColonyAndroid</li> 
+						<li>PlayerColonyAndroid</li>
 					</factionDefs>
 				</li>
 			</alienwandererkinds>

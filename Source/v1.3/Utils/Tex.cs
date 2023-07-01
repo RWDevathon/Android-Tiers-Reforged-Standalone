@@ -24,7 +24,6 @@ namespace ATReforged
         public static readonly Texture2D Duplicate = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/DuplicateIcon");
         public static readonly Texture2D SkyMindUpload = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindUploadIcon");
         public static readonly Texture2D DownloadFromSkyCloud = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkyMindDownloadIcon");
-        public static readonly Texture2D MindAbsorption = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/MindAbsorptionIcon");
         public static readonly Texture2D ControlModeIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/ControlModeIcon");
         public static readonly Texture2D ConnectSkyMindIcon = ContentFinder<Texture2D>.Get("UI/Avatars/SkyMindConnection");
         public static readonly Texture2D SkillWorkshopIcon = ContentFinder<Texture2D>.Get("UI/Icons/Gizmos/SkillWorkshopIcon");

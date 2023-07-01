@@ -23,7 +23,7 @@ namespace ATReforged
 
             // Increase mutation
             if (Rand.Chance(0.8f))
-            { 
+            {
                 if (Severity >= 0.45f)
                 { // Abomination threshold reached;
                     DoMutation(pawn);
@@ -34,7 +34,7 @@ namespace ATReforged
             }
             // Decrease mutation
             else
-            { 
+            {
                 if (Severity <= 0.1f)
                 { // True Transcendance threshold reached;
                     isTerminal = true;
@@ -49,7 +49,7 @@ namespace ATReforged
 
         public override bool TryMergeWith(Hediff other)
         {
-            if (other.def == HediffDefOf.FractalPillOrganic)
+            if (other.def == HediffDefOf.ATR_FractalPillOrganic)
             {
                 ChangeState();
                 return true;

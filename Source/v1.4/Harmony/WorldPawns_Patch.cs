@@ -12,7 +12,7 @@ namespace ATReforged
         [HarmonyPostfix]
         public static void Listener(Pawn pawn, PawnDiscardDecideMode discardMode)
         {
-            if (pawn.Faction != Faction.OfPlayer)
+            if (pawn.Faction != Faction.OfPlayerSilentFail)
             {
                 // This is an always safe operation, only pawns that are stored will actually be removed.
                 Utils.gameComp.DisconnectFromSkyMind(pawn);

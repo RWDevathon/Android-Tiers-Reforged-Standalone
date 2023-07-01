@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Base Industrial -->
-  
+
     <HediffDef Name="ATR_AddedBodyPartIndustrialBase" ParentName="ATR_MechAddedBodyPartBase" Abstract="True">
         <hediffClass>Hediff_AddedPart</hediffClass>
         <addedPartProps>
@@ -78,7 +78,7 @@
         </comps>
         <spawnThingOnRemoved>ATR_MiningArm</spawnThingOnRemoved>
     </HediffDef>
- 
+
     <ThingDef ParentName="ATR_BodyPartIndustrialBase">
         <defName>ATR_MiningArm</defName>
         <label>Mining arm</label>
@@ -148,7 +148,7 @@
         </comps>
         <spawnThingOnRemoved>ATR_AgriArm</spawnThingOnRemoved>
     </HediffDef>
- 
+
     <ThingDef ParentName="ATR_BodyPartIndustrialBase">
         <defName>ATR_AgriArm</defName>
         <label>Agri arm</label>
@@ -246,7 +246,7 @@
 	</RecipeDef>
 
     <!-- Makeshift Arm -->
-  
+
     <HediffDef ParentName="ATR_AddedBodyPartIndustrialBase">
         <defName>ATR_MakeshiftMechArm</defName>
         <label>Makeshift mechanical arm</label>
@@ -270,7 +270,7 @@
             <partEfficiency>0.4</partEfficiency>
         </addedPartProps>
     </HediffDef>
-	
+
     <RecipeDef ParentName="ATR_surgeryMechanical">
 		<defName>InstallMakeshiftReplacementArm</defName>
 		<label>Install makeshift mechanical arm</label>

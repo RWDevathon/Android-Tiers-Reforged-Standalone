@@ -34,7 +34,7 @@ namespace ATReforged
                         Map tempMap = __instance.Map;
                         __instance.Destroy();
                         GenExplosion.DoExplosion(tempPos, tempMap, 2, DamageDefOf.Flame, __instance, 10);
-                        GenExplosion.DoExplosion(tempPos, tempMap, 0.5f, DamageDefOf.Bomb, __instance, 10, postExplosionSpawnThingDef: ThingDefOf.FractalPill, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1);
+                        GenExplosion.DoExplosion(tempPos, tempMap, 0.5f, DamageDefOf.Bomb, __instance, 10, postExplosionSpawnThingDef: ThingDefOf.ATR_FractalPill, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1);
                     }
                     return false;
                 }

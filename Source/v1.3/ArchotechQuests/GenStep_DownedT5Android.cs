@@ -17,9 +17,9 @@ namespace ATReforged
                 DownedT5AndroidComp component = map.Parent.GetComponent<DownedT5AndroidComp>();
                 if (component == null || !component.pawn.Any)
                 {
-                    pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.T5Colonist, Faction.OfAncients, PawnGenerationContext.NonPlayer, map.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
+                    pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, Faction.OfAncients, PawnGenerationContext.NonPlayer, map.Tile, forceGenerateNewPawn: true, canGeneratePawnRelations: false, mustBeCapableOfViolence: false, allowFood: false, allowAddictions: false));
                 }
-                else 
+                else
                 {
                     pawn = component.pawn.Take(component.pawn[0]);
                 }

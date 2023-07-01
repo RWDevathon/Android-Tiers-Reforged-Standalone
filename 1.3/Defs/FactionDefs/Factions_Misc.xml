@@ -13,7 +13,7 @@
 			</categories>
 		  </li>
 		</backstoryFilters>
-		<basicMemberKind>T2Refugee</basicMemberKind>
+		<basicMemberKind>ATR_T2Refugee</basicMemberKind>
 		<pawnsPlural>colonists</pawnsPlural>
 		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
 		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
@@ -30,7 +30,7 @@
 			</thingDefs>
 		</apparelStuffFilter>
 	</FactionDef>
-	
+
 	<FactionDef ParentName="FactionBase">
 		<defName>MechanicalMarauders</defName>
 		<label>Mechanical Marauders</label>

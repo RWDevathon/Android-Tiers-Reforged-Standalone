@@ -214,28 +214,35 @@ namespace ATReforged
 
                     // CONSIDERATION SETTINGS
                     listingStandard.Label("ATR_RestartRequiredSectionDesc".Translate());
-                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    try
                     {
+                        if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                        {
                             cachedExpandFirst = !cachedExpandFirst;
+                        }
+                        if (cachedExpandFirst)
+                            listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalAndroid, "ATR_SettingsConsideredAndroid".Translate(), "ATR_SettingsNotConsideredAndroid".Translate(), onChange);
+
+                        if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                        {
+                            cachedExpandSecond = !cachedExpandSecond;
+                        }
+                        if (cachedExpandSecond)
+                            listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalDrone, "ATR_SettingsConsideredDrone".Translate(), "ATR_SettingsNotConsideredDrone".Translate(), onChange);
+
+                        if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                        {
+                            cachedExpandThird = !cachedExpandThird;
+                        }
+                        if (cachedExpandThird)
+                            listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onChange);
+
+                        listingStandard.GapLine();
                     }
-                    if (cachedExpandFirst)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalAndroid, "ATR_SettingsConsideredAndroid".Translate(), "ATR_SettingsNotConsideredAndroid".Translate(), onChange);
-                    
-                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
+                    catch
                     {
-                        cachedExpandSecond = !cachedExpandSecond;
+                        RebuildCaches();
                     }
-                    if (cachedExpandSecond)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Humanlike), isConsideredMechanicalDrone, "ATR_SettingsConsideredDrone".Translate(), "ATR_SettingsNotConsideredDrone".Translate(), onChange);
-                    
-                    if (listingStandard.ButtonText("ATR_ExpandMenu".Translate()))
-                    {
-                        cachedExpandThird = !cachedExpandThird;
-                    }
-                    if (cachedExpandThird)
-                        listingStandard.PawnSelector(FilteredGetters.FilterByIntelligence(FilteredGetters.GetValidPawns(), Intelligence.Animal), isConsideredMechanicalAnimal, "ATR_SettingsConsideredAnimal".Translate(), "ATR_SettingsNotConsideredAnimals".Translate(), onChange);
-                    
-                    listingStandard.GapLine();
 
                     // NEEDS SETTINGS
                     listingStandard.CheckboxLabeled("ATR_AndroidsNeedJoy".Translate(), ref androidsHaveJoyNeed, tooltip: "ATR_AndroidOnlyNotice".Translate(), onChange: onChange);

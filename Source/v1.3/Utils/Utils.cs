@@ -62,7 +62,7 @@ namespace ATReforged
 
         // If the race is considered drone by nature in the settings or if the unit has no core intelligence, return true.
         public static bool IsConsideredMechanicalDrone(Pawn pawn)
-        { 
+        {
             return ATReforged_Settings.isConsideredMechanicalDrone.Contains(pawn.def);
         }
 
@@ -114,7 +114,7 @@ namespace ATReforged
 
         // There are four hediffs that grant SkyMind connectivity. If any are present, this pawn has a cloud capable implant. If settings allow the pawn's race to use it innately, return true as well.
         public static bool HasCloudCapableImplant(Pawn pawn)
-        { 
+        {
             return pawn.health.hediffSet.hediffs.Any(testHediff => testHediff.def == HediffDefOf.ATR_AutonomousCore || testHediff.def == HediffDefOf.ATR_ReceiverCore || testHediff.def == HediffDefOf.ATR_SkyMindReceiver || testHediff.def == HediffDefOf.ATR_SkyMindTransceiver);
         }
 
@@ -125,7 +125,7 @@ namespace ATReforged
 
         // Returns true if the pawn is a surrogate and has an active controller.
         public static bool IsControlledSurrogate(Pawn pawn)
-        { 
+        {
             return IsSurrogate(pawn) && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ATR_NoController) != null && pawn.TryGetComp<CompSkyMindLink>().HasSurrogate();
         }
 
@@ -162,7 +162,7 @@ namespace ATReforged
 
         // Remove viruses from the provided things. While they are assumed to have viruses, no errors will occur if non-virused things are provided.
         public static void RemoveViruses(IEnumerable<Thing> virusedThings)
-        { 
+        {
             if (virusedThings == null)
             {
                 return;
@@ -170,7 +170,7 @@ namespace ATReforged
 
             // Remove the viruses from each provided thing. No errors will occur if the thing does not have a SkyMind comp or does not have a virus.
             foreach (Thing virusedThing in virusedThings)
-            { 
+            {
                 CompSkyMind csm = virusedThing.TryGetComp<CompSkyMind>();
 
                 if (csm == null)
@@ -187,9 +187,9 @@ namespace ATReforged
             {
                 return gameComp.blankPawn;
             }
-            
+
             // Create the Blank pawn that will be used for all non-controlled surrogates, blank androids, etc.
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOf.ATR_T5Colonist, null, PawnGenerationContext.PlayerStarter, canGeneratePawnRelations: false, colonistRelationChanceFactor: 0f, forceGenerateNewPawn: true, fixedGender: Gender.None);
             Pawn blankMechanical = PawnGenerator.GeneratePawn(request);
             BackstoryDatabase.TryGetWithIdentifier("FreshBlank", out blankMechanical.story.childhood);
             BackstoryDatabase.TryGetWithIdentifier("AdultBlank", out blankMechanical.story.adulthood);
@@ -223,7 +223,7 @@ namespace ATReforged
             gameComp.blankPawn = blankMechanical;
             return gameComp.blankPawn;
         }
-        
+
         // RESERVED UTILITIES, INTERNAL USE ONLY
         public static HashSet<string> ReservedSpecialPawns = new HashSet<string> { "Tier5Android" };
 
@@ -248,7 +248,7 @@ namespace ATReforged
 
         // Return a viable bed for charging in if there is one. Prefer the bed the pawn already owns, if it has one.
         public static Building_Bed GetAvailableChargingBed(Pawn pawn)
-        { 
+        {
             Map map = pawn.Map;
 
             // Check if the pawn owns a bed that is charge-capable, online, and accessible. If it is, then it will choose that to charge.
@@ -317,7 +317,7 @@ namespace ATReforged
         // Duplicate the source pawn into the destination pawn. If overwriteAsDeath is true, then it is considered murdering the destination pawn.
         // if isTethered is true, then the duplicated pawn will actually share the class with the source so changing one will affect the other automatically.
         public static void Duplicate(Pawn source, Pawn dest, bool overwriteAsDeath=true, bool isTethered = true)
-        { 
+        {
             try
             {
                 // Duplicate source story into destination.
@@ -490,21 +490,21 @@ namespace ATReforged
                 {
                     // Initialize source work settings if not initialized.
                     if (source.workSettings == null)
-                    { 
+                    {
                         source.workSettings = new Pawn_WorkSettings(source);
                     }
                     source.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
 
                     // Initialize destination work settings if not initialized.
                     if (dest.workSettings == null)
-                    { 
+                    {
                         dest.workSettings = new Pawn_WorkSettings(dest);
                     }
                     dest.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
 
                     // Apply work settings to destination from the source
                     if (source.workSettings != null && source.workSettings.EverWork)
-                    { 
+                    {
                         foreach (WorkTypeDef workTypeDef in DefDatabase<WorkTypeDef>.AllDefsListForReading)
                         {
                             if (!dest.WorkTypeIsDisabled(workTypeDef))
@@ -551,7 +551,7 @@ namespace ATReforged
                 Duplicate(secondPawn, firstPawn, false, false);
                 Duplicate(tempCopy, secondPawn, false, false);
 
-                
+
                 // Swap all log entries between the two pawns as appropriate.
                 foreach (LogEntry log in Find.PlayLog.AllEntries)
                 {
@@ -617,7 +617,7 @@ namespace ATReforged
             }
             return hostlessSurrogates.Count() == 0 ? null : hostlessSurrogates;
         }
-        
+
         // Create as close to a perfect copy of the provided pawn as possible. If kill is true, then we're trying to make a corpse copy of it.
         public static Pawn SpawnCopy(Pawn pawn, bool kill=true)
         {
@@ -759,7 +759,7 @@ namespace ATReforged
             if (passionCount > ATReforged_Settings.passionSoftCap)
             { // If over the soft cap for number of passions, each additional passion adds 25% cost to buying another passion.
                 result *= (float) Math.Pow(1.25, passionCount - ATReforged_Settings.passionSoftCap);
-            } 
+            }
 
             // Return the end result as an integer for nice display numbers and costs (servers can't give parts of a skill point).
             return (int) result;

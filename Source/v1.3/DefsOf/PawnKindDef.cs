@@ -11,7 +11,7 @@ namespace ATReforged
             DefOfHelper.EnsureInitializedInCtor(typeof(PawnKindDefOf));
         }
 
-        public static PawnKindDef T5Colonist;
+        public static PawnKindDef ATR_T5Colonist;
 
         public static PawnKindDef ATR_FractalAbomination;
 
