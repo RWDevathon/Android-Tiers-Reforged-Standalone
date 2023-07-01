@@ -9,7 +9,8 @@ namespace ATReforged
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(QuestScriptDefOf));
         }
-
+        
+        [MayRequireRoyalty]
         public static QuestScriptDef ProblemCauser;
     }
 }
