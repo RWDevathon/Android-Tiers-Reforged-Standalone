@@ -2,6 +2,7 @@
 using HarmonyLib;
 using AlienRace;
 using RimWorld;
+using System;
 
 namespace ATReforged
 {
@@ -10,28 +11,34 @@ namespace ATReforged
     public class RaceRestrictionSettings_Patch
     {
         [HarmonyPatch(typeof(RaceRestrictionSettings), "CanGetTrait")]
+        [HarmonyPatch(new Type[] { typeof(TraitDef), typeof(Pawn), typeof(int) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal })]
         public class CanGetTrait_Patch
         {
-            [HarmonyPostfix]
-            public static void Listener(TraitDef trait, ThingDef race, int degree, ref bool __result)
+            [HarmonyPrefix]
+            public static bool Prefix(TraitDef trait, Pawn pawn, int degree, ref bool __result)
             {
-                if (!__result)
+                // Drones that do not have dronesCanHaveTraits enabled can not have traits.
+                if (Utils.IsConsideredMechanicalDrone(pawn) && pawn.def.GetModExtension<ATR_MechTweaker>()?.dronesCanHaveTraits != true)
                 {
-                    return;
+                    __result = false;
+                    return false;
                 }
 
                 // If HAR's race settings whitelists this trait, yield to that setting.
-                RaceRestrictionSettings raceRestrictionSettings = (race as ThingDef_AlienRace)?.alienRace?.raceRestriction;
+                RaceRestrictionSettings raceRestrictionSettings = (pawn.def as ThingDef_AlienRace)?.alienRace?.raceRestriction;
                 if (raceRestrictionSettings?.whiteTraitList.Contains(trait) == true)
                 {
-                    return;
+                    return true;
                 }
 
                 // If the pawn is an android and this trait is blacklisted, it can not have it.
-                if (Utils.IsConsideredMechanicalAndroid(race) && ATReforged_Settings.blacklistedMechanicalTraits.Contains(trait.defName))
+                if (Utils.IsConsideredMechanicalAndroid(pawn) && ATReforged_Settings.blacklistedMechanicalTraits.Contains(trait.defName))
                 {
                     __result = false;
+                    return false;
                 }
+
+                return true;
             }
         }
     }
